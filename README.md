@@ -171,23 +171,77 @@
 - Numerica vs Categorica
 - Categorica vs Categorica
 ### Clase 37 - Analisis Multivariado
+- Regresion Lineal
+- PCR
+- PLSR
+- ANN
+- SVM
+- KNN
+- PowerBI y Tableu en Jupyer
 ### Clase 38 - Workshop_ Revisión de pares
+- Repaso
 ### Clase 39 - En foco_ selección de mejora de modelos
+- Repaso
 ## Modulo 3
 ### Clase 40 - Introducción al Machine Learning
+- CRISP-DM
+- Encoding Dummies
 ### Clase 41 - Algoritmos de clasificación
+- KNN
+- Random Forest
+- Logistica
 ### Clase 42 - Algoritmos de clasificación y Regresión
+- SVM
+- Hiperparametros
 ### Clase 43 - Algoritmos de Agrupación I
+- KMEANS
+- DBSCAN
+- HDBSCAN
 ### Clase 44 - Algoritmos de agrupación II
+- PCA
+- TSNE
+- ISOMAP
+- Isolation Forest
+- Minimun Covariance Determinant
+- Local Outlier Factor
 ### Clase 45 - Selección del Algoritmo y entrenamiento del Modelo I
+- Metricas de Clasificacion
 ### Clase 46 - Selección del Algoritmo y Entrenamiento del Modelo II
+- Metricas de Regresion
 ### Clase 47 - Validación de modelos - métricas
+- Metricas de Clustering
 ### Clase 48 - Mejora de modelos de Machine Learning I
+- Bias vs Variance
+- Evitando el overfitting
+- LOOCV
+- K-Fold Cross Validation
+- Strafified K-Fold
 ### Clase 49 - Mejora de modelos de Machine Learning II
+- Repaso Hiperparametros
+- GridSearchCV
+- RandomSearchCV
 ### Clase 50 - Modelos de Ensamble y Boosting Models
+- Adaboost
+- XGBoost
+- LigthGBM
 ## Modulo 4
-### Clase 51 - Despliegue de Modelos MLOps
+### Clase 51* - Despliegue de Modelos MLOps
+- GoogleCloud
+- DevOps
+- DevSecOps
+- CD
+- MLOps
 ### Clase 52 - Introducción a Deep Learning
+- Perceptron
+- CNN
+- RNN
 ### Clase 53 - Introducción al Procesamiento de Lenguaje Natural I
+- Regex
+- BOW
+- NLTK
+- TFIDF
 ### Clase 54 - Introducción al Procesamiento de Lenguaje Natural II
+- Spacy
+- Sentiment Analysis
 ### Clase 55 - Datathon
+- Practica TP
