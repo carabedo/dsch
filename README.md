@@ -1,5 +1,8 @@
 # intro data science coderhouse
 ### Clase 0 - Introducción a la ciencia de Datos
+-
+-
+-
 ### Clase 1 - La necesidad de Información en la Industria 4.0
 ### Clase 2 - Introducción a la programación con Python I
 ### Clase 3 - Introducción a la programación con Python II
