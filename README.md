@@ -19,9 +19,20 @@
 - Funciones
 - Tipos y estructuras de datos
 - Intro a Jupyter Notebook
-### Clase 4 - Introducción a la librería científica con Python_ Pandas (parte I)
-### Clase 5 - Programación con arrays_ Introducción a NumPy
-### Clase 6 - Introducción a la manipulación de datos con Pandas (Parte II)
+### Clase 4 - Pandas I
+- Estructuras Series/Dataframes
+- Indexado loc/iloc
+- Datos Nulos
+- pct_change() 'cambiopercentual'
+- Lectura de datos
+### Clase 5 - NumPy
+- Array y sus atributos
+- Indexado
+- reshape/concatenate/split
+- Operaciones vectorizadas
+## Desafio
+### Clase 6 - Pandas II
+
 ### Clase 7 - Visualizaciones y primeros pasos con Data Science (Parte I)
 ### Clase 8 - Visualizaciones y primeros pasos con Data Science (Parte II)
 ### Clase 9 - Estadística Descriptiva_ como conocer los datos
