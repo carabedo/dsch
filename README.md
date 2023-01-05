@@ -1,4 +1,4 @@
-# intro data science coderhouse
+# INTRODUCCION DATA SCIENCE
 ## Modulo 1 
 ### Clase 0 - Introducción a la ciencia de Datos
 - Que es?
