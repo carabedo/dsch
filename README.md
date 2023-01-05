@@ -111,19 +111,65 @@
 - Seaborn
 - Estadistica Descriptiva
 ### Clase 23 - Data Acquisition I
+- Big Data Value Chain
+- Pandas CSV SQLITE POSTGRES EXCEL
+- Pickle
+- PySpark
 ### Clase 24 - Fundamentos de bases de datos
-### Clase 25 - Lenguaje Estructurado de Consulta SQL - Parte 1
-### Clase 26 - Lenguaje Estructurado de Consulta SQL - Parte 2
+- DBMS 
+- Relacional NOSQL
+- Backup
+### Clase 25* - SQL I
+- CREATE ALTER DROP TRUNCATE
+- SELECT INSERT UPDATE DELETE
+### Clase 26* - SQL II
+- WHERE
+- AND OR NOT
+- SELECT TOP
+- LIKE
+- ALIASES
+- COMMENTS
+- CASE-END
+- TRANSACCIONES
 ### Clase 27 - Data Acquistion II
+- Git/GitHub
+- JSON
+- APIs/Requests
+- SQLITE
+- sqlalchemy
 ### Clase 28 - Data Wrangling I
+- Merge/Concat
 ### Clase 29 - Data Wrangling II
+- drop_duplicates
+- MultiIndex
+- Groupby/Apply
+- Pivot Table/Melt
+## Desafio
 ### Clase 30 - Workshop_ Limpieza de Data
+- Repaso Data Wrangling y recomendaciones.
 ### Clase 31 - Exploratory Data Analysis (EDA)
-### Clase 32 - Introducción a la visualización de datos
-### Clase 33 - Visualizaciones efectivas y Data Storytelling
+- Repaso EDA y Actividad.
+### Clase 32* - Introducción a la visualización de datos
+- Buenas practicas
+- Gestalt
+### Clase 33* - Storytelling
+- Estructura del relato
+- Recomendaciones y errores tipicos
+- Elevator pitch
+- UX/UI
+- Leyes de Nielsen
+## Desafio
 ### Clase 34 - GIS y Datos Espaciales
+- Sistemas de referencia y Proyecciones
+- Animaciones matplotlib
+- Plotly scatter/line/bar/hist/heatmap
 ### Clase 35 - Analisis univariado y gráficos
+- Medidas de Tendencia/Localizacion/Dispersion/Kurtosis
+- Graficos Estadisticos
 ### Clase 36 - Análisis bivariado
+- Numerica vs Numerica
+- Numerica vs Categorica
+- Categorica vs Categorica
 ### Clase 37 - Analisis Multivariado
 ### Clase 38 - Workshop_ Revisión de pares
 ### Clase 39 - En foco_ selección de mejora de modelos
