@@ -1,11 +1,24 @@
 # intro data science coderhouse
+## Modulo 1 
 ### Clase 0 - Introducción a la ciencia de Datos
--
--
--
+- Que es?
+- Ciclo de vida de los proyectos
+- Importancia y ejemplos de la vida real
 ### Clase 1 - La necesidad de Información en la Industria 4.0
+- Que es la industria 4.0
+- Tranformacion digital
+- Ciclo de vida los proyectos
+- Estrategias Data-Driven
 ### Clase 2 - Introducción a la programación con Python I
+- Instalacion miniconda
+- Que es una lenguaje, que es un programa?
+- Colab IDEs
+- Variables objetos operadores booleanos
 ### Clase 3 - Introducción a la programación con Python II
+- Estructuras de control FOR WHILE IF
+- Funciones
+- Tipos y estructuras de datos
+- Intro a Jupyter Notebook
 ### Clase 4 - Introducción a la librería científica con Python_ Pandas (parte I)
 ### Clase 5 - Programación con arrays_ Introducción a NumPy
 ### Clase 6 - Introducción a la manipulación de datos con Pandas (Parte II)
@@ -14,6 +27,7 @@
 ### Clase 9 - Estadística Descriptiva_ como conocer los datos
 ### Clase 10 - Herramientas de visualización
 ### Clase 11- Preprocesamiento estadístico de los datos
+## Modulo 2
 ### Clase 12 - Introducción al análisis predictivo con Regresión
 ### Clase 13 - Modelos Analíticos para DS I
 ### Clase 14 - Modelos Analíticos para DS II
@@ -42,6 +56,7 @@
 ### Clase 37 - Analisis Multivariado
 ### Clase 38 - Workshop_ Revisión de pares
 ### Clase 39 - En foco_ selección de mejora de modelos
+## Modulo 3
 ### Clase 40 - Introducción al Machine Learning
 ### Clase 41 - Algoritmos de clasificación
 ### Clase 42 - Algoritmos de clasificación y Regresión
@@ -53,6 +68,7 @@
 ### Clase 48 - Mejora de modelos de Machine Learning I
 ### Clase 49 - Mejora de modelos de Machine Learning II
 ### Clase 50 - Modelos de Ensamble y Boosting Models
+## Modulo 4
 ### Clase 51 - Despliegue de Modelos MLOps
 ### Clase 52 - Introducción a Deep Learning
 ### Clase 53 - Introducción al Procesamiento de Lenguaje Natural I
