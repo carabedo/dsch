@@ -32,24 +32,84 @@
 - Operaciones vectorizadas
 ## Desafio
 ### Clase 6 - Pandas II
-
-### Clase 7 - Visualizaciones y primeros pasos con Data Science (Parte I)
-### Clase 8 - Visualizaciones y primeros pasos con Data Science (Parte II)
-### Clase 9 - Estadística Descriptiva_ como conocer los datos
-### Clase 10 - Herramientas de visualización
+- Repaso Pandas
+- Agregaciones
+- describe/groupby
+- Operaciones con strings
+- Operaciones con datetime
+### Clase 7 - Visualizaciones I
+- Matplotlib
+- scatter/line/bar/hist/box
+- Seaborn
+### Clase 8 - Visualizaciones II
+- Seaborn
+- Intro DataScience
+- Supervisado/NoSupervisado
+- Intro Scikit-Learn
+## Desafio
+### Clase 9 - Estadística Descriptiva
+- Inferencia estadistica, p-value
+- EDA, cuantitativas/cualitivativas
+- Medidas de resumen 
+- Distribuciones
+- Intervalos de confianza
+### Clase 10 - Fundamentos de visualización
+- Barras
+- Histogramas
+- Dispersion
+- Correlacion
+- Boxplot
+- 3D/Chernoff
 ### Clase 11- Preprocesamiento estadístico de los datos
+- Outliers IQR ZScore
+- Imputacion/Interpolacion
+- Libreria datawig
+- PCA
 ## Modulo 2
 ### Clase 12 - Introducción al análisis predictivo con Regresión
-### Clase 13 - Modelos Analíticos para DS I
-### Clase 14 - Modelos Analíticos para DS II
-### Clase 15 - Modelos analíticos para DS III
+- Correlacion, causalidad y dependencia
+- Funcion lineal y la regresion
+- Regresion Lineal simple y multiple.
+- p-value de los betas y R2
+- StatsModel
+## Desafio Entregable
+### Clase 13 - Modelos Analíticos I
+- Que es un modelo?
+- Etapas de un modelo analitico
+### Clase 14 - Modelos Analíticos II
+- Clasificacion, tipos y ejemplos.
+- Arboles de decision, ejemplos.
+- KNN
+- Regresion, ejemplo.
+### Clase 15 - Modelos analíticos III
+- Clustering Jerarquico/Kmeans/DBSCAN
+- Reglas de Asociacion
+- PCA
 ### Clase 16 - Estudios de casos de Modelo Analítico I
+- Casos de Exito
+- Presentacion Ejecutiva
 ### Clase 17 - Estudios de casos de Modelos Analíticos II
+- Casos de Exito
 ### Clase 18 - Introducción al ML y la IA
-### Clase 19 - Algoritmos y Validación de Modelos de Machine Learning
-### Clase 20 - Stack Tecnológico I
-### Clase 21 - Stack Tecnológico del Data Scientist II
-### Clase 22 - Retomando impulso
+- Intro IA
+- GPT3
+### Clase 19 - Validación de Modelos
+- Overfitting/Underfitting
+- Metricas Clasificacion
+- Metricas Regresion
+### Clase 20* - Stack Tecnológico I
+- Bases de datos SQL NOSQL
+- Lenguajes de programacion
+- Visualizacion (PoweBI Tableau)
+### Clase 21* - Stack Tecnológico II
+- InHouse vs Cloud
+- Big Data
+## Primer Entrega TP 
+### Clase 22 - Repaso
+- Etapas proyecto DS
+- Numpy y Pandas
+- Seaborn
+- Estadistica Descriptiva
 ### Clase 23 - Data Acquisition I
 ### Clase 24 - Fundamentos de bases de datos
 ### Clase 25 - Lenguaje Estructurado de Consulta SQL - Parte 1
