@@ -1,1 +1,1 @@
-# dsch
+# intro data science coderhouse
