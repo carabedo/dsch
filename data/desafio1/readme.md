@@ -7,4 +7,6 @@ Nowadays, telecom industry faces fierce com-petition in satisfying its customers
 
 Cell2Cell dataset is preprocessed and a balanced version provided for analyzing Process. consists of 71,047 instances and 58 attributes.
 
+csv:
 
+https://raw.githubusercontent.com/carabedo/dsch/main/data/desafio1/churn.csv
