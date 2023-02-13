@@ -1,0 +1,304 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 36. DATA SCIENCE
+         Análisis Bivariado
+      Temario
+                       35                      36                      37
+                    Análisis                Análisis                Análisis 
+                  univariado y              bivariado             multivariado
+                    gráficos
+                 ✓ Tipos de análisis    ✓ Análisis 
+                     estadśiticos           bivariado           ✓ Objetivos
+                 ✓ Gráficos             ✓                       ✓ Ventajas y 
+                     estadísticos           Pasos a seguir         desventajas
+                                        ✓ Tipos                 ✓ Integración con R y 
+                                                                   Power BI
+    Objetivos de la clase
+                 Identificar las particularidades del Análisis 
+                 bivariado de datos
+                 Reconocer ejemplos y aplicaciones de Python
+        MAPA DE CONCEPTOS    Análisis            Tipos
+                            univariado y 
+                             gráficos           Gráficos 
+                                               estadísticos
+                                              Pasos a seguir
+        Análisis             Análisis 
+      estadístico           bivariado          Tres tipos
+                                               Objetivos
+                             Análisis          Ventajas y 
+                            Multivariado       desventajas
+                                             Integración con R y 
+                                                PowerBI
+      PARA RECORDAR
+   Análisis de variables
+   Como hemos visto en clases anteriores cuando 
+   analizamos una variable, empleamos la estadística 
+   descriptiva para calcular medidas de tendencia central 
+   como un promedio, mediana o la moda. De igual forma, 
+   cuando estimamos dispersión o variabilidad por 
+   medio de varianza o desviación estándar hacemos uso 
+   del análisis univariado.
+      Cuestionario de tarea
+   ¿Te gustaría comprobar tus 
+   conocimientos de la clase anterior?
+   Te compartimos a través del chat de 
+   Zoom / chat de la plataforma el enlace a un 
+   breve cuestionario de Kahoot.
+   Duración: 10 minutos
+     Análisis Bivariado
+       Definición
+    ¿Qué es el Análisis 
+    Bivariado?
+    Es una de las formas más simples de análisis estadístico, 
+    que se utiliza para averiguar si existe una relación entre 
+    dos  conjuntos  de  valores.  Por  lo  general  involucra  las 
+    variables X e Y.
+    El  análisis  bivariado no es lo mismo que el análisis de 
+    datos de dos muestras. Con el análisis de datos de dos 
+    muestras  (como  una  prueba  Z),  X  e  Y  no  están 
+    directamente relacionados.
+    ¿Qué es el Análisis 
+    Bivariado?
+    Ahora bien, cuando empleamos dos o más variables en 
+    nuestros  estudios  o  investigaciones,  buscando  conocer 
+    causalidad, efectos o correlaciones podemos hablar de 
+    análisis bivariados o multivariados. 
+    A lo largo de esta clase, nos centramos exclusivamente 
+    en el análisis bivariado.
+       Ejemplos
+    Ejemplos
+     Un  análisis  bivariado  típico  puede  ser  por  ejemplo, 
+     determinar la relación entre la ingesta de carbohidratos 
+     en el peso de las adolescentes. Decimos que se trata de 
+     un  análisis  bivariado  justamente  porque  estamos 
+     analizamos dos dimensiones:
+      ✔ Una variable dependiente que viene a ser el peso 
+       de la población analizada.
+      ✔ La variable independiente que será la cantidad o 
+       ingesta de carbohidratos en su dieta. 
+    Ejemplos
+    Por lo tanto en términos generales el análisis bivariado es la 
+    investigación  de  la  relación  entre  dos  conjuntos  de 
+    datos,  como  pares  de  observaciones  tomadas  de  una 
+    misma muestra o individuo.
+    Las  correlaciones  bivariadas  son  herramientas  de  amplia 
+    aplicación  y  se  utilizan  para  estudiar  cómo  una  variable 
+    influye en la otra.
+      Pasos a seguir
+        Pasos a seguir
+               1                                2                             3                           4
+                                                                                                         4
+          Observar la                  Identificar valores              Significancia               Determinar si 
+        naturaleza de la                   nominales,                    estadística                    existe 
+        posible relación                 ordinales o de                                             relación o no 
+        de las variables                      ratios                                                  entre las 
+                                                                                                      variables
+     1 Pasos a seguir
+     El primer paso es observar la naturaleza de la posible 
+     relación de las variables es decir, cómo estas podrían 
+     vincularse:  podríamos tener correlación directa, de 
+     manera  que  cuando  una  variable  aumenta  la  otra 
+     también  lo  hará  o  correlación  inversa,  cuando  un 
+     cambio en una variable mueve a la otra en sentido 
+     contrario.
+     2 Pasos a seguir
+      Un segundo paso tiene que ver con identificar los 
+      niveles de medición de los datos y con ello 
+      definimos  si  se  tratan  de  valores  nominales, 
+      ordinales o de ratios.
+     3 Pasos a seguir
+    El análisis bivariado y multivariado va de la mano 
+    con el rigor de la “significancia estadística” y 
+    con ello tomar por sentado que los resultados que 
+    obtenemos  serán  los  mismos  que  con  otra 
+    muestra o estudio similar y no se deben a la mera 
+    casualidad. 
+    Para  la  mayoría  de  los  casos,  una  correlación 
+    bivariada asume una significancia de 0.05. Esto 
+    quiere decir que de 100 estudios, 95 concluirán 
+    en los mismos resultados y solo 5 se atribuyen al 
+    azar ������.
+     4 Pasos a seguir
+     Si  conocemos  las  variables  y  sus  niveles  de 
+     medición,  sólo  nos  resta  determinar  si  existe 
+     relación  o  no  entre  las  variables.  Para  conocer  si 
+     existe o no una correlación significativa, la medida 
+     más  comúnmente  usada  es  el  coeficiente  de 
+     correlación  de  Pearson,  tema  que  ya  hemos 
+     estudiado a lo largo del curso. 
+           4 Pasos a seguir
+         Existen diferentes tipos de correlación (todo depende de la naturaleza en la escala de 
+         medida de las variables). Dependiendo del tipo de variable podemos elegir cualquiera de 
+         los coeficientes de correlación que se muestran a continuación:
+                 Variable 1    Variable 2    Tipo de correlación            Mayor información
+                 Nominal       Nominal       Coeficiente Phi                Coeficiente de Phi
+                 Nominal       Ordinal       Coeficiente Rango biserial     Coeficiente Biserial
+                 Nominal       Intervalo     Coeficiente biserial puntual   Coeficiente biserial puntual
+                 Ordinal       Ordinal       Coeficiente Spearman           Coeficiente de Spearman
+                 Intervalo     Intervalo     Coeficiente Pearson            Coeficiente de Pearson
+     4 Pasos a seguir
+                                  La correlación puede ser 
+                                  positiva, negativa o 0. El rango 
+                                  está dado por -1 < rho < 1.
+                                  1 >> Indica perfecta asociación 
+                                  lineal
+                                  0 >> indica ausencia de 
+                                  correlación
+                                  -1 >> indica perfecta asociación 
+                                  inversa
+     4 Pasos a seguir
+                                Una forma rápida de poder 
+                                analizar correlación entre 
+                                variables es mediante el uso de 
+                                la matriz de correlación que 
+                                algunas veces se denomina 
+                                Heatmap.
+     Tipos de Análisis 
+       Bivariados
+        Tipos
+    Tipos de Análisis Bivariado
+         Variable        Variable    Variable Numérica 
+        Numérica &     Categórica &       & 
+         Variable        Variable    Variable Categórica.
+         Numérica.      Categórica.
+                  Tipos de Análisis Bivariado
+         Numérico vs Numérico
+         En este tipo de variable tanto las variables de los 
+         datos    bivariados   que    incluyen   la   variable 
+         dependiente  como  la  independiente  tienen  valor 
+         numérico (reales).
+         Tipos de Análisis Bivariado
+     Categórica vs Categórica
+     Se puede utilizar el coeficiente de correlación de Phi 
+     y además se pueden generar tablas de contingencia 
+     para comparar dependencia o independencia de las 
+     variables 
+         Tipos de Análisis Bivariado
+     Numérica vs Categórica
+     Se  puede  utilizar  el  coeficiente  de  correlación  de 
+     Rank-biserial  o  Point-biserial.  Además  se  pueden 
+     crear  agrupaciones  para  la  variable  numérica  de 
+     acuerdo a las clases de la variable categórica. 
+    Tipos de gráficos
+                       Bar Charts        Scatterplots.
+       FacetGrid.      (Gráficos de 
+                        barras)
+    Herramientas para 
+     análisis bivariado
+        Scatterplots
+         Por    medio     de   esta    visualización    podemos 
+         comprender  si  existe  algún  tipo  de  relación  lineal 
+         entre dos variables numéricas. A primera vista es de 
+         gran  ayuda  para  entender  la  influencia  de  una 
+         variable en otra.
+        Regresión
+         Permite determinar cómo se pueden relacionar los 
+         datos.  Busca  crear  una  ecuación  de  mejor  ajuste 
+         para los datos con ciertas suposiciones. La regresión 
+         puede ser lineal  o  múltiple  y  siempre  se  tiene  un 
+         variable   dependiente  (Y)  y  una  o  varias   
+         independientes (X)
+    Coeficientes de correlación
+     Este  coeficiente  dice  si  las  variables  están 
+     relacionadas entre sí.  Cero significa que no están 
+     correlacionadas de manera lineal, mientras que un 1 
+     (ya  sea  positivo  o  negativo)  significa  que  las 
+     variables  están  perfectamente  correlacionadas  de 
+     forma perfecta o inversa.
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+                  ¡Lanzamos la
+                  Bolsa de 
+                  Empleos!
+                 Un espacio para seguir potenciando tu carrera y 
+                 que tengas más oportunidades de inserción 
+                 laboral.
+                 Podrás encontrar la Bolsa de Empleos en el menú 
+                 izquierdo de la plataforma.
+                 Te invitamos a conocerla y ¡postularte a tu futuro 
+                 trabajo!
+                   Conócela
+      Ejemplo en vivo
+   Utilizaremos el notebook y los datos dentro de la 
+   carpeta de clase. 
+   Repararemos las diferentes formas de  realizar un 
+   análisis bivariado con varios ejemplos.
+   Además analizaremos la librería pandas_profiling, 
+   una gran alternativa para generar resúmenes rápidos. 
+         Análisis bivariado
+      Aplicaremos los conocimientos aprendidos hasta el 
+           momento de Análisis bivariado
+             Duración: 15-20 mins
+       ACTIVIDAD EN CLASE
+    Análisis bivariado
+    Se les propone realizar el análisis bivariado del dataset 
+    de Properati (Datos Properati) 
+     ✔ Elegir algunas variables de cada dataset y luego 
+       seleccionar gráficos y medidas de resumen 
+       apropiadas según el caso.
+     ✔ Generar interpretaciones de los resultados 
+       obtenidos
+                              9
+           Desafío entregable: 
+                 Obtención de 
+          Deberás  entregar  el  noveno  avance  de  tu  proyecto  final.  Continuaremos 
+                     Insights
+          hablando sobre lo trabajado en el desafío “Data Storytelling”. Crearás un 
+          notebook donde se pueda observar las fases de análisis univariado y bivariado 
+          que  junto  con  el  trabajo  previo  realizado  permitan  obtener  insights  que 
+          ayuden a dar respuesta a la(s) pregunta(s) problema del proyecto final.
+    Recordemos…
+                          Generamos visualizaciones
+                          Respondimos preguntas de 
+                          interés
+                          Soluciones a la pregunta 
+                          problema
+        Clase 33
+     Desafío entregable:
+      Data Storytelling
+                          Mejora de Insights obtenidos
+            DESAFÍO 
+            ENTREGABLE
+       Obtención de insights
+        Consigna
+          ✓ Generar insights que permitan dar      Formato
+             respuesta a las preguntas por           ✓ Se espera un notebook en 
+             responder                                  formato .ipynb. Dicho notebook debe 
+                                                        tener el siguiente nombre: 
+                                                        “Data_StoryTelling+Apellido.ipynb”
+        Aspectos a incluir                              .
+          ✓ Notebook con código y estructura         ✓ Presentación en formato pptx o pdf
+             eficiente                             Sugerencias
+          ✓ Presentación ejecutiva                   ✓ Se recomienda que la historia cuente 
+        Ejemplo                                         con una estructura similar a la 
+          ✓                                             presentación de referencia
+             Ejemplo de presentación
+                                                   Explicación del desafío
+                                                     ✓ ¡Click aquí!
+       CLASE N°36
+       Glosario
+       Análisis bivariado: se utiliza para            Diagrama de dispersión: consiste en la 
+       averiguar si existe una relación entre dos     representación gráfica de dos variables 
+       conjuntos de valores.                          para un conjunto de datos. 
+       Correlación: La correlación estadística        Regresión: En estadística, el análisis de la 
+       determina la relación o dependencia que        regresión es un proceso estadístico para 
+       existe entre las dos variables que             estimar las relaciones entre variables. 
+       intervienen en una distribución                Usualmente se tiene una variable 
+       bidimensional.                                 dependiente (respuesta) y una o varias 
+                                                      variables independientes
+       Significancia estadística: se define 
+       como la probabilidad de tomar la decisión 
+       de rechazar la verdadera hipótesis nula 
+       cuando ésta es verdadera
+      ¿Preguntas?
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.
+                   Resumen 
+               de la clase hoy
+              ✓ Análisis bivariado: Pasos a seguir
+              ✓ Tipos

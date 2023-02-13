@@ -1,0 +1,484 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 27. DATA SCIENCE
+         Data Acquisition II
+      Temario
+                     26                   27                    28
+                  Lenguaje               Data 
+                estructurado         Acquisition II     Data Wrangling I
+                    SQL-II
+              ✓ Consultas de mayor   ✓ Intro Github      ✓ Data Wrangling en 
+                 complejidad         ✓ Javascript object    un proyecto de DS
+              ✓ TCL                    notation          ✓ Etapas de Data 
+              ✓ Otros tipos de       ✓ Introducción APIs    Wrangling
+                 comandos            ✓ Conexión a 
+              ✓ Joins, agregaciones    modelos           ✓ Combinar y 
+                 y agrupaciones        relacionales         fusionar objetos 
+                                       usando Pandas        con Pandas. Merge 
+                                                            y Concat
+    Objetivos de la clase
+                 Acceder a bases de datos con Pandas
+                 Leer JSON con Pandas
+                 Conocer cómo utilizar APIs
+       MAPA DE CONCEPTOS            Pandas
+                                 Hojas de Cálculo
+                                   PySpark
+                                  Git y Github
+     Data Acquisition
+                                    JSON
+                                    APIs        Parte II
+                                 SQL con Pandas
+      Introducción a 
+        Github
+         Git
+     Git
+     Git es un software de control de versiones 
+     diseñado por Linus Torvalds, pensando en 
+     la eficiencia, la confiabilidad y 
+     compatibilidad del mantenimiento de 
+     versiones de aplicaciones cuando estas 
+     tienen un gran número de archivos de 
+     código fuente
+        Github
+    Github
+     GitHub es una plataforma de control de versiones 
+     distribuida donde los usuarios pueden colaborar o 
+     adoptar proyectos de código fuente abierto, fork 
+     code, compartir ideas y más.
+     Su mayor contribuidor es Microsoft y ofrece un 
+     servicio de Software as Service (SaaS) creado en 
+     2008
+     Diferencias Git vs 
+        Github
+    Diferencias Git vs. 
+    Github
+     Git y GitHub no son lo mismo. Git es una 
+     herramienta de control de versiones de código 
+     abierto creada en 2005 (Linux); GitHub es una 
+     empresa fundada en 2008 que fabrica 
+     herramientas que se integran con git. 
+     No necesitan GitHub para usar git, pero no puede 
+     usar GitHub sin usar git. Hay muchas otras 
+     alternativas a GitHub, como GitLab, BitBucket
+        Diferencias Git vs. Github
+                                  Git                                               Github
+           Instalado localmente                                Hosteado en la nube
+           Lanzado en 2005 y mantenido por The Linux           Lanzado en 2008 y mantenido por Microsoft
+           Foundation
+           Se enfoca en control de versiones y código          Se enfoca en un hosting de código centralizado
+           compartido
+           Se ejecuta en la terminal                           Administrado en la web
+           Provee una interface desktop llamada Git Gui        Provee una interfaz desktop llamada Github Desktop
+           Pocas configuraciones externas disponibles          Marketplace diverso para integración de 
+                                                               herramientas
+           Licencia Open Source                                Versión gratuita y también paga
+      Cómo usar Git
+        EJEMPLO EN VIVO
+    Cómo usar Git
+      1. Instalar Git para esto podemos ir al siguiente enlace Instalación Git
+      2. En caso de que estén en una distribución de Linux debian pueden ir al terminal 
+        y usar el comando: $ sudo apt install git-all
+      3. Ahora debemos crear el nuevo repositorio usando la terminal, si no conoces de 
+        la terminal puedes ver el siguiente Tutorial terminal
+      4. Nos ubicamos en la ruta deseada y creamos el directorio con los comandos:
+        $ cd Descargas
+        $ mkdir Proyecto_Github
+        $ cd Proyecto_Github
+        EJEMPLO EN VIVO
+    Cómo usar Git
+     5. Inicializamos el repositorio con el comando: 
+     $ git init
+     Debe salir el siguiente mensaje:
+     Inicializado repositorio Git vacío en /home/david/Descargas/Proyecto_Github/.git/
+     6. Podemos crear un nuevo archivo en el repositorio con el comando:
+     $ touch newfile.txt
+     7. Verificamos que archivos hay en la ruta: $ ls
+     Deberá aparecer: 
+     newfile.txt
+        EJEMPLO EN VIVO
+    Cómo usar Git
+     8. Verificamos el estado usando: $ git status
+     Esto significa: "Notamos que creaste un nuevo archivo llamado newfile.txt, pero a menos 
+     que uses el comando 'git add', no haremos nada con él".
+     Commit: es un registro de los cambios que ha realizado desde la última vez que realizó 
+     una confirmación. Esencialmente, realiza cambios en su repositorio (por ejemplo, agrega 
+     un archivo o modifica uno) 
+        EJEMPLO EN VIVO
+    Cómo usar Git
+     9. Si es tu primera vez usando Git es recomendable modificar los siguientes atributos:
+     Lo cual modifica el email y nombre de usuario que está creando el repositorio
+     10. Ahora agregamos el archivo new_file.txt  con el comando:
+     $ git add newfile.txt
+     11. Hacemos el commit con el siguiente comando:
+     Deberá aparecer un mensaje como el anterior para saber que todo quedó en orden.
+     Cómo usar Github
+    Cómo usar Github
+     Si solo deseas realizar un seguimiento de tu código localmente, no necesitas usar 
+     GitHub. Pero si deseas trabajar con un equipo, puedes usar GitHub para modificar el 
+     código del proyecto de forma colaborativa.
+      1. Para crear un nuevo repositorio en GitHub, inicie sesión y vaya a la página de 
+       inicio de GitHub. Puede encontrar la opción "Nuevo repositorio" debajo del signo 
+       "+" junto a su foto de perfil, en la esquina superior derecha de la barra de 
+       navegación:
+    Cómo usar Github
+     2. Después de hacer clic en el botón, GitHub 
+     le pedirá que asigne un nombre a su 
+     repositorio y proporcione una breve 
+     descripción.
+     3. Cuando haya terminado de completar la 
+     información, presione el botón 'Crear 
+     repositorio' para crear su nuevo repositorio.
+    Cómo usar Github
+     4. GitHub le preguntará si desea crear un 
+     nuevo repositorio desde cero o si desea 
+     agregar un repositorio que haya creado 
+     localmente. 
+     En este caso, dado que ya hemos creado un 
+     nuevo repositorio localmente, queremos 
+     enviarlo a GitHub, lo podemos hacer desde la 
+     terminal
+     Javascript Object 
+       Notation
+       Definición
+    Javascript Object Notation 
+    (JSON)
+      ✔ Se trata de un formato de datos semi-estructurado no tabular, es decir 
+        que los registros no tienen que tener un mismo conjunto de atributos.
+      ✔ Se utiliza mucho para transferir datos entre servidores y clientes. La 
+        fuente más común donde se consumen los JSON son las interfaces de 
+        programación de aplicaciones web o web APIs.
+      ✔ Los datos se organizan en colecciones de objetos o paquetes.
+      ✔ Pueden “anidarse” → Los valores pueden ser listas u otros objetos.
+    Javascript Object Notation 
+    (JSON)
+                   Ejemplo de un JSON 
+                   anidado
+                   Se observa por 
+                   ejemplo que puede 
+                   contener 
+                   diccionarios dentro 
+                   de una key.
+    Librería JSON
+     https://docs.python.org/3/library/json.html
+     ¡Python admite JSON de forma nativa! Python 
+     viene con un paquete integrado llamado json 
+     para codificar y decodificar datos JSON.
+        Ejemplo
+    Librería JSON
+               Vamos a leer este 
+               ejemplo guardado en 
+               ejemplo_1.json
+  Librería JSON
+     Librería JSON
+        Ejemplo json.loads. A partir de un 
+        string lo convierte en un diccionario
+    Librería JSON con Pandas
+    Método: read_json():
+        ✔ Puede aplicarse como path a un archivo JSON o una url que 
+          termine .json o directamente un string.
+        ✔ Pandas adivina el tipo de datos pero tb puede ser especificado 
+          (dtype)
+        ✔ Orientación: Consiste en el parámetro que indica cómo se 
+          estructura JSON, para poderlo convertir en un DataFrame.
+  Librería JSON con Pandas
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+    Introducción a APIs
+         API
+    API
+     ✔ Es una interfaz que permite la comunicación 
+       entre dos sistemas distintos permitiendo agregar 
+       diversas funciones a sitios web y aplicaciones.
+     ✔ Define como las aplicaciones se comunican con 
+       otros programas.
+     ✔ Es una manera de obtener datos de una 
+       aplicación sin conocer los detalles de la bases de 
+       datos.
+     Ejemplos API
+     Fuente: William El Kaim 2016
+     Tipos de negocios 
+       con APIs
+    Tipos de negocios API
+    Existen tres modelos 
+    básicos de negocio. 
+     1.  El gratutito
+     2.  En donde el 
+       consumidor paga 
+       por usar la API 
+     3. Donde el usuario 
+       final interactúa con 
+       una aplicación 
+       usando una API y 
+       proporciona un 
+       beneficio
+    Tipos de negocios API
+     Es importante entender los siguientes conceptos para comprender mejor las APIS
+      1. Proveedor API: La compañía que crea y ofrece la API
+      2. Consumidor API: simple desarrollador que implementa la API
+      3. Usuario final: la persona que usa la aplicación que contiene la API
+    Desarrollador paga
+    Suscripción
+      1. Se cobra a los desarrolladores que utilicen la 
+        API.
+      2. Se necesita tener un sistema que ofrezca 
+        características interesantes para que los 
+        usuarios les interese
+      3. Algunas veces se ofrece gratuito pero se debe 
+        pagar por algunas cosas 
+      4. La mayor debilidad radica en que algunas 
+        veces se pagan por recursos innecesarios
+      5. Ejemplos: Pabbly API, Adapty, Bissby, Billby, 
+        IAPHUB, Qonversion, Viafoura Chat, Ubersmith
+    Pay-as-you-go
+      1. Se paga solo cuando se usa (ej. $1 por cada 
+        100 API calls)
+      2. Amazon Web Services y Google Maps API son 
+        ejemplos donde el consumidor agrega un 
+        crédito a su cuenta y se le cobra 
+        mensualmente basado en lo que use
+      3. Twilio por ejemplo el consumidor paga una 
+        cuota inicial y cada mes el sistema debita 
+        cierta cantidad aunque bajo este esquema 
+        muchas veces no se puede llevar el control de 
+        lo que se esta consumiendo
+    Transaction fees
+      1. Se cobra por cada transacción realizada por 
+        los usuarios finales
+      2. Sistemas como PayPal o Braintee reciben el 
+        dinero luego de cada transacción que ocurre 
+        en su app cuando se activa la API
+      3. Braintree tiene una tasa de cobro de 2.9% 
+        +0.30$ por cada transacción. 
+      4. No hay suscripción solo se paga por cada 
+        transacción
+      5. Algunas APIs como Sprint genera diferentes 
+        estrategias de cobro a los usuarios de acuerdo 
+        a diferentes esquemas de consumo
+     Desarrollador y 
+     proveedor ganan
+    Share from ads
+      1. El proveedor ofrece publicidad en su 
+        plataforma, los consumidores integran esta 
+        publicidad en sus apps generando revenue 
+        para el proveedor. A cambio el proveedor da 
+        una porción de la ganancia
+      2. Por ejemplo si una API tiene 700 socios y se 
+        crean 50000 apps de terceros esto genera un 
+        mayor tráfico y mayor impacto de la marca
+      3. Ejemplos Trip-advisor. facebook Ads, Amazon 
+        Advertising, Twitter Advertising, Bing Ads, 
+        Adsense, Local Search, Adzuna, Anti 
+        Adblockers
+    Programa de referidos
+      1. El consumidor de la API la incluye en su app y 
+        obtiene dinero cada vez que un usuario hace 
+        click
+      2. También existen sistemas de referidos donde 
+        los consumidores de la API reciben dinero 
+        cuando un cliente compra servicios del 
+        proveedor
+      3. Por ejemplo el sistema de afiliados de 
+        Skyscanner cuando un usuario compra 
+        tiquetes desde una API ofrece el 50% del 
+        revenue generado con el consumidor de la API
+  Qué pasaría si Netflix
+  no tuviera APIs
+     Obtener datos de 
+         APIs
+    Librería Requests.get 
+    Python
+       ✔ Consiste en una librería para hacer solicitudes a las aplicaciones.
+       ✔ Es el método de envío y obtención de datos desde url.
+       ✔ No está atada a ninguna API en particular.
+    Librería Requests.get 
+    Python
+      Hacemos un get de la url y nos da una respuesta. Si la respuesta da 200 es que la 
+      conexión fue exitosa 
+    Librería Requests.get 
+           Haciendo respuesta.text devuelve la información en str
+    Python
+                           Entonces guardando el str y luego aplicamos 
+                           json.loads() devuelve una lista de 
+                           diccionarios con los datos
+    Librería Requests.get Python
+    Guardamos la info en y a continuación creamos el dataframe en pandas 
+    para trabajarlo.  
+      Ejemplo en vivo
+   Examinaremos cómo extraer información 
+   de una de las Google APIs que existen en 
+   específico la denominada Youtube API. 
+   Explicaremos el proceso de como crear una 
+   API Key y cómo generar una consulta 
+   específica para obtener las estadísticas de 
+   un canal particular.
+    Conexión a modelos 
+     relacionales SQL 
+      usando Pandas
+     Repaso Bases de 
+        datos
+    Bases de datos 
+       ✔ Organizan datos sobre entidades en tablas.
+    relacionales 
+       ✔ Representan los datos como un conjunto de tablas en dos dimensiones, 
+        formadas por filas y columnas. Cada fila o registro es una instancia de una 
+        entidad.  Cada columna tiene información de un atributo.
+       ✔ A menudo, las bases de datos relacionales contienen múltiples tablas 
+        relacionadas  entre  sí,  lo  cual  permite  que  la  información  pueda  estar 
+        almacenada de una forma más compacta. 
+    Bases de datos 
+    relacionales 
+     1. Soportan  mucha  cantidad  de  datos,  usuarios 
+       múltiples  de  forma  simultánea  y  controles  de 
+       calidad del dato.
+     2. Los  tipos  de  datos  están  especificados  en  cada 
+       columna.
+     3. Se  usa  sql  (structured  query  language)  para 
+       interactuar con la base de datos. 
+     Cómo Acceder a 
+    Bases relacionales 
+      desde Pandas
+    Librerías para conectar 
+    SQL-Pandas
+     Cargar datos a un DataFrame puede ser 
+     bastante directo con las siguientes librerías:
+     1. Sqlalchemy
+     2. Sqllite3
+     3. cx_Oracle
+     4. Pyodbc
+     5. etc.
+        Sqlite3
+     Sqlite3
+     Con Pandas, es muy sencillo combinar el 
+     motor particular que se use y transformarlo a 
+     un DataFrame usando sql como string.
+     Creamos la conexión con sqlite3 y junto con 
+     una query sql, la usamos de argumento con el 
+     método read_sql_query de pandas.
+     Sqlite3
+     1. Creamos la query sql como str 
+       para extraer todas las tablas de 
+       la base.
+     2. Generamos la conexión hacia la 
+       base nba_salary.sqlite.
+     3. Integramos el dataframe con la 
+       query y la conexión creada con 
+       anterioridad. 
+     4. Se hace un print del DataFrame 
+       (En este caso  solo tiene dos 
+       elementos) y se cierra la 
+       conexión.
+     Sqlite3
+      Mediante query, también 
+      podemos extraer la tabla 
+      NBA_season1718_salary
+      :
+      sqlalchemy
+    Sqlalchemy
+     Sqlalchemy puede leer cualquier tipo 
+     de base. Donde dice sqlite se puede 
+     cambiar el motor:
+       DataFrame
+  Consultando información de 
+          la YouTube-API
+     Crearemos nuestra propia API key para poder utilizar 
+           información de la YouTube-API
+             Duración: 20-25 mins
+       ACTIVIDAD EN CLASE
+    Consultando 
+    información de la 
+     1. Logearse con alguna cuenta de Gmail en primera 
+    YouTube-API
+       medida
+     2. Ir al siguiente enlace: Google Console Developers
+     3. Estudiar la documentación de la API de YouTube: 
+       Youtube-API
+     4. Seguir el tutorial provisto en el archivo 
+       denominado Clase 5- Data Acquistion II.ipynb 
+       dentro de la carpeta de clase
+     5. Crear tu propia APIKey 
+     6. Obtener información estadística del canal con 
+       username =’sentdex’
+     7. Subir el notebook con los resultados en tu propio 
+       repositorio Github
+                                        6
+                Descarga de datos 
+              desde APIs públicas
+             Deberás entregar el sexto avance de tu proyecto final. Continuaremos hablando sobre lo 
+             trabajado en la primera pre entrega del proyecto final. Crearás un notebook donde se 
+             seleccionará  una  API  de  interés,  luego  crearás  una  API  key  y  finalmente  extraerás  la 
+             información  para  ser  almacenada  en  un  DataFrame  (se  sugiere  que  esta  información 
+             complemente o enriquezca el dataset elegido en el desafío  “Elección de potenciales 
+             Datasets e importe con la librería Pandas”)
+             DESAFÍO 
+             ENTREGABLE
+       Descarga de datos desde APIs 
+       Consigna                                          Formato
+       públicas
+         ✓ Buscar información en APIs públicas (i.e        ✓ Se debe entregar un jupyter notebook con 
+             Twitter, NewsAPI, Spotify, Google Apis,          el nombre “Desafio_APIS_+Nombre_ 
+             etc).                                            +Apellido.ipynb”.
+         ✓ Extraer datos e importarlos a un 
+             dataframe realizando una exploración        Sugerencias
+             simple (i.e filas, columnas, tipos de         ✓ No compartir sus tokens personales
+             datos). Se sugiere que estos datos            ✓ Comprender primero el funcionamiento de 
+             complementen el dataset elegido en el            las APIs a detalle para después utilizarla
+             Desafio “Elección de potenciales              ✓ La limpieza de datos en APIS no es fácil
+             Datasets e importe con la librería            ✓ Tratar de obtener datos principalmente 
+             Pandas”                                          numéricos (al menos 20 columnas y 
+       Aspectos a incluir                                     10000 filas.
+         ✓ Notebook donde se detallen todos los          Explicación del desafío
+             pasos seguidos                                ✓ ¡Click aquí!
+       Ejemplo
+         ✓ Ejemplo Desafío APIS,
+       CLASE N°27
+       Glosario
+       Git: software de control de versiones          JSON: Se trata de un formato de datos 
+       diseñado por Linus Torvalds, pensando en       semi-estructurado no tabular, es decir 
+       la eficiencia, la confiabilidad y              que los registros no tienen que tener un 
+       compatibilidad del mantenimiento de            mismo conjunto de atributos.
+       versiones de aplicaciones cuando estas 
+       tienen un gran número de archivos de           API: Es una interfaz que permite la 
+       código fuente                                  comunicación entre dos sistemas 
+                                                      distintos permitiendo agregar diversas 
+       Github: es una plataforma de control de        funciones a sitios web y aplicaciones.
+       versiones distribuida donde los usuarios 
+       pueden colaborar o adoptar proyectos de        sqlite y sqlalchemy: librerías para 
+       código fuente abierto, fork code,              realizar conexiones con bases de datos 
+       compartir ideas y más.                         relacionales con Pandas
+     ¿Aún quieres conocer 
+          más?
+     Te recomendamos el 
+      siguiente material
+           MATERIAL AMPLIADO
+      Recursos multimedia
+      NBA Salary and Statistics 2016-17        JSON
+       ✓ Base de datos NBA 16/17 | Kaggle |     ✓ JSON encoder y decoder | Autor | 
+           NBA Kaggle                               JSON library
+                                               Requests
+      Pandas Dataframe to sql                   ✓ Requests.get() | Github | 
+       ✓ Pandas y SQL | Pandas Core team |          JSON file request Github
+           Pandas_tosql
+       Disponible en nuestro repositorio.
+      ¿Preguntas?
+                   Resumen 
+               de la clase hoy
+              ✓ Intro Github
+              ✓ Javascript Object Notation
+              ✓ Introducción APIs
+              ✓ Conexión a modelos relacionales SQL usando 
+                Pandas
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.
+                       Encuesta
+                       sobre esta clase
+                       Por encuestas de Zoom
+                       ¡Terminamos la clase! 
+                       Cuéntanos qué temas te resultaron más complejos de 
+                       entender. Puedes elegir más de uno. Vamos a 
+                       retomar aquellos temas que resultaron de mayor 
+                       dificultad en el próximo AfterClass.

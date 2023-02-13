@@ -1,0 +1,420 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 30. DATA SCIENCE
+       Workshop: Limpieza 
+                de Data
+      Temario
+                       29                      30                     31
+             Data Wrangling II            Workshop:           Exploratory Data 
+                                         Limpieza de           Analysis (EDA)
+                                             datos
+                ✓ Etapas de Data        ✓ Repaso Data           ✓ Análisis 
+                   Wrangling               Wrangling + tips        estadístico
+                ✓ Data Transformation      buenas prácticas
+                                        ✓ Recomendaciones       ✓ Correlaciones y 
+                ✓ Opciones de remoción     para Data Wrangling     variables
+                   de duplicados
+                ✓                       ✓ ¿Cómo hacer una       ✓ Identificación de 
+                   Índices Jerárquicos                             outliers
+                                           revisión de pares y 
+                ✓ Print, GroupBy, Apply    dar feedback?        ✓ Valores perdidos
+    Objetivos de la clase
+                 Identificar algunas buenas prácticas de Data 
+                 Wrangling
+                 Comprender qué herramientas y librerías 
+                 permiten realizar el proceso de Data Wrangling 
+                 de manera eficiente
+        MAPA DE CONCEPTOS
+                               Repaso de Data 
+                                 Wrangling
+       Recomendacione         Workshop:                Tipos de 
+         s para Data                                   buenas 
+         Wrangling          Limpieza Datos             prácticas
+                                Revisión de 
+                                  pares
+      Cuestionario de tarea
+   ¿Te gustaría comprobar tus 
+   conocimientos de la clase anterior?
+   Te compartimos a través del chat de 
+   Zoom / chat de la plataforma el enlace a un 
+   breve cuestionario de Kahoot.
+   Duración: 10 minutos
+  Repaso Data Wrangling + 
+   tips y buenas prácticas 
+     Repaso de Data 
+       Wrangling
+       Para pensar
+   ¿Cúal es el objetivo de Data Wrangling? 
+   ¿Qué implica la transformación de datos? 
+   ¿Qué funciones de manipulación de datos 
+   conoces? ¿Qué diferencias hay entre ellas?
+   Responder en el chat de Zoom 
+                      Repaso
+                       El objetivo de hacer data wrangling es a partir de 
+                       un set de datos crudo, comprender sus 
+                       características y manipularlo para luego poder 
+                       extraer la información que tiene.
+                       La transformación de Datos puede incluir:
+                        ✔ Fusiones de DataFrames
+                        ✔ Eliminación de duplicados
+                        ✔ Agrupamiento de las tablas
+                        ✔ Tratamientos de valores nulos
+                        ✔ Operaciones con los distintos tipos de datos
+     Tips de buenas 
+       prácticas
+      Aprender estructuras de 
+      datos
+         ✔ Python ofrece una variedad de estructuras de 
+            datos  sorprendentes  con  excelentes  métodos 
+            integrados. 
+         ✔ Los  diccionarios  actúan  como  mini  base  de 
+            datos en memoria con pares clave-valor. 
+         ✔ Explore    otras    bibliotecas  integradas 
+            relacionadas con estas estructuras de datos. 
+         ✔ Cree su propia versión  de  las  estructuras  de 
+            datos esenciales, como stack, queues, heaps y 
+            trees, utilizando clases y estructuras básicas, y 
+            mantenerlas  para  una  recuperación  y  un 
+            recorrido rápidos de los datos.
+    Aprender manejo de datos
+     ✔ Es importante  saber  cómo  abrir  y  manipular 
+       archivos
+     ✔ También  es  importante  manipular  y  navegar 
+       por la estructura de directorios
+     ✔ El  manejo  de  datos  es  muy  importante  a  la 
+       hora de flexibilizar procesos 
+    Entender capacidades de 
+    Numpy y Pandas
+     ✔ Es importante crear, acceder, ordenar y buscar 
+       dentro de arrays en Numpy.
+     ✔ Tratar  de  reemplazar  ciclos  for  con  una 
+       operación  vectorizada.  Esto  aumentará  la 
+       velocidad de su operación de datos.
+     ✔ Explore tipos de archivos especiales como .npy 
+       (almacenamiento  nativo  de  Numpy)  para 
+       acceder/leer  grandes  conjuntos  de  datos  con 
+       una  velocidad  mucho  mayor  que  la  lista 
+       habitual
+    Tener capacidad sólida en 
+    estadística
+     ✔ Ejecutar algunas pruebas estadísticas estándar 
+       puede  darte  rápidamente  una  idea  sobre  la 
+       calidad  de  los  datos  con  los  que  necesitas 
+       lidiar.
+     ✔ Graficar  datos  a  menudo,  incluso  si  son 
+       multidimensionales.  No  intente  crear  gráficos 
+       en 3D sofisticados. 
+     ✔ Utilizar  boxplots  para  ver  la  dispersión  y  el 
+       rango  de  los  datos  para  detectar  valores 
+       atípicos.
+    Aprender más de un 
+    lenguaje de programación
+     ✔ Deben  ser  capaces  de  manipular  un  gran 
+       almacenamiento en bases de datos.
+     ✔ Siempre  es  una  buena  idea  conocer  los 
+       conceptos básicos de administración de bases 
+       de datos y álgebra relacional.
+     ✔ Entender  el  mundo  del  Big  y  Massive  Data 
+       (tecnologías como Hadoop/Pig/Hive/Impala). El 
+       conocimiento  de  Data  Wrangling  es  muy 
+       importante para lidiar con estos escenarios.
+     Recomendaciones 
+     para hacer Data 
+       Wrangling
+    Recomendaciones
+     ✔ Filtra tus datos para aligerar la carga
+     ✔ Considera el resultado deseado a lo largo de la 
+       manipulación del dato
+     ✔ Mantener siempre la capacidad de retroceder a 
+       una versión anterior de los datos.
+     ✔ Entender dónde y cómo están guardados los 
+       datos
+     ✔ Hacer un diccionario de datos
+     ✔ Incluir un experto en la materia siempre que 
+       sea posible
+    Filtrar datos
+     ✔ Filtrar los datos que necesites hará el proceso de 
+       data wrangling más simple y rápido
+     ✔ Asegura no gastar recursos extra en tareas 
+       innecesarias.
+     ✔ Incrementa la eficiencia de cálculos en fusión 
+       de datos 
+    Tener en cuenta el output 
+    deseado
+     ✔ Es importante tener una idea clara de cuál es el 
+       resultado final deseado luego del proceso de 
+       data wrangling. Por ejemplo definir los niveles de 
+       granularidad.
+     ✔ Por ejemplo cómo sería la forma con un conjunto 
+       específico de observaciones
+     ✔ Esto ayuda a saber que tareas realizar para 
+       obtener dicho resultado mientras uno cura el set 
+       de datos
+    Tener una versión de los datos
+     ✔ La idea detrás de esto es si uno toma una 
+       decisión equivocada poder volver atrás de 
+       forma sencilla 
+     ✔ Por ejemplo, cuando uno trabaja con un Excel, si 
+       comienza a eliminar columnas y reformatear 
+       celdas, es posible querer la versión anterior y 
+       hacer diferentes elecciones de preparación de 
+       datos.
+     Saber cómo y dónde están los 
+      ✔
+     datos
+        Tienen acceso a datos en vivo o es una captura 
+        diaria?
+      ✔ Acceso directo al raw data o son datos ya 
+        previamente procesados?
+      ✔ Siempre incluir un experto en la materia 
+        siempre que sea posible
+      ✔ Esta información debería ser transversal a 
+        todos los miembros que utilicen el mismo set de 
+        datos
+      ✔ Con un entendimiento claro y buena 
+        comunicación se puede tener una mayor confianza 
+        en los datos 
+    Hacer diccionario de datos
+     ✔ Cuando se trabaja con datos poco familiares, uno 
+       se hace muchas preguntas (tipos, fuentes)
+     ✔ Utilizar un diccionario para explicar que contiene 
+       cada fuente que se utiliza y que son cada variable 
+       es una buena práctica para orientarse uno y a 
+       otros acerca del set de datos
+    Trabajar con expertos
+     Trabajar con expertos en la materia no es solo una 
+     oportunidad para asegurarse de que está limpiando los 
+     datos de acuerdo con su significado. También es una 
+     oportunidad para mejorar los resultados. 
+     Escuchar el conocimiento experto de las personas que 
+     mejor  conocen  los  datos  le  brinda  la  oportunidad  de 
+     infundir  su  experiencia  técnica  con  contexto,  lo 
+     que lleva a mediciones más creativas de sus resultados 
+     clave, formas innovadoras de predecir sus resultados y 
+     una capacidad mejorada para comunicar resultados.
+       Para pensar
+   ¿En qué situaciones han tenido que hacer 
+   manipulación de datos y con qué 
+   herramientas?
+   Responder en el Chat de Zoom
+      Actividad colaborativa
+   Exploración dataset GDP per capita
+   Formaremos grupos de 4-5 personas en el Break-out 
+   Rooms y utilizaremos el dataset en el siguiente enlace 
+   GPD y responderemos las siguientes preguntas 
+   1. Calcular el GPD promedio de su país durante el periodo 
+     2015-2021 y compartirlo con sus compañeros
+   2. Calcular el GPD promedio de Sudamerica y 
+     Norteamerica en el mismo periodo de tiempo 
+   Duración: 20-25 minutos
+         Actividad colaborativa
+    Summary: Exploración dataset GDP per capita
+    En esta oportunidad realizamos las siguientes etapas de limpieza y 
+    transformación:
+    1. Carga y exploración inicial de datos
+    2. Verificación de nulos y duplicados
+    3. Comprensión de la estructura de datos 
+    4. Uso de filtros para extracción de información deseada
+    5. Recodificación y estandarización de valores (Data Transformation)
+    Cual de las fases anteriores consideran relevantes para su 
+    proyecto final ¿Existe algún proceso que no se encuentre en las 
+    fases anteriores? ¿Si es así aclararemos dudas?
+    Duración: 20-25 minutos
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+     ¿Cómo hacer una 
+    revisión de pares y 
+      dar feedback?
+       Definición
+    Proceso de revisión 
+    por pares
+    Es un proceso donde se indaga acerca de los 
+    posibles enfoques metodológicos para enmarcar 
+    y resolver el problema en cuestión, donde 
+    podemos formular nuestra recomendación sobre 
+    el mejor camino a seguir, complementando con 
+    una lista de las ventajas y riesgos inherentes a 
+    cada elección.
+    Proceso de revisión
+    por pares
+     Se realizan usualmente tres tipos de controles 
+     para validar un proyecto
+     ✔ La verificación de la validez técnica, que a 
+       menudo se realiza junto con los ingenieros 
+       de datos/software que respaldan el 
+       proyecto
+     ✔ Revisión de la investigación, donde un 
+       compañero ayuda al científico de datos a 
+       validar su proceso y recomendaciones. 
+     ✔ Verificación de la validez del alcance y los 
+       KPI, realizada con la persona a cargo del 
+       producto
+     Puntos de control
+    Motivación
+    Se debe evitar que elijan el enfoque o la 
+    dirección equivocados en esta fase inicial del 
+    proyecto. Estos errores, denominados fallas de 
+    enfoque en el flujo de trabajo de DS, son muy 
+    costosos de cometer y obstaculizan el proyecto 
+    durante el resto de su ciclo de vida.
+    Si tenemos suerte, descubrimos la falla del 
+    enfoque después de varias iteraciones de 
+    desarrollo del modelo y perdemos preciosas 
+    semanas de trabajo como científico de datos.
+    Objetivos
+     Se deben detectar errores costosos desde el 
+     principio, analizando aspectos centrales del 
+     proceso.
+     Aquí se pueden establecer dos objetivos 
+     secundarios adicionales: primero, mejorar la 
+     capacidad del científico de datos para explicar y 
+     defender sus decisiones en el próximo proceso 
+     de revisión de productos/negocios. Segundo, 
+     prepararse mejor para presentar el resultado de 
+     la fase de investigación al resto del equipo, 
+    Estructura
+     ✔ Se analiza el flujo del proyecto por medio 
+       de una presentación (no necesariamente 
+       diapositivas) del proceso de investigación 
+       por el que pasó.
+     ✔ Se puede establecer una reunión larga (al 
+       menos 60 minutos) con el revisor.
+     ✔ El revisor revisa la lista de verificación 
+       (antes de la reunión).
+       Checklist
+    Propiedades de datos
+     ¿Cómo se generó? ¿Cómo se muestreo? ¿Estaba 
+     actualizado?
+     ¿Qué ruido, sesgo de muestreo y datos faltantes 
+     introdujo esto?
+     ¿Datos perdidos?
+     ¿Puedes modelar explícitamente el ruido, 
+     independientemente de un enfoque?
+     Si el conjunto de datos está etiquetado, ¿cómo fue 
+     etiquetado?
+     ¿Se puede medir?
+     ¿Puede modificar o aumentar el proceso de 
+     etiquetado para compensar el sesgo existente?
+    Supuestos de 
+    aproximación
+    ¿Qué suposiciones hace cada enfoque sobre los 
+    datos/el proceso de generación de datos/el 
+    fenómeno en estudio?
+     ¿Es razonable hacer estas suposiciones sobre su 
+    problema? ¿Hasta qué grado?
+     ¿Cómo espera que la aplicabilidad se relacione 
+    con la violación de estos supuestos?  
+    ¿Se pueden validar estos supuestos de forma 
+    independiente?
+     ¿Algún caso que viole estos supuestos?
+    Experiencia pasada
+     ¿Qué experiencia tiene aplicando este enfoque, 
+     ya sea en general o para problemas similares?
+      ¿Encontró alguna publicación de éxito/fracaso 
+     de la aplicación de este enfoque a problemas 
+     similares?
+      ¿Te comunicaste con tus compañeros para 
+     conocer su experiencia?
+      ¿Qué lecciones se pueden aprender de lo 
+     anterior?
+      Qué soluciones se usaron para resolver este 
+     problema hasta ahora? ¿Cuáles fueron sus 
+     ventajas y qué problemas sufrieron?
+    Alineación de objetivos
+     Aprendizaje supervisado: 
+     ¿Qué funciones de pérdida se pueden utilizar al 
+     ajustar los parámetros del modelo? ¿Cómo se 
+     relacionan con los KPI del proyecto?
+      ¿Qué métricas se pueden utilizar para la 
+     selección de modelos/optimización de 
+     hiperparámetros? ¿Cómo se relacionan con los 
+     KPI del proyecto? 
+     Aprendizaje no supervisado
+     ¿Qué medida optimiza el método?
+      ¿Cómo se relaciona con los KPI?
+      ¿Cuáles son algunos casos extremos que 
+     satisfacen bien la métrica pero no el KPI?
+    Implementación
+     ¿Existen implementaciones del enfoque en un 
+     lenguaje utilizado actualmente en su entorno de 
+     producción?
+      ¿La implementación está actualizada? ¿Apoyado 
+     consistentemente? ¿En amplio uso?
+     ¿Hay usos exitosos de esta implementación 
+     específica por parte de empresas/organizaciones 
+     similares a la suya? ¿En problemas similares al 
+     tuyo?
+    Escalamiento
+    ¿Cómo se escala el tiempo de 
+    cálculo/entrenamiento con la cantidad de puntos 
+    de datos?
+     ¿Con el número de características o variables?
+     ¿Cómo se escala el almacenamiento con puntos 
+    de datos/características?
+    Requerimientos de 
+    información
+     ¿En qué medida cada enfoque depende de la 
+     cantidad de información disponible? ¿Cuál es el 
+     impacto esperado en el rendimiento de 
+     pequeñas cantidades de información?
+     ¿Esto se alinea bien con la cantidad de 
+     información actualmente disponible? ¿Con 
+     disponibilidad futura?
+      Actividad colaborativa
+   Revisión de Pares
+   Nos organizaremos en el break-out rooms en grupos de 4-
+   5 personas. 
+   Deberán mostrar el trabajo realizado en las fases 
+   entregables pasadas, cada estudiante dispondrá de 2 
+   minutos para contar brevemente sobre su código y recibir 
+   feedback
+   Se propone alternancia de roles (recibir vs. dar feedback) 
+   Duración: 10-15 minutos
+          Data Wrangling
+      Aplicaremos los conocimientos aprendidos hasta el 
+           momento de Data wrangling
+             Duración: 15-20 mins
+         ACTIVIDAD EN CLASE
+      Data Wrangling
+      Utilizaremos el archivo ‘nba_salary.sqlite’ y seguiremos los 
+      siguientes pasos.
+       ✔ Leer los datos de la base nba_salary.sqlite. Extraer ambas 
+          tablas.
+       ✔ Ver cuántos datos nulos tiene  cada tabla. Analizar que 
+          columnas y filas eliminaria
+       ✔ De la tabla de Seasons_Stats, seleccionar solo el año 2017. 
+          Analizar por qué hay varios jugadores que aparecen varias 
+          veces en un año.  Lo mismo para la tabla From 
+          NBA_season1718_salary.
+       ✔ Hacer un inner join entre las dos tablas en base al jugador y 
+          al equipo que juega con la tabla From 
+          NBA_season1718_salary. 
+       ✔ Agrupar por jugador y calcular el salario total y la cantidad 
+          de puntos por año.
+       CLASE N°30
+       Glosario
+       Buenas prácticas Data Wrangling:                Revisión de pares: un proceso donde se 
+       conjunto de pasos que se deben seguir           indaga acerca de los posibles enfoques 
+       para permitir que el proyecto de ciencia        metodológicos para enmarcar y resolver el 
+       de datos funcione como debería ser              problema en cuestión, donde podemos 
+                                                       formular nuestra recomendación sobre el 
+       Recomendaciones Data Wrangling:                 mejor camino a seguir
+       filtrado, output deseado, versión de            Puntos de control revisión de pares: 
+       control, saber cómo y dónde están los           principalmente son 3 (Motivación, Objetivos 
+       datos, diccionario de datos y trabajo con       y Estructura). Esto nos permite validar los 
+       expertos                                        procesos realizados
+      ¿Preguntas?
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.
+                   Resumen 
+               de la clase hoy
+              ✓ Repaso de Data Wrangling + tips de buenas 
+                prácticas
+              ✓ Recomendaciones para hacer Data Wrangling
+              ✓ ¿Cómo hacer una revisión de pares y dar 
+                feedback?

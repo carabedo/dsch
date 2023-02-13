@@ -1,0 +1,632 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 26. DATA SCIENCE
+               Lenguaje 
+           estructurado de 
+        consulta SQL - Parte 
+                    2
+      Temario
+                       25                      26                     27
+                   Lenguaje                Lenguaje           Data Acquisition 
+                 estructurado            estructurado                  II
+                     SQL-I                   SQL-II
+                 ✓ Introducción         ✓ Consultas de mayor     ✓ Intro a Github
+                                           complejidad           ✓
+                                                                    Javascript object 
+                 ✓ DDL                  ✓ TCL                       notation
+                 ✓ DML                  ✓ Otros tipos de         ✓ Introducción APIs
+                                           comandos
+                                                                 ✓ Conexión a 
+                                        ✓ Joins, agregaciones       modelos 
+                                           y agrupaciones           relacionales 
+                                                                    usando Pandas
+    Objetivos de la clase
+                 Conocer las sentencias para la gestión de 
+                 transacciones (TCL)
+                 Conocer otros tipos de comandos y cómo 
+                 utilizarlos
+                 Realizar consultas más complejas: joins, 
+                 agregaciones y agrupaciones
+       MAPA DE CONCEPTOS              DDL
+                                      DML
+                                     Consultas 
+                                     complejas
+       Lenguaje 
+     estructurado de 
+       Consulta                        TCL
+                                                 Parte II
+                                   Otros comandos
+                                      Joins, 
+                                    Agrupaciones y 
+                                    Agregaciones
+      Cuestionario de tarea
+   ¿Te gustaría comprobar tus 
+   conocimientos de la clase anterior?
+   Te compartimos a través del chat de 
+   Zoom / chat de la plataforma el enlace a un 
+   breve cuestionario de Kahoot.
+   Duración: 10 minutos
+    Consultas de mayor 
+      complejidad
+         WHERE
+    WHERE
+      1. La cláusula WHERE se utiliza para filtrar 
+        registros.
+      2. Se utiliza para extraer solo aquellos registros 
+        que cumplen una condición específica.
+              EJEMPLO EN VIVO
+         WHERE ejemplos
+             SELECT something FROM some table          Estructura
+                WHERE some conditions are satisfied
+             UPDATE some table SET something
+                WHERE some conditions are satisfied
+                        Ejemplo 1                          Ejemplo 3
+                 SELECT * FROM  Customers          SELECT * FROM  Products 
+                 WHERE  Country = ‘Mexico’;        WHERE  Price BETWEEN 50 AND 60
+                       Ejemplo 2                           Ejemplo 4
+                 SELECT * FROM  Products           SELECT * FROM  Customers 
+                 WHERE  Price = 18;                WHERE  City LIKE ‘s%’ OR ‘%a’
+      AND, OR, NOT
+    AND, OR, NOT
+    La cláusula WHERE se puede combinar con los 
+    operadores AND, OR y NOT.
+     1. El operador AND muestra un registro si todas 
+       las condiciones separadas por AND son 
+       VERDADERAS.
+     2. El operador OR muestra un registro si alguna 
+       de las condiciones separadas por OR es 
+       VERDADERA.
+     3. El operador NOT muestra un registro si la(s) 
+       condición(es) NO ES VERDADERA.
+                     EJEMPLO EN VIVO
+         AND, OR, NOT ejemplos
+                        SELECT column1, column2, ...
+                        FROM table_name                                                 Estructura 
+                        WHERE condition1 AND condition2 AND 
+                        condition3 ...;                                                 AND
+                        SELECT column1, column2, ...
+                        FROM table_name                                                  Estructura 
+                        WHERE condition1 OR condition2 OR condition3                     OR
+                        ...; 
+                        SELECT column1, column2, ...                                     Estructura 
+                        FROM table_name                                                  NOT
+                        WHERE NOT condition1 
+                   EJEMPLO EN VIVO
+         AND, OR, NOT ejemplos
+                         Ejemplo 1                                          Ejemplo 4
+               SELECT * FROM  Customers                           SELECT * FROM  Customers 
+               WHERE  City = ‘Berlin’ OR City = ‘Munchen’         WHERE NOT  Country = ‘Germany’ 
+                         Ejemplo 2                                          Ejemplo 5
+               SELECT * FROM  Customers                           SELECT * FROM  Customers 
+               WHERE  Country = ‘Germany’ AND City =              WHERE Country = ‘Germany’ AND (City = 
+               ‘Berlin’                                           ‘Berlin’ OR City = ‘Munchen’)
+                         Ejemplo 3                                          Ejemplo 6
+               SELECT * FROM  Customers                           SELECT * FROM  Customers 
+               WHERE  Country = ‘Germany’ OR Country =            WHERE NOT Country = ‘Germany’ AND NOT 
+               ‘Spain’                                            Country = ‘USA’ 
+      SELECT TOP
+    SELECT TOP
+      1. La cláusula SELECT TOP se usa para especificar 
+        el número de registros a devolver.
+      2. Es útil en tablas grandes con miles de registros 
+        si no se quiere devolver toda la cantidad de 
+        registros después del filtro
+              EJEMPLO EN VIVO
+      SELECT TOP ejemplos
+               SELECT column_name(s)
+               FROM table_name                            Estructura
+               WHERE condition
+               LIMIT number; 
+                      Ejemplo 1                          Ejemplo 3
+               SELECT * FROM  Customers          SELECT TOP 3 * FROM  Customers 
+               LIMIT 3;                          WHERE  Country = ‘Germany’
+                     Ejemplo 2                           Ejemplo 4
+               SELECT TOP 50 PERCENT * FROM      SELECT * FROM  Customers 
+               Customers                         WHERE  Country =‘Germany’ 
+                                                 LIMIT 3 
+         LIKE
+    LIKE
+    El operador LIKE se usa en una cláusula WHERE para 
+    buscar un patrón específico en una columna.
+    Existen dos formas comunes de usarlo:
+     1. El signo de porcentaje (%) representa cero, uno 
+       o varios caracteres
+     2. El signo de subrayado (_) representa un solo 
+       carácter
+              EJEMPLO EN VIVO
+       LIKE ejemplos
+             SELECT column1, column2,...               Estructura
+             FROM table_name
+             WHERE columnN
+             LIKE pattern; 
+                        Ejemplo 1                          Ejemplo 3
+                 SELECT * FROM  Customers          SELECT  * FROM  Customers 
+                 WHERE CustomerName LIKE ‘a%’;     WHERE CustomerName LIKE ‘%or%’;
+                       Ejemplo 2                           Ejemplo 4
+                 SELECT  * FROM  Customers         SELECT  * FROM  Customers 
+                 WHERE CustomerName LIKE ‘%a’;     WHERE CustomerName LIKE ‘_r%’;
+        ALIASES
+    ALIASES
+      1. Los alias de SQL se utilizan para dar a una 
+        tabla, o a una columna de una tabla, un 
+        nombre temporal.
+      2. Se utilizan a menudo para hacer que los 
+        nombres de las columnas sean más legibles.
+      3. Un alias solo existe mientras dure esa consulta.
+      4. Se crea un alias con la palabra clave AS.
+              EJEMPLO EN VIVO
+       ALIASES ejemplos
+             SELECT column1. AS alias_name
+             FROM table_name;                           Estructura
+             SELECT column_name(s)
+             FROM table_name AS aliasname
+                   Ejemplo 1                          Ejemplo 3
+                                             SELECT  CustomerName, Address + ‘,  ’ + 
+            SELECT CustomerID AS ID,         PostalCode + ‘    ’ + City +  ‘,  ’ + Country 
+            CustomerName AS Customer         AS Address FROM Customers
+            FROM Customers;
+                                                      Ejemplo 4
+                  Ejemplo 2
+                                              SELECT o.OrderID, o.OrderDat, 
+            SELECT CustomerName AS            c.CustomerName FROM  Customers 
+            Customer,  ContactName AS         AS c, Orders AS o 
+            [Contact Person]                  WHERE c.CustomerName=’Around the 
+            FROM Customers;                   Horn’ AND c.CustomerID= o.CustomerID;
+        COMMENTS
+    COMMENTS
+    Los comentarios se utilizan para explicar secciones 
+    de instrucciones SQL o para evitar la ejecución de 
+    instrucciones SQL.
+     1. Los comentarios de una sola línea comienzan 
+       con --. Cualquier texto entre -- y el final de la 
+       línea será ignorado (no será ejecutado).
+     2. Los comentarios de varias líneas comienzan 
+       con /* y terminan con */. Cualquier texto 
+       entre /* y */ será ignorado.
+              EJEMPLO EN VIVO
+      ALIASES ejemplos
+             -- Comentario corto:
+             SELECT * FROM table_name                   Estructura
+             /* Comentario largo
+             de muchas líneas */
+             SELECT * FROM tablen_name:
+                    Ejemplo 1                       Ejemplo 3
+                                            /* Comentario largo de control de cambios 
+             -- SELECT * FROM Customers     para regulacion */ 
+             SELECT * FROM Products;        SELECT * FROM Customers 
+                  Ejemplo 2                         Ejemplo 4
+             SELECT * FROM Customers --     /* SELECT Comentario largo de control de 
+             WHERE City = ‘Berlin’          cambios para regulacion */ 
+                                            SELECT * FROM Customers 
+       CASE-END
+    CASE-END
+      1. Utiliza condiciones dadas y devuelve un valor 
+        cuando se cumple la primera condición (similar 
+        al if-then-else). 
+      2. Una vez que una condición es verdadera, 
+        devolverá el resultado. Si ninguna condición es 
+        verdadera, devuelve el valor de la cláusula 
+        ELSE.
+      3. Si no hay parte ELSE y ninguna condición es 
+        verdadera, devuelve NULL.
+                  EJEMPLO EN VIVO
+        CASE-END ejemplos
+              CASE 
+              WHEN condition1 THEN result1
+              WHEN condition2 THEN result2
+              WHEN conditionN THEN resultN                        Estructura
+              ELSE result
+              END
+                              Ejemplo 1                                      Ejemplo 2
+                SELECT OrderID, Quantity                        SELECT CustomerName, City, Country
+                CASE                                            FROM  Customers
+                  WHEN Quantity > 30 THEN ‘Mayor30’             ORDER BY 
+                  WHEN Quantity = 30 THEN ‘Igual30’             (CASE 
+                  ELSE ‘Menor30’                                     WHEN City  IS NULL THEN Country
+                END AS  TextoCantidad                                ELSE City
+                FROM OrderDetails                               END)
+    Lenguaje de control 
+     de transacciones 
+        (TCL)
+       PARA RECORDAR
+    Las sentencias INSERT, UPDATE y DELETE que 
+    hemos visto realizan modificaciones en la 
+    base de datos. Cuando se ejecutan no se 
+    pueden revertir para obtener datos 
+    anteriores.
+    Esto hace que no se resguarde la base 
+    de datos ante posibles fallos que 
+    puedan ocurrir cuando se ejecutan 
+    operaciones pudiendo generar 
+    inconsistencias en los datos.
+    Consistencia de 
+    transacciones
+                      10 mil pesos
+           Esteban                   Matías
+              Consideremos como ejemplo la base de datos de un banco
+    Consistencia de 
+    transacciones
+      ✔ Para el ejemplo tendríamos que ejecutar dos operaciones UPDATE en los 
+        registros de una misma tabla, para lo cual se deben realizar dos sentencias 
+        SQL distintas: una que disminuya el saldo de Matías y otra que aumente el 
+        saldo de Esteban. 
+      ✔ Ahora bien, ¿Qué sucedería si, por algún fallo en el servidor, se ejecuta 
+        la primera sentencia UPDATE pero la segunda no? 
+      Transacciones
+    Transacciones
+       ✔ Son una secuencia de operaciones realizadas 
+        (por medio de uno o mas SQL querys) en una 
+        base de datos bajo una unidad lógica de 
+        trabajo
+       ✔ Los efectos de todas las sentencias SQL en una 
+        transacción pueden confirmarse (aplicarse a la 
+        base de datos) o revertirse (deshacerse de la 
+        base de datos).
+    Transacciones
+    Para indicar el comienzo de una transacción, se debe ejecutar 
+    START TRANSACTION;
+    A  continuación,  todas  las  sentencias  SQL  que  se  ejecuten 
+    quedarán  grabadas  temporalmente  pero  no  se  realizarán 
+    modificaciones físicas en la base de datos hasta que el usuario 
+    confirme la transacción.
+    Para confirmar una transacción exitosa se ejecuta  COMMIT;
+     ¡Finalmente se pueden escribir de manera definitiva los cambios 
+                  realizados!
+    Transacciones
+          Si en medio de transacción ocurre un fallo, el usuario puede 
+          abortar la transacción y volver al estado previo ejecutando 
+          ROLLBACK;
+     La gran mayoría de los sistemas de bases de datos 
+     soportan el manejo de transacciones, sin embargo, 
+     lamentablemente nuestra base de datos de ejemplo de 
+     W3Schools tiene deshabilitada este tipo de operaciones.
+         EJEMPLO EN VIVO
+    Transacciones ejemplo
+    En  primer  lugar  se  deberá  iniciar  la  transacción  con 
+    START TRANSACTION;
+    Enseguida se deberá registrar la orden ������
+    INSERT  INTO  Orders  (CustomerID,  EmployeeID, 
+    OrderDate, ShipperID)
+    VALUES (15, 5, '2021-01-01', 2);
+         EJEMPLO EN VIVO
+    Transacciones ejemplo
+     Hasta este momento, la nueva orden se encontraría escrita 
+     de manera temporal en la tabla virtual. Si la herramienta lo 
+     permitiese,  sería  posible  verificar  esto  realizando  un 
+     SELECT sobre la tabla Orders.
+     SELECT   *    FROM    Orders 
+     WHERE OrderDate = '2021-01-01';
+     ������ fila recientemente insertada.
+         EJEMPLO EN VIVO
+    Transacciones ejemplo
+     Si en este momento se aborta la transacción ejecutando 
+     ROLLBACK;
+     Se  vería  que  el  INSERT  no  se  ha  escrito  de  manera 
+     definitiva,  dado que al volver a consultar la tabla con la 
+     sentencia, no retornaría ningún resultado.
+                          EJEMPLO EN VIVO
+           Transacciones ejemplo
+             Para simular un registro completo de la venta, habría que ejecutar el siguiente 
+             conjunto de sentencias finalizando con la confirmación de la transacción:
+             START TRANSACTION;
+             INSERT INTO Orders (CustomerID, EmployeeID, OrderDate, ShipperID)
+             VALUES (15, 5, '2021-01-01', 2);
+             INSERT INTO OrderDetails (OrderID, ProductID, Quantity)
+             VALUES 
+                      (10444, 11, 5),
+                      (10444, 12, 10),
+                      (10444, 2, 80);
+             COMMIT;
+         EJEMPLO EN VIVO
+    Transacciones ejemplo
+     Tras ejecutar COMMIT, ambas inserciones quedarían asentadas de manera definitiva en la 
+     base de datos y a partir de aquí se podría verificar esto ejecutando:
+     SELECT o.OrderID, 
+     o.OrderDate, 
+     od.OrderDetailID, 
+     od.ProductID, 
+     od.Quantity
+     FROM Orders AS o
+     JOIN OrderDetails AS od
+        ON o.OrderID = od.OrderID
+     WHERE o.OrderDate = '2021-01-01';
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+                  ¡Lanzamos la
+                  Bolsa de 
+                  Empleos!
+                 Un espacio para seguir potenciando tu carrera y 
+                 que tengas más oportunidades de inserción 
+                 laboral.
+                 Podrás encontrar la Bolsa de Empleos en el menú 
+                 izquierdo de la plataforma.
+                 Te invitamos a conocerla y ¡postularte a tu futuro 
+                 trabajo!
+                   Conócela
+      Otros tipos de 
+       comandos 
+         IN
+    IN
+      1. El operador IN le permite especificar varios 
+        valores en una cláusula WHERE para filtrado.
+      2. El operador IN es una abreviatura de múltiples 
+        condiciones OR.
+                    EJEMPLO EN VIVO
+          IN ejemplos
+                   SELECT column_names(s) 
+                   FROM some table                                             Estructura
+                   WHERE column_name  IN (value1, value2,...)
+                                   Ejemplo 1                                         Ejemplo 3
+              SELECT * FROM  Customers                                   SELECT * FROM  Customers 
+              WHERE  Country IN (‘Germany’,’France’,’UK’);               WHERE  Country IN 
+                                                                         (SELECT Country FROM Suppliers) 
+                                 Ejemplo 2
+              SELECT * FROM  Customers 
+              WHERE  Country NOT IN (‘Germany’,’France’,’UK’);
+         BETWEEN
+    BETWEEN
+      1. El operador IN le permite especificar varios 
+        valores en una cláusula WHERE.
+      2. El operador IN es una abreviatura de múltiples 
+        condiciones OR.
+              EJEMPLO EN VIVO
+       BETWEEN ejemplos
+            SELECT column_names(s)                     Estructura
+            FROM some table
+            WHERE column_name  BETWEEN value1 AND value2
+                                                           Ejemplo 3
+                        Ejemplo 1                  SELECT * FROM  Customers 
+         SELECT * FROM  Customers                  WHERE  Price BETWEEN  10 AND 20
+         WHERE  Price BETWEEN  10 AND 20;          AND Category NOT IN (1,2,3) 
+                       Ejemplo 2                           Ejemplo 4
+         SELECT * FROM  Customers                  SELECT * FROM  Products 
+         WHERE  Price  NOT BETWEEN  10 AND 20;     WHERE ProductName BETWEEN  
+                                                   ‘Carnarvon Tigers’ AND ‘Mozzarella 
+                                                   di Diobanni’
+                                                   ORDER BY ProductName
+           ANY
+    ANY
+      1. El operador ANY devuelve un valor booleano 
+        como resultado VERDADERO si ALGUNO de lo 
+        valores de la subconsulta cumple la condición
+      2. ANY significa que la condición será verdadera si 
+        la operación es verdadera para cualquiera de 
+        los valores en el rango
+              EJEMPLO EN VIVO
+      ANY ejemplos
+             SELECT column_names(s) 
+             FROM some table                           Estructura
+             WHERE column_name operator  ANY 
+             (SELECT column_name FROM table_name 
+             WHERE condition);
+                    Ejemplo 1                             Ejemplo 2
+                                                  SELECT ProductName 
+          SELECT ProductName                      FROM  Products
+          FROM  Products                          WHERE ProductID = ANY  
+          WHERE ProductID = ANY                     (SELECT ProductID 
+            (SELECT ProductID                        FROM OrderDetails
+             FROM OrderDetails                       WHERE Quantity >1000)
+             WHERE Quantity >99)
+         ALL
+    ALL
+      1. El operador ALL devuelve un valor booleano 
+        como resultado devuelve VERDADERO si 
+        TODOS los valores de la subconsulta cumplen 
+        la condición se usa con sentencias SELECT, 
+        WHERE y HAVING
+      2. Significa que la condición será verdadera solo 
+        si la operación es verdadera para todos los 
+        valores en el rango.
+              EJEMPLO EN VIVO
+      ALL ejemplos
+             SELECT column_names(s) 
+             FROM some table                            Estructura
+             WHERE column_name operator  ALL 
+             (SELECT column_name FROM table_name 
+             WHERE condition);
+                   Ejemplo 1                              Ejemplo 2
+          SELECT ProductName                      SELECT ProductName 
+          FROM  Products                          FROM  Products
+          WHERE ProductID = ALL                   WHERE ProductID = ALL 
+            (SELECT ProductID                       (SELECT ProductID 
+             FROM OrderDetails                       FROM OrderDetails
+             WHERE Quantity =10)                     WHERE Quantity <30)
+    Joins, Agregaciones 
+     y Agrupaciones
+        JOINS
+    JOINS
+    Una cláusula JOIN se usa para combinar filas de dos o más 
+    tablas, en función de una columna relacionada entre ellas. 
+    Existen 4 tipos comunes (INNER, LEFT, RIGHT, FULL)
+    INNER, LEFT JOIN
+     INNER JOIN selecciona registros que tienen valores 
+     coincidentes en ambas tablas.
+     LEFT JOIN devuelve todos los registros de la tabla de la 
+     izquierda (tabla1) y los registros coincidentes de la 
+     tabla de la derecha (tabla2).
+                      EJEMPLO EN VIVO
+          INNER, LEFT JOIN ejemplos
+                           Estructura INNER JOIN                                    Estructura LEFT JOIN
+                 SELECT column_name(s)                                        SELECT column_name(s) 
+                 FROM table1                                                  FROM table1
+                 INNER JOIN  table2                                           LEFT JOIN  table2
+                 ON table1.column_name = table2.column_name;                  ON table1.column_name = table2.column_name;
+                                Ejemplo 1                                                Ejemplo 2
+                       SELECT Customers.CustomerName,                         SELECT Customers.CustomerName, 
+                       Orders.OrderID                                         Orders.OrderID
+                       FROM  Orders                                           FROM  Customers
+                       INNER JOIN  Customers ON                               LEFT JOIN  Orders ON 
+                       Orders.CustomerID=                                     Customers.CustomerID= 
+                       Customers.CustomerID                                   Orders.CustomerID 
+                       ORDER BY Customers.CustomerName                        ORDER BY Customers.CustomerName
+    RIGHT, FULL JOIN
+     LEFT devuelve todos los registros de la tabla de la 
+     derecha (tabla2) y los registros coincidentes de la tabla 
+     de la izquierda (tabla1).
+     FULL OUTER JOIN devuelve todos los registros cuando 
+     hay una coincidencia en los registros de la tabla 
+     izquierda (tabla1) o derecha (tabla2).
+                      EJEMPLO EN VIVO
+          RIGHT, FULL JOIN ejemplos
+                       Estructura RIGHT                                         Estructura FULL JOIN
+                       JOIN
+              SELECT column_name(s)                                        SELECT column_name(s) 
+              FROM table1                                                  FROM table1
+              RIGHT JOIN  table2                                           FULL OUTER JOIN  table2
+              ON table1.column_name = table2.column_name;                  ON table1.column_name = table2.column_name;
+              WHEREcondition                                               WHEREcondition
+                            Ejemplo 1                                                 Ejemplo 2
+                   SELECT Orders.OrderID,                                 SELECT Customers.CustomerName, 
+                   Employees.LastName,                                    Orders.OrderID
+                   Employees.FirstName                                    FROM  Customers
+                   FROM  Orders                                           INNER JOIN  Orders ON 
+                   RIGHT JOIN  Employees ON                               Customers.CustomerID= 
+                   Orders.EmployeeID=                                     Orders.CustomerID 
+                   Employees.EmployeeID                                   ORDER BY Customers.CustomerName
+                   ORDER BY Orders.OrderID
+       GROUP BY
+    GROUP BY
+      1. Agrupa filas que tienen los mismos valores en 
+        filas de resumen, como "encontrar la cantidad 
+        de clientes en cada país".
+      2. Se usa a menudo con funciones agregadas 
+        (COUNT(), MAX(), MIN(), SUM(), AVG()) para 
+        agrupar el conjunto de resultados por una o 
+        más columnas.
+               EJEMPLO EN VIVO
+       GROUP BY ejemplos
+              SELECT column_names(s)                        Estructura
+              FROM some table
+              WHERE condition  
+              GROUP BY column_name(s) 
+              ORDER BY column_name(s);
+                      Ejemplo 1                                Ejemplo 2
+                                                      SELECT COUNT (CustomerID), 
+            SELECT COUNT (CustomerID)                 Country
+            FROM  Customers                           FROM  Customers
+            GROUP BY Country                          GROUP BY Country
+            DESC                                      ORDER BY COUNT (CustomerID)
+                                                      DESC
+        HAVING
+    HAVING
+      1. La cláusula HAVING se agregó a SQL porque la 
+        palabra clave WHERE no se puede usar con 
+        funciones agregadas.
+      2. Se usa en combinación con la cláusula GROUP 
+        BY para restringir los grupos de filas devueltas 
+        a solo aquellas cuya condición es VERDADERA.
+               EJEMPLO EN VIVO
+       HAVING ejemplos
+              SELECT column_names(s) 
+              FROM some table                                Estructura
+              WHERE condition  
+              HAVING  condition
+              ORDER BY column_name(s);
+                     Ejemplo 1                                  Ejemplo 2
+                                                       SELECT COUNT (CustomerID), 
+           SELECT COUNT (CustomerID), Country          Country
+           FROM  Customers                             FROM  Customers
+           GROUP BY Country                            GROUP BY Country
+           HAVING COUNT  (CustomerID)>5                HAVING COUNT (CustomerID) >5
+                                                       DESC
+       MIN, MAX
+    MIN, MAX
+      1. La función MIN() devuelve el valor más 
+        pequeño de la columna seleccionada.
+      2. La función MAX() devuelve el valor más grande 
+        de la columna seleccionada.
+              EJEMPLO EN VIVO
+      MIN, MAX ejemplos
+                   Estructura MIN                     Estructura MAX
+             SELECT MIN (column_name)             SELECT MAX (column_name)
+             FROM table_name                      FROM table_name
+             WHERE  condition                     WHERE  condition
+                      Ejemplo 1                          Ejemplo 2
+                SELECT MIN (Price)                SELECT MAX (Price)
+                AS SmallestPrice                  AS SmallestPrice
+                FROM  Products                    FROM  Products
+     COUNT, AVG, SUM
+    COUNT, AVG, SUM
+      1. La función COUNT() devuelve el número de filas 
+        que coinciden con un criterio específico.
+      2. La función AVG() devuelve el valor promedio de 
+        una columna numérica.
+      3. La función SUM() devuelve la suma total de una 
+        columna numérica.
+              EJEMPLO EN VIVO
+       COUNT,AVG, SUM ejemplos
+                 Estructura COUNT                   Estructura AVG
+           SELECT COUNT (column_name)           SELECT AVG (column_name)
+           FROM table_name                      FROM table_name
+           WHERE  condition                     WHERE  condition
+                    Ejemplo 1                          Ejemplo 2
+               SELECT COUNT (Price)             SELECT AVG (Price)
+               AS SumPrice, COUNT (ProductID)   AS SumPrice, COUNT (ProductID)
+               FROM  Products                   FROM  Products
+           Actividad colaborativa
+     SQL con joins
+    Utilizaremos la base de datos en este enlace para responder las siguientes 
+    preguntas:
+     1. Selecciona todos los pedidos con información del cliente y del remitente 
+       (Pueden hacer uso de las tablas Orders y Customers, la columnas que 
+       permite el JOIN son CustomerID y ShipperID)
+     2. Obtener el número de pedidos enviados por cada remitente (Pueden hacer 
+       uso de las tablas Shippers y Orders, el JOIN se realiza por medio de la 
+       columna ShipperID)
+    Duración: 10-15 minutos. Grupos 3-4 personas
+          SQL con JOINS
+      Resolveremos un problema real utilizando Joins y 
+            funciones de agrupación
+             Duración: 15-20 mins
+       ACTIVIDAD EN CLASE
+    SQL con JOINS
+    Utilizaremos la base de datos en este enlace 
+     1. Selecciona todos los pedidos con información del 
+       cliente y del remitente (Pueden hacer uso de las 
+       tablas Orders y Customers, la columnas que 
+       permite el JOIN son CustomerID y ShipperID)
+     2. Obtener el número de pedidos enviados por cada 
+       remitente (Pueden hacer uso de las tablas 
+       Shippers y Orders, el JOIN se realiza por medio de 
+       la columna ShipperID)
+      CLASE N°26
+      Glosario
+                                                Otros tipos de comandos: incluyen por 
+      TCL: son comandos (COMMIT,,               ejemplo cláusulas como IN, BETWEEN, ANY, 
+      ROLLBACK) que permiten manejar            ALL que permiten hacer filtros de tipo 
+      transacciones en una base de datos        booleano a la hora de obtener resultados 
+      relacional.                               de una consulta SQL
+      Consultas de mayor complejidad:           JOINS: se utilizan para combinar los 
+      aquellas donde se utiliza clausulas AND,  resultados de una tabla con otras teniendo 
+      OR, NOT, WHERE, SELECT TOP, LIKE,         en cuenta una columna en común
+      ALIASING, COMMENTS o CASE-END con el 
+      fin de obtener un resultado de utilidad   Agrupaciones y agregaciones: cláusulas 
+      según el caso                             que permiten agrupar por categorías y 
+                                                obtener medida de resumen de las 
+      Transacción: secuencia de operaciones     variables deseadas
+      desarrolladas (con uno o más comandos 
+      SQL)
+      ¿Preguntas?
+                   Resumen 
+               de la clase hoy
+              ✓ Consultas de mayor complejidad
+              ✓ TCL
+              ✓ Conocer otros tipos de comandos y cómo 
+                utilizarlos
+              ✓ Realizar consultas más complejas: Joins, 
+                agregaciones y agrupaciones
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.
+                       Encuesta
+                       sobre esta clase
+                       Por encuestas de Zoom
+                       ¡Terminamos la clase! 
+                       Cuéntanos qué temas te resultaron más complejos de 
+                       entender. Puedes elegir más de uno. Vamos a 
+                       retomar aquellos temas que resultaron de mayor 
+                       dificultad en el próximo AfterClass.

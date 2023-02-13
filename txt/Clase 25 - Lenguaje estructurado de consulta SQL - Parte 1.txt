@@ -1,0 +1,583 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 25. DATA SCIENCE
+               Lenguaje 
+          estructurado de 
+       consulta SQL - Parte 
+                   1
+      Temario
+                       24                      25                     26
+                 Fundamentos               Lenguaje               Lenguaje 
+                  de bases de           estructurado            estructurado 
+                     datos                   SQL-I                  SQL-II
+                 ✓ Bases de datos                               ✓ Consultas de 
+                 ✓ Sistemas DBMS        ✓ Introducción             mayor complejidad
+                 ✓ Tipos de sistemas                            ✓ TCL
+                                        ✓ DDL
+                    de gestión de bases                         ✓ Tipos de comandos
+                    de datos            ✓ DML
+                                                                ✓ Joins, agregaciones 
+                 ✓ Backup,                                         y agrupaciones
+                    conexiones, 
+                    auditoría
+    Objetivos de la clase
+                 Realizar la introducción al Lenguaje 
+                 Estructurado de Consulta (SQL)
+                 Conocer las sentencias para la definición y 
+                 modificación de la base de datos
+                 Conocer las sentencias para la manipulación 
+                 de los datos almacenados (DML)
+       MAPA DE CONCEPTOS              DDL
+                                                 Parte I
+                                      DML
+                                     Consultas 
+                                     complejas
+       Lenguaje 
+     estructurado de 
+       Consulta                        TCL
+                                   Otros comandos
+                                      Joins, 
+                                    Agrupaciones y 
+                                    Agregaciones
+      Introducción
+     Structured Query 
+     Language (SQL)
+    Structured Query Language 
+    (SQL)
+     Es un lenguaje para la manipulación de bases de 
+     datos relacionales. 
+     Se dice que es un lenguaje declarativo porque a 
+     través de él se indica qué se quiere hacer, pero no 
+     cómo hay que hacerlo.
+    Structured Query Language 
+    (SQL)
+    No es propiamente un lenguaje de programación 
+    sino más bien un sublenguaje para la data.
+    Se  fundamenta  en  DDL  (Data  Definition  Language), 
+    DML (Data Manipulation Language), DQL (Data Query 
+    Language) , TCL (Transaction Control Language), DCL 
+    (Data Control Language).
+    Structured Query Language 
+    (SQL)
+     Cualquier persona con conocimiento del modelo de 
+     datos puede interactuar con la base de datos para 
+     realizar consultas, añadir nuevos registros, eliminarlos, 
+     actualizarlos, modificar los objetos que conforman la 
+     base de datos e incluso modificar la estructura de la 
+     misma.
+      Sublenguajes (SQL)
+        DD Conjunto de sentencias para la    DCL Conjunto de sentencias para la 
+                definición y modificación de          administración de los 
+         L      la base de datos y sus tablas.        privilegios de los distintos 
+                                                      usuarios que se conectarán a la 
+                                                      base de datos.
+       DM Conjunto de sentencias para la      TCL Conjunto de sentencias para la 
+                manipulación de los datos             para la gestión de 
+         L      almacenados.                          transacciones.
+               Para esta clase…
+      A lo largo del curso se mostrarán ejemplos 
+      utilizando la base de datos de W3School 
+      provista en este enlace. 
+      Si bien la herramienta cuenta con varias 
+      limitaciones en comparación con un sistema 
+      de gestión de bases de datos real, será 
+      suficiente para permitirnos un primer 
+      acercamiento a SQL.
+      Lenguaje de 
+    definición de datos 
+        (DDL)
+    Sentencias básicas de DDL
+            CREATE
+                           Mediante este tipo de operaciones es 
+             ALTER         posible definir nuevas tablas, 
+                           modificarlas, eliminarlas o vaciarlas.
+             DROP
+           TRUNCATE
+        CREATE
+    CREATE
+     La  creación  de  la  base  de  datos  y  su  esquema 
+     puede realizarse de dos maneras:
+      1. Utilizando  la  interfaz  gráfica  del  Sistema 
+        Gestor de Base de Datos (SGBD)
+      2. Por medio de la sentencia CREATE SCHEMA.
+                EJEMPLO EN VIVO
+       CREATE ejemplos
+                                                        Estructura
+                    CREATE TABLE DAVID (
+                      'CustomerID' INT,                              CREATE TABLE visits (
+        Ejemplo 1   'CustomerName' VARCHAR(40),           Ejemplo      visit_id INT PRIMARY KEY,
+                      'ContactName' VARCHAR(40),             2           first_name VARCHAR (50) 
+                      'Address' VARCHAR(45),                         NOT NULL,
+                      'City' VARCHAR(25),                                last_name VARCHAR (50) 
+                      'PostalCode' VARCHAR(15),                      NOT NULL,
+                      'Country' VARCHAR(25),                             visited_at DATETIME,
+                      PRIMARY KEY ('CustomerID'));                       phone VARCHAR(20),
+                                                                         store_id INT NOT NULL);
+        CREATE ejemplos
+                 CREATE TABLE 'shop'.'Customers' (
+                         'CustomerID' INT,
+                         'CustomerName' VARCHAR(40),             ������ Para crear una tabla de 
+                         'ContactName' VARCHAR(40),              clientes con columnas 
+                         'Address' VARCHAR(45),                  CustomerID, CustomerName, 
+                         'City' VARCHAR(25),                     ContactName, Address, City, 
+                         'PostalCode' VARCHAR(15),               PostalCode y Country ejecute
+                         'Country' VARCHAR(25),
+                         PRIMARY KEY ('CustomerID')
+          Tipos de datos
+            Algunos de los tipos de datos más comunes son:
+               ✔ INT  o  INTEGER:  Un  entero  de  longitud 
+                    media.
+               ✔ CHAR(n):  Una  cadena  de  caracteres  de 
+                    longitud fija n.
+               ✔ VARCHAR(n):  Una  cadena  de  caracteres 
+                    de  longitud  variable.  Es  posible  fijar  una 
+                    longitud máxima n entre los paréntesis.
+               ✔ BOOL  o  BOOLEAN:  Un  valor  booleano, 
+                    donde 0 indica falso y 1 indica verdadero.
+               ✔ DECIMAL(size, d): Un número decimal de 
+                    punto       fijo.    Opcionalmente  se  puede 
+                    especificar  la  cantidad  total  de  dígitos  en 
+                    size y la cantidad de dígitos posteriores al 
+                    punto decimal en d.
+    Restricciones de columnas
+    Puede  haber  una,  ninguna  o  varias  de  las  siguientes 
+    restricciones:
+     ✔ NOT NULL: indica que la columna no puede tener 
+       valores nulos.
+     ✔ UNIQUE: indica  que  la  columna  no  puede  tener 
+       valores repetidos.
+     ✔ PRIMARY KEY: indica que la columna es la clave 
+       primaria de la tabla.
+     ✔ REFERENCES:  indica  que  la  columna  es  clave 
+       foránea  a  la  columna  referenciada  de  la  tabla 
+       referenciada.
+     ✔ CHECK: indica  que  la  columna  debe  cumplir  las 
+       condiciones especificadas.
+          DROP
+    DROP
+      1. Se  usa  para  eliminar  una  base  de  datos 
+        completa o solo una tabla. 
+      2. Destruye  los  objetos  como  una  base  de 
+        datos, tabla, índice o vista existente. 
+      3. También se pueden remover índices, triggers, 
+        constantes y permisos
+                EJEMPLO EN VIVO
+       DROP ejemplos
+                                                                 Estructura
+                 Ejemplo 1
+           DROP TABLE DAVID;                          CREATE TABLE shop(
+                                                        'CustomerID' INT NOT NULL,
+                 Ejemplo 2                              'CustomerName' VARCHAR(40) 
+           DROP TABLE visits;                         NOT NULL,
+                                                        'ContactName' VARCHAR(40) 
+                                                      NOT NULL,
+                              Ejemplo 3                 'Address' VARCHAR(45) NOT 
+                          Creación de tabla con       NULL,
+                          restricciones                 'City' VARCHAR(25) NOT NULL,
+                          especiales                    'PostalCode' VARCHAR(15) NOT 
+                                                      NULL,
+                                                        'Country' VARCHAR(25) NOT 
+                                                      NULL,
+                                                        PRIMARY KEY ('CustomerID')
+                                                      );
+        DROP ejemplos
+             DROP TABLE shop;
+             CREATE TABLE 'shop'.'Customers' (
+                    'CustomerID' INT NOT NULL,
+                    'CustomerName' VARCHAR(40) NOT NULL,              ������ Elimina la tabla con DROP 
+                    'ContactName' VARCHAR(40) NOT NULL,              TABLE,  e inmediatamente crea 
+                    'Address' VARCHAR(45) NOT NULL,                     otra con las restricciones 
+                    'City' VARCHAR(25) NOT NULL,                                necesarias.
+                    'PostalCode' VARCHAR(15) NOT NULL,
+                    'Country' VARCHAR(25) NOT NULL,
+                    PRIMARY KEY ('CustomerID')
+             );
+    ALTER y TRUNCATE
+    ALTER TABLE
+      1. ALTER TABLE se usa para agregar, eliminar o 
+        modificar columnas en una tabla existente.
+      2. ALTER TABLE también se usa para agregar y 
+        eliminar  varias  restricciones  en  una  tabla 
+        existente.
+    ALTER TABLE 
+    ejemplos
+      ������ Modifica la tabla existente para incorporar las restricciones con ALTER 
+                         TABLE
+        ALTER TABLE 'shop'.'Customers' 
+        CHANGE COLUMN 'CustomerName' 'CustomerName' VARCHAR(45) NOT NULL ,
+        CHANGE COLUMN 'ContactName' 'ContactName' VARCHAR(45) NOT NULL ,
+        CHANGE COLUMN 'Address' 'Address' VARCHAR(45) NOT NULL ,
+        CHANGE COLUMN 'City' 'City' VARCHAR(45) NOT NULL ,
+        CHANGE COLUMN 'PostalCode' 'PostalCode' VARCHAR(15) NOT NULL ,
+        CHANGE COLUMN 'Country' 'Country' VARCHAR(25) NOT NULL ;
+    Definiciones por defecto
+    Es posible asignar valores por defecto para determinadas columnas agregando DEFAULT, 
+    tanto en la creación de la tabla como en la modificación de la misma. ������
+    ALTER TABLE 'shop'.'Consumer' 
+    CHANGE COLUMN 'Country' 'Country' VARCHAR(25) NOT NULL DEFAULT 'Argentina' ;
+        EJEMPLO EN VIVO
+    ALTER ejemplos
+     Ejemplo 1       Estructura
+    ALTER TABLE Customers 
+    ADD EMAIL varchar(20);
+     Ejemplo 2       Estructura
+    ALTER TABLE Customers 
+    DROP EMAIL;
+    TRUNCATE
+      1. TRUNCATE  TABLE  se  usa  para  eliminar  datos 
+        completos de una tabla existente.
+      2. Permite  eliminar  la  tabla  completa,  pero 
+        eliminaría la estructura de la tabla completa de 
+        la base de datos y se necesitaría volver a crear 
+        esta  tabla  una  vez  más  si  desea  almacenar 
+        datos.
+    TRUNCATE
+    ✔ En ocasiones se requiere vaciar por completo el contenido de una tabla para luego 
+      seguir utilizándose. 
+    ✔ Una opción es borrar por completo la tabla con la sentencia DROP TABLE y luego volver 
+      a crearla con la sentencia CREATE TABLE. 
+    ✔ Sin  embargo,  existe  una  opción  más  conveniente:  eliminar  el  contenido  con 
+      TRUNCATE. ������
+                   TRUNCATE TABLE Products; 
+        EJEMPLO EN VIVO
+    TRUNCATE ejemplos
+     Ejemplo 1         Estructura
+     ALTER TABLE Customers 
+     ALTER COLUMN EMAIL;
+     Ejemplo 2         Estructura
+     TRUNCATE TABLE 
+     Customers;
+        Ejemplo
+             CREATE TABLE 'shop'.'Products' (
+               'ProductID' INT NOT NULL,
+               'ProductName' VARCHAR(20) NOT NULL,                  ������ Deberá especificar una 
+               'SupplierID' INT NOT NULL,                          columna CategoryID al 
+               'CategoryID' INT NOT NULL,                          momento de creación de la 
+               'Unit' VARCHAR(15) NOT NULL,                        tabla Products. Esta columna 
+               'Price' DECIMAL() NOT NULL,
+               PRIMARY KEY ('ProductID'),                          será clave foránea a la 
+               CONSTRAINT 'fk_Products_Category'                   columna CategoryID de la 
+                 FOREIGN KEY ('CategoryID')                        tabla Categories.
+                 REFERENCES'shop'.'Categories' ('CategoryID')
+                 ON DELETE RESTRICT
+                 ON UPDATE CASCADE);
+    Algunas consideraciones
+    ✔ ON DELETE RESTRICT indica a la base de datos que deberá dar 
+      un error si se intenta eliminar una categoría para la cual existen 
+      productos asociados. Se realiza para mantener la integridad de 
+      los datos almacenados.
+    ✔ ON UPDATE CASCADE indica a la base de datos que deberá 
+      permitir realizar actualizaciones de la columna CategoryID de la 
+      tabla  Categories,  pero  que  estas  modificaciones  deberán 
+      propagarse en cascada hacia el resto de tablas.
+    ✔ A la clave foránea se le debe asignar un nombre único, en este 
+      caso ‘fk_Products_Category’.
+      Lenguaje de 
+   Manipulación de datos 
+        (DML)
+    Sentencias básicas de DML
+       SELECT FROM      para consultar una o más columnas de una 
+                        tabla
+                        para insertar de nuevas filas a una tabla.
+           INSERT
+                        para actualizar las filas de una tabla.
+          UPDATE
+                        para eliminar las filas de una tabla.
+          DELETE
+       PARA RECORDAR
+    La sentencia SELECT FROM tiene la 
+    particularidad de que no produce ningún 
+    cambio en el estado de la base de datos. 
+    En cambio, las tres restantes sí tienen 
+    la capacidad de producir algún cambio 
+    en los registros almacenados, por lo que se 
+    deberá prestar especial atención.
+        SELECT
+    SELECT 
+      1. La  instrucción  SELECT  se  utiliza  para 
+        seleccionar datos de una base de datos.
+      2. Los  datos  devueltos  se  almacenan  en  una 
+        tabla de resultados, denominada conjunto de 
+        resultados.
+    SELECT ejemplos 
+     SELECT CustomerID, CustomerName, Address FROM Customers; 
+     ������ Para seleccionar un subconjunto específico de columnas.
+     SELECT * FROM Customers; 
+     ������ O bien se pueden consultar todas la columnas utilizando la wildcard * 
+    SELECT ejemplos 
+     SELECT ProductID, ProductName, CategoryID
+     FROM Products
+     WHERE CategoryID = 5 
+     ������ Para añadir filtros sobre la consulta se añade la cláusula WHERE seguida de una 
+     condición  de  guarda  booleana  que  se  evalúa  para  cada  fila  resultado  de  la 
+     consulta.
+    SELECT ejemplos 
+    ������ En toda cláusula WHERE, es posible filtrar por varias condiciones 
+    mediante los operadores AND y OR. 
+    Por ejemplo:
+    SELECT ProductID, ProductName, CategoryID,  Price
+    FROM Products
+    WHERE CategoryID = 5 
+       AND       Price     <        20; 
+    SELECT p.ProductID, p.ProductName, p.CategoryID
+    FROM Products AS p 
+    WHERE p.CategoryID = 5 
+       OR p.CategoryID = 7;
+            EJEMPLO EN VIVO
+      SELECT ejemplos 
+                                  Estructura
+        Ejemplo 1
+        SELECT ProductID, 
+        ProductName, CategoryID 
+        FROM Products 
+        WHERE CategoryID =5;
+        Ejemplo 2
+        SELECT ProductID, 
+        ProductName, CategoryID 
+        FROM Products 
+        WHERE CategoryID =1 OR 
+        CategoryID =5 AND 
+        ProductName = 'Chais' OR 
+        ProductName= 'Inlagd Sill';
+            EJEMPLO EN VIVO
+      SELECT ejemplos 
+                                  Estructura
+        Ejemplo 3
+        SELECT ProductID, 
+        ProductName, CategoryID 
+        FROM Products 
+        WHERE (CategoryID =1 OR 
+        CategoryID =5) AND 
+        (ProductName = 'Chais' OR 
+        ProductName= 'Inlagd Sill’);
+        Ejemplo 4
+         SELECT ProductID, ProductName, 
+         CategoryID, Price FROM Products 
+         WHERE CategoryID =5 AND Price <20;
+            EJEMPLO EN VIVO
+      SELECT-Alias ejemplos 
+        Ejemplo 1
+        SELECT p.ProductID,       Estructura
+        p.ProductName, p.CategoryID
+        FROM Products AS p 
+        WHERE p.CategoryID = 5 
+        OR p.CategoryID = 7
+               ¿Qué pasa si 
+               tenemos el código 
+               de abajo?
+        Ejemplo 2
+        SELECT p.ProductID,        Ejemplo 3
+        p.ProductName, p.CategoryID
+        FROM Products AS p         SELECT DISTINCT CustomerName 
+        WHERE p.CategoryID = 5     FROM  Customers ORDER BY 
+        OR p.CategoryID = 7        CustomerName, Address, City;
+           #FindTheBug
+    Encuentra el error
+              SELECT ProductName,Unit, SUM(Price) as 
+              Suma, AVG(Price) as Promedio , 'Lote 1' as 
+              Lote  FROM [Products]
+              WHERE (ProductName LIKE 'A%') OR 
+              (ProductName LIKE '%d') OR (ProductName 
+              LIKE '%s')
+              ORDER BY Promedio DESC
+              GROUP BY ProductName
+    Duración: 4 minutos
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+    Predicados simples
+       Sentencias básicas de DML
+                 BETWEEN                  Retorna verdadero si los valores de una columna 
+                                          están entre los dos valores dados.
+                      IN                  Retorna  verdadero  si  los  valores  de  una 
+                                          determinada    columna    están     en    un 
+                                          determinado conjunto de valores.
+                  IS NULL                 Retorna verdadero si el campo está vacío.
+                     LIKE                 Retorna verdadero si un determinado campo de 
+                                          tipo CHAR o VARCHAR cumple con un patrón 
+                                          determinado.
+    BETWEEN, IN ejemplos 
+    BETWEEN: Por ejemplo, puede ser útil para consultar un rango de productos
+       SELECT ProductID, ProductName, 
+       FROM Products
+       WHERE ProductID BETWEEN 3 AND 15;
+     IN: Es útil filtrar aquellos clientes que tienen un ID específico:
+       SELECT CustomerID, CustomerName FROM Customers
+       WHERE CustomerID IN (1, 7, 9);
+    IS NULL ejemplos 
+    Se puede utilizar para consultar aquellos productos que aún no tienen un precio asignado:
+       SELECT ProductID, ProductName
+       FROM Products WHERE Price IS NULL;
+    O bien, para consultar únicamente aquellos productos que sí tienen un precio 
+    asignado:
+       SELECT ProductID, ProductName
+       FROM Products
+       WHERE Price IS NOT NULL;
+    IS NULL ejemplos 
+           Resulta útil para buscar palabras clave en una determinada columna. 
+        SELECT * FROM PRODUCTS
+        WHERE ProductName LIKE 'Chef%';
+          Retornará sólo aquellos productos cuyo nombre comienza con ‘Chef’. ������
+                  EJEMPLO EN VIVO
+        Predicados simples 
+        ejemplos 
+          Ejemplo 1
+          SELECT ProductID, ProductName        Estructura
+          FROM Products
+          WHERE ProductID BETWEEN 3 AND 
+          15;
+          Ejemplo 2                            Estructura
+          SELECT CustomerID, CustomerName 
+          FROM Customers
+          WHERE CustomerID IN (1, 7, 9);
+              EJEMPLO EN VIVO
+      Predicados simples 
+      ejemplos                         Estructura
+        Ejemplo 3
+        SELECT ProductID, ProductName
+        FROM Products
+        WHERE Price IS NULL;
+        Ejemplo 4                      Estructura
+        SELECT * FROM PRODUCTS
+        WHERE ProductName LIKE 'Chef
+        %';
+        INSERT
+    INSERT
+     La sentencia INSERT INTO se utiliza para insertar nuevos 
+     registros en una tabla. Es posible escribir la declaración 
+     INSERT INTO de dos maneras:
+      1. Especificar  tanto  los  nombres  de  las  columnas 
+       como los valores que se insertarán
+      2. Si está agregando valores para todas las columnas 
+       de la tabla, no necesita especificar los nombres de 
+       las  columnas  en  la  consulta  SQL.  Sin  embargo, 
+       asegúrese de que el orden de los valores sea el 
+       mismo que el de las columnas de la tabla.
+                   EJEMPLO EN VIVO
+        INSERT ejemplos 
+          Ejemplo 1                              ������ Insertamos en las columnas 
+          INSERT INTO Customers                 CustomerName, City y Country 
+          (CustomerName, City, Country)         de la tabla Customers los 
+          VALUES (’Cardinal’, ‘Stavanger’,      valores especificados
+          ‘Norway’)
+          Ejemplo 2                              ������ Insertamos en las columnas 
+                                                CustomerName, ContactName, 
+          INSERT INTO Customers                 Adress City, PostalCode, Country 
+          (CustomerName, ContactName,           los valores especificado
+          Address, City, PostalCode, Country)
+          VALUES (’Cardinal’, ‘Tom B.’, ‘Skag’, 
+          ‘Stavanger’, ‘4000’, ‘Norway’)
+        UPDATE
+    UPDATE
+     1. La instrucción UPDATE se utiliza para modificar los 
+       registros existentes en una tabla.
+     2. ¡Tengan  cuidado  al  actualizar  registros  en  una 
+       tabla!. La cláusula WHERE especifica qué registros 
+       deben actualizarse. Si omite la cláusula WHERE, ¡se 
+       actualizarán todos los registros de la tabla!
+                     EJEMPLO EN VIVO
+         UPDATE ejemplos 
+            Ejemplo 1
+            UPDATE Customers                            ������ Modificamos las columnas 
+            SET ContactName =’Alfred                   ContactName y City donde el 
+            Schmidt’, City =’Frankfurt’,               CustomerId es igual a 1
+            WHERE CustomerId =1;
+            Ejemplo 2                                   ������ Modificamos todas las filas de 
+                                                       la columna ContactName a 
+            UPDATE Customers                           Juan siempre y cuando la 
+            SET ContactName=’Jusn’  WHERE              columna Country sea igual a 
+            Country = ’Mexico’;                        Mexico
+        DELETE
+    DELETE
+     1. La  declaración  DELETE  se  usa  para  eliminar 
+       registros existentes en una tabla.
+     2. ¡Tengan cuidado al eliminar registros en una tabla! 
+       Observe  la  cláusula  WHERE  en  la  instrucción 
+       DELETE.  La  cláusula  WHERE  especifica  qué 
+       registros  deben  eliminarse.  Si  omite  la  cláusula 
+       WHERE,  ¡se  eliminarán  todos  los  registros  de  la 
+       tabla!
+                 EJEMPLO EN VIVO
+        DELETE ejemplos 
+          Ejemplo 1
+                                              ������ Eliminamos la fila completa 
+          DELETE FROM Customers              donde la columna 
+          WHERE CustomerName =’Alfred        CustomerName sea igual a 
+          Schmidt’                           ‘Alfred Schmidt’
+          Ejemplo 2                          ������ Eliminar todas las filas de una 
+                                            tabla sin eliminar el objeto 
+          DELETE FROM Customers             tabla, lo cual significa que la 
+                                            estructura, atributos e indices 
+                                            están intactos
+       PARA RECORDAR
+    Borrado de contenido DROP y 
+    DELETE
+    No se debe olvidar que el DROP es un 
+    comando de DDL que elimina una base de 
+    datos o una tabla, mientras que el DELETE 
+    es un comando de DML que elimina los 
+    registros de una tabla pero mantiene la 
+    estructura general
+    ¡Ambos comandos se deben usar con 
+    cuidado!
+           Actividad colaborativa
+     Uso de lenguaje DML
+    Utilizaremos la base de datos en este enlace para responder las siguientes 
+    preguntas:
+     1. Identificar a los clientes de la tabla Customers que viven en París o 
+       Londres (8 registros)
+     2. Encontrar en la tabla OrderDetails las órdenes cuya cantidad está 
+       entre 10 y 15 y además que el OrderDetailID sea mayor que 6. (122 
+       registros)
+     3. Seleccionar todos los registros de la tabla Products donde el 
+       ProductName empiezan por la letra C (9 registros)
+    Duración: 10-15 minutos. Grupos 3-4 personas
+      Uso del lenguaje DML
+     Resolveremos un problema real utilizando el lenguaje 
+                 DML
+             Duración: 15-20 mins
+       ACTIVIDAD EN CLASE
+    Uso del lenguaje 
+    DML
+    Utilizaremos la base de datos en este enlace 
+     1. Identificar a los clientes de la tabla Customers 
+       que viven en París o Londres (8 registros)
+     2. Encontrar en la tabla OrderDetails las órdenes 
+       cuya cantidad está entre 10 y 15 y además que el 
+       OrderDetailID sea mayor que 6. (122 registros)
+     3. Seleccionar todos los registros de la tabla 
+       Products donde el ProductName empiezan por la 
+       letra C (9 registros)
+       CLASE N°25
+       Glosario
+       DML: lenguaje que permite a los usuarios     DDL: lenguaje para crear y modificar la 
+       manipular datos en una base de datos         estructura de los objetos de base de datos 
+       (insertar, recuperar, eliminar y modificar   en una base de datos (vistas, esquemas, 
+       datos existentes).                           tablas, índices)
+       CREATE: se utiliza para crear una nueva      SELECT: selecciona datos de una base de 
+       tabla en una base de datos. Los              datos. Los datos obtenidos se almacenan 
+       parámetros de columna especifican los        en una tabla de resultados (conjunto de 
+       nombres de las columnas de la tabla.         resultados).
+       DROP: se usa para eliminar una tabla         INSERT: La sentencia INSERT INTO se 
+       existente en una base de datos.              utiliza para insertar nuevos registros en 
+                                                    una tabla de una base de datos.
+      ¿Preguntas?
+                   Resumen 
+               de la clase hoy
+              ✓ DDL (Data Definition Language)
+              ✓ DML (Data Manipulation Language)
+              ✓ Ejemplos de aplicación
+      Opina y valora 
+       esta clase
+                       Encuesta
+                       sobre esta clase
+                       Por encuestas de Zoom
+                       ¡Terminamos la clase! 
+                       Cuéntanos qué temas te resultaron más complejos de 
+                       entender. Puedes elegir más de uno. Vamos a 
+                       retomar aquellos temas que resultaron de mayor 
+                       dificultad en el próximo AfterClass.
+        Muchas 
+        gracias.

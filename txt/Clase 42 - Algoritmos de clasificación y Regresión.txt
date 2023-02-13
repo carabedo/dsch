@@ -1,0 +1,404 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 42. DATA SCIENCE
+             Algoritmos de 
+             clasificación y 
+               Regresión
+      Temario
+                       41                      42                     43
+                 Algoritmos de           Algoritmos de           Algoritmos de 
+                  clasificación          clasificación y          Agrupación I
+                                           Regresión
+                                       ✓ SVM                     ✓ K means
+                ✓ KNN                  ✓ Ejemplos clasificación 
+                ✓ Random Forest           errónea                ✓ DBSCAN
+                ✓ Regresión            ✓ Regresión Lineal y 
+                                          Múltiple
+                   Logística
+                                       ✓ Optimización de 
+                                          hiperparámetros
+    Objetivos de la clase
+                 Profundizar en el Aprendizaje Supervisado 
+                 Aplicar el algoritmo de SVM
+                 Aplicar los modelos de Regresión
+        MAPA DE CONCEPTOS
+                                Ejemplos de 
+                                clasificación 
+                                 errónea
+                             Algoritmos de              Regresión 
+           SVM               clasificación y            Lineal y 
+                               regresión                Múltiple
+                                Optimización 
+                                 de hiper 
+                                parámetros
+      Support Vector 
+        Machine:
+          SVM
+       Definición
+   Máquinas de soporte vectorial 
+      SVM por sus siglas en inglés 
+    (Support Vector Machines), es un 
+     algoritmo que se puede usar tanto 
+    para regresión como para problemas 
+    de clasificación. Es un algoritmo que 
+    se fundamenta en la construcción de 
+      hiperplanos de segmentación.
+     Ejemplo aplicado
+        Máquinas de soporte vectorial 
+         1) Imaginemos que tenemos dos grupos               2) Pero qué pasa si tenemos un punto muy 
+         (Verde y Rojo). La línea naranja en este caso      cerca del límite de decisión
+         funciona como punto límite para decisión
+       Máquinas de soporte vectorial 
+                                                               Podemos hacer esta 
+                                                               clasificación de una mejor 
+         3) En este caso lo podríamos clasificar como          forma?
+         verde pero no tiene mucho sentido en este 
+         caso
+       Podemos enfocarnos en las observaciones       Para ello podemos usar el valor del punto 
+       cerca a los límites de los dos grupos         medio entre esos dos puntos
+    Máquinas de soporte vectorial 
+      TERMINOLOGÍA
+                             Para recordar el margen en teoría 
+                             debe ser igual en ambos lados del 
+                             threshold para que se tenga una 
+                             buena clasificación 
+    La distancia más corta entre las 
+    observaciones y el threshold se conoce como Pero no siempre funciona bien! 
+    margen esto se conoce como Maximal 
+    Margin Classifier        OUTLIERS
+                             PORQUE EN ESTE CASO NO 
+                             FUNCIONA?
+       Máquinas de soporte vectorial 
+       En este caso esa metodología no             Elegir una zona límite que no sea sensible 
+       funciona tan bien y es porque los           a outliers se conoce como Bias/Variance 
+       Maximal Margin Classifiers son muy          Tradeoff y el límite se conoce como Soft 
+       sensibles a OUTLIERS                        margin
+                                                         Support Vector Classifier viene 
+                                                         del hecho que se usó un soft 
+                                                         margin por medio de support 
+                                                         vectors
+  Máquinas de soporte vectorial 
+   Máquinas de soporte vectorial 
+                         Las observaciones que 
+                         quedan dentro del soft 
+                         margin quedan mal 
+                         clasificadas.
+  Máquinas de soporte vectorial 
+    Máquinas de soporte vectorial 
+                               Cuando hay 4 o más 
+                               dimensiones la máquina 
+                               de soporte vectorial es un 
+                               hiperplano así como en 
+                               el caso 1D, 2D o 3D
+    Máquinas de soporte vectorial 
+                             Las máquinas de soporte vectorial 
+                             pueden manejar outliers y problemas de 
+                             malas clasificaciones
+     Ejemplo: Qué pasaría si tuviéramos este caso en el cual los puntos verdes 
+     representan pacientes recuperados y los rojo no recuperados (El medicamente solo 
+     funciona en las dosis apropiadas)
+    Máquinas de soporte vectorial 
+    En estos casos Maximal Margin Classifiers no funciona tan bien y hablamos de SVM 
+    (Support Vector Machines)
+                                       1) Empezar con 
+                                        data en una 
+                                        dimensión baja 
+                                        (1D)
+                                       2) Mover los datos 
+                                        a una dimensión 
+                                        mayor (e.g 2D)
+                                       3) Encontrar el SVC 
+                                        que separe los 
+                                        datos
+      Ejemplos de 
+    clasificación errónea
+   Clasificaciones erróneas
+    Vamos a suponer que los puntos azules corresponden a la clase «azul» y los 
+    puntos rojos a la clase «rojo».
+    Ahora vamos a intentar dibujar una línea 
+    que separe los puntos azules de los rojos. 
+    De esta forma, cuando haya un punto nuevo, intentaremos poder 
+    determinar qué color va a tener, dependiendo del lado de la línea en el 
+    que se encuentre.
+             Algunos ejemplos…
+                               En el contexto de los algoritmos de 
+                               clasificación podemos tener 
+                               muchos falsos positivos y 
+                               negativos, es por eso que debemos 
+                               tener mucho cuidado a la hora de 
+                               usar cualquier algoritmo
+                               A continuación veremos algunos 
+                               ejemplos de formas equivocadas de 
+                               clasificar
+   Clasificaciones erróneas
+    En la siguiente figura, podemos decir que lo 
+    que esté a la izquierda de la línea, es azul y 
+    lo que esté a la derecha, es rojo. 
+    Sin embargo, el punto nuevo abajo a la 
+    izquierda es clasificado como azul 
+    aunque en realidad debería clasificarse 
+    como rojo.
+   Clasificaciones erróneas
+    Podemos decir que cualquier punto que esté 
+    por arriba de la línea establecida será azul y 
+    cualquier otro punto que esté por debajo de 
+    la línea será rojo. 
+    Sin embargo, el nuevo punto a la 
+    derecha, ha sido incorrectamente 
+    clasificado como azul, cuando debería 
+    ser rojo.
+   Clasificaciones erróneas
+    La línea que mejor distingue las 
+    zonas de los puntos azules de la 
+    zona de los puntos rojos es la que 
+    maximiza el margen entre ambos.
+     SVM es una técnica de machine 
+    learning que encuentra la mejor 
+    separación posible entre clases. 
+      Para recordar…
+   Resulta importante mencionar, que 
+   normalmente los problemas de aprendizaje 
+   automático tienen muchas dimensiones, por 
+   lo tanto en vez de encontrar la línea óptima, el 
+   SVM encuentra el hiperplano que maximiza 
+   el margen de separación entre clases 
+     Regresión Lineal 
+     Simple y Múltiple
+     Regresión Lineal 
+        Simple
+   Regresión Lineal simple
+   A diferencia de los modelos anteriores, 
+    es un modelo estadístico que trata 
+   de explicar la relación que existe entre 
+      una variable dependiente 
+   (variable respuesta) y una variable 
+     independiente (explicativa) 
+   Regresión Lineal simple
+   El modelo de regresión lineal está dado por la 
+   siguiente expresión:
+            y=������+������X +������
+   ������= intercepto (valor que toma Y cuando X 
+   vale 0)
+   ������= es la pendiente (indica cómo cambia Y al 
+   incrementar X en una unidad)
+   ������= representa el error aleatorio con una 
+   distribución normal (0,������)
+   Regresión Lineal simple
+    La estimación de ������ y ������ se hace por medio del 
+    metodo de minimos cuadrados, donde se 
+    busca minimizar la suma de cuadrados de los 
+    errores dada por:
+   Regresión Lineal simple
+    Interpretación del coeficiente ������
+    Tenemos tres casos posibles:
+     1. ������ =0 para cualquier valor de X la variable 
+      Y es constante (no cambia)
+     2. ������ >0 indica que al aumentar el valor de 
+      X, también aumenta el valor de Y
+     3. ������<0 indica que al aumentar el valor de X, 
+      el valor de Y disminuye
+   Regresión Lineal simple
+    Coeficiente de correlación R: Es una 
+    medida que trata de medir la dependencia 
+    lineal que existe entre dos variables. Y su 
+    cuadrado se determina coeficiente de 
+    determinación R^2
+    El coeficiente de determinación cuantifica el 
+    porcentaje de variabilidad que puede explicar 
+    X de Y, por ejemplo si R^2= 0.45, indica que 
+    45% de la variabilidad de Y es explicada por X
+    Propiedades del coeficiente de 
+   Regresión Lineal simple
+    correlación
+     1. No tiene dimensión y siempre está entre 
+      [-1,1]
+     2. Si las variables son independientes 
+      entonces R=0, pero lo inverso no 
+      siempre es cierto
+     3. Si existe relación lineal perfecta R=1 o -1 
+      (relación inversa perfecta)
+     4. Si R>0 indica una relación directa lineal 
+      de X en Y
+     5. Si R<0 indica una relacion inversa de X 
+      en Y
+   Regresión Lineal simple
+    Supuestos
+     1. Independencia: los residuales deben 
+      ser independientes entre sí 
+     2. Homocedasticidad: significa varianzas 
+      iguales, para cada valor de X la varianza 
+      de los residuales debe ser la misma 
+     3. Normalidad: para cada valor de X, los 
+      residuales tienen distribución normal con 
+      media cero 
+     Regresión Lineal 
+       Múltiple
+   Regresión Lineal simple
+    Similar al modelo estadístico de 
+   Regresión lineal simple donde trata 
+   de explicar la relación que existe entre 
+      una variable dependiente 
+     (variable respuesta) y unas 
+      variables independientes 
+         (explicativas) 
+   Regresión Lineal simple
+   El modelo de regresión lineal múltiple está 
+   dado por la siguiente expresión:
+         y=������+������1X1+... +������nXn+������
+   ������= intercepto (valor que toma Y cuando X 
+   vale 0)
+   ������i= es la pendiente de cada variable 
+   independiente (i= 1,2,.....,n)
+   ������= representa el error aleatorio con una 
+   distribución normal (0,������)
+   Regresión Lineal simple
+   Este modelo al igual que el de regresión lineal 
+   simple tiene los mismos supuestos y se 
+   puede cuantificar su desempeño de la misma 
+   forma (utilizando el coeficiente de 
+   determinación (R^2)
+   De igual forma el la pendiente de cada 
+   variable independiente puede ser o no 
+   significativa y se necesita verificar 
+   individualmente. 
+     Optimización de 
+     hiperparametros
+       Definición
+   Hiperparametros
+   Los hiperparametros son variables que 
+   rigen el proceso de entrenamiento (e.g en 
+   una red neuronal las capas ocultas serían un 
+   ejemplo). Estas variables no están 
+   directamente relacionadas con los datos 
+   de entrenamiento, sino que son de 
+   configuración y por ende son constantes 
+   durante cualquier entrenamiento
+   Hiperparametros
+   Además de los hiperparametros tenemos dos 
+   otros conceptos importantes que controlan el 
+   entrenamiento de cualquier modelo:
+   1. Datos de entrada: colección de 
+   instancias con las características relevantes 
+   para el problema de interés. Se usan en el 
+   entrenamiento para configurar el modelo con 
+   el fin de que pueda realizar predicciones 
+   sobre nuevas instancias 
+   Hiperparametros
+   Además de los hiperparametros tenemos dos 
+   otros conceptos importantes que controlan el 
+   entrenamiento de cualquier modelo:
+   2. Parámetros: son las variables que usan 
+   los modelos para ajustarse a los datos (e.g los 
+   nodos en una red neuronal y sus pesos). Los 
+   parámetros son formalmente el modelo ya 
+   que son los que dan las características 
+     Hypertuning de 
+       parámetros
+   Hypertuning de Parámetros
+      Dentro de este contexto, resulta 
+   importante entender que la optimización 
+      de hiper-parámetros, se realiza 
+   normalmente mediante la utilización de un 
+     proceso de búsqueda cuyo objetivo 
+    consiste en encontrar la mejor selección 
+   de valores para un conjunto finito de hiper-
+    parámetros con el objetivo de generar el 
+         mejor modelo posible.
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+      Ejemplo en vivo
+   Miraremos ejemplos de aplicación dentro 
+   de la carpeta de clase para los algoritmos: 
+   SVM, Regresión Lineal + múltiple. Además 
+   exploraremos cómo podemos hacer el 
+   hypertuning de parámetros para un modelo 
+   de Regresión.
+   Elaborando un algoritmo de 
+             regresión
+      Utilizaremos lo aprendido en clase para crear un 
+      modelo de regresión y validar variables relevantes
+             Duración: 15-20 mins
+       ACTIVIDAD EN CLASE
+    Elaborando un 
+    algoritmo de 
+    En esta oportunidad nos reuniremos en grupos de máximo 
+    regresión
+    4 personas.
+     1. Elegir 4 variables independientes que consideren 
+       útiles para predecir los “costos” de nuevos clientes
+     2. Realizar el Encoding de las variables independientes 
+       (una persona hace el código y comparte, los demás 
+       ayudan dando instrucciones, etc.) para generar 
+       matriz para el modelo
+     3. Elegir uno de los modelos aprendidos en clase y 
+       entrenarlo
+     4. Generar una predicción de costos sobre uno de los 
+       estudiantes del grupo 
+                                        1
+                                        0
+                     Entrenando un 
+             algoritmo de Machine 
+                            Learning
+             Deberás entregar el décimo avance de tu proyecto final. Continuaremos hablando 
+             sobre lo trabajado en la segunda pre entrega del proyecto final. Crearás un 
+             notebook donde trabajarás sobre los datos elegidos en la primera y segunda pre 
+             entrega del proyecto final. Posteriormente, realizarás las etapas de: i) Encoding, ii) 
+             Ingeniería  de  atributos  y  iii)  Entrenamiento  de  un  modelo  de  Machine  Learning 
+             Supervisado  (Clasificación  o  Regresión)  o  no  supervisado  dependiendo  de  la 
+             pregunta problema.
+            DESAFÍO 
+            ENTREGABLE
+       Entrenando un algoritmo de Machine 
+       Learning
+       Consigna                                       Formato
+         ✓ Utilizar una fuente de datos para           ✓ Se debe entregar un Jupyter notebook con 
+            resolver problemas de clasificación o          el nombre: 
+            regresión.                                     “Desafio_AlgoritmoML_MVP_+Nombre
+         ✓ Realizar los procesos de Encoding,              _ +Apellido.ipynb”.
+            Feature Engineering y entrenamiento       Sugerencias
+            de un modelo de Machine Learning           ✓ Se pueden utilizar fuentes de datos 
+            (Clasificación o Regresión)                    conocidas en sitios como Kaggle o UCI
+       Aspectos a incluir                              ✓ Se recomienda elegir datasets curados 
+         ✓ Notebook donde se detallen todos los            para que la mayor parte del tiempo se 
+            pasos seguidos                                 utilice para el entrenamiento de modelos 
+                                                           y no en limpieza de datos
+       Ejemplo                                        Explicación del desafío
+         ✓ Ejemplo Desafío Entrenamiento ML,           ✓ ¡Click aquí!
+     ¿Quieres saber más?
+     Te dejamos material 
+     ampliado de la clase
+         MATERIAL AMPLIADO
+     Recursos multimedia
+     Algoritmos de regresión
+      ✓ Algoritmos de regresión | Scikit-Learn | Enlace
+      Disponible en nuestro repositorio.
+      ¿Preguntas?
+       CLASE N°42
+       Glosario
+       SVM: algoritmo de aprendizaje               Parámetros: son las variables que usan 
+       supervisado que permite resolver            los modelos para ajustarse a los datos. Se 
+       problemas de clasificación o regresión      definen como la estructura interna del 
+       haciendo uso de hiperplanos generando       modelos ya que son las características del 
+       regiones de separación con un amplio        mismo
+       margen
+                                                   Hiperparametros: variables que rigen el 
+       Regresión lineal: técnica estadística       proceso de entrenamiento, no están 
+       que permite encontrar la asociación lineal  directamente relacionadas con los datos de 
+       entre una variable dependiente (Y) y        entrenamiento sino que son de 
+       una/varias variable(s) independiente(s)     configuración y por ende son constantes 
+       llamadas X’s, puede ser simple (1 variable  durante cualquier entrenamiento 
+       independiente) o múltiple (más de 1 
+       variable independiente)
+        Muchas 
+        gracias.
+                   Resumen 
+               de la clase hoy
+              ✓ Clasificación con SVM
+              ✓ Ejemplos de clasificación errónea
+              ✓ Regresión Lineal simple y Múltiple
+              ✓ Optimización de hiper parámetros 
+      Opina y valora 
+       esta clase

@@ -1,0 +1,299 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 41. DATA SCIENCE
+             Algoritmos de 
+              clasificación
+       Temario
+                        40                       41                       42
+                  Introducción            Algoritmos de              Algoritmos de 
+                    a Machine              clasificación             clasificación y 
+                     Learning                                          Regresión
+                ✓ Marco CRISP-DM y la 
+                    fase de ML y                                    ✓ SVM
+                    modelado             ✓ KNN
+                ✓ Scikit-Learn                                      ✓ Ejemplos de 
+                                         ✓ Random Forest               clasificación errónea
+                ✓ Técnicas de Encoding                              ✓ Regresión lineal 
+                                         ✓ Regresión Logística         simple y múltiple
+                ✓ Feature Engineering
+                                                                    ✓ Optimización de 
+                ✓ Flujo de trabajo                                     hiperparametros
+    Objetivos de la clase
+                 Profundizar en el Aprendizaje Supervisado 
+                 Identificar el funcionamiento de los modelos 
+                 de clasificación
+         MAPA DE CONCEPTOS
+                                    Regresión 
+                                    Logística
+            KNN                 Algoritmos de               Random Forest
+                                clasificación
+            Repaso
+                     Les proponemos tomarse unos minutos 
+                     para realizar un repaso de los conceptos 
+                      aprendidos en Kahoot, ¿están listos?
+                          Profe, puedes compartir el 
+                           PIN o link de acceso al 
+                                juego
+     K-nearest-neighbor:
+          KNN
+   KNN (vecinos cercanos)
+   Puede usarse para clasificar nuevas 
+    muestras (valores discretos) o para 
+      predecir (regresión, valores 
+          continuos). 
+   Sirve esencialmente para clasificar 
+   valores, buscando los puntos de datos 
+     “más similares” (por cercanía).
+     KNN (vecinos cercanos)
+      Entonces, supongamos el siguiente 
+      escenario: 
+                                                2
+      Tenemos un Dataset con 2 Features, en      
+                                                e
+                                                r
+                                                u
+      el cual cada instancia puede pertenecer   t
+                                                a
+                                                e
+                                                F
+      a una de dos clases: “Rojo” o “Azul”.
+                                                      Feature 1
+       Para pensar
+   Dada una nueva instancia, de la cual no 
+   sabemos cuál es su clase, vamos a recurrir a sus 
+   vecinos cercanos para clasificar ¿La clasificamos 
+   como rojo o azul?
+   Contesta la encuesta de Zoom 
+     KNN (vecinos cercanos)
+      Si tomamos K=1, solo miraremos al 
+      vecino más cercano.                              k = 
+                                                       1    ?
+                                            2
+      Aclaración: K es el nro de vecinos     
+                                            e
+                                            r
+                                            u
+                                            t
+                                            a
+                                            e
+                                            F
+                  Azul
+                                                  Feature 1
+     KNN (vecinos cercanos)
+      Si elegimos otro valor de k, por ejemplo 
+      k > 1, nuestra clasificación cambiará                k = 
+                                                           3     ?
+      significativamente.
+                                               2
+                                                
+                                               e
+                                               r
+      Por ejemplo, con k = 3 tenemos dos       u
+                                               t
+                                               a
+      vecinos Rojos y uno Azul.                e
+                                               F
+      Por lo tanto en base a este escenario, 
+      la clasificación será: Rojo.                    Feature 1
+       Para pensar
+   ¿Conoces el algoritmo de Random Forest?
+   ¿Alguna vez lo han utilizado?
+   ¿Cómo lo explicarías a una persona que no lo 
+   conoce?
+   Contesta en el chat de Zoom 
+     Random Forest
+       Definición
+   Random Forest 
+     Random Forest es un tipo de Ensamble en Machine Learning en 
+       donde combinaremos diversos árboles de decisión. Pero 
+      entonces, ¿Qué son los métodos de Ensamble en ML? 
+     ¿Cómo funciona?
+   Métodos de Ensamble en ML
+      También llamados métodos combinados, intentan ayudar a 
+      mejorar el rendimiento de los modelos de Machine Learning. 
+        Este es un proceso mediante el cual se construyen 
+      estratégicamente varios modelos de ML para resolver un 
+                problema particular.
+       PARA RECORDAR
+    Importancia de Random 
+    Forest
+    Por otro lado, resulta importante mencionar, 
+    que Random Forest, al igual que el Árbol de 
+    decisión, son modelos de aprendizaje 
+    supervisado comúnmente utilizados en 
+    problemas de clasificación (aunque también 
+    puede usarse para problemas de regresión)
+   ¿Cómo surge?
+     Uno de los problemas que aparecía con la 
+    creación de un árbol de decisión, es que si le 
+     damos la profundidad suficiente, el árbol 
+     tiende a “memorizar” las soluciones en 
+    vez de generalizar el aprendizaje. Es decir, 
+     a padecer de overfitting. La solución para 
+    evitar esto es la de crear muchos árboles y 
+        que trabajen en conjunto. 
+     Miremos un ejemplo de cómo funciona…
+      Ejemplo aplicado
+                                    Paso 1: Creación de un boostrapped 
+       Tenemos estos datos          dataset (Muestra de los datos) con mismo 
+                                    tamaño del original
+    Ejemplo aplicado
+                      Paso 2: Creamos un árbol de decisión con el 
+                      Bootstrapped Dataset pero solo seleccionando 
+                      algunas columnas al azar en cada paso
+                      Asumiremos 2 variables (columnas) en cada paso
+    Ejemplo aplicado
+    Paso 3: Volvemos al paso 1 y repetimos el proceso creando nuevos bootstrapped 
+    datasets y creando nuevos árboles de decisión (se puede hacer 100 veces, en este 
+    caso solo puse 6)
+      Ejemplo aplicado
+       Imaginemos que tenemos un            Paso 4: Utilizar el modelo en los diferentes 
+       nuevo paciente y queremos            árboles de decisión
+       saber si padecera ataque 
+       cardiaco 
+    Ejemplo aplicado
+    Para el segundo árbol la decisión es Yes
+    Para el tercer árbol la decisión es Yes
+    Ejemplo aplicado
+    Para el cuarto árbol la decisión es Yes
+    Para el quinto árbol la decisión es Yes
+     Ejemplo aplicado
+        Tenemos como resultado
+                                       Al final se busca la mayor 
+                                       votación y a partir de esto se 
+                                       toma la decisión de la 
+                                       clasificación final
+                                       Bootstrapping los datos y 
+                                       agregarlos para tomar 
+                                       decisiones se conoce como 
+                                       Bagging
+       Para pensar
+   ¿Conoces el algoritmo de Regresión Logística?
+   ¿Alguna vez lo han utilizado?
+   Contesta en el chat de Zoom 
+    Regresión Logística
+       Definición
+   Regresión Logística
+    Como vimos anteriormente, se trata 
+    de una técnica de aprendizaje 
+   automático que proviene del campo 
+     de la estadística. A pesar de su 
+   nombre, no es un algoritmo, sino que 
+    es un método para problemas de 
+     clasificación, en los que se 
+   obtienen un valor binario entre 0 
+            y 1.
+       Ejemplos
+   Regresión Logística: 
+       Un problema de clasificación es 
+   Fraudes
+    identificar si una operación dada es 
+     fraudulenta o no, asociándolo una 
+     etiqueta “fraude” a unos registros y “no 
+          fraude” a otros. ������
+       Entonces, la Regresión Logística 
+     describe y estima la relación entre una 
+      variable binaria dependiente y las 
+        variables independientes.
+   Regresión Logística: 
+     Si la curva va a infinito positivo la 
+   Fraudes
+     predicción se convertirá en 1, y si la 
+     curva pasa el infinito negativo, la 
+      predicción se convertirá en 0.
+    Si la salida de la función Sigmoide es 
+    mayor que 0.5, podemos clasificar el 
+    resultado como 1 o SI, y si es menor 
+    que 0.5 podemos clasificarlo como 0 o 
+             NO. 
+   Regresión Logística: 
+   Fraudes
+   Por su parte si el resultado es 0.75, 
+   podemos decir en términos de 
+   probabilidad como, hay un 75% de 
+   probabilidades de que nuestro producto, 
+   por ejemplo en este caso, tenga éxito en 
+   el mercado.
+    Regresión Logística: Fraude
+      Fraude
+                             Fraude
+     No Fraude              No Fraude
+      En este caso una línea recta no es apropiada, por ende se habla de una 
+      función que se ajuste a los datos y podemos usar la función Logística
+    Regresión Logística: Fraude
+       Fraude                 Fraude
+     No Fraude               No Fraude
+    Las X en rojo representan nuevos individuos. Como se puede observar a 
+    izquierda al entrar a la curva se tiene una alta probabilidad de cometer 
+    fraude. Sin embargo como se observa a la izquierda podemos tener diferentes 
+    casos de análisis. 
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+                  ¡Lanzamos la
+                  Bolsa de 
+                  Empleos!
+                 Un espacio para seguir potenciando tu carrera y 
+                 que tengas más oportunidades de inserción 
+                 laboral.
+                 Podrás encontrar la Bolsa de Empleos en el menú 
+                 izquierdo de la plataforma.
+                 Te invitamos a conocerla y ¡postularte a tu futuro 
+                 trabajo!
+                   Conócela
+      Ejemplo en vivo
+   Analizaremos el dataset de titanic con los 
+   datos train_titanic.csv y test_titanic.csv 
+   dentro de la carpeta de clase. Revisaremos 
+   cómo el uso del Feature Engineering puede 
+   ayudar a mejorar los resultados de un 
+   modelo Random Forest
+   Elaborando un algoritmo de 
+            clasificación
+     Aplicaremos Feature Engineering y generaremos un 
+            modelos de clasificación
+             Duración: 15-20 mins
+       ACTIVIDAD EN CLASE
+    Elaborando un 
+    algoritmo de 
+    En esta oportunidad nos reuniremos en grupos de 
+    clasificación
+    máximo 4 personas.
+     1. Elegir 4 variables independientes que consideren 
+       útiles para predecir el “churn” o “fuga/baja” de 
+       clientes
+     2. Realizar el “encoding” de las variables 
+       independientes (una persona hace el código y 
+       comparte, los demás ayudan dando instrucciones, 
+       etc) para generar matriz para el modelo
+     3. Elegimos uno de los modelos aprendidos en clase 
+       (e.g KNN, Random Forest, Reg. Logística o árboles 
+       de decisión) y entrenan un modelo
+     4. Crear matriz de confusión para evaluar 
+       performance
+      ¿Preguntas?
+       CLASE N°41
+       Glosario
+       KNN: algoritmo de aprendizaje               Bagging: Boostrapping aggregating por 
+       supervisado que permite resolver            sus siglas en inglés, es un mecanismo que 
+       problemas de clasificación basándose en     permite reducir el overfit en los modelos 
+       distancias o métricas                       basados en árboles de decisión y se 
+                                                   fundamenta en que la mayoría hace la 
+       Random Forest: algoritmo de                 fuerza 
+       aprendizaje supervisado que permite         Regresión Logística: algoritmo basado en 
+       resolver problemas de clasificación         la función sigmoide, meramente estadístico 
+       utilizando el mecanismo bagging por         que permite resolver problemas de 
+       medio del uso de muchos árboles de          clasificación en el contexto de aprendizaje 
+       decisión a la hora de discernir la          supervisado. Ideal para clasificación 
+       predicción final                            binaria.
+      Opina y valora 
+       esta clase
+                        Resumen 
+                   de la clase hoy
+                  ✓ KNN
+                  ✓ Random Forest
+                  ✓ Regresion Logistica
+        Muchas 
+        gracias.

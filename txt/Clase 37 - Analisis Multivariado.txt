@@ -1,0 +1,315 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 37. DATA SCIENCE 
+       Análisis Multivariado
+        Temario
+                             36                            37                             38
+                  Análisis bivariado                    Análisis                    Workshop: 
+                                                    Multivariado                     Revisión 
+                                                                                     de pares
+                      ✓ Análisis                                                  ✓ Revisión de 
+                          bivariado               ✓ Objetivos                         pares 
+                      ✓ Pasos a seguir            ✓ Ventajas y desventajas        ✓ Narrativa de 
+                                                  ✓ Integración con R y               Presentación 
+                      ✓ Tipos                         PowerBI                         de datos + 
+                                                                                      tips
+    Objetivos de la clase
+                 Identificar las particularidades del Análisis 
+                 multivariado de datos
+                 Reconocer ejemplos y aplicaciones de Python
+       MAPA DE CONCEPTOS                  Tipos
+                         Análisis 
+                        univariado y 
+                         gráficos         Gráficos 
+                                         estadísticos
+                                        Pasos a seguir
+       Análisis          Análisis 
+     estadístico         bivariado        Tipos
+                                         Objetivos
+                         Análisis        Ventajas y 
+                        Multivariado     desventajas
+                                       Integración con R y 
+                                          PowerBI
+    Análisis Multivariado: 
+       Objetivos
+       Definición
+    ¿Qué es el Análisis 
+    Multivariado?
+     ✔ Es  una  rama  de  la  estadística  que  abarca  la 
+       observación  y  el  análisis  simultáneos  de  más  de 
+       una variable respuesta.
+     ✔ Los  estudios  multivariados  son  similares  a  los 
+       univariados y bivariados con la diferencia de que 
+       tienen más de dos variables independientes y en 
+       algunos casos múltiples variables dependientes. 
+        ¿Qué es el Análisis 
+        Multivariado?
+         ✔ Otra diferencia importante es que en un análisis de 
+             múltiples  variables  no  hablamos  de  “correlación 
+             simple” ni de estadísticos descriptivos por sí solos, 
+             sino    que    apelamos      a   otras    herramientas 
+             estadísticas  llamadas  “multivariantes”,  tal  es  el 
+             caso de por ejemplo: Análisis de varianza (ANOVA), 
+             Estudio multifactorial o Regresiones Múltiples.
+    ¿Qué es el Análisis 
+    Multivariado?
+    Los investigadores emplean estudios multivariantes 
+    cuando requieren examinar la relación entre múltiples 
+    factores al mismo tiempo. Se diferencia claramente de 
+    los estudios univariados y bivariados en que plantean 
+    más de una variable dependiente y varias 
+    independientes.
+  Ejemplo de contexto
+  Por ejemplo si deseamos examinar la capacidad de 
+  tres nuevos productos químicos para limpiar un 
+  derrame de aceite, las tres sustancias químicas 
+  serían las variables variables independientes. En 
+  un análisis multivariado se podrían mediar las 
+  propiedades de las sustancias químicas y el efecto 
+  sobre el medio ambiente como variables 
+  dependientes variables dependientes
+       Objetivos
+    Objetivos del Análisis 
+    Multivariado
+    El  objetivo  del  análisis  multivariado  es  variable  en 
+    relación a lo que queremos conseguir con él. Estos son 
+    los  diferentes  escenarios  que  explican  el  objetivo  del 
+    análisis multivariado:
+     ✔ Optimizar los datos o simplificar la estructura: 
+       Esto  ayuda  a  simplificar  los  datos  en  la  mayor 
+       medida posible sin sacrificar información valiosa y 
+       sirve para facilitar la explicación de datos.
+       Objetivos del Análisis 
+       Multivariado
+         ✔ Ordenar y agrupar: Cuando tengamos múltiples 
+             variables,  se  creará  un  conjunto  de  objetos  o 
+             variables    "similares"    en    función    de     las 
+             características medidas para ordenar y agrupar los 
+             datos.
+         ✔ Investigar  la  relación  de  dependencia  entre 
+             variables: La relación entre variables es algo que 
+             puede  resultar  preocupante  para  muchos.  El 
+             análisis multivariado nos servirá para saber si todas 
+             las  variables  son  independientes  o  dependientes 
+             entre sí. 
+      Objetivos del Análisis 
+      Multivariado
+        ✔ Relación  predictiva  entre  variables:  Deben 
+            determinarse para predecir el valor de una o más 
+            variables  a  partir  de  observaciones  de  otras 
+            variables.
+        ✔ Construcción  y  prueba  de  hipótesis:  Se 
+            prueban    hipótesis   estadísticas  específicas 
+            expresadas    en    parámetros     poblacionales 
+            multivariados.  Esto  se  puede  hacer  para  probar 
+            hipótesis o reafirmar hipótesis previas.
+       Ventajas y 
+      Desventajas
+       Ventajas
+    Ventajas
+      ✔ Permite a los investigadores ver la relación entre 
+       variables y cuantificar la relación entre ellas: Se 
+       puede usar la tabulación cruzada, correlación 
+       parcial y regresión múltiple para controlar la 
+       asociación entre variables. 
+      ✔ Muestra capacidad de obtener una visión general 
+       más realista y precisa que cuando se analiza una 
+       sola variable. 
+    Ventajas
+      ✔ Permite una fácil visualización e interpretación de 
+       los datos
+      ✔ Se analiza más información en simultáneo, dando 
+       mayor potencia en el análisis
+      ✔ Se entienden mejor las relaciones entre las 
+       variables
+      ✔ Permite encontrar relaciones que no son posibles de 
+       ver con el análisis univariado y bivariado 
+      Desventajas
+       Desventajas
+           ✔ Sus      técnicas    son    complejas,     involucran 
+              matemáticas         avanzadas       y     requieren 
+              procedimientos estadísticos para analizar datos. 
+           ✔ Los  resultados  del  modelado  estadístico  no 
+              siempre  son  fáciles  de  entender  para 
+              estudiantes o personas sin mucha formación. 
+    Métodos disponibles
+     Métodos disponibles
+      Para  el  análisis  multivariado  tenemos  técnicas  de  regresión  o  clasificación  con  una 
+      amplia gama de algoritmos disponibles. Estudiaremos algunos de los más usados
+     Fuente: Hair J. Multivariate Data Analysis: An Overview 
+    Regresión lineal múltiple
+     También conocida como regresión múltiple, es 
+     una  técnica  estadística  que  utiliza  varias 
+     variables  explicativas  (independientes)  para 
+     predecir  el  resultado  de  una  variable  de 
+     respuesta (dependiente). La regresión múltiple 
+     es  una  extensión  de  la  regresión  lineal  (OLS) 
+     que usa solo una variable explicativa.
+    Regresión PCR
+     PCR  (Principal  Component  Regression)  es  una 
+     técnica de análisis de regresión que se basa en 
+     el  análisis  de  componentes  principales  (PCA). 
+     Se  usa  para  estimar  los  coeficientes  de 
+     regresión  desconocidos  en  un  modelo  de 
+     regresión  lineal  estándar.  Los  componentes 
+     principales  de  las  variables  explicativas  se 
+     utilizan como regresores
+      PLSR
+         La  regresión  de  mínimos  cuadrados  parciales 
+         (PLS)  es  un  método  de  regresión  rápido, 
+         eficiente y óptimo basado en la covarianza. Se 
+         recomienda  en  casos  de  regresión  donde  el 
+         número  de  variables  explicativas  es  alto,  y 
+         donde   es   probable  que   las  variables 
+         explicativas estén correlacionadas.
+    ANN
+     Las redes neuronales artificiales (ANN) utilizan 
+     algoritmos  de  aprendizaje  que  pueden  hacer 
+     ajustes de forma independiente, o aprender, en 
+     cierto  sentido,  a  medida  que  reciben  nuevos 
+     datos.  Esto  los  convierte  en  una  herramienta 
+     muy  eficaz  para  el  modelado  de  datos 
+     estadísticos no lineales.
+    SVM
+     Una máquina de vectores de soporte (SVM) es 
+     un  algoritmo  de  aprendizaje  automático  que 
+     analiza  datos  para  clasificación  y  análisis  de 
+     regresión.  SVM  es  un  método  de  aprendizaje 
+     supervisado que analiza los datos y los clasifica 
+     en una de dos categorías.  Se utilizan funciones 
+     kernel  para  encontrar  mejores  planos  de 
+     separación
+    KNN
+     Una máquina de vectores de soporte (SVM) es 
+     un  algoritmo  de  aprendizaje  automático  que 
+     analiza  datos  para  clasificación  y  análisis  de 
+     regresión.  SVM  es  un  método  de  aprendizaje 
+     supervisado que analiza los datos y los clasifica 
+     en una de dos categorías.  Se utilizan funciones 
+     kernel  para  encontrar  mejores  planos  de 
+     separación
+      Ejemplo en vivo
+   Utilizaremos el notebook denominado “Clase 15 - 
+   Análisis Multivariado.ipynb” con el fin de 
+   repasar conceptos importantes asociados al 
+   Análisis Multivariado e interpretación de resultados. 
+   Realizaremos dos ejemplos. 
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+    Integración con R y 
+        PoweBI
+            R
+    R en Jupyter Notebooks
+      ✔ Examinaremos los pasos a seguir dentro de la 
+       carpeta  de  clase  en  el  archivo  llamado 
+       Utilizar R en Jupyter Notebook - Instructivo
+      ✔ Finalizada la instalación, correremos en Jupyter 
+       Notebook el archivo: “Ejemplo R.ipynb”.
+      ✔ Listo! 
+    Posibles errores
+      1. No  utilizar  anaconda  Navigator  para  hacer  el 
+        proceso
+      2. No crear un ambiente separado del de Python
+      3. No habilitar la opción Packages: R al momento 
+        de crear el nuevo ambiente
+      4. Al  momento  de  ejecutar  olvidar  activar  el 
+        ambiente creado para R
+    R en Google Colab
+     Existen dos formas de utilizar R en Colab
+      ✔ Usar  el  paquete  rpy2  en  el  entorno  de 
+       ejecución  de  Python.  Este  método  le  permite 
+       ejecutar la sintaxis de R y Python juntas.
+      ✔ La segunda forma es iniciar un notebook en el 
+       entorno de ejecución de R.
+     R en Google Colab
+     Los pasos a seguir son:
+      1. Ir al siguiente enlace: Google Colab en R
+      2. En  una  celda  copiar  el  siguiente  código: 
+         %load_ext rpy2.ipython
+      3. Cada  vez  que  vayan  a  utilizar  código  de  R 
+         deberán colocar al inicio de las celdas: %%R. Por 
+         ejemplo:
+         %%R
+         x <- seq(0, 2*pi, length.out=50)
+        PowerBI
+        PowerBI en Jupyter 
+        Notebooks
+         Dado que para realizar la integración entre Jupyter 
+         Notebook  y  Power  Bi  es  requisito  contar  con  una 
+         cuenta activa en el servicio de Power BI, se explicará 
+         el proceso a realizar de manera genérica. 
+         Por   lo  tanto,   no  es  necesario  realizarlo  es 
+         simplemente a modo de ejemplo de aplicación.  
+        Tableau
+         Tableau en Jupyter 
+         Notebooks
+           Para  el  caso  de  Tableau  es  posible 
+           conectarse con Jupyter Notebook por medio 
+           de  un  Data  Source  Connector  que 
+           permite  utilizar  funciones  analíticas  y 
+           utilizar   código  de  Python  para  traer 
+           utilidades de Tableau. Si desean saber más 
+           sobre  el  tema  les  dejamos  este  enlace   
+           Tableau with Jupyter
+       Análisis multivariado
+      Aplicaremos los conocimientos aprendidos hasta el 
+          momento de Análisis multivariado
+             Duración: 15-20 mins
+          ACTIVIDAD EN CLASE
+      Análisis Multivariado
+       Les proponemos los siguientes ejercicios:
+        1. Cargar los datos de iris disponibles en la 
+           librería seaborn con el siguiente comando: 
+           df=sns.load_dataset('iris') para generar gráficos 
+           de dispersión comparando las diferentes 
+           variables según el tipo de especie.
+        2. Cargar los datos de diabetes disponibles en 
+           Diabetes Dataset y utilizar herramientas 
+           (visualizaciones, modelos, tablas) que 
+           permitan comprender el funcionamiento de la 
+           variable respuesta llamada Outcome
+         Primera entrega
+   En la clase que viene se presentará la consigna de la primera 
+    parte del Proyecto final,  que nuclea temas vistos entre las 
+               clases 1 y 20. 
+    Recuerda que tendrás 7 días para subirla en la plataforma.
+       CLASE N°37
+       Glosario
+       Análisis multivariado: Es una rama de           Desventajas del análisis multivariado: 
+       la estadística que abarca la observación y      sus técnicas pueden llegar a ser complejas 
+       el análisis simultáneos de más de una           desde el punto de vista metodológico y eso 
+       variable respuesta.                             hace que los resultados en algunas 
+                                                       ocasiones no se puedan transmitir de 
+       Ventajas del análisis multivariado:             manera intuitiva
+       Permite una fácil visualización e 
+       interpretación de los datos. Analiza más        Integración con r y PowerBI: Python es 
+       información en simultáneo, dando mayor          una excelente herramienta que permite la 
+       potencia en el análisis. Se entienden           integración de R y PowerBI. Para el caso de 
+       mejor las relaciones entre las variables        R es bastante simple ya que es un lenguaje 
+                                                       libre, en cambio PowerBI requiere de 
+                                                       alguna licencia para poder hacer la 
+                                                       integración.
+      ¿Preguntas?
+     ¿Aún quieres conocer 
+          más?
+     Te recomendamos el 
+      siguiente material
+         MATERIAL AMPLIADO
+     Recursos multimedia
+         Microsoft Power BI
+          ✓ Microsoft Power BI Blog | Power BI | PowerBI Blog
+         Tutorial PowerBI
+          ✓ Tutorial básico de PowerBI | Datdata | PowerBI tutorial
+      Disponible en nuestro repositorio.
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.
+                   Resumen 
+               de la clase hoy
+              ✓ Análisis Multivariado: Objetivos
+              ✓ Ventajas y Desventajas
+              ✓ Integración con R y PowerBI

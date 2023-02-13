@@ -1,0 +1,468 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 33. DATA SCIENCE
+           Visualizaciones 
+           efectivas y Data 
+             Storytelling
+           Temario
+                                          32                                         33                                         34
+                              Introducción a la                         Visualizaciones                                 GIS y datos 
+                               visualización de                        efectivas y Data                                  espaciales
+                                        datos                              Storytelling
+                               ✓    Historia de las                      ✓ Beneficios del                            ✓ GIS y datos 
+                                    visualizaciones                           Storytelling y                              espaciales
+                               ✓    Principios generales del                  componentes
+                                    diseño analítico                     ✓ Visualizaciones de                        ✓ Mapas y 
+                                                                              datos                                       animaciones de 
+                               ✓    Buenas prácticas                                                                      Python
+                               ✓    Gestalt                              ✓ Elevator Pitch
+                                                                                                                     ✓ Uso de la librería 
+                               ✓    Visualizaciones                      ✓ Interfaz de usuario                            Plotly
+                                    engañosas
+                                                                         ✓ Principios de 
+                                                                              usabilidad
+    Objetivos de la clase
+                 Profundizar en la gramática de los gráficos
+                 Reconocer la utilidad y beneficios del 
+                 Storytelling
+                 Implementar los principios de usuario
+         MAPA DE CONCEPTOS
+                                  Beneficios del 
+                                  storytelling y 
+                                  componentes
+                              Visualizaciones 
+        Visualización de      efectivas y Data            Principios de 
+            datos                                          usabilidad
+                                Storytelling
+                                  Elevator Pitch e 
+                                   Interfaz de 
+                                    usuario
+  Beneficios del StoryTelling 
+      y componentes
+      Storytelling
+    ¿Qué es el Storytelling?
+     Desde el inicio de los tiempos, el ser humano 
+     ha usado las historias para comunicarse con 
+     los demás y poder expresar sus pensamientos e 
+     ideas. 
+     Por lo tanto el Storytelling, es el arte de 
+     contar una historia que genere impacto 
+     mediante palabras, imágenes o sonidos. 
+     Se busca crear una “atmósfera mágica” a 
+     través de nuestro relato.
+    ¿Qué es el Storytelling?
+     El StoryTelling, es el proceso de traducir 
+     los  análisis  de  datos  a  términos 
+     simples, con el objetivo para influir en 
+     una  decisión  o  acción  en  particular,  la 
+     cual suele ser de tipo comercial. 
+      Para pensar
+   ¿Cuáles te parecen que son los beneficios del 
+   Storytelling en relación a Data Science?
+   Contesta en el Chat de ZOOM
+       Contexto 
+      Storytelling
+    Storytelling en la era 
+    digital
+     El storytelling, se ha arraigado sin dudas en 
+     diferentes  disciplinas.  La  aparición  de 
+     Internet,  la  revolución  de  las  redes 
+     sociales  y  la  evolución  de  las  TIC,  han 
+     posibilitado a los individuos el compartir sus 
+     historias  en  nuevos  formatos  (como  el 
+     podcast,  el  vídeo  o  el  blog)  y  recibir 
+     retroalimentación constante.
+       Storytelling en la era 
+       digital
+         Cuando hablamos de Storytelling en la         Hoy el término se asocia con 
+         era digital, estamos hablando de la           diferentes funciones como ser 
+         aplicación de los métodos y                   por ejemplo: visualizaciones de 
+         técnicas de storytelling más                  datos, infografías, tableros, 
+         tradicionales pero ahora dentro               ciencia de datos, etc. 
+         del mundo y contexto digital.  
+    ¿Por qué hacemos 
+    visualizaciones?
+     ✔ Comunicar patrones interesantes.
+     ✔ Alentar el descubrimiento y exploración de un conjunto de datos.
+     ✔ Detectar patrones en nuestros datos.
+     ✔ Entender nuestros modelos.
+      Para pensar
+   ¿Qué usos de Storytelling conoces?
+   Contesta en el Chat de ZOOM
+      Beneficios del 
+       Storytelling
+      Beneficios del StoryTelling
+              Conexión emocional con la                    Recordabilidad
+                      audiencia                  Gracias a un relato con impacto, es muy 
+               Sin dudas contar una historia   probable que podemos quedar en la mente 
+             permite empatizar con nuestro       de nuestra audiencia, aún luego de que 
+           público objetivo y generar un mayor    quizás haya pasado un largo tiempo.
+                    engagement. 
+       Beneficios del StoryTelling
+                          Confianza                                 Engagement
+                   Nuestra historia humaniza            Efectivamente, al empatizar generamos 
+                 nuestro relato, y eso termina          un vínculo con nuestra audiencia que 
+                impactando en la confianza de           puede tornarse en una relación a largo 
+                   nuestro público objetivo.                            plazo. 
+     Componentes del 
+      Storytelling
+  Componentes del 
+  StoryTelling
+    Componentes del 
+    StoryTelling
+     A partir de los datos que consideremos 
+     relevantes, esta técnica permite 
+     convertirlos en una historia que nos 
+     conecte con nuestro público mediante 
+     formatos visuales potentes. Resulta 
+     importante mencionar, que para 
+     generar un impacto, hay que 
+     trabajar estas 3 de forma conjunta.
+     Visualización de 
+        datos
+                    Repaso…
+       Se refiere a la presentación de datos en un 
+       formato ilustrado o gráfico. Permite observar el 
+       análisis de datos, de manera visual, para captar 
+       conceptos difíciles o identificar patrones.
+       Gracias a la visualización de datos, las personas 
+       encargadas de tomar decisiones por ejemplo 
+       dentro de una empresa, ven significativamente 
+       facilitada su labor.
+    Elementos de una buena 
+    visualización
+     Se necesita de al menos los 
+     siguientes componentes:
+      ✔ Información
+      ✔ Historia
+      ✔ Objetivo
+      ✔ Forma visual
+       PARA RECORDAR
+      Retomando lo visto anteriormente , el 
+      paso más importante para crear una 
+      visualización de impacto es saber y 
+      definir qué queremos decir. También, es 
+      imprescindible que nuestra visualización 
+      tenga un propósito claro y establecido 
+      que nos permita conectar con la 
+      audiencia desde una perspectiva humana
+  Preguntas básicas del 
+  StoryTelling
+    Traductor de datos
+    Muchas empresas comienzan a incorporar 
+    este rol para hacer entendible los 
+    descubrimientos basados en datos por 
+    medio del Storytelling. 
+    El traductor tiene que preguntarse cómo 
+    crear una historia interesante para que la 
+    audiencia la entienda.
+     Para eso puede utilizar por ejemplo la regla de la triple W (Why, Who, What), 
+    que abordaremos más adelante.
+    Estructura del relato
+    Elementos de un relato
+          Inicio o         Nudo         Desenlace
+        planteamiento
+    Elementos de un relato
+       Aquí conocemos a los personajes, nos situamos en el espacio/tiempo, la idea principal 
+       detrás del planteamiento es lograr que “todo el mundo hable el mismo idioma”.
+    Elementos de un relato
+      Es cuando el protagonista del relato experimenta el conflicto, es decir, cuando se 
+      rompe el estado de equilibrio del planteamiento y por el que el protagonista deberá 
+         empezar a usar sus recursos para poder superar los problemas.
+    Elementos de un relato
+      El protagonista ya no será el mismo después de haber sufrido el nudo explicado en la 
+            trama. Se recupera el equilibrio inicial que se había truncado.
+      Construcción
+      Elementos de un relato
+              WHY                             WHO                            WHA
+                                                                               T
+          Debemos empezar            Tenemos que pensar a quién    Definimos qué vamos a 
+         definiendo cuál es el           va dirigida nuestra        presentar para que se 
+       objetivo y el propósito        presentación. Por ejemplo:     adapte a los criterios 
+      de nuestra presentación         nivel estratégico, táctico u   anteriores. Una buena 
+        por ejemplo:  persuadir,              operativo.            opción es una lluvia de 
+         motivar, explicar, etc.                                            ideas.
+    Recomendaciones 
+    para contar buena historia
+    Claridad y concisión: 
+    Buscamos resumir el volumen de datos ofreciendo 
+    una lectura simplificada, mediante un lenguaje 
+    conciso y claro. Además se requiere ser conciso a 
+    la hora de transmitir las ideas.
+    Recomendaciones 
+    para contar buena historia
+     Insights relevantes. 
+     Identificar la información importante 
+     del data storytelling es fundamental, igual 
+     que determinar el objetivo que 
+     perseguimos: queremos inspirar a nuestro 
+     público, divertirlo, informar sobre un 
+     producto por ejemplo.
+    Recomendaciones 
+    para contar buena historia
+     Texto e imágenes. 
+     Si pensamos en nuestro buyer 
+     persona podremos elegir imágenes de 
+     alta carga informativa que les resulten 
+     útiles y, a la vez, den soporte a la 
+     información de manera atractiva.
+    Recomendaciones 
+    para contar buena historia
+     Ponernos en la piel del oyente. 
+     Por más que parezca una obviedad muchas 
+     veces nos olvidamos de estos aspectos. 
+     Necesitamos empatizar y generar 
+     engagement. Podemos hacer uso también 
+     de técnicas como por ejemplo el Design 
+     Thinking Pensamiento de Diseño.
+    Errores típicos al contar 
+    una historia DS
+      ✔ No usar señales visuales en la narración de 
+       datos.
+      ✔ Contar la historia sin contexto 
+      ✔ Transmitir  falta  de  confianza  (lo  cual  se 
+       evidencia en visualizaciones poco elaboradas 
+       y resultados sin respaldo) 
+      ✔ No conocer bien la audiencia
+      ✔ Hablar sin un propósito claro
+      Errores típicos al contar 
+      una historia DS
+        ✔ Las    ideas   presentadas  no    estén 
+           interconectadas
+        ✔ Recordar  que  los  algoritmos  no  toman 
+           decisiones
+        ✔ No se prioriza el storytelling en la forma de 
+           presentar los resultados
+        ✔ Se plasman varias historias que hacen que la 
+           principal pierda su peso
+        ✔ No llevar los datos y resultados obtenidos al 
+           plano del mundo real
+       PARA RECORDAR
+    Preguntas que jamás debemos 
+    olvidarnos
+    ●¿Responde a los objetivos iniciales de análisis?
+    ●¿Hemos seleccionado los tipos de gráficos más 
+       adecuados en base al análisis que queremos 
+       realizar?
+    ●¿Puedo comprender la visualización rápida sin 
+       necesidad de información adicional?
+    Errores típicos en el Diseño
+     ✔ Abuso de colores en los gráficos.
+     ✔ No seleccionar el método de codificación 
+      adecuado para la visualización.
+     ✔ Demasiada información.
+     ✔ Muy poca o nula información.
+     ✔ Uso de visualizaciones poco explicativas que 
+      al final no terminan explicando demasiado
+      Elevator Pitch
+     Elevator Pitch para
+     Storytelling
+     Sabemos que contar una historia frente a gente desconocida o colegas de trabajo, 
+     muchas veces suele ser difícil. Por eso, podríamos apoyarnos de la técnica del Elevator 
+     Pitch, la cual en definitiva es un tipo de discurso que tiene como objetivo vender bien 
+     algo: una idea, nuestra empresa o incluso a nosotros mismos. 
+     También se puede definir como una técnica a la hora de hacer la presentación breve de un 
+     proyecto para que resulte convincente.
+    Elevator Pitch para
+    Storytelling
+    Su nombre es un juego de palabras que significa: 
+    “el discurso del ascensor” y simboliza muy bien 
+    su  principal  característica:  una  conversación 
+    breve  como  las  que  tienen  lugar  en  los 
+    ascensores. 
+    Por lo tanto, tenemos prácticamente muy poco tiempo para llamar la atención de nuestro 
+    público objetivo y lograr que se interese en nuestra historia.
+    Elevator Pitch para
+    Storytelling
+    Para crear un elevator pitch efectivo, tenemos que asegurarnos que nuestro mensaje 
+    responda las siguientes preguntas:
+     ✔ ¿Quién eres y a qué te dedicas? Estas cuestiones, de preferencia, 
+       debemos responderlas en los primeros 20 segundos. 
+     ✔ ¿Qué necesidad resuelves y qué soluciones ofreces? Esto tiene que 
+       quedar claro del segundo 20 al 40. 
+     ✔ ¿Por qué eres la persona indicada para el trabajo? Tu cierre no debe 
+       tardar más de 10 segundos para lograr un elevator pitch menor a 60 
+       segundos.
+    Elevator Pitch para
+    Storytelling
+    Tenemos que definir claramente:
+                            ✔ ¿Qué queremos lograr?.
+                            ✔ ¿Qué  ofrecemos  o  cuál  es  nuestra 
+                              propuesta de valor?.
+                            ✔ Ser breves y concisos.
+                            ✔ Ordenar nuestro mensaje.
+                            ✔ Ensayar  continuamente  para  lograr 
+                              una mayor soltura.
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+     Interfaz de usuario
+    Principios de usabilidad
+    Podemos identificar este elemento en el marco de UX, resulta importante mencionar, que 
+    UX pertenece al mundo del Customer Experience o también conocido como CX.
+        CX= Customer 
+        Experience
+        UX= User experience
+        UI= User Interface
+    Experiencia del cliente (CX)
+    Se define como la suma de todas las 
+    interacciones que tiene un cliente con 
+    una empresa. Ponen en el centro del foco 
+    la figura del consumidor en todo el 
+    recorrido de un producto o servicio. La 
+    manera de relacionarse con el consumidor, 
+    está compuesta por múltiples canales: 
+    físico, telefónico, virtual, etc. 
+    Experiencia de usuario 
+    (UX)
+     ¡Ahora sí! Hablemos de UX. 
+     Se trata de todo lo que una persona percibe/ 
+     siente/ experimenta al interactuar con una 
+     empresa, servicio o producto.
+    Interfaz de usuario (UI)
+    Otro concepto que no podemos no mencionar es el de 
+    UI. Si bien este concepto quizás inicialmente aplique 
+    más al mundo del diseño y la programación, también 
+    resulta interesante poder mencionarlo de manera 
+    breve.  Ya que es la traducción visual de todos los 
+    elementos de la app con los que el usuario interactúa 
+    directamente. 
+    Interfaz de usuario (UI)
+      En otras palabras, es un compendio de 
+      todo lo que el usuario recibe como 
+      feedback visual. Incluye por tanto el 
+      diseño de los botones y campos de 
+      formularios, el uso de la paleta de color y 
+      aspectos vinculados con las percepciones 
+      auditivas.
+      Diseño                  Diseño 
+          UX                      UI
+         Agregar al carrito                   Agregar al 
+                                      carrito
+        UX decidir cuál va ser    UI decide como se verá 
+          el Call To Action       este botón para que sea 
+                                 accesible, ¿qué color, que 
+                                    iconografía, que 
+                                     tipografía?
+                  UX                                                                                                                                UI
+                             IInvnveesstitiggaaccii             Entrevista
+                                                                                                                                                                                                                                                Colores, 
+                                     óónn  //                          s y                          Pruebas                                                                                                                                      Colores, 
+                                                                                                                                                                            Diseño                         Diseño de                         Tipografía, 
+                             EEsstataddíísstiticcaa             Definición                                de                                                                 Diseño                         Diseño de                         Tipografía, 
+                                                                                                                                                                             Visual                          Interfaz                         Ilustracion
+                                       ss                               de                         Usuarios                                                                   Visual                          Interfaz                         Ilustracion
+                                                                                                                                                                                                                                              es, Iconos.
+                                                                 Personas                                                                                                                                                                      es, Iconos.
+                                                                                                                                                                                                           Definición 
+                              Redacción                         Redacción                         Diseño de                                                                                                 Definición 
+                                                                                                                                                                              Estilo                               de 
+                               de Textos                         de textos                        interacció                                                                   Estilo                               de 
+                                                                                                                                                                             Visual                        Estructura
+                                                                                                           n                                                                  Visual                        Estructura
+                                                                                                                                                                                                                    s
+                                                                                                                                                                                                                     s
+                              Arquitectu
+                                   ra de                        Usabilidad                       Prototipad
+                              Informació                                                                   o
+                                       n
+      Principios de 
+       usabilidad
+    Leyes de Nielsen
+     Jakob Nielsen, quien es considerado el padre de la Usabilidad, 
+     planteó 10 Principios de Usabilidad para el correcto Diseño de 
+     una Interfaz de Usuario, los mismos son:
+     1. Visibilidad del estado del sistema: La web o aplicación 
+     debe mostrar en todo momento al usuario qué está pasando y en 
+     qué punto de la navegación se encuentra.
+     2. Adecuación entre el sistema y el mundo real: El sistema 
+     debe hablar con el mismo lenguaje que los usuarios.
+    Leyes de Nielsen
+     3.  Libertad  y  control  por  el  usuario:  Los  usuarios  deben 
+     poder volver fácilmente a un estado anterior. Es conveniente dar 
+     las opciones de "deshacer" y "rehacer". 
+     4.  Consistencia  y  estándares:  Se  debe  seguir  y  repetir 
+     algunos patrones para no confundir a los usuarios.
+     5. Prevención de errores: Es mejor prevenir los errores que 
+     generar mensajes una vez se produzcan.
+    Leyes de Nielsen
+    6.  Reconocer  mejor  que  recordar:  Hay  que  intentar  en  la 
+    medida de lo posible mostrar objetos, acciones y opciones para 
+    minimizar el uso de memoria del usuario.
+    7. Flexibilidad y eficiencia de uso: Es importante personalizar 
+    las acciones frecuentes. 
+    8. Estética y diseño minimalista: Intentar simplificar, eliminar 
+    el  contenido  irrelevante  para  que  el  usuario  sólo  se  fije  su 
+    atención en lo realmente  es importante.
+    Leyes de Nielsen
+     9.  Ayudar  a  los  usuarios  a  reconocer,  diagnosticar  y 
+     solucionar los errores: Los mensajes de error deben expresar 
+     claramente cuál ha sido la causa del problema.
+     10.  Ayuda  y  documentación:  En  algunos  casos  puede  ser 
+     necesario que el usuario necesite ayuda, por lo que debe estar 
+     siempre disponible una sección de Ayuda. 
+                              8
+           Desafío entregable: 
+              Data Storytelling
+          Deberás  entregar  el  octavo  avance  de  tu  proyecto  final.  Continuaremos 
+          hablando sobre lo trabajado en el desafío “Data Wrangling”. Crearás un 
+          notebook donde se desarrolle una narrativa que permita dar respuesta a las 
+          preguntas/hipótesis formuladas para el proyecto final.
+               Recordemos…
+                         Extrajimos datos de interés
+                         Comenzamos el proceso de 
+                         limpieza y estructuración 
+                         Desarrollamos algunas 
+                         hipótesis 
+          Clase 29
+       Desafío entregable
+       Data Wrangling     Data Wrangling/Munging
+            DESAFÍO 
+            ENTREGABLE
+       Data Storytelling
+      Consigna                                     Formato
+        ✓ Iniciar el proceso de Data                 ✓ Se espera un notebook en 
+           Storytelling respondiendo las                formato .ipynb. Dicho notebook debe 
+           preguntas que se quieran responder           tener el siguiente nombre: 
+                                                        “Data_StoryTelling+Apellido.ipynb”
+                                                        .
+      Aspectos a incluir                           Sugerencias
+        ✓ Notebook con código y estructura           ✓ Utilizar las herramientas vistas en el 
+           eficiente                                    curso
+      Ejemplo                                        ✓ Manejo de duplicados nulos y análisis 
+        ✓ Data StoryTelling                             exploratorio
+                                                     ✓ Comenzar por preguntas de alto nivel y 
+                                                        luego más específicas
+                                                   Explicación del desafío
+                                                     ✓ ¡Click aquí!
+       CLASE N°33
+       Glosario
+       Storytelling: es el arte de contar una            Preguntas básicas de Storytelling: 
+                                                         ¿Para qué creo esta historia? ¿Qué quiero 
+       historia que genere impacto                       transmitir? ¿Cómo representar los datos? 
+       mediante palabras, imágenes o                     ¿Cómo la va a recibir la audiencia?
+       sonidos. Se busca crear una “atmósfera 
+       mágica” a través de nuestro relato.               Elementos de un relato: se necesita de 
+       Componentes de Storytelling:                      un inicio, nudo y desenlace. Además 
+       narrativa, visualización y datos. Narrativa       debemos tener presente el ¿Por qué? 
+       + Data (Explicación), Visualización + Data        ¿Quién? y ¿Qué queremos transmitir?.
+       (Informar), Narrativa + Visualización 
+       (Atracción)                                       Elevator Pitch: forma de transmitir una 
+                                                         idea en corto y tiempo de y forma 
+       Elementos de una buena                            apropiada
+       visualización:. Información, historia, 
+       objetivo y forma visual
+      ¿Preguntas?
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.
+                   Resumen 
+               de la clase hoy
+              ✓ Beneficios de Storytelling y componentes
+              ✓ Visualización de datos
+              ✓ Elevator Pitch
+              ✓ Interfaz de usuario
+              ✓ Principios de usabilidad

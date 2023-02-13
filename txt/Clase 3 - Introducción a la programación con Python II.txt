@@ -1,0 +1,486 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 03. DATA SCIENCE
+          Introducción a la 
+         programación con 
+               Python II
+     Temario
+                    02                 03                  04
+              Introducción a      Introducción a      Introducción a 
+                    la                  la           librería científica 
+              programación        programación         con Python: 
+                                                      Pandas (Parte I)
+               con Python          con Python 
+                                   ✓ Estructura de   ✓ Estructura de 
+                 (Parte I)          (Parte II)
+                                     control            datos en Pandas 
+               ✓ Definición de 
+                  programa         ✓ Funciones       ✓ Manipulación de 
+               ✓ Instalación       ✓ Tipo de datos      Datos en Pandas
+               ✓ Nociones          ✓ IPython         ✓ Lectura de 
+                  básicas                               archivos con 
+                                   ✓ Instalación        Python
+    Objetivos de la clase
+                 Conocer las distintas formas de desarrollo con 
+                 Python
+                 Comprender las nociones básicas de la 
+                 programación estructurada.
+        MAPA DE CONCEPTOS
+                                        Basics: Variables, 
+                                        asignación, 
+                                        operaciones
+                                        Estructuras
+                  Nociones básicas 
+                  de Programación
+                                        Funciones
+                                        Tipos de datos
+       ¿Repasamos?
+   Introducción a la 
+   programación Python
+     ✓ Definición de Programa (Lenguaje compilado 
+       vs interpretado)
+     ✓ Introducción a Python
+     ✓ Nociones básicas: variable asignación, 
+       expresiones
+     ✓ Objetos y punteros
+     ✓ Operadores: aritméticos, de asignaciones, de 
+       comparación y de identidad y pertenencia.
+   ¡Vamos a Kahoot!
+      Estructuras de 
+        control
+      Estructuras de 
+        control:
+      FOR, WHILE, IF
+    ¿Qué son y para qué 
+    sirven?
+          ✓ Las estructuras de control sirven           ✓ Las estructuras de control más 
+             para dar claridad y orden al                  comunes son: 
+             código. 
+                                                           ������ For
+          ✓ Si hay que hacer operaciones 
+             repetitivas, estas estructuras nos            ������ While
+             ayudan a organizarlas.                        ������ If
+                                                           ������ Switch (Otros lenguajes e.g C)
+    Estructuras                                Estructuras 
+    de selección                               de ciclos 
+    para                                       para 
+    generación                                 ejecuciones 
+    de                                         repetitivas 
+    condiciones
+       Estructura 
+     condicional FOR
+          Estructura FOR
+            ✓ Repite un comando una cantidad fija de veces
+       for i in range(1,10):
+           print(i)                   # muestra los números del 1 al 9
+       for i in [1,4,6,2]:
+           print(i)                   # muestra los números de la lista
+       Estructura 
+     condicional WHILE
+       Estructura WHILE
+        ✓ Repite una secuencia de comandos “mientras” una condición se cumpla. 
+            Cuando la condición no se cumple más, termina la repetición.
+                                           i = 1
+                                           while i < 10:      # el código luego de los dos puntos se ejecuta
+                                                 print(i)     # mientras i es menor a 10.
+                                                 i += 1             # cuando i llega a 10 termina la ejecución
+       Estructura 
+      condicional IF
+           Estructura condicional 
+           (IF)
+             ✓ Si se cumple una condición, se ejecuta una secuencia de comandos. En 
+                  otro caso, se ejecuta otra. 
+             ✓ Pueden manejarse más de dos opciones.
+                  x = 1
+                  if x < 10:                                  # Pregunto si x es menor a 10
+                      print(x, "es menor a 10")  # Si es así muestro mensaje
+                  elif x > 10:                          # Si no es así, pregunto si x es mayor
+                      print(x, "es mayor a 10")  # a 10 y si es así muestro mensaje
+                  else:                                       # Si nada de lo anterior se
+                      print(x, "es 10")                 # cumple, ejecuto esto
+         Estructura condicional 
+         (IF)
+              Diagrama de flujo condicionales                  Estructura if-elif-else Python
+        Actividad colaborativa
+   Probando estructuras en Python
+   Deberán resolver en grupo dos problemas 
+   reales, utilizando las estructuras 
+   aprendidas de programación en Python en 
+   una notebook.
+   Duración: 15 minutos
+             ACTIVIDAD COLABORATIVA
+        Acuerdos
+       Presencia                                       Apertura al aprendizaje
+        ✓ Participar y “estar” en la clase, que          ✓ Siempre, pero siempre puedes 
+            tu alrededor no te distraiga                    seguir aprendiendo. Compartir el 
+                                                            conocimiento es válido, la 
+       Escucha activa                                       construcción colaborativa es la 
+                                                            propuesta.
+        ✓ Escuchar más allá de lo que la 
+            persona está expresando 
+            directamente                               Todas las voces
+                                                         ✓ Escuchar a todos, todos podemos 
+                                                            reflexionar. Dejar el espacio para 
+                                                            que todos podamos participar.
+            ACTIVIDAD COLABORATIVA
+       Optimizando el stock 
+       para una PYME
+       Consigna: Se tiene una lista con                ✔ Sugerencia: Crear otra lista   
+       Valores= [200, 225, 232, 221, 243, 256,       Dias=['Lunes','Martes','Miercoles','Jueves','V
+       255] que representan los precios de una       iernes','Sabado','Domingo']
+       acción de la compañía X la semana                   para hacer la iteración y utilice un 
+       pasada (cada dato representa el promedio            ciclo con la siguiente estructura 
+       diario)                                             for x,y in zip(Dias,Valores): hacer uso 
+       Escribir el código para calcular los días de 
+       la semana donde hubo un retroceso                   de la función np.diff y de 
+       respecto al día anterior en el valor de la          condicionales
+       acción de la compañía X.
+       NOTA: usaremos los breakouts rooms. El tutor/a tendrá el rol de facilitador/a.
+          probando estructuras en 
+          python
+          for - if - while
+                             Dias= 
+         Ejercicio 1:        ['Lunes','Martes','Miercoles','Jueves','Viernes','Sabado','Domingo']
+                             Valores= [200, 225, 232, 221, 243, 256, 255]
+         Solución            import numpy as np
+                             Dif= np.diff(Valores, n=1)
+                             for x,y in zip(Dias[1:],Dif):
+                              if (x!= 'Lunes') & (y<0):
+                                print(x,y)
+                              
+       Funciones, 
+      argumentos y 
+        retorno
+       Funciones
+                        Funcione
+                        s
+                       ✓ Para trabajar profesionalmente en programación, 
+                         el código que se usa en forma repetitiva se 
+                         organiza en funciones. 
+                       ✓ Puede hacerse una analogía con una función 
+                         matemática y = f(x): la función f recibe un 
+                         argumento x, ejecuta una serie de comandos y 
+                         devuelve un valor y.
+      Argumentos y 
+        retorno
+    Argumentos y 
+    retorno
+    Las funciones tienen al menos 3 elementos:
+    ������ El nombre de la función
+    ������ Cero o más argumentos (variables de entrada)
+    ������ Un valor de retorno (salida de la función) 
+        Sintaxis de una 
+        función
+         print(x)          # función nativa de Python que muestra el valor de x
+         print(x,y)        # print puede mostrar los valores de más de una variable
+         def suma(x,y): # aquí definimos una función propia con argumentos x e y
+             z = x + y     # la función suma los valores x e y, y asigna resultado a z
+             return z      # el valor de retorno es z
+         res = suma(2,3)         # aplicamos la función definida a los números 2 y 3
+                                 # y guardamos el resultado en res
+         print (res)       # mostramos el resultado: 2 + 3 = 5
+       Ejemplo
+       def suma(x,y): # Aquí definimos una función “suma”. 
+           z = x + y # Esto es lo que pide el ejercicio
+           return z
+       res = suma(2,3)    # Aquí probamos la función suma con dos números concretos
+                          # Esta es la prueba para verificar que el código funciona
+       print (res)
+      Ejemplo en vivo
+   ¿Cómo el uso de funciones permite resolver 
+   un problema real?
+         Ejemplo aplicado de 
+         funciones
+           Un inversor financiero está                       También sabe que la probabilidad 
+           interesado en invertir en la                      de obtener ganancias 
+           compañía. Se propone comprar                      (aproximadamente 15% en cada 
+           durante cada día de la semana                     inversión) es de 0.56 y la 
+           20 acciones.                                      probabilidad de perder el 18% 
+                                                             es 0.44 (Solo hay esas dos 
+                                                             opciones).
+        Ejemplo aplicado de 
+        funciones
+         ✓ ¿Cuál sería el valor esperado al        El precio de la acción cada día entre 
+            final  de  la  semana  para  el        Lunes-Domingo es: Valores= [200, 
+            inversor?                              225, 232, 221, 243, 256, 255]
+         ✓ Crear una función llamada 
+            retorno_semanal que calcule el         Pueden utilizar la siguiente fórmula:
+            valor esperado con la cantidad 
+            de acciones compradas cada 
+            día, probabilidad de ganancia 
+            y no ganancia
+                 ☕
+               Break
+               ¡10 minutos y 
+                volvemos!
+      Tipos de datos
+     Tipos de datos en 
+        Python
+      Tipo de dato
+     ✓ Define qué tipos de operaciones se puede 
+        hacer con él. Por ejemplo, un número se              REEMPLAZAR 
+        puede sumar, pero un texto no.                       POR IMAGEN
+     ✓ Python define dos grandes grupos de tipos 
+        de datos: simples y estructurados.
+     ✓ Podemos saber el tipo de un dato x con la 
+        función type(x)
+      Fuente: Mixtrategy.com
+      Datos Simples
+       ✓ Los tipos de datos simples están formados por un solo objeto de un solo tipo
+               Tipo     Ejemplo            Definición
+                int     x = 1              Enteros
+               float    x = 1.0       Punto flotante (decimales)
+              complex  x = 1 + 2j   Complejos (parte real e imaginaria)
+               bool    x = True    Booleanos o lógicos: verdadero / falso
+                str    x = 'abc'            Texto
+              NoneType x = None   Tipo especial para indicar valores nulos
+          Datos 
+          ✓ Los tipos de datos estructurados están formados por más de un objeto.
+          Estructurados
+          ✓ El más utilizado es list, pero no es la única forma de trabajar con este tipo 
+              de datos.
+                   Tipo         Ejemplo                        Definición
+                    list        [1, 2, 3]                    Lista ordenada
+                   tuple        (1, 2, 3)                Lista ordenada inmutable
+                   dict        {'a':1, 'b':2,     Diccionario: conjunto de pares clave:valor
+                                 'c':3}
+                    set         {1, 2, 3}      Conjunto, a la manera de un conjunto matemático
+      Mutabilidad
+          Mutabilidad
+           ✓ La estructura list es mutable 
+               porque permite que sus                    ✓ La estructura dict, por su 
+               elementos sufran modificaciones               parte, es mutable en sus 
+               una vez definida.                             valores. Sin embargo, es 
+           ✓ Por otro lado, las estructuras                  inmutable en sus claves.
+               inmutables como las tuplas 
+               (tuple) no admiten esta 
+               reasignación de elementos en 
+               tiempo de ejecución del 
+               programa.
+    IPython, trabajo con 
+       Notebooks
+    Creando un jupyter 
+       notebook
+          IPython y 
+          notebooks
+          La clase pasada hablamos un poco             Esto imprimirá cierta información 
+          sobre los notebooks. Veamos un poco          sobre el notebook server en su 
+          más a detalle el tema������                      terminal, incluida la URL de la 
+          Para iniciar el cuaderno jupyter, se         aplicación web (de forma 
+          debe escribir el siguiente comando en        predeterminada, http: // localhost: 
+          la terminal:                                 8888) y luego abrirá su navegador 
+                                                       web predeterminado a esta URL.
+               jupyter notebook
+    IPython y 
+    Una vez que se abre, verán un 
+    notebooks
+    panel, que mostrará una lista de 
+    archivos y subdirectorios en el 
+    directorio donde se inició el 
+    servidor de la libreta. 
+    La mayoría de las veces, desearía 
+    iniciar un servidor de notebooks 
+    en el directorio de nivel más alto 
+    que contenga cuadernos. A 
+    menudo, este será su directorio 
+    de inicio.
+    IPython y 
+    notebooks
+    Para crear un nuevo cuaderno, 
+    haga clic en el botón nuevo (New) 
+    en la esquina superior derecha. 
+    Haga clic en él para abrir una lista 
+    desplegable y luego, si hace clic 
+    en Python3, se abrirá un nuevo 
+    cuaderno.
+  IPython y 
+  notebooks
+     Celdas en jupyter 
+       notebook
+    Celdas
+    Las celdas pueden considerarse 
+    como el cuerpo del Jupyter. 
+       Existen tres tipos de celdas:
+     1. Código
+     2. Markdown
+     3. Raw NBConverter
+    1.Código
+    Es donde se escribe el código y, 
+    cuando se ejecuta, el código 
+    mostrará la salida debajo de la 
+    celda. En este ejemplo se crea un 
+    código simple de la serie 
+    Fibonacci.
+   2. 
+   Markdown
+    Markdown es un lenguaje de 
+    marcado popular que es el 
+    superconjunto del HTML. Jupyter 
+    Notebook también admite rebajas. 
+    El tipo de celda se puede cambiar.
+   2. 
+   Markdown
+   El encabezado se puede 
+   agregar anteponiendo 
+   cualquier línea con un 
+   '#' único o múltiple 
+   seguido de un espacio.
+   2. 
+   Markdown
+   Se puede agregar Orden 
+   de Jerarquía usando el 
+   signo '*'. 
+   2. 
+   Markdown
+   Permite añadir Ecuaciones en formato Latex y tablas
+   3. Raw 
+   Se proporcionan celdas sin 
+   NBConverter
+   procesar para escribir la salida 
+   directamente. Esta celda no es 
+   evaluada por el cuaderno de 
+   Jupyter. Después de pasar por 
+   nbconvert, las celdas sin formato 
+   llegan a la carpeta de destino sin 
+   ninguna modificación.
+        Kernel
+    Kernel
+    Un kernel se ejecuta detrás de cada 
+    notebook. Siempre que se ejecuta 
+    una celda, el código dentro de la 
+    celda se ejecuta dentro del kernel y 
+    la salida se devuelve a la celda para 
+    que se muestre.
+    Entonces, si se importa un módulo en 
+    una celda, ese módulo estará 
+    disponible para todo el documento, 
+    por ejemplo:
+       Kernel
+       Jupyter Notebook ofrece varias                    3. Reiniciar y ejecutar todo: Esto 
+       opciones para kernels. Esto puede ser                hará lo mismo que “Reiniciar y 
+       útil si se desea restablecer cosas. Las              borrar el output”, pero 
+       opciones son:                                        también ejecutará todas las 
+         1. Reiniciar: Esto reiniciará los                  celdas en el orden de arriba 
+            núcleos, es decir, borrará todas                hacia abajo.
+            las variables que se definieron,             4. Interrumpir: Esta opción 
+            borrará los módulos que se                       interrumpirá la ejecución del 
+            importaron, etc.                                 kernel. Puede ser útil en el 
+         2. Reiniciar y borrar el output: Hará               caso de que los programas 
+            lo mismo que “Reiniciar”, pero                   continúen para su ejecución 
+            también borrará toda la salida                   o si el kernel se atasca en 
+            que se mostró debajo de la celda.                algún cálculo.
+    Untitled.ipy
+    Cuando se crea el cuaderno, 
+    nb
+    Jupyter Notebook nombra el 
+    cuaderno como Untitled.ipynb de 
+    forma predeterminada.
+    Para cambiar el nombre del 
+    cuaderno, simplemente haga clic 
+    en la palabra Untitled.ipynb. Esto 
+    abrirá un cuadro de diálogo 
+    titulado “Cambiar nombre del 
+    cuaderno”. Ingrese el nombre 
+    válido para su cuaderno en la barra 
+    de texto, luego haga clic en 
+    Aceptar.
+      Instalación de 
+    Jupyter notebooks, 
+    uso de Google Colab
+       Jupyter Notebooks
+         Jupyter Notebook es una aplicación 
+         cliente-servidor lanzada en 2015 por la        Se ejecuta desde la aplicación web cliente 
+         organización sin ánimo de lucro                que funciona en cualquier navegador 
+         Proyecto Jupyter. Permite crear y              estándar. 
+         compartir documentos web en formato            El requisito previo es instalar y ejecutar en 
+         JSON.                                          el sistema el servidor Jupyter Notebook 
+         Tiene celdas que permiten almacenar            por medio de Anaconda (ver 
+         código, texto (en formato Markdown),           Instalacion Anaconda). 
+         fórmulas matemáticas y ecuaciones, o           Los documentos creados en Jupyter 
+         también contenido multimedia (Rich             pueden exportarse, entre otros formatos, 
+         Media).                                        a HTML, PDF, Markdown o Python (-py 
+                                                        o .ipynb) y también pueden compartirse 
+                                                        con otros usuarios por correo electrónico, 
+                                                        utilizando Dropbox o GitHub 
+    Google Colab
+    Para utilizarlo basta con acceder a 
+    nuestra cuenta de Google y, o bien 
+    entrar directamente al enlace de 
+    Google Colab. 
+    Otra opción es acceder a Google Drive, 
+    pulsar el botón de «Nuevo» y 
+    desplegar el menú de «Más», luego 
+    seleccionar «Colaboratory» y crear un 
+    nuevo cuaderno (notebook).
+       Google Colab
+       Cuando creamos un nuevo cuaderno,         La máquina en un inicio cuenta con 
+       este es «estático», es decir, vemos su    12 GB de RAM y 50 GB de 
+       contenido, pero no estamos conectados     almacenamiento en disco disponibles 
+       a ningún entorno de ejecución.            para el uso.
+       Nuestro cuaderno se conecta a una VM 
+       de Google Compute Engine (la 
+       infraestructura de máquinas virtuales 
+       de Google en la nube) cuando 
+       ejecutamos una celda o pulsamos sobre 
+       el botón de «Conectar».
+      Actividad colaborativa
+   Cálculo de estadística descriptiva básica
+   Aplicando conceptos de programación 
+   estructurada para obtener resúmenes 
+   numéricos
+   Duración: 20 minutos
+            ACTIVIDAD COLABORATIVA
+       Optimizando el stock 
+       para una PYME
+       Consigna: Utilizaremos la información de      ������ Crear una función que itere sobre cada 
+       la Clase 2 asociada con las acciones de       columna de las acciones e identifique 
+       diversas compañías para resolver las          valor maximo y minimo 
+       siguientes consignas:                         Hint: Pueden usar las 
+       ������ Por medio de un ciclo (For o While)        funciones .mean(), .std(), .var(), .min(), .m
+       obtener el promedio, desviación estándar      ax() de Pandas
+       y varianza de cada una de las acciones en 
+       cada columna                                  Se recomienda trabajar en grupos de 2 o 
+                                                     3 estudiantes. 
+       NOTA: usaremos los breakouts rooms. El tutor/a tendrá el rol de facilitador/a.
+        CLASE N°3
+        Glosario                                           If: estructura de selección que permite extraer 
+                                                           condiciones de interés
+        Estructura de control: nos permiten hacer          Funciones: estructuras de programación con 
+        operaciones repetitivas y nos dan orden y          nombre propio que reciben argumentos y arrojan 
+        claridad en el código, se dividen en selección y   un resultado
+        cíclicas, mientras que las más comunes son (for, 
+        while, if)                                         Tipos de datos: estructuras básicas que 
+                                                           permiten realizar operaciones (e.g. números, 
+        Estructuras de selección: son aquellas que         bool, diccionarios, tuplas, listas, strings)
+        nos permiten generar condiciones para una 
+        operación                                          Mutabilidad: cualquier objeto que sea 
+                                                           susceptible de modificar sus valores luego de ser 
+        Estructuras cíclicas: nos permiten realizar        creado
+        operaciones repetitivas para una operación
+                                                           Tipos de celdad Jupyter notebook: pueden 
+        For: estructura cíclica que repite varias veces    ser de tres tipos: 1) código 2) Markdown (para 
+        una tarea (hacer hasta)                            texto y opciones HTML) y 3) RawNBConverter 
+        While: estructura de control cíclica que permite   (sin procesar que no tienen efecto en el código) 
+        hacer hasta que se cumpla una condición de 
+        pare (hacer mientras)
+     ¿Quieres saber más?
+     Te dejamos material 
+     ampliado de la clase
+         MATERIAL AMPLIADO
+     Recursos multimedia
+      ✓ Guia de instalación Anaconda
+      Disponible en nuestro repositorio.
+      ¿Preguntas?
+                   Resumen 
+               de la clase hoy
+              ✓ Nociones básicas: Estructuras de Control, 
+                Operadores y Funciones.
+              ✓ Tipos de datos 
+              ✓ Ipython trabajo con notebooks
+              ✓ Instalación de Jupyter notebooks, uso de Google 
+                Colab
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.

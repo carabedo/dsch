@@ -1,0 +1,713 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 14. DATA SCIENCE 
+         Modelos Analíticos 
+              para DS II
+      Temario
+                       13                      14                      15
+                    Modelos                 Modelos                Modelos 
+                analíticos para         analíticos para         analíticos para 
+                      DS I                    DS II                  DS III
+                ✓ Modelo analítico        ✓ Recapitulación
+                                                                  ✓ Modelo analítico 
+                ✓ Machine                 ✓ Aprendizaje 
+                   Learning                  supervisado          ✓ Reglas de 
+                                          ✓ Clasificación            asociación
+                ✓ Ciencia de                                      ✓
+                   datos: etapas          ✓ KNN                      Reducción de 
+                                                                     dimensionalidad
+                ✓ Conceptos               ✓ Regresión
+                   complementario
+                   s
+    Objetivos de la clase
+                 Profundizar en el tipo de Aprendizaje 
+                 Supervisado.
+                 Identificar algoritmos principales de 
+                 Clasificación y Regresión.
+              MAPA DE CONCEPTOS
+                                                                                                     Árbol de 
+                                                                        Clasificación                decisión
+                                                                                                     K-Nearest-
+                                                                                                     Neighbor
+             Modelos                                                                                 Regresión 
+             Analíticos para                                                                         logística
+                                          Aprendizaje 
+             Ciencia de Datos             Supervisado
+             II
+                                                                        Regresión
+  Momento de repaso
+    Recapitulación de 
+     la clase anterior
+       Para pensar
+   ¿Qué es Machine Learning?
+   ¿Qué es un Modelo Analítico? 
+   Contesta mediante el chat de Zoom 
+       Repaso…
+       En la clase de Modelos Analíticos para      Entonces son diferentes algoritmos que 
+       DS I, comentamos que Machine Learning,      nosotros podemos desarrollar, en función 
+       es un método de análisis de datos que       de la problemática del negocio como así 
+       automatiza la construcción de “Modelos      también, del tipo de aprendizaje que 
+       Analíticos”.                                queramos aplicar.
+       ¿Y ahora?
+       En esta sesión, vamos a profundizar en el      Así que primero, recordemos:
+       Tipo de Aprendizaje Supervisado, sus            ������ ¿Cuál es el objetivo principal del 
+       características, particulares y los            Aprendizaje Supervisado? 
+       principales algoritmos que podemos 
+       encontrar.                                     Predecir las respuestas que habrá en 
+                                                      el futuro, gracias al entrenamiento 
+                                                      del algoritmo con datos conocidos 
+                                                      del pasado (datos históricos).
+      Aprendizaje
+      supervisado
+      Aprendizaje 
+      supervisado
+       ✔ Es  una  subcategoría   del  aprendizaje 
+          automático y la IA. 
+       ✔ Se define por el uso de conjuntos de datos 
+          etiquetados  para  entrenar  algoritmos  que 
+          clasifiquen  datos  o  predigan  resultados  con 
+          precisión. 
+       ✔ El  aprendizaje  supervisado  ayuda  a  las 
+          organizaciones a resolver una variedad de 
+          problemas del mundo real a gran escala, 
+          por ejemplo clasificar el correo no deseado o 
+          detectar fraude.
+       Recapitulación: Tipos 
+       problemas aprendizaje 
+       supervisado 
+       En la clase 12 vimos que existían dos           A la hora de decidir cuál tipo de algoritmo 
+       tipos de problemas comunes en el                a usar debemos tener claro lo siguiente…
+       Aprendizaje Supervisado.
+       Recapitulación: Tipos 
+       problemas aprendizaje 
+       supervisado 
+                      Regresión                                  Clasificación
+        ✔ Requiere la predicción de una              ✔ Requiere variable objetivo con dos o 
+            variable continua.                           más clases.
+        ✔ Puede tener como entrada valores           ✔ Puede tener variables de entrada 
+            continuos o discretos.                       discretas o continuas.
+        ✔ Un problema con múltiples variables        ✔ Un problema con dos clases se 
+            de entrada a menudo se denomina              denomina problema de clasificación 
+            problema de regresión multivariante.         binaria y con más de dos 
+                                                         clasificación multiclase.
+      Clasificación
+       Problemas de 
+       clasificación
+       Reconocen entidades específicas dentro del                           REEPLAZAR 
+       conjunto de datos e intenta obtener conclusiones                     POR IMAGEN
+       sobre cómo esas entidades deben etiquetarse o 
+       definirse. 
+       Los algoritmos de clasificación comunes son 
+       clasificadores lineales, máquinas de vectores de 
+       soporte (SVM), árboles de decisión, k-nearest 
+       Neighbor y Random Forest
+       Tipos de 
+       Problemas en 
+       clasificación                                                               REEMPLAZAR 
+                                                                                    POR IMAGEN
+       Tenemos dos grandes tipos: problemas de 
+       clasificación binaria y multiclase
+         ✔ Clasificación binaria: Clasifica los datos en dos 
+             clases, como Si/No, bueno/malo, alto/bajo, 
+             padece una enfermedad en particular o no, 
+             etc.
+         ✔ Clasificación multiclase: Clasifica datos en tres 
+             o más clases; por ej. clasificación de 
+             documentos, categorización de productos, 
+             clasificación de malware
+       Nota: No es conveniente tener muchas categorías en los problemas de clasificación
+    Ejemplos 
+    Problemas de 
+    clasificación
+     ✔ Predicción comportamiento de clientes
+     ✔ Clasificación de documentos
+     ✔ Clasificación de imágenes
+     ✔ Clasificación de texto web
+     ✔ Predicción de la tasa de clics de los anuncios
+     ✔ Categorización de productos
+     ✔ Clasificación de Malware
+     ✔ Detección de fraude
+     ✔ Análisis de sentimientos de imágenes
+    Otros 
+    ejemplos…
+     ✔ Evaluación para ofertas promocionales
+     ✔ Problemas de detección de anomalías
+     ✔ Fraude en tarjetas de crédito
+     ✔ Validación de deducciones
+     ✔ Evaluación de solvencia crediticia
+     ✔ Recomendaciones para liberación de órdenes
+     ✔ Análisis de sentimiento
+     ✔ Predicción de abandono de clientes
+    Tipos de algoritmos 
+     de clasificación
+                         Algoritmos          Abreviación    Muestras 
+                                                           ponderadas?
+                      AdaBoostClassifier         ABC            Si
+                     Gaussian Naive Bayes       GNB             Si
+                          Classifier
+                          LightGBM               LGB            Si
+                  Gradient Boosting Classifier   GBC            Si
+                     K-nearest Neighbours        KNN            No
+                          Classifier
+                  Linear Discriminant Analysis   LDA            No
+                        Decision Trees           DT             No
+      Fuente: Adaptado de Stenhouse K et al. (2021).
+      En Morado algoritmos más populares 
+                               Algoritmos                Abreviació         Muestras 
+                                                               n          ponderadas?
+                       Logistic Regression Classifier         LRC               Si
+                     Multi-layer Perceptron Classifier       MLPC               No
+                        Nearest Centroid Classifier          NCC                No
+                       Nu-Support Vector Classifier         nuSVC               Si
+                     Quadratic Discriminant Analysis         QDA                No
+                         Random forest Classifier             RFC               Si
+                                 XGBOOST                     XGB                Si
+       Fuente: Adaptado de Stenhouse K et al. (2021).
+       En Morado algoritmos más populares 
+       Aprendizaje Supervisado | 
+       Clasificación
+       Como vimos anteriormente existen 
+       múltiples algoritmos de clasificación, a 
+       continuación compartiremos aquellos más 
+       populares. 
+              Árbol de decisión             K-Nearest-Neighbor             Regresión logística
+    Árboles de decisión
+       Definición
+         ✔ Son estructuras matemáticas (diagramas de 
+            flujo) que utilizan criterios de teoría de la 
+            información como la impureza (Gini, entropía)                    REEMPLAZAR 
+            para hacer segmentaciones                                        POR IMAGEN
+         ✔ El aprendizaje basado en árboles de decisión 
+            está ampliamente extendido en la actualidad, 
+            y múltiples modelos hacen diferentes 
+            implementaciones de los mismos. 
+         ✔ Las primeras versiones de estos modelos 
+            fueron implementados por Leo Breiman. 
+         ✔ Se utilizan para problemas de Clasificación y 
+            Regresión.
+                       Definición
+                       ✔ Aprenden de los datos generando reglas de tipo if-
+                         else. 
+                       ✔ Separan los datos en grupos cada vez más 
+                         pequeños de subsets de un dataset original. 
+                       ✔ A cada división se la conoce con el nombre de 
+                         nodo. Cuando un nodo no conduce a nuevas 
+                         divisiones se le denomina hoja, para luego ser 
+                         considerada como ramas del árbol. 
+ Árboles de Decisión
+                        REEMPLAZAR 
+                        POR IMAGEN
+    Partes de los árboles 
+       de decisión
+                       Partes de los 
+                       Árboles de 
+                       Decisión
+                       ✔ Nodo raíz: Representa a toda la población o 
+                         muestra y esto se divide en dos o más conjuntos 
+                         homogéneos.
+                       ✔ División: Es un proceso de división de un nodo en 
+                         dos o más subnodos. 
+                       ✔ Nodo de decisión: Cuando un subnodo se divide 
+                         en subnodos adicionales, se llama nodo de 
+                         decisión.
+                       ✔ Nodo de hoja / terminal: Los nodos sin hijos (sin 
+                         división adicional) se llaman Hoja o nodo terminal.
+    Partes de los 
+    Árboles de 
+    Decisión
+     ✔ Poda (Pruning): Consiste en la reducción del 
+       tamaño de los árboles de decisión eliminando 
+       nodos.
+     ✔ Rama / Subárbol: Una subsección del árbol de 
+       decisión se denomina rama o subárbol.
+     ✔ Nodo padre e hijo: Un nodo, que se divide en 
+       subnodos se denomina nodo principal de 
+       subnodos, mientras que los subnodos son hijos de 
+       un nodo principal.
+                        REEMPLAZAR 
+                        POR IMAGEN
+       Ventajas y 
+      desventajas
+    Ventajas
+     ✔ Caja blanca (conjunto de reglas con 
+       booleanos), sus resultados son fáciles de 
+       entender e interpretar.
+     ✔ Relativamente robusto cuando la complejidad 
+       no es tan alta.
+     ✔ Funcionan relativamente bien con grandes 
+       conjuntos de datos.
+     ✔ Combinaciones de los mismos pueden dar 
+       resultados muy certeros sin perder 
+       explicabilidad, por ejemplo, Random Forest.
+                       Desventajas
+                       ✔ Tienden al sobreajuste u overfitting de los datos, 
+                         por lo que el modelo al predecir nuevos casos no 
+                         estima con el mismo índice de acierto.
+                       ✔ Se ven influenciadas por los outliers, creando 
+                         árboles con ramas muy profundas que no 
+                         predicen bien para nuevos casos. 
+                       ✔ Crear árboles demasiado complejos puede 
+                         conllevar que no se adapten bien a los nuevos 
+                         datos.
+                       ✔ Se pueden crear árboles sesgados si una de las 
+                         clases es más numerosa que otra es decir, si hay 
+                         desbalance de clases.
+      Ejemplos de 
+       aplicación
+       Árboles de decisión- 
+       Variables numéricas
+       Exploremos una nueva idea de como 
+       hacer una clasificación de la siguiente 
+       forma:
+        1.  Tomar un atributo, aplicar una 
+            condición
+        2.  Seleccionar otro atributo y chequear 
+            condición
+        3.  En las hojas tendremos la asignación 
+            final
+        4.  Aplicar el método con cuántas 
+            variables se desee
+  Árboles de decisión- 
+  Variables lógicas
+    Árboles de decisión- 
+    Variables categóricas
+     ✔ Este árbol de decisión se 
+       fundamenta en decidir si se espera o 
+       no.
+     ✔ Los nodos internos representan los 
+       atributos testeados
+     ✔ Branching (creación de nivel) se 
+       realiza de acuerdo con los valores de 
+       los atributos
+     ✔ Los leaf nodes representan los 
+       outputs (Asignación de clases)
+  Árboles de decisión- 
+  Aplicación
+ Ejemplo
+ Ejemplo
+      from matplotlib import pyplot as plt
+      from sklearn import datasets
+      from sklearn.tree import DecisionTreeClassifier
+      from sklearn import tree
+      # Cargar los datos
+      iris = datasets.load_iris()
+      X = iris.data
+      y = iris.target
+      # ajustar arbol de decisión simple con 
+      hiperparametros (defecto)
+      clf = DecisionTreeClassifier(random_state=1234)
+      model = clf.fit(X, y)
+      # Graficando
+      fig = plt.figure(figsize=(18,10))
+      _ = 
+      tree.plot_tree(clf,feature_names=iris.feature_names, 
+                        class_names=iris.target_names,
+                        filled=True)
+ Ejemplo
+      from dtreeviz.trees import dtreeviz
+      # Una forma diferente de ver el arbol
+      viz = dtreeviz(clf, X, y,
+                     target_name="target",
+                     feature_names=iris.feature_names,
+                     class_names=list(iris.target_names))
+      viz.save("decision_tree.svg") # Guardar la imagen
+      viz
+      En este caso además de mostrarnos las 
+      divisiones nos proporciona la cantidad de 
+      individuos en cada categoría así como su 
+      ubicación en la distribución de la variable.
+                 ☕
+               Break
+               ¡10 minutos y 
+                volvemos!
+     KNN: K-Nearest-
+    Neighbor (Vecinos 
+       cercanos)
+    KNN
+    Puede usarse para clasificar nuevas muestras (valores 
+    discretos) o para predecir (regresión, valores 
+    continuos). 
+    Sirve esencialmente para clasificar valores, buscando 
+    los puntos de datos “más similares” (por cercanía).
+       KNN
+                                                                   2
+                                                                    
+        Entonces, supongamos el siguiente escenario: Tenemos       e
+                                                                   r
+        un Dataset con 2 Features, en el cual cada instancia       u
+                                                                   t
+        puede pertenecer a una de dos clases: “Rojo” o “Azul”.     a
+                                                                   e
+                                                                   F
+                                                                           Feature 1
+       KNN
+                                                                                         ?
+                                                                  2
+                                                                   
+                                                                  e
+        Dada una nueva instancia, de la cual no sabemos cuál      r
+                                                                  u
+        es  su clase, vamos a recurrir a sus vecinos cercanos     t
+        para clasificarla. La pregunta sería entonces, ¿La        a
+                                                                  e
+        clasificamos como rojo o como azul?                       F
+                                                                          Feature 1
+       KNN                                                                k = 
+                                                                          1       ?
+                                                           2
+        Si tomamos K=1, solo miraremos al vecino más        
+                                                           e
+        cercano.                                           r
+                                                           u
+                                                           t
+                                                           a
+        Aclaración: K es el nro de vecinos.                e
+                                                           F
+                           Azul
+        KNN                                                                        k = 
+                                                                                   3       ?
+                                                                   2
+                                                                    
+                                                                   e
+        Si elegimos otro valor de k, por ejemplo k > 1, nuestra    r
+                                                                   u
+        clasificación cambiará significativamente.                 t
+                                                                   a
+                                                                   e
+        Por ejemplo, con k = 3 tenemos dos vecinos Rojos y         F
+        uno Azul. Por lo tanto en base a este escenario, la 
+        clasificación será: Rojo.
+                                                                            Feature 1
+       Para pensar
+   ¿Qué ventajas y desventajas creen que 
+   puede tener esta metodología a la hora de 
+   hacer clasificaciones con muchos y pocos 
+   datos?.
+   Contesta mediante el chat de Zoom 
+    import matplotlib.pyplot as plt
+    import pandas as pd
+    from sklearn import datasets, neighbors
+    from mlxtend.plotting import plot_decision_regions
+    def knn_comparison(data, k): # funcion de comparacion
+    x = data[['X','Y']].values # Extraccion de columns
+    y = data['class'].astype(int).values # Clase y como int
+    clf = neighbors.KNeighborsClassifier(n_neighbors=k) #algoritmo
+    clf.fit(x, y)# Graficar la region de decision
+    plot_decision_regions(x, y, clf=clf, legend=2)# Añadir 
+    anotaciones
+    plt.xlabel('X')
+    plt.ylabel('Y')
+    plt.title('Knn with K='+ str(k))                       Datos tipo: Estructura de agrupamiento 
+    plt.show()
+    # Cargar y aplicar funcion                             en forma de u
+    data1 = pd.read_csv('ushape.csv')
+    for i in [1,5,20,30,40,80]: # Para diferentes valores de k (Knn)
+       knn_comparison(data1, i)
+    import matplotlib.pyplot as plt
+    import pandas as pd
+    from sklearn import datasets, neighbors
+    from mlxtend.plotting import plot_decision_regions
+    # Data concentrica
+    data2 = pd.read_csv('concertriccir2.csv')
+    for i in [1,5,20,30,40,60]:
+       knn_comparison(data2, i)
+                                                                  Datos tipo: Estructura de 
+                                                                  agrupamiento concéntricas.
+   import matplotlib.pyplot as plt
+   import pandas as pd
+   from sklearn import datasets, neighbors
+   from mlxtend.plotting import plot_decision_regions
+   # Data XOR
+   data3 = pd.read_csv('xor.csv')
+   for i in [1,5,20,30,40,60]:
+     knn_comparison(data3, i)
+                                                             Datos tipo: Estructura de 
+                                                             agrupamiento XOR con formas 
+                                                             no lineales.
+   import matplotlib.pyplot as plt
+   import pandas as pd
+   from sklearn import datasets, neighbors
+   from mlxtend.plotting import plot_decision_regions
+   # Linear separable
+   data4 = pd.read_csv('linearsep.csv')
+   for i in [1,5,20,30,40,60]:
+      knn_comparison(data4, i)
+                                                 Datos tipo: Estructura de 
+                                                 agrupamiento lineal separable.
+   import matplotlib.pyplot as plt
+   import pandas as pd
+   from sklearn import datasets, neighbors
+   from mlxtend.plotting import plot_decision_regions
+   # Data outliers
+   data5 = pd.read_csv('outlier.csv')
+   for i in [1, 5,20,30,40,60]:
+      knn_comparison(data5, i)
+                                                 Datos tipo: Estructura de 
+                                                 agrupamiento con outliers.
+    Consideracione
+    s
+     1. En todos los casos vemos que si elegimos k=1 
+      se tiene un modelo con overfit.
+     2. Cuando el valor es muy grande de k (e.g 60) 
+      tenemos un modelo con underfit excepto 
+      cuando tenemos outliers y en formas como 
+      XOR no lineales
+     3. Cada dataset tiene su propio requerimiento 
+      para el valor de k 
+     4. Valores altos de k pueden llevar a alto costo 
+      computacional
+     5. Cuando k es pequeño tenemos bajo sesgo pero 
+      alta varianza. Valores altos de k generan 
+      menor varianza pero mayor sesgo
+    Regresión logística
+  Regresión logística
+  Técnica de aprendizaje automático que 
+  proviene del campo de la estadística. A 
+  pesar de su nombre no es un algoritmo, 
+  sino que es un método para problemas de 
+  clasificación, en los que se obtienen un 
+  valor binario entre 0 y 1.
+       Definición
+         ✔ Es un modelo estadístico que se 
+             utiliza para determinar si una               ✔ Depende de la definición de un 
+             variable independiente tiene un                  umbral para distinguir las clases 
+             efecto sobre una variable                        binarias (por ejemplo, <50% mal 
+             dependiente binaria (Clasificación).             escrito = no es spam,> 50% mal 
+         ✔ Usualmente solo hay dos resultados                 escrito = spam). 
+             potenciales.
+    Un problema de clasificación es identificar 
+    si una operación dada es fraudulenta o 
+    no, asociándose una etiqueta “fraude” a 
+    unos registros y “no fraude” a otros. 
+    Entonces, la Regresión Logística describe 
+    y estima la relación entre una variable 
+    binaria dependiente y las variables 
+    independientes. 
+                                                           Ejemplo
+     En general, este algoritmo se puede 
+     utilizar para varios problemas de 
+     clasificación, como la detección de spam, 
+     predicción de la diabetes, si un cliente 
+     determinado comprará un producto en 
+     particular o si se irá con la competencia, 
+     hay muchos más ejemplos en donde se 
+     puede aplicar este algoritmo. 
+                                               Matemática involucrada
+      ✔ Lleva el nombre de la función 
+        utilizada en el núcleo del método, la 
+        Función Logística es también 
+        llamada función Sigmoide. 
+      ✔ Esta función es una curva en forma 
+        de S que puede tomar cualquier 
+        número de valor real y asignar a un 
+        valor entre 0 y 1. 
+      ✔ La ecuación que define la función 
+        sigmoide es la siguiente:
+                                               Matemática involucrada
+      ✔ Si la curva va a infinito positivo la 
+        predicción se convertirá en 1, y si la 
+        curva pasa el infinito negativo, la 
+        predicción se convertirá en 0. 
+      ✔ Si la salida de la función Sigmoide es 
+        mayor que 0.5, podemos clasificar el 
+        resultado como 1 o SI, y si es menor 
+        que 0.5 podemos clasificarlo como 0 
+        o NO. 
+                                                           Matemática involucrada
+      Por  su  parte  si  el  resultado  es  0.75, 
+      podemos   decir  en   términos   de 
+      probabilidad  como,  hay  un  75%  de 
+      probabilidades  de  que  el  paciente  sufra 
+      cáncer.
+                                                        Cuando usar o no la Regresión Logística
+                Regresión  logística  para    K=2  clases.          Regresión  logística  para    K=3  clases.  Se 
+                Siempre  nos  dará  un  límite  de  decisión        introduce a la data train una tercera clase 
+                lineal. Los puntos rojos y verdes representan       denotada por el color azul. A pesar de que 
+                el training data de las diferentes clases y         ahora  hay  más  de  dos  clases  las 
+                la intersección entre los campos rojo y verde       regiones  de  decisión  entre  cualquier 
+                representan el decisión boundary obtenido           pareja de clases sigue siendo LINEAL.
+                de la regresión logística aprendiendo desde 
+                la data. 
+   Aprendizaje supervisado / 
+   Clasificación
+   ¿Los Algoritmos de Clasificación como 
+   Árboles de Decisión, KNN y la Regresión 
+   Logística son los únicos que existen? ¡Por 
+   supuesto que no! 
+   Existen muchos más como ser por ejemplo: 
+   Support Vector Machines (SVM), Random Forest, entre 
+   otros. 
+                                                                                                                  Ejemplo
+     from sklearn.datasets import load_breast_cancer
+     from sklearn.linear_model import LogisticRegression
+     from sklearn.metrics import accuracy_score
+     from sklearn.model_selection import train_test_split
+     X, y = load_breast_cancer(return_X_y=True)
+     # Separacion train/tet
+     X_train, X_test, y_train, y_test = train_test_split(X, y)
+     model = LogisticRegression(max_iter=10000, n_jobs=-1)
+     # Ajustar modelo
+     model.fit(X_train, y_train)
+     #Predicciones
+     predicciones = model.predict(X_test)
+     from sklearn.metrics import confusion_matrix
+     cf_matrix = confusion_matrix(y_test, predicciones)
+     import seaborn as sns
+     ax = sns.heatmap(cf_matrix, annot=True, cmap='Blues')                  Obtenemos un accuracy de 97% lo 
+     ax.set_title('Matriz de confusion con labels\n\n');                    cual es bastante bueno en primera 
+     ax.set_xlabel('\nValores predichos')                                   medida para un modelo simple!
+     ax.set_ylabel('Valores reales ');
+     ax.xaxis.set_ticklabels(['False','True'])
+     ax.yaxis.set_ticklabels(['False','True']);plt.show()
+       Regresión
+ Problemas de regresión
+        ✔ Reconocen  las  estructuras  matemáticas  y 
+          relaciones  dentro  del  conjunto  de  datos  para 
+          obtener conclusiones sobre la distribución de una 
+          variable numérica. 
+        ✔ Los  algoritmos  de  clasificación  comunes  son 
+          clasificadores  lineales,  máquinas  de  vectores  de 
+          soporte  (SVM),  árboles  de  decisión,  k-nearest 
+          Neighbor y Random Forest
+ Tipos de Problemas en regresión
+     ✔ Tenemos dos grandes tipos: problemas lineales y 
+       no lineales
+     ✔ Problemas  lineales:  son  aquellos  donde  los 
+       coeficientes que acompañan a las variables del 
+       modelo son lineales
+     ✔ Problemas no lineales: son todos aquellos en 
+       donde  no  se  cumple  el  supuesto  del  modelo 
+       lineal,  por  ejemplo  una  serie  de  Fourier  o  de 
+       crecimiento Weibull
+ Ejemplos Problemas de Regresión
+         ✔ Predicción comportamiento de clientes
+         ✔ Pronósticos de demanda
+         ✔ Pronóstico de Revenue y Profit
+         ✔ Cantidad de demanda 
+         ✔ Eficiencia de operaciones
+         ✔ Optimización de tiempos para procesos
+         ✔ Soporte de decisiones
+         ✔ Corrección de errores
+         ✔ Análisis preventivo y correctivo
+         ✔ Evaluación de riesgo
+    Tipos de algoritmos 
+      para regresión
+ Tipos de algoritmos para regresión
+                        Algoritmos        Abreviación   Muestras 
+                                                       ponderadas?
+                     Linear Regression       LR            No
+                     Ridge Regression        RR            Si
+                     Lasso Regression        LR            Si
+                   Support Vector Machine    SVM           Si
+                        AdaBoost             AB            Si
+                    Elastic Net Regression   ENR           Si
+                      Decision Trees         DT            No
+      Fuente: Adaptado de Woubishet Zewdu. (2020).
+      En Morado algoritmos más populares 
+  Tipos de algoritmos para regresión
+                             Algoritmos            Abreviació       Muestras 
+                                                        n         ponderadas?
+                        Polynomial Regression          LRC             Si
+                        Multi-layer Perceptron        MLPR             No
+                             Regression
+                         Stochastic Gradient          SGD              Si
+                             Descending
+                     Gaussian Process Regression      GPR              No
+                              LightGBM                QDA              Si
+                      Random Forest Regression         RFC             Si
+                              XGBOOST                 XGB              Si
+       Fuente: Adaptado de Woubishet Zewdu. (2020).
+       En Morado algoritmos más populares 
+    Aprendizaje supervisado / 
+    Regresión
+    Los algoritmos de Regresión, intentan 
+    predecir una variable de tipo numérica o 
+    cuantitativa como por ejemplo: 
+    ¿Cuánto crees que vale esta casa?
+            Regresión Simple              Regresión 
+                                           Múltiple
+    Aprendizaje supervisado / 
+    Regresión
+                   ¿Cuánto crees que vale esta casa?
+       $ 70,000           ❓             $ 160,000
+    Aprendizaje supervisado / 
+    Regresión
+    El precio de una casa:
+    Aprendizaje supervisado / 
+    Regresión
+    El precio de una casa:
+    Aprendizaje supervisado / 
+    Regresión
+    El precio de una casa:
+      Actividad colaborativa
+   ¡Llevemos lo visto hasta el momento a la 
+   acción!
+   Les proponemos que puedan realizar la 
+   siguiente actividad.
+   Duración: 15 minutos
+             ACTIVIDAD COLABORATIVA
+        Acuerdos
+       Presencia                                       Apertura al aprendizaje
+        ✓ Participar y “estar” en la clase, que          ✓ Siempre, pero siempre puedes 
+            tu alrededor no te distraiga                    seguir aprendiendo. Compartir el 
+                                                            conocimiento es válido, la 
+       Escucha activa                                       construcción colaborativa es la 
+                                                            propuesta.
+        ✓ Escuchar más allá de lo que la 
+            persona está expresando                    Todas las voces
+            directamente
+                                                         ✓ Escuchar a todos, todos podemos 
+                                                            reflexionar. Dejar el espacio para 
+                                                            que todos podamos participar.
+            ACTIVIDAD COLABORATIVA
+       Modelo de regresión en 
+       acciones
+       Consigna: Utilizaremos información de       Realizaremos la actividad en grupos de 3-
+       precios de acciones y las medidas de        4 personas 
+       volatilidad y retorno para crear un modelo 
+       de regresión                                Tiempo: 15 minutos
+       NOTA: usaremos los breakouts rooms. El tutor/a tendrá el rol de facilitador/a.
+       ACTIVIDAD COLABORATIVA
+    Modelo de regresión en 
+    acciones
+     ✔ Cargar por medio de un ciclo for en un solo dataframe los precios de las siguientes 
+       acciones  en  la  carpeta  de  la  clase:  Dominion  Energy  Inc.  (D),  Exelon  Corp.  (EXC). 
+       NextEra Energy Inc. (NEE), Southern Co. (SO), Duke Energy Corp. (DUK)
+     ✔ Calcular volatilidad relativa (High-Low)/Open y el índice de retorno por medio de la 
+       fórmula: (Close/Open)-1 
+     ✔ Crear  un  modelo  regresión  usando  como  variable  dependiente  (Volatilidad 
+       relativa)  e  independientes  (Open,  High,  Low,  Close,  Volume_Millions  y 
+       Symbol)
+     ✔ Crear un modelo regresión usando como variable dependiente (Índice de retorno) 
+       e independientes (Open, High, Low, Close, Volume_Millions y Symbol)
+     ✔ Interpretar resultado.
+       CLASE N°14
+       Glosario
+        Aprendizaje Supervisado: subcategoría del             Árboles de decisión: estructuras 
+        aprendizaje automático y la inteligencia artificial   matemáticas tipo if-else que se construyen con 
+        que cuenta con datos etiquetados (históricos) para    criterios de impureza (gini, entropía) y que 
+        aprender de comportamiento de una variable            permiten entender el comportamiento de 
+        particular.                                           variables categóricas o numéricas. Son 
+                                                              sencillos de interpretar pero puede llegar a 
+        Problemas de clasificación: son aquellos donde        tener mucho overfitting.
+        la variable respuesta es una categoría (e.g 
+        predicción de fraude), puede ser binario o            KNN (K nearest neighbor): técnica de 
+        multiclase.                                           clasificación que se fundamenta en distancias 
+                                                              para encontrar pertenencia a categorías 
+        Problema de regresión: son aquellos donde la          determinadas.
+        variable respuesta es una variable continua (e.g 
+        predicción de ventas).                                Regresión logística: técnica de clasificación 
+                                                              que utiliza como fundamento matemático la 
+                                                              función sigmoide para encontrar probabilidad 
+                                                              de poseer una característica determinada.
+      ¿Preguntas?
+                   Resumen 
+               de la clase hoy
+              ✓ Aprendizaje Supervisado.
+              ✓ Algoritmos de Clasificación.
+              ✓ Algoritmos de Regresión.
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.

@@ -1,0 +1,651 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 15. DATA SCIENCE
+         Modelos Analíticos 
+              para DS III
+      Temario
+                       14                      15                     16
+                    Modelos                Modelos               Estudios de 
+                analíticos para         analíticos para           casos de  
+                      DS II                  DS III                modelos 
+                                                                 analíticos I
+                  ✓ Recapitulación                               ✓ Casos de 
+                                        ✓ Modelo analítico          éxitos con 
+                  ✓ Aprendizaje                                     ciencias de 
+                     supervisado        ✓ Reglas de 
+                                            asociación              datos
+                  ✓ Clasificación
+                                        ✓ Reducción de           ✓ Armado de 
+                  ✓ KNN                                             presentación 
+                                            dimensionalidad         ejecutiva
+                  ✓ Regresión
+    Objetivos de la clase
+                Profundizar en el Tipo de Aprendizaje No 
+                Supervisado.
+                Entender los algoritmos de Clustering y 
+                Reglas de Asociación.
+                Conocer la Reducción de la Dimensionalidad y 
+                PCA.
+        MAPA DE CONCEPTOS
+                                    Característica
+                                       s
+      Modelos      Aprendizaje 
+    Analíticos para   No            Diferencias       Clustering
+     Ciencia de    Supervisado
+      Datos III                                       Reglas de 
+                                                      Asociación
+                                    Algoritmos      Reducción de la 
+                                                     Dimensionalida
+                                                         d
+                                                        PCA
+       Repaso clase anterior
+         En la clase de Modelos Analíticos para DS II,         En esta sesión, nos centraremos 
+         hemos estudiado el Tipo de Aprendizaje                exclusivamente en el Aprendizaje de Tipo 
+         Supervisado tanto para problemas de                   No Supervisado, características, 
+         Clasificación como así también de                     aplicaciones y particularidades. 
+         Regresión.                                            ¡Empecemos!������
+     Modelo analítico
+    Aprendizaje no supervisado
+     ✓ Es una subcategoría del aprendizaje 
+       automático y la IA. 
+     ✓ Se define por el uso de conjuntos de datos 
+       no etiquetados para entrenar algoritmos 
+       que encuentren patrones ocultos. 
+     ✓ El aprendizaje no supervisado ayuda a las 
+       organizaciones a resolver una variedad de 
+       problemas del mundo real a gran escala, 
+       por ejemplo en sistemas de recomendación 
+       como Amazon con base en Clustering.
+         Diferencias
+         ✓ Sus  métodos  no  se  pueden  aplicar       ✓ Permiten      realizar   tareas    de 
+            directamente  a  un  problema  de              procesamiento  más  complejas. 
+            regresión  o  clasificación,  porque  no       Puede  ser  más  impredecible  en 
+            tenemos idea de cuáles deberían ser            comparación  con  otros  métodos  de 
+            los valores de los datos de salida. ������         aprendizaje naturales.
+            Recordemos  que  la  variable  es          ✓ Se utilizan para agrupar los datos 
+            desconocida.                                   no   estructurados     según  sus 
+         ✓ Puede  utilizarse  para  descubrir  la          similitudes y patrones distintos en 
+            estructura  subyacente  de  los                el conjunto de datos. 
+            datos.
+                En 
+       resumen… ������ 
+      ✓ No hay una variable objetivo (variable de salida). 
+      ✓ No hay variables que ayudan a predecir a la variable 
+        de salida. 
+      ✓ Todas las variables tienen la misma importancia. 
+      ✓ Se busca la interdependencia de las variables.
+     ¿Cómo funciona?
+       ¿Cómo funciona? 
+      ✓ Funcionan con datos no etiquetados. 
+          Su   propósito   es   naturalmente    la 
+          exploración. 
+      ✓ Si  el  Aprendizaje  Supervisado  funciona 
+          bajo  reglas  claramente  definidas,  el 
+          Aprendizaje       no      Supervisado 
+          funciona bajo condiciones en las que 
+          los  resultados  son  desconocidos  y 
+          por lo tanto, es necesario definirlos en el 
+          proceso.
+       Están acostumbrados a
+         ✓ Explorar la estructura de la información y     En   otras   palabras,  describe    la 
+             detectar patrones distintos.                 información  o  nuestro  dataset 
+                                                          identificando  las  relaciones  entre 
+         ✓ Extraer ideas valiosas.                        los features
+         ✓ Aumentar la eficacia del proceso de toma 
+             de  decisiones  en  base  a  los  patrones 
+             detectados.
+                                       APRENDIZAJE                        APRENDIZAJE NO 
+                                      SUPERVISADO                           SUPERVISADO
+    Entrenamiento             Utiliza datos etiquetados                  Utiliza datos no etiquetados
+    Retroalimentaci           Retroalimentación directa               No tiene retroalimentación directa
+           ón
+         Datos           Se proporcionan de entrada y salida           Se proporcionan sólo de entrada
+        Objetivo             Predecir con nuevos datos             Encontrar patrones ocultos de los datos
+      Supervisión             Necesita ser supervisado                     No necesita supervisión
+     Clasificación     Problemas de Clasificación y Regresión      Problemas de Clustering y Asociaciones
+       Usabilidad Cuando conocemos la entrada y las salidas        Cuando solo tenemos datos de entrada
+       Resultado                  Resultado preciso                             Menos preciso
+     Relación con         No está cerca de la verdadera IA          Está más cerca de la verdadera IA, ya 
+           AI                                                      que aprende de manera similar a como 
+                                                                                   un niño
+       Algoritmos
+     Algoritmos
+     Los problemas de aprendizaje no 
+     supervisado se clasifican principalmente 
+     en dos categorías: 
+      ✓ Cluster (donde tenemos algoritmos 
+        como k-means. clustering jerárquico, 
+        modelos de mixturas gaussianas, o 
+        algoritmo basados en densidad como 
+        DBSCAN) 
+      ✓ Reducción de dimensionalidad (como 
+        PCA, ICA, Análisis Factorial)
+         ¿Qué tipo de problemas 
+         resuelve?
+        Problemas de Clustering:                      Problemas de Reducción 
+        Asignación de individuos/objetos a            Dimensionalidad: 
+        grupos homogéneos asegurando mínima           Cuyo propósito es reducir el número de 
+        varianza intra-cluster y máxima varianza      features (variables) por medio de 
+        inter-cluster intentando descubrir la         feature selection (selección existente) o 
+        estructura oculta de los objetos              feature extraction (combinación de 
+                                                      datos originales).
+     Clustering vs. Reducción 
+     de dimensionalidad
+     Usamos clustering cuando 
+     queremos agrupar observaciones 
+     con base en ciertos features 
+     (reducción de número de 
+     observaciones a K grupos), 
+     mientras que reducción de 
+     dimensionalidad se usa cuando 
+     se tienen muchas dimensiones y 
+     queremos comprender las 
+     relaciones existentes en menos 
+     dimensiones.
+    Múltiples algoritmos del 
+    Aprendizaje No 
+    Supervisado.
+     Algunos de los más populares son:
+     ✓ Clustering o Agrupamiento
+     ✓ Reglas de Asociación
+     ✓ Algoritmos de Reducción de la 
+       Dimensionalidad
+    Clustering
+    También conocidas como agrupamiento o segmentación tienen como principal función 
+    encontrar una estructura o un patrón en una colección de datos no clasificados. 
+    ������
+    Es decir, Intentan encontrar grupos en los datos que compartan atributos en 
+    común ������ 
+      Técnicas para 
+      codificación de 
+       categorías
+    One Hot Encoding
+    Toman variables numéricas para medir la 
+    distancia. Sin embargo, existe la manera 
+    de trabajar con variables categóricas 
+    haciéndolas variables dummy, a través 
+    del uso de la técnica de transformación de 
+    datos One Hot Encoding (OHE).
+    Label Encoder
+    Sin embargo One Hot Encoding es la única 
+    técnica para transformar variables 
+    categóricas, existe una alternativa para 
+    reducir el problema de 
+    multidimensionalidad cuando tenemos 
+    muchas categorías en una variable a 
+    través del uso de la técnica de 
+    transformación de datos Label Encoder 
+    (LE).
+     One Hot Encoding vs Label 
+       1) La variable categórica no es ordinal               1) La variable categórica es ordinal 
+     Encoder
+           (como los países anteriores)                         (como Jr. kg, Sr. kg)
+       2) La  cantidad  de  categorías  es                   2) El número de categorías es bastante 
+           pequeña  para  evitar  problemas  de                 grande ya que la codificación one-hot 
+           multicolinealidad y overfit.                         puede llevar a un alto consumo de 
+                                                                memoria.
+           Manzan     Poll  Bróco   Caloría                      Nombre       Categorí   Caloría
+           a          o     li      s                            de la        a          s
+                                                                 comida
+           1          0     0       95
+                                                                 Manzana      1          95
+           0          1     0       231
+                                                                 Pollo        2          231
+           0          0     1       50
+                                                                 Brócoli      3          50
+    Tipos de algoritmos 
+       Clustering
+     Clustering
+     Particiones      Hierarchical           Density             Grid              Model
+       K-means          Aglomerativo/        DBSCAN            Wavecluster     GMM (Gaussian 
+                          Divisivo                                              Mixture Model)
+     PAM (Partition   BIRCH (Balanced        OPTICS              STING 
+   around medoids)    Iterative Reduced)                                          COBWEB
+        CLARA           ROCK (Robust         DBCLASD            CLIQUE            CLASSIT
+   (Clustering Large     Clustering 
+     Applications)       Algorithm)
+     FCM (Fuzzy C-    CURE (Clustering       DENCLUE            OptiGrid           SOMs
+       Means)              using 
+                       representatives)
+     Fuente: Adaptado de Mehta V et al. (2020).
+              Algoritmos
+                      Algoritmos                    Tiempo                 Accuracy              Manejo 
+                                                                                                outliers
+                  Affinity Propagation               Medio                   Medio                  si
+               Agglomerative Clustering               Alto                    Alto                  Si
+                         BIRCH                       Medio                    Alto                  Si
+                        DBSCAN                        Alto                    Bajo                  No
+                        K-means                      Medio                    Bajo                  No
+                   Mini-Batch K-Means                 Alto                   Medio                  No
+                       Mean Shift                    Medio                    Bajo                  Si
+                         OPTICS                       Alto                   Medio                  No
+                   Spectral Clustering               Medio                   Medio                  No
+  Fuente: Adaptado de Rujasari P et al. (2010). En negrita, los algoritmos más populares 
+       Clustering 
+       Jerárquico
+    Clustering Jerárquico
+                        En estos algoritmos se generan sucesiones 
+                        ordenadas (jerarquías) de 
+                        conglomerados. Puede ser agrupando 
+                        clústers pequeños en uno más grande o 
+                        dividiendo grandes clusters en otros más 
+                        pequeños. 
+                        La estructura jerárquica es representada en 
+                        forma de un árbol llamado Dendograma.  
+   ������ Podemos encontrar 2 clasificaciones adicionales:
+    1. Jerárquicos 
+       aglomerativos (bottom-
+     Inicialmente cada instancia es un clúster. 
+     Las  estrategias  aglomerativas  parten  de 
+       up)
+     un  conjunto  de  elementos  individuales  y 
+     van  “juntando”  los  elementos  que 
+     más se parezcan hasta quedarse con 
+     un  número  de  clusters  que  se 
+     considere óptimo.
+     2.    Jerárquicos 
+     divisivos (top-down)
+      Inicialmente todas las instancias están en un 
+      solo clúster y luego se van dividiendo, tal cual 
+      su nombre lo indica. Las estrategias divisivas, 
+      parten del conjunto de elementos completos y 
+      se van separando en grupos diferentes 
+      entre sí, hasta quedarse con un número 
+      de clusters que se considere óptimo.
+    Criterios importantes
+    Debemos tomar en cuenta dos factores 
+    importantes para la formación de grupos:
+     1. Medida de distancia 
+     2. Criterio de enlace (usualmente criterio 
+      de Ward)
+     3. Existen otros criterios de enlace (Simple, 
+      Completo,Promedio y Centroide)
+                                from sklearn.cluster import AgglomerativeClustering
+                                import scipy.cluster.hierarchy as sch
+                                dataset = pd.read_csv('Mall_Customers.csv')
+                                X = dataset.iloc[:, [3, 4]].values
+     Ejemplo                    plt.figure(figsize=(10,6))
+                                dendrogram = sch.dendrogram(sch.linkage(X, method='ward'))
+                                model = AgglomerativeClustering(n_clusters=5, affinity='euclidean', 
+                                linkage='ward')
+                                model.fit(X)
+                                labels = model.labels_
+                                plt.scatter(X[labels==0, 0], X[labels==0, 1], s=50, marker='o', 
+                                color='red')
+                                plt.scatter(X[labels==1, 0], X[labels==1, 1], s=50, marker='o', 
+                                color='blue')
+                                plt.scatter(X[labels==2, 0], X[labels==2, 1], s=50, marker='o', 
+                                color='green')
+                                plt.scatter(X[labels==3, 0], X[labels==3, 1], s=50, marker='o', 
+                                color='purple')
+                                plt.scatter(X[labels==4, 0], X[labels==4, 1], s=50, marker='o', 
+                                color='orange')
+                                plt.show()
+      Clustering No 
+       Jerárquico
+           Cluster No Jerárquico
+            Volviendo  a  este  tipo  de  algoritmo,  la 
+            cantidad  de  clústeres  óptima  se  define  de 
+            antemano, y los registros  se  asignan  a  los 
+            clústeres   según     su   cercanía.    Existen 
+            múltiples  algoritmos  de  Tipo  No  Jerárquico, 
+            como  ser  por  ejemplo:  K  –  Means  o 
+            DBSCAN. 
+     K-Means
+                                 ¿Qué hace este método?
+                                 Se necesita dar los centroides 
+                                 iniciales para que el método 
+                                 comience las iteraciones
+    Tipos de distancia
+    Hay diferentes tipos de distancias con las que 
+    se puede medir la similitud/diferencia entre los 
+    diferentes registros. 
+    Cada distancia puede representar un tipo de 
+    problema diferente y también puede cambiar 
+    sustancialmente el resultado de mi 
+    clustering.
+  Medidas de similitud y 
+ disimilitud
+  Medidas de similitud y 
+ disimilitud
+                                import numpy as np;import pandas as pd
+                                from matplotlib import pyplot as plt
+    Ejemplo                     from sklearn.datasets import make_blobs
+                                from sklearn.cluster import KMeans
+                                X, y = make_blobs(n_samples=300, centers=4, cluster_std=0.60, 
+                                random_state=0);wcss = []
+                                for i in range(1, 11):
+                                   kmeans = KMeans(n_clusters=i, init='k-means++', max_iter=300, 
+                                n_init=10, random_state=0)
+                                   kmeans.fit(X)
+                                   wcss.append(kmeans.inertia_)
+                                plt.plot(range(1, 11), wcss)plt.title('Metodo del 
+                                codo');plt.xlabel('Numero de clusters')
+                                plt.ylabel('Inercia');plt.show()
+                                kmeans = KMeans(n_clusters=4, init='k-means++', max_iter=300, 
+                                n_init=10, random_state=0)
+                                pred_y = kmeans.fit_predict(X)
+                                plt.scatter(X[:,0], X[:,1])
+                                plt.scatter(kmeans.cluster_centers_[:, 0], 
+                                kmeans.cluster_centers_[:, 1], s=300, c='red')
+                                plt.show()
+    Clustering basados 
+      en Densidad
+     Clustering basados en 
+     Son métodos de aprendizaje no supervisado que identifican grupos/clústeres, basados 
+     en la idea de que un clúster es un espacio de datos es una región contigua de alta 
+     Densidad
+     densidad de puntos, separada de otros clústeres similares por regiones contiguas de 
+     baja densidad de puntos
+    Clustering basados en 
+    Se tienen en cuenta dos parámetros importantes:
+     ✓ eps:  Define  la  vecindad  alrededor  de  un 
+      
+    Densidad
+       punto,  si  la  distancia  entre  dos  puntos  es 
+       menor o igual a "eps", entonces se consideran 
+       vecinos. Si el valor de eps se elige demasiado 
+       pequeño,  gran  parte  de  los  datos  se 
+       considerarán valores atípicos.
+     ✓ MinPts: Número mínimo de vecinos (puntos) 
+       dentro  del  radio  eps.  MinPts  se  pueden 
+       calcular del número de dimensiones D como 
+       MinPts >= D + 1. El valor mínimo de MinPts 
+       debe ser de al menos 3.
+                               from sklearn.datasets import make_blobs
+                               from sklearn.cluster import DBSCAN
+                               # Configuracion de datos y parametros
+                               num_samples_total = 1000;cluster_centers = [(3,3), (7,7)]
+     Ejemplo                   num_classes = len(cluster_centers);epsilon = 1.0;min_samples = 13
+                               # Generacion de datos
+                               X, y = make_blobs(n_samples = num_samples_total, centers = 
+                               cluster_centers, n_features = num_classes, center_box=(0, 1), 
+                               cluster_std = 0.5)
+                               # DBSCAN
+                               db = DBSCAN(eps=epsilon, min_samples=min_samples).fit(X)
+                               labels = db.labels_;no_clusters = len(np.unique(labels) )
+                               no_noise = np.sum(np.array(labels) == -1, axis=0) # Ruido (Outliers)
+                               print('#. clusters estimado: %d' % no_clusters)
+                               print('# puntos ruidosos: %d' % no_noise)
+                               # Generar figura de datos
+                               colors = list(map(lambda x: '#3b4cc0' if x == 1 else '#b40426', 
+                               labels))
+                               plt.scatter(X[:,0], X[:,1], c=colors, marker="o", picker=True)
+                               plt.title('Clasificacion DBSCAN');
+                               plt.xlabel('Eje X[0]');plt.ylabel('Eje X[1]');plt.show()
+      Actividad colaborativa
+   Clustering aplicado a acciones
+   Utilizaremos información de precios de acciones 
+   para identificar cuáles son las más parecidas
+   Discutiremos en el final de la actividad los 
+   resultados obtenidos
+   Duración: 20 minutos
+   Grupos de 3-4 personas
+             ACTIVIDAD COLABORATIVA
+        Acuerdos
+       Presencia                                       Apertura al aprendizaje
+        ✓ Participar y “estar” en la clase, que          ✓ Siempre, pero siempre puedes 
+            tu alrededor no te distraiga                    seguir aprendiendo. Compartir el 
+                                                            conocimiento es válido, la 
+       Escucha activa                                       construcción colaborativa es la 
+                                                            propuesta.
+        ✓ Escuchar más allá de lo que la 
+            persona está expresando 
+            directamente                               Todas las voces
+                                                         ✓ Escuchar a todos, todos podemos 
+                                                            reflexionar. Dejar el espacio para 
+                                                            que todos podamos participar.
+            ACTIVIDAD COLABORATIVA
+       Clustering aplicado a acciones
+       Consigna: 
+        1. Importar datos de Acciones Globales       3.    Aplicar la alternativa elegida y 
+            (que están hosteados en GITHUB en        establecer conclusiones
+            el siguiente enlace Monitoreo de 
+            Acciones
+        2. Identificar qué algoritmo de 
+            clustering aplicaría en este caso 
+            para identificar qué acciones serían 
+            similares: No Jerárquico (K-means), 
+            Jerárquico (Aglomerativo), Densidad 
+            (DBSCAN)
+       NOTA: usaremos los breakouts rooms. El tutor/a tendrá el rol de facilitador/a.
+                 ☕
+               Break
+               ¡10 minutos y 
+                volvemos!
+    Reglas de asociación
+      ¿De qué se trata?
+       ✓ Se refiere a la identificación de los 
+         objetos que se encuentran juntos 
+         en un evento o registro dado. Ej. 
+         Una transacción. 
+       ✓ También se conoce como análisis de 
+         canasta de mercado, por su aplicación 
+         en  el  análisis  de  patrones  en  las 
+         compras de los supermercados. 
+     Para recordar
+   Esos patrones pueden ayudar a tomar decisiones tales como qué 
+   cupones distribuir, cuándo poner un producto a la venta, o cómo 
+   colocar los artículos en las góndolas, etc. 
+    Las interpretaciones de las reglas se expresan como “Si el artículo A 
+   es parte de una transacción, entonces el artículo B es también parte 
+   de la transacción X”.
+   Las reglas no deben ser interpretadas como una relación causal, sino 
+   como una asociación entre dos o más elementos.
+     Veamos algunos 
+      ✓ Si un hombre compra zapatos, el 
+     ejemplos...
+        10% de las veces también compra 
+        medias.
+      ✓ Clientes que adquieren un producto 
+        lácteo  tienden  a  comprar  un 
+        producto de panificados.
+      ✓ El 75% de los clientes que compra 
+        fideos  y  algún  tipo  de  salsa, 
+        también compra queso rallado.
+         ¿Cómo funcionan?
+         ✓ Una  regla  de  asociación  tiene  un 
+            antecedente  (lado  izquierdo)  y  un 
+                                                 Ejemplo: {fideos, salsa} → {queso rallado} 
+            consecuente  (lado  derecho).  Ambos 
+            lados  de  la  regla  son  un  conjunto  de 
+            elementos.                                   Antecedente          Consecuente
+         ✓ Si  el  conjunto  de  elementos  X  es  el 
+            antecedente y conjunto de elementos Y     Itemset: fideos, salsa, queso rallado
+            es el consecuente, entonces la regla de 
+            asociación se escribe como:
+                             X → Y
+                         Ventajas vs. Desventajas
+      ✔ El concepto del algoritmo de Reglas de           ������ Se generan muchas reglas con un 
+      Asociación es realmente muy sencillo.              pequeño número de elementos.
+      ✔Su implementación no requiere gran                ������  Las reglas pueden ser cíclicas, es decir, 
+      complejidad y suele funcionar bien, es 
+      decir, presenta una buena performance.             (A, B) → C, (A, C) → B y (B, C) → A. 
+                                                         ������ Se necesita filtrar las reglas si 
+                                                         determinados artículos son buscados como 
+                                                         consecuente.
+     Casos de estudio
+         Caso I: E-commerce
+        ✓ Cuando      las   personas    compran       ✓ En  general  los  clientes  tienen  a 
+           productos  a  través  de  nuestro  sitio       comprar productos similares a los que 
+           tenemos  la  información  de  cada             adquieren, a esto se le llama sistemas 
+           transacción. ������                                de recomendación. ������
+        ✓ Podemos      usar   esta   información      ✓ Estos sistema generan mayor eficiencia 
+           eficientemente    para    incrementar          en las ventas. ������ 
+           nuestras ventas. ������
+                                                      ✓ Esta  metodología  se  conoce  como 
+        ✓ Podríamos investigar que productos son          ‘Association  rule  Mining’  o  reglas  de 
+           los más vendidos. ������                           asociación. ������
+        ✓ Se  pueden  lanzar  anuncios        de 
+           recomendación  cuando  un  usuario         ✓ En Marketing se conoce como Market 
+           compre algún producto. ������                      Basket Analysis. ������
+          Caso II: Tienda de libros
+           ✓ Si  quisiéramos  saber  qué  tipos  de  géneros 
+              deben colocarse uno al lado de los de negocios 
+              para    lograr   vender    más?     (Economía, 
+              Gastronomía, Viajes, etc)
+           ✓ Si tenemos información histórica de compras 
+              podemos ver en las transacciones que libros 
+              compran  junto  a  los  de  negocios  y  así 
+              establecer la estrategia cross-selling
+           ✓ Antes de cualquier conclusión se debe analizar 
+              cuidadosamente      antes   de    implementar 
+              medidas
+    Reglas de asociación 
+     vs Minería para 
+    reglas de asociación
+     Comparación
+      ● Una  regla  de  asociación  simplemente  es  una 
+        regla  que  describe  qué  productos  de  nuestra 
+        tienda serán comprados al tiempo
+      ● En  cambio,  la  minería  para  reglas  de 
+        asociación  es  una  metodología  que  trata  de 
+        descubrir las reglas en los datos.
+     Reducción de la 
+     dimensionalidad
+      Reducción de la 
+       Buscamos reducir la cantidad de features de un dataset, pero reteniendo la mayor 
+       cantidad de “información” posible. 
+      dimensionalidad
+       Tenemos dos aplicaciones principales con esta técnica
+                      1- Eliminar variables                  2- Encontrar grupos
+        Caso 1: Eliminar 
+        variables
+                     Original:                          Reducción de 1 dimensión: 
+        3 variables para predecir “Ingreso”                     2 variables
+     Caso 2: Transformación 
+     matemática
+                        Ejemplo: Proyectar la tierra (esfera en 3D) en 
+                        un plano (2D).
+                        Si bien por un lado ganamos una mejor 
+                        visualización y entendimiento, inevitablemente 
+                        vamos a perder información (por deformación 
+                        del mapa)
+                                 En los métodos de Reducción de la 
+                                 Dimensionalidad, siempre vamos a 
+                                    perder información 
+                                 ¡El objetivo es perder lo menos 
+                                       posible! 
+        ¿Para qué lo aplicaríamos?
+          ✓ Para enfrentar “La Maldición de la        ✓ Compresión de archivos.
+             Dimensionalidad” es decir, tenemos 
+             tantos features que termina siendo algo  ✓ Detectar features relevantes en 
+             negativo para nuestro modelo de ML.         datasets o variables altamente 
+                                                         correlacionadas.
+          ✓ Reducir el input en un modelo de 
+             regresión o clasificación.
+          ✓ Visualizar mucho mejor nuestros datos. 
+     Algoritmos de aplicación
+     Algunos de los más populares son:
+                        ✓ PCA: Principal Component Analysis.
+                        ✓ Auto-Encoders con Redes Neuronales. 
+                        ✓ MDS: Multidimensional scaling.
+                        ✓ UMAP, entre otros.
+    Principal Component 
+        Analysis
+        ¿Qué hace el PCA? 
+         ✓ El método gira los datos de forma que, 
+             desde un punto de vista estadístico, no 
+             exista   una  correlación  entre  las 
+             características   rotadas     pero    que 
+             conserven  la  mayor  cantidad 
+             posible de la varianza de los datos 
+             originales. 
+         ✓ Es  decir,       el   PCA  reduce  la 
+             dimensionalidad de  un  conjunto  de 
+             datos        proyectándose          sobre 
+             un subespacio           de         menor 
+             dimensionalidad.
+       ¿Qué hace el                                                              Reducción
+          Por   ejemplo,  datos  con dos  características 
+       PCA? 
+          (dispuestos en un plano) pueden ser proyectados 
+          sobre una única línea. 
+          Por  otro  lado  un  conjunto  de  datos  de  tres 
+          características  (dispuestos  en  un  espacio  de  tres 
+          dimensiones)  pueden  ser  proyectados  en  un  plano 
+          (de    dos    dimensiones).     Incluso     los   datos       3 features         2 features
+          resultantes en el plano podrían ser reducidos a 
+          una única línea es decir pasar de 3 dimensiones 
+          a 1. ������
+    USArrests = sm.datasets.get_rdataset("USArrests", "datasets")
+    datos = USArrests.data
+    # Entrenamiento modelo PCA con escalado de los datos
+    pca_pipe = make_pipeline(StandardScaler(), PCA())                               Ejemplo
+    pca_pipe.fit(datos)
+    # Se extrae el modelo entrenado del pipeline
+    modelo_pca = pca_pipe.named_steps['pca']
+    import seaborn as sns;sns.set_style("whitegrid")
+    fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(10, 5))
+    ax.bar(x= np.arange(modelo_pca.n_components_) + 1,height = 
+    modelo_pca.explained_variance_ratio_)
+    for x, y in zip(np.arange(len(datos.columns)) + 1, 
+    modelo_pca.explained_variance_ratio_):
+       label = round(y, 2);ax.annotate(label,(x,y),textcoords="offset 
+    points",xytext=(0,10),ha='center')
+    ax.set_xticks(np.arange(modelo_pca.n_components_) + 1);ax.set_ylim(0, 
+    1.1)
+    ax.set_title('Porcentaje de varianza explicada por cada componente')
+    ax.set_xlabel('Componente principal')
+    ax.set_ylabel('Por. varianza explicada');
+     Ejemplo
+    # Proyección de las observaciones de entrenamiento
+    proyecciones = pca_pipe.transform(X=datos)
+    proyecciones = pd.DataFrame(proyecciones,columns = ['PC1', 'PC2', 'PC3', 'PC4'],index= datos.index)
+    proyecciones = np.dot(modelo_pca.components_, scale(datos).T)
+    proyecciones = pd.DataFrame(proyecciones, index = ['PC1', 'PC2', 'PC3', 'PC4'])
+    proyecciones = proyecciones.transpose().set_index(datos.index)
+    plt.figure(figsize=(15,6))
+    proyecciones['val']=proyecciones.index
+    ax = proyecciones.set_index('PC1')['PC2'].plot(style='o')
+    def label_point(x, y, val, ax):
+     a = pd.concat({'x': x, 'y': y, 'val': val}, axis=1)
+     for i, point in a.iterrows():
+       ax.text(point['x'], point['y'], str(point['val']))
+    label_point(proyecciones.PC1, proyecciones.PC2, proyecciones.val, ax)
+    plt.axvline(x=0,color='black');plt.axhline(y=0,color='black')
+    plt.title('PC1 vs PC2 estados EU');plt.xlabel('PC1',color='k')
+    plt.ylabel('PC2',color='black')
+  Ejemplo
+        CLASE N°15
+        Glosario
+        Aprendizaje No Supervisado:                      One Hot Encoding: técnica de discretización 
+        subcategoría del aprendizaje automático y la  de variables categóricas, bastante útil cuando 
+        inteligencia artificial que cuenta con NO        se tienen pocas categoŕias, se le conoce 
+        datos etiquetados para encontrar patrones        también como crear variables dummy
+        ocultos en los datos                             Label Encoder: técnica de discretización de 
+        Problemas de clustering: son aquellos            variables categóricas, bastante útil cuando se 
+        donde se busca encontrar grupos similares        tienen muchas categorías. 
+        minimizando la varianza inter cluster y          Tipos de algoritmos de clustering: existen 
+        maximizando la varianza entre cluster            varias opciones (utilizando particiones, 
+        Problema de reducción de                         jerarquías, densidad, mapas o modelos) pero las 
+        dimensionalidad: son aquellos donde se           técnicas más comunes con K-means 
+        busca encontrar proyecciones de las              (particiones), clustering aglomerativo 
+        variables originales para entender mejor las     (jerárquico) y DBSCAN (densidad).
+        asociaciones entre individuos y variables        Reglas de asociación: entendimiento de 
+                                                         antecedentes y consecuentes analizados por 
+                                                         medio de relaciones causales
+     ¿Aún quieres conocer 
+          más?
+     Te recomendamos el 
+      siguiente material
+         MATERIAL AMPLIADO
+     Recursos multimedia
+     Título
+      ✓ Reducción de la dimensionalidad. Aprendé IA  | aprendeia.com 
+      ✓ Reducción de la dimensionalidad | interactivechaos.com 
+      ✓ La maldición de la dimensión en Machine Learning | iartificial.net 
+      Disponible en nuestro repositorio.
+      ¿Preguntas?
+                         Resumen 
+                   de la clase hoy
+                  ✓ Aprendizaje No Supervisado
+                  ✓ Clustering
+                  ✓ Reglas de Asociación
+                  ✓ Reducción de la Dimensionalidad
+                  ✓ PCA
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.

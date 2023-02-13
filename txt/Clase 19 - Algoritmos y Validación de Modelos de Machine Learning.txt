@@ -1,0 +1,615 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 19. DATA SCIENCE 
+             Algoritmos y 
+            Validación de 
+        Modelos de Machine 
+               Learning
+      Temario
+                      18                   19                    20
+               Introducción al        Algoritmos y             Stack 
+                ML y a la IA          validación de         tecnológico I
+                                     modelos de ML
+                ✓ Introducción         ✓ Conceptos 
+                ✓ Tipos de IA             básicos           ✓ Base de 
+                ✓ Aplicaciones         ✓ Aprendizaje           datos 
+                   de la                  y validación      ✓ Lenguajes 
+                   industria           ✓ Métricas y            DS
+                ✓ Riesgos                 Evaluación        ✓ Visualización 
+                   asociados
+    Objetivos de la clase
+                 Reconocer los conceptos básicos asociados a 
+                 Machine Learning.
+                 Identificar las principales métricas para 
+                 evaluar la performance de un modelo.
+        MAPA DE CONCEPTOS
+                                    Historia de la 
+                                    IA
+                                    Clasificación 
+                  ML e 
+                Inteligencia        IA y Robótica   RPA
+                 Artificial
+                                    IA en industrias
+                                     Programas y 
+                                      Algoritmos
+                                       GPT - 3
+  Repaso 
+              MAPA DE CONCEPTOS                            Algoritmos y 
+                                                          Validación de 
+                                                       Modelos de Machine 
+                                                             Learning
+                   Conceptos                Aprendizaje y               Aprendizaje y                Métricas y 
+                    básicos                   Validación                  Validación                modelos de 
+                                                                                                     regresión
+                 Dataset                    Overfitting                Matriz de                   RMSE
+                                                                       confusión
+                 Registro                   Underfitting               Exactitud                   MAE
+                 Atributo                                              Precisión                   R2
+                 Objetivo                                              Sensibilidad
+                 Ingeniería de                                         Especificidad
+                 Factores
+                 Outliers                                              F1 - Score
+       PARA RECORDAR
+    Inteligencia Artificial
+    La evaluación de modelos es un aspecto 
+    fundamental y crítico en todo flujo de Data 
+    Science. Pero antes de hablar de métricas 
+    de performance, resulta importante 
+    entender algunos conceptos básicos y 
+    esenciales del Machine Learning. 
+    Empecemos������
+    Conceptos básicos
+    Dataset, instancia, 
+     característica y 
+     variable objetivo
+    Dataset: 
+    conjunto 
+     ✓ Materia prima del sistema de 
+    de datos
+       predicción. 
+     ✓ Histórico de datos que se usa para 
+       entrenar al sistema que detecta los 
+       patrones. 
+     ✓ El conjunto de datos se compone de 
+       instancias de factores, 
+       características o propiedades.
+    Instancia
+      ✓ Cada uno de los datos de los que se 
+        disponen para hacer un análisis. 
+      ✓ Cada instancia a su vez, está 
+        compuesta de características que la 
+        describen.
+      ✓ En una hoja de cálculo, las 
+        instancias serían las filas; las 
+        características, las columnas.
+    Características
+    ✓ Atributos que describen 
+      cada una de las instancias 
+      del conjunto de datos. 
+    ✓ En una hoja de cálculo, 
+      serían las columnas.
+     Variable objetivo
+     Atributo o factor que queremos predecir, el 
+     objetivo de la predicción, como puede ser la 
+     probabilidad de reingreso de un paciente tras 
+     una intervención quirúrgica.
+      Ingeniería de 
+        factores
+       (Feature 
+      Engineering)
+     Ingeniería de Factores
+     ✓ Proceso previo a la creación del 
+       modelo en el que se hace análisis, 
+       limpieza y estructuración de los datos. 
+     ✓ El objetivo es eliminar los campos que 
+       no sirven para hacer la predicción y 
+       organizarlos adecuadamente para que 
+       el modelo no reciba información que 
+       no le es útil y que podría provocar 
+       predicciones de poca calidad o 
+       confianza. 
+     ������ Este proceso es uno de los más 
+     importantes y más costosos del proceso de 
+     predicción. 
+       Datos perdidos
+         ✓ Es muy habitual encontrarnos con valores      Pero ¿qué podemos hacer en estos 
+            perdidos en estos procesos.                  casos? Existen múltiples técnicas para 
+         ✓ Pueden aparecer de distintas formas:          tratar los valores missing, lo veremos 
+            como un signo de interrogación, o N/A,       más adelante en curso ������
+            como un 0 o simplemente como una celda 
+            en blanco, pero en su mayoría nos lo 
+            encontramos representado como NaN que 
+            se refiere a “no un número”. 
+    ¿Qué es un outlier?
+    Valores extremos
+     Valor que no se corresponde con el patrón 
+     general de nuestros datos. Puede ser bueno, 
+     malo o simplemente un error de datos pero en 
+     todos esos casos tenemos que realizar un 
+     análisis.
+    ¿Por qué es 
+    importante tratar los 
+    outliers?
+     En términos generales, tratar los outliers suele 
+     mejorar los modelos de ML. 
+     Muchos modelos avanzados son sensibles a los 
+     valores extremos y además, siempre es preferible 
+     realizar una buena preparación de datos antes 
+     que complejizar los modelos.
+       Para pensar
+   ¿Cómo podemos evaluar si nuestro modelo 
+   está aprendiendo correctamente de 
+   nuestros datos?¿Por qué es necesario usar 
+   nuevas instancias y no limitarse a aquellas 
+   con las que se entrenó el modelo? 
+   Contesta mediante el chat de Zoom 
+     Evaluación del modelo
+     ¿Cómo podemos evaluar si 
+     nuestro modelo está aprendiendo 
+     correctamente de nuestros datos?
+     ������ Una respuesta posible sería, que para 
+     evaluar si nuestro modelo aprendió o no 
+     de nuestro datos, observemos su 
+     desempeño o performance frente a 
+     nuevas instancias es decir, frente a datos 
+     que nunca vio. 
+    Nuevas instancias
+    ¿Por qué es necesario usar nuevas 
+    instancias y no sólo aquellas con las que 
+    se entrenó el modelo?
+    La respuesta es sencilla, por que no se puede 
+    ser “Juez y parte” al mismo tiempo. ������
+    A partir de este concepto, surgen las 
+    siguientes características en ML: 
+    “Entrenamiento” y “Validación” para luego 
+    hablar del “Sobreajuste” o “Sub-ajuste”. 
+       Ejemplo en vivo
+   ¿Cómo podríamos utilizar el feature engineering para 
+   encontrar las variables más relevantes en los precios 
+   de inmuebles?
+   Estudiaremos un ejemplo aplicado donde podremos 
+   ver el uso de feature selection enfocado en Wrapper 
+   Methods (forward, backward y stepwise)
+   Utilizaremos el notebook  Clase_19.ipynb 
+   dentro de la carpeta de clase.
+      Aprendizaje y 
+      Validación   
+     Entrenamiento y 
+       validación
+    Nuevas instancias
+    ¿Por qué es necesario usar nuevas 
+    instancias y no sólo aquellas con las que 
+    se entrenó el modelo?
+    La respuesta es sencilla, por que no se puede 
+    ser “Juez y parte” al mismo tiempo. ������
+    A partir de este concepto, surgen las 
+    siguientes características en ML: 
+    “Entrenamiento” y “Validación” para luego 
+    hablar del “Sobreajuste” o “Sub-ajuste”. 
+     Aprendizaje o 
+     Entrenamiento
+    ✓ Proceso en el que se detectan los 
+      patrones de un conjunto de datos, 
+      es decir, es el corazón del machine 
+      learning. 
+    ✓ Cuando identificamos los patrones, se 
+      pueden hacer predicciones con 
+      nuevos datos que se incorporen al 
+      sistema.
+       Para pensar
+   ¿Cómo podemos utilizar la información de 
+   la compra de libros, por ejemplo, respecto 
+   al comportamiento de los clientes para 
+   mejorar las utilidades del negocio? 
+   Contesta mediante el chat de Zoom 
+     Ejemplo
+     Los datos de las compras de libros 
+     online se pueden usar para analizar el 
+     comportamiento de los clientes en sus 
+     procesos de compra (títulos visitados, 
+     categorías, historial de compras, etc) 
+     agruparlos en patrones de 
+     comportamiento y hacer 
+     recomendaciones de compra.
+     Validación
+     ✓ Proceso de evaluar un modelo 
+       entrenado sobre un conjunto de datos 
+       de prueba. Esto proporciona la capacidad 
+       de generalización de un modelo de ML. 
+     ✓ Para poder evaluarlo correctamente, hay 
+       que realizar “split de datos” es decir, 
+       separar nuestro dataset original en 
+       “Datos de Entrenamiento”, que serán 
+       usados justamente para entrenar a nuestro 
+       modelo y en “Datos de Test o de 
+       Testing” que serán aquellos datos que 
+       utilizaremos para evaluar la performance 
+       de nuestro modelo. 
+    ¿Qué porcentaje se usa 
+    para train y test? 
+      ������ No existe una única respuesta, en términos generales se suele utilizar un 70 % 
+      de nuestros datos para el training y un 30 % para el testing.  
+    ¿Qué porcentaje se 
+    usa para train y 
+    test? 
+     Training : Datos para ajustar el modelo
+     Validation: Datos para proporcionar una 
+     evaluación imparcial de un modelo que se 
+     ajusta al conjunto de datos de entrenamiento 
+     mientras se ajustan los hiper parámetros del 
+     modelo. 
+     Test: Datos para proporcionar una evaluación 
+     imparcial de un modelo final que se ajusta al 
+     conjunto de datos de entrenamiento.
+     Validación Cruzada
+     ✓ También conocida como Cross-
+       Validation, separa los datos en 
+       diferentes particiones y obtiene la media 
+       de las evaluaciones de las distintas 
+       particiones. 
+     ✓ Ayuda a evaluar los resultados que 
+       devuelve el modelo y garantizar la 
+       independencia de las particiones que 
+       hacemos, con lo cual se evita el 
+       sobreajuste.  
+      Overfitting y 
+      Underfitting
+       Para pensar
+   Considerando los siguientes 3 escenarios, 
+   ¿qué modelo parece ser el mejor?
+   Contesta mediante el chat de Zoom 
+   Overfitting y Underfitting
+    El modelo a es muy simple y no reproduce correctamente la frontera 
+    entre las clases. Esto se conoce como Underfitting o Sub-Ajuste.
+      Overfitting y Underfitting
+         El modelo a es muy simple  El modelo b tiene la 
+         y no reproduce               complejidad suficiente para 
+         correctamente la frontera    encontrar una frontera que 
+         entre las clases. Esto se    parece ser la apropiada 
+         conoce como Underfitting     en base al dataset 
+         o Sub-Ajuste.                analizado.
+      Overfitting y Underfitting
+         El modelo a es muy simple  El modelo b tiene la              El modelo c se adaptó 
+         y no reproduce                 complejidad suficiente para   demasiado a los datos con los 
+         correctamente la frontera      encontrar una frontera que    que fue entrenado. Esto se 
+         entre las clases. Esto se      parece ser la apropiada       conoce como Overfitting o 
+         conoce como Underfitting       en base al dataset            Sobre – Ajuste.
+         o Sub-Ajuste.                  analizado.
+      Overfitting y Underfitting
+         ✓ Las principales causantes de obtener        ✓ Tanto el Over como el Under – Fitting, 
+             malos resultados en Machine Learning         se relacionan al fallo de nuestro 
+             son el Overfitting o el Underfitting         modelo al generalizar -encajar- el 
+             de los datos. Dado que cuando                conocimiento que pretendíamos que 
+             entrenamos nuestro modelo intentamos         adquieran.
+             “hacer encajar” -fit en inglés- los datos 
+             de entrada entre ellos y con la salida. 
+    ¿Cómo prevenir el 
+    ✓ Sucede cuando nuestro modelo aprende los datos de train 
+    Overfitting?
+      perfectamente, por lo que no es capaz de generalizar y 
+      cuando le lleguen nuevos datos obtiene pésimos resultados. 
+      ������
+    ✓ Existen diferentes formas de prevenir el Overfitting: 
+       ○ Dividir nuestros datos en training, validación y testing.
+       ○ Obtener un mayor número de datos.
+       ○ Ajustar los parámetros de nuestros modelos.
+       ○ Utilizar modelos más simples en caso de ser posible 
+         (PARSIMONIA).
+    ¿Y el Underfitting?
+    ✓ Sucede cuando nuestro modelo no es capaz de 
+      identificar patrones. Por lo que tendrá siempre 
+      pésimos resultados. ������
+    ✓ Existen diferentes formas de prevenir el 
+      Underfitting:
+       ○ Tratar los datos correctamente, 
+        eliminando outliers y variables 
+        innecesarias.
+       ○ Utilizar modelos más complejos.
+       ○ Ajustar los parámetros de nuestros 
+        modelos.
+                   Diferencias
+                        REEMPLAZAR 
+                         POR VIDEO
+   Overfitting y 
+   Underfitting
+    En el Machine Learning
+       Métricas y 
+       evaluación
+    Métricas y 
+    Evaluación
+     Resulta importante comenzar a hablar acerca 
+     de las diferentes métricas que existen 
+     dentro del Machine Learning para 
+     evaluar la performance de nuestro 
+     modelo. 
+     Simplemente realizaremos una primera 
+     aproximación a la temática, en próximas 
+     clases el tema de: Validación de resultados 
+     del Modelo y Tuneo se verá y tratará de 
+     manera detallada. ������
+      Métricas para 
+       Algoritmos 
+     de Clasificación 
+   Matriz de Confusión
+    ✓ Herramienta que permite visualizar el 
+      desempeño de un algoritmo  de 
+      aprendizaje supervisado. 
+    ✓ Cada columna de la matriz representa el 
+      número de predicciones de cada clase, 
+      mientras que cada fila representa a las 
+      instancias en la clase real. 
+      En términos prácticos entonces, nos 
+      permite ver qué tipos de aciertos y 
+      errores está teniendo nuestro modelo.
+    Matriz de Confusión
+                            Interpretación:
+                             ✓ Verdadero Positivo (TP): Predije que era 
+                                positivo y lo era.
+                             ✓ Verdadero Negativo (TN): Predije que era 
+                                falso y lo era.
+                             ✓ Falso Positivo (FP): Predije que era positivo 
+                                pero resultó ser negativo.
+                             ✓ Falso Negativo (FN): Predije que era negativo 
+                                pero resultó siendo positivo.
+          Los Verdaderos Positivos como Negativos son aciertos. Los Falsos Negativos como Positivos son 
+          errores.
+         Ejemplo Titanic
+                                                   Clase Predicha
+               a                        No Sobrevivieron    Sobrevivieron
+               r
+             e e
+             s d     No Sobrevivieron         513                110
+             a a
+             l d
+               r
+             C e
+               V     Sobrevivieron            103                283
+    Matriz de confusión 
+      y sus métricas
+  Métricas para evaluación 
+  de clasificadores
+                                           MÉTRICAS
+       Exactitud            Precisión          Sensibilidad       Especificidad          F1 Score
+    La Exactitud o Accuracy
+                      ������ se refiere a lo cerca que está el resultado 
+                      de una medición del valor verdadero. En 
+                      términos estadísticos, la exactitud está 
+                      relacionada con el sesgo de una estimación. Se 
+                      representa por la proporción entre los positivos 
+                      reales predichos por el algoritmo y todos los 
+                      casos positivos.
+                      En forma práctica la Exactitud es  el % total de 
+                      elementos clasificados correctamente.
+                      (VP+VN)/(VP+FP+FN+VN) * 100
+     Precisión (Positive 
+     Predictive rate)
+                     ������ Se refiere a la dispersión del conjunto de 
+                     valores obtenidos a partir de mediciones 
+                     repetidas de una magnitud. Cuanto menor es la 
+                     dispersión mayor la precisión. Es una proporción 
+                     entre el número de predicciones correctas (tanto 
+                     positivas como negativas) y el total de 
+                     predicciones. En forma práctica, es  el porcentaje 
+                     de casos positivos detectados y nos sirve para 
+                     medir la calidad del modelo de ML en tareas de 
+                     clasificación.
+                     Se calcula como:  VP/(VP+FP)
+     Sensibilidad o Tasa 
+     de Verdaderos 
+     Positivos ������ Es la proporción de casos positivos que fueron 
+                      correctamente identificadas por el algoritmo.
+                      En términos prácticos sería la capacidad de una 
+                      prueba para identificar correctamente a las 
+                      personas con la característica (e.g. enfermedad) 
+                      Se calcula:  VP/(VP+FN) o lo que sería igual en 
+                      términos de salud:  Verdaderos positivos 
+    Especificidad - Tasa de 
+    Verdaderos Negativos
+                  ������ Se trata de los casos negativos que el algoritmo ha clasificado 
+                  correctamente.  Expresa cuán bien puede el modelo detectar esa 
+                  clase.
+                  En términos prácticos es la capacidad de la prueba para identificar 
+                  correctamente a las personas sin la característica (e.g enfermedad) 
+                  Se calcula:  VN/(VN+FP) o en términos de salud:  Verdaderos 
+                  Negativos 
+  En resumen
+       F1 – Score
+       ������ Esta es otra métrica muy empleada porque        Los valores típicos están entre 0 y 1.
+       nos resume la Precisión (Precisión) y 
+       Sensibilidad (Recall) en una sola métrica.         Se calcula:  
+       Es una medida general del desempeño de un          2 * (Recall * Precision) / (Recall + Precision)
+       modelo combinando Precisión y Sensibilidad.
+       Un valor alto indica pocos Falsos Positivos y 
+       pocos Falsos Negativos, identificando las 
+       amenazas reales. 
+     Algunas 
+     consideraciones de 
+     F1 - Score                                      ✓ Baja precisión y bajo recall ������ El modelo 
+        ✓ Alta precisión y alto recall ������ el modelo 
+           maneja perfectamente esa clase.              no logra clasificar la clase correctamente.
+        ✓ Alta precisión y bajo recall ������ el modelo no 
+           detecta la clase muy bien, pero cuando lo 
+           hace es altamente confiable.
+        ✓ Baja precisión y alto recall ������ El modelo 
+           detecta bien la clase,  pero también 
+           incluye muestras de la otra clase.
+      PARA RECORDAR
+   Inteligencia Artificial
+   Por último hablamos sobre algunas métricas para 
+   evaluación de Modelos de Regresión. Recordemos que 
+   aquí, predecimos o estimamos el valor numérico de una 
+   cantidad desconocida, de acuerdo con unas 
+   características dadas. 
+   La diferencia entre la predicción y el valor real es 
+   el Error, este es una variable aleatoria, que puede 
+   depender de las características dadas. ������
+       Para pensar
+   Si tuviéramos que cuantificar el 
+   desempeño de diferentes pruebas para 
+   detectar  COVID ¿Qué métrica sería la 
+   apropiada y por qué? 
+   Contesta mediante el chat de Zoom 
+  Métricas para Algoritmos 
+      de Regresión 
+        Métricas para algoritmos 
+        de Regresión
+         En la actualidad hay muchas formas para        Existen varias métricas más como ser 
+        estimar el rendimiento y evaluar el ajuste      por ejemplo, el R cuadrado ajustado (R²), 
+             del modelo de regresión, las más           MSPE – Error de porcentaje cuadrático 
+                    importantes son:                    medio, entre otras.
+         ✓ Error Cuadrático Medio (RMSE, por 
+            sus  siglas  en  inglés,  Root  Mean 
+            Squared Error).
+         ✓ Error  Absoluto  Medio  (MAE,  Mean 
+            Absolute Error). 
+         ✓ R-Cuadrado.
+    Error cuadrático medio 
+    (RMSE)
+     ������ Es la métrica más comúnmente utilizada 
+     para las tareas de regresión y representa a 
+     la raíz cuadrada de la distancia 
+     cuadrada promedio entre el valor real 
+     y el valor pronosticado.
+     Indica el ajuste absoluto del modelo a los 
+     datos, cuán cerca están los puntos de 
+     datos observados de los valores 
+     predichos del modelo.
+   Error absoluto 
+   medio (MAE)
+    ������ Es la diferencia absoluta entre el valor 
+    objetivo y el valor predicho por el modelo. Es 
+    más robusto para los valores atípicos y no penaliza 
+    los errores tan extremadamente como el MSE.  
+    Este tipo de métrica, no es adecuada para 
+    aplicaciones en las que desea prestar más atención a 
+    los valores atípicos.
+     R2
+    ������ indica la bondad o la aptitud del modelo, a 
+    menudo se utiliza con fines descriptivos y muestra 
+    que también las variables independientes 
+    seleccionadas explican la variabilidad en sus 
+    variables dependientes. 
+    R-cuadrado tiene la propiedad útil de que su 
+    escala es intuitiva, va de 0 a 1, con 0 indicando 
+    que el modelo propuesto no mejora la predicción 
+    sobre el modelo medido y 1 indica una 
+    predicción perfecta. 
+       Para pensar
+   Imaginemos que estamos esperando un mail 
+   importante y se categoriza como spam ¿Cuál es el 
+   problema? ¿Cómo podemos utilizar las métricas para 
+   reducir el margen de error? 
+   Contesta mediante el chat de Zoom 
+       Ejemplo en vivo
+   Exploremos cómo se obtienen las diversas métricas 
+   para evaluar el desempeño de un modelo de 
+   clasificación y regresión.
+   Utilizaremos el notebook  Clase_19.ipynb 
+   dentro de la carpeta de clase.
+                Recordemos…
+                          Generamos recomendaciones 
+                          basados en insights obtenidos
+         Clase 17         Definimos Objetivo, Contexto y 
+      Estructurando un    Problema comercial
+     Proyecto DS- Parte II
+                          Contexto analítico, Limpieza 
+                          de datos y EDA 
+                          Obtenemos conclusiones y 
+                          puntos importantes a resaltar
+                            5
+         Práctica integradora 
+        Deberás entregar el quinto avance de tu proyecto 
+       final. Continuaremos hablando sobre lo trabajado en 
+       el desafío “Estructurando un proyecto de DS Parte II”. 
+             DESAFÍO 
+             ENTREGABLE
+        Estructurando un proyecto de 
+        DS-parte III
+    Consigna                                               Aspectos a incluir
+      ✓ Crearás un notebook que complemente el              ✓ El código debe estar hecho en un 
+          trabajo realizado en los siguientes                   notebook y debe estar probado.
+          apartados:                                       Formato
+            -   i) elegir un método de feature              ✓ Entregar un archivo con formato .ipynb. 
+                selection para reducir la                       Debe tener el nombre 
+                dimensionalidad del dataset,                    “Proyecto_ParteIII_+Apellido.ipynb”  
+            -   ii) elegir un algoritmo de regresión o 
+                clasificación para entrenar con los 
+                datos elegidos,                            Sugerencias
+            -    iii) cálculo de métricas para validar      ✓ Preparar el código y probar los 
+                el modelo                                       resultados con subconjuntos del 
+            -   iv) generar conclusiones con base en            conjunto original.
+                los resultados obtenidos.                   ✓ Video explicativo
+        Evaluando modelos 
+                 ML
+      Se propone complementar el análisis desarrollado 
+         hasta el momento del proyecto final. 
+             DESAFÍO 
+             COMPLEMENTARIO
+        Evaluando modelos ML
+       Consigna
+         ✓ Continuaremos trabajando con base              Aspectos a incluir
+             en lo realizado en el Desafío                  ✓ El código debe estar hecho en un notebook 
+             entregable: Estructurando un                       y debe estar probado.
+             proyecto de DS-Parte II y III, en esta       Formato
+             oportunidad deberás complementar 
+             con lo siguiente:                              ✓ Entregar un archivo con formato .ipynb. 
+         ✓ Generar una evaluación de modelos                    Debe tener el nombre 
+             apropiados para el problema de                     “Proyecto_ComplementarioI_+Apellido.ipyn
+             interés                                            b”  
+         ✓ Identificar por medio de las métricas          Sugerencias
+             generadas si se puede tener una                ✓ Preparar el código y probar los resultados 
+             situación de overfitting (sobreajuste)             con subconjuntos del conjunto original.
+             o underfitting (subajuste), 
+             discutiendo posibles formas de 
+             mejora
+       Para pensar
+   ¿Cómo podemos utilizar la información de la compra 
+   de libros, por ejemplo, respecto al comportamiento de 
+   los clientes para mejorar las utilidades del negocio? 
+   Contesta mediante el chat de Zoom 
+       CLASE N°19                                    Conjunto de validación: fracción de datos 
+                                                     (usualmente 20-30%) que se utiliza para validar 
+                                                     algoritmos de Machine Learning supervisado con 
+       Glosario                                      el fin de identificar si el modelo aprendió 
+                                                     correctamente
+   Instancia : unidad fundamental que representa 
+   a los individuos u objetos que conforman un       Overfitting: cuando un modelo obtiene muy 
+   dataset                                           buenas métricas en el conjunto de 
+                                                     entrenamiento pero muy malas en el conjunto de 
+   Característica o feature : variables que          test
+   representan los atributos de las instancias de 
+   un dataset                                        Underfitting: Cuando el modelo no es capaz de 
+                                                     reproducir correctamente los patrones y 
+   Entrenamiento: fase donde se detectan las         relaciones fundamentales del fenómeno de 
+   asociaciones y tendencias de un dataset           interés.
+   Conjunto de entrenamiento: fracción de            Matriz de confusión:matriz que se construye 
+   datos (usualmente 70-80%) que se utiliza para     para validar el performance de un modelo de 
+   entrenar algoritmos de Machine Learning           clasificación, contiene información sobre el 
+   supervisado con el fin de entender patrones y     accuracy, precisión, exactitud, sensibilidad y 
+   tendencias                                        especificidad del algoritmo
+                                                     Dataset: conjunto de filas y columnas que 
+                                                     guardan información histórica 
+     ¿Quieres saber más?
+     Te dejamos material 
+     ampliado de la clase
+       MATERIAL AMPLIADO
+    Recursos multimedia
+    ✓ Hoja de referencia de consejos y trucos sobre Aprendizaje 
+      Automático
+       | Stanford Edu
+    ✓ Selección de Métricas para aprendizaje automático | 
+      Fayrix
+    ✓ Aprendizaje automático y métricas de regresión | 
+      Sitiobigdata.com
+    ✓ Error Cuadrático Medio para Regresión | Iartificial.net
+      ¿Preguntas?
+                   Resumen 
+               de la clase hoy
+              ✓ Conceptos básicos de ML
+              ✓ Métricas de Clasificación
+              ✓ Regresión en Machine Learning
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.

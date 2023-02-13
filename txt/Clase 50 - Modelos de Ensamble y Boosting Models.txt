@@ -1,0 +1,479 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 50. DATA SCIENCE
+       Modelos de Ensamble y 
+           Boosting Models
+      Temario
+                        49                      50                      51
+               Mejora de modelos           Modelos de             Despliegue de 
+                   de Machine          Ensamble y Boosting        Modelos MLOps
+                   Learning II                Models
+                                                                  ✓ Fundamentos de Cloud 
+                                         ✓ Métodos de                Computing
+                 ✓ Repaso                   ensamble              ✓ DevOps vs. DevSecOps
+                    validación de 
+                    modelos                                       ✓ Continuous Deployment
+                                         ✓ Metodologías de 
+                 ✓ Hypertuning              ensamble              ✓ Data team
+                    parameter                                     ✓ MLOps
+    Objetivos de la clase
+                 Identificar algoritmos de Ensamble y Boosting
+        MAPA DE CONCEPTOS
+                                                 Definición
+                                                Características
+                                                Metodologías
+              Métodos de                         Bagging
+              Ensamble
+                                                 Boosting
+                                                Algoritmos
+   Métodos de Ensamble
+    Métodos de 
+    Ensamble
+     También llamados “métodos combinados”, 
+     intentan ayudar a mejorar el rendimiento de 
+     los modelos de Machine Learning al mejorar 
+     su precisión.
+     Este es un proceso mediante el cual se construyen 
+     estratégicamente varios modelos de Machine 
+     Learning para resolver un problema particular.
+     Ejemplo aplicado
+     Métodos de 
+     Ensamble
+     Supongamos que queremos invertir en una 
+     empresa, pero no estamos seguros de su 
+     posible rendimiento, por lo tanto buscamos 
+     varios expertos financieros para que nos 
+     aconsejen si el precio de la acción aumentará 
+     en más de un 5% anual. 
+      Métodos de Ensamble
+           Empleada        Asesor Financiero       Operadora            Empleado 
+                                                   Mercado de          Competidor
+                                                     Valores
+            Conoce la        Conoce cómo la     Conoce el precio de      Conoce la 
+          funcionalidad        estrategia de     las acciones de la    funcionalidad 
+          interna de la       empresas será       empresa en los       interna de las 
+            empresa.           desarrollada.       últimos años.          firmas 
+                                                                       competidoras.
+         Ha tenido razón    Ha tenido razón 75  Ha tenido razón 65 
+        70% de las veces.    % de las veces.      % de las veces.     Ha tenido razón 
+                                                                     60% de las veces.
+   Métodos de Ensamble
+    Empleada de la empresa: Esta persona 
+    conoce la funcionalidad interna de la 
+    empresa y tiene información sobre la 
+    misma, pero carece de una perspectiva 
+    más amplia sobre cómo están 
+    innovando los competidores y cómo 
+    está evolucionando la tecnología. En el 
+    pasado, ha tenido razón 70% de veces
+     Métodos de Ensamble
+      Asesor  financiero  de  la  empresa:  Esta 
+      persona tiene una perspectiva más amplia 
+      sobre  cómo  la  estrategia  de  las 
+      empresas será ajustada en este entorno 
+      competitivo, sin embargo, carece de una 
+      visión sobre cómo las políticas internas 
+      de   la  empresa  impactan  en  su 
+      funcionalidad. En el paso ha tenido razón 
+      un 75% de las veces.
+   Métodos de Ensamble
+    Operadora del mercado de valores: Esta 
+    persona  ha  observado  el  precio  de  las 
+    acciones de la empresa en los últimos años y 
+    conoce las tendencias de estacionalidad 
+    y  el  rendimiento  del  mercado  en 
+    general,  pero  también  conoce  que  las 
+    acciones  pueden  variar  con  el  tiempo. 
+    En el pasado ha tenido razón 65% de veces.
+   Métodos de Ensamble
+    Empleado de un competidor: Esta persona 
+    conoce la funcionalidad interna de las 
+    firmas competidoras y está consciente de 
+    ciertos cambios que aún no se han 
+    implementado, pero por otra parte carece de 
+    conocimiento sobre la empresa enfocada y 
+    de los factores externos que pueden 
+    relacionar el crecimiento del competidor. 
+    En el pasado, ha tenido razón el 60% de las 
+    veces.
+   Métodos de Ensamble
+   Como podemos observar del ejemplo anterior, cada experto tiene su propia 
+     opinión respecto del tema y nos ofrece una respuesta a la pregunta 
+    solicitada. La idea justamente es encontrar la decisión más adecuada en 
+           base a las diversas miradas de los expertos. 
+       Para pensar
+   Ahora bien, ¿Cuál es la relación entre el ejemplo 
+   propuesto y los modelos de Ensamble? ¿Han 
+   escuchado de alguno de estos modelos 
+   anteriormente?
+   Contesta en el chat de Zoom 
+      Para pensar
+   Cuando hablamos de “Model Ensamble” se 
+   entiende como el proceso de combinar diversos 
+   modelos para improvisar la estabilidad y poder 
+   predictivo del modelo, es decir tener en cuenta la 
+   diferentes opiniones para crear predicciones más 
+   robustas
+     Características de 
+       modelos de 
+       Ensamble
+   Características 
+     1. Permiten reducir el error de generalización 
+      en las predicciones 
+     2. Las predicciones de diferentes modelos son 
+      diversas e independientes lo que hace
+     3. Busca la sabiduría de las multitudes al hacer 
+      una predicción. 
+     4. Aunque el modelo de conjunto tiene 
+      múltiples modelos base dentro del modelo, 
+      actúa y funciona como un solo modelo.
+   Características 
+    De manera sencilla podría decirse que 
+    son algoritmos formados por 
+    algoritmos más simples. Estos 
+    algoritmos simples, se unen para 
+    formar un algoritmo más potente, 
+    siguiendo la premisa: “La unión hace la 
+    fuerza”.
+   Características 
+    No son todos iguales por diversas razones:
+     1. Puede haber diferencia en la población 
+      de datos
+     2. Puede haber una técnica de modelado 
+      diferente utilizada
+    3. Puede haber una hipótesis diferente 
+    En nuestro ejemplo “las diferentes 
+    opiniones de nuestros expertos 
+    financieros”
+      Características 
+       Aunque hay diversas formas de ensamblar 
+       o unir algoritmos débiles para formar otros, 
+       las  más  usadas  y  populares  son  el 
+       bagging y el boosting.
+       Cada tipo de algoritmo tiene unas ventajas 
+       y   desventajas,  pudiendo  ser  usados 
+       convenientemente  según  sea  nuestra 
+       problemática a resolver.
+       Para pensar
+   Al ajustar un modelo de regresión observan que a medida que 
+   aumenta la cantidad de datos de entrenamiento, el error de prueba 
+   disminuye y el error de entrenamiento aumenta. El error de train es 
+   bastante bajo, mientras que el error de prueba es mucho mayor. 
+   ¿Cuál crees que es la razón principal detrás de este 
+   comportamiento? 
+    A. Alta varianza
+    B. Alto sesgo en el modelo
+    C. Alta estimación de sesgo
+    D. Ninguna de las anteriores
+    Contesta en el chat de Zoom 
+      Actividad colaborativa
+   Checkpoint proyectos finales III
+   Formaremos grupos de 4-5 personas en el Break-out 
+   Rooms y analizaremos el siguiente proyecto disponible 
+   Ensemble Models, donde entenderemos como crear un 
+   modelo de ensamble, cálculo de métricas y como métodos 
+   de validación cruzada y técnicas de hypertuning de 
+   parámetros. Posteriormente resolveremos dudas 
+   conceptuales y técnicas acerca del proyecto final
+   Duración: 30 minutos
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+     Metodologías de 
+       Ensamble
+   Métodos de Ensamble
+    Existen diferentes técnicas para poder 
+    aplicar estos métodos:
+    1. Bagging
+    2. Boosting
+    3. Stacking (No lo veremos en clase)
+    A continuación explicaremos cada una 
+    de  estas  técnicas  junto  con  sus 
+    algoritmos más importantes
+        Bagging
+   ¿De dónde proviene la idea?
+    Bagging proviene del concepto de agregación 
+    de bootstrap. Un forma de reducir la varianza 
+    de las estimaciones es promediando 
+    estimaciones de distintos modelos o algoritmos.
+    Para obtener la agregación de las salidas de 
+    cada modelo simple e independiente, bagging 
+    puede usar la votación para los métodos de 
+    clasificación y el promedio para los 
+    métodos de regresión.
+   ¿De qué trata?
+    Los métodos de bagging son métodos 
+    donde los algoritmos simples son 
+    usados en paralelo.
+    El principal objetivo de los métodos en 
+    paralelo es el de aprovecharse de la 
+    independencia que hay entre los 
+    algoritmos simples, ya que el error se 
+    puede reducir bastante al promediar 
+    las salidas de los modelos simples. 
+   ¿De qué trata?
+    Podríamos pensarlo como como si 
+    quisiéramos resolver un problema entre 
+    varias personas independientes unas de 
+    otras, y finalmente damos por bueno lo 
+    que eligiese la mayoría de las 
+    personas.
+    Importante: El principal objetivo intrínseco 
+    de  los  algoritmos  de  bagging  es  el  de  la 
+    reducción de la varianza.
+    ¿De qué trata?
+                               A la izquierda se ilustra el 
+                               funcionamiento del Bagging
+   Algoritmos
+    Estos  algoritmos  aplican  tres 
+    procesos fundamentales que son: 
+    Bootstrapping, Entrenamiento en 
+    paralelo y Agregación
+    Existen diversos algoritmos pero 
+    el  modelo  más  usado  es  el 
+    Random Forest
+       Boosting
+   ¿De dónde proviene la idea?
+    Boosting es un método de aprendizaje conjunto 
+    que combina un conjunto de modelos simples 
+    para minimizar los errores de entrenamiento. Se 
+    selecciona una muestra aleatoria de datos y se 
+    ajusta con un modelo y luego se entrena 
+    secuencialmente. Con cada iteración, las reglas 
+    débiles de cada clasificador individual se 
+    combinan para formar una regla de predicción 
+    fuerte.
+   ¿De qué trata?
+    En los algoritmos de boosting, los 
+    modelos simples son utilizados 
+    secuencialmente, es decir, cada modelo 
+    simple va delante o detrás de otro 
+    modelo simple. 
+    El principal objetivo de los métodos 
+    secuenciales es el de aprovecharse de 
+    la dependencia entre los modelos 
+    simples.
+   ¿De qué trata?
+    El rendimiento general puede ser mejorado 
+    haciendo que un modelo simple posterior, le dé 
+    más importancia a los errores cometidos por 
+    un modelo simple previo.
+    Sería como si nosotros al resolver un 
+    problema, aprovechásemos nuestro 
+    conocimiento de los errores de otros para 
+    mejorar en algo intentando no cometerlos 
+    nosotros.
+    ¿De qué trata?
+                            A la izquierda se ilustra el 
+                            funcionamiento del Boosting
+        Para pensar
+    ¿Qué diferencias pueden encontrar 
+    respecto a la metodología Bagging? ¿Se 
+    podrán aplicar los mismos algoritmos 
+    para ambas técnicas?
+    Contesta en el chat de Zoom 
+         Para pensar
+    La diferencia con el Bagging es que en el 
+    Boosting los algoritmos no se 
+    entrenan independientemente, sino 
+    que se ponderan según los errores de los 
+    anteriores
+    Contesta en el chat de Zoom 
+   Algoritmos
+        1          2          3          4
+    ADABOOST   GRADIENT    XG BOOST  LIGHT GBM
+               BOOSTING
+   AdaBoost
+    Este algoritmo entrena de forma 
+    secuencial un conjunto de 
+    aprendices débiles a partir de un 
+    algoritmo base común. Todos los 
+    aprendices son entrenados con el mismo 
+    conjunto de datos pero éstos van 
+    recibiendo pesos que dependen de los 
+    errores cometidos por cada aprendiz. 
+   AdaBoost
+    Así, inicialmente todos las muestras 
+    reciben un peso inicial wi de 1/n 
+    (suponiendo que haya n muestras). El 
+    primer aprendiz es entrenado y se 
+    estima su tasa de error. 
+    Si trabajamos en un problema de 
+    clasificación, la tasa de error está dada 
+    por:
+   AdaBoost
+   A la derecha se 
+   ilustra el 
+   funcionamiento del 
+   modelo AdaBoost
+   Gradient Boosting
+    Es un tipo de algoritmo de aumento. 
+    Se basa en la intuición de que el 
+    mejor modelo siguiente posible, 
+    cuando se combina con modelos 
+    anteriores, minimiza el error de 
+    predicción general. 
+    Miremos a detalle cómo funciona!
+   Gradient Boosting
+    La idea clave es establecer 
+    los resultados objetivo para 
+    este próximo modelo con el 
+    fin de minimizar el error. El 
+    aumento de gradiente se 
+    puede utilizar tanto para 
+    clasificación como para 
+    regresión.
+    XGBoosting
+    Extreme Gradient Boosting, es uno de los 
+    algoritmos de machine learning de tipo 
+    supervisado más usados en la actualidad. 
+    Este algoritmo se caracteriza por obtener 
+    buenos resultados de predicción con 
+    relativamente poco esfuerzo, en muchos 
+    casos equiparables o mejores que los 
+    devueltos por modelos más complejos 
+    computacionalmente, en particular para 
+    problemas con datos heterogéneos.
+   XGBoosting
+    Se basa en el principio de “boosting”, 
+    que como bien sabemos, consiste en 
+    generar múltiples modelos de 
+    predicción “débiles” 
+    secuencialmente y que cada uno de 
+    estos tomé los resultados del 
+    modelo anterior, para generar un 
+    modelo más “fuerte”, con mejor poder 
+    predictivo y mayor estabilidad en sus 
+    resultados.
+    XGBoosting
+    Para conseguir un modelo más fuerte, se 
+    emplea un algoritmo de optimización, este 
+    caso Gradient Descent (descenso de 
+    gradiente). Durante el entrenamiento, los 
+    parámetros de cada modelo débil son 
+    ajustados iterativamente tratando de 
+    encontrar el mínimo de una función 
+    objetivo, que puede ser la proporción de error 
+    en la clasificación, el área bajo la curva (AUC), 
+    la raíz del error cuadrático medio (RMSE), etc.
+   XGBoosting
+    Cada modelo es comparado con el 
+    anterior. Si un nuevo modelo tiene 
+    mejores resultados, entonces se toma 
+    este como base para realizar nuevas 
+    modificaciones. Si, por el contrario, 
+    tiene peores resultados, se 
+    regresa al mejor modelo anterior y 
+    se modifica ese de una manera 
+    diferente.
+   XGBoosting
+   A derecha se ilustra el 
+   funcionamiento del 
+   XGBoosting
+   XGBoosting
+    Este proceso se repite hasta llegar a un 
+    punto en el que la diferencia entre 
+    modelos consecutivos es insignificante, 
+    lo cual nos indica que hemos 
+    encontrado el mejor modelo posible, o 
+    cuando se llega al número de 
+    iteraciones máximas definido por el 
+    usuario.
+   LightGBM
+    Utiliza la técnica Gradient Boosting. Con 
+    este método los árboles se construyen de 
+    manera secuencial y cada uno que se 
+    agrega aporta su granito de arena para 
+    refinar la predicción anterior. Es decir, se 
+    comienza con un valor constante y 
+    cada árbol nuevo se entrena para 
+    predecir el error en la suma de todas 
+    las predicciones de los árboles 
+    anteriores.
+   LightGBM
+    Una vez terminado el proceso, las 
+    predicciones se calculan sumando 
+    los resultados de todos los árboles 
+    que se construyeron. El efecto que 
+    tiene esto es que cada vez que se 
+    agrega un árbol nuevo se le presta 
+    atención a las muestras en las que el 
+    modelo está funcionando peor y se 
+    trabaja para mejorar ese aspecto.
+   LightGBM
+   A derecha se ilustra el 
+   funcionamiento del 
+   LightGBM
+   Ventajas y desventajas
+           Ventajas y desventajas
+                 Método                                  Ventajas                                                  Desventajas
+            Bagging                  -    Fácil implementación con librerías                  -   Pérdida de interpretabilidad debido al 
+                                          y buena documentación                                   proceso de promediado 
+                                     -    Reducción de la varianza                            -   Consume bastantes recursos 
+                                          especialmente en datasets de alta                       computacionales a medida que la 
+                                          dimensionalidad                                         cantidad de datos incrementa
+                                                                                              -   Menos flexible y puede llegar a ser 
+                                                                                                  menos estable
+            Boosting                 -    Fácil implementación con muchos                     -   Sensible al overfitting aunque depende 
+                                          hiper parámetros para configurar                        de los parámetros
+                                          el performance                                      -   Computación intensiva por ende no es 
+                                     -    Reducción del sesgo con base el                         tan fácil de escalar, ya que cada 
+                                          aprendizaje de los weak learners                        estimador se crea con base en sus 
+                                     -    Eficiencia computacional y menor                        predecesores
+                                          tiempo de ejecución                                 -   Son mucho más lentos que los 
+                                                                                                  algoritmos de Bagging
+      Ejemplo en vivo
+   A continuación analizaremos un ejemplo 
+   donde pondremos en práctica el proceso de 
+   Optimización de Hiperparametros con las 
+   técnicas aprendidas y revisaremos la 
+   metodología para aplicar Optimización 
+   Bayesiana.
+    Aplicación de métodos de 
+             ensamble
+    Utilizaremos lo aprendido en clase para aplicar modelos 
+               de Ensamble
+             Duración: 15-20 mins
+      ACTIVIDAD EN CLASE
+    Aplicación de métodos 
+    de ensemble
+    Trabajaremos con base en lo desarrollado en clases 
+    previas con los datos de fuga en el enlace: 
+    Telco Customer Churn
+    1. Separar los datos en train (70%)/test(30%)
+    2. Elegir algún algoritmo de Ensamble (e.g AdaBoost, 
+      Gradient Boosting, XGBoost, RandomForest o Light 
+      GBM)
+    3. Ajustar dicho algoritmo a los datos 
+    4. Evaluar el performance del algoritmo y obtener 
+      conclusiones
+      ¿Preguntas?
+       CLASE N°50
+       Glosario
+       Métodos de Ensamble: También                   Boosting: es un método de aprendizaje 
+       llamados “métodos combinados”,                 conjunto que combina un conjunto de 
+       intentan ayudar a mejorar el rendimiento       modelos simples para minimizar los errores 
+                                                      de entrenamiento. Se selecciona una 
+       de los modelos de Machine Learning al          muestra aleatoria de datos y se ajusta con 
+       mejorar su precisión. Existen tres             un modelo y luego se entrena 
+       metodologías: Bagging, Boosting y              secuencialmente. Con cada iteración, las 
+       Stacking                                       reglas débiles de cada clasificador 
+                                                      individual se combinan para formar una 
+       Bagging: son métodos donde los                 regla de predicción fuerte.
+       algoritmos simples son usados en paralelo      Sus algoritmos más importantes son: 
+       con el fin de aprender con base en una         AdaBoost, GradientBoosting, XGBoost y 
+       estructura en paralelo de cada modelo          LightGBM
+       individual. El algoritmo más importante es 
+       el Random Forest
+      Opina y valora 
+       esta clase
+                   Resumen 
+               de la clase hoy
+              ✓ Modelos de Ensamble
+              ✓ Características
+              ✓ Bagging
+              ✓ Boosting
+        Muchas 
+        gracias.

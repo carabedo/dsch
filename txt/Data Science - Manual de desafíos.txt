@@ -1,0 +1,796 @@
+               MANUAL DE DESAFÍOS
+            Data Science
+       ¡Bienvenidas y 
+       bienvenidos!
+       Qué bueno encontrarlos/as en este            A continuación presentamos el sistema de 
+       espacio el cual hemos creado para que        entregas de los cursos de Coder. Luego, 
+       puedan conseguir en un mismo lugar, de       en un tablero, podrán ver las clases 
+       manera rápida y ágil, todos los desafíos     establecidas en el programa además 
+       entregables que plantea el curso.            de la clase 0, marcando con el ícono 
+                                                    correspondiente las clases que sí tienen 
+                                                    entregables (incluido el proyecto final). 
+                                                    De esta forma podrás tener un pantallazo 
+                                                    del cronograma de clases y los desafíos 
+                                                    que deberás completar. 
+                          Sistema de entregas
+               Desafíos                       Pre-entrega del PF              Proyecto Final
+               entregables
+               Tienen una vigencia de 7       También tiene una               A diferencia de los 
+               días, es decir, a partir de    vigencia o duración de 7        anteriores puntos, cuenta 
+               la fecha (de la clase) en      días antes de que el            con un lapso de 20 días 
+               la que se lanza el desafío,    botón de “entrega” se           continuos luego de 
+               empezarán a correr 7           deshabilite. Por este           finalizada la última clase. 
+               días continuos, para que       motivo te recomendamos          Posterior a ese tiempo, el 
+               puedas cargar tu desafío       estar al día con todas las      botón de la entrega quedará 
+               en la plataforma.              actividades planteadas.         inhabilitado y no será 
+                                                                              posible entregarlo o 
+                                                                              recibirlo por otros medios. 
+       GRILLA DE ENTREGAS
+      Clases     0 1 2  3 4 5 6  7 8 9 1  1 1 1  1
+                                       0  1 2 3  4
+      Desafío entregable
+      Proyecto final
+         GRILLA DE ENTREGAS
+       Clases          1  1  1  1  1  2   2  2  2  2  2  2  2  2  2
+                       5  6  7  8  9  0   1  2  3  4  5  6  7  8  9
+       Desafío entregable
+       Proyecto final
+         GRILLA DE ENTREGAS
+       Clases          3  3  3  3  3  3   3  3  3  3  4  4  4  4
+                       0  1  2  3  4  5   6  7  8  9  0  1  2  3
+       Desafío entregable
+       Proyecto final
+         GRILLA DE ENTREGAS
+            Clases          4  4  4  4  4  4  5  5  5   5  5  5
+                            4  5  6  7  8  9  0  1  2   3  4  5
+            Desafío entregable
+            Proyecto final
+         Módulos de clase
+                                        Clases 0-             Clases 22 -          Clases 39 - 55
+                                           21                     38
+                                        Módulo 1:             Módulo 2:             Módulo 3: 
+                                      Fundamentos             Análisis y             Machine 
+                                      de la Ciencia          exploración             Learning
+                                        de Datos               de Datos
+         TABLERO DE CLASES
+                         Clase 0                          Clase 1                          Clase 2                         Clase 3
+               Introducción a la Ciencia de           La necesidad de                 Introducción a la                Introducción a la 
+                           Datos                    transformación de la         programación con Python I       programación con Python II
+                                                        Industria 4.0
+                         Clase 4                          Clase 5                          Clase 6                         Clase 7
+                 Introducción a la librería      Programación con Arrays:         Introducción a la librería      Visualizaciones y primeros 
+                  científica con Python:           Introducción a Numpy             científica con Python:       pasos con Data Science PT. I
+                         Pandas I                                                         Pandas II
+                         Clase 8                          Clase 9                         Clase 10                         Clase 11
+                Visualizaciones y primeros        Estadística Descriptiva:            Herramientas de                 Preprocesamiento 
+                pasos con Data Science PT.        como conocer los datos                visualización              estadístico de los datos
+                             II
+                         Clase 12                        Clase 13                         Clase 14                         Clase 15
+                  Introducción al análisis      Modelos analíticos para DS I    Modelos analíticos para DS II     Modelos analíticos para DS 
+                 predictivo con Regresión                                                                                      III
+        TABLERO DE CLASES
+                       Clase 16                       Clase 17                       Clase 18                       Clase 19
+                  Estudios de casos de           Estudios de casos de         Introducción al ML y la IA    Algoritmos y Validación de 
+                   modelo analítico I             modelo analítico II                                          Modelos de Machine 
+                                                                                                                     Learning
+                       Clase 20                       Clase 21                       Clase 22                       Clase 23
+                   Stack Tecnológico I        Stack Tecnológico del Data       Retomando impulso…               Data Acquisition I
+                                                      Scientist II
+                       Clase 24                       Clase 25                       Clase 26                       Clase 27
+                Fundamentos de base de        Lenguaje Estructurado de       Lenguaje Estructurado de           Data Acquisition II
+                         datos                  Consulta SQL - Parte 1         Consulta SQL - Parte 2
+                       Clase 28                       Clase 29                       Clase 30                       Clase 31
+                    Data Wrangling I               Data Wrangling II        Workshop: Limpieza de Data      Exploratory Data Analysis 
+                                                                                                                      (EDA)
+         TABLERO DE CLASES
+                         Clase 32                         Clase 33                          Clase 34                         Clase 35
+                     Introducción a la          Visualización efectiva y Data        GIS y Datos espaciales            Análisis univariado y 
+                  visualización de Datos                 Storytelling                                                         gráficos
+                         Clase 36                         Clase 37                          Clase 38                         Clase 39
+                     Análisis bivariado             Análisis multivariado            Workshop: Revisión de         En foco: selección de mejora 
+                                                                                              pares                         de modelos
+                         Clase 40                         Clase 41                          Clase 42                         Clase 43
+                  Introducción al Machine        Algoritmos de clasificación      Algoritmos de clasificación y     Algoritmos de agrupación I
+                          Learning                                                          regresión
+                         Clase 44                         Clase 45                          Clase 46                         Clase 47
+                Algoritmos de agrupación I         Selección del Algoritmo y        Selección del Algoritmo y        Validación de modelos - 
+                                                 entrenamiento del Modelo I       entrenamiento del Modelo II                métricas
+        TABLERO DE CLASES
+                       Clase 48                      Clase 49                      Clase 50                      Clase 51
+                  Mejora de modelos de          Mejora de modelos de        Modelos de Ensamble y         Despliegue de Modelos 
+                   Machine Learning I           Machine Learning II             Boosting Models                   MLOps
+                       Clase 52                      Clase 53                      Clase 54                      Clase 55
+                  Introducción a Deep              Introducción al               Introducción al                 Datathon
+                       Learning             Procesamiento de Lenguaje     Procesamiento de Lenguaje 
+                                                     Natural I                     Natural II
+                  CLASE 5
+         Programación con 
+        Arrays: Introducción 
+               a Numpy
+                            1
+          Elección de Datasets 
+                  potenciales
+      Deberás entregar el primer avance de tu proyecto final. Identificarás 3 datasets 
+      potenciales con las siguientes características: i) al menos 2000 filas, ii) al menos 
+       15 columnas. Posterior a esto crearás un notebook donde cargarás los datos 
+      utilizando la librería pandas y finalmente describirás las variables que sean más 
+      interesantes teniendo en cuenta el contexto comercial y analítico del problema 
+                     que se quiera resolver.
+            DESAFÍO 
+            ENTREGABLE
+       Datasets con la librería 
+       Pandas
+       Consigna
+        ✓ Identificar 3 datasets que cumplan con         ✓ Cargar los archivos correspondientes 
+            las siguientes condiciones: a) al menos         por medio de la librería pandas
+            2000 filas y b) al menos 15 columnas.        ✓ Describir las variables 
+            Pueden buscar en las siguientes                 potencialmente interesantes en cada 
+            fuentes: GitLab, Github, Kaggle, Google         archivo teniendo en cuenta el 
+            Dataset Search (Si desean trabajar con          contexto comercial y analítico 
+            un archivo propio se puede también)             involucrado
+        ✓ Algunas API recomendadas para                 Aspectos a incluir
+            obtener información:                          ✓ El código debe estar hecho 
+            Marvel,PokeApi,CovidTracking,Nomics              en un notebook y debe 
+            (Criptomonedas),Wheater API                      estar probado.
+        DESAFÍO 
+        ENTREGABLE
+     Datasets con la librería 
+     Pandas
+      Formato                        Explicación en video
+       ✓ Entregar un archivo con      ✓ ¡Clickea aquí!
+         formato .ipynb. Debe tener el 
+         nombre “Datasets+Apellido.ipynb”.
+      Sugerencias
+       ✓ Preparar el código y probar los 
+         resultados con distintas entradas
+                  CLASE 8
+          Visualizaciones y 
+        primeros pasos con 
+         Data Science PT. II
+                            2
+                    Práctica 
+                integradora: 
+            Visualizaciones en 
+                     Python
+            DESAFÍO 
+            ENTREGABLE
+       Visualizaciones en 
+       Python                                          Formato
+       Consigna
+         ✓ Deberás entregar el segundo avance de        ✓ Entregar un archivo con formato .ipynb. 
+            tu proyecto final. Elegirás uno de los          Debe tener el nombre 
+            datasets del desafío “Elección de               “Visualización+Apellido.ipynb”. 
+            Potenciales Datasets e importe con 
+            la librería Pandas”. Posteriormente,       Sugerencias
+            crearás un notebook donde cargaran el       ✓ Preparar el código y probar los resultados 
+            archivo utilizando funciones de pandas          con subconjuntos del conjunto original.
+            para luego proceder a realizar 3 gráficos 
+            diferentes con Matplotlib y 3 con          Aspectos a incluir
+            Seaborn. Finalmente, cada gráfico será      ✓ El código debe estar hecho en un 
+            interpretado con el fin de obtener              notebook y debe estar probado.
+            insights relevantes que permitan dar 
+            respuesta a la pregunta problema.
+               DESAFÍO 
+               ENTREGABLE
+         Visualizaciones en 
+         Python
+        Consigna paso a paso                                      Video explicativo
+          1.  Escoger uno de los 3 datasets utilizados              ✓ Link al video complementario
+              para la Clase 5
+          2.  Cargar el dataset con la librería pandas 
+              por medio de la función pd.read_csv() o 
+              pd.read_excel()
+          3.  Realizar al menos tres gráficos (lineplot, 
+              scatterplot, histogramas, barchart, 
+              boxplot) usando la librería Matplotlib
+          4.  Realizar al menos tres gráficos (lineplot, 
+              scatterplot, histogramas, barchart, 
+              boxplot) usando la librería Seaborn
+          5.  Interpretar los resultados de cada gráfica 
+              obtenida
+                  CLASE 12
+           Introducción al 
+         análisis predictivo 
+            con Regresión
+                             3
+             Estructurando un 
+               Proyecto de DS 
+     Deberás entregar el tercer avance de tu proyecto final. Crearás un notebook que deberá 
+                    (parte I)
+     tener en primera instancia un abstract (250/500 palabras) de acuerdo al dataset elegido 
+     del desafío “Visualizaciones en Python”. Además se deben establecer las preguntas 
+        e hipótesis de interés sobre el dataset elegido. Finalmente, deberás generar 
+        visualizaciones (univariadas, bivariadas o multivariadas) junto con resúmenes 
+      numéricos acompañado de la interpretaciones respectivas que permitan responder la 
+                      pregunta problema.
+      Recordemos
+                                             Elegimos un dataset de interés
+            Desafío anterior:                Realizamos gráficos con 
+         Visualización en Python             Matplotlib
+                                            Realizamos gráficos con Seaborn
+                                           Obtención de Insights preliminares
+                                                          ������
+             DESAFÍO 
+             ENTREGABLE
+        Estructurando un 
+        Proyecto de DS (parte I)
+                                                        Formato
+       Consigna                                          ✓ Entregar un archivo con formato .ipynb. 
+       Continuaremos trabajando con base en lo               Debe tener el nombre 
+       realizado en el Desafío entregable:                   “ProyectoDS_ParteI_+Apellido.ipynb”
+       Visualización en Python, en esta 
+       oportunidad deberemos complementar con lo        Sugerencias
+       siguiente:                                        ✓ Preparar el código y probar los 
+         1. Generar preguntas de interés o                   resultados con subconjuntos del 
+            hipótesis de interés sobre el dataset            conjunto original.
+            elegido para el proyecto final.              ✓ Link video explicativo
+         2. Crear visualizaciones (univariados, 
+            bivariados o trivariados) junto con         Aspectos a incluir:
+            resúmenes numéricos básicos acordes          ✓ El código debe estar hecho en un 
+            con los tipos de variables disponibles.          notebook y debe estar probado.
+         3. Interpretar los resultados obtenidos
+                  CLASE 17
+       Estudios de casos de 
+         modelo analítico II
+                             4
+             Estructurando un 
+               Proyecto de DS 
+     Deberás entregar el cuarto avance de tu proyecto final. Continuaremos hablando sobre 
+                    (parte II)
+       lo trabajado en el desafío Estructurando un proyecto DS-Parte I. Crearás un 
+          notebook donde se resuelvan los siguientes apartados: i) Abstracto, ii) 
+     Preguntas/hipótesis, iii) EDA, iv) recomendaciones con base en insights observados y v) 
+      tener definido en el notebook las secciones: Objetivo, Contexto Comercial, Problema 
+           Comercial Contexto analítico y Exploratory Data Analysis (EDA)
+      Recordemos
+                                             Generamos hipótesis de interés
+            Desafío anterior:                Creamos visualizaciones y 
+       Estructurando un proyecto             resúmenes numéricos
+               DS- Parte 1
+                                            Encontramos patrones de interés
+                                            Exploratory Data Analysis (EDA)
+                                                          ������
+               DESAFÍO 
+               ENTREGABLE
+        Estructurando un 
+        Proyecto de DS (parte II)
+                                                                   Formato
+        Consigna                                                     ✓ Entregar un archivo con formato .ipynb. 
+        Deberás complementar la parte I con:                              Debe tener el nombre 
+          1.  Abstracto con motivación y audiencia                        “ProyectoDS_ParteII_+Apellido.ipynb”
+          2.  Preguntas/Hipótesis que queremos resolver 
+              mediante el análisis de datos
+          3.  Análisis Exploratorio de Datos (EDA)                 Sugerencias
+          4.  Con base en las visualizaciones y                      ✓ Preparar el código y probar los 
+              resúmenes numéricos generados del desafío                   resultados con subconjuntos del 
+              anterior dar recomendaciones basados en                     conjunto original.
+              los insights observados.                               ✓ Link video explicativo
+          5.  Para esta oportunidad se deberán tener 
+              avances en los apartados: Definición de              Aspectos a incluir:
+              objetivo, Contexto comercial, Problema                 ✓ El código debe estar hecho en un 
+              Comercial, Contexto analítico, Exploración 
+              de datos (EDA)                                              notebook y debe estar probado.
+                  CLASE 19
+             Algoritmos y 
+            Validación de 
+        Modelos de Machine 
+               Learning
+                            5
+         Práctica integradora 
+        Deberás entregar el quinto avance de tu proyecto 
+       final. Continuaremos hablando sobre lo trabajado en 
+       el desafío “Estructurando un proyecto de DS Parte II”. 
+                          Recordemos…
+                                           Generamos 
+                                           recomendaciones basados 
+                                           en insights obtenidos
+                                           Definimos Objetivo, Contexto 
+                                           y Problema comercial
+                                           Contexto analitico, Limpieza 
+                                           de datos y EDA 
+              Clase 17
+          Estructurando un 
+        Proyecto DS- Parte II              Obtenemos conclusiones y 
+                                           puntos importantes a resaltar
+             DESAFÍO 
+             ENTREGABLE
+        Estructurando un proyecto de 
+        DS-parte III
+    Consigna                                               Aspectos a incluir
+      ✓ Crearás un notebook que complemente el              ✓ El código debe estar hecho en un 
+          trabajo realizado en los siguientes                   notebook y debe estar probado.
+          apartados:                                       Formato
+            -   i) elegir un método de feature              ✓ Entregar un archivo con formato .ipynb. 
+                selection para reducir la                       Debe tener el nombre 
+                dimensionalidad del dataset,                    “Proyecto_ParteIII_+Apellido.ipynb”  
+            -   ii) elegir un algoritmo de regresión o 
+                clasificación para entrenar con los 
+                datos elegidos,                            Sugerencias
+            -    iii) cálculo de métricas para validar      ✓ Preparar el código y probar los 
+                el modelo                                       resultados con subconjuntos del 
+            -   iv) generar conclusiones con base en            conjunto original.
+                los resultados obtenidos.                   ✓ Video explicativo
+                  CLASE 21
+         Stack Tecnológico 
+        del Data Scientist II
+                 Primera entrega 
+              de tu Proyecto final
+           Debes entregar el Análisis de datos con Python
+          correspondiente a la primera entrega de tu proyecto 
+                                  final.
+          Crearás la notebook de un análisis exploratorio de datos sobre un problema a 
+         resolver para una industria, negocio o proyecto personal. La notebook contendrá 
+         un informe que detalle tus hipótesis primarias y secundarias, el código utilizado 
+                       para probarlas y su posible resolución.
+    Recordemos…
+                          Aplicamos Feature Selection
+                          Elegimos un algoritmo de 
+                          Machine Learning 
+                          Evaluamos el desempeño del 
+                          algoritmo elegido
+         Clase 19
+       Estructurando un 
+       proyecto de DS-III Obtención de conclusiones con 
+                          base en resultados obtenidos
+            ENTREGA DEL PROYECTO 
+            FINAL
+       Análisis de datos con 
+       Python
+      Objetivos generales                          Formato
+        ✓ Estructurar un problema en función         ✓ Link a repositorio de Github o 
+           de múltiples, pero simples                   documento de Jupyter.
+           preguntas/hipótesis a responder           ✓ El archivo debe tener el nombre 
+        ✓ Analizar datos tabulares (e.g excel,          “PrimeraEntrega+Apellido.ipynb”
+           csv, etc)  usando Python
+        ✓ Utilizar modelos de Machine              Sugerencias
+           Learning con Python
+                                                     ✓ La entrega es individual y se realiza 
+                                                        a través de la plataforma.
+             ENTREGA DEL PROYECTO 
+             FINAL
+        Primera entrega
+       El modelo de Jupyter Notebook debe contener
+         ✓ Abstracto con motivación y audiencia: Descripción de 
+             alto nivel de lo que lo motiva a analizar los datos                 Video explicati
+             elegidos y qué tipo de audiencia se podría beneficiar de            vo
+             este análisis
+         ✓ Preguntas/Hipótesis que queremos responder mediante 
+             el análisis de datos
+         ✓ Estructura acorde.
+         ✓ Análisis Exploratorio de datos (EDA): Análisis descriptivo 
+             de los datos mediante visualizaciones mediante el 
+             análisis de datos
+                  CLASE 27
+         Data Acquisition II
+                                        6
+                Descarga de datos 
+              desde APIs públicas
+             Deberás entregar el sexto avance de tu proyecto final. Continuaremos hablando sobre lo 
+             trabajado en la primera pre entrega del proyecto final. Crearás un notebook donde se 
+             seleccionará  una  API  de  interés,  luego  crearás  una  API  key  y  finalmente  extraerás  la 
+             información  para  ser  almacenada  en  un  DataFrame  (se  sugiere  que  esta  información 
+             complemente o enriquezca el dataset elegido en el desafío  “Elección de potenciales 
+             Datasets e importe con la librería Pandas”)
+            DESAFÍO 
+            ENTREGABLE
+       Descarga de datos desde APIs 
+       Consigna                                    Formato
+       públicas
+        ✓ Buscar información en APIs públicas        ✓ Se debe entregar un jupyter notebook 
+            (i.e Twitter, NewsAPI, Spotify, Google      con el nombre 
+            Apis, etc).                                 “Desafio_APIS_+Nombre_ 
+        ✓ Extraer datos e importarlos a un              +Apellido.ipynb”.
+            dataframe realizando una exploración 
+            simple (i.e filas, columnas, tipos de 
+            datos). Se sugiere que estos datos     Sugerencias
+            complementen el dataset elegido en el    ✓ No compartir sus tokens personales
+            Desafio “Elección de potenciales         ✓ Comprender primero el funcionamiento 
+            Datasets e importe con la librería          de las APIs a detalle para después 
+            Pandas”                                     utilizarla
+       Aspectos a incluir                            ✓ La limpieza de datos en APIS no es 
+        ✓                                               fácil
+            Notebook donde se detallen todos los     ✓ Tratar de obtener datos principalmente 
+            pasos seguidos                              numéricos (al menos 20 columnas y 
+       Ejemplo                                          10000 filas.
+        ✓ Ejemplo Desafío APIS,
+                  CLASE 29
+          Data Wrangling II
+                                        7
+               Desafío entregable: 
+                   Data Wrangling
+             Deberás entregar el séptimo avance de tu proyecto final. Continuaremos hablando 
+             sobre lo trabajado en el desafío “Descarga de datos desde APIs públicas”. 
+             Crearás un notebook donde se desarrollará la limpieza de los datos elegidos para tu 
+             proyecto final, deberás tener en cuenta técnicas vistas en clase para el tratamiento 
+             de valores duplicados, nulos y outliers con su respectiva justificación.  
+               Recordemos…
+                           Exploramos diversas APIs
+                           Extrajimos los datos en un 
+                               dataframe
+                          Realizamos una exploración 
+                                simple
+          Clase 27
+      Desafío entregable: 
+        Data Acquisition    Obtención de Insights 
+                              preliminares
+          DESAFÍO 
+          ENTREGABLE
+      Data Wrangling
+      Consigna                              Formato
+       ✓ Iniciar el proceso de limpieza y     ✓ Se espera un notebook en 
+          exploración de datos según el          formato .ipynb. Dicho notebook debe 
+          dataset elegido para el proyecto       tener el siguiente nombre 
+          final                                  “Data_Wrangling+Apellido.ipynb”.
+      Aspectos a incluir                    Sugerencias
+       ✓ Notebook con código y estructura     ✓ Utilizar las herramientas vistas en el 
+          eficiente                              curso
+                                              ✓ Manejo de duplicados nulos y análisis 
+      Ejemplo                                    exploratorio
+       ✓ Data Wrangling                     Explicación del desafío
+                                              ✓ ¡Click aquí!
+                  CLASE 33
+            Visualización 
+           efectiva y Data 
+             Storytelling
+                              8
+           Desafío entregable: 
+              Data Storytelling
+          Deberás  entregar  el  octavo  avance  de  su  proyecto  final.  Continuaremos 
+          hablando sobre lo trabajado en el desafío “Data Wrangling”. Crearás un 
+          notebook donde se desarrolle una narrativa que permita dar respuesta a las 
+          preguntas/hipótesis formuladas para el proyecto final.
+               Recordemos…
+                         Extrajimos datos de interés
+                         Comenzamos el proceso de 
+                         limpieza y estructuración 
+                         Desarrollamos algunas 
+                         hipótesis 
+          Clase 29
+       Desafío entregable
+       Data Wrangling     Data Wrangling/Munging
+            DESAFÍO 
+            ENTREGABLE
+       Data Storytelling
+      Consigna                                     Formato
+        ✓ Iniciar el proceso de Data                 ✓ Se espera un notebook en 
+           Storytelling respondiendo las                formato .ipynb. Dicho notebook debe 
+           preguntas que se quieran responder           tener el siguiente nombre 
+                                                        “Data_StoryTelling+Apellido.ipynb”
+                                                        .
+      Aspectos a incluir                           Sugerencias
+        ✓ Notebook con código y estructura           ✓ Utilizar las herramientas vistas en el 
+           eficiente                                    curso
+      Ejemplo                                        ✓ Manejo de duplicados nulos y análisis 
+        ✓ Data StoryTelling                             exploratorio
+                                                     ✓ Comenzar por preguntas de alto nivel y 
+                                                        luego más específicas
+                                                   Explicación del desafío
+                                                     ✓ ¡Click aquí!
+                  CLASE 36
+         Análisis bivariado
+                              9
+           Desafío entregable: 
+                 Obtención de 
+          Deberás  entregar  el  noveno  avance  de  su  proyecto  final.  Continuaremos 
+                     Insights
+          hablando sobre lo trabajado en el desafío “Data Storytelling”. Crearás un 
+          notebook donde se pueda observar las fases de análisis univariado y bivariado 
+          que  junto  con  el  trabajo  previo  realizado  permitan  obtener  insights  que 
+          ayuden a dar respuesta a la(s) pregunta(s) problema del proyecto final.
+    Recordemos…
+                          Generamos visualizaciones
+                          Respondimos preguntas de 
+                          interés
+                          Soluciones a la pregunta 
+                          problema
+        Clase 33
+     Desafío entregable:
+      Data Storytelling
+                          Mejora de Insights obtenidos
+            DESAFÍO 
+            ENTREGABLE
+       Obtención de insights
+        Consigna
+          ✓ Generar insights que permitan dar      Formato
+             respuesta a las preguntas por           ✓ Se espera un notebook en 
+             responder                                  formato .ipynb. Dicho notebook debe 
+                                                        tener el siguiente nombre 
+                                                        “Data_StoryTelling+Apellido.ipynb”
+        Aspectos a incluir                              .
+          ✓ Notebook con código y estructura         ✓ Presentación en formato pptx o pdf
+             eficiente                             Sugerencias
+          ✓ Presentación ejecutiva                   ✓ Se recomienda que la historia cuente 
+        Ejemplo                                         con una estructura similar a la 
+          ✓                                             presentación de referencia
+             Ejemplo de presentación
+                                                   Explicación del desafío
+                                                     ✓ ¡Click aquí!
+                  CLASE 38
+        Workshop: Revisión 
+               de pares
+       Obtención de insights a 
+      partir de visualizaciones
+      Deberás  entregar  la  segunda  pre  entrega  de  tu  Proyecto  Final.   
+      Entrenarás  y  optimizarás  versos  modelos  de  machine  learning  para 
+      resolver  una  problemática  específica,  detectada  en  la  instancia  de 
+      entrega anterior. El objetivo es que puedan utilizar modelos de Machine 
+      Learning para resolver el problema de una industria o negocio. 
+                         Recordemos…
+                                        Generamos visualizaciones
+                                        Obtuvimos insights
+                                        Desarrollamos una narrativa 
+                                        correcta
+             Clase 36
+       Desafío entregable:
+      Obtención de insights             Responder las preguntas 
+                                        problema
+       PREENTREGA DEL PROYECTO 
+       FINAL
+    Obtención de insights a partir de 
+    visualizaciones
+    Objetivos generales
+     ✓ Obtener datos de diversas fuentes como APIs o Bases de datos públicas para luego 
+      analizarlos mediante el lenguaje Python con el fin de contestar una pregunta de 
+      interés para una industria, negocio o proyecto personal. Se deberán utilizar datasets 
+      complejos implementando técnicas avanzadas para la limpieza y adquisición de 
+      datos
+    Objetivos específicos
+     ✓ Estructurar un problema en función de múltiples pero simples preguntas/hipótesis a 
+      responder
+     ✓ Importar datos crudos de APIs o bases de datos usando Python
+     ✓ Limpiar y transformar los datos para permitir un posterior análisis
+     ✓ Contar una historia mediante el análisis exploratorio de datos
+       PREENTREGA DEL PROYECTO 
+       FINAL
+    Obtención de insights a partir de 
+    visualizaciones
+    Requisitos base
+     ✓ Un notebook (Colab o Jupyter) que debe contener:
+      1. Abstracto con motivación y audiencia: Descripción de alto nivel de lo que 
+        motiva a analizar los datos elegidos y que audiencia  se podrá beneficiar de este 
+        análisis
+      2. Preguntas/hipótesis que queremos responder: Lista de preguntas que se 
+        busca responder mediante el análisis de datos. Bloques de código donde se 
+        importan los datos desde una API o base de datos pública y los guarda en un 
+        archivo local csv o json. El estudiante puede luego de descargar los datos, 
+        comentar este bloque de código
+      3. Análisis exploratorio de datos (EDA): Análisis descriptivo de los datos 
+        mediante visualizaciones y herramientas estadísticas
+         PREENTREGA DEL PROYECTO 
+         FINAL
+     Obtención de insights a partir de 
+     visualizaciones
+     Requisitos base
+      ✓ Una presentación (PDF; PowerPoint o Google Slides) que debe contener
+        1. Abstracto con motivación y audiencia: Descripción de alto nivel de lo que motiva a 
+           analizar los datos elegidos y que audiencia  se podrá beneficiar de este análisis
+        2. Resumen de metadata: resumen de los datos a ser analizados es decir, número de 
+           filas/columnas, tipos de variables, etc
+        3. Preguntas hipótesis que queremos responder: Lista de preguntas que se busca 
+           responder mediante el análisis de datos
+        4. Visualizaciones ejecutivas que responden nuestras preguntas: utilización de 
+           gráficos que responden las preguntas de interés de nuestro proyecto.
+        5. Insights: resumen de hallazgos del proyecto. Aquí consolidamos las respuestas a las 
+           preguntas/hipótesis que fuimos contestando con las visualizaciones
+       PREENTREGA DEL PROYECTO 
+       FINAL
+    Obtención de insights a partir de 
+    visualizaciones
+    Sugerencias
+    Es conveniente retomar el dataset trabajado en la primera pre entrega y enriquecerlo (e.g 
+    joins, y creación de nuevas columnas) con información proveniente de APIs públicas 
+    siempre que se pueda con el fin de practicar las nuevas habilidades adquiridas. Se 
+    recomienda retomar la metodología de trabajo y reutilizar algoritmos ya entrenados, de 
+    ser necesario.
+    Requisitos extra
+     ✓ Subir el proyecto a Github
+       PREENTREGA DEL PROYECTO 
+       FINAL
+    Obtención de insights a partir de 
+    visualizaciones
+    Dont’s
+     ✓ Utilizar jerga demasiado técnica en la presentación (recordar que la audiencia de la 
+      misma son roles ejecutivos)
+     ✓ Sobrecargar las diapositivas 
+     ✓ Realizar una presentación con más de 12 slides de extensión
+    Modelo de Proyecto final
+     ✓ Proyecto final (Notebook) (Se debe abrir con Google Collaboratory o Jupyter 
+      Notebook)
+     ✓ Ejemplo Presentación 
+    Explicación del desafío
+     ✓ ¡Click aquí!
+                  CLASE 42
+            Algoritmos de 
+            clasificación y 
+               regresión
+                                        1
+                                        0
+                     Entrenando un 
+             algoritmo de Machine 
+                            Learning
+             Deberás entregar el décimo avance de tu proyecto final. Continuaremos hablando 
+             sobre lo trabajado en la segunda pre entrega del proyecto final. Crearás un 
+             notebook donde trabajarás sobre los datos elegidos en la primera y segunda pre 
+             entrega del proyecto final. Posteriormente, realizarás las etapas de: i) Encoding, ii) 
+             Ingeniería  de  atributos  y  iii)  Entrenamiento  de  un  modelo  de  Machine  Learning 
+             Supervisado  (Clasificación  o  Regresión)  o  no  supervisado  dependiendo  de  la 
+             pregunta problema.
+            DESAFÍO 
+            ENTREGABLE
+       Entrenando un algoritmo de Machine 
+       Learning
+       Consigna                                       Formato
+         ✓ Utilizar una fuente de datos para           ✓ Se debe entregar un jupyter notebook con 
+            resolver problemas de clasificación o          el nombre 
+            regresión.                                     “Desafio_AlgoritmoML_MVP_+Nombre
+         ✓ Realizar los procesos de Encoding,              _ +Apellido.ipynb”.
+            Feature Engineering y entrenamiento       Sugerencias
+            de un modelo de Machine Learning           ✓ Se pueden utilizar fuentes de datos 
+            (Clasificación o Regresión)                    conocidas en sitios como Kaggle o UCI
+       Aspectos a incluir                              ✓ Se recomienda elegir datasets curados 
+         ✓ Notebook donde se detallen todos los            para que la mayor parte del tiempo se 
+            pasos seguidos                                 utilice para el entrenamiento de modelos 
+                                                           y no en limpieza de datos.
+       Ejemplo                                        Explicación del desafío
+         ✓ Ejemplo Desafío Entrenamiento ML,           ✓ ¡Click aquí!
+                  CLASE 45
+            Selección del 
+             Algoritmo y 
+         entrenamiento del 
+               Modelo I
+                                        1
+                                        1
+               Evaluando modelos 
+             de Machine Learning
+             Deberás entregar el décimo primero avance de tu proyecto final. Continuaremos 
+             hablando sobre lo trabajado en el desafío “Entrenando un algoritmo de Machine 
+             Learning”. Crearás un notebook donde se complementará el proceso de Feature 
+             Engineering del desafío anterior con el fin de mejorar el proceso de entrenamiento 
+             de algoritmos de Machine Learning, se compararán resultados obtenidos con los del 
+             desafío anterior. 
+                          Recordemos…
+                                               Combinamos datos de 
+                                                 diversas fuentes
+                                              Realizamos proceso de 
+                                                Encoding y Feature 
+                                                   Engineering
+                                             Creamos un modelo MVP 
+                                                      simple
+                Clase 42
+          Desafío entregable: 
+         Entrenando un algoritmo 
+           de Machine Learning              Entrenamos algoritmo de 
+                                                Machine Learning
+            DESAFÍO 
+            ENTREGABLE
+      Evaluando modelos de Machine 
+      Learning
+       Consigna                                    Formato
+        ✓ Realizar una segunda ronda de Feature      ✓ Se debe entregar un jupyter notebook 
+            Engineering con el fin de ampliar el        con el nombre 
+            número de variables incluidas en el         “Desafio_EvaluacionML_+Nombre_ 
+            modelo MVP de la entrega anterior.          +Apellido.ipynb”.
+        ✓ Realizar una segunda ronda de 
+            entrenamiento con más variables        Sugerencias
+       Aspectos a incluir                            ✓ Se recomienda elegir datasets curados 
+        ✓ Notebook donde se detallen todos los          para que la mayor parte del tiempo se 
+            pasos seguidos                              utilice para el entrenamiento de 
+                                                        modelos y no en limpieza de datos
+       Ejemplo                                     Explicación del desafío
+        ✓ Evaluando Modelos Machine Learning,        ✓ ¡Click aquí!
+                  CLASE 47
+            Validación de 
+         modelos - métricas
+                                        1
+                                        2
+       Ingeniería de atributos y 
+          selección de variables
+             Deberás  entregar  el  duodécimo  avance  de  tu  proyecto  final.  Continuaremos 
+             hablando  sobre  lo  trabajado  en  el  desafío  “Evaluando  modelo  de  Machine 
+             Learning”.  Crearás  un  notebook  donde  se  terminará  el  proceso  de  Feature 
+             Engineering del desafío anterior, se busca que se puedan crear nuevas variables 
+             sintéticas que ayuden a mejorar el desempeño de los modelos de Machine Learning. 
+             Finalmente, deberás realizar un PCA sobre todas las variables utilizadas con el fin de 
+             determinar el peso relativo de cada variable en los modelos. 
+               Recordemos…
+                           Terminamos de realizar el 
+                             proceso de Feature 
+                               Engineering
+                           Ampliamos el número de 
+                             variables en el MVP
+                          Realizamos una segunda ronda 
+                           de entrenamiento con más 
+                                variables
+          Clase 45
+      Desafío entregable: 
+      Evaluando modelos de 
+       Machine Learning    Evaluamos al algoritmo
+             DESAFÍO 
+             ENTREGABLE
+       Ingeniería de atributos y selección de 
+       variables
+       Consigna                                           Formato
+         ✓ Crear variables sintéticas adicionales que       ✓ Se debe entregar un jupyter notebook con 
+             permitan mejorar el desempeño del                  el nombre 
+             modelo de ML en la entrega anterior.               “Desafio_FeatureSelection_+Nombre_ 
+         ✓ Probar distintos modelos y elegir el mejor           +Apellido.ipynb”.
+             teniendo en cuenta el Bias-Variance 
+             tradeoff                                     Sugerencias
+         ✓ Realizar PCA sobre las variables usadas y        ✓ Se recomienda realizar el PCA con el fin 
+             explorar las cargas de los 2 primeros              de obtener las variables sintéticas y 
+             componentes, identificar las variables             reducir el número de inputs con el fin de 
+             más relevantes                                     mejorar el desempeño de los modelos de 
+       Aspectos a incluir                                       ML elegidos 
+                                                            ✓ Dedicar un buen tiempo a la explicación 
+         ✓ Notebook donde se detallen todos los                 de la metodología usada.
+             pasos seguidos
+                                                          Explicación del desafío
+       Ejemplo                                              ✓
+         ✓ Feature Selection (Filter Method),                   ¡Click aquí!
+                  CLASE 55
+               Datathon
+            Entrenamiento y 
+    optimización de Modelos de 
+     Deberás entregar tu Proyecto Final. Entrenarás y optimizarás diversos 
+           Machine Learning
+     modelos de machine learning para resolver una problemática específica, 
+     detectada en la instancia de entrega anterior. El objetivo es que puedas 
+    utilizar modelos de ML para resolver el problema de una industria o negocio
+       ENTREGA DEL PROYECTO 
+       FINAL
+    Entrenamiento y optimización de 
+    modelos de Machine Learning
+    Objetivos generales
+     ✓ Utilizar modelos de Machine Learning para resolver un problema de una industria o 
+      negocio
+    Objetivos específicos
+     ✓ Retomar el trabajo realizado en la segunda pre entrega, sumando el trabajo con 
+      Machine Learning 
+     ✓ Modelar la situación como un problema de Machine Learning 
+     ✓ Entrenar modelos de Machine Learning 
+     ✓ Realizar ingeniería de atributos y normalización/estandarización de variables
+     ✓ Seleccionar el modelo con mejor performance
+               ENTREGA DEL PROYECTO 
+               FINAL
+         Entrenamiento y optimización de 
+         modelos de Machine Learning
+         Requisitos base
+           ✓ Un Notebook (Colab o Jupyter) que debe contener:
+           1.  Abstracto con motivación y audiencia:  Descripción de alto nivel de lo que motiva a analizar los datos 
+               elegidos y audiencia que se podría beneficiar de este análisis.
+           2.  Preguntas/Problema que buscamos resolver: Si bien puede haber más de una problemática a resolver, la 
+               problemática principal debe encuadrarse como un problema de clasificación o regresión.
+           3.  Breve Análisis Exploratorio de Datos (EDA): Análisis descriptivo de los datos mediante visualizaciones y 
+               herramientas estadísticas, análisis de valores faltantes.
+           4.  Ingeniería de atributos: Creación de nuevas variables, transformación de variables existentes (i.e 
+               normalización de variables, encoding, etc.)
+           5.  Entrenamiento y Testeo: Entrenamiento y testeo de al menos 2 modelos distintos de Machine Learning 
+               utilizando algún método de validación cruzada.
+           6.  Optimización: Utilizar alguna técnica de optimización de hiperparámetros (e.g gridsearch, randomizedsearch, 
+               etc.)
+           7.  Selección de modelos: utilizar las métricas apropiadas para la selección del mejor modelo (e.g AUC, MSE, etc.)
+           ENTREGA DEL PROYECTO 
+           FINAL
+      Entrenamiento y optimización de 
+      modelos de Machine Learning
+      Piezas sugeridas
+       ✓ Librerías:
+      numpy - pandas - matplotlib - sklearn - xgboost - shap
+       ✓ Claridad de código:
+      Estructura - Markdown - Comentarios
+      Modelo de Proyecto final
+        ✓ Ensemble Models
+      Explicación del desafío
+        ✓ ¡Click aquí!
+    Para finalizar…
+    Llegar hasta aquí se traduce en esfuerzo, sudor, 
+    dedicación, trabajo, lágrimas, coraje y más, así que 
+    FELICITACIONES por haber dado el 100% de ti en 
+    toda la cursada.
+    Esto no termina acá porque recuerden que cuentan 
+    con 20 días corridos para la entrega del  
+    Proyecto Final, el cual estamos seguros de que 
+    quedará impecable.
+    Celebramos que ya estén coderizados y que vayan a 
+    donde vayan, ¡tendrán éxito! Que sigan alcanzando 
+    todo lo que se propongan ������

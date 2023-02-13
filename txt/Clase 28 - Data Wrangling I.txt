@@ -1,0 +1,317 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 28. DATA SCIENCE
+          Data Wrangling I
+      Temario
+                       27                      28                     29
+               Data Acquisition        Data Wrangling I      Data Wrangling II
+                        II
+                 ✓ Intro Github          ✓ Data Wrangling en     ✓ Etapas de Data 
+                                            proyectos DS           Wrangling
+                 ✓ Javascript Object 
+                    Notation             ✓ Etapas Data           ✓ Data Transformation
+                 ✓ Introducción APIs        Wrangling            ✓ Opciones de 
+                                         ✓ Combinar y              remoción de 
+                 ✓ Conexión a modelos       fusionar objetos       duplicados
+                    relacionales usando     con Pandas. Merge    ✓ Índices jerárquicos
+                    Pandas                  y Concat
+                                                                 ✓ Print, GropBy, Apply
+    Objetivos de la clase
+                 Establecer la relación entre Data Wrangling y 
+                 un proyecto de Ciencia de datos
+                 Analizar cada una de las etapas de Data 
+                 Wrangling
+                 Fusionar y concatenar DataFrames
+       MAPA DE CONCEPTOS            Data Wrangling 
+                                   en proyecto de DS
+                                    Etapas de Data 
+                        Parte I      Wrangling
+                                    Merge y Concat
+     Data Wrangling                   Data 
+                                    Transformation
+                                    Remoción de 
+                                     duplicados
+                        Parte II      Índices 
+                                     jerárquicos
+                                    Print, GroupBy, 
+                                      Apply
+      Cuestionario de tarea
+   ¿Te gustaría comprobar tus 
+   conocimientos de la clase anterior?
+   Te compartimos a través del chat de 
+   Zoom / chat de la plataforma el enlace a un 
+   breve cuestionario de Kahoot.
+   Duración: 10 minutos
+     Repaso de Data 
+       Acquisition
+      Para pensar
+   ¿Cómo accedemos a bases de datos usando 
+   Pandas?
+   ¿De qué depende el proceso de Data 
+   Acquisition en una empresa?
+                  Repaso Data 
+                   Acquisition
+       En clases pasadas hemos visto cómo 
+       acceder a diferentes fuentes de 
+       datos usando pandas
+       A partir de ejemplos logramos 
+       concluir que en algunas ocasiones el 
+       proceso de Data Acquisition no es 
+       simple, depende del grado de 
+       madurez y manejo de datos en las 
+       compañías
+       En esta clase nos enfocaremos en la 
+       preparación de datos o Data 
+       Wrangling. Empecemos ������
+    Data Wrangling en 
+    un proyecto de DS
+       Definición
+    Definición de Data Wrangling
+     La manipulación de datos es el proceso de limpieza 
+     y  unificación  de  conjuntos  de  datos  complejos  y 
+     desordenados  para  facilitar  el  acceso,    análisis  y 
+     modelado.  Este  proceso  generalmente  incluye 
+     convertir y mapear los datos crudos (raw data) y 
+     dejarlos  en  un  formato  más  adecuado  para  su 
+     uso. 
+    Ejemplos de Tareas Data 
+    Wrangling
+     ✔ Fusión  de  múltiples  fuentes  de  datos  en  un  único 
+       conjunto de datos para el análisis
+     ✔ Identificar lagunas en los datos (por ejemplo, celdas 
+       vacías  en  una  hoja  de  cálculo)  y  llenarlas  o 
+       eliminarlas
+     ✔ Eliminar  datos  que  son  innecesarios  o  irrelevantes 
+       para el proyecto en el que están trabajando
+     ✔ Identificar valores atípicos extremos en los datos y 
+       explicar las discrepancias o eliminarlas para que se 
+       pueda realizar el análisis
+    Proceso Data Wrangling
+     El Data Wrangling puede ser un proceso manual o 
+     automatizado.  En las organizaciones que emplean un 
+     equipo de datos completo, un científico de datos u otro 
+     miembro del equipo suele ser responsable de la disputa 
+     de datos. 
+     En organizaciones más pequeñas, los profesionales que 
+     no son de datos a menudo son responsables de limpiar 
+     sus datos antes de aprovecharlos.
+    Importancia del Data 
+       Wrangling
+    Importancia Data Wrangling
+     El Data Wrangling puede llevar mucho tiempo y 
+     agotar los recursos, especialmente cuando se 
+     realiza manualmente. Esta es la razón por la que 
+     muchas organizaciones instituyen políticas y 
+     mejores prácticas que ayudan a los empleados a 
+     optimizar el proceso de limpieza de datos.
+     Por esta razón, es vital comprender los pasos del 
+     proceso de Data Wrangling y los resultados 
+     negativos asociados con datos incorrectos o 
+     defectuosos. 
+    Importancia Data Wrangling
+     Cualquier análisis que realice una empresa estará 
+     limitado en última instancia por los datos que los 
+     informan. Si los datos son incompletos, poco 
+     confiables o defectuosos, los análisis también lo 
+     serán, disminuyendo el valor.
+     El Data Wrangling busca eliminar ese riesgo al 
+     garantizar que los datos estén en un estado 
+     confiable antes de que se analicen y aprovechen. 
+     Esto lo convierte en una parte crítica del proceso 
+     analítico.
+       Rol de Data 
+    Wrangling en Fases 
+      Proyecto DS
+      Fases iniciales de un 
+      proyecto DS
+           1                2               3                 4                5
+     Definición de     Contexto         Problema            Data       Exploratory Data 
+        objetivo       Comercial       Comercial         Acquisition    Analysis (EDA)
+      Fases finales de un 
+      proyecto DS
+          6               7               8                 9               10
+        Data        Selección del  Desarrollo del     Validación y    Conclusiones
+     Wrangling        algoritmo       algoritmo        despliegue
+     (Munging)        apropiado
+                             ~60% del tiempo de un Data Scientist 
+                             consiste en limpiar y manipular datos
+     Etapas del Data 
+       Wrangling
+    Etapas del Data Wrangling
+   Descubrimiento   Limpieza       Validación
+      1       2       3       4       5      6
+          Estructuración Enriquecimiento   Publicación
+                Exploremos un poco cada una de las etapas
+    Descubrimiento
+    Antes  de  empezar  cualquier  análisis,  es 
+    importante  comprender  los  datos,  la 
+    estructura, tipos y cantidad. También lo es 
+    conocer  por  qué  una  compañía  los  utiliza  y 
+    cómo.  Ésto  sirve  para  tomar  decisiones 
+    posteriores con un rumbo claro. 
+    Estructuración
+    La  idea  de  esta  etapa  es  estandarizar  el 
+    formato  de  los  datos.  Dependiendo  de  si 
+    hay  diversas  fuentes  u  orígenes,  los  datos 
+    estarán en diferentes formatos y estructuras. 
+    Limpieza
+    Debemos eliminar los datos que no brinden 
+    información  extra  como  los  duplicados, 
+    revisar datos faltantes, etc. Esta propiedad 
+    estandariza  el  formato  de  las  columnas 
+    (float, datatimes, etc).
+    Enriquecimiento
+     Esta  etapa  se  refiere  a  agregar  datos  extra 
+     (Fuentes  externas)  que  complementan  a  los 
+     que ya existen para agregar información extra 
+     al análisis.
+     En  algunos  casos  se  puede  crear 
+     variables resumen
+        Validación
+        Es   muy  importante  para  los  equipos, 
+        asegurarse que los datos son precisos  y que 
+        la información no se alteró durante el proceso. 
+        Esto   significa  asegurar  la  fiabilidad, 
+        credibilidad y calidad de los datos limpios 
+        debido  a  que  van  a  utilizarse  para  tomar 
+        decisiones. 
+    Publicación
+    Una  vez  que  los  datos  están  validados,  se 
+    pueden compartir para su uso, realizar análisis 
+    exploratorios,  entrenar  modelos  y  tomar 
+    decisiones.
+    Se entiende como un producto final que 
+    se entrega para ser usado
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+    Combinar y fusionar 
+    objetos con Pandas. 
+     Merge y Concat
+     Repaso de Pandas
+    Datos ausentes
+     ✔ Estos valores podrían no ser adecuados para 
+       algunos algoritmos de Data Science. Por ello, 
+       deben ser manejados correctamente.
+     ✔ Pandas nos provee de herramientas para trabajar 
+       con ellos.
+     ✔ Podemos utilizar las funciones isnull(), fillna() y 
+       dropna() a la hora de lidiar con datos de este tipo
+        Datos ausentes
+             Podemos marcarlos                   Numeros_nan.isnull()         ������
+             Podemos 
+             reemplazarlos                       Numeros_nan.fillna(0)         ������
+             Podemos eliminarlos                 Numeros_nan.dropna()           ������
+    Datos ausentes
+                                 La librería missingno es una gran 
+                                 alternativa a la hora de explorar 
+                                 datos faltantes en un dataframe
+                                 Blanco: Valores del faltante
+                                 Negro: Valores con dato
+    Funciones de agregación
+       Agregaciones: sum, max, min, std, 
+       var etc..
+       describe() e info() para describir el 
+       dataset de forma general
+       Funciones con str y Datetimes para 
+       mejorar formato de fecha y strings
+        Merge
+    Merge
+    pandas.merge():  Conecta filas de dos o más DataFrames basado en una o mas keys. Es 
+    similar al join en una query de sql.
+    Merge: 
+    Fusión de DataFrames
+    En el ejemplo, vemos 
+    dos tablas con una   Result = pd.merge(left, right, on="key")
+    misma key (llave 
+    primaria). 
+    Podemos unirlas por 
+    medio de: 
+     Merge: 
+     Fusión de DataFrames
+                    Caso no tan simple: Más de una llave primaria
+                   result = pd.merge(left, right, on=["key1", "key2"])
+      Concatenate
+       Concatenate
+      pandas.concat(): Concatena o apila dos o más dataframes a lo largo de un 
+      eje Ejemplo: 
+          Este caso es ordenado y simple 
+          porque las tablas tienen la            ������
+          mismas columnas
+       pd.concat(frame, axis=0) # 0 indica por filas, 1 por 
+       columna
+    Concatenate
+         Ejemplo: 
+         Axis = 0 es el  valor por default y significa que va a apilar las flas de los 
+         Dataframes.
+         La única columna que tienen en común es la D
+    Concatenate
+    Ejemplo: 
+    Axis = 1 significa que va a apilar las columnas de los DataFrames
+    Las filas que tiene que tienen índices en comun tienen valores en todas las columnas.
+      Ejemplo en vivo
+   Aprenderemos a utilizar la función 
+   concatenate y merge de Pandas con el fin 
+   de entender cómo concatenar Pandas 
+   Dataframes, utilizaremos los archivos 
+   llamados clase0.xslx y clase1.xslx dentro 
+   de la carpeta de clase.
+        Merge y Concat de 
+            DataFrames
+     Revisaremos cómo construir consultas equivalentes a 
+       las que hemos realizado en las clases de SQL 
+              utilizando Pandas
+             Duración: 15-20 mins
+      ACTIVIDAD EN CLASE
+    Merge y Concat de 
+    Dataframes
+    Utilizaremos los archivos planos llamados 
+    employees.csv, orders.csv y customers.csv en la 
+    carpeta de clase
+    1. Obtener un dataframe con el OrderID, 
+      LastName y FirstName con base en las 
+      tablas orders y employees. (Sugerencia: 
+      utilizar la función merge)
+    2. Obtener un dataframe con el 
+      CustomerName y el OrderID utilizando las 
+      tablas Customers y Orders
+       CLASE N°28
+       Glosario
+       Data Wrangling: proceso de convertir y     Merge: función disponible en pandas que 
+       mapear los datos crudos (raw data) y       nos permite combinar Dataframes con base 
+       dejarlos en un formato más adecuado        a columnas que comparten de diversas 
+       para su uso. Usualmente toma bastante      maneras: full join, inner join, left join y right 
+       tiempo (60% en promedio del tiempo de      join
+       un DS).
+                                                  Concatenate: función disponible en 
+       Etapas de Data Wrangling: son 6 fases      pandas que nos permite apilar DataFrames 
+       que describen el proceso de                por columnas o filas con el fin de generar 
+       estructuración de un dataset:              una sola estructura general. La opción 
+       descubrimiento, estructuración, limpieza,  axis=0 permite concatenar por filas y 
+       enriquecimiento, validación y publicación. axis=1 por columnas. 
+      ¿Preguntas?
+     ¿Aún quieres conocer 
+          más?
+     Te recomendamos el 
+      siguiente material
+         MATERIAL AMPLIADO
+     Recursos multimedia
+          Porque Data Cleaning es necesario?
+           ✓ Why is “Data cleaning” necessary | Medium | 
+             Why DATA CLEANING
+          Missingno library
+           ✓ Missing data visualization module for Python | Github | 
+             Missingno
+      Disponible en nuestro repositorio.
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.
+                   Resumen 
+               de la clase hoy
+              ✓ Data Wrangling en un proyecto de DS
+              ✓ Etapas de Data Wrangling
+              ✓ Combinar y fusionar objetos con Pandas. Merge y 
+                Concat

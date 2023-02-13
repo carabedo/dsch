@@ -1,0 +1,307 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 43. DATA SCIENCE
+             Algoritmos de 
+             Agrupación I
+         Temario
+                                42                               43                               44
+                        Algoritmos de                    Algoritmos de                     Algoritmos de 
+                        clasificación y                   Agrupación I                      Agrupación II
+                           Regresión
+                      ✓ SVM
+                                                                                          ✓ PCA
+                      ✓ Ejemplos clasificación            ✓ K means
+                          errónea                                                         ✓ Reducción de 
+                      ✓ Regresión Lineal y                ✓ DBSCAN                             dimensionalida
+                          Múltiple                                                             d
+                      ✓ Optimización Hiper                                                ✓ Detección de 
+                          parámetros                                                           Outliers
+    Objetivos de la clase
+                 Profundizar en el Aprendizaje No Supervisado 
+                 Identificar conceptos de aplicación de los 
+                 modelos de Clustering
+          MAPA DE CONCEPTOS
+                                                           K Means
+                                                           DBSCAN        Clase 
+                                                                         43
+                                                          HDBSCAN
+             Algoritmos de                                Reducción de 
+              Agrupación                                 dimensionalidad
+                                                             PCA
+                                                          Detección de 
+                                                           outliers
+            Repaso
+                     Les proponemos tomarse unos minutos 
+                     para realizar un repaso de los conceptos 
+                      aprendidos en Kahoot, ¿están listos?
+                          Profe, puedes compartir el 
+                           PIN o link de acceso al 
+                                juego
+       K means
+       Para pensar
+   Recuerdan ¿Cuál era la utilidad del algoritmo K 
+   means?. ¿En qué contextos se podía aplicar y con 
+   qué fin? ¿Hacía parte del aprendizaje 
+   Supervisado o No supervisado?
+   Contesta en el chat de Zoom 
+       Definición
+   K means
+    K-means es un algoritmo de aprendizaje 
+     no supervisado que se utiliza para 
+     resolver problemas de agrupamiento. 
+      Sigue un procedimiento simple de 
+    clasificar un conjunto de datos dado en 
+     una serie de grupos, definidos por la 
+     letra "k", que se fija de antemano por 
+       medio de un proceso iterativo
+   ¿Para qué sirve?
+    El objetivo de este algoritmo es 
+    encontrar grupos en los datos, con 
+    el número de grupos representados 
+    por la variable K. 
+    El algoritmo funciona de manera 
+    iterativa para asignar cada punto de 
+    datos a uno de los grupos K en función 
+    de las características que se 
+    proporcionan. 
+    ¿Cómo se agrupa?
+    Los puntos de datos se agrupan en 
+    función de la similitud de las 
+    características. Los resultados de K 
+    Means son:
+     ● Los  centroides  de  los  clústeres  K,  que 
+       pueden  ser  usados  para  etiquetar 
+       nuevos datos.
+     ● Etiquetas para los datos de  formación, 
+       cada  punto  de  datos  se  asigna  a  un 
+       único clúster.
+     Ejemplo aplicado
+    K means
+    Los datos reales pueden venir en 
+    diferentes formatos y formas y 
+    muchas veces interesa generar 
+    grupos automáticamente 
+    K means
+                                 Paso 1: Seleccionar el 
+                                 número de clusters que se 
+                                 quieren obtener (k=3)
+                                 Paso 2: Seleccionar 
+                                 aleatoriamente 3 diferentes 
+                                 puntos 
+                                  Paso 3: Medir la distancia 
+                                  entre el primer punto y los 3 
+                                  centroides
+    K means
+                               Paso 4: Asignar el cluster al 
+                               grupo más cercano
+                               Paso 5: Repetimos el mismo 
+                               proceso para los demás valores
+                               Paso 6: Calcular la media de 
+                               cada cluster
+    K means
+                                 Paso 7: Repetir el mismo 
+                                 proceso de cálculo de distancias 
+                                 y asignación
+                                 Paso 8: Se puede revisar que 
+                                 tan bien quedo el algoritmo con 
+                                 lo que se conoce como la 
+                                 Variación total de clusters 
+                                 De lo anterior se puede 
+                                 deducir que la elección inicial 
+                                 de los centroides es 
+                                 importante
+    K means
+                                  Paso 9: La selección de 
+                                  puntos se puede cambiar 
+                                  Paso 10: El proceso se 
+                                  repite iterativamente varias 
+                                  veces hasta lograr 
+                                  convergencia 
+    K means
+           Si repetimos el proceso podemos identificar cuál 
+           metodología funciona mejor (Esto puede ser mucho 
+           mayor que 3 veces)
+     K means - Selección valor óptimo 
+     K                                k=1
+                                      k=2   El objetivo es ir iterando el valor 
+                                            de K de tal manera que se 
+                                            identifique el valor de K que 
+                                            minimice la variación total
+                                      k=3
+    K means - Selección valor óptimo 
+    K
+                               Cada vez que se agrega un cluster 
+                               la variación total se hace menor 
+                               hasta el punto que tendremos un 
+                               grupo para cada individuo y no 
+                               habrá variation total
+           Elbow Method (Método del 
+           Codo)
+      Ejemplo en vivo
+   Dentro de la carpeta de clase exploraremos 
+   el notebooks “K - Means - CoderHouse 
+   (Ejemplo 1).ipynb” con el fin de 
+   comprender el funcionamiento del 
+   algoritmo K means
+         DBSCAN
+       Para pensar
+   ¿Alguna vez han escuchado de algoritmos de 
+   agrupación basados en Densidad de puntos? 
+   ¿Conocen el algoritmo DBSCAN y HDBSCAN?
+   Contesta en el chat de Zoom 
+     Problemas del K 
+        means
+   ¿Para qué sirve?
+                Puede pasar a veces que si no se 
+                escalan/normalizan los datos, no anda nada 
+                bien porque asume que los datos son 
+                “esféricos”.
+                Como solución se suele utilizar algoritmos de 
+                clustering basado en densidades, como el 
+                HDBSCAN o el DBSCAN
+       Definición
+   DBSCAN
+    DBSCAN  significa  Density  Based 
+    Spatial Clustering of Application with 
+    Noise
+    Fue propuesta por Martín Ester et al. 
+    en 1996. DBSCAN es un algoritmo de 
+    agrupamiento basado en la densidad 
+    que  funciona  asumiendo  que  los 
+    agrupamientos  son  regiones  densas 
+    en el espacio separadas por regiones 
+    de menor densidad.
+     Funcionamiento
+    Cómo funciona el DBSCAN
+    Separa los clusters de alta densidad de 
+    los de baja densidad
+    Input: Puntos, min_pts, eps
+    Output: Clusters con densidad 
+    Cada punto es:
+    Core point:  tiene al menos min_pts en 
+    su vecindario
+    Border point: no es core pero tiene 
+    al menos 1 core point en su vecin-
+    dario
+    Noise point: No es core o border
+   Ventajas/Desventajas DBSCAN
+    Ventajas
+    1. No necesita número de clusters 
+    2. Clustering en diferentes formas 
+    3. Elimina puntos de ruido
+    Desventajas
+    4. Sensible a los parámetros (si el
+      min_pts es pequeño problemas)
+    5. Produce malos resultados 
+      cuando hay mucho ruido.
+    eps (valor crítico para considerar 
+    dos puntos como vecinos)
+        HDBSCAN
+   HDBSCAN
+       Es un algoritmo de clustering o 
+    agrupamiento basado en la densidad que 
+      puede ser utilizado para identificar 
+     clústeres de cualquier forma en un 
+    conjunto de datos que contiene ruido y 
+    valores atípicos. La idea básica detrás del 
+     enfoque de agrupamiento basado en la 
+    densidad se deriva de un método intuitivo de 
+         agrupamiento humano. 
+       HDBSCAN
+        HDBSCAN= High DBSCAN
+         -    Se enfoca mucho más en las altas 
+              densidades
+         -    Reduce la velocidad de clustering 
+              en comparación con otros métodos
+         -    Tiene un parámetro adicional 
+              min_cluster_size que define que tan 
+              grande debe ser un cluster para ser 
+              formado.
+   HDBSCAN en acción
+    Por ejemplo, al mirar la figura de la 
+    derecha, uno puede identificar 
+    fácilmente tres grupos junto con 
+    varios puntos de ruido, debido a las 
+    diferencias en la densidad de puntos.
+                Importante
+                          Por lo tanto, los clústeres son 
+                          regiones densas en el espacio 
+                          de datos, separadas por 
+                          regiones de menor densidad 
+                          de puntos. El algoritmo 
+                          HDBSCAN se basa en esta 
+                          noción intuitiva de 
+                          clústeres y ruido. 
+        K Means vs 
+      DBSCAN/HDBCAN
+        K means vs DBSCAN/HDBSCAN
+                              K-Means                                    DBSCAN/HDBSCAN
+             La agrupación del K means es sensible a la       No es necesario especificar el número de 
+                 cantidad de agrupaciones definidas                        conglomerados
+            Su agrupación en Clústeres no funciona bien        Su agrupación en Clústeres maneja de 
+            con valores atípicos y conjuntos de datos con      manera eficiente los outliers y los datos 
+                                ruido                                         ruidosos
+             Las densidades variables de los puntos de          La agrupación basada en clústeres no 
+               datos no afectan el algoritmo K means        funciona muy bien para conjuntos dispersos o 
+                                                                 para puntos con densidad variable
+             La agrupación en clústeres de K-means es          No puede manejar de manera eficiente 
+              más eficiente para grandes conjuntos de          conjuntos de datos con alta dimensión
+                               datps
+      Ejemplo en vivo
+   Dentro de la carpeta de clase exploraremos 
+   el notebooks “HDBSCAN - CoderHouse 
+   (Ejemplo 2).ipynb” con el fin de 
+   comprender el funcionamiento del 
+   algoritmo HDBSCAN
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+   Elaborando un algoritmo de 
+            agrupación
+      Utilizaremos lo aprendido en clase para crear un 
+             modelo de agrupación
+             Duración: 20-30 mins
+              ACTIVIDAD EN CLASE
+        Elaborando un 
+        algoritmo de 
+         En esta oportunidad nos reuniremos en grupos de máximo 4 
+        agrupación
+         personas.
+           1.  Elegir 4 variables independientes que consideren útiles 
+               para predecir los “costos” de nuevos clientes
+           2.  Realizar el Encoding de las variables independientes (una 
+               persona hace el código y comparte, los demás ayudan 
+               dando instrucciones, etc) para generar matriz para el 
+               modelo
+           3.  Generar una predicción de clusters sobre el dataset y 
+               agregar esta predicción como la variable cluster
+           4.  Agregar la variable costos al dataset de entrenamiento y 
+               describir los clusters (pensar en cómo). 
+               Ayuda: Pueden agrupar por cluster y utilizar funciones de 
+               agregación como la media
+      ¿Preguntas?
+       CLASE N°43
+       Glosario
+       K means: algoritmo de aprendizaje no             HDBSCAN: algoritmo de clustering o 
+       supervisado que se utiliza para resolver         agrupamiento basado en la densidad 
+       problemas de agrupamiento por medio de           que puede ser utilizado para identificar 
+       una serie de grupos, definidos por la letra      clústeres de cualquier forma en un 
+       "k", que se fija de antemano por medio de        conjunto de datos que contiene ruido 
+       un proceso iterativo                             y valores atípicos. La idea básica detrás 
+                                                        del enfoque de agrupamiento basado en la 
+       DBSCAN: algoritmo de agrupamiento                densidad se deriva de un método intuitivo 
+       basado en la densidad que funciona               de agrupamiento humano. 
+       asumiendo que los agrupamientos son 
+       regiones densas en el espacio separadas 
+       por regiones de menor densidad.
+      Opina y valora 
+       esta clase
+                         Resumen 
+                   de la clase hoy
+                   ✓ K means
+                   ✓ DBSCAN
+                   ✓ HDBSCAN
+        Muchas 
+        gracias.

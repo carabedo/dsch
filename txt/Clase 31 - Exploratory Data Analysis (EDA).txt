@@ -1,0 +1,319 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 31. DATA SCIENCE
+          Exploratory Data 
+               Analysis
+         Temario
+                                  30                                 31                                 32
+                           Workshop:                     Exploratory Data                    Introducción a la 
+                          Limpieza de                      Analysis (EDA)                     visualización de 
+                               datos                                                                  datos
+                         ✓ Repaso Data                                                         ✓ Historia de las 
+                             Wrangling + tips de           ✓ Análisis estadístico                   visualizaciones
+                             buenas prácticas
+                                                           ✓ Identificación de                 ✓ Principios 
+                         ✓ Recomendaciones                                                          generales del 
+                             para Data Wrangling                outliers                            diseño analitico
+                         ✓ ¿Cómo hacer una                 ✓ Valores perdidos                  ✓ Gestalt
+                             revisión de pares y 
+                             dar feedback?                                                     ✓ Visualizaciones 
+                                                                                                    engañosas
+    Objetivos de la clase
+                 Identificar utilidades del EDA
+                 Realizar un EDA en Python
+  
+         MAPA DE CONCEPTOS
+                                     Análisis 
+                                    estadístico
+                                    Análisis 
+         Correlaciones y        Exploratorio de             Identificación 
+           variables                                          outliers
+                                 Datos (EDA)
+                                      Valores 
+                                     perdidos
+    Análisis estadístico
+       Definición
+    ¿Qué es un EDA?
+     El Análisis Exploratorio de Datos o  
+     Exploratory Data Analysis, tiene como 
+     finalidad examinar los datos previamente a 
+     la aplicación de cualquier técnica 
+     estadística. De esta forma el Científico de 
+     Datos, consigue un entendimiento básico de 
+     sus datos y de las relaciones existentes 
+     entre las variables analizadas.
+    ¿Qué hace el EDA?
+     El  EDA,  proporciona  métodos  sencillos 
+     para  organizar  y  preparar  los  datos, 
+     detectar fallos en el diseño y recogida de 
+     datos, tratamiento y evaluación de datos 
+     ausentes, identificación de casos atípicos 
+     y mucho más.
+        Para pensar
+   Resulta importante destacar, que el examen previo de los 
+   datos es un paso necesario, que lleva tiempo, y que 
+   habitualmente se descuida por parte de los analistas de datos. 
+   Las tareas implícitas en dicho examen pueden parecer 
+   insignificantes y sin consecuencias a primera vista… pero, 
+   ¿son una parte esencial de cualquier análisis 
+   estadístico? 
+   Responder en el chat de Zoom 
+        Para pensar
+   La respuesta es: sí lo son.
+   Un examen previo de los datos y la metadata disponible 
+   permite tener más claro el panorama de los datos, escalas de 
+   medición, variables involucradas, tipos de datos y restricciones 
+   que indudablemente afectan los análisis posteriores
+   Responder en el chat de Zoom 
+    Utilidades del EDA
+     Algunas de las preguntas que podemos responder 
+     gracias a realizar un EDA, son las siguientes:  
+     ✔ ¿Existe algún sesgo en los datos recogidos?
+     ✔  ¿Hay errores en la codificación de los datos?
+     ✔  ¿Cómo se sintetiza y presenta la información 
+       contenida en un conjunto de datos?
+     ✔  ¿Existen datos atípicos (outliers)? ¿Cuáles 
+       son? ¿Cómo tratarlos?
+     ✔  ¿Hay datos ausentes (missing)? ¿Tienen 
+       algún patrón sistemático? ¿Cómo tratarlos?
+     Etapas del EDA
+        Etapas del EDA
+          1                  2                 3                   4                  5                6
+      Preparar los      Realizar un         Analizar           Evaluar si         Identificar      Establecer 
+       datos para         examen          correlacion            fuera              posibles         si fuera 
+        hacerlos       gráfico de las       es entre           necesario             casos         necesario el 
+      accesibles a      naturaleza de      variables y         supuestos            atípicos         impacto 
+        cualquier       las variables     dependencia         distribucion        (outliers) y    potencial que 
+         técnica      individuales y un        s                 ales y            determinar     pueden tener 
+       estadística        análisis                             asimetría            impacto         los datos 
+                        estadístico                                                 potencial       ausentes
+     Preparación de 
+        datos
+    1) Preparación de datos
+     Como bien comentamos, el primer 
+     paso de un EDA es hacer accesible 
+     los datos a cualquier técnica 
+     estadística. Para ello, tendremos 
+     que realizar un input de los datos, 
+     los cuales recordemos pueden 
+     provenir de diferentes orígenes 
+     como ser por ejemplo: Excel, csv, 
+     Bases de Datos, etc. 
+    1) Preparación de datos
+    Luego tendremos que elegir el software de analítica de datos 
+    que utilizaremos para la manipulación y el procesamiento del 
+    dataset. En nuestro caso utilizaremos Python.
+    1) Preparación de datos
+      La gran mayoría de los softwares orientados al análisis de datos, permiten realizar 
+      manipulaciones de los datos previas a un análisis de los mismos. Algunas 
+      operaciones útiles para realizar son las siguientes:
+       ✔ Combinar conjuntos de datos de dos o más archivos distintos.
+       ✔ Seleccionar subconjuntos de los datos.
+       ✔ Dividir el archivo de los datos en varias partes.
+       ✔ Transformar variables.
+    1) Preparación de datos
+        ✔ Filtrar y ordenar el dataset.
+        ✔ Agregar nuevos datos y/o variables.
+        ✔ Eliminar datos y/o variables.
+        ✔ Guardar datos y/o resultados.
+    Examen gráfico de 
+       los datos
+    2) Examen gráfico 
+    de los datos
+    Una vez organizados los datos, el segundo paso 
+    dentro de un EDA consiste en realizar un 
+    análisis estadístico gráfico y numérico de las 
+    variables del dataset, con el fin de tener una 
+    idea inicial de la información que se encuentra 
+    contenida en el conjunto de datos, así como 
+    detectar también en el caso de que existan 
+    posibles errores de codificación. 
+    2) Examen gráfico 
+    de los datos
+    Es importante entender que el tipo de análisis 
+    que deberemos realizar va a depender de la 
+    escala de medida de la variable analizada.
+    Recordemos que tenemos variables numéricas 
+    (Discretas y continuas) y categóricas (Nominal 
+    u ordinal). Cada una de estas variables requiere 
+    métodos característicos para el analisis.
+     Correlaciones y 
+       variables
+    3) Correlaciones
+     y dependencia
+     La correlación estadística simplemente es una medida de 
+     dependencia lineal entre dos variables. Por ende NO es 
+     correcto asociar una alta correlación con el concepto de 
+     causalidad
+     La causalidad es uno de los fenómenos más difíciles de 
+     explicar ya que requiere de reglas de asociación que funcionen 
+     de manera generalizada sin importar el contexto, por esto 
+     siempre hay que tener cuidado a la  hora de establecer 
+     conclusiones respecto a las correlaciones que se obtienen.
+    3) Correlaciones
+     y dependencia
+    La  correlación  es  la  covarianza  pero  dividida  por  los  desvíos 
+    estándares  de  las  dos  variables.  Presenta  la  siguiente  fórmula 
+    matemática: 
+    3) Correlaciones
+     y dependencia
+    La correlación siempre va a darnos un número 
+    entre -1 y 1
+    ✔ Mientras más cercanos del valor 1, más fuerte 
+      es la relación lineal directa entre las variables. 
+    ✔ Mientras más cercanos del valor -1, más fuerte 
+      es la relación lineal inversa entre las variables.
+    ✔ Si  nos  da  0  entonces  no  hay  relación  lineal 
+      entre las variables.
+     3) Correlaciones
+      y dependencia
+     En lo que respecta a la fuerza de la correlación, hablamos siempre 
+     de una correlación: 
+          
+          
+             Nula                Débil              Fuerte
+    3) Correlaciones
+     y dependencia
+    También  es  importante  tener  en  cuenta  2 
+    aspectos relevantes de destacar:
+    1. La ausencia de correlación significa 
+      que no hay una relación lineal, pero 
+      no que no hay relación.
+    2. Correlación no es, ni implica, 
+      causalidad. 
+  3) Correlaciones
+   y dependencia
+  3) Correlaciones
+   y dependencia
+    3) Correlaciones
+     y dependencia
+    La variable dependiente es aquella cuyo valor depende del valor numérico que adopta 
+    la variable independiente dentro en la función matemática. 
+     Distribución de 
+       variables
+        4) Supuestos 
+        distribucionales
+       En  este  paso  resulta  importante  estudiar  por 
+       ejemplo,  las  “Medidas  de  Forma”  dentro  del 
+       ámbito de la Estadística.
+       Pero  ¿Qué  son  las  medidas  de  forma?  Son 
+       aquellas  que  estudian  las  características  de  la 
+       distribución     de    probabilidades     observada. 
+       Podemos destacar: 
+        ✔ Asimetría.
+        ✔ Curtosis.
+    4) Asimetría
+    Una variable es simétrica, si los valores que equidistan de la 
+    media son iguales. Para una mayor comprensión observemos la 
+    siguiente imagen:
+    4) Curtosis
+    La curtosis mide el grado de apuntamiento o achatamiento de la distribución de frecuencia. Es 
+    decir, nos ayuda a entender “cuán empinada está la curva”. Adicionalmente, existen diferentes 
+    tipos de curtosis: 
+                  ¡Lanzamos la
+                  Bolsa de 
+                  Empleos!
+                 Un espacio para seguir potenciando tu carrera y 
+                 que tengas más oportunidades de inserción 
+                 laboral.
+                 Podrás encontrar la Bolsa de Empleos en el menú 
+                 izquierdo de la plataforma.
+                 Te invitamos a conocerla y ¡postularte a tu futuro 
+                 trabajo!
+                   Conócela
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+     Identificación de 
+        outliers
+    5) Identificación de outliers
+    Como  ya  hemos  estudiado  en  otras  unidades  del  curso, 
+    tenemos que prestar especial atención a los outliers, dado que 
+    pueden tener un potencial negativo dentro de nuestro EDA. 
+    5) Identificación de outliers
+    También, es muy importante aclarar que no debemos eliminar los outliers por 
+    el  sólo  hecho  de  serlo.  A  menos  que  estemos  100%  seguros  que  ese  valor 
+    extremo se debe a un error de registro, una falla en el instrumento de medición o 
+    algún problema externo que sea verificable
+      Actividad colaborativa
+   Checkpoint proyectos finales II
+   Formaremos grupos de 4-5 personas en break-out Rooms y 
+   analizaremos el siguiente proyecto disponible EDA, 
+   verificaremos si la estructura planteada es consecuente 
+   con los resultados obtenidos, además identificaremos 
+   fortalezas y debilidades en las fases de limpieza , 
+   transformación y análisis descriptivo de los datos
+   Posteriormente resolveremos dudas acerca del proyecto 
+   final.
+   Duración: 30 minutos
+     Valores perdidos
+    6) Impacto de datos 
+    ausentes
+    Una  situación  a  la  que  se  enfrenta 
+    frecuentemente cualquier científico de datos 
+    es  el  tratamiento  de  los  valores  perdidos. 
+    Los valores faltantes son aquellos que para 
+    una  variable  determinada  no  constan  en 
+    algunas filas o patrones.
+      ¿Por qué se pierden?
+       Los  3  motivos  principales  por  los  que  se 
+       suelen tratar los valores perdidos son:
+        ✔ Pueden     introducir  un    sesgo 
+          considerable  (una  diferencia  notable 
+          entre  los  datos  observados  y  los  no 
+          observados).
+        ✔ Hacen el análisis y el manejo de los 
+          datos más complicado.
+        ✔ Generalmente  ocasionan  pérdidas  de 
+          información.
+    ¿Qué hacer con ellos?
+     Existen  multitud  de  procedimientos  para  aplicar 
+     cuando  tenemos  valores  perdidos.  Aunque 
+     básicamente existen dos aproximaciones posibles:
+     ✔ Eliminar muestras o variables que tienen datos 
+       faltantes (Riesgoso).
+     ✔ Imputar  los  valores  perdidos,  es  decir, 
+       sustituirlos por estimaciones.
+       Para pensar
+   ¿Qué técnicas han utilizado para la 
+   manipulación de datos ausentes y outliers? 
+   ¿Siempre se tiene la misma estrategia para 
+   manipularlos?
+   Responder en el Chat de Zoom
+      Actividad colaborativa
+   Exploración dataset GDP per capita
+   Formaremos grupos de 4-5 personas en break-out Rooms y 
+   utilizaremos el dataset en el siguiente enlace Stocks y 
+   analizaremos los siguientes puntos:
+   ✔ Analizar las correlaciones de las acciones
+   ✔ Analizar si hay valores faltantes
+   ✔ Analizar la presencia de outliers 
+   Duración: 15-20 minutos
+       CLASE N°31
+       Glosario
+       EDA: procedimiento que nos permite              Correlación: medida que permite 
+       entender y examinar de manera básica un         cuantificar la dependencia entre dos 
+       conjunto de datos con el objetivo de            variables, puede ser de Pearson (Intervalo-
+       comprender mejor las relaciones                 Intervalo), Spearman (Ordinal-Ordinal), 
+       existentes                                      Kendall (Nominal-Nominal). La correlación 
+                                                       no implica dependencia.
+       Etapas del EDA: conjunto de pasos para          Outliers: son valores dentro de un 
+       llevar a cabo la exploración de unos datos      conjunto de datos que varían mucho de los 
+       (preparación, examen gráfico,                   demás; son mucho más grandes o 
+       correlaciones, evaluación de                    significativamente más pequeños. Los 
+       distribuciones, asimetría, valores atípicos     valores atípicos pueden indicar 
+       e impacto de ausentes)                          variabilidades en una medición, errores 
+                                                       experimentales o una novedad.
+      ¿Preguntas?
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.
+                   Resumen 
+               de la clase hoy
+              ✓ Análisis estadístico
+              ✓ Correlaciones y variables
+              ✓ Identificación de outliers
+              ✓ Valores perdidos

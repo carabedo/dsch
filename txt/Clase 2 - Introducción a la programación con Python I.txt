@@ -1,0 +1,519 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 02. DATA SCIENCE
+          Introducción a la 
+         programación con 
+               Python I
+       Temario
+                          01                         02                        03
+                 La necesidad de             Introducción a            Introducción a 
+                  Información en                     la                        la 
+                  la Industria 4.0           programación               programación 
+                  ✓ Industria 4.0                                        con Python 
+                                               con Python               ✓ Estructura de 
+                                                                           (Parte II)
+                  ✓ Transformación digital       (Parte I)                  control
+                                              ✓ Definición de 
+                  ✓  Ciclo de vida de un          programa              ✓ Funciones
+                     proyecto de ciencia de   ✓ Instalación de 
+                     datos                        Python                ✓ Datos
+                  ✓  Valor y retorno de la                              ✓ IPython
+                     Ciencia de Datos         ✓ Nociones 
+                  ✓ Estrategia data-driven        básicas               ✓ Instalación
+    Objetivos de la clase
+                 Realizar una primera aproximación al lenguaje 
+                 de programación Python.
+                 Conocer las distintas formas de desarrollo con 
+                 Python.
+        MAPA DE CONCEPTOS
+                              Programación y 
+       Toma de                lenguajes
+       contacto con                               Python como 
+       Python                                     lenguaje
+                              Interpretado vs 
+                              Compilado           Basics: Variables, 
+                                                  asignación, 
+                                                  operaciones
+                              Python tradicional
+       Formas de                                  Estructuras
+       desarrollo con 
+       Python
+                              IPython y notebooks
+                                                  Funciones
+                                                  Tipos de datos
+      Cuestionario de tarea
+   ¿Te gustaría comprobar tus 
+   conocimientos de la clase anterior?
+   Te compartimos a través del chat de 
+   Zoom / chat de la plataforma el enlace a un 
+   breve cuestionario de Kahoot.
+   Duración: 10 minutos
+    Librería Pandas
+    Estructuras fundamentales series
+         y Data Frames
+   Indexamiento de series y Data Frames
+   Datos nulos 
+   También aprendimos a leer archivos planos (.txt, .csv, .xlsx) locales o por APIs en Python.
+      Definición de
+       programa
+    Desde el principio: 
+     programación y 
+        Python
+    ¿Qué es la programación?
+     ✔ La programación es una forma de 
+       ejecutar un algoritmo.
+     ✔ Un algoritmo es una secuencia de 
+       pasos que lleva a un resultado.
+     ✔ Una receta es un algoritmo.
+     ✔ Si se sigue el algoritmo, se llega al 
+       resultado.
+      Programa y computadora
+        ✔ La computadora nació para 
+           resolver cálculos.                           ✔ La computadora entiende 
+        ✔ La programación es un                            ceros y unos (lenguaje 
+           complemento para la                             binario), nosotros no.
+           computadora.                                 ✔ Por lo tanto, un programa 
+        ✔ Es una forma de que la computadora               traduce un lenguaje 
+           entienda el funcionamiento de                   humano a lenguaje 
+           un algoritmo y lo ejecute.                      binario.
+      Programación y lenguajes
+        ✔ No existe un solo lenguaje que               ✔ Para Data Science, existen 
+           solucione todos los problemas                  algunos lenguajes que 
+        ✔ Cada lenguaje resuelve un                       funcionan muy bien: 
+           conjunto de problemas posibles:                Python, R, Julia y Scala 
+           Empresariales, Web, Ciencia, Salud,            son algunos de ellos.\
+           etc.
+                 Python              R                 Julia          Scala
+       Lenguaje 
+     interpretado vs. 
+       compilado
+       ¿Interpretado o Compilado?
+                                                        ✔ Usa un programa intérprete que 
+                                                           traduce en tiempo casi real nuestras 
+       Python es un lenguaje interpretado,                 órdenes a binario.
+       esto quiere decir que:
+                                                        ✔ La traducción se hace línea por 
+                                                           línea.
+                                                        ✔ Podemos probar código “de a 
+                                                           pedacitos”.
+                                                        ✔ El lenguaje compilado se traduce 
+                                                           todo junto al final.
+                                                        ✔ No es simplemente una mejora, es 
+                                                           una forma de trabajar muy útil para 
+                                                           Data Science.
+      Python como 
+       lenguaje
+      PARA RECORDAR
+   Contenido destacado
+   Python es el lenguaje más solicitado en las 
+   búsquedas laborales relacionadas con Data Science 
+   y se ubica entre el segundo y tercer puesto en 
+   2021 de acuerdo a varios rankings de lenguajes de 
+   desarrollo general (no sólo Data Science).
+       PARA RECORDAR
+    En otras palabras, Python no puede faltar 
+    en un portfolio de Data Science.
+      Python en 
+      pocas palabras
+      Lenguaje Open Source: un código abierto y                         REEMPLAZAR 
+      accesible diseñado para que cualquier pueden ver,                 POR IMAGEN
+      modificar y distribuirlo.
+      Creado por Guido Van Rosssum y su primera 
+      versión se dio en 1991 en el CWI (Centrum 
+      Wiskunde Informática)
+        Python, Open Source: 
+        componentes
+                            1                            2                           3
+                      Intérprete                        IDE                     Paquetes
+                        programa                    entorno de                 conjuntos de 
+                        intérprete,              desarrollo, lugar             funciones pre-
+                        traductor a                    donde                   armadas para 
+                          binario.                 escribiremos                  problemas 
+                                                      código.                   habituales.
+      Instalación de 
+       Python vía 
+       miniconda
+     Python tradicional
+    Anaconda y 
+    Miniconda
+    Tradicionalmente, Python puede 
+    desarrollarse en Anaconda, o en su 
+    versión simplificada, Miniconda.
+    A su vez, puede utilizarse de 
+    varias formas más:
+       Formas
+       La forma más básica es escribiendo            Otra forma más útil es usando Python 
+       python en la terminal, lo que abre un         interactivo (IPython). Puede accederse 
+       entorno de trabajo dentro de la misma         escribiendo ipython en la terminal.
+       terminal.
+                                                      ������ No aporta muchas mejoras si se usa de 
+        ������ No es la forma más cómoda, ni la más      esa forma.
+       utilizada.
+                                                     ¡No siempre es la mejor forma! 
+     Jupyter notebooks
+       IPython y notebooks
+                                                       ✔ Escribimos código en el navegador 
+       Las notebooks siguen siendo IPython,               que resulta ser el IDE.
+       pero con vitaminas ������                           ✔ El código pasa por el mismo 
+                                                          intérprete que es el que usa la 
+                                                          terminal, pero todo se trabaja en el 
+                                                          navegador.
+                                                       ✔ El código se escribe en cajas de 
+                                                          texto que pueden ejecutarse de a 
+                                                          una o todas juntas.
+                                                       ✔ El conjunto total de cajas de texto es 
+                                                          una notebook.
+                                                     ������ Esta configuración es de las más 
+                                                     utilizadas para Data Science.
+    IPython y notebooks
+    Podemos encontrar 4 partes principales:
+     1. Nombre del notebook (termina con 
+       extensión .ipynb)
+     2. Barra de menú: Permite ejecutar 
+       código y opciones genéricas 
+     3. Toolbar: Permite ejecutar celdas de 
+       código, guardar, añadir, borrar, 
+       cortar o pegarlas
+     4. Celdas de Código: Pueden ser 
+       Markdown (texto) o Código Python
+    ¿Cómo usar Google 
+        Collab?
+       Google Colab
+       Permite trabajar en un entorno no local y         ✔ Es un producto de Google Research. 
+       la creación de Notebooks ������                          Está especialmente adecuado para 
+                                                            tareas de aprendizaje automático, 
+                                                            análisis de datos y educación.
+                                                         ✔ Jupyter es el proyecto de código 
+                                                            abierto en el que se basa Colab.
+                                                         ✔ Nos permite compartir notebooks sin 
+                                                            la necesidad de descargar ningún 
+                                                            software extra.
+                                                         ✔ El código se ejecuta en una máquina 
+                                                            virtual dedicada a tu cuenta y 
+                                                            pueden eliminarse luego de cierto 
+                                                            tiempo.
+      Ejemplo en vivo
+   ¿Cómo podemos usar Google Colab como 
+   un entorno para programar lenguaje de 
+   Python?
+   ¡Vamos a verlo conjuntamente!
+       Cómo usar Google Colab
+       Si queremos crear un modelo de              Google Colaboratory es un entorno de 
+       aprendizaje automático, pero no tienen      portátil Jupyter, gratuito proporcionado 
+       una computadora que pueda asumir la         por Google donde puede usar GPU y TPU 
+       carga de trabajo, Google Colab es la        gratuitas que pueden resolver todos estos 
+       plataforma ideal.                           problemas.
+       Incluso si tiene una GPU o una buena 
+       computadora, crear un entorno local con 
+       anaconda e instalar paquetes y resolver 
+       problemas de instalación es una molestia.
+    Cómo usar Google Colab
+                              EXAMPLES: Contiene ejemplos de 
+                              Jupyter notebooks con diversos 
+                              ejemplos.
+                              RECENT: Jupyter notebooks que has 
+                              trabajado recientemente.
+                              GOOGLE DRIVE: Jupyter notebooks en 
+                              tu google drive.
+                              GITHUB: Puedes añadir Jupyter 
+                              notebooks desde Github pero es 
+                              necesario conectar Colab con GitHub.
+                              UPLOAD: Si deseas subir un Jupyter 
+                              notebook desde tu equipo local.
+    Ir al siguiente enlace: https://colab.research.google.com
+    Cómo usar Google Colab
+    De lo contrario, puede crear un nuevo 
+    cuaderno de Jupyter haciendo clic en 
+    Nuevo cuaderno de Python3 o Nuevo 
+    cuaderno de Python2 en la esquina 
+    inferior derecha.
+    Al crear un nuevo cuaderno, creará un 
+    cuaderno Jupyter llamado 
+    Untitled0.ipynb y lo guardará en su 
+    unidad de Google en una carpeta llamada 
+    Colab Notebooks. Todos los comandos de 
+    los cuadernos de Jupyter funcionarán 
+    aquí.
+        IDE’s
+      IDE’s
+      Son aplicaciones de software que            ✔ Editor de código.
+      permiten a programadores desarrollar        ✔ Depuradores (Debuggers) que 
+      código en diferentes lenguajes.                permiten encontrar errores en el 
+      Consta, usualmente, de:                        código 
+                                                  ✔ Herramientas automáticas
+                       IDE’s para el 
+                       desarrollo de 
+                       Python
+                       Permite trabajar en un entorno no local y la creación de 
+                       Notebooks ������
+                       Las herramientas que mostramos anteriormente no son 
+                       las únicas en donde compilar código de Python…
+            ¡Atención!
+     Recuerda instalar Python con Anaconda para la 
+              próxima clase.
+                Ver tutorial
+                 ☕
+               Break
+               ¡10 minutos y 
+                volvemos!
+     Nociones básicas: 
+    Variable, asignación, 
+      expresiones
+        Variable
+       Variables
+       Las variables se utilizan para almacenar        Es útil pensar en las variables como 
+       información para ser referenciada y             contenedores de información. 
+       manipulada en un programa de                    Su único propósito es etiquetar y 
+       computadora.                                    almacenar datos en la memoria. 
+       Proporcionan una forma de etiquetar los 
+       datos con un nombre descriptivo, para 
+       que los programas puedan ser entendidos 
+       con mayor claridad. 
+    Variables
+    Los tipos de datos estándar o 
+    integrados de Python: 
+    a) Numérico 
+    b) Tipo de secuencia 
+    c) Booleano 
+    d) Conjuntos 
+    e) Diccionario 
+       Asignación
+                       Asignación
+                       Nombrar variables es una tarea compleja. 
+                       Cuando nombre variables, piense detenidamente en los 
+                       nombres (Comprensible).
+                       La asignación de lleva a cabo por medio del símbolo =
+                       El nombre de la variable va a la izquierda y el valor que 
+                       desea almacenar en la variable va a la derecha.
+      Asignación
+      Reglas para asignación de variables        ✔ Los nombres de las variables 
+      en Python                                      distinguen entre mayúsculas y 
+        ✔ El nombre de una variable debe             minúsculas (nombre, Nombre y 
+           comenzar con una letra o el carácter      NOMBRE son tres variables 
+           de subrayado.                             diferentes).
+        ✔ Un nombre de variable no puede         ✔ Las palabras reservadas (palabras 
+           comenzar con un número.                   clave) no se pueden usar para 
+        ✔  Un nombre de variable solo puede          nombrar la variable.
+           contener caracteres alfanuméricos y 
+           guiones bajos (A-z, 0-9 y _).
+    Objetos y punteros
+       Objetos y punteros
+       Python es un lenguaje orientado a objetos       ✔ Datos
+       Es así que en Python todo es un objeto, o       ✔ Metadatos, atributos o propiedades 
+       sea, cuenta con:                                   (un punto y una palabra sin 
+                                                          paréntesis):
+                                                          X.atributo ������ Un atributo caracteriza 
+                                                          al dato
+                                                       ✔ Funcionalidad o métodos (un punto y 
+                                                          una palabra con paréntesis):
+                                                          x.método()  ������ Un método es algo 
+                                                          que el dato puede hacer, por lo 
+                                                          tanto al ejecutarlo le estamos 
+                                                          pidiendo al dato que ejecute una 
+                                                          acción
+  x=1.0
+  x.is_integer() # ¿es x un entero? se lo preguntamos con el método is_integer()
+  x=1.4
+  x.is_integer() # ¿y ahora? se lo preguntamos de vuelta
+  print(x.real,x.imag)  # miramos los atributos de x, en este caso su parte real 
+               # y su parte imaginaria
+    Objetos y punteros
+    Las variables en Python no contienen 
+    los datos, sino que apuntan a los 
+    datos. 
+    Esta es la forma de trabajo de los 
+    punteros, lo que hace que el lenguaje 
+    sea más eficiente.
+           Para pensar
+    ¿Cuáles son las salidas de los siguientes 
+    bloques de código?
+                               Contesta mediante el chat de 
+                               Zoom 
+  ¿No notaste algo raro en el 
+  ejercicio anterior...?
+       Objetos y punteros
+       Cuando operamos sobre una variable          Cuando realizamos una asignación (=) 
+       (método) operamos sobre el objeto al        conectamos (apuntamos) la variable 
+       que apunta.                                 al objeto. Aquí no cambiamos el objeto.
+        Objetos y punteros
+        x = [1, 2, 3]     # x es una lista
+        y = x                   # el objeto al que apunta x ([1, 2, 3]) ahora es también 
+                                # apuntado por y
+        print(y is x)     # x e y son el mismo objeto (True)
+        print(x,y)        # [1, 2, 3] [1, 2, 3]
+        x.append(4)             # aquí operó sobre el objeto [1, 2, 3] apuntado por x.
+                                # Los métodos se identifican luego de un punto (x.método())  
+        print(y)          # como x e y apuntan al mismo objeto, y refleja los cambios
+        x = "hola"              # al realizar asignación, ahora x apunta al objeto texto 
+                                # (string) "hola" 
+        print(x is y)     # x e y ahora no apuntan al mismo objeto (False)
+        print(x,y)        # x e y apuntan a dos objetos diferentes (“hola” [1, 2, 3, 4])
+  Objetos y punteros
+  La diferencia es muy sutil y en general no 
+  afecta el trabajo de Data Science. No 
+  obstante, no todos los lenguajes se 
+  comportan así.
+  ⚠  Hay que tener en cuenta esto para no 
+  cometer errores. 
+  ✔Un método comienza por un punto 
+    después de la variable.
+  ✔El método modifica el objeto 
+    apuntado por la variable.
+  ✔La variable no es, ni contiene al 
+    objeto.
+  ✔La asignación “conecta” a la variable 
+    con el objeto apuntado.
+      Expresiones
+       Expresiones
+       Una expresión es una combinación de                                  REEMPLAZAR 
+       operadores y operandos que se interpreta                             POR IMAGEN
+       para producir algún otro valor. 
+       En cualquier lenguaje de programación, una 
+       expresión se evalúa según la precedencia de 
+       sus operadores. 
+     Expresiones
+     Expresiones constantes: son las 
+     expresiones que solo tienen valores 
+     constantes.
+     x = 15 + 1.3                 ������   16.3
+     print(x)
+     Expresiones
+     Expresiones aritméticas: una expresión 
+     aritmética es una combinación de valores 
+     numéricos, operadores y, a veces, 
+     paréntesis. 
+       x = 40
+       y = 12                        ������    52
+                                           28
+        add = x + y                        480
+       sub = x - y                         3.3333333333333335
+       pro = x * y
+       div = x / y
+       print(add);print(sub);print(pro);print(div)
+     Expresiones
+     Expresiones integrales: este es el tipo 
+     de expresiones que producen solo 
+     resultados enteros después de todos los 
+     cálculos.
+        a = 13
+        b = 12.0                      ������    25
+         c = a + int(b)
+        print(c)
+     Expresiones
+     Expresiones flotantes: este es el tipo 
+     de expresiones que producen números de 
+     punto flotante como resultado de todos 
+     los cálculos
+     a = 13
+     b = 5                         ������    2.6
+      c = a / b
+     print(c)
+       Operadores
+                       Operadores
+                       ✔ Los operadores permiten trabajar sobre las 
+                         variables, a la manera de las operaciones 
+                         matemáticas.
+                       ✔ Cada operador da un resultado como salida.
+                       ✔ Identificamos 4 tipo de operadores:
+                             ✓ Operadores aritméticos
+                             ✓ Operadores de asignaciones
+                             ✓ Operadores de identidad y pertinencia
+         Operadores aritméticos
+           Los operadores aritméticos son directamente 
+           operaciones matemáticas estándar.
+                                         Aritméticos
+                            a + b                                           Suma
+                             a - b                                          Resta
+                             a * b                                 Multiplicación
+                             a / b                                       División
+                            a // b      División entera (resultado sin decimal)
+                            a % b           Módulo (resto de la división entera)
+                           a ** b                                Exponenciación
+                                -a                                      Negativo
+       Operadores de                                                     Asignaciones
+       asignaciones                                                    a += b              a = a + b
+                                                                        a -= b              a = a - b
+       Los asignadores simplifican operadores aritméticos              a *= b              a = a * b
+       comunes.                                                         a /= b              a = a / b
+                                                                       a //= b             a = a // b
+                                                                       a %= b              a = a % b
+                                                                       a **= b            a = a ** b
+                  Comparadores                      Operadores de 
+                a == b            a igual a b
+                 a != b       a distinto de b       comparación
+                  a < b          a menor a b
+                  a > b          a mayor a b        Los comparadores dan resultados lógicos (si/no, 
+                        a menor o igual que         true/false)
+                a <= b                      b
+                        a mayor o igual que 
+                a >= b                      b
+       Operadores de 
+       identidad y                                                  Identidad y pertenencia
+                                                                                 a es el mismo objeto 
+       pertenencia                                                        a is b             que b
+                                                                               a no es el mismo objeto 
+        ✔ Los operadores de identidad y pertenencia                    a is not b            que b
+           verifican relaciones entre objetos.                           a in b  a está contenido en b
+        ✔ Dentro de esta categoría, los operadores “in”,              a not in b a no está contenido en b
+           como casos particulares, buscan objetos 
+           dentro de listas. ¡Son muy útiles!
+       Uso de filtros booleanos
+        Los operadores nos permiten crear filtros booleanos que ayudan a obtener filtros 
+        rápidos para información de interés
+       import pandas as pd                                    index_bool=df['Eo']>10
+       import numpy as np                                     index_bool
+       df= pd.DataFrame(data=np.random.randint(64, 
+       size=(8,8)),columns=['Ja','Mu','Ct','Dn','Eo','Tp','Yn','Om'])
+       print(df)                                              df['Eo'][index_bool]
+         Ja  Mu  Ct  Dn  Eo  Tp  Yn  Om                       0    41
+       0  26  41  62  50  41  52  49  35                      1    18
+       1   4  13  37   4  18   7  30  43
+       2  57  19  41  55  53  15  14  57                      2    53
+       3  47   6  53  47  58  15  39  49                      3    58
+       4  61  32  53  15  48  56  42  20                      4    48
+       5  60  56  40  55   7  32  51  13                      6    48
+       6  45   9  29  21  48  43  61  30
+       7  44   5  27  59   6  47   7  46                      Name: Eo, dtype: int64
+      Ejemplo en vivo
+   Examinemos un poco lo que se conoce 
+   como estructuras de control
+       Para pensar
+   ¿Qué diferencia hay entre usar and/or? 
+   ¿Qué significa el operador %?
+                          Contesta 
+                          mediante el 
+                          chat de 
+                          Zoom 
+       CLASE N°2
+       Glosario
+       Programación: formas de ejecutar un algoritmo      Variable: Cualquier estructura que permita 
+       (recetas)                                          almacenar información para su manipulación
+       Lenguajes: herramientas computacionales que        Asignación: Proceso mediante el cual se le 
+       permiten resolver problemas con estructuras de     asigna un valor particular a una variable 
+       código. En Data Science existen varios comunes: 
+       Python , R , Java, Julia, C, C++                   Punteros: herramientas que nos permiten 
+                                                          conectar a las variables con sus valores 
+       Lenguaje interpretado: cualquier lenguaje de       respectivos
+       programación que se ejecute línea a línea y que 
+       convierta las órdenes a formato binario (e.g       Expresiones: combinaciones de operadores y 
+       Python , R)                                        operandos que dan como resultado un valor 
+                                                          particular
+       IDE: aplicaciones donde escribimos el código de 
+       un lenguaje particular (e.g Spyder, Kite, Visual   Operadores: son los que permiten trabajar 
+       Studio, Atom)                                      sobre las variables, pueden ser de 4 tipos 
+                                                          (aritméticos, relacionales, de asignación y 
+                                                          lógicos)
+      ¿Preguntas?
+                   Resumen 
+               de la clase hoy
+              ✓ Definición de Programa
+              ✓ Lenguaje Interpretado vs compilado
+              ✓ Python como Lenguaje
+              ✓ Nociones básicas: variable, asignación y 
+                expresiones
+              ✓ Objetos y punteros
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.

@@ -1,0 +1,367 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 39. DATA SCIENCE
+        En foco: selección y 
+         mejora de modelos
+      Temario
+                     38                    39                    40
+                 Workshop:              En foco...        Introducción a
+                Revisión de                                  Machine 
+                   pares                                     Learning
+                ✓ Revisión de         ✓ Data Acquisition  ✓  Marco CRISP-DM y la fase 
+                                                             de Machine Learning y 
+                   pares              ✓ Data Wrangling       modelado
+                ✓ Repaso:             ✓ EDA               ✓  Scikit Learn
+                   Narrativa de                           ✓  Técnicas de Encoding
+                   presentación       ✓ Análisis 
+                                         estadístico      ✓  Feature Engineering
+                   de datos + tips
+                                                          ✓  Flujo de trabajo 
+    Objetivos de la clase
+                 Repasar las fases fundamentales en los 
+                 procesos de Data Acquisition y Data Wrangling
+                 Repasar los conceptos de Exploratory Data 
+                 Analysis y Estadística Descriptiva
+                 Proveer a los estudiantes un repaso de los 
+                 temas vistos en el curso Data Science II
+        MAPA DE CONCEPTOS
+                             Repaso Data Science-II
+          Data                           Análisis      Clasificación de 
+         Acquisition   Data Wrangling   Estadístico      Análisis 
+                                                        Estadistico
+         Definición      Definición      Definición     Definiciones
+         Diferentes       Tareas,        Tipos de       Utilidades y 
+         fuentes de     importancia y    análisis      como se aplican
+          datos           fases         estadístico
+       Repaso: 
+     Data Acquisition
+       Definición
+    ¿Qué es la Adquisición de 
+    datos?
+      ✔ Se refiere a la recuperación de 
+        datos, lo cual implica decidir acerca 
+        de qué datos se requieren, por que 
+        y como para luego poder utilizarlos
+      ✔ No existe una única forma de 
+        adquirir los datos, ya que se tienen 
+        muchas fuentes disponibles
+      ✔ Los datos se pueden adquirir por 
+        medio de la organización misma 
+        (First Party), ser buscados de forma 
+        externa (Second Party) o 
+        comprados (Third Party)
+      Tipos de datos
+     Tipos de datos
+      ✔ Estructurados: archivos que 
+        muestran configuración de filas y 
+        columnas con variables definidas. 
+        Pueden ser ordenados y procesados 
+        fácilmente con herramientas de 
+        minería de datos
+      ✔ Semi-estructurados: Tienen 
+        características consistentes y definidas, 
+        no tienen una estructura rígida como 
+        en el esquema relacional
+      ✔ No estructurados: no tienen 
+        estructura relacional y pueden venir 
+        con información dispersa y compleja de 
+        procesar. 
+    Fuente: Lawtomated
+    Lectura de datos con 
+        Pandas
+    Lectura de datos con 
+    Pandas
+     Recordemos que con Pandas podíamos 
+     leer archivos con múltiples orígenes:
+     ✔ Github
+     ✔ De manera local
+     ✔ Archivos planos (csv, txt)
+     ✔ Archivos en formato excel
+     ✔ Bases de datos SQL (SQLLite, SQL 
+       Alchemy, PostgreSQL)
+     ✔ Datos desde APIs sin o con 
+       credenciales
+     ✔ Datos desde páginas web como 
+       Yahoo y Google Trends
+      Git vs Github
+        Diferencias Git vs. Github
+                                  Git                                               Github
+           Instalado localmente                                Hosteado en la nube
+           Lanzado en 2005 y mantenido por The Linux           Lanzado en 2008 y mantenido por Microsoft
+           Foundation
+           Se enfoca en control de versiones y código          Se enfoca en un hosting de código centralizado
+           compartido
+           Se ejecuta en la terminal                           Administrado en la web
+           Provee una interface desktop llamada Git Gui        Provee una interfaz desktop llamada Github Desktop
+           Pocas configuraciones externas disponibles          Marketplace diverso para integración de 
+                                                               herramientas
+           Licencia Open Source                                Versión gratuita y también paga
+      Archivos JSON
+      1. Definición                            2. Estructura
+      Se trata de un formato de datos           ● Los datos se organizan en 
+      semi-estructurado no tabular, es              colecciones de objetos o 
+      decir que los registros no tienen que         paquetes.
+      tener un mismo conjunto de                ● Pueden “anidarse” → Los 
+      atributos.                                    valores pueden ser listas u otros 
+                                                    objetos.
+      Uso de APIs
+      1. Definición                      2. Para qué sirven
+      Es una interfaz que permite la      Son una manera de obtener datos 
+      comunicación entre dos              de una aplicación sin conocer los 
+      sistemas distintos permitiendo      detalles de la bases de datos.
+      agregar diversas funciones a 
+      sitios web y aplicaciones.
+       Para pensar
+   ¿Recuerdan los tipos de negocios que se 
+   podrían implementar con APIs? ¿Para el 
+   caso de Netflix como ayudaban las APIs a 
+   mejorar la productividad del negocio? 
+  Contesta la encuesta de Zoom 
+       Repaso:
+     Data Wrangling
+       Definición
+       1. Definición                             2. Tareas 
+                                                 involucradas
+       Es  el  proceso  de  limpieza  y            ● Fusión  de  múltiples  fuentes  de 
+       unificación de conjuntos de datos               datos
+       complejos  y  desordenados  para            ● Identificar filas problemáticas
+       facilitar  el  acceso,    análisis  y       ● Eliminar datos que son innecesarios 
+       modelado.                                   ● Identificar atípicos y duplicados 
+       3. Importancia                               4. Etapas 
+                                                    involucradas
+       El Data Wrangling puede llevar mucho            1. Descubrimiento
+       tiempo y agotar los recursos,                   2. Estructuración
+       especialmente cuando se realiza                 3. Limpieza
+       manualmente. Esta es la razón por la que 
+       muchas organizaciones instituyen                4. Enriquecimiento
+       políticas y mejores prácticas que ayudan        5. Validación 
+       a los empleados a optimizar el proceso          6. Publicación
+       de limpieza de datos
+    Data transformation
+      1. Definición                            2. Tareas 
+                                               involucradas
+      La transformación de datos es el          Procesos como:
+      proceso de cambiar el formato, la          1. Integración de datos
+      estructura o los valores de los            2. Migración de datos
+      datos.                                     3. Almacenamiento de datos y el Data 
+                                                    Munging
+       3. Beneficios                                 4. Desafíos
+         1. Los datos se transforman para que 
+             estén mejor organizados.                   1. La transformación de datos puede ser 
+         2. Los datos correctamente formateados            costosa.. 
+             y validados mejoran la calidad de los      2. Los procesos de transformación de 
+             datos y protegen de problemas                 datos pueden consumir muchos 
+         3. La transformación de datos facilita la         recursos. 
+             compatibilidad entre aplicaciones,         3. La falta de experiencia y el descuido 
+             sistemas y tipos de datos.                    pueden presentar problemas durante 
+                                                           la transformación.
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+       Repaso:
+     Exploratory Data 
+      Analysis (EDA)
+       Definición
+       1. Definición                            2. Utilidades del 
+                                                EDA
+       Tiene como finalidad examinar los         Permite dar respuesta a lo siguiente:  
+       datos previamente a la aplicación de      ✔ ¿Existe algún sesgo en los datos 
+                                                    recogidos?
+       cualquier técnica estadística, con el fin 
+       de conseguir un entendimiento básico      ✔  ¿Hay errores en la codificación de los 
+                                                    datos?
+       de sus datos                              ✔
+                                                     ¿Cómo se sintetiza y presenta la 
+                                                    información contenida en un conjunto de 
+                                                    datos?
+                                                 ✔  ¿Existen datos atípicos (outliers)? 
+                                                    ¿Cuáles son? ¿Cómo tratarlos?
+                                                 ✔  ¿Hay datos ausentes (missing)? 
+                                                    ¿Tienen algún patrón sistemático? 
+                                                    ¿Cómo tratarlos?
+       3. ¿Que realmente                           4. Etapas del EDA
+       hace?
+       El EDA, proporciona métodos sencillos         1. Preparar los datos
+       para  organizar  y  preparar  los  datos,     2. Realizar un examen gráfico
+       detectar fallos en el diseño y recogida       3. Analizar correlaciones y dependencias
+       de datos, tratamiento y evaluación de         4. Evaluar supuestos distribucionales
+       datos ausentes, identificación de casos       5. Identificar outliers
+       atípicos y mucho más.                         6. Establecer el impacto de datos 
+                                                         problemáticos como outliers, ausentes 
+                                                         y duplicados
+                Identificando 
+         fortalezas/debilidades de 
+        Investigaremos fortalezas y debilidades de un 
+                    EDA
+             Exploratory Data Analysis (EDA)
+                Duración: 15-20 min
+       ACTIVIDAD EN CLASE
+    Identificando 
+    fortalezas/debilidades de 
+     Descripción de la actividad. 
+    EDA
+     Se propone ir al siguiente enlace: Ejemplo EDA. Luego 
+     de esto responder:
+      1. Identificar fortalezas y debilidades del análisis 
+        descriptivo realizado. 
+      2. La forma en cómo se interpretan los resultados es 
+        apropiada 
+      3. Las conclusiones que se obtienen son acordes con 
+        las preguntas planteadas
+      4. ¿Qué agregarían o quitarían del análisis 
+        planteado?
+     Tiempo estimado 15-20 min
+       Repaso: 
+    Análisis Estadístico
+       Definición
+       ¿Qué es el Análisis
+       estadístico?
+         Es  la  ciencia  de  recopilar,  explorar  y 
+         presentar grandes cantidades de datos para 
+         descubrir     patrones      y     tendencias 
+         subyacentes. 
+         Las estadísticas se aplican todos los días, en 
+         investigación,  industria  y  gobierno,  para 
+         volverse    más     científicas  sobre    las 
+         decisiones que deben tomarse. 
+    Análisis univariado
+       1. Definición                                  2. ¿Cómo se 
+                                                      aplica?
+        Consiste en el análisis de cada una de  Se puede aplicar con las siguientes acciones:  
+        las     variables      estudiadas       por    ✔ Cálculo de medidas de tendencia central 
+        separado,  se  basa  exclusivamente  en           (media, mediana, moda, media recortada)
+        una única variable.                            ✔ Cálculo de medidas de Localización (e.g 
+        Se   considera    un    análisis   de   tipo      cuartiles) y de dispersión (e.g varianza , 
+                                                          std)
+        Descriptivo  y  no  relacional  o  de 
+        causalidad                                     ✔ Cálculo de medidas de asimetría y curtosis
+                                                       ✔ Desarrollo de gráficos resumen (e.g 
+                                                          Lineplots, Histogramas, Barcharts, 
+                                                          Boxplots, Piecharts, Radarplots, 
+                                                          Violinplots)
+                                                       ✔ Generación de tablas de resumen 
+                                                          numérico y de contingencia para el 
+                                                          análisis 
+     Análisis bivariado
+       1. Definición                                 2. ¿Cómo se 
+        Es una de las formas más simples de  aplica?
+                                                      Debemos aplicar los siguientes pasos:  
+        análisis estadístico, que se utiliza para 
+        averiguar  si  existe  una  relación  entre   ✔ Observar la naturaleza de las posibles 
+        dos  conjuntos  de  valores.  Por  lo            relaciones
+        general involucra las variables X e Y.
+                                                      ✔ Identificar valores nominales, ordinales 
+                                                         o de razón
+                                                      ✔ Evaluar la significancia de los 
+                                                         resultados
+                                                      ✔ Determinar si existe relación entre las 
+                                                         variables
+      3. Tipos                              4. Herramientas 
+       1. Variable      numérica       vs   Contamos con diferentes herramientas:  
+          numérica                          ✔ Diagramas de dispersión (Scatterplots)
+       2. Variable     categórica      vs   ✔ Regresión y cuantificación de dependencia 
+          categórica                           lineal
+       3. Variable      numérica      vs. 
+          categórica                        ✔ Coeficientes de correlación (Pearson, Phi, 
+                                               Rango Biserial, Biserial Puntual, 
+                                               Spearman)
+    Análisis Multivariado
+       1. Definición                              2. ¿Cómo se 
+                                                  aplica?
+       Es  una  rama  de  la  estadística  que  Se aplica con una amplia gama de técnicas 
+                                                   donde buscamos cumplir estos objetivos:  
+       abarca  la  observación  y  el  análisis    ✔ Optimizar datos o simplificar la estructura
+       simultáneos de más de una variable  ✔
+                                                      Ordenar y agrupar los datos
+       respuesta.
+                                                   ✔ Investigar la relación de dependencia 
+                                                      entre variables
+                                                   ✔ Relación predictiva entre variables
+                                                   ✔ Construccion y validacion de pruebas de 
+                                                      hipótesis
+                                                   ✔ Existen diversos metodos como (PCR, 
+                                                      PLSR, ANN; SVM, LDA, KNN, SVM, PCA, K-
+                                                      means)
+      3. Ventajas                         4. Desventajas 
+        ✔ Permite a los investigadores ver la 
+                                           ✔ Sus técnicas son complejas, involucran 
+          relación entre variables y cuantificar 
+                                              matemáticas avanzadas y requieren 
+          la relación entre ellas: 
+                                              procedimientos estadísticos 
+        ✔ Muestra capacidad de obtener una 
+                                           ✔ Los    resultados  del   modelado 
+          visión general más realista y precisa 
+                                              estadístico  no  siempre  son  fáciles 
+          que cuando se analiza una sola 
+                                              de entender 
+          variable. 
+          Accediendo a notebooks 
+               del Curso DS-II
+        Realizaremos una copia de todos los notebooks 
+       disponibles del Curso de DS-II en nuestras cuentas 
+                   personales
+                Duración: 10-15 min
+       ACTIVIDAD EN CLASE
+    Accediendo a 
+    notebooks del Curso 
+     Descripción de la actividad. 
+    DS-II
+     Se propone que los estudiantes puedan descargar los 
+     archivos en formato .ipynb disponibles para cada clase, 
+     pueden hacer una copia en sus cuentas de google.
+     En la carpeta de clase encontrarán dos subcarpetas: 
+     una llamada Notebooks a repasar donde trabajaremos 
+     conceptos de Data Acquisition, Data Wrangling, EDA, 
+     Analisis univariado, bivariado y multivariado. En la 
+     subcarpeta Datos se encuentra la data para trabajar
+     Tiempo estimado 20-25min
+     ¿Quieres saber más?
+     Te dejamos material 
+     ampliado de la clase
+         MATERIAL AMPLIADO
+     Recursos multimedia
+     Data Acquisition
+      ✓ Data Acquisition | ACQ |      Estadística Descriptiva
+         Data Acquisition              ✓ Definition of Descriptive Statistics | 
+                                          Investopedia | 
+     Data Wrangling                       Descriptive Statistics
+      ✓ Data Wrangling | Medium | 
+         Introduction to Data wrangling
+     Exploratory Data Analysis
+      ✓ EDA | Towards Data Science | 
+         Exploratory Data Analysis
+      Disponible en nuestro repositorio.
+      ¿Preguntas?
+       CLASE N°39
+       Glosario
+                                                      Análisis Univariado: consiste en el 
+       Data Acquisition: Se refiere a la              análisis de cada una de las variables 
+       recuperación de datos, lo cual implica         estudiadas por separado, se basa 
+       decidir acerca de qué datos se requieren,      exclusivamente en una única variable.
+       por que y como para luego poder 
+       utilizarlos                                    Análisis bivariado: Es una de las formas 
+                                                      más simples de análisis estadístico, que 
+       Data Wrangling: proceso de limpieza y          se utiliza para averiguar si existe una 
+       unificación de conjuntos de datos              relación entre dos conjuntos de valores. 
+       complejos para facilitar el acceso,  
+       análisis y modelado.                           Análisis multivariado: Es una rama de 
+                                                      la estadística que abarca la observación y 
+       EDA: examinar los datos previamente a          el análisis simultáneos de más de una 
+       la aplicación de cualquier técnica             variable respuesta.
+       estadística, con el fin de conseguir un 
+       entendimiento básico de sus datos
+                   Resumen 
+               de la clase hoy
+              ✓ Data Acquisition
+              ✓ Data Wrangling
+              ✓ Exploratory Data Analysis (EDA)
+              ✓ Análisis univariado 
+              ✓ Análisis bivariado 
+              ✓ Análisis multivariado
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.

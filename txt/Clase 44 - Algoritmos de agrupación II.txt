@@ -1,0 +1,480 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 44. DATA SCIENCE
+             Algoritmos de 
+             Agrupación II
+       Temario
+                        43                      44                       45
+                  Algoritmos de           Algoritmos de             Selección de 
+                   agrupación I            Agrupación II            Algoritmo y 
+                                                                 Entrenamiento del 
+                                                                      Modelo I
+                ✓ K means                 ✓ PCA                   ✓ Matriz de confusión
+                ✓ DBSCAN                  ✓ Reducción de          ✓ Accuracy
+                                             dimensionalida       ✓ Precisión 
+                                             d                    ✓ Sensibilidad 
+                                          ✓ Detección de          ✓ Especificidad 
+                                             outliers             ✓ F1 score  y curva ROC
+    Objetivos de la clase
+                 Profundizar en el aprendizaje supervisado
+                 Conocer el funcionamiento de los modelos de 
+                 Clustering, PCA y detección de anomalías
+          MAPA DE CONCEPTOS
+                                                           K Means
+                                                           DBSCAN
+                                                          HDBSCAN
+             Algoritmos de                                Reducción de 
+              Agrupación                                 dimensionalidad
+                                                                         Clase 
+                                                             PCA         44
+                                                          Detección de 
+                                                           outliers
+            Repaso
+                     Les proponemos tomarse unos minutos 
+                     para realizar un repaso de los conceptos 
+                      aprendidos en Kahoot, ¿están listos?
+                          Profe, puedes compartir el 
+                           PIN o link de acceso al 
+                                juego
+         PCA
+       Para pensar
+   Si tenemos una situación en la cual tenemos 
+   variables categóricas solamente respecto a los 
+   atributos de diversos automóviles, ¿podríamos 
+   aplicar la técnica de PCA?
+    
+   Verdadero o Falso
+   Contesta en el chat de Zoom 
+    ¿Qué hacía el PCA?
+    • El método gira los datos de forma que, desde 
+      un punto de vista estadístico, no exista una 
+      correlación entre las características rotadas 
+      pero que conserven la mayor cantidad 
+      posible de la varianza de los datos 
+      originales. 
+    • Reduce la dimensionalidad de un conjunto 
+      de datos proyectándose sobre un subespacio 
+      de menor dimensionalidad.
+       Definición
+   PCA (Principal Component 
+   Analysis)
+      Es una técnica utilizada para la 
+      identificación de un número más 
+        pequeño de variables no 
+      correlacionadas conocidas como 
+    componentes principales de un conjunto 
+    más grande de datos. Permite enfatizar 
+    la variación y capturar patrones fuertes 
+        en un conjunto de datos.
+     Ejemplo aplicado
+     PPCACA  ((PPririnncciipalpal  CCoommponponenentt  
+     AAnnalalyyssiiss))
+       Es una técnica utilizada para la 
+       identificación de un número más 
+       pequeño de variables no 
+       correlacionadas conocidas como 
+       componentes principales de un 
+       conjunto más grande de datos. 
+       Permite enfatizar la variación y 
+       capturar patrones fuertes en un 
+       conjunto de datos.
+          Imaginemos que tenemos el siguiente conjunto de datos que representa dos variables para 6 
+          individuos (ratones). Si queremos representar a los individuos en una dimensión a traves de una 
+          variable podemos hacer una grafica com la de la derecha
+      PCA (Principal Component 
+      Analysis)
+        También podemos graficar dos               Si agregamos una tercera variable 
+        dimensiones como se observa en la          podríamos hacer un gráfico 3D. 
+        figura de arriba generando un              Aunque si ponemos una cuarta 
+        diagrama de dispersión                     dimensión el análisis ya no es tan 
+                                                   sencillo
+       PCA (Principal Component 
+       Analysis)
+        Si calculamos la media de la primera        De igual forma si calculamos la media 
+        variable tenemos lo siguiente               de la segunda variable tenemos lo 
+                                                    siguiente
+       PCA (Principal Component 
+       Analysis)
+        Si juntamos los dos punto tenemos el        Si hacemos que este punto sea el 
+        centro de gravedad o la media global        nuevo centro (0,0) no afecta la 
+        de los individuos                           posición relativa de los puntos
+       PCA (Principal Component 
+       Analysis)
+        Podemos proceder a ajustar una línea       Y el resultado luego del ajuste es el 
+        que mejor se ajuste a los datos como       siguiente
+        en regresión
+       PCA (Principal Component 
+       Analysis)
+        La medida de bondad de ajuste de la 
+        línea se hace proyectando cada             De esta manera las distancia respecto 
+        individuo en la línea                      al origen se maximizan
+   PCA (Principal Component 
+   Analysis)
+                         Entonces el PCA minimiza la 
+                         distancia hasta la linea de 
+                         proyeccion o maximiza la distancia 
+                         del punto proyectado al origen
+                         Aunque preferiblemente lo hace 
+                         maximizando la distancia c en el 
+                         triángulo
+    PCA (Principal Component 
+    Analysis)
+        Así que de esta manera tenemos maximizadas las distancias hasta el 
+        origen y minimizadas las distancias de los puntos a la línea de proyección
+   PCA (Principal Component 
+   Analysis)
+                         Esta línea se llama PC1 (si tiene 
+                         una pendiente de 0.25 por 
+                         ejemplo) por cada 4 unidades que 
+                         aumente el gen 1 el gen 2 
+                         aumenta en 1 unidad
+                         Por eso el PC1 así como los 
+                         demás componentes principales 
+                         on una combinación lineal de 
+                         variables
+      PCA (Principal Component 
+      Analysis)
+        Una propiedad de este método es que el PC1    También es de suma importancia que 
+        siempre recoge mayor porcentaje de            los datos esten escalados o 
+        variabilidad explicada                        normalizados
+  PCA (Principal Component 
+  Analysis)
+      Ejemplo en vivo
+   Dentro de la carpeta de clase explorar el 
+   notebook “PCA - CoderHouse (Ejemplo 1)” 
+   con el fin de comprender el funcionamiento 
+   del algoritmo PCA
+       HANDS ON LAB
+   Explorar el notebook “PCA - 
+   CoderHouse (Ejemplo 2)” para 
+   identificar el funcionamiento del 
+   algoritmo PCA. ¿Tiene sentido 
+   en este algoritmo separar 
+   train/test?
+   Cualquier inquietud pueden 
+   consultar a su tutor o profesor
+   10-15 min
+      Reducción de 
+     dimensionalidad
+       Para pensar
+   Si bien hemos visto que la Reducción de 
+   dimensionalidad es uno de los problemas que se 
+   pueden resolver con el aprendizaje no 
+   supervisado, ¿Han escuchado de algún otro 
+   método similar al PCA? ¿Si es así como funciona?
+   Contesta en el chat de Zoom 
+       Definición
+    Reducción de dimensionalidad
+     Es una técnica de de aprendizaje no 
+     supervisado que consiste en la 
+     transformación de datos desde un espacio 
+     de alta dimensión a uno de baja dimensión 
+     para que la representación de baja 
+     dimensión retenga algunas propiedades 
+     significativas de los datos originales.
+      Importancia
+    Importancia
+     ● Menor número de dimensiones implica 
+       menor tiempo de entrenamiento y menor 
+       recurso computacional y mayor 
+       performance
+     ● Permite evitar el problema del overfitting
+     ● Es extremadamente util para la tarea de 
+       “Data Visualization”
+    Importancia
+     ● Puede ser usado para comprimir imágenes 
+       con  el  fin  de  evitar  consumir  mucho 
+       espacio a la hora de generar algoritmos y 
+       entrenarlos
+     ● Puede ser usado para transformar datos no 
+       lineales en una forma lineal separable (e.g 
+       Kernel PCA es una aplicación de este caso)
+    Importancia
+     ● Tiene en cuenta el problema de la 
+       multicolinealidad 
+     ● Es bastante útil para el análisis factorial 
+       (encontrar variables latentes que no se 
+       pueden medir directamente en una 
+       variable)
+     ● Remueve el ruido en los datos quedándose 
+       con las variables más importantes
+      Clasificación
+    Clasificación
+     Se tienen dos grandes categorías:
+      1. Feature Selection: tiene como objetivo 
+       encontrar un subconjunto de variables (las 
+       más importantes) de todas las variables. 
+       Tenemos 3 estrategias distintas (Filtro, 
+       Wrapper, Embedded)
+      2. Feature Extraction: extrae variables 
+       relevantes como combinación lineal de las 
+       variables originales con menor número de 
+       dimensiones
+    Clasificación
+                                 La metodología Feature 
+                                 Extraction también tiene una 
+                                 clasificación adicional ya que 
+                                 se pueden utilizar técnicas 
+                                 lineales o no 
+                                 lineales )Manifold) para 
+                                 encontrar las mejores 
+                                 combinaciones 
+                                  
+                                 Fuente: Clasificación 
+                                 Reducción Dimensionalidad
+    Principales técnicas
+       Principales técnicas
+        Algunas de las principales técnicas más aplicadas 
+        son:
+          1. Principal Component Analysis (PCA)
+          2. Análisis Factorial
+          3. Análisis Discriminante
+          4. Kernel PCA
+          5. t-SNE  (t-distributed   Stochastic   Neighbor 
+              Embedding)
+          6. Escalamiento multidimensional (MDS)
+          7. Isomap (Isometric mapping)
+        Exploraremos algunas técnicas distintas del PCA
+    Análisis factorial
+     Este método no solo busca reducir la 
+     dimensionalidad como el PCA, sino que también 
+     permite encontrar variables latentes que no se 
+     pueden medir directamente con una sola 
+     variable, estas variables latentes se les llama 
+     factores. 
+     Es una tećnica principalmente estadística que 
+     busca explicar las correlaciones entre las 
+     variables en términos de un menor número de 
+     variables
+    Análisis Discriminante
+     Conocido como LDA se usa para problemas de 
+     clasificación multi clase usualmente. Esta técnica 
+     separa o discrimina las instancias por sus clases. A 
+     diferencia del PCA el LDA encuentra una 
+     combinación lineal de variables que optimice la 
+     separación de clases mientras que el PCA trata de 
+     encontrar componentes no correlacionados. 
+     Otra diferencia es que el PCA es un algoritmo no 
+     supervisado mientras que el LDA es supervisado
+    Kernel PCA
+     Es una técnica de reducción de dimensionalidad 
+     no lineal que utiliza diferentes funciones kernel 
+     (Radial basis-function kernel) y es la versión 
+     no lineal del PCA. Funciona bastante bien en 
+     datasets no lineales donde el PCA normal no 
+     funciona eficientemente
+     Se necesitan especificar 3 hiper parámetros 
+     importantes: a) componentes a retener, b) tipo de 
+     kernel (linear, poly, rbf, sigmoid, cosine) y c) 
+     coeficiente kernel llamado gamma
+     t-SNE
+     Es una técnica de reducción de dimensionalidad 
+     no lineal que principalmente se usa para “Data 
+     Visualization”.
+     Se basa en técnicas probabilísticas sobre parejas 
+     de muestras en el espacio original
+     Se recomienda utilizar ya sea PCA o 
+     descomposicion SVD truncada antes de t-SNE si el 
+     numero de variables es mayor a 50. 
+     Escalamiento 
+     multidimensional
+     MDS es una técnica de reducción de 
+     dimensionalidad no lineal que trata de preservar 
+     las distancias entre las instancias mientras 
+     reduce la dimensionalidad de los datos no 
+     lineales.
+     Existen dos tipos de algoritmos de MDS con 
+     métrica y sin métrica. Dentro de la clase MDS() 
+     de Scikit Learn e puede definir cuál de las dos 
+     se desea utilizar 
+    Isomap
+     Es una técnica de reducción de dimensionalidad 
+     no lineal que funciona como una extensión del 
+     MDS o del Kernel PCA. Conecta cada instancia 
+     calculando una distancia curva o geodésica con 
+     base a los vecinos más cercanos. 
+     El número de vecinos a considerar para cada 
+     punto se puede específicas con n_neighbors 
+     dentro de la clase Isomap 
+      Ejemplo en vivo
+   Dentro de la carpeta de clase exploraremos 
+   los notebooks “Reduccion de 
+   dimensionalidad - Ejemplo 3.ipynb” con el 
+   fin de comprender el funcionamiento de los 
+   algoritmos: Análisis factorial, Análisis 
+   Discriminante, Kernel PCA, t-SNE, 
+   Escalamiento Multidimensional e Isomap
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+    Detección de Outliers
+       Para pensar
+   Como hemos visto en clases anteriores los 
+   outliers son un problema bastante común en 
+   cualquier tipo de datos, ¿Conocen algún método 
+   que permita encontrarlos de manera automática? 
+   ¿Podríamos utilizar métodos automáticos para 
+   detectarlos?
+   Contesta en el chat de Zoom 
+       Definición
+   Definición
+   Se define como el proceso de detectar 
+    y excluir outliers de un dataset dado. 
+    Recordemos que un outlier es una 
+   observación que difiere drásticamente 
+    de los demás datos. Existen diversas 
+   técnicas estadísticas y de aprendizaje 
+    automático para poder detectarlos
+      Clasificación
+   Definición
+   Existen diversas técnicas de las cuales 
+   podemos resaltar:
+    1. Isolation Forest
+    2. Minimum Covariance Determinant
+    3. Local Outlier Factor (LOF)
+    4. One Class SVM
+   Isolation Forest
+    Es un algoritmo de detección de anomalías, el 
+    proceso de detección lo realiza por medio de 
+    aislamiento (isolation). Fue desarrollado por 
+    Fei Tony Liu en 2007 en sus estudios de 
+    doctorado.
+    Es un método no supervisado (sin etiquetas). 
+    Eta inspirado en algoritmo de clasificación 
+    Random Forest, formado por la combinación 
+    de múltiples arboles de decision llamados 
+    isolation trees 
+   Isolation Forest
+    El método toma ventaja de dos propiedades 
+    cuantitativas de las anomalías: 
+    1) Son una minoría de todas las instancias
+    2) Tienen atributos bastante diferentes a las 
+      instancias normales
+    A la hora de implementar el algoritmo es 
+    importante tener en cuenta el hiper parámetro 
+    llamado contaminación que se encuentra entre 
+    0 y 0.5 por defecto es 0.1
+   Minimum Covariance Determinant
+    Llamado MCD por sus siglas en inglés. Es un 
+    algoritmo de detección de anomalías bastante 
+    robusto teniendo en cuenta estructuras 
+    multivariadas creando estructuras elipsoidales 
+    que siguen la distribución normal 
+    multivariada. Todas las observaciones que 
+    queden por fuera de la elipsoide se consideran 
+    como anomalías/outliers
+   Minimum Covariance Determinant
+    Su objetivo principal es encontrar 
+    observaciones (de un total de n) en las cuales 
+    la matriz de covarianza tiene el determinante 
+    más bajo.
+    El parámetro “contamination” se define como 
+    la proporción de outliers y se puede encontrar 
+    el valor óptimo con prueba y error o con algun 
+    metodo de busqueda de hiper parámetros
+   Minimum Covariance Determinant
+    Llamado MCD por sus siglas en inglés. Es un 
+    algoritmo de detección de anomalías bastante 
+    robusto teniendo en cuenta estructuras 
+    multivariadas creando estructuras elipsoidales 
+    que siguen la distribución normal 
+    multivariada. Todas las observaciones que 
+    queden por fuera de la elipsoide se consideran 
+    como anomalías/outliers
+   Local Outlier Factor (LOF)
+    Es una técnica que intenta aprovechar la idea 
+    de los vecinos más cercanos para la detección 
+    de valores atípicos. A cada instancia se le 
+    asigna una puntuación de qué tan aislado 
+    (probabilidad de ser atípico) en función del 
+    tamaño de su vecindario más cercano. Es más 
+    probable que las instancias con la puntuación 
+    más alta sean valores atípicos. El parámetro 
+    “contamination” representa la proporción de 
+    nulos por defecto es 0.1.
+    One-Class SVM
+    Aunque el SVM se desarrolló inicialmente para 
+    clasificación binaria se puede usar también para 
+    clasificación con una sola clase. Cuando se 
+    modela una clase el algoritmo captura la 
+    densidad de la clase mayoritaria y clasifica las 
+    instancias en los extremos de la función de 
+    densidad como outliers. 
+    El One-Class SVM es un algoritmo de clasificación 
+    aunque puede ser usado para detectar outliers 
+    en datos de entrada para regresión o clasificación
+      Ejemplo en vivo
+   Miraremos ejemplos de aplicación dentro 
+   de la carpeta de clase con el notebook “4) 
+   Ejemplo Técnicas detección Outliers 
+   (Ejemplo 4).ipynb” donde aprenderemos la 
+   metodología para aplicar los algoritmos: 
+   Isolation Forest, Minimum Covariance 
+   Determinant, Local Outlier Factor y One-
+   Class SVM
+       Para pensar
+   ¿El SVM encuentra el hiperplano que 
+   maximiza el margen de separación entre 
+   clases ?
+   Verdadero o Falso
+   Contesta la encuesta de Zoom 
+                  Importante…
+                               Si bien existen diversos métodos 
+                               que funcionan de manera 
+                               automática para la detección de 
+                               outliers no siempre todos son 
+                               eficientes a la hora de 
+                               encontrarlos, es por ello que se 
+                               recomienda aplicar diferentes 
+                               métodos y seleccionar el mejor que 
+                               se ajuste al contexto de los datos 
+                               analizados.
+       Detección de outliers
+       Utilizaremos lo aprendido en clase para poder 
+        identificar outliers en un conjunto de datos
+             Duración: 15-20 mins
+      ACTIVIDAD EN CLASE
+    Detección de 
+    outliers
+    En esta oportunidad nos reuniremos en grupos de 
+    máximo 4 personas. Trabajaremos sobre el dataset 
+    de la clase anterior: clientes
+     1. ¿Sobre qué variable tiene sentido analizar 
+       outliers? 
+     2. Identificar outliers en la variable charges
+     3. Discutir: ¿Qué harían con esos outliers?, ¿Qué 
+       pasa si los sacamos? ¿Cómo afectaría esto al 
+       análisis del problema? ¿Pueden identificar algún 
+       patrón en las personas con “charges” 
+       extremos/anómalos?
+     4. Opcional: Remover outliers y repetir los pasos 
+       del notebook de Clustering de la clase 43 y ver 
+       como cambia la composición de los clusters
+      ¿Preguntas?
+       CLASE N°44
+       Glosario
+       PCA: técnica utilizada para la                   Detección de outliers: proceso de 
+       identificación de un número más pequeño          detectar y excluir outliers de un dataset 
+       de variables no correlacionadas conocidas        dado. Recordemos que un outlier es una 
+       como componentes principales de un               observación que difiere drásticamente de 
+       conjunto más grande de datos.                    los demás datos. Existen diversas técnicas 
+                                                        estadísticas y de aprendizaje automático 
+       Reducción de dimensionalidad:                    para poder detectarlos. Existen diversas 
+       técnica de aprendizaje no supervisado            técnicas como: Isolation Forest, Minimum 
+       que consiste en la transformación de             Covariance Determinant, Local Outlier 
+       datos desde un espacio de alta dimensión         Factor (LOF) y One-Class SVM
+       a uno de baja dimensión para que la 
+       representación de baja dimensión retenga 
+       algunas propiedades significativas de los 
+       datos originales.
+        Muchas 
+        gracias.
+                         Resumen 
+                   de la clase hoy
+                  ✓ PCA
+                  ✓ Reducción de Dimensionalidad
+                  ✓ Detección de Outliers
+      Opina y valora 
+       esta clase

@@ -1,0 +1,411 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 47. DATA SCIENCE
+      Validación de modelos - 
+                Métricas 
+       Temario
+                        46                       47                      48
+                   Selección de             Validación de        Mejora de modelos 
+                   Algoritmo y               modelos -          de Machine Learning 
+                entrenamiento del             métricas                     I
+                     Modelo II
+                ✓ Métricas y               ✓ Análisis de 
+                   evaluación de              Clustering           ✓ Bias vs. Variance 
+                   modelos                                            Tradeoff
+                ✓ RMSE                     ✓ Métricas de           ✓ Validación de 
+                                              calidad para            modelos
+                ✓ MAE                         Clustering
+                ✓ R2
+    Objetivos de la clase
+                 Calcular métricas para evaluar modelos de 
+                 Clustering
+                 Identificar diferentes alternativas para 
+                 evaluar modelos de Clustering
+          MAPA DE CONCEPTOS
+                                                              Silhouette
+                                                              Índice Rand
+                                                             Rand ajustado
+                                   Métricas para              Información 
+          Validación de            algoritmos de                mutua
+        modelos - métricas          Clustering
+                                                               Calinski-
+                                                               Harabasz
+                                                            Davies-Bouldin
+            Repaso
+                     Les proponemos tomarse unos minutos 
+                     para realizar un repaso de los conceptos 
+                      aprendidos en Kahoot, ¿están listos?
+                          Profe, puedes compartir el 
+                           PIN o link de acceso al 
+                                juego
+   Análisis de algoritmos 
+      de Clustering
+       Para pensar
+   En clases pasadas hablamos de diferentes 
+   algoritmos para poder aplicar Clustering, 
+   ¿Recuerdan alguno de estos algoritmos? 
+   ¿Pertenecían al aprendizaje supervisado o no 
+   supervisado? ¿Cuál es su función principal?
+   Contesta en el chat de Zoom 
+       Definición
+    Algoritmos de Clustering
+     Los algoritmos de agrupamiento son métodos no 
+     supervisado, donde la entrada no está etiquetada y la 
+     resolución de problemas se basa en la experiencia que el 
+     algoritmo 
+     Estos algoritmos aprenden de los atributos disponibles en la 
+     matriz de diseño X con el fin de generar grupos de 
+     compartan características similares en los datos analizados
+     El campo de aplicación de estas técnicas puede ser: gráficos, 
+     reconocimiento de patrones, análisis de imágenes, 
+     recuperación de información, bioinformática y la compresión 
+     de datos.
+      Algoritmos de Clustering
+       Lo que buscan estos algoritmos es básicamente 
+       que:
+       •  Las  observaciones  dentro  de  un  cluster  sean 
+          similares entre sí.
+       •  Las  observaciones  entre  clusters  sean  lo  más 
+          distintas posibles.
+       Los algoritmos de Clustering siempre “buscan una 
+       forma natural de agrupar los datos”
+     Clasificación de 
+       métodos
+    Clasificación
+     Conectividad: como el agrupamiento jerárquico,
+     Centroides: como el agrupamiento de K-Means
+     Modelos de distribución: los clústeres se modelan mediante 
+     distribuciones estadísticas.
+     Modelos de densidad: DBSCAN u OPTICS, que definen el 
+     agrupamiento como una región densa conectada en el espacio 
+     Modelos de grupo: estos modelos no proporcionan resultados 
+     refinados. 
+     Modelos basados en grafos: subconjunto de nodos que miden 
+     adherencia y cohesión entre individuos
+     Redes neuronales: estas son una de las formas más antiguas 
+     para agrupar individuos
+       Para pensar
+   Si después de aplicar un método de Clustering 
+   obtienen los resultados respectivos ¿Cómo 
+   piensan que se debería hacer el proceso de 
+   caracterización de los clusters obtenidos?
+   Contesta en el chat de Zoom 
+      Cómo analizar 
+      resultados de 
+       Clustering
+        Opción 1: Describir                              Ejemplo
+        cada cluster 
+        individualmente
+        Identificar características relevantes para       Clúster 1 – Clientes nuevos que miran 
+        poder describir individualmente a cada            Netflix.
+        clúster                                             ● Antigüedad 4 años
+        Si tengo 3 clúster no habría demasiado              ●
+        problema, pero si tengo muchos clusters, el             Hacen 48 clicks
+        proceso se vuelve mucho más complejo.               ● Miran 5 videos
+       Opción 2: Obtener                            Ejemplo
+       características de 
+       resumen
+       Utilizar medidas de resumen numérico          Podemos utilizar la funciones de 
+       como media, mediana, varianza, desviación     agregación en Pandas (e.g. GroupBy, 
+       estándar entre otras variables para           Apply, Pivot) para obtener características 
+       caracterizar a cada clúster obtenido 
+                                                     relevantes en cada clúster
+       PARA RECORDAR
+    La caracterización de clusters en algunos 
+    casos puede ser un proceso subjetivo, 
+    complejo de realizar y que requiere de 
+    mucho cuidado, sobre todo cuando se 
+    tienen muchos clusters que analizar es 
+    difícil encontrar condiciones de 
+    diferenciación entre cada clúster. La mejor 
+    elección de grupos depende mucho de la 
+    pregunta que se quiera responder
+                  ¡Lanzamos la
+                  Bolsa de 
+                  Empleos!
+                 Un espacio para seguir potenciando tu carrera y 
+                 que tengas más oportunidades de inserción 
+                 laboral.
+                 Podrás encontrar la Bolsa de Empleos en el menú 
+                 izquierdo de la plataforma.
+                 Te invitamos a conocerla y ¡postularte a tu futuro 
+                 trabajo!
+                   Conócela
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+    Métricas de calidad 
+     para Clustering
+    Métricas de calidad para Clustering
+     Lo primero que tenemos que saber, es que al no ser 
+     un método supervisado no hay una métrica 
+     objetiva como el accuracy, curva ROC, 
+     precisión, sensibilidad, R2, R2 ajustado o MSE 
+     por ejemplo. 
+     Esto significa, que el data scientist es el principal 
+     “juez” de un algoritmo de Clustering y dicho juicio se 
+     va a encontrar claramente  condicionado por el 
+     problema a resolver. 
+    Métricas de calidad para Clustering
+    Las 6 métricas más populares para evaluar la 
+    calidad de los cluster obtenidos son:
+     1. Score de Silhouette
+     2. Índice de Rand
+     3. Índice de Rand Ajustado
+     4. Criterio de Información Mutua
+     5. Índice de Calinski-Harabasz
+     6. Índice de Davies-Bouldin
+    Analizaremos a continuación cada uno
+    Score de Silhouette
+    Score de Silhouette
+     El Score de Silhouette se usa para medir la distancia de 
+     separación entre clusters. Muestra la proximidad de 
+     cada punto respecto a sus clusters más cercanos. 
+     Tiene valores entre [-1,1] y es una gran herramienta 
+     para visualizar e inspeccionar similaridades dentro de 
+     cada cluster y diferencias entre clusters.
+     Esto significa que entre más cercano a 1 la 
+     observación ha sido bien asignada, en 
+     consecuencia más cercano a -1 la observación no ha 
+     sido bien asignada dentro del cluster. 
+    Score de Silhouette
+     Esta métrica nos ayuda a conocer si un registro está bien asignado a un cluster 
+     determinado o no, utilizando como fundamento las distancias entre puntos y centroides 
+     de clusters .
+     sklearn.metrics.silhouette_score(X, labels, *, metric='euclidean', sample_size=None, 
+     random_state=None, **kwds)
+      Ejemplo en vivo
+   A continuación observarán el resultado de 
+   aplicar el índice de Silhouette para 
+   diferentes números de clusters. Identificar 
+   para qué caso se obtiene la mejor 
+   partición. 
+   Recordar que mientras más grande sea el 
+   Score de Silhouette mejor segmentación se 
+   tiene 
+    Ejemplo 1: Score de Silhouette
+    Analicemos el siguiente caso donde tenemos que elegir la cantidad apropiada de grupos. A 
+    izquierda el índice de Silhouette para k=2 grupos y a la derecha las observaciones
+    Ejemplo 1: Score de Silhouette
+    Como podemos observar tanto para el caso K=2 y 3 no se obtiene la mejor partición ya que el 
+    score se Silhouette para cada grupo está por encima de la puntuación promedio. 
+    Ejemplo 1: Score de Silhouette
+    Para el caso de k=4 vamos observando que el valor para el índice de Silhouette se va haciendo 
+    más uniforme y obtenemos mejores particiones como se puede observar a la derecha  
+    Ejemplo 1: Score de Silhouette
+    Sin embargo si aumentamos el valor de K aún más como por ejemplo k=5 se observan algunos 
+    problemas en la forma de las particiones con grupos desequilibrados
+    Ejemplo 1: Score de Silhouette
+    Un caso similar ocurre si seguimos aumentando el número de particiones, en este caso K=6 se 
+    observan que se van generando subgrupos que pierden cohesión
+    Ejemplo 1: Score de Silhouette
+    Para el caso de K=7 la partición se hace muy fina y los valores de la puntuación de Silhouette 
+    tienden a disminuir considerablemente para cada grupo y en el promedio global
+    Ejemplo 2: Score de Silhouette
+                                     ¿Que valor elegimos?
+                                     ¿Cómo lo interpretamos?
+      Ejemplo para n=2, 3, 4 y 5 clusters
+    Ejemplo: Score de Silhouette
+                                   El valor de n_clusters =4 y 
+                                   5 no es muy óptimo por 
+                                   las siguientes razones:
+                                   1. Presencia de grupos 
+                                     con puntuaciones de 
+                                     silueta por debajo del 
+                                     promedio
+                                   2. Amplias fluctuaciones 
+                                     en el tamaño de las 
+                                     parcelas de silueta.
+    Ejemplo: Score de Silhouette
+                                   1. n entre 2 y 3 parece ser el 
+                                   óptimo. La puntuación de silueta 
+                                   para cada grupo está por 
+                                   encima de la puntuación de 
+                                   silueta promedio. 
+                                   2. La fluctuación de tamaño es 
+                                   similar. 
+                                   3. Para el caso n= 3, el grosor 
+                                   es más uniforme que el gráfico 
+                                   con n=2. Por lo tanto, se puede 
+                                   seleccionar el número óptimo 
+                                   de grupos como 3.
+      Índice de Rand
+    Índice de Rand
+     Otra métrica de uso común es el Índice Rand. Calcula 
+     una medida de similitud entre dos clusters 
+     considerando todos los pares de muestras y contando 
+     los pares que se asignan en el mismo o en diferentes 
+     conglomerados en las agrupaciones predichas y 
+     verdaderas.
+     sklearn.metrics.rand_score(labels_true, labels_pred)
+    Índice de Rand
+     El único inconveniente del Índice de Rand es que 
+     asume que podemos encontrar las etiquetas de los 
+     clústeres reales y usarlos para comparar el rendimiento 
+     de nuestro modelo, por lo que es mucho menos útil que 
+     el score de Silhouette para tareas de aprendizaje 
+     no supervisado. Sus valores están entre 0 y 1
+     sklearn.metrics.rand_score(labels_true, labels_pred)
+      Índice de Rand 
+       ajustado
+    Índice de Rand ajustado
+     Otra métrica de uso común es el Índice Rand. Calcula 
+     una medida de similitud entre dos clusters 
+     considerando todos los pares de muestras y contando 
+     los pares que se asignan en el mismo o en diferentes 
+     conglomerados en las agrupaciones predichas y 
+     verdaderas.
+     sklearn.metrics.adjusted_mutual_info_score(labels_true, 
+     labels_pred, *, average_method='arithmetic')
+    Índice de Rand ajustado
+     Es una normalización que se le hace al Índice de Rand 
+     para ajustarlo por sesgo pero sin embargo tiene los 
+     mismos problemas que el Índice de Rand. Sus valores 
+     están entre 0 y 1
+     sklearn.metrics.adjusted_mutual_info_score(labels_true, 
+     labels_pred, *, average_method='arithmetic')
+       Criterio de 
+    información mutua
+    Criterio de información mutua
+     Es una medida de la similitud entre dos etiquetas de los 
+     mismos datos. con |Ui| el número de muestras en el 
+     clúster Ui y |Vj| el clúster Vj, el valor para dos clústers 
+     U y V se da como:
+     sklearn.metrics.mutual_info_score(labels_true, labels_pred, 
+     *, contingency=None)
+    Criterio de información mutua
+     De manera similar al índice Rand, uno de los principales 
+     inconvenientes de esta métrica es que requiere conocer 
+     las etiquetas verdaderas. Algo que casi nunca es 
+     posible en los problemas reales de Clustering.
+     sklearn.metrics.mutual_info_score(labels_true, labels_pred, 
+     *, contingency=None)
+     Índice de Calinski-
+       Harabasz
+    Índice de Calinski-Harabasz
+     Índice para cuantificar desempeño de 
+     algoritmos de Clustering. Mientras más grande 
+     sea, indica que la segmentación es la correcta. 
+     Por lo que no existe un límite fijo para la 
+     elección del número de grupos
+     sklearn.metrics.calinski_harabasz_score(X, labels)
+     Índice de Davies-
+        Bouldin
+    Índice de Davies-Bouldin
+     Se define como la medida de similitud promedio de 
+     cada grupo con su grupo más similar. La similitud es la 
+     relación entre las distancias dentro de un grupo y las 
+     distancias entre grupos. De esta forma, los clusters que 
+     estén más alejados y menos dispersos darán una mejor 
+     puntuación.
+     sklearn.metrics.davies_bouldin_score(X, labels)
+    Índice de Davies-Bouldin
+     `Para este caso recordar que se debe elegir el valor 
+     más bajo del índice de Davies-Bouldin para la elección 
+     de la mejor segmentación para los datos.
+     sklearn.metrics.davies_bouldin_score(X, labels)
+      Ejemplo en vivo
+   Dentro de la carpeta de clase analizaremos 
+   cómo calcular diferentes métricas para 
+   evaluar la calidad al implementar 
+   algoritmos de Clustering.
+      Evaluando desempeño 
+     algoritmos de Clustering
+     Utilizaremos lo aprendido en clase para poder evaluar 
+        el desempeño de modelos de Clustering
+             Duración: 15-20 mins
+      ACTIVIDAD EN CLASE
+    Evaluando 
+    desempeño 
+    algoritmos de 
+   Trabajaremos con base en lo desarrollado en clases 
+   previas con los datos de: Medical Insurance
+    clustering
+    1. Identificar variables para correr un algoritmo de 
+      clustering (no se puede elegir “charges””)
+    2. Elegir algún algoritmo de Clustering (e.g K-Means o 
+      clustering Jerárquico) y describir los clusters 
+      generados
+    3. Generar predicciones de clusters para cada 
+      observación en el dataset
+    4. Calcular métricas para evaluar los resultados 
+      obtenidos del(los) algoritmo(s) de Clustering 
+                                        1
+                                        2
+        Ingeniería de atributos y 
+           selección de variables
+             Deberás  entregar  el  duodécimo  avance  de  tu  proyecto  final.  Continuaremos 
+             hablando  sobre  lo  trabajado  en  el  desafío  “Evaluando  modelo  de  Machine 
+             Learning”.  Crearás  un  notebook  donde  se  terminará  el  proceso  de  Feature 
+             Engineering del desafío anterior, se busca que se puedan crear nuevas variables 
+             sintéticas que ayuden a mejorar el desempeño de los modelos de Machine Learning. 
+             Finalmente, deberás realizar un PCA sobre todas las variables utilizadas con el fin de 
+             determinar el peso relativo de cada variable en los modelos. 
+                         Recordemos…
+                                             Terminamos de realizar el 
+                                                proceso de Feature 
+                                                   Engineering
+                                             Ampliamos el número de 
+                                               variables en el MVP
+                                           Realizamos una segunda ronda 
+                                             de entrenamiento con más 
+                                                     variables
+                Clase 45
+          Desafío entregable: 
+          Evaluando modelos de               Evaluamos al algoritmo
+            Machine Learning
+             DESAFÍO 
+             ENTREGABLE
+       Ingeniería de atributos y selección de 
+       variables
+       Consigna                                           Formato
+         ✓ Crear variables sintéticas adicionales que       ✓ Se debe entregar un Jupyter notebook con 
+             permitan mejorar el desempeño del                  el nombre: 
+             modelo de ML en la entrega anterior.               “Desafío_FeatureSelection_+Nombre_ 
+         ✓ Probar distintos modelos y elegir el mejor           +Apellido.ipynb”.
+             teniendo en cuenta el Bias-Variance 
+             tradeoff                                     Sugerencias
+         ✓ Realizar PCA sobre las variables usadas y        ✓ Se recomienda realizar el PCA con el fin 
+             explorar las cargas de los 2 primeros              de obtener las variables sintéticas y 
+             componentes, identificar las variables             reducir el número de inputs con el fin de 
+             más relevantes                                     mejorar el desempeño de los modelos de 
+       Aspectos a incluir                                       ML elegidos 
+                                                            ✓ Dedicar un buen tiempo a la explicación 
+         ✓ Notebook donde se detallen todos los                 de la metodología usada
+             pasos seguidos
+                                                          Explicación del desafío
+       Ejemplo                                              ✓
+         ✓ Feature Selection (Filter Method),                   ¡Click aquí!
+       CLASE N°47
+       Glosario
+       Algoritmos de clustering: métodos no             Criterio de información mutua: Es una 
+       supervisado, donde la entrada no está            medida de la similitud entre dos etiquetas de 
+       etiquetada y la resolución de problemas se       los mismos datos. con |Ui| el número de 
+                                                        muestras en el clúster Ui y |Vj| el clúster V
+       basa en la experiencia que el algoritmo 
+                                                        Calinski Harabsz: Índice para 
+       Score de Silhouette: El Score de                 cuantificar desempeño de algoritmos 
+       Silhouette se usa para medir la distancia de     de Clustering. Mientras más grande 
+       separación entre clusters. Muestra la            sea, indica que la segmentación es la 
+       proximidad de cada punto respecto a sus          correcta.
+       clusters más cercanos. 
+                                                        Davies-Bouldin: Se define como la medida 
+       Índice de Rand: Calcula una medida de            de similitud promedio de cada grupo con su 
+       similitud entre dos clusters considerando        grupo más similar. 
+       todos los pares de muestras pero necesita 
+       etiquetas
+      ¿Preguntas?
+        Muchas 
+        gracias.
+                   Resumen 
+               de la clase hoy
+              ✓ Score de Silhouette
+              ✓ Índice de Rand
+              ✓ Índice de Rand ajustado
+              ✓ Criterio de información mutua
+              ✓ Score de Calinsksi-Harabasz
+              ✓ Score de Davies-Bouldin
+      Opina y valora 
+       esta clase

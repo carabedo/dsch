@@ -1,0 +1,455 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 49. DATA SCIENCE
+        Mejora de modelos de 
+         Machine Learning II
+      Temario
+                       48                      49                     50
+               Mejora de modelos       Mejora de modelos          Modelos de 
+                   de Machine         de Machine Learning     Ensamble y Boosting 
+                   Learning I                  II                   Models
+                ✓ Bias vs. Variance     ✓ Repaso validación 
+                   Tradeoff                de modelos           ✓ Métodos de 
+                                                                   ensamble
+                ✓ Validación de         ✓ Hypertuning           ✓ Metodologías de 
+                   modelos                 parameter               ensamble
+    Objetivos de la clase
+                 Aplicar en Python modelos de optimización e 
+                 Hypertuning de parámetros 
+                 Diferenciar los conceptos de parámetro e 
+                 hiperparametros
+           MAPA DE CONCEPTOS                                   Bias vs Variance 
+                                                                  Tradeoff
+                                                               Validación simple 
+                                                                 y LOOCV
+                                                               K fold y Stratified 
+                                                                  K-Fold
+                   Mejora de                                  Hyperparamete
+                  modelos de                                     r Tuning       Clase 
+                Machine Learning                                                49
+                                                               GridSearchCV
+                                                              RandomSearchC
+                                                                    V
+            Repaso
+                     Les proponemos tomarse unos minutos 
+                     para realizar un repaso de los conceptos 
+                      aprendidos en Kahoot, ¿están listos?
+                          Profe, puedes compartir el 
+                           PIN o link de acceso al 
+                                juego
+       Para pensar
+   ¿Cómo podemos cuantificar el desempeño de un 
+   modelo de Machine Learning? ¿Para evaluar el 
+   desempeño era indiferente si teníamos un 
+   modelo de clasificación o regresión?
+   Contesta en el chat de Zoom 
+    Repaso validación de 
+       modelos
+   Repaso validación de modelos
+    En la clase pasada estuvimos hablando de 
+    diferentes estrategias para realizar la 
+    validación de modelos de Machine Learning, 
+    vimos diferentes metodologías como:
+     1. Validación simple
+     2. LOOCV
+     3. K-fold Cross Validation
+     4. Stratified K-Fold
+    Repasemos brevemente cada una
+     Validación simple
+   Validación simple
+    Antes de hablar de la Validación Cruzada, 
+    tenemos que entender el concepto de la 
+    Validación Simple. Este tipo de validación 
+    consiste en repartir aleatoriamente las 
+    observaciones disponibles en dos grupos, 
+    uno se emplea para entrenar al modelo y 
+    otro para evaluarlo. 
+          LOOCV
+   Leave One Out Cross-Validation
+    Este método es de tipo iterativo y 
+    se inicia empleando como 
+    conjunto de entrenamiento todas 
+    las observaciones disponibles 
+    excepto una, que se excluye 
+    para emplearla como 
+    validación.  
+      K-Fold Cross 
+       Validation
+    K-Fold Cross 
+    Validation
+     El método K-Fold Cross-Validation es también un 
+     proceso iterativo. Consiste en dividir los 
+     datos de forma aleatoria en k grupos de 
+     aproximadamente el mismo tamaño, k-
+     1 grupos se emplean para entrenar el 
+     modelo y uno de los grupos se emplea 
+     como validación.
+     Stratified K-Fold
+   Stratified K-Fold
+    Es una variante mejorada de K-fold, que cuando hace los splits (las divisiones) 
+    del conjunto de train, tiene en cuenta mantener equilibradas las clases, esto 
+    significa que cada conjunto contiene aproximadamente el mismo 
+    porcentaje de muestras de cada clase objetivo que el conjunto 
+    completo. 
+       Resumen
+       Resumen 
+          Método                    Ventajas                                Desventajas
+         Validació   -   Permite una validación rápida        -   Estimación de error altamente 
+         n Simple    -   No requiere de mucho costo               variable
+                         computacional. Sencillo de           -   Tiene problemas de sesgo (bias) en 
+                         implementar                              la estimación del error
+         LOOCV       -   No hay aleatoriedad en el uso de     -   Tiene alta variabilidad 
+                         algunas observaciones                -   Computacionalmente costoso 
+                     -   Menos sesgo por mayor tamaño             (tiempo y energía)
+                         de entrenamiento
+        Resumen 
+          Método                      Ventajas                                   Desventajas
+         K-Fold       -  Conjunto de validación más grande  -        Sesgo más alto que LOOCV por 
+         Cross           que LOOCV                                   conjunto de entrenamiento más 
+         Validatio    -  Menos sesgo que esquema                     pequeño 
+         n               validación simple                        -  El algoritmo de entrenamiento debe 
+                      -  No es computacionalmente                    volver a ejecutarse desde cero k 
+                         costoso                                     veces
+         Stratified   -  Valida el rendimiento de su modelo  -       No funciona bien con datos 
+         K-Fold          en múltiples folds                          secuenciales (e.g series de tiempo)
+                      -  Puede equilibrar las clases              -  Si solo se confía en el puntaje final 
+                      -  Brinda una respuesta más estable            agregado se pierde mucha 
+                                                                     información
+       Para pensar
+   Al ajustar un modelo de regresión observan que a medida que 
+   aumenta la cantidad de datos de entrenamiento, el error de prueba 
+   disminuye y el error de entrenamiento aumenta. El error de train es 
+   bastante bajo, mientras que el error de prueba es mucho mayor. 
+   ¿Cuál crees que es la razón principal detrás de este 
+   comportamiento? 
+    A. Alta varianza
+    B. Alto sesgo en el modelo
+    C. Alta estimación de sesgo
+    D. Ninguna de las anteriores
+    Contesta en el chat de Zoom 
+       Para pensar
+   Al ajustar un modelo de regresión observan que a medida que 
+   aumenta la cantidad de datos de entrenamiento, el error de prueba 
+   disminuye y el error de entrenamiento aumenta. El error de train es 
+   bastante bajo, mientras que el error de prueba es mucho mayor. 
+   ¿Cuál crees que es la razón principal detrás de este 
+   comportamiento? 
+    A. Alta varianza
+   R// Las variables analizados presentan una alta varianza que 
+   hace que el comportamiento en test siempre presente una 
+   alta tasa de error a pesar de haber agregado más datos 
+    Contesta en el chat de Zoom 
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+      Hypertuning 
+       Parameter
+       Definición
+     Hypertuning Parameter
+       La  optimización  de  hiper  parámetros 
+       en el aprendizaje automático, tiene por 
+       objeto     encontrar      los     hiper 
+       parámetros  de  un  determinado 
+       algoritmo        de        aprendizaje 
+       automático que ofrezcan el mejor 
+       rendimiento       medido      en     un 
+       conjunto de validación. 
+      Parámetros vs 
+     Hiperparametros
+    Parámetros vs 
+    Hiperparametros
+     Parámetros: son todos aquellos que se ajustan con 
+     los datos a partir del proceso de entrenamiento y 
+     permiten que el algoritmo de ML se puede 
+     desarrollar
+     Hiperparametros: son los ajustes del modelo para 
+     que pueda resolver de manera óptima el problema 
+     de aprendizaje automático 
+    Ejemplos Parámetros e 
+    Hiperparametros
+    Parámetros: pesos en las redes neuronales, 
+    vectores de soporte en SVM, coeficientes de 
+    regresión Lineal y Logística
+    Hiperparametros: tasa de aprendizaje para el 
+    entrenamiento (controla el overfitting), valor elegido 
+    de K para el KNN, alpha, C, gamma, max_depth, 
+    random_state, penalty, cv, kernel, metric, test_size
+                      Parámetros                       Hiperparametros
+            Estimados durante el proceso de    Estimados a priori y no deben ser 
+               entrenamiento con datos             entrenados con los datos
+                       históricos 
+             Son parte integral del modelo        Externos al modelo elegido
+               Los valores estimados son          No hacen parte del modelo 
+                guardados en el modelo          entrenado y sus valores no son 
+                       entrenado                          guardados 
+             Dependientes de los datos que        Independientes de los datos 
+             entrenan al algoritmo elegido     elegidos para entrenar el modelo
+   Hypertuning Parameter
+    La optimización de hiper parámetros 
+    tiene como objetivo entonces 
+    encontrar una combinación que 
+    devuelve un modelo óptimo, 
+    reduciendo una función de pérdida 
+    predefinida y a su vez aumentando 
+    la performance del mismo.
+      Importancia
+   Hypertuning Parameter
+    Los hiper parámetros pueden tener un 
+    impacto directo en el entrenamiento 
+    de los algoritmos de aprendizaje 
+    automático. Por lo tanto, para lograr el 
+    máximo rendimiento, es importante 
+    entender cómo optimizarlos.
+    A continuación explicaremos las técnicas 
+    más utilizadas para optimizar 
+    hiperparametros
+   Métodos Hypertuning Parameter
+    Los métodos más comunes son
+    1. Ajuste Manual
+    2. Grid Search CV
+    3. Randomized Search
+    4. Halving Grid Search
+    5. Halving Randomized Search
+    6. HyperOpt-Sklearn
+    7. Bayes Grid Search
+      Ajuste manual
+   Ajuste manual 
+    Tradicionalmente, los hiper parámetros 
+    se ajustaban manualmente por ensayo 
+    y error. Esto todavía se hace 
+    comúnmente, y los ingenieros 
+    experimentados pueden "adivinar" 
+    los valores de los parámetros que 
+    ofrecerán una muy alta precisión 
+    para los modelos de aprendizaje 
+    automático. 
+       PARA RECORDAR
+    Sin embargo, existen métodos más 
+    avanzados que realizan una búsqueda 
+    continua que pueden ser más rápidos y 
+    automáticos para optimizar los hiper 
+    parámetros, a continuación explicaremos 
+    algunos de ellos
+      GridSearchCV
+     GridSearchCV
+      Es  esencialmente  un  algoritmo  de 
+      optimización    que   nos   permite 
+      seleccionar  los  mejores  parámetros 
+      para un problema de optimización de 
+      una  lista  de  opciones  de  parámetros 
+      que  nosotros  le  proporcionaremos  al 
+      método,     con    esto    logramos 
+      automatizar  la  aplicación  de  tipo 
+      ‘prueba y error’. 
+   GridSearchCV
+    Aunque  se  puede  aplicar  a  muchos 
+    problemas  de  optimización,  es  más 
+    conocido  por  su  uso  en  el  Machine 
+    Learning para obtener los parámetros 
+    en  los  que  el  modelo  ofrece  la 
+    mejor precisión.
+   GridSearchCV
+    Entonces podemos decir que el método de 
+    Grid Search, es un método de ajuste de 
+    parámetros que realiza una búsqueda 
+    exhaustiva entre todas las selecciones de 
+    parámetros candidatos, a través de 
+    bucles y probando todas las posibilidades 
+    existentes, hasta encontrar la mejor 
+    combinación de hiper parámetros existente. 
+    Randomized Search
+      Randomized Search 
+        Muchas  veces  algunos  de  los  hiper 
+        parámetros  importan  más  que  otros. 
+        Realizar  una  búsqueda  aleatoria  en 
+        lugar    de    una     búsqueda      por 
+        cuadrículas,         permite          un 
+        descubrimiento         mucho        más 
+        preciso de los buenos valores para 
+        los       hiperparámetros           más 
+        importantes.
+      Randomized Search 
+        Establece  una  cuadrícula  de  valores 
+        hiper    paramétricos      y    selecciona 
+        combinaciones         aleatorias       para 
+        entrenar  y  puntuar  el  modelo.  El 
+        número de iteraciones  de  búsqueda  se 
+        establece  en  función  del  tiempo  o  los 
+        recursos,  Scikit  Learn  ofrece  la  función 
+        RandomizedSearchCV            para      este 
+        proceso.
+    Halving Grid Search 
+     Halving Grid Search
+      Halving Grid Search es una versión 
+      optimizada  de  la  optimización  de 
+      hiperparámetros  Grid  SearchCV.  En 
+      este caso busca en una lista específica 
+      de  hiperparámetros  utilizando  un 
+      enfoque  de  reducción  a  la  mitad 
+      sucesiva         de        posibles 
+      combinaciones.
+   Halving Grid Search
+    La  estrategia  de  búsqueda  comienza 
+    evaluando todos los candidatos en una 
+    pequeña  muestra  de  los  datos  y 
+    selecciona iterativamente los mejores 
+    candidatos  utilizando  muestras  cada 
+    vez más grandes.
+    Halving Randomized 
+        Search 
+     Halving Randomized Search
+      Halving Randomized Search utiliza 
+      el  mismo  enfoque  de  reducción  a  la 
+      mitad  sucesiva  que  el  Halving  Grid 
+      Search y puede llegar a tener mejores 
+      resultados.
+      No    se   entrena   en   todas   las 
+      combinaciones  de  hiper  parámetros, 
+      sino  que  elige  aleatoriamente  un 
+      conjunto de combinaciones 
+     Hyperopt Sklearn
+     Hyperopt-Sklearn
+       Hyperopt  es  una  librería  de  Python 
+       con    código    abierto    para    la 
+       optimización bayesiana, diseñada para 
+       optimizaciones  a  gran  escala  de 
+       modelos  con  cientos  de  parámetros. 
+       Permite  escalar  la  optimización  de 
+       hiperparámetros en varios núcleos de 
+       la CPU
+     Hyperopt-Sklearn
+       Hyperopt-Sklearn  es  una  extensión 
+       de la biblioteca Hyperopt, que permite 
+       la búsqueda automática de algoritmos 
+       de aprendizaje automático y modelar 
+       hiperparámetros   para   tareas   de 
+       clasificación      y        regresión 
+       principalmente.
+    Bayes Grid Search
+     Bayes Grid Search
+       Bayes Grid Search utiliza la técnica 
+       de   optimización    bayesiana    para 
+       modelar el espacio de búsqueda con el 
+       fin   de    llegar   a   valores    de 
+       hiperparámetros     optimizados     de 
+       manera rápida. Utiliza la estructura del 
+       espacio de búsqueda para optimizar el 
+       tiempo.
+      Bayes Grid Search
+       El  enfoque  de  búsqueda  de  Bayes 
+       utiliza  los  resultados  de  evaluaciones 
+       anteriores    para     probar    nuevos 
+       candidatos      que      tienen     más 
+       probabilidades     de    dar    mejores 
+       resultados.
+   Métodos Hypertuning Parameter
+    Los métodos más comunes son
+    1. Ajuste Manual
+    2. Grid Search CV
+    3. Randomized Search
+    4. Halving Grid Search
+    5. Halving Randomized Search
+    6. HyperOpt-Sklearn
+    7. Bayes Grid Search
+        Resumen 
+              Método                     Ventajas                              Desventajas
+           Validación      Permite ahorrar tiempo y costo        Al estimar las mejores combinaciones 
+           simple          computacional                         manualmente podemos inducir error
+           GridSearch      Búsqueda exhaustiva que busca en  Puede consumir bastante tiempo y 
+           CV              case a los hiperparametros que se     recurso si no se delimita bien. Además 
+                           consideran relevantes                 puede generar overfitting
+           Randomized  Mucho más rápido que                      Si se eligen muchas iteraciones se tiene 
+           SearchCV        GridSearchCV. Menor chance de         menor velocidad. Tiene un alto potencial 
+                           Overfitting                           de generar varianza por ser aleatorio
+           Halving Grid  Puede encontrar combinaciones de        También puede generar varianza en el 
+           Search          hiperparametros con igual             proceso de estimación si no se ejecuta 
+                           precisión que GridSearchCV en         correctamente
+                           menor tiempo
+        Resumen 
+               Método                     Ventajas                                Desventajas
+            Halving         Alta precisión, menor costo            Al igual que el Randomized Search tiene 
+            Randomized  computacional y menor                      un alto potencial de generar mucha 
+            Search          probabilidad de cometer overfitting    varianza en la búsqueda
+            HyperOpt        Permite utilizar modelos               Si el espacio de búsqueda es muy grande 
+            Sklearn         secuenciales (SMBO) para utilizar      puede llegar a ser ineficiente y consumir 
+                            información a priori y posteriori      mucho tiempo
+            Bayes Grid      Limita el número de veces que un       Las distribuciones a priori deben elegirse 
+            Search          modelo necesita ser entrenado          con cuidado porque de esto depende el 
+                            para la validación                     correcto funcionamiento de la estrategia 
+      Ejemplo en vivo
+   A continuación analizaremos un ejemplo 
+   donde pondremos en práctica el proceso de 
+   Optimización de Hiperparametros con las 
+   técnicas aprendidas y revisaremos la 
+   metodología para aplicar Optimización 
+   Bayesiana.
+   Hypertuning de parámetros 
+    Utilizaremos lo aprendido en clase sobre Cross Validation 
+     e Hypertuning de Parámetros con el fin de optimizar 
+               modelos de ML
+             Duración: 15-20 mins
+      ACTIVIDAD EN CLASE
+    Hypertuning de 
+    Parámetros
+    Trabajaremos con base en lo desarrollado en clases 
+    previas con los datos de fuga en el enlace: 
+    Telco Customer Churn
+    1. Separar los datos en train (70%)/test(30%)
+    2. Utilizar uno de los métodos de validación cruzada 
+      aprendidos en clase y calcular las métricas 
+      (recall/precision/accuracy)
+    3. Evaluar el performance del modelos
+    4. Realizar optimización de hiper parámetros con 
+      alguno de los métodos aprendidos 
+             Desafío Complementario: 
+           CrossValidation y mejora de 
+                    modelos de ML 
+           Continuaremos hablando sobre lo trabajado en el desafío “Ingeniería de atributos 
+           y  selección de variables”. Crearás un notebook donde se utilizará uno de los 
+           modelos de ML utilizados con las mismas variables que en el desafío anterior pero 
+           aplicando métodos de validación cruzada. Con esto, se podrán identificar razones 
+           por las cuales hay o no mejoras en el desempeño del modelo de ML. 
+            DESAFÍO COMPLEMENTARIO
+       CrossValidation y mejora de modelos 
+       de ML                                         Formato
+        Consiga                                        ✓ Entregar un Jupyter notebook con el 
+        Deberán trabajar sobre el notebook creado:        nombre 
+         ✓ Entrenar uno de los modelos elegidos con 
+             las mismas variables pero aplicando          “Desafio_CrossValidation_+Nombre
+             alguno de los métodos aprendidos de          _ +Apellido.ipynb”.
+             validación cruzada                      Sugerencias
+         ✓ Describir si hay cambios en el 
+             performance del modelo y explicar con     ✓ Se recomienda utilizar entre 5-10 folds 
+             razones el porqué                            para el proceso de CrossValidation con 
+        Aspectos a incluir                                el fin de optimizar el tiempo de 
+         ✓ Notebook donde se detallen todos los           ejecución de la técnica. 
+             pasos seguidos
+        Ejemplo
+         ✓ K Fold CrossValidation
+      ¿Preguntas?
+      CLASE N°49
+      Glosario
+      Validación de modelos:                   Hiperparametros: son los ajustes 
+      metodologías utilizadas para evaluar     del modelo para que pueda resolver 
+      el desempeño de modelos de ML            de manera óptima el problema de 
+                                               aprendizaje automático 
+      con diferentes esquemas posibles
+                                               Hypertuning Parameter: La 
+      Parámetros: son todos aquellos           optimización de hiper parámetros en 
+      que se ajustan con los datos a partir    el aprendizaje automático, tiene por 
+      del proceso de entrenamiento y           objeto encontrar los hiper parámetros 
+      permiten que el algoritmo de ML se       de un determinado algoritmo de 
+      puede desarrollar                        aprendizaje automático que ofrezcan 
+                                               el mejor rendimiento medido en un 
+                                               conjunto de validación. 
+      Opina y valora 
+       esta clase
+                   Resumen 
+               de la clase hoy
+              ✓ Repaso de validación de modelos
+              ✓ Parámetros vs Hiperparametros
+              ✓ Optimización de hiperparametros
+        Muchas 
+        gracias.

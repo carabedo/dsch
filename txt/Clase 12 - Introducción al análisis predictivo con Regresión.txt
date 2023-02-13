@@ -1,0 +1,675 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 12. DATA SCIENCE
+           Introducción al 
+         análisis predictivo 
+            con Regresión
+     Temario
+                   11                 12                 13
+             Preprocesamien     Introducción al       Modelos 
+              to estadístico       análisis        analíticos para 
+              de los datos      predictivo con          DS I
+                                   regresión       ✓
+             ✓ Procesamiento      ✓ Nociones          Modelo analítico
+                como concepto       básicas        ✓ Machine 
+             ✓ Outliers           ✓ Aplicaciones      Learning
+                                    prácticas      ✓ Ciencia de 
+             ✓ Datos ausentes     ✓                   datos: etapas
+                                    Interpretación
+             ✓ Reducción de       ✓                ✓ Conceptos 
+                dimensionalidad     Usar el 
+                                    modelo            complementario
+                                                      s
+    Objetivos de la clase
+                 Conocer los conceptos de correlación, 
+                 causalidad y dependencia y función lineal.
+                 Entender el modelo de regresión lineal y 
+                 múltiple así como condiciones a cumplir
+                 Conocer cómo usarlo
+        MAPA DE CONCEPTOS                                                 Correlación
+                                         Concepto de 
+                                         Regresión
+                                                                          Causalidad y dependencia
+                                         Repaso de funciones 
+                                         lineales                         Función lineal e ideas previas
+                                                                          Definición de regresión
+               Análisis                  Definición y ubicación           Condiciones     para     uso    de 
+               predictivo con            de la regresión en DS            regresión
+               regresión
+                                                                          Regresión dentro de DS
+                                         Regresión lineal                 Concepto de modelo
+                                         simple y múltiple
+                                                                          Regresión lineal simple y múltiple
+                                         Interpretación y uso             Test beta, coeficiente de 
+                                         del modelo                       determinación
+                                         Aplicaciones 
+                                         prácticas
+     Introducción a las 
+    nociones básicas de 
+       regresión
+      Correlación, 
+      causalidad y 
+      dependencia
+       Punto de partida
+       ������ Planteamos la hipótesis de que podría           ������ Si este tipo de dependencia existe, 
+       existir algún tipo de dependencia de               queremos ver de qué forma se 
+       una variable con respecto a la otra.               da esa relación. 
+     Supongamos entonces, que tenemos dos 
+     variables: x e y, ahora veamos el 
+     siguiente gráfico:
+                             Pareciera que las variables tienen una 
+                             fuerte correlación positiva, y si lo 
+                             pensamos en términos de dependencia, 
+                             quiere decir que cuando la variable x 
+                             aumenta, entonces también lo hace la 
+                             variable y, y viceversa.
+                             Atención: cuando planteamos que ante 
+                             un cambio en la variable x se produce un 
+                             cambio en la variable y. A esto lo 
+                             llamaremos dependencia de la 
+                             variable y hacia la variable x.
+    Como una 
+    función 
+    matemática                         REEMPLAZAR 
+    estándar                            POR IMAGEN
+     ✓                    donde la variable y es una función 
+      de x, o sea que en definitiva y depende del 
+      cambio de x.
+     ✓ Otra forma de decir lo mismo es que x es una 
+      variable independiente, o sea que su cambio 
+      no depende de nuestro modelo.
+       Correlación no 
+       implica 
+         ✓  La frase "correlación no implica causalidad" se                     REEMPLAZAR 
+       causalidad
+             utiliza para señalar que la correlación entre dos                  POR IMAGEN
+             variables no significa necesariamente que 
+             una variable haga que ocurra la otra. 
+         ✓ Correlación es una relación o conexión mutua 
+             entre dos o más cosas (o variables)
+         ✓ Causalidad significa que existe una relación 
+             entre dos eventos en la que un evento afecta al 
+             otro.
+                      Correlación - 
+                        causalidad
+     Fuente: Lovestats (2019). “Cartoons.” The LoveStats Blog. Disponible en: 
+     lovestats.wordpress.com.
+                      Correlación - 
+                        causalidad
+     Fuente: Data Sources U.S Census Burau and National Science Foundation
+      Función lineal
+          Repaso
+     ✓                         ������ donde a y b son 
+       números reales.
+     ✓ Esta función genera una recta en el 
+       plano.
+     ✓ El valor de a (ordenada al origen) 
+       muestra cuál es el valor de y 
+       cuando x vale 0.
+     ✓ El valor de b (pendiente), por su 
+       parte, indica el grado de 
+       inclinación de la recta.
+      PARA RECORDAR
+   A tener en cuenta:
+    ✓ Una recta totalmente horizontal > tiene una 
+      pendiente igual a cero. 
+    ✓ Una recta inclinada en el sentido de la 
+      correlación positiva > tiene una pendiente 
+      positiva. 
+    ✓ Una recta inclinada en el sentido de la 
+      correlación negativa > tiene una pendiente 
+      negativa.
+    ✓ Una recta vertical > tiene pendiente infinita.
+      Ejemplos
+       El mismo valor de a con distintos           Un valor fijo de b para distintos 
+       valores de b, aquí cambia la pendiente o    valores de a, aquí cambia la posición 
+       inclinación                                 de la recta pero su inclinación 
+                                                   permanece igual.
+   Definición y ubicación 
+   de la regresión dentro 
+     de Data Science
+      Ideas previas
+  Contenido destacado
+  Si tenemos un conjunto de puntos en las 
+  variables x e y, y de alguna forma y 
+  depende de x, una forma es trazar una 
+  recta que de alguna manera puede 
+  representar a esos puntos, tomando un 
+  criterio para la representación y trazar una 
+  recta que cumpla con él.
+     Por ejemplo, una recta que pase “lo más 
+     al centro posible” del conjunto de 
+     puntos...
+                             Aquí es realizamos un ajuste de la recta 
+                             a los datos. A la técnica que utilizamos 
+                             para realizar este ajuste a un conjunto de 
+                             puntos por parte de una recta la 
+                             llamaremos “método de mínimos 
+                             cuadrados”.
+    Regresión
+     ✓ La regresión es un método para 
+       determinar la relación estadística 
+       entre una variable dependiente y 
+       una o más variables independientes. 
+     ✓ La variable independiente del 
+       cambio está asociada con el cambio 
+       en las variables independientes. 
+     ✓ El modelo está dado por la ecuación: 
+       y꞊a +bx. Con a= Intercepto y 
+       b=pendiente
+  ¡Importante!
+  Un modelo de regresión lineal no es 
+  simplemente una recta de ajuste por 
+  mínimos cuadrados, sino que deben 
+  cumplirse una serie de condiciones 
+  rigurosas que deben probarse 
+  matemáticamente. 
+    Condiciones para el 
+     uso de Regresión
+    Condiciones de uso
+     ✓ Normalidad: Los residuales del modelo 
+       tienen una distribución normal.
+     ✓ Relación lineal: Existe una relación 
+       lineal entre las variables independientes 
+       y la dependiente
+     ✓ Independencia: no hay correlación 
+       entre los residuales como lo que ocurre 
+       en series de tiempo
+     ✓ Homocedasticidad: Los residuales 
+       tienen una varianza constante. 
+    Si estos supuestos no se cumplen la 
+    regresión pierde potencia (poder predictivo)
+    ¿Cómo funciona el 
+    método de mínimos 
+     ✓ Se toma cada punto individual y se 
+    cuadros?
+       calcula su distancia vertical a la 
+       recta (denominada error y simbolizada 
+       con la letra e). 
+     ✓ Se realiza entonces la suma de todas 
+       las distancias verticales elevadas al 
+       cuadrado. 
+     ✓ El objetivo es minimizar los errores: 
+      Ejemplo
+        ✓ Existe una fórmula (¡que no veremos                           REEMPLAZAR 
+           aquí!) para encontrar precisamente la                        POR IMAGEN
+           recta que cumple con la condición de que 
+           la fórmula de mínimos cuadrados.
+        ✓ El método de mínimos cuadrados es 
+           el método por defecto que utiliza el 
+           modelo de regresión lineal.
+    Regresión dentro de 
+      Data Science
+    Machine Learning está asociado a tres 
+    tipos de problemas
+     1. Aprendizaje Supervisado
+     2. Aprendizaje No supervisado
+     3. Aprendizaje por refuerzo
+    La regresión hace parte de lo que se 
+    conoce como Aprendizaje 
+    Supervisado
+    La regresión se puede llevar a cabo 
+    por un amplio número de algoritmos 
+    (e.g Modelo lineal, XGBOOST, Random 
+    Forest, Regresión Ridge, Lasso y 
+    ElasticNet)
+                Tipos de problemas que 
+                 resuelve el Aprendizaje 
+                                Supervisado
+             Problemas de                             Problemas de 
+             clasificación                            regresión
+             Necesitan predecir la clase más          En vez de predecir categorías, 
+             probable de un elemento, en              predicen valores numéricos. Es 
+             función de un conjunto de variables      decir, la variable target en un 
+             de entrada. Para este tipo de            problema de regresión es de tipo 
+             algoritmos, la variable target o         cuantitativa.
+             respuesta, es una variable de 
+             tipo categórica.
+    Aprendizaje 
+    Supervisado
+    Entonces, ¿cómo sé si tengo que 
+    utilizar un algoritmo de 
+    clasificación o de regresión? 
+    Depende del tipo de problema que 
+    plantea mi variable a predecir ������
+            Regresión dentro de DS
+     Ruta de trabajo elemental para trabajo con algoritmos de Scikit-Learn
+     Regresión lineal 
+     simple y múltiple, 
+       nociones y
+      aplicaciones 
+       prácticas
+    El concepto modelo
+       Para poder aplicar un 
+       modelo de regresión lineal
+                        1                              2                              3
+                Aplicar un ajuste            Hacer verificaciones             Además de tener 
+                por el método de              para chequear que              una recta de ajuste, 
+               mínimos cuadrados.            el modelo sea válido                     la 
+                                                   y bueno.                   denominaremos 
+                                                                                  recta de 
+                                                                             regresión, porque 
+                                                                               cumple con las 
+                                                                               condiciones ������.
+       Regresión 
+       lineal simple
+        ✓ Si tenemos dos variables X 
+            (independiente) y Y (dependiente) y                             REEMPLAZAR 
+            tomamos una muestra de tamaño n                                  POR IMAGEN
+            tenemos: (x1,y1), (x2,y2),...... (xn,yn)
+        ✓ Para cada valor xi tenemos una variable 
+            aleatoria: Yi= Y|X 
+            De tal forma que las observaciones 
+            (y1,y2,...,yn) son una realización de las 
+            variables (Y1,Y2,....,Yn)
+        ✓ En este modelo se tiene solo una 
+            variable dependiente (Y) y una 
+            independiente (X), el modelo está dado 
+            por: y= a+bx
+       Regresión 
+       lineal múltiple
+        ✓ Es una generalización del modelo de 
+            regresión lineal simple                                     REEMPLAZAR 
+        ✓ Para este caso tenemos una variable                           POR IMAGEN
+            dependiente (Y) con varias independientes 
+            (X1,X2,X3,...,Xn) llamadas regresores
+        ✓ Si fijamos n niveles tenemos:
+        ✓ Por ende para cada observación tenemos:
+                  
+       Para pensar
+   Imaginemos que trabajamos para una compañía que 
+   vender productos de primera necesidad. Si nos piden 
+   que desarrollemos un algoritmos que obtenga la 
+   propensión (similar a probabilidad) para clientes a la 
+   marca, ¿tendría sentido usar un modelo de 
+   regresión?
+   Nota: la propensión es una medida de adherencia
+   Contesta en el chat de Zoom 
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+     Interpretación de 
+       regresión
+      El test de beta
+    Primera condición 
+    a cumplir
+     ✓ Verificación de la pendiente, 
+       asociado al valor b de la función:
+     ✓ La pregunta a responder es si 
+       efectivamente la recta es válida 
+       como representante del 
+       conjunto de datos.
+    Ejemplo  1
+     ✓ Hay una clara relación positiva, se 
+       ve que ante mayores valores de x, 
+       llegamos a mayores valores de y.
+    Ejemplo  2
+     ✓ Es clara la situación pero aquí, dada 
+       la relación negativa, la variable y 
+       disminuye conforme x aumenta y 
+       viceversa
+    Ejemplo  3
+     ✓ Aquí la recta parece tener una 
+       pendiente prácticamente nula y 
+       la recta parece representar bastante 
+       apropiadamente los datos.
+       Pero tenemos un 
+       problema…
+      Desde un punto de vista puramente 
+      matemático:
+        ✓ Supongamos, llevando este ejemplo       ✓ El término que acompaña a la x, 
+           al extremo, que la pendiente de b es       multiplicado por cero, se anula.
+           efectivamente igual a cero. Entonces   ✓ Esto significa que la variable y deja 
+           la función:                                de ser dependiente de x y como no 
+                                  se transforma       tenemos dependencia, ya no 
+                                                      podemos aplicar el modelo de 
+                                                      regresión ������.
+                  Checklist
+        ✓ ¿Tienen las puntos una relación entre      ✓ La recta de mínimos cuadrados, 
+            sí? Sí.                                      ¿representa adecuadamente a los 
+        ✓ ¿Tiene la relación una forma lineal? Sí.       datos? No
+        ✓ ¿Existe una recta que pueda ser            ✓ ¿Por qué? Porque al ser la pendiente 
+            calculada con el método de mínimos           de la recta igual a cero, no hay 
+            cuadrados, y que en ese sentido pase         dependencia de la variable y hacia la 
+            por la parte “más central” de los            variable x. Y como no hay 
+            datos? Sí.                                   dependencia, no existe un modelo 
+        ✓ ¿Puede armarse un modelo de                    de regresión lineal que 
+            regresión lineal a partir de este            represente adecuadamente a 
+            ajuste? No                                   estos datos.
+    Significancia de 
+    coeficientes
+     ✓ Este es un test estadístico para 
+       verificar que la pendiente no sea 
+       cero. Puede ser positiva o negativa, 
+       pero no debería ser cero.
+     ✓ No entraremos aquí en los detalles 
+       del test, pero sí aprenderemos a ver 
+       sus salidas. 
+     ✓ En Python podemos obtener esta 
+       información con el paquete extra 
+       pingouin
+            Las siguientes salidas fueron obtenidas con este paquete, y 
+            corresponden al primero y tercer caso planteados anteriormente:
+                   Caso 1      names        coef         se           T       pval         r2     adj_r2   CI[2.5%] CI[97.5%]
+                     0        Intercept      7.94       4.65       1.71       0.09       0.94       0.94      -1.22      17.10
+                     1             x1        0.68       0.01      58.94       0.00       0.94       0.94       0.66       0.71
+                   Caso 3      names        coef         se           T       pval         r2     adj_r2   CI[2.5%] CI[97.5%]
+                     0        Intercept   251.70        4.53      55.59       0.00       0.01        0.0     242.77     260.63
+                     1             x1       -0.01       0.01      -1.02       0.31       0.01        0.0      -0.03       0.01
+            Para el caso 1, la pendiente estará entre los valores 242.77 y 
+            260.63. Para el caso 2, la pendiente estará entre los valores -0.03 y 
+            0.01. Esto quiere decir que, con un alto nivel de confianza, la 
+            pendiente estará en un intervalo que incluye al valor cero, 
+            esto es, bien podría ser cero con una probabilidad del 95%.
+       El intervalo de confianza
+        ✓ Proporciona el mismo resultado que        ✓ Si tiene un valor positivo y uno 
+            el p-value y además agrega la              negativo, quiere decir que cubre al 
+            información acerca de dónde                cero, y por lo tanto se mantiene la 
+            podría encontrarse el valor de la          conclusión de que la pendiente 
+            pendiente (efectos de cada                 (efecto) no es significativa.
+            variable). 
+        ✓ Si el intervalo de confianza solo 
+            tiene valores positivos = la 
+            pendiente es positiva; si tiene 
+            valores negativos = la pendiente es 
+            negativa. 
+     El coeficiente de 
+      determinación
+                       Segunda 
+                       condición a 
+         REEMPLAZAR    ✓ Este es un número que puede tomar valores entre 
+         POR IMAGEN    cumplir
+                         0 y 1, y puede interpretarse también de manera 
+                         porcentual (de 0% a 100%). 
+                       ✓ Se simboliza como R2 y representa el 
+                         porcentaje de variabilidad de los datos 
+                         explicada por el modelo de regresión lineal.
+       ¿Variabilidad de los 
+       datos?
+        ✓ Es la cualidad que le da la forma al       ✓ Por lo tanto, un modelo que 
+            conjunto de datos.                           funcione bien será el que mejor 
+        ✓ La consecuencia de esta noción de              explique la variabilidad de los 
+            variabilidad es que si podemos               datos. ������
+            explicar o representar la variabilidad 
+            de los datos, podremos explicar su 
+            forma y así entenderlos mejor. 
+       Ejemplos
+         Conjunto de puntos que tiene una recta         Conjunto de datos no parece ser lo 
+         de ajuste que parece funcionar muy             más conveniente utilizar una 
+         bien, por cuanto pasa bastante bien por        recta para representar los puntos.
+         el “centro” de los datos.
+            Veamos los resultados con el valor de R2 resaltado:
+                 Caso 1      names         coef         se           T       pval          r2     adj_r2   CI[2.5%] CI[97.5%]
+                   0        Intercept      7.94        4.65       1.71        0.09       0.94       0.94       -1.22      17.10
+                   1              x1       0.68        0.01      58.94        0.00       0.94       0.94        0.66       0.71
+                 Caso 2      names         coef         se           T       pval          r2     adj_r2   CI[2.5%] CI[97.5%]
+                   0        Intercept    251.70        4.53      55.59        0.00       0.01        0.0      242.77     260.63
+                   1              x1       -0.01       0.01       -1.02       0.31       0.01        0.0       -0.03       0.01
+            Pasa satisfactoriamente el test de beta, con lo cual es un modelo válido, pero 
+            ciertamente poco útil. Convendría aplicar otro tipo de modelo que se ajuste a 
+            la forma curva de los datos. Tengamos entonces siempre en cuenta que el 
+            valor de R2 solamente tiene sentido una vez que se verificó y se pasó 
+            satisfactoriamente el test de beta. Buscamos un modelo con un valor de 
+            R2 que sea lo más pequeño posible.
+        Usar el
+        modelo
+      Aplicar el modelo para 
+      predecir valores 
+      desconocidos
+        ✓ Realizaremos predicciones para        ✓ El nuevo punto a predecir se 
+           valores de y a partir de valores         colocará sobre la recta, y se podrá 
+           de x que no habían sido utilizados       afirmar que el valor predicho tendrá 
+           antes.                                   una “fidelidad” igual al valor de 
+        ✓ Utilizando la recta de regresión          R.
+           para hacer la predicción. 
+       Ejemplo
+       Si hay algún valor de x faltante en el                            REEMPLAZAR 
+       conjunto de datos, podemos suponer que su                          POR IMAGEN
+       valor de y correspondiente corresponderá al 
+       señalado por la recta para dicho valor de 
+       x, como se muestra con el punto cuadrado de 
+       color verde.
+       ������ En Python el modelo se utiliza simplemente a 
+       través de la función predict().
+      Aplicaciones 
+       prácticas
+      Ejemplo en vivo
+   Estudiaremos un caso real aplicado donde 
+   podremos ver el uso de la regresión. 
+       EJEMPLO EN VIVO
+        ¿Qué factores están impulsando la discriminación 
+        salarial entre hombres y mujeres en su 
+        organización?
+         ✓ Contexto empresarial
+                                                                             REEMPLAZAR 
+        Su empresa está pasando por una revisión                              POR IMAGEN
+        interna de sus prácticas de contratación y 
+        compensación a los empleados. En los últimos 
+        años, su empresa ha tenido poco éxito en la 
+        conversión de candidatas de alta calidad que 
+        deseaba contratar. La gerencia plantea la 
+        hipótesis de que esto se debe a una posible 
+        discriminación salarial y quiere averiguar qué la 
+        está causando.
+    EJEMPLO EN VIVO
+     ✓ Problema empresarial: 
+    Como parte de la revisión interna, el 
+    departamento de recursos humanos se ha 
+    acercado a usted para investigar específicamente 
+    la siguiente pregunta: "En general, ¿se les paga 
+    más a los hombres que a las mujeres en su 
+    organización? Si es así, ¿qué conduciendo esta 
+    brecha?"
+     ✓ Contexto analítico: 
+    Cuenta con una base de datos de empleados que 
+    contiene información sobre varios atributos como 
+    rendimiento, educación, ingresos, antigüedad, 
+    etc. 
+    EJEMPLO EN VIVO
+    Algunos 
+    gráficos 
+    La mediana de hombres es ligeramente mayor 
+    interesantes
+    que la mediana para mujeres, la variabilidad es 
+    similar en ambos casos
+    EJEMPLO EN VIVO
+    Algunos 
+    gráficos 
+    Se logra ver que existe alguna relación entre la 
+    interesantes
+    edad y el salario. Sin embargo la relación lineal 
+    no es tan fuerte, lo cual se puede evidenciar 
+    con algunos valores atípicos 
+    EJEMPLO EN VIVO
+    Algunos 
+    gráficos 
+    A incrementar el nivel de educación parece 
+    interesantes
+    incrementar, lo cual se ve con la mayor 
+    mediana para el PhD y la menor para High 
+    School.
+    EJEMPLO EN VIVO
+    Algunos 
+    gráficos 
+    A mayor nivel de experiencia incrementa el 
+    interesantes
+    salario. Esta es una de las relaciones más 
+    fuertes de las variables que hemos analizado 
+    hasta ahora.
+    EJEMPLO EN VIVO
+    Algunos 
+    gráficos 
+    En este caso se puede ver que los hombres 
+    interesantes
+    tienden a ganar un poco más que las 
+    mujeres en todos los niveles de educación.
+    EJEMPLO EN VIVO
+    Algunos 
+    gráficos 
+    Cuando hacemos la relación teniendo en 
+    interesantes
+    cuenta el tipo de trabajo pareciera que no 
+    siempre los hombres tienden a ganar más 
+    que las mujeres (e.g Manager, Data 
+    Scientist, Graphic Designer, IT entre otros), 
+    con alta variabilidad.
+     EJEMPLO EN VIVO
+      Creamos un modelo lineal simple por medio de la librería statsmodels de la 
+      siguiente forma:
+       model1 = 'pay~age'
+       lm1   = sm.ols(formula = model1, data = Data).fit()
+       print(lm1.summary())
+      Miremos el resultado de el ajuste del modelo lineal simple
+                                          OLS Regression Results                            
+                 ==============================================================================
+                 Dep. Variable:                    pay   R-squared:                       0.285
+                 Model:                            OLS   Adj. R-squared:                  0.284
+                 Method:                 Least Squares   F-statistic:                     397.5
+                 Date:                Fri, 31 Dec 2021   Prob (F-statistic):           1.04e-74
+                 Time:                        20:54:35   Log-Likelihood:                -11384.
+                 No. Observations:                1000   AIC:                         2.277e+04
+                 Df Residuals:                     998   BIC:                         2.278e+04
+                 Df Model:                           1                                         
+                 Covariance Type:            nonrobust                                         
+                 ==============================================================================
+                                      REEMPLAZAR 
+                                  coef    std err          t      P>|t|      [0.025      0.975]
+                                       POR VIDEO
+                 ------------------------------------------------------------------------------
+                 Intercept   6.206e+04   2062.885     30.085      0.000     5.8e+04    6.61e+04
+                 age          939.2501     47.109     19.938      0.000     846.806    1031.694
+                 ==============================================================================
+                 Omnibus:                        6.360   Durbin-Watson:                   1.905
+                 Prob(Omnibus):                  0.042   Jarque-Bera (JB):                6.421
+                 Skew:                           0.182   Prob(JB):                       0.0403
+                 Kurtosis:                       2.853   Cond. No.                         134.
+                 ==============================================================================
+     EJEMPLO EN VIVO
+      Creamos un modelo lineal de regresión múltiple por medio de la librería 
+      statsmodels de la siguiente forma:
+       model2 = 'pay~age + gender'
+       lm2    = sm.ols(formula = model2, data = Data).fit()
+       print(lm2.summary())
+      Miremos el resultado de el ajuste del modelo de regresión múltiple
+                                                OLS Regression Results                           
+               
+              ==============================================================================
+              Dep. Variable:                    pay   R-squared:                       0.319
+              Model:                            OLS   Adj. R-squared:                  0.317
+              Method:                 Least Squares   F-statistic:                     233.2
+              Date:                Fri, 31 Dec 2021   Prob (F-statistic):           8.10e-84
+              Time:                        21:02:16   Log-Likelihood:                -11359.
+              No. Observations:                1000   AIC:                         2.272e+04
+              Df Residuals:                     997   BIC:                         2.274e+04
+              Df Model:                           2                                         
+              Covariance Type:            nonrobust                                         
+              ==================================================================================
+                                      REEMPLAZAR 
+                                   coef    std err          t      P>|t|      [0.025      0.975]
+                                       POR VIDEO
+              ----------------------------------------------------------------------------------
+              Intercept       5.674e+04   2151.480     26.373      0.000    5.25e+04     6.1e+04
+              gender[T.Male]  9279.3180   1317.787      7.042      0.000    6693.364    1.19e+04
+              age              948.5266     46.022     20.610      0.000     858.216    1038.837
+              ==============================================================================
+              Omnibus:                        9.898   Durbin-Watson:                   1.871
+              Prob(Omnibus):                  0.007   Jarque-Bera (JB):                9.345
+              Skew:                           0.197   Prob(JB):                      0.00935
+              Kurtosis:                       2.737   Cond. No.                         148.
+              ==============================================================================
+      EJEMPLO EN VIVO
+       Interpretación del 
+       modelo
+        ✓ Coeficiente género: Solo muestra         ✓ Coeficiente edad: si la edad 
+           masculino (T.male), porque la categoría     aumenta en un año, se espera que 
+           femenina se toma como la categoría          el salario aumente en 948,5 USD. 
+           predeterminada. (Tenga en cuenta que    ✓ Intercepto: Representa el efecto 
+           la elección de la categoría                 común a todos los individuos (salario 
+           predeterminada no importa; fácilmente       base) en este caso es de 56740 USD 
+           podríamos haber elegido hacer               al año
+           masculino como categoría                ✓ Coeficiente R²: 0.319 es bastante 
+           predeterminada y, por lo tanto, el          bajo solo 31.9% de la variabilidad es 
+           coeficiente de género sería T.female).      explicada por el modelo lineal
+           El coeficiente 9279.3180 se interpreta 
+           de la siguiente manera: para 
+           empleados de la misma edad, en 
+           promedio, los hombres ganan 
+           9279,3180 USD más que las mujeres.
+                             3
+             Estructurando un 
+               Proyecto de DS 
+     Deberás entregar el tercer avance de tu proyecto final. Crearás un notebook que deberá 
+                    (parte I)
+     tener en primera instancia un abstract (250/500 palabras) de acuerdo al dataset elegido 
+     del desafío “Visualizaciones en Python”. Además se deben establecer las preguntas 
+        e hipótesis de interés sobre el dataset elegido. Finalmente, deberás generar 
+        visualizaciones (univariadas, bivariadas o multivariadas) junto con resúmenes 
+      numéricos acompañado de la interpretaciones respectivas que permitan responder la 
+                      pregunta problema.
+      Recordemos
+                                             Elegimos un dataset de interés
+            Desafío anterior:                Realizamos gráficos con 
+         Visualización en Python             Matplotlib
+                                            Realizamos gráficos con Seaborn
+                                           Obtención de Insights preliminares
+                                                          ������
+             DESAFÍO 
+             ENTREGABLE
+        Estructurando un 
+        Proyecto de DS (parte I)
+                                                         Formato
+       Consigna                                            ✓ Entregar un archivo con formato .ipynb. 
+       Continuarás trabajando con base en lo                   Debe tener el nombre 
+       realizado en el Desafío entregable:                     “ProyectoDS_ParteI_+Apellido.ipynb”
+       Visualización en Python, en esta 
+       oportunidad deberás complementar con lo           Sugerencias
+       siguiente:                                          ✓ Preparar el código y probar los 
+         1.  Generar preguntas de interés o                    resultados con subconjuntos del 
+             hipótesis de interés sobre el dataset             conjunto original.
+             elegido para el proyecto final.               ✓ Link video explicativo
+         2.  Crear visualizaciones (univariados, 
+             bivariados o trivariados) junto con         Aspectos a incluir:
+             resúmenes numéricos básicos acordes           ✓ El código debe estar hecho en un 
+             con los tipos de variables disponibles.           notebook y debe estar probado.
+         3.  Interpretar los resultados obtenidos
+       CLASE N°12 
+       Glosario
+       Función lineal: cualquier forma lineal         Variable dependiente: se le conoce 
+       que satisfaga la ecuación y= mx +b             también como variable objetivo o a 
+       Regresión: es un método para                   modelar, es la que intentamos predecir
+       determinar la influencia de variables          Condiciones para modelo regresión 
+       independientes en una variable                 lineal: necesitamos varias condiciones 1) 
+       dependiente                                    linealidad 2) homocedasticidad (varianza 
+       Variable independiente: son todas              constante) 3) normalidad de la variable 
+       aquellas variables que permiten explicar a     respuesta e 4) independencia de 
+       una variable dependiente                       residuales
+       CLASE N°12 
+       Glosario
+       Interpretación de intercepto en               Coeficiente de determinación: es una 
+       regresión: coeficiente que representa el      métrica para cuantificar la bondad de 
+       efecto común a todos los individuos           ajuste del modelo de regresión, indica el 
+       Interpretación de pendiente en                porcentaje de varianza explicado por la 
+       regresión: representa el efecto aleatorio     regresión, mientras más cercano a uno es 
+       de una variable independiente en la           más deseable siempre y cuando se elija el 
+       variable respuesta.                           menor número de variables posibles
+      ¿Preguntas?
+                   Resumen 
+               de la clase hoy
+              ✓ Análisis predictivo con regresión
+              ✓ Interpretación de regresión
+              ✓ Aplicaciones prácticas & ejemplo en vivo de un 
+                caso real.
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.
+                       Encuesta
+                       sobre esta clase
+                       Por encuestas de Zoom
+                       ¡Terminamos la clase! 
+                       Cuéntanos qué temas te resultaron más complejos de 
+                       entender. Puedes elegir más de uno. Vamos a 
+                       retomar aquellos temas que resultaron de mayor 
+                       dificultad en el próximo AfterClass.

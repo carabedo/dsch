@@ -1,0 +1,521 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 06. DATA SCIENCE
+          Introducci√≥n a la 
+          manipulaci√≥n de 
+         datos con Pandas 
+               (Parte II)
+      Temario
+                       05                      06                     07
+                 Programaci√≥n          Introducci√≥n a la       Visualizaciones 
+                   con arrays:         manipulaci√≥n de           y primeros 
+                 Introducci√≥n a            datos con 
+                                       Pandas (Parte II)       pasos con DS I
+               ‚úì     Numpy              ‚úì Fuentes de datos 
+                  Estructura de datos
+               ‚úì Numpy y ndarrays       ‚úì Series y data frame   ‚úì Matplotlib
+               ‚úì Tipos de datos         ‚úì Selecci√≥n de datos    ‚úì Tipos de 
+               ‚úì Indexado y acceso      ‚úì Operaciones              gr√°ficos
+               ‚úì Operaciones b√°sicas    ‚úì Agregaciones
+               ‚úì                        ‚úì Strings               ‚úì Customizacione
+                  Operaciones vectorizadas                         s sobre gr√°ficos 
+    Objetivos de la clase
+                 Conocer las estructuras de datos en Pandas
+                 Comprender el uso de Pandas para la 
+                 manipulaci√≥n de grandes vol√∫menes de datos
+        MAPA DE CONCEPTOS
+                              Series
+       Estructuras de 
+       datos de Pandas
+                              Data Frames         Lectura desde 
+                                                  archivos
+                              Selecci√≥n de 
+                              elementos
+       Manipulaci√≥n de                            Tratamiento de 
+       datos con Pandas                           datos ausentes
+                              Operaciones
+                                                  Agregaciones
+       Introducci√≥n a         Conversi√≥n a        Operaciones sobre 
+       las Series de          Objetos de Tiempo   Strings
+       TIempo
+  Repaso en Kahoot
+      Ejemplo en vivo
+   Uso de filtros para obtener 
+   comportamiento de una acci√≥n
+   Aplicando conceptos de variables, √≠ndices 
+   booleanos y filtros. Los datos se 
+   encuentran en: 
+   https://raw.githubusercontent.com/JJTorresD
+   S/stocks-ds-edu/main/stocks.csv
+      Introducci√≥n a la librer√≠a en 
+      Pandas
+                   Pandas Data            Pandas     Manejo de datos nulos
+                      Frame                Series
+       Fuentes de
+     datos disponibles
+     Fuentes de datos 
+     disponibles
+   En esta pagina encontrar√°s muchas m√°s APIs para descargar informaci√≥n: 
+   https://github.com/public-apis/public-apis#finance
+       Series y 
+      Data Frame
+      Recall: Pandas 
+        Series
+       Pandas Series
+       ‚Ä¶ como los Numpy arrays, pero con √≠ndices
+         ‚úî Se construyen a partir de otros 
+             objetos particulares, como las listas 
+             o los Numpy arrays
+         ‚úî Tienen √≠ndice propio.
+             Numeros = range(50, 70, 2)
+             Numeros_serie = pd.Series(Numeros)              Ì±âÌ†Ω
+             print(Numeros_serie)
+             print(Numeros_serie[2])                         Ì±âÌ†Ω
+    Pandas Series (Resumen)
+                            En resumen, las series son objetos 1D que 
+                            tienen 3 componentes principales.
+                             ‚úî √çndices: Pueden ser cualquier tipo de 
+                              variable
+                             ‚úî Valores: Asociados a cada √≠ndice
+                             ‚úî Nombre: Que caracteriza a la serie
+    Recall: Pandas Data 
+        Frames
+    Pandas Data Frames
+    Construyendo un tablero de ajedrez con 
+    Panda Data Frames ‚ôü 
+     Ajedrez_64 = np.arange(1,65).reshape(8,8)
+     Ajedrez_df = pd.DataFrame(
+        Ajedrez_64,
+        columns=range(1,9),          Ì±âÌ†Ω
+        index=['A','B','C','D','E','F','G','H']
+     ) 
+     Ajedrez_df
+    Pandas DataFrames 
+    (Resumen)
+                            En resumen las series son objetos 2D 
+                            (filas x columnas) con las siguientes 
+                            propiedades:
+                             ‚úî √çndices: Pueden ser cualquier tipo de 
+                              variable
+                             ‚úî Valores: Asociados a cada √≠ndice y a 
+                              cada columna
+                             ‚úî Nombre: Que caracteriza al 
+                              Dataframe
+                            ¬°Son una generalizaci√≥n de series!
+      Selecci√≥n de
+        datos
+    Recall: Selecci√≥n de datos
+    Recordemos como se hac√≠a selecci√≥n de elementos en Series y DataFrames
+                                  ¬øRecuerdan la diferencia 
+                                     entre .loc y .iloc?
+    Recall: Selecci√≥n de datos
+    Recordemos como se hac√≠a selecci√≥n de elementos en Series y DataFrames
+     Operaciones con
+        datos
+     Manejo de datos 
+        nulos
+                           Manejo de datos 
+                           nulos
+                            ‚úî Los datos nulos son uno de los problemas m√°s 
+                              comunes a los que se enfrenta un Data Scientist 
+        REEMPLAZAR          ‚úî
+        POR IMAGEN            Son un problema porque muchos algoritmos no 
+                              est√°n dise√±ados para trabajar con ellos y pueden 
+                              disminuir el performance en general de las 
+                              tareas de aprendizaje autom√°tico
+                            ‚úî Son m√°s comunes de lo que las personas 
+                              piensan.
+                            ‚úî Pueden surgir por malos esquemas de muestreo, 
+                              falla de sensores, renuencia a responder en 
+                              encuestas, malos dise√±os de captura de datos
+       Manejo de datos nulos
+            Para poder manejar estos datos, en       ‚úî Reemplazar por un valor 
+            general, se usan las siguientes              seleccionado al azar de los 
+            estrategias:                                 otros registros:
+              ‚úî Introducir un valor constante             ‚óã   Usar la media, mediana 
+                 para los nulos o una categor√≠a               o moda para rellenar el 
+                 llamada Desconocido en                       valor
+                 variables categ√≥ricas                    ‚óã   Valor estimado usando un 
+                                                              modelo 
+      Podemos aplicar estas t√©cnicas 
+      de forma manual o usando 
+      SimpleImputer de ScikitLearn
+    Manejo de datos nulos
+    ¬°Les pedimos que abran el documento 
+    correspondiente en Google Collab para 
+    que podamos trabajar juntos el ejemplo 
+    en vivo sobre c√≥mo trabajar datos nulos!
+          Manejo de datos nulos: 
+          Forma Manual
+           Si  queremos  reemplazar  las  columnas 
+           num√©ricas por media podemos hacer esto                                 0      1     2     3      4     5      6   7    8
+                                                                              0  6.0  148.0  72.0  35.0    NaN  33.6  0.627  50  1.0
+                                                                              1  1.0   85.0  66.0  29.0    NaN  26.6  0.351  31  NaN
+       url='https://raw.githubusercontent.com/jbrownlee/                      2  8.0  183.0  64.0   NaN    NaN  23.3  0.672  32  1.0
+       Datasets/master/pima-indians-diabetes.csv'                   Ì±âÌ†Ω        3  1.0   89.0  66.0  23.0   94.0  28.1  0.167  21  NaN
+       df= pd.read_csv(url,sep=',', header=None)                              4  NaN  137.0  40.0  35.0  168.0  43.1  2.288  33  1.0
+       print(df.shape)
+                                                                                   0      1     2      3       4     5     6   7    8
+       # reemplazar con la media                                              0  6.00  148.0  72.0  35.00  155.55  33.6  0.63  50  1.0
+                                                                              1  1.00   85.0  66.0  29.00  155.55  26.6  0.35  31  1.0
+       df.fillna(df.mean(), inplace=True)                          Ì±âÌ†Ω         2  8.00  183.0  64.0  29.15  155.55  23.3  0.67  32  1.0
+       print(df.shape)                                                        3  1.00   89.0  66.0  23.00   94.00  28.1  0.17  21  1.0
+                                                                              4  4.49  137.0  40.0  35.00  168.00  43.1  2.29  33  1.0
+          Manejo de datos nulos: 
+          SimpleImputer
+           Si  queremos  reemplazar  las  columnas 
+           num√©ricas por media podemos hacer esto
+                                                                                0      1     2     3      4     5      6   7    8
+                                                                            0  6.0  148.0  72.0  35.0    NaN  33.6  0.627  50  1.0
+                                                                            1  1.0   85.0  66.0  29.0    NaN  26.6  0.351  31  NaN
+       url='https://raw.githubusercontent.com/jbrownlee/             Ì±âÌ†Ω     2  8.0  183.0  64.0   NaN    NaN  23.3  0.672  32  1.0
+                                                                            3  1.0   89.0  66.0  23.0   94.0  28.1  0.167  21  NaN
+       Datasets/master/pima-indians-diabetes.csv'                           4  NaN  137.0  40.0  35.0  168.0  43.1  2.288  33  1.0
+       df= pd.read_csv(url,sep=',', header=None)
+       print(df.shape)
+       # reemplazar con la media                                            Missing: 0
+                                                                                  0      1     2      3       4     5     6     7    8
+       valores = df.values #numpy array con los valores              Ì±âÌ†Ω     0  6.00  148.0  72.0  35.00  155.55  33.6  0.63  50.0  1.0
+       imputador = SimpleImputer(missing_values=np.nan,                     1  1.00   85.0  66.0  29.00  155.55  26.6  0.35  31.0  1.0
+                                                                            2  8.00  183.0  64.0  29.15  155.55  23.3  0.67  32.0  1.0
+       strategy='mean') #definir el imputador                               3  1.00   89.0  66.0  23.00   94.00  28.1  0.17  21.0  1.0
+       # transformar el dataset                                             4  4.49  137.0  40.0  35.00  168.00  43.1  2.29  33.0  1.0
+       transformados = imputador.fit_transform(valores)
+       transformados=pd.DataFrame(transformados)
+       print(transformados.head().round(2))
+       Manejo de datos nulos: 
+       SimpleImputer
+        Si  queremos  reemplazar  las  columnas 
+        num√©ricas  por  mediana  podemos  hacer 
+        esto
+     url='https://raw.githubusercontent.com/jbrownlee/       0      1     2     3      4     5      6   7    8
+     Datasets/master/pima-indians-diabetes.csv'          0  6.0  148.0  72.0  35.0    NaN  33.6  0.627  50  1.0
+     df= pd.read_csv(url,sep=',', header=None)      Ì±âÌ†Ω   1  1.0   85.0  66.0  29.0    NaN  26.6  0.351  31  NaN
+                                                         2  8.0  183.0  64.0   NaN    NaN  23.3  0.672  32  1.0
+     print(df.shape)                                     3  1.0   89.0  66.0  23.0   94.0  28.1  0.167  21  NaN
+                                                         4  NaN  137.0  40.0  35.0  168.0  43.1  2.288  33  1.0
+     # reemplazar con la mediana
+     valores = df.values #numpy array con los valores
+     imputador = SimpleImputer(missing_values=np.nan,        0      1     2     3      4     5     6     7    8
+     strategy='median') #definir el imputador            0  6.0  148.0  72.0  35.0  125.0  33.6  0.63  50.0  1.0
+                                                         1  1.0   85.0  66.0  29.0  125.0  26.6  0.35  31.0  1.0
+     # transformar el dataset                       Ì±âÌ†Ω   2  8.0  183.0  64.0  29.0  125.0  23.3  0.67  32.0  1.0
+     transformados = imputador.fit_transform(valores)    3  1.0   89.0  66.0  23.0   94.0  28.1  0.17  21.0  1.0
+     transformados=pd.DataFrame(transformados)           4  4.0  137.0  40.0  35.0  168.0  43.1  2.29  33.0  1.0
+     print(transformados.head().round(2))
+          Manejo de datos nulos: 
+          SimpleImputer
+           Si  queremos  reemplazar  las  columnas 
+           num√©ricas por moda podemos hacer esto
+       url='https://raw.githubusercontent.com/jbrownlee/                        0      1     2     3      4     5      6   7    8
+                                                                            0  6.0  148.0  72.0  35.0    NaN  33.6  0.627  50  1.0
+       Datasets/master/pima-indians-diabetes.csv'                    Ì±âÌ†Ω     1  1.0   85.0  66.0  29.0    NaN  26.6  0.351  31  NaN
+       df= pd.read_csv(url,sep=',', header=None)                            2  8.0  183.0  64.0   NaN    NaN  23.3  0.672  32  1.0
+       print(df.shape)                                                      3  1.0   89.0  66.0  23.0   94.0  28.1  0.167  21  NaN
+                                                                            4  NaN  137.0  40.0  35.0  168.0  43.1  2.288  33  1.0
+       # reemplazar con la moda
+       valores = df.values #numpy array con los valores                         0      1     2     3      4     5     6     7    8
+       imputador = SimpleImputer(missing_values=np.nan,                     0  6.0  148.0  72.0  35.0  105.0  33.6  0.63  50.0  1.0
+       strategy='most_frequent') #definir el imputador               Ì±âÌ†Ω     1  1.0   85.0  66.0  29.0  105.0  26.6  0.35  31.0  1.0
+                                                                            2  8.0  183.0  64.0  32.0  105.0  23.3  0.67  32.0  1.0
+       # transformar el dataset                                             3  1.0   89.0  66.0  23.0   94.0  28.1  0.17  21.0  1.0
+       transformados = imputador.fit_transform(valores)                     4  1.0  137.0  40.0  35.0  168.0  43.1  2.29  33.0  1.0
+       transformados=pd.DataFrame(transformados)
+       print(transformados.head().round(2))
+     Agregaciones con
+        Pandas
+       Recall: Agregaciones
+       De la clase anterior recordemos que ...           ‚úî Las agregaciones son un tipo de 
+                                                            operaci√≥n.
+                                                         ‚úî Se realizan sobre un conjunto de 
+                                                            datos.
+                                                         ‚úî Retornan un resultado que es una 
+                                                            medida resumen del conjunto de 
+                                                            datos
+                                                         ‚úî Las principales agregaciones de 
+                                                            Numpy son:  
+                                                         ‚úî np.sum, np.mean, np.max, np.std, 
+                                                            np.var
+       Agregaciones en Pandas
+       Pandas permite realizar agregaciones 
+       sobre Data Frames enteros o porciones 
+       del mismo.                                   df_lluvias_archivo = 
+       En primer lugar, importemos nuestro          pd.read_csv('<ruta>/pune_1965_to_2002.csv')
+       dataset de prueba:
+        1. Descargue el archivo con 
+            formato .csv desde este enlace.
+        2. Copie la ruta del archivo y p√°sela al 
+            m√©todo read_csv de Pandas:
+       Lectura de Datasets
+       Hasta el momento, nuestro dataset luce         ‚úî Se trata de mediciones de 
+       as√≠:                                              precipitaciones (en mil√≠metros)
+                                                      ‚úî Existe un total de trece columnas, 
+                                                         una para el a√±o y otras doce para 
+                                                         cada uno de los meses
+                                                      ‚úî Tiene un √≠ndice num√©rico.
+                                                    Ser√≠a conveniente que el √≠ndice sea la 
+                                                    columna Year Ì¥îÌ†æ 
+                                                    Construyamos un nuevo Data Frame con 
+                                                    este √≠ndice
+        Lectura de Datasets
+        indice = list(df_lluvias_archivo.Year)                  Ì±âÌ†Ω
+        indice
+        columnas = df_lluvias_archivo.columns[1:]               Ì±âÌ†Ω
+        columnas
+        Guardamos en un arreglo todos los 
+        valores, excepto los de la primera              Ì±âÌ†Ω          valores = df_lluvias_archivo.values[:,1:]
+        columna
+    Lectura de Datasets
+    Ensamblamos las partes‚Ä¶ Ì¥îÌ†æÌ¥îÌ†æ
+                                              ¬°Y listo!
+    df_lluvias = pd.DataFrame(valores,index=indice,columns=columnas)
+    df_lluvias
+                                              Ya tenemos 
+                                              preparado nuestro 
+                                              Data Frame
+       Agregaciones en Pandas
+       ‚úî Suma de las precipitaciones para cada mes.     df_lluvias.sum()
+                                                  Ì±âÌ†Ω
+       ‚úî Promedio de precipitaciones de cada a√±o.
+           df_lluvias.mean(axis='columns')   Ì±âÌ†Ω
+    El m√©todo Describe
+    El m√©todo describe
+    Este m√©todo nos ayuda a‚Ä¶   Ì±âÌ†Ω df_lluvias.describe().round(1)
+     ‚úî Obtener un breve resumen del Data 
+       Frame con describe()
+     ‚úî Redondear los valores de un Data 
+       Frame con el m√©todo round()
+      El m√©todo describe
+        ‚úî Si transponemos el Data Frame       Ì±âÌ†Ω    df_lluvias.T.describe().round(1)
+           antes de aplicar describe, obtenemos 
+           el resumen seg√∫n el a√±o
+    El m√©todo Groupby
+    El m√©todo groupby
+                            ‚úî La funci√≥n groupby () se utiliza para 
+                              dividir  los  datos  en  grupos  seg√∫n 
+                              algunos criterios. 
+                            ‚úî Los objetos pandas se pueden dividir 
+                              en cualquiera de sus ejes. 
+                            ‚úî Se puede realizar cualquier operaci√≥n 
+                              con  las  agrupaciones  siempre  y 
+                              cuando el tipo de dato lo permita
+       El m√©todo groupby
+                                                                                     Jan    Feb    Mar
+                                                                          Year                     
+         El  m√©todo  groupby  nos  permite  agrupar                       1965  0.029  0.069  0.000
+         por    una    o    m√°s     categor√≠as    y                       1966  0.905  0.000  0.000
+         posteriormente  aplicar  una  funci√≥n  de                        1967  0.248  3.390  1.320
+         resumen  por  ejemplo  (media,  mediana,                         1968  0.318  3.035  1.704
+         moda, max, min).                                                 1969  0.248  2.524  0.334
+                                                                          1970  0.070  0.000  0.001
+                                                                          1971  0.000  0.000  0.000
+                                                                          1972  0.000  0.029  0.000
+                                                                          1973  0.000  2.969  0.234
+        print(df_lluvias_archivo.groupby('Year')                   Ì±âÌ†Ω     1974  0.000  0.000  6.427
+        ['Jan','Feb','Mar'].mean().head(15))                              1975  0.333  0.585  0.000
+                                                                          1976  0.000  0.000  5.993
+                                                                          1977  0.000  2.981  3.289
+                                                                          1978  0.061  4.197  4.004
+                 ‚òï
+               Break
+               ¬°10 minutos y 
+                volvemos!
+     Operaciones con
+        Strings
+    Operaciones con 
+    Strings
+     ‚úî A menudo, tendremos que trabajar con 
+       datos en forma de Strings, es decir 
+       cadenas de caracteres o texto. 
+     ‚úî Es muy probable que no tengan el 
+       formato requerido
+     ‚úî Pandas provee m√©todos para 
+       manipular Strings masivamente
+     Operaciones con 
+     Para estos ejemplos, usaremos el dataset de presidentes de EEUU, ¬°trabajaremos juntos en 
+     Strings
+     vivo! 
+     1) Descargue el archivo .csv en este enlace.
+           Presidentes_archivo = pd.read_csv('<ruta>/us_presidents 
+           2.csv')
+     2) Seleccione la columna president
+           Presidentes_nombres = 
+           pd.Series(Presidentes_archivo['president'])
+           Presidentes_nombres
+       Operaciones con 
+       Strings
+         ‚úî Convertir a may√∫sculas
+       Veamos algunos ejemplos...
+               Presidentes_nombres.str.uppe       Ì±âÌ†Ω
+               r()
+         ‚úî Longitud total, incluyendo espacios y otros caracteres que puedan aparecer
+              Presidentes_nombres.str.len(        Ì±âÌ†Ω
+              )
+       Operaciones con 
+       Strings
+          ‚úî Evaluar si comienzan con una determinada letra
+       Veamos algunos ejemplos...
+              Presidentes_nombres.str.startswith('J     Ì±âÌ†Ω
+              ')
+          ‚úî Separar en una lista
+              usando el espacio como separador
+              Presidentes_nombres.str.split())          Ì±âÌ†Ω
+      Introducci√≥n a 
+     Series de Tiempo
+     Series de Tiempo
+     ‚Ä¶ datos, ligados al tiempo  
+      ‚úî Son tipos de datos especiales donde el tiempo toma un rol fundamental.
+      ‚úî Observamos cambios en los valores de la variable a lo largo del tiempo.
+      ‚úî Si ignoramos esa dimensi√≥n temporal, los valores pierden contexto.
+      ‚úî Son variables aleatorias indexadas por el tiempo
+     Series de Tiempo
+     ‚Ä¶ datos, ligados al tiempo ÌµêÌ†Ω 
+        Python provee tres tipos de datos relacionados al tiempo:
+         ‚úî Time stamp o marca de tiempo: representan un punto en el tiempo. 
+           Por ejemplo, fecha y hora.
+         ‚úî Per√≠odo: representan un intervalo de tiempo. Por ejemplo, los minutos 
+           transcurridos desde que comenz√≥ la clase hasta ahora.
+         ‚úî Duraci√≥n: representa una duraci√≥n medida en tiempo, pero 
+           independientemente del momento en que sucede. Por ejemplo, 15 
+           minutos.
+      Series de Tiempo
+      ‚Ä¶ datos, ligados al tiempo.
+      Por su parte, Pandas provee un objeto √≠ndice para cada uno de esos objetos temporales:
+              Tipo de dato        Objeto en Python      √çndice en Pandas
+          Time stamp            Timestamp             DateTimeIndex
+          Per√≠odo               Period                PeriodIndex
+          Duraci√≥n              Timedelta             TimeDeltaIndex
+      Ejemplo en vivo
+   Comprendamos el uso y manipulaci√≥n de 
+   objetos tipo serie de Tiempo en Python
+    Operando objetos de 
+        tiempo
+    Operando objetos de 
+    tiempo
+      ‚úî Convertir String a Timestamp:
+    Veamos algunos ejemplos... 
+      fecha = pd.to_datetime('03/01/2020',dayfirst=True)
+      fecha                           Ì±âÌ†Ω
+      ‚úî D√≠as desde el 3 de enero al del 2020 al 10 de enero del 2020:
+      fin = pd.to_datetime('10/01/2020',dayfirst=True)
+      fechas_1 = pd.date_range(start=fecha, end=fin)
+    Operando objetos de 
+    tiempo
+     ‚úî Ocho fechas desde el 3 de enero de 2020, con per√≠odos:
+    Veamos algunos ejemplos... 
+       fechas_2 = pd.date_range(start=fecha, periods=8)
+       fechas_2
+     ‚úî La frecuencia por defecto es de un d√≠a. Por lo tanto, ocho per√≠odos representan ocho 
+       d√≠as.
+                                                    Ì±âÌ†Ω
+    Operando objetos de 
+    tiempo
+      ‚úî Cambiando la frecuencia a meses en lugar de d√≠as:
+    Veamos algunos ejemplos... 
+       fechas_3 = pd.date_range(start= fecha, periods= 8, freq='M')
+       fechas_3
+        Ì±âÌ†Ω
+      ‚úî Notar que como d√≠a se toma el √∫ltimo de cada per√≠odo
+        Operando objetos de 
+        tiempo
+        ‚úî Ocho meses consecutivos, a partir del mes de inicio:
+        Veamos algunos ejemplos... 
+             mes_inicio = fecha.strftime('%Y-%m')           Ì±âÌ†Ω
+             mes_inicio
+             fechas_4 = pd.period_range(start=mes_inicio, periods=8, freq='M')
+             fechas_4
+         Ì±âÌ†Ω
+        Operando objetos de 
+        tiempo
+        Veamos algunos ejemplos... 
+         ‚úî ¬øCu√°nto tiempo pas√≥ desde el primer periodo al √∫ltimo?
+            cuanto_tiempo = fechas_3[7] - fechas_3[0]           Ì±âÌ†Ω
+            cuanto_tiempo
+        ¬°Al utilizar operadores normales sobre objetos de tiempo, obtenemos como resultado objetos 
+                                                    de tiempo! 
+    Operando objetos de 
+    tiempo
+    Veamos algunos ejemplos... 
+     ‚úî ¬øCu√°ntos meses pasaron desde el primer periodo al √∫ltimo?
+                                  Ì±âÌ†Ω
+       cuanto_tiempo_meses = fechas_3[7].to_period('M') - fechas_3[0].to_period('M') 
+       cuanto_tiempo_meses
+                         Ì±âÌ†Ω
+      Conversi√≥n a 
+      DateTimeIndex
+        Conversi√≥n a 
+        DateTimeIndex
+        Ahora que sabemos manipular objetos de tiempo, retomemos el Data 
+        Veamos algunos ejemplos...
+        Frame de presidentes. Seleccionamos las fechas de asunci√≥n
+         fechas_presidentes_orig = Presidentes_archivo['start']               Ì±âÌ†Ω
+         fechas_presidentes_orig
+         type(fechas_presidentes_orig)         Ì±âÌ†Ω                                        Ì±âÌ†Ω
+    Conversi√≥n a 
+    DateTimeIndex
+     Transformemos las fechas en formato string a √≠ndices de tiempo
+    Veamos algunos ejemplos...
+     fechas_presidentes = pd.DatetimeIndex(fechas_presidentes_orig)
+     fechas_presidentes
+       Ì±âÌ†Ω                                               ‚úî 
+    Conversi√≥n a 
+    DateTimeIndex
+     Ahora que tenemos las fechas en el tipo de dato correcto, construyamos la Serie
+    Veamos algunos ejemplos...
+     Serie_presidentes = pd.Series(Presidentes_nombres.values,index=fechas_presidentes)
+     Serie_presidentes
+                                ¬°Listo!
+                                Ya podemos ejecutar operaciones con 
+                                objetos de tiempo.
+         Manipulaci√≥n de 
+          Dataframes con 
+              Pandas
+             Duraci√≥n: 15 minutos
+         ACTIVIDAD EN CLASE
+     Manipulaci√≥n de  Trabajaremos de forma individual. 
+     Dataframes con                                  Tiempo estimado: 15 minutos.
+     Pandas
+     ‚úî Ir al siguiente repositorio y descargar el siguiente archivo (BTCUSD_1hr.csv): Bitcoin
+     ‚úî Cargar el archivo usando la funci√≥n pd.read_csv() 
+     ‚úî Utilizar el m√©todo .describe() para obtener un resumen num√©rico r√°pido de las variables
+     ‚úî Obtenga la cantidad de nulos por medio del atributo .isna()
+     ‚úî Extraer el mes de la columna Date y utilizar el m√©todo .groupby() para calcular la media mensual para cada 
+        variable
+     ‚úî Hacer un gr√°fico de los precios de Bitcoin y analizar tendencias. Que medida se les ocurre pueda establecer la 
+        volatilidad cada d√≠a?
+    CLASE N¬∞6
+    Glosario
+        Manejo de datos nulos: conjunto de t√©cnicas que nos permiten manipular y trabajar 
+        con los datos nulos (e.g Imputaci√≥n, eliminaci√≥n, reemplazo por un valor representativo 
+        como la mediana)
+        M√©todo Describe: m√©todo incorporado en los dataframes para obtener un resumen 
+        num√©rico b√°sico de las variables num√©ricas presentes (conteo, min, max, media, 
+        cuartiles, desviaci√≥n est√°ndar)
+        M√©todo Groupby: m√©todo incorporado en los dataframes que permite agrupar los 
+        datos por agluna categor√≠a espec√≠fica y aplicar alguna funci√≥n de agregaci√≥n 
+        Operaciones con strings: son todas aquellas herramientas que nos permiten 
+        manipular datos con formato str, las librer√≠as m√°s comunes para esto son re y los 
+        m√©todos incorporados de str.
+    CLASE N¬∞6
+    Glosario
+        Serie de tiempo: cualquier variable aleatoria indexada por el tiempo que se 
+        caracterizan por tener m√©todos especiales de an√°lisis (e.g Modelos ARIMA, SARIMAX) 
+        Timestamp: tipo de dato ligado a series de tiempo, bastante com√∫n y se reconoce 
+        con formato DateTimeIndex en Python
+        Period: tipo de dato ligado a series de tiempo que se reconoce con formato 
+        PeriodIndex en Python
+        TimeDelta: tipo de dato ligado a series de tiempo que se reconoce con formato 
+        TimeDeltaIndex en Python
+      ¬øPreguntas?
+                   Resumen 
+               de la clase hoy
+              ‚úì Operaciones con datos en Pandas
+              ‚úì Agregaciones con Pandas
+              ‚úì Manejo de datos ausentes
+              ‚úì Operaciones con Strings
+              ‚úì Introducci√≥n a Series de Tiempo
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.

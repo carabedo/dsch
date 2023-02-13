@@ -1,0 +1,487 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 23. DATA SCIENCE
+         Data Acquisition I
+      Temario
+                       22                      23                     24
+                  Retomando                  Data               Fundamentos 
+                    impulso              Acquisition I           de bases de 
+                                                                    datos
+                 ✓ Fases de un          ✓ Adquisición de       ✓ Bases de datos
+                    proyecto de DS          datos              ✓
+                                                                  Sistemas de gestión 
+                 ✓ Numpy y Pandas       ✓ Lectura de datos        de bases de datos
+                 ✓ Visualización            con Pandas         ✓ Tipos de sistemas de 
+                                                                  gestión
+                 ✓ Estadística          ✓ Hojas de cálculo
+                    Descriptiva                                ✓ Backup, Conexiones, 
+                                        ✓ Pyspark                 auditoría
+    Objetivos de la clase
+                 Identificar el ciclo de vida de un proyecto de 
+                 ciencia de datos
+                 Rastrear el origen de los datos y su uso
+                 Leer datos con Pandas
+        MAPA DE CONCEPTOS
+                              Data Acquisition I
+        Comprensión     Lectura de 
+        del problema    fuentes de       Hojas de        PySpark
+        de negocio       datos con       cálculo
+                         Pandas
+       Big Data Value   Lectura de      Manipulación    Big Data y 
+          Chain        archivos planos  de fechas y      PySpark
+                                        booleanos
+          Data          Lectura de     Otros formatos   PySpark vs 
+        Management      datos en APIs  estructurados      Spark
+       Maturity Model
+     Introducción a la 
+    Adquisición de datos
+     Comprensión del 
+    problema de negocio
+     Entendimiento del caso de 
+     negocio
+     Antes de buscar datos es de vital 
+     importancia tener identificado el problema 
+     de negocio y una noción elemental de cómo 
+     poder resolverlo
+     El problema de negocio está asociado con la 
+     pregunta problema que se quiere resolver, 
+     por ejemplo: ¿Existe diferencias significativas 
+     entre los salarios de hombres y mujeres en 
+     los últimos años para una compañía de IT 
+     especifica?
+     Importante: No todos los problemas en el mundo de 
+     Ciencia de Datos necesitan de un modelo
+               ¿Cómo podemos 
+                    empezar?
+      Punto de partida
+      ✓ ¿Qué problema debemos solucionar?
+      ✓ ¿Qué tipo de datos se requieren para 
+        hacer el análisis?
+      ✓ ¿Dónde podemos encontrar dichos 
+        datos?
+      ✓ ¿Cómo puedo acceder a los datos?
+      ✓ ¿Los datos que deseamos realmente 
+        existen?
+  Repositorios gratuitos
+     Casos de éxito: 
+       Amazon y 
+      Mercadolibre
+    Amazon y 
+    Mercadolibre
+     ✔ Estas dos empresas utilizan modelos 
+       predictivos con el fin de detectar 
+       futuras necesidades del cliente para 
+       poder diseñar una mejor estrategia de 
+       venta.
+    Amazon y 
+    Mercadolibre
+     ✔ Para los casos particulares de estas dos 
+       empresas generan enriquecimiento de 
+       sus bases de datos por medio de redes 
+       sociales, logs de navegación, 
+       análisis de textos, sensores, 
+       información exógena para tener una 
+       perspectiva más completa a la hora de 
+       analizar y predecir
+     ✔ Todo esto se puede corroborar cuando al 
+       usar los servicios de estas dos empresas 
+       podemos ver cómo se generan 
+       sugerencias de acuerdo al perfil del 
+       consumidor 
+      Para pensar
+   Basándonos en los casos mencionados y 
+   otros de la industria, ¿cómo piensas que se 
+   puede aplicar la estructura de Data 
+   Acquisition en la empresa donde laboras? 
+   ¿Qué desafíos se pueden presentar?
+   Contesta en el chat de zoom
+    Big Data Value Chain
+     Big Data Value Chain
+                                      Definición: Serie de pasos que 
+                                      permiten describir el flujo de 
+                                      información dentro de un sistema de 
+                                      Big Data para generar valor e 
+                                      información útil a partir de los datos. 
+                                      La cadena de valor permite el análisis 
+                                      de tecnologías de big data para cada 
+                                      paso dentro de la cadena de 
+                                      producción de una empresa.
+                                      Consta de 5 etapas (Data Acquisition, 
+                                      Data Analysis, Data Curation, Data 
+                                      Storage y Data Usage) que 
+                                      describiremos a continuación:
+     Fuente: The Big Data Value Chain: Definitions, Concepts, and Theoretical Approaches
+     Big Data Value Chain
+                                     ✔ Data acquisition: es el proceso de 
+                                       recopilación, filtrado y limpieza de 
+                                       datos antes de colocarlos en un 
+                                       almacén de datos o cualquier otra 
+                                       solución de almacenamiento en la 
+                                       que se pueda realizar el análisis de 
+                                       datos.
+                                     ✔ Data analysis: hacer que los datos 
+                                       sin procesar adquiridos sean aptos 
+                                       para su uso en la toma de decisiones
+                                     ✔ Data Curation: gestión activa de los 
+                                       datos durante su ciclo de vida para 
+                                       garantizar que cumplan con los 
+                                       requisitos de calidad de datos 
+                                       necesarios para su uso efectivo
+     Fuente: The Big Data Value Chain: Definitions, Concepts, and Theoretical Approaches
+     Big Data Value Chain
+                                     ✔ Data Storage: es la persistencia y 
+                                       gestión de datos de forma escalable 
+                                       que satisface las necesidades de las 
+                                       aplicaciones que requieren un acceso 
+                                       rápido a los datos
+                                     ✔ Data Usage: actividades 
+                                       comerciales basadas en datos que 
+                                       necesitan acceso a los datos, su 
+                                       análisis y las herramientas necesarias 
+                                       para integrar el análisis de datos 
+                                       dentro de la actividad comercial.
+     Fuente: The Big Data Value Chain: Definitions, Concepts, and Theoretical Approaches
+    Adquisición de datos
+    ¿Qué es la Adquisición de 
+    datos?
+      ✔ Se refiere a la recuperación de 
+        datos, lo cual implica decidir acerca 
+        de qué datos se requieren, por que 
+        y como para luego poder utilizarlos
+      ✔ No existe una única forma de 
+        adquirir los datos, ya que se tienen 
+        muchas fuentes disponibles
+      ✔ Los datos se pueden adquirir por 
+        medio de la organización misma 
+        (First Party), ser buscados de forma 
+        externa (Second Party) o 
+        comprados (Third Party)
+     ¿Qué hacen los 
+     Data Scientist?
+                                     Entrenan algoritmos
+                          Otras cosas                Refinan algoritmos
+                                                       Minería de datos
+                    Limpian y organizan 
+                    datos
+                                                        Recolectan Datasets
+     Data Management 
+     Maturity Model
+     Data Management 
+     Maturity Model
+      Este modelo se fundamenta en 5 
+      componentes: 
+      ✔ Estrategia de manejo de 
+        datos
+      ✔ Calidad de datos
+      ✔ Gobernanza de datos 
+      ✔ Arquitecturas 
+      ✔ Plataformas usadas junto 
+        con las operaciones 
+        asociadas a data
+        Data Management Maturity 
+        Model
+               Nivel 1             Nivel 2             Nivel 3             Nivel 4             Nivel 5
+           ✔Poca o ninguna    ✔Gobierno           ✔Data vista como    ✔Gobierno           ✔Procesos de Alta 
+             gobernanza         emergente           habilitador         centralizado y      Predicción
+           ✔Roles definidos   ✔Introducción         organizacional.     planificado       ✔Riesgo Reducido
+             dentro de los      consistente de    ✔Procesos y         ✔Gestión de         ✔Métricas bien 
+             silos              herramientas        herramientas        Riesgos asociado    establecidas y 
+           ✔Problemas de      ✔Algunos roles y      escalables          a datos             desplegadas 
+             calidad de         procesos          ✔Metas              ✔Métricas de          para medir la 
+             datos no           definidos           establecidas        Performance de      calidad de los 
+             abordados        ✔Creciente            considerando la     Iniciativas de      datos
+                                conciencia del      calidad de los      Datos
+                                impacto de los      datos             ✔Métricas de 
+                                problemas de      ✔Automatización       mejora de 
+                                calidad de datos    de procesos         Calidad de Datos
+        Las empresas se pueden clasificar en 5 niveles según su nivel de madurez 
+      Tipos de datos
+     Tipos de datos
+      ✔ Estructurados: archivos que 
+        muestran configuración de filas y 
+        columnas con variables definidas. 
+        Pueden ser ordenados y procesados 
+        fácilmente con herramientas de 
+        minería de datos
+      ✔ Semi-estructurados: Tienen 
+        características consistentes y definidas, 
+        no tienen una estructura rígida como 
+        en el esquema relacional
+      ✔ No estructurados: no tienen 
+        estructura relacional y pueden venir 
+        con información dispersa y compleja de 
+        procesar. 
+    Fuente: Lawtomated
+      Para pensar
+   ¿Conocen algunos ejemplos de datos 
+   estructurados, semi-estructurados y no 
+   estructurados? ¿Qué tan difícil creen que 
+   es procesar cada uno?
+   Contesta en el chat de zoom
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+    Lectura de fuentes 
+    de datos con Pandas
+    Timeline de Pandas
+       ✔ 2008: Inicio de desarrollo de Pandas 
+       ✔ 2009: Pandas se convirtió de libre acceso
+       ✔ 2012: Primera edición de Python
+       ✔ 2015: Se convierte en objeto del proyecto NUMFOCUS para una mejor 
+         ciencia
+    Lectura de datos
+    con Pandas
+     Recordemos algunas de las características 
+     de pandas:
+      ✔ Nos permite lidiar con archivos con 
+       codificaciones raras (parámetro 
+       encoding)
+      ✔ Nos permite manipular encabezados y 
+       columnas de archivos 
+      ✔ Permite manipulación y estructuración 
+       de datos en formato fecha
+      ✔ Definir tipos de datos a priori en la 
+       lectura
+      ✔ Identificar instancias inválidas
+      ✔ Concatenar y manipular archivos
+    Lectura de archivos 
+        planos
+       Métodos de lectura de 
+       datos
+               Método 1 (Github)
+               url = 'copied_raw_GH_link'
+               df1 = pd.read_csv(url)
+               Método 2 (Local - csv)
+               from google.colab import files
+               uploaded = files.upload()
+               import io
+               df2 = pd.read_csv(io.BytesIO(uploaded['Dataset banco 
+               ejemplo.csv']),sep=",")
+               df2.head(10)
+       Métodos de lectura de 
+           Método 3 (Local - Excel)
+       datos
+           archivo = 'archivo_d.xlsx'
+           df1 = pd.read_excel(url)
+           Método 4 (Local - txt)
+           ruta = 'C:/Downloads/David/shopping_list.txt'
+           resultados= []
+           with open(ruta) as f:
+              linea= f.readline()
+              with linea: 
+                resultados.append(linea.strip().split(“ ”))
+                linea= f.readline()
+           f.close()
+           data= pd.DataFrame(resultados,columns=['Col1',’Col2’])
+      Métodos de lectura de 
+      datos
+       Método 5 (Bases de datos SQLLite)
+       import pandas as pd
+       import sqlite3 as
+       sqlconn = sql.connect('/Users/David/Downloads/chinook.db')
+       df1 = pd.read_sql_query("SELECT * FROM invoice", conn)
+       cur = conn.cursor()
+       results = cur.execute("SELECT * FROM invoice LIMIT 
+       5").fetchall()
+       df2 = pd.DataFrame(results)
+      Métodos de lectura de 
+      datos
+           Método 6 (Local - csv)
+           host = "localhost";
+           database= "suppliers"
+           user = "postgres";
+           password = "SecurePas$1"
+           import psycopg2;
+           import config
+           conn = 
+           psycopg2.connect( host=config.host,database=config.database,
+           user=config.user,password=config.password)
+           df1 = pd.read_sql_query("SELECT * FROM invoice", conn)
+      Métodos de lectura de 
+      datos
+        Método 7 (APIs - sin credenciales)
+        import requests
+        response = requests.get("http://api.open-notify.org/astros.json")
+        print(response.status_code)
+        print(response.json())
+        res = pd.DataFrame(response.json()["people"])res.head()
+    Métodos de lectura de 
+     Códigos posibles
+    datos
+     ✔ 200: todo salió bien y se ha devuelto el resultado 
+       (si lo hay).
+     ✔ 301: el servidor lo está redirigiendo a un punto 
+       final diferente. Esto puede suceder cuando una 
+       empresa cambia los nombres de dominio o se 
+       cambia el nombre de un punto final.
+     ✔ 400: El servidor cree que hiciste una mala 
+       solicitud. Esto puede suceder cuando no envía los 
+       datos correctos, entre otras cosas.
+     ✔ 403: El recurso al que intenta acceder está 
+       prohibido: no tiene los permisos adecuados para 
+       verlo.
+     ✔ 404: El recurso al que intentó acceder no se 
+       encontró en el servidor.
+     ✔ 503: El servidor no está listo para manejar la 
+       solicitud
+      Métodos de lectura de 
+       Método 8 (APIs - con credenciales)
+      datos
+       # Se necesita un archivo tipo config.py
+       personal_api_key = "intentasaberlo"
+       import config
+       import pandas as pd; import requests
+       parameters = {
+          "personal_api_key": config.personal_api_key,
+          "date": "2021-09-22"
+       }
+       response = requests.get(url, params = parameters)
+       print(response.status_code)
+       print(response.json())
+       res = pd.DataFrame(response.json()["people"])
+       res.head()
+      Métodos de lectura de 
+       Método 9 (Librerías- Pandas_datareader)
+      datos
+       from pandas_datareader import data
+       import datetime as dtzm = data.DataReader(
+          "ZM",start='2019-1-1',end=dt.datetime.today(),
+          data_source='yahoo').reset_index()zm.head()
+       Método 10 (Librerías- Pytrends Google 
+       trends)
+       import pandas as pdfrom pytrends.request
+       import TrendReqpytrends = TrendReq()
+       keywords = ["oat milk", "soy milk", "almond milk"]
+       pytrends.build_payload(keywords, cat=0, geo='', gprop='') # 
+       data de ultimos 5 años
+       top_queries = pytrends.interest_over_time()[keywords]
+       top_queries.head()
+    Headers, Booleanos 
+       y Fechas
+  Lectura de archivos planos 
+  (Headers)
+    Lectura de archivos planos (Fechas)
+     Parseo automático de fechas
+    Lectura de archivos planos (Fechas)
+     Parsing manual de fechas
+    Lectura de archivos planos (Booleanos)
+          Read_csv puede detectar automáticamente booleanos si se le indica.
+      “asistió” se refiere a la asistencia de un alumno y “Tarea” si completo la tarea o no.
+      Ejemplo en vivo
+   Importemos los siguientes datos hosteados 
+   en el siguiente link Datos robos. 
+   Realizaremos una exploración básica de los 
+   datos y obtendremos conclusiones 
+   relevantes para el caso
+       Ejemplo en vivo
+   De los resultados obtenidos podemos concluir:
+   ✔ Los robos de autos han ido aumentando en lo corrido de 
+     Enero de 2022
+   ✔ Volskwagen, Renault y Chevrolet son las marcas más 
+     robadas
+   ✔ Los hombres son más susceptibles de sufrir robos 
+   ✔ La mayoría de los robos reportados se dan en Buenos 
+     Aires.
+     Hojas de cálculo
+    Hojas de cálculo
+      ✔ Son datos almacenados de forma tabular en 
+        filas y columnas
+      ✔ Cada fila se considera una instancia y cada 
+        columna una variable
+      ✔ A diferencia de los archivos en formato 
+        plano, pueden tener fórmulas y formato
+      ✔ Un solo archivo puede tener varias hojas de 
+        cálculo
+      ✔ Tienen algunas limitaciones de cantidad de 
+        almacenamiento y velocidad de 
+        procesamiento
+     Hojas de cálculo
+                                 La lectura de hojas de cálculo permite muchas opciones 
+                                 una de las más importantes es la lectura de hojas 
+                                 específicas, eliminación de columnas indeseables e 
+                                 índices innecesarios
+   Hojas de cálculo
+            Lectura de hojas y columnas
+    Hojas de cálculo
+       Podemos, en lugar de usar el método pd.read_excel, crear un objeto y 
+                 hacer un parsing las hojas del excel.
+                          Atributo que enumera los 
+                          nombres de las hojas. 
+     Otros formatos 
+      estructurados
+        Otros formatos 
+        estructurados (Pickle)
+                  Es un formato nativo de python que es popular para la serialización de objetos.
+              ✔ Es mucho más rápido que .csv.                        ✔ Al ser nativo de python 
+              ✔ Reduce el tamaño de los archivos en la mitad             solo puede leerse 
+                 usando técnicas de compresión.                          utilizando python.
+              ✔ No hay necesidad de especificar columnas de 
+                 datos ni argumentos.
+       PySpark
+    PySpark para BigData
+      ✔ Spark es framework y un conjunto de librerías para el procesamiento de datos 
+       en paralelo. Fue creado en 2014 para abordar muchas de las deficiencias de 
+       Apache Hadoop y es mucho más rápido que Hadoop para procesamiento analítico 
+       porque almacena datos en la memoria (RAM) en lugar de en el disco.
+      ✔ PySpark es una biblioteca de Python que permite usar Spark
+      ✔ Spark permite la construcción de una arquitectura que permite la gestión de datos 
+       en streaming, consultas, aprendizaje automático y acceso a tiempo real 
+       PySpark para BigData
+         ✔ Trabaja estrechamente con el lenguaje           ✔ Pandas es una librería muy 
+             SQL, es decir, datos estructurados.              potente que permite hacer 
+             Permite consultar los datos en tiempo            infinidad de procesos. El 
+             real.                                            problema viene cuando 
+         ✔ Spark es la herramienta adecuada                   queremos adquirir volúmenes 
+             gracias a su velocidad y sus API                 demasiado grandes para una 
+             enriquecidas para trabajar en entornos           computadora normal.
+             cloud.
+       Lectura de datos con 
+               Pandas
+     Examinaremos cómo leer datos en formato sql, JSON y 
+              cómo utilizar APIs
+             Duración: 15-20 mins
+              ACTIVIDAD EN CLASE
+         Lectura de 
+         datos con 
+         Aprenderemos a manipular SQL, JSON y APIs. 
+         Pandas
+         Exploramos las librerías sqlite3, yfinance y la función read_json 
+         con el fin de comprender cómo leer y procesar archivos en 
+         diferentes formatos. 
+           1.   Leer las tablas NBA_season1718_salary y Season_Stats 
+                dentro del archivo nba_salary.sqlite
+           2.   Leer el archivo JSON en la siguiente página Web: JSON file
+           3.   Utilizar la funcion Ticker de yfinance para extraer 
+                información relevante de la compañias PFE (Pfizer)
+         Trabajaremos de forma individual. Se estiman 5 minutos 
+         para cada ejercicio de lectura y 5 min para compartir las 
+         conclusiones.
+       CLASE N°23
+       Glosario
+       Pregunta problema: pregunta que                 Data Management Maturity Model: 
+       resume el objetivo que se quiere resolver.      proporciona pautas para ayudar a las 
+                                                       organizaciones a construir, mejorar y medir 
+       Big Data Value Chain: proceso para              su capacidad de gestión de datos 
+       describir el flujo de información dentro de     empresariales.
+       un sistema de big data para generar valor       Tipos de datos: pueden ser 
+       e información útil a partir de los datos.       estructurados, semi-estructurados y no 
+       Adquisición de datos: proceso de carga          estructurados.
+       de datos para la resolución de un               APIs: un conjunto de funciones y 
+       problema de interés.                            procedimientos para la creación de 
+                                                       aplicaciones que acceden a las 
+                                                       características o datos de un sistema 
+                                                       operativo u aplicación.
+      ¿Preguntas?
+                   Resumen 
+               de la clase hoy
+              ✓ Comprensión del problema de negocio
+              ✓ Lectura de fuentes de datos con Pandas
+              ✓ Hojas de cálculo
+              ✓ PySpark
+              ✓ Manipulación de datos API, JSON y SQL
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.

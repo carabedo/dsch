@@ -1,0 +1,497 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 13. DATA SCIENCE
+         Modelos Analíticos 
+               para DS I
+      Temario
+                       12                      13                     14
+                Introducción al            Modelos                 Modelos 
+                    análisis            analíticos para        analíticos para 
+                 predictivo con               DS I                   DS II
+                   regresión             ✓ Modelo analítico
+                 ✓ Nociones                                      ✓ Recapitulación
+                    básicas              ✓ Machine               ✓ Aprendizaje 
+                 ✓ Aplicaciones             Learning                supervisado
+                    prácticas            ✓ Ciencia de            ✓ Clasificación
+                 ✓ Interpretación           datos: etapas        ✓ KNN
+                 ✓ Usar el modelo        ✓ Conceptos             ✓ Regresión
+                                            complementario
+                                            s
+    Objetivos de la clase
+                Definir modelo analítico en Ciencia de Datos y 
+                sus etapas.
+                Realizar una introducción en conceptos sobre 
+                Machine Learning.
+                Describir tipos de Aprendizajes dentro de ML.
+              MAPA DE CONCEPTOS
+          Modelos 
+       Analíticos para                        Machine                                   Objetivo
+         Ciencia de                           Learning
+           Datos I
+                                                                                      Recolección
+                                              Evolución                               Preparación
+                                                                                                           Aprendizaje 
+                                                                                      Elección del         Supervisado
+         Definición                         Importancia                                 Algoritmo
+                                                                                                           Aprendizaje 
+                                              Ventajas                                Entrenamient              No 
+                                                                                            o              Supervisado
+           Etapas                             Usuarios                                 Validación
+                                                Fases                                    Deploy
+     Modelo analítico
+    ¿Qué es un modelo?
+    ¡Es una representación de una idea! 
+    (TODOS LOS MODELOS TIENEN ERROR)
+   Tipos de modelos
+   Modelos analíticos: representan una 
+   solución matemática de forma cerrada 
+   a unas ecuaciones sujeto a las 
+   condiciones iniciales.
+   Modelos numéricos: se basan en un 
+   procedimiento numérico como la 
+   diferencia finita o el método de 
+   elementos finitos para resolver 
+   ecuaciones complejas
+    ¿Qué es un Modelo 
+       Analítico?
+     ¿Qué es un Modelo 
+     Analítico?  
+     Es un proceso que permite 
+     combinar datos heterogéneos de muchas 
+     fuentes diferentes. 
+     Por lo tanto, facilita que distintos tipos 
+     de datos sean fusionados para 
+     posteriormente poder ser analizados de 
+     manera conjunta”. 
+     Existen múltiples definiciones al 
+     respecto. Sin embargo, elegimos esta 
+     definición para el desarrollo del 
+     curso ������
+     Etapas 
+     En la creación de 
+     Productos Analíticos con 
+     Ciencia de Datos
+    ERP(Enterprise Resource Planning)    OLTP (Online Transaction Processing)       ODS 
+    (Operational data store)
+    Etapas 
+    Este proceso está basado en una metodología 
+    estructurada de pasos:
+  Etapas 
+       Para pensar
+   Para crear un modelo analítico, utilizamos 
+   generalmente técnicas vinculadas con Data 
+   Science y con el Machine Learning, pero entonces:
+   ¿Qué es el Machine Learning? 
+   ¿Cuáles son sus particularidades y características 
+   principales?
+   Contesta mediante el chat de Zoom 
+     Inteligencia 
+     Artificial
+                          IA se refiere a la capacidad de una 
+                          máquina de realizar tareas y/o 
+                          procesos, los cuales requieren de una 
+                          “inteligencia” similar a la de un ser humano, 
+                          desarrollándolas de la misma forma o mejor 
+                          que una persona.
+   Componentes de IA
+       Para pensar
+   ¿Alguna vez se han preguntado los diferentes 
+   niveles de capacidad de la IA? ¿Cuáles serían?
+   Contesta mediante el chat de Zoom 
+     Machine Learning
+     Machine Learning
+      ✓ Método de análisis de datos que 
+       automatiza la construcción de 
+       “Modelos Analíticos”. 
+      ✓ Rama de la Inteligencia Artificial 
+       (AI), basada en la idea de que los 
+       sistemas pueden aprender de 
+       datos, identificar patrones y 
+       tomar decisiones con una 
+       mínima intervención humana.
+     Aprender en este contexto quiere decir: 
+     identificar patrones complejos en 
+     millones de datos ������
+      Nacimiento y evolución
+      La Inteligencia artificial surge 
+      como un mecanismo para suplir 
+      necesidades y nace con el 
+      desarrollo de los primeros 
+      sistemas autónomos capaces de 
+      tomar decisiones con sistemas 
+      basados en recompensas
+       Línea de tiempo 
+ Fuente: Adaptado de https://www.javatpoint.com/history-of-artificial-intelligence
+      Tipos de algoritmos de ML
+       ✓ Supervisados: Son aquellos donde se tiene etiqueta o 
+        variable respuesta. Se clasifican en problemas de 
+        regresión y clasificación. Se fundamenta en crear 
+        modelos con información histórica para luego poder 
+        predecir en el futuro
+       ✓ No supervisados: Son aquellos donde no se tiene 
+        variable respuesta. Tiene como fin encontrar patrones 
+        y asociaciones ocultas en los datos, por ejemplo en 
+        una campaña de marketing
+       ✓ Aprendizaje por refuerzo: funciona con un 
+        mecanismo de recompensa. Un agente (máquina) que 
+        interactúa con el entorno y prueba una variedad de 
+        métodos para alcanzar un resultado. El agente es 
+        recompensado o castigado en cada acción que realiza
+      Ejemplos de 
+     aplicación de ML
+     Ejemplos 
+    ✓ ¿El automóvil de conducción 
+                            ✓ ¿Saber lo que los clientes dicen 
+      autónoma de Google? 
+                             acerca de nosotros en Twitter? 
+       ������ La esencia del Machine Learning.
+                              ������ Machine learning combinado con 
+    ✓ ¿Ofertas de recomendación en 
+                              creación de reglas lingüísticas.
+      línea como las de Amazon y 
+                            ✓ ¿Detección de fraudes? 
+      Netflix? 
+                              ������ Uno de los usos más importantes en 
+       ������ Aplicaciones de ML para la vida 
+                              la actualidad del ML.
+       diaria.
+      Ejemplos de aplicación       
+       ✓ Google RankBrain: componente del 
+        
+        algoritmo central de Google que utiliza 
+        ML para determinar los resultados más 
+        relevantes para las consultas del motor 
+        de búsqueda. (ML)
+       ✓ Google DeepMind: DeepMind ha creado 
+        una red neuronal que aprende a jugar 
+        videojuegos de una manera similar a la 
+        de los humanos como una máquina de 
+        Turing neuronal (DL)
+       Ejemplos de aplicación       
+                 Algoritmos Facebook         Algoritmos Spotify
+                  ● DeepFace                  ● BART (Bandit for 
+                  ● EdgeRank                     Recommendations as 
+                  ● FBLearner flow               Treatments)
+                                              ● Last.fm
+                 Algoritmos OpenAI           Algoritmos Microsoft
+                  ● OpenAI Five               ● DMLTK (Distributed 
+                                                 Machine Learning Toolkit) 
+                 Algoritmos                   Algoritmos Apple
+                 Netflix                       ● Proyecto CALO (Cognitive 
+                  ● Cinematch                    Assistant that Learns and 
+                                                 Organize)
+                Algoritmos Twitter
+                  ●  Smart Image             Algoritmos Amazon
+                    Cropping                  ● A9
+    Importancia de ML
+       Importancia de ML
+          ✓ El interés por el ML se debe a los            ✓ Es posible producir a través de 
+             volúmenes y variedades                           este, generar modelos de 
+             crecientes de datos                              manera rápida y  automática que 
+             disponibles, el procesamiento                    puedan analizar datos grandes y 
+             computacional más económico y                    complejos. 
+             poderoso y el almacenaje de datos            ✓ De esta forma, una 
+             asequible y mucho menos costoso.                 organización tiene una mejor 
+                                                              oportunidad de identificar 
+                                                              oportunidades rentables o de 
+                                                              evitar riesgos desconocidos.
+      Beneficios
+       ✓ Rápido sistema de toma de decisiones
+       ✓ Mejores resultados
+       ✓ Manejo de información multipropósito
+       ✓ Automatización 
+       ✓ Aplicaciones con rango amplio de uso
+       ✓ Transformación de datos a insights
+       Ventajas y 
+    desventajas de ML
+     Ventajas de Machine 
+     Learning
+     ✓ Mayor conocimiento de las necesidades, gustos y 
+      hábitos de compra de los clientes.
+     ✓ Innovación en productos y soluciones tecnológicas.
+     ✓ Optimización de la producción y de la productividad.
+     ✓ Capacidad  de  realizar  acciones  preventivas  y 
+      correctivas.
+     ✓ Predicción de tendencias y necesidades.
+        Desventajas de 
+        Machine Learning
+         ✓ Insuficiente cantidad de               ✓ Interpretación de resultados: 
+            información: ML requiere conjuntos       capacidad de interpretar con precisión 
+            de datos masivos que deben ser           los resultados generados por los 
+            inclusivos/imparciales y de buena        algoritmos. 
+            calidad                               ✓ Alta susceptibilidad al error: si se 
+         ✓ Tiempo y recursos: ML necesita            entrenan modelos con datos 
+            tiempo suficiente y recursos masivos     insuficientes o con parámetros no 
+            para permitir que los algoritmos         apropiados se puede tener alto error.
+            aprendan y se desarrollen bien. 
+      ¿Quien utiliza 
+    Machine Learning?
+      ¿Quién utiliza?
+         Servicios Financieros                   Salud                     Petróleo y Gas
+       Utilizan  la  tecnología  del  Tendencia      en     rápido  Principalmente para 
+       aprendizaje    basado     en  crecimiento en la industria de  encontrar nuevas fuentes 
+       máquina  para  dos  fines  atención a la salud, gracias a  de energía,  hacer análisis 
+       principales:     identificar  la aparición de dispositivos y  de minerales del suelo, 
+       insights  importantes  en  sensores  que  pueden  usar  predicción de fallos de 
+       los  datos  y  prevenir  el  datos  para  evaluar  la  sensores de refinerías y 
+       fraude.                        salud  de  un  paciente  en  optimizar la distribución 
+                                      tiempo real.                  de petróleo para hacerla más 
+                                                                    eficiente.
+       ¿Quién utiliza?
+                     Gobierno                         Marketing y Ventas                            Transporte
+         Dependencias                   como  Los          sitios      Web        que  Analizar datos para identificar 
+         seguridad       pública      y    los  recomiendan  artículos  que  patrones  y  tendencias,  es 
+         servicios  públicos  tienen  una  podrían llegar a gustarnos con  clave  para  la  industria  del 
+         necesidad  particular  del  ML  base  en  nuestras  compras  transporte, que se sustenta en 
+         porque        tienen      múltiples  anteriores,  utilizan  ML  para  hacer las rutas más eficientes 
+         fuentes de datos de las que se  analizar  nuestro  historial  de  y                    anticipar        problemas 
+         pueden  extraer  insights.  Por  compras  y  de  tal  forma  potenciales  para  incrementar 
+         ejemplo,  el  análisis  de  datos  promocionar  otros  artículos  la rentabilidad.
+         en las Smart Cities.                    que       podrían       llegar      a 
+                                                 resultarnos de interés. 
+      ¿Quién utiliza?
+           Ciberseguridad               Desarrollo Software                    Trading
+     Los  sistemas  normales  no  ML puede transformar todo el  Luego  de  crisis  financiera  de 
+     pueden mantenerse al día con  ciclo de vida del software, con  2008,    se   pudieron   crear 
+     los  malware  y  virus  que  se  el  fin  de  modelar  nuevas  algoritmos   que    identifican 
+     crean  continuamente.  ML  se  aplicaciones    con   diversas  factores    relevantes   para 
+     puede  utilizar  para  detectar  arquitecturas  y  experiencias  predecir   las    anomalías 
+     amenazas.     Los    sistemas  de  usuario  con  base  en  el  financieras.   Por    ejemplo 
+     asistidos  pueden  encontrar  valor  comercial  y  el  impacto  GreenKey    Technologies   AI 
+     estos virus y malware, e.g la  para  la  organización,  e.g  utiliza     procesamiento    de 
+     plataforma Tessian              plataforma Neoteric.           lenguaje  natural  (NLP)  con 
+                                                                    este propósito
+   ¿Qué se requiere para 
+   crear buenos sistemas de 
+   machine learning?
+      ✓ Recursos de preparación de datos.
+      ✓ Algoritmos – básicos y avanzados.
+      ✓ Automatización y procesos iterativos.
+      ✓ Escalabilidad del Modelo en producción.
+       Para pensar
+   ¿Si quisiéramos resolver un problema donde 
+   tenemos información georeferenciada de clientes 
+   cómo podríamos utilizar el ML para incrementar 
+   las ventas de un producto? 
+   Contesta mediante el chat de Zoom 
+                 ☕
+               Break
+               ¡10 minutos y 
+                volvemos!
+    Modelo analítico en 
+    Ciencia de datos y 
+       sus etapas
+         Modelo analítico en Ciencia 
+         de datos
+          Los modelos analíticos más usados son:
+           ✓ Clasificación: predecir categorías de interés
+           ✓ Clustering:  crear  grupos  con  base  en 
+               atributos en común
+           ✓ Modelos  de  pronóstico:  con  el  fin  de 
+               anticiparse a eventos
+           ✓ Detección        de    atípicos:    identificar 
+               anomalías
+           ✓ Series de tiempo: para predecir tendencias 
+               y comportamientos esperados
+     Etapas de modelo 
+       analítico
+     Etapas de modelo analítico
+          Fase I:               Fase II:                Fase III:              Fase IV: 
+      Entendimiento          Extracción de            Limpieza de            Exploratory 
+      del problema              datos                    datos              Data Analysis
+        Fase VIII:              Fase VII:               Fase VI:               Fase V: 
+      Despliegue del         Validación del          Modelamiento            Selección de 
+         modelo                 modelo                                        variables
+                                                1 Entendimient
+                                                    o de 
+                                                    problema
+                                                   ✓ Esta consiste en la etapa fundamental donde 
+                                                      se debe comprender bien el problema que 
+                                                      se quiere resolver
+                                                   ✓ Se  debe  descomponer  el  problema  en  un 
+                                                      flujo de procedimientos que involucran una 
+                                                      perspectiva     holística    del    contexto 
+                                                      empresarial 
+                                                          2
+              Extracción de 
+              datos
+          ✓ Las  diferentes  fuentes  de  información 
+              pueden ser First, Second, Third Party, datos 
+              estructurados,  semi  estructurados  o  no 
+              estructurados, los cuales deben organizarse 
+              para tener un esquema lógico eficiente y de 
+              fácil manipulación
+          ✓ Los datos son el resultado de algún proceso 
+              de   recopilación   con   ciertos   diseños 
+              muestrales estadísticos
+                   3 Limpieza de 
+                      datos
+                       Eliminación  de  inconsistencias  dentro  de  los 
+                       datos, se debe lidiar con:
+                        ✓ Elementos duplicados que reducen variedad 
+                        ✓ Se debe elegir una estrategia para el manejo 
+                         de  datos  nulos  (Imputación,  llenado  o 
+                         eliminación)
+                        ✓ Se  debe  contar  con  herramientas  para  el 
+                         manejo de atípicos (outliers) que afectan la 
+                         varianza de los estimadores en los modelos
+       Exploratory                                                     4
+       Data Analysis
+     ✓ Se        deben      utilizar     herramientas        de 
+         visualización        para       poder       entender 
+         comportamientos y patrones en los datos
+     ✓ Se deben realizar transformaciones para el 
+         análisis comparativo de variables 
+     ✓ Un  buen  desarrollo  de  esta  etapa  puede 
+         ayudar a comprender mejor las causas que 
+         explican el fenómeno de estudio generando 
+         los primeros insights 
+                                               5      Selección de 
+                                                      variables
+                                                     ✓ También  conocido  como  Feature 
+                                                        Selection,  consiste  en  el  proceso  de 
+                                                        seleccionar      las      características 
+                                                        (variables) con más importancia en la 
+                                                        variable a predecir.
+                                                     ✓ Las          variables         altamente 
+                                                        correlacionadas      pueden      generar 
+                                                        inestabilidad  en  los  modelos  por 
+                                                        colinealidad
+                                                     ✓ Existen diversos métodos y algoritmos 
+                                                        para  realizar  este  proceso  (Wrapper, 
+                                                        Embebed, Filter)
+                               6
+        Modelamiento
+       ✓ Este es uno de los procesos más cruciales en 
+        el modelado de ciencia de datos, ya que el 
+        algoritmo de aprendizaje automático ayuda 
+        a crear un modelo de datos utilizable.
+       ✓ Hay muchos algoritmos para elegir, el 
+        modelo se selecciona en función del 
+        problema.
+       ✓ Tres tipos de aprendizaje: Supervisado 
+        (Regresión y Clasificación), No supervisado y 
+        Aprendizaje por refuerzo 
+                      7 Validación del 
+                         modelo
+                       ✓ Es fundamental comprobar que nuestros 
+                         esfuerzos de modelado cumplan con las 
+                         expectativas. 
+                       ✓ El modelamiento se aplica a los datos de 
+                         prueba para verificar precisión y si contiene 
+                         todas las características deseables.
+                       ✓ Si no se logra la precisión requerida, puede 
+                         volver a la Fase 5, elegir un modelo de datos 
+                         alternativo y luego probar el modelo 
+                         nuevamente. 
+                                  8
+        Despliegue del 
+        modelo
+       ✓ El modelo que proporciona los mejores 
+         resultados basado en los hallazgos de las 
+         pruebas se completa y se implementa en el 
+         entorno de producción siempre que se logre 
+         el resultado deseado a través de las pruebas 
+         adecuadas según las necesidades 
+         comerciales. Con esto concluye el proceso 
+         de desarrollo del modelo analítico.
+       Para pensar
+   ¿Cuál de las 8 etapas de modelos analíticos 
+   consideran que son las más relevantes en la 
+   resolución de un problema?
+   Contesta mediante el chat de Zoom 
+       Conceptos 
+     complementarios
+    Conceptos 
+    complementarios
+      ✓ En el aprendizaje basado en máquina ������ un destino se 
+       conoce como etiqueta o target.
+      ✓ En estadística ������  un destino se conoce como variable 
+       dependiente.
+      ✓ Una variable en estadística ������ se conoce como característica 
+       en el Machine Learning o Feature.
+      ✓ Una transformación, en estadística ������ se conoce como 
+       creación de característica en el ML. 
+        7 Conceptos claves
+      ✓ Features (Variables): atributos que         ✓ Aprendizaje y entrenamiento: 
+          describen las instancias en el dataset       entendimiento de patrones involucrados 
+      ✓ Feature selection: proceso de               ✓ Tuning: optimización de parámetros de 
+          seleccionar las variables óptimas            un algoritmo hasta encontrar la mejor 
+          para incluir en la fase de                   combinación 
+          entrenamiento                             ✓ Modelos: Estructuras matemáticas que 
+      ✓ Dataset: información de insumo,                se utilizan para obtener insights y 
+          material vital para el desarrollo de         predicciones
+          modelos                                   ✓ Validación: proceso para validar 
+                                                       desempeño de modelos
+     Flujo de trabajo
+     A continuación se ilustra el flujo 
+     típico de trabajo para el 
+     Aprendizaje supervisado. Es clave 
+     a nivel empresarial contar con 
+     sistemas de retroalimentación que 
+     permitan mejorar continuamente los 
+     modelos
+   Fuente:  Nguyen D. et al. (2016). Joint Network Coding and Machine Learning for Error-prone Wireless 
+   Broadcast
+    Aprendizaje no 
+    supervisado
+    A continuación se ilustra el flujo típico 
+    de trabajo para el Aprendizaje No 
+    supervisado. Algunas veces este 
+    tipo de aprendizaje se aplica como 
+    etapa previa antes del uso del 
+    Aprendizaje Supervisado
+       Investigación sobre 
+                 ML
+      ¡Llevemos lo visto hasta el momento a la acción!
+             Duración: 30 minutos
+       ACTIVIDAD EN CLASE
+    Investigación 
+    ML
+    Descripción de la actividad. 
+     1. Ingresar a la siguiente página web: 
+      https://trends.google.com/trends/?geo=US
+     2. Seleccionar su país correspondiente.
+     3.   Identificar que temas relacionados se observan y 
+      evolución temporal reciente.
+     4. 4.    Explorar tres temas de interés y analizar las 
+      tendencias del momento
+                Herramienta sugerida: Padlet 
+        CLASE N°13
+        Glosario
+        Modelo analítico: proceso que permite              Ventajas del Machine Learning: mayor 
+        combinar fuentes de diferente origen para          conocimiento de sistemas, innovación, 
+        obtener resultados sobre algún fenómeno            optimización y predicción
+        en particular                                      Desventajas del Machine Learning: 
+        Inteligencia Artificial: capacidad de              cantidad de data a veces insuficiente, 
+        una máquina para realizar tareas o                 tiempo y recurso, interpretación de 
+        procesos más eficientemente que un                 resultados, susceptibilidad al error
+        humano                                             Etapas de modelo analítico: conjunto 
+        Machine Learning: rama de la                       de pasos (i) entendimiento del problema, 
+        Inteligencia Artificial que consiste en la         ii) extracción, iii) limpieza de datos, iv) 
+        automatización de modelos analíticos               EDA, v)selección de variables, vi) 
+        con sistemas que aprenden de los datos             modelamiento, vii) validación y 
+        para generar pronósticos y ser capaces             despliegue ) que permiten el desarrollo de 
+        de tomar decisiones                                un modelo analítico
+     ¿Quieres saber más?
+     Te dejamos material 
+     ampliado de la clase
+         MATERIAL AMPLIADO
+     Recursos multimedia
+     Título
+      ✓ ¿Qué es Machine Learning? | Computerhoy.com 
+      ✓ Top10 - Aplicaciones del Machine Learning | SQDMCompany 
+      ✓ ¿Cómo se hace una aplicación de Machine Learning? | 
+         MindMachineTV 
+      Disponible en nuestro repositorio.
+      ¿Preguntas?
+                   Resumen 
+               de la clase hoy
+              ✓ Modelos Analíticos en Ciencia de Datos.
+              ✓ ML, Ventajas, Aplicaciones.
+              ✓ Etapas y Tipos de Aprendizajes.
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.

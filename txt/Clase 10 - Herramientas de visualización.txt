@@ -1,0 +1,613 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 10. DATA SCIENCE
+            Herramientas 
+           de visualización
+      Temario
+                       09                      10                     11
+                  Estadística           Herramientas           Procesamiento 
+                  Descriptiva          de Visualización        estadísticos de 
+                                                                  los datos
+                   ✓ Introducción        ✓ Introducción         ✓ Procesamiento 
+                   ✓ Medidas de          ✓ Gráficos                como concepto
+                      resumen               Univariados
+                                                                ✓ Outliers 
+                   ✓ Distribución de     ✓ Gráficos 
+                      variables             Bivariados          ✓ Datos ausentes
+                                         ✓ Forma de los         ✓ Reducción de 
+                   ✓ Intervalos de          datos
+                      confianza                                    dimensionalidad
+                                         ✓ Gráficos de dos 
+                                            dimensiones
+    Objetivos de la clase
+                 Conocer la relevancia de la visualización de 
+                 datos.
+                 Identificar cómo lograr una comunicación 
+                 efectiva.  
+                 Comprender un análisis básico, las relaciones 
+                 entre elementos y la distribución.
+                 Conocer gráficos en más de dos dimensiones.
+              MAPA DE CONCEPTOS
+                                                         Herramientas 
+                                                         de 
+                                                         visualización
+             Visualización de                           Relaciones entre      Análisis de           Gráficos de más 
+             datos                Análisis básico       elementos             distribuciones        de dos 
+                                                                                                    dimensiones
+             Introducción         Bar chart             Series de tiempo      Entendimiento         Más de dos
+             Elementos            Histogramas           Diagramas de          Boxplot               Más de tres
+                                                        Dispersión
+                                                        Correlación                                 Otras formas
+                                                                                                    Radar
+                                                                                                    Chernoff
+  Repasemos con…
+    Introducción a tipos 
+       de gráficos 
+      estadísticos y 
+    buenas prácticas de 
+         uso
+      Introducción
+             Los datos son un 
+                       arma 
+                 de doble filo
+          Para hacer el bien         Desinformar y engañar
+              Tenemos que ser fuertemente responsables
+         “Con un gran poder viene una 
+         gran responsabilidad”
+                                                                                                        -    Peter Parker
+       ¿Cómo pensar con 
+       responsabilidad si lo único
+        que estoy haciendo es 
+       analizar datos?
+         ✔ La respuesta está en la salida del          ✔ Pueden comunicarse en forma 
+            proceso > Son fundamentalmente                 directa o utilizarse como entrada de 
+            insumos para la toma de decisiones.            algoritmos y desarrollos de ciencia 
+                                                           de datos.
+       Comunicación de 
+       resultados
+        ✔ Prácticas y herramientas de la            Para lo que sigue, tengamos presente lo 
+            visualización de datos.                 visto en la clase anterior, dado que hay 
+        ✔ Preparación detallada para la             una conexión muy estrecha entre la 
+            presentación efectiva de la             definición de una variable y su 
+            información recolectada.                visualización.
+        ✔ Un gráfico siempre debe decir 
+            mucho con una economía de 
+            elementos.
+     Propósitos de un 
+        gráfico
+      Propósitos de 
+      un gráfico
+        ✔ Los gráficos suelen tener un mayor impacto                    REEMPLAZAR 
+            que las tablas                                               POR IMAGEN
+       En las tablas es difícil enfatizar:
+        a) Tendencias
+        b) Patrones
+        c) Diferencias
+       Siempre existirá la preferencia por presentar la 
+       información por medio de gráficos.
+     Tipos de gráficos
+      Tipos de 
+       Visualizaciones Univariadas
+      gráficos
+        ✔ Barras                                              REEMPLAZAR 
+        ✔ Histogramas                                         POR IMAGEN
+        ✔ Líneas
+       Visualizaciones Bivariadas
+        ✔ Diagramas de dispersión
+        ✔ Boxplots
+        ✔ Barras y boxplots múltiples           Ejemplo de boxplots múltiples que permiten comparar 
+                                                        categorías en diversos niveles
+     Elementos de un 
+        gráfico
+       Características de un 
+       gráfico
+         ✔ Un título entendible, claro y conciso        ✔ Debe transmitir un mensaje claro
+            para lograr comunicar efectivamente         ✔ Debe resaltar puntos importantes
+         ✔ Etiquetas en ejes (x,y,z) entendibles        ✔
+            y acordes con unidades de medición              Buen formato de estilo (balance de 
+            si fuera el caso                                colores, no recargada)
+         ✔ Una nota que indique: a) fuente de 
+            datos y b) descripción adicional de 
+            ser necesaria suele ayudar a un 
+            mejor entendimiento
+  Ejemplo
+               12
+               10
+                 8
+                 6                                                                            Racing 
+                 4                                                                            Independiente
+                                                                                              Vélez
+                 2
+                 0
+                        Partidos         Goles             Goles          Puntos
+                        jugados       convertidos        recibidos
+       Gráficos
+      univariados
+     Gráficos de barras
+       Fundamentos
+         ✔ Contar conjunto de datos.                      ✔ Eje      horizontal    representa     las 
+                                                              categorías  y  una  barra  por  cada 
+         ✔ Mostrar         valores      puntuales             una de ellas.
+             asociados a una categoría.
+                                                          ✔ Eje       vertical    representa       la 
+         ✔ Se utilizan con datos categóricos.                 cantidad o valor de los elementos 
+                                                              de la categoría en cuestión.
+                       Ejemplo
+       REEMPLAZAR      Tenemos las puntuaciones de 5 equipos, del E1 al E5, 
+       POR IMAGEN      separados por categorías, nombradas como Categoría 
+                       1 en color azul y Categoría 2 en color anaranjado.
+                       Recomendación: No usar gráficos de barras para 
+                       representar datos en el tiempo porque las relaciones y 
+                       tendencias son más difíciles de visualizar. ¡Más 
+                       adelante lo veremos con series de tiempo!
+       Ejemplo
+          ✔ Carguemos el siguiente dataset que tiene 
+              información de los pasajeros que abordaron el 
+              Titanic.                                                          REEMPLAZAR 
+          ✔ Hacemos un conteo por Pclass y realizamos un                        POR IMAGEN
+              gráfico de barras comparativo de frecuencias.
+          import seaborn as sns
+          import pandas as pd
+          df=pd.read_csv("https://raw.githubusercontent.com/ven-27/datasets/
+          master/titanic.csv")
+          df_n=df[['Survived','Sex','Pclass']].groupby(by=['Sex','Pclass']).count
+          ().reset_index()
+          df_n.head()
+          plt.figure(figsize=(10,6))
+          sns.barplot(y='Survived',x='Sex',hue='Pclass',data=df_n);
+       Ejemplo
+        Miremos un ejemplo con una librería llamada Bokeh que permite generar gráficos 
+        interactivos.
+     df_x=df[['Survived','Pclass']].groupby(by=['Pclass']).count().reset_index()
+     df_x['Pclass']=df_x['Pclass'].astype('str')
+     from bokeh.palettes import Spectral6
+     from bokeh.io import show, output_notebook
+     from bokeh.models import CategoricalColorMapper, ColumnDataSource, FactorRange
+     from bokeh.plotting import figure
+     source = ColumnDataSource(data=dict(Pclass=df_x.Pclass, counts=df_x.Survived, color=Spectral6))
+     p = figure(x_range=df_x.Pclass, plot_height=250, toolbar_location=None, title="Clases involucradas")
+     p.vbar(x='Pclass', top='counts', width=0.9, color='color', legend="Pclass", source=source)
+     p.xgrid.grid_line_color = None;p.xaxis.axis_label = "Clase"
+     p.yaxis.axis_label = "Frecuencia"
+     p.legend.orientation = "horizontal"
+     p.legend.location = "top_center";p.add_tools(HoverTool())
+     show(p)
+    Ejemplo
+    Las gráficas obtenidas en esta librería son de alta calidad con la posibilidad de interactuar 
+    de manera dinámica con el usuario por lo que se usa mucho en el desarrollo de Dashboards
+          Para pensar
+    ¿En cuál de los siguientes casos podrías 
+    usar un gráfico de barras?
+     ✔ Medición de salario mínimo/máximo en 5 países de Latinoamérica. 
+     ✔ Medición de salario mínimo en 5 países de Latinoamérica, con una 
+       comparación trimestral. 
+     ✔ Evolución del salario mínimo en 5 países de Latinoamérica en el último 
+       semestre. 
+    Contesta mediante la encuesta de Zoom 
+      Histogramas
+         Fundamentos
+           ✔ Se        utiliza     usualmente          para         ✔ Muestran una distribución de datos 
+               variables numéricas continuas                             (Tendencia  central  y  Simetría  vs 
+           ✔ Muestran  las  frecuencias  de                              Asimetría).
+               aparición para cada intervalo de                     ✔ Similares  a  los  gráficos  de  barras, 
+               valores de la variable.                                   pero     muy  diferentes  en  su 
+                                                                         comportamiento.
+       Ejemplo
+       Qué:      Consideremos        los    datos      Cómo: se toman todos los valores de la 
+       correspondientes  a  las  alturas  de  500      variable, desde el mínimo al máximo y se 
+       personas,    medidas     en   centímetros.      divide el rango correspondiente en 
+       Organizaremos  las  mediciones  de  altura      intervalos de igual tamaño. 
+       disponibles    en    intervalos,   también      Generalmente, los lenguajes de 
+       llamados bins.                                  programación ya proveen un valor 
+                                                       calculado.
+                       !  Un  histograma  muestra  la  importancia  de  cada 
+                       intervalo de valores con respecto al total de datos.
+                Histograma de frecuencias           Histograma de frecuencias 
+                        absolutas                            relativas
+       ¿Qué nos muestran?
+       En el eje horizontal, se muestra la               La cantidad de cada intervalo se divide 
+       variable a ser analizada.                         por el total de observaciones.
+       Cada intervalo de valores de la variable          En nuestros casos de uso, la forma es la 
+       tiene una altura que representa la                misma, lo que cambia es la interpretación 
+       cantidad de observaciones en dicho                de los resultados: en el primero hablamos 
+       intervalo.                                        de cantidad de observaciones para cada 
+       Esta cantidad puede ser:                          intervalo de la variable, en el segundo 
+         ✔ ¿Cuántas unidades hay para cada               hablamos de proporción de veces de cada 
+             intervalo de la variable?                   intervalo de la variable con respecto al 
+         ✔ ¿Cuánto del total representa cada             total de observaciones de la variable.
+             intervalo de la variable?
+     Ejemplo
+      import seaborn as sns
+      sns.histplot(data=df, x="Fare",bins=20)
+      sns.histplot(data=df, x="Age",bins=20)
+                                    Miremos  un  poco  la  distribución  de  las 
+                                    variables Fare (Tarifa) y Age (Edad) para 
+                                    los datos
+                                   Para el caso de Fare se tiene una distribución 
+                                   asimétrica a derecha con valores entre 0-500$. 
+                                   Por el contrario la distribución de edad tiende a 
+                                   ser más normal con menor asimetría con valores 
+                                   entre 0-80 años.
+       Ejemplo
+       Ahora analicemos un ejemplo con la librería Bokeh
+       import numpy as np
+       from bokeh.io import show, output_file
+       from bokeh.plotting import figure
+       data = df.Age.values
+       data=data[~np.isnan(data)]
+       hist, edges = np.histogram(data, density=True, bins=20)
+       p = figure(plot_height=300,plot_width=500, title='Hitograma de 
+       edades')
+       p.quad(top=hist, bottom=0, left=edges[:-1], right=edges[1:], 
+       line_color="white")
+       p.xaxis.axis_label = "Edad"
+       p.yaxis.axis_label = "Frecuencia"
+       p.add_tools(HoverTool())
+       #output_file("hist.html")
+       show(p)
+     Ejemplo
+     import numpy as np
+     from bokeh.io import show, output_file
+     from bokeh.plotting import figure
+     data = df.Fare.values
+     data=data[~np.isnan(data)]
+     hist, edges = np.histogram(data, density=True, bins=20)
+     p = figure(plot_height=300,plot_width=500, title='Histograma de 
+     tarifas')
+     p.quad(top=hist, bottom=0, left=edges[:-1], right=edges[1:], 
+     line_color="white")
+     p.xaxis.axis_label = "Tarifa (USD)"
+     p.yaxis.axis_label = "Frecuencia"
+     p.add_tools(HoverTool())
+     #output_file("hist.html")
+     show(p)
+     Series de tiempo
+       PARA RECORDAR
+    Para tener en cuenta…
+    Siempre que tengamos una variable que 
+    tiene algún tipo de evolución a través 
+    del tiempo, o donde organizar sus 
+    valores a lo largo del tiempo tiene 
+    sentido para el análisis, podemos 
+    graficar una serie de tiempo.
+       PARA RECORDAR
+    Para tener en cuenta…
+    Para este tipo de gráfico dibujaremos un 
+    punto cuya altura representará el valor de 
+    la variable y cuya posición con respecto al 
+    eje horizontal representará el momento en 
+    el tiempo en el que se mide esa variable. 
+    Luego, uniremos los puntos en forma 
+    secuencial.
+       ¿Qué nos muestra?
+       Las líneas que conectan los puntos nos         ������Recomendación: usar este tipo de 
+       ayudan a percibir rápidamente si existe        gráfico para mostrar la evolución de una 
+       alguna tendencia, repetición de valores o      serie de datos, realizarla siempre con 
+       cualquier otra característica.                 puntos y no con barras, y que el tiempo 
+                                                      esté siempre en el eje horizontal, 
+                                                      avanzando de izquierda a derecha.
+     Ejemplo
+     Utilicemos datos estimados para el precio de Bitcoin y grafiquemos la serie de tiempo de los 
+     datos para precio de cierre
+   data=pd.read_csv('Time Series Data.csv') # Leer el archivo
+   price_date=data['Date'] # extraer dos vectores uno para la 
+   fecha
+   price_close=data['Close'] # extraer el precio de cierre en 
+   vector
+   plt.plot_date(price_date, price_close, linestyle='solid') # 
+   Graficar la serie de tiempo
+   plt.gcf().autofmt_xdate() # Darle formato fecha al eje x
+   plt.title('Precios Bitcoin')
+   plt.xlabel('Fecha')
+   plt.ylabel('Precio de cierre')
+   plt.tight_layout() # Ajustar los ejes
+   plt.show() # mostrar la grafica
+    from bokeh.models import DatetimeTickFormatter
+    data.Date= pd.to_datetime(data.Date) # Convertir a Datetime
+    line_plot = figure(plot_width=600, plot_height=500, 
+    title='Line plot',x_axis_label='Fecha', 
+    y_axis_label='Precio',x_axis_type='datetime')
+    line_plot.line(data.Date, data['Open'], legend='Open', 
+    line_width=2)
+    line_plot.line(data.Date, data['High'], legend='High', 
+    line_width=2,color='red')
+    line_plot.line(data.Date, data['Low'], legend='Low', 
+    line_width=2,color='green')
+    line_plot.line(data.Date, data['Close'], legend='Close', 
+    line_width=2,color='yellow')
+    line_plot.xaxis.formatter=DatetimeTickFormatter(
+           hours=["%d %B %Y"],days=["%d %B %Y"],
+           months=["%d %B %Y"],years=["%d %B %Y"])
+    line_plot.add_tools(HoverTool())
+    line_plot.legend.location = "top_left"; show(line_plot)
+       Gráficos
+       bivariados
+      Diagramas de 
+       dispersión
+      Fundamentos
+        ✔ Se  utilizan   para   observar  en      ✔ Hay que tener mucho cuidado a la 
+           conjunto  la  relación  entre  dos        hora  de  expresar  conclusiones 
+           variables.                                en forma de relaciones simples y 
+        ✔ Se  colocan  los  puntos  en  dos          no  en  vínculos  de  tipo  causa-
+           variables  y  pueden  analizarse  las     efecto.
+           relaciones entre las mismas.           ✔ Es importante tener en cuenta que 
+                                                     cuando hablamos de relación no 
+                                                     estamos                 hablando 
+                                                     necesariamente de dependencia 
+                                                     de una variable con respecto a 
+                                                     la otra.
+      ¡La dependencia es objeto de estudio del análisis de Regresión, que veremos más adelante!
+       Ejemplo
+       Consideremos el caso de la Clase 5 acerca de los 
+       pesos en kilogramos y alturas en centímetros para                   REEMPLAZAR 
+       un conjunto de 50 alumnos.                                           POR IMAGEN
+        ✔ Cada punto representa un alumno. Para cada 
+            alumno podemos ver la intersección del eje 
+            horizontal, que indica las alturas, con el eje 
+            vertical, que indica los pesos.
+        ✔ A mayores alturas corresponden mayores 
+            pesos y viceversa.
+       Correlación
+       Fundamentos
+                                                          ✔ Si el valor de la correlación es 
+                                                              cercano a 1, significa que cuando los 
+                                                              valores de una variable son altos, los 
+       Si la relación tiene alguna forma definida             de la otra variable también lo son, y 
+       será considerada como correlación entre                análogamente con los valores bajos. 
+       las variables. Comúnmente hablaremos               ✔ Si el valor de la correlación es 
+       de correlación lineal, que es la más                   cercano a -1 significa que cuando los 
+       práctica a efectos del análisis en Data                valores de una variable son bajos, 
+       Science.                                               los valores de la otra variable son 
+                                                              altos, y análogamente con los 
+       La correlación lineal puede medirse a                  valores altos.
+       través de un indicador denominado 
+       coeficiente de correlación. Puede tener            ✔ Si el valor de la correlación es 
+       valores entre -1 y 1, y lo interpretamos de            cercano a 0, significa que no hay 
+       la siguiente manera:                                   una correlación lineal fuerte entre 
+                                                              las variables.
+         Ejemplos
+          El coeficiente de correlación de 0.97 es cercano a 1            El coeficiente de correlación de -0.98 es cercano 
+                y hablamos de correlación positiva                         a -1 y hablamos de correlación negativa.
+                       Ejemplo
+         REEMPLAZAR     El coeficiente de correlación de 0.12 es cercano a 0 y 
+         POR IMAGEN     hablamos de correlación nula o ausencia de 
+                        correlación.
+     Ejemplo
+      ✔ Utilicemos datos estimados para el precio de Bitcoin y grafiquemos la serie de 
+        tiempo de los datos para precio de cierre
+     sns.set_style('whitegrid')
+     plt.figure(figsize=(10,6))
+     sns.scatterplot(x=data.Close, y= data.Open)
+     plt.title('Relacion entre Precio apertura y cierre')
+     plt.xlabel('Precio de Cierre')
+     plt.ylabel('Precio de apertura')
+      Parece existir una relación lineal entre ambas variables, 
+      cuando calculamos la correlación de Pearson entre las 
+      dos  variables  nos  da:  0.646  lo  cual  es  una  relación 
+      moderada
+     Ejemplo
+     Ahora analicemos un ejemplo con la librería Bokeh
+     # Seleccion de datos
+     x_scatter = data.Close # Data en x
+     y_scatter = data.Open # data en y
+     # Grafico (Fondo)
+     scatter_plot = figure(plot_width=700, plot_height=300, 
+     x_axis_label='Close', y_axis_label='Open', title='Dispersion 
+     Open vs Close')
+     # Scatter plot
+     scatter_plot.circle(x_scatter, y_scatter, size=5, 
+     line_color='navy', fill_color='orange', fill_alpha=0.5)
+     # Agregar opcion interactiva
+     scatter_plot.add_tools(HoverTool())
+     # Mostrar
+     show(scatter_plot)
+                 ☕
+               Break
+               ¡10 minutos y 
+                volvemos!
+     Entender la forma
+      de los datos
+       ¿Qué buscamos cuando 
+       analizamos 
+       la forma de los datos?
+       La distribución, ¿es simétrica o                  El histograma da una idea acerca de la 
+       asimétrica?                                       simetría de la distribución. También da 
+       ¿En qué parte de la distribución se ubica         una noción acerca de la concentración 
+       la mayor concentración de datos?                  de los datos.
+       Los datos, ¿están más bien dispersos o 
+       concentrados en torno a algún valor?
+       ¿Puede ser que existan datos demasiado 
+       alejados del resto?
+    Diagramas de caja y 
+        bigotes
+        Boxplot
+    Ejemplo
+    ¡Es muy simple en su diseño pero muy 
+    poderoso por toda la información 
+    importante que contiene para poder 
+    conocer la distribución de los datos!
+       Elementos
+        ✔ La línea anaranjada que está dentro        ✔ También significa que el 25% de los 
+            de la caja representa la mediana de          valores está por debajo del límite 
+            la distribución.                             inferior de la caja, y el 25% de los 
+        ✔ El borde inferior de la caja marca el          valores está por encima del límite 
+            valor del cuartil 1 (25%) y el borde         superior de la caja.
+            superior de la caja marca el valor del 
+            cuartil 3 (75%). Otra forma de decir 
+            esto es que el 50% de la 
+            concentración más “central” de los 
+            datos está delimitado por la caja.
+       Elementos
+         ✔ Outliers:    son  valores  “demasiado”          Los outliers, si existieran, están 
+            alejados  de  la  masa  central  de 
+            datos. Si los valores no son outliers,         representados  por  los  círculos 
+            o  sea  que  están  “más  cerca”  del          ubicados fuera de los bigotes.
+            centro     de    los    datos,     los 
+            denominaremos inliers.
+         ✔ Bigotes: representan los valores de 
+            los  últimos  inliers,  esto  es,  los 
+            últimos  valores  que  están  alejados 
+            del  centro  de  los  datos  pero  que 
+            todavía no son outliers.
+        Ejemplo
+                                                                 plt.figure(figsize=(10,6))
+         plt.figure(figsize=(10,6))                              sns.boxplot(x=df.Sex, y= df.Fare, 
+         sns.boxplot(x=df.Sex, y= df.Fare, hue=df.Embarked)      hue=df.Embarked,showfliers=False)
+         plt.title('Boxplot comparativo Genero vs Tarifa')       plt.title('Boxplot comparativo Genero vs Tarifa')
+         plt.xlabel('Genero')                                    plt.xlabel('Genero')
+         plt.ylabel('Tarifa')                                    plt.ylabel('Tarifa')
+         Ejemplo
+                                                                            Ahora analicemos un ejemplo con la 
+           groups = df[['Sex','Fare']].groupby('Sex')                       librería Bokeh
+           q1 = groups.quantile(q=0.25)
+           q2 = groups.quantile(q=0.5)
+           q3 = groups.quantile(q=0.75)
+           iqr = q3 - q1                                                   # stems
+           upper = q3 + 1.5*iqr                                            p.segment(cats, upper.Fare, cats, q3.Fare, 
+           lower = q1 - 1.5*iqr                                            line_color="black")
+           # Encontrar outliers en cada categoria                          p.segment(cats, lower.Fare, cats, q1.Fare, 
+           def outliers(group):                                            line_color="black")
+              cat = group.name                                             # boxes
+              return group[(group.Fare > upper.loc[cat]['Fare']) |         p.vbar(cats, 0.7, q2.Fare, q3.Fare, 
+           (group.Fare < lower.loc[cat]['Fare'])]['Fare']                  fill_color="#E08E79", line_color="black")
+           out = groups.apply(outliers).dropna()                           p.vbar(cats, 0.7, q1.Fare, q2.Fare, 
+           # Preparar outliers para plot                                   fill_color="#3B8686", line_color="black")
+           if not out.empty:                                               # whiskers
+              outx = list(out.index.get_level_values(0))                   p.rect(cats, lower.Fare, 0.2, 0.01, line_color="black")
+              outy = list(out.values)                                      p.rect(cats, upper.Fare, 0.2, 0.01, line_color="black")
+     Ejemplo
+     # outliers
+     if not out.empty:
+        p.circle(outx, outy, size=6, color="#F38630", 
+     fill_alpha=0.6)
+     #p.xgrid.grid_line_color = None
+     p.ygrid.grid_line_color = "white"
+     p.grid.grid_line_width = 2
+     p.xaxis.major_label_text_font_size="16px"
+     p.xaxis.axis_label ='Genero'
+     p.yaxis.axis_label='Fare'
+     p.add_tools(HoverTool())
+     show(p)
+     Gráficos para ver 
+       más de dos 
+      dimensiones
+                       Más de dos 
+                       dimensiones
+       REEMPLAZAR      Cuando tenemos que comparar más de dos 
+       POR IMAGEN      variables estamos en un problema. Esto se da 
+                       porque un gráfico sobre el papel o la pantalla no puede 
+                       mostrar más de dos variables o dimensiones. Para 
+                       trabajar en ellas podemos echar mano de la 
+                       perspectiva o de otras características visuales que 
+                       permiten analizar los datos.
+        Ejemplo
+        En este caso las variables x, y y z están ubicadas en los                  REEMPLAZAR 
+        bordes de un cubo, y los puntos están ubicados en el                        POR IMAGEN
+        espacio interior del cubo. Cada punto representa la 
+        intersección de los valores de las variables x, y y 
+        z.
+                       Más de tres 
+                       dimensiones
+                       Cuando tenemos un dato multidimensional se pueden 
+                       utilizar gráficos como los de Chernov (1973) que 
+                       representa los atributos de la instancia por medio de 
+                       un rostro.  También podemos utilizar los gráficos de 
+                       radar 
+       Para pensar
+   Puede emplearse un gráfico de dispersión 
+   que contemple las variables: edad - ingreso 
+   - país
+   ¿Verdadero o falso?
+   Contesta mediante el chat de Zoom 
+    ¿Qué pasa si 
+    tenemos datos 
+    en más 
+    Aquí tenemos que apelar al ingenio y a las 
+    dimensiones?
+    características que permiten que nuestro cerebro 
+    “piense” en más dimensiones.
+      Gráfico de Radar
+        ✔ Surge para mostrar observaciones         ✔ Luego se grafica el valor 
+           en varias variables, y tratar de           correspondiente a cada variable en 
+           compararlas visualmente.                   el eje, y se traza el área delimitada 
+        ✔ Se dibuja un radar o “telaraña”,            por los puntos.
+           donde cada eje representa una           ✔ Las observaciones similares tendrán 
+           variable.                                  áreas parecidas, y análogamente 
+                                                      con las observaciones diferentes.
+                       Ejemplo
+                       Podríamos decir que los grupos A y C tienen las áreas 
+                       más grandes, por lo que sus variables tienen en 
+                       general mayores valores. Además, es claro que el 
+                       grupo A es muy diferente del grupo B, porque sus 
+                       valores se destacan en distintas variables (1, 2 y 5 para 
+                       el grupo A; 3 y 4 para el grupo B).
+        Caras de Chernoff
+          ✔ Se basan en el mismo principio que                ✔ Las  caras  con  expresiones 
+              los  gráficos  de  radar,  pero  en  este            similares      tienen       elementos 
+              caso apelan al funcionamiento de                     similares,  por  lo  tanto  los  valores 
+              nuestro cerebro y cómo reacciona                     de las variables son similares.
+              frente al reconocimiento de rostros.            ✔ Son  muy  útiles,  pero  solamente 
+          ✔ Asocian  cada  variable  con  una                      cuando las observaciones no son 
+              característica  de  la  cara:  forma                 demasiadas.
+              del  rostro,  forma  de  la  nariz, 
+              expresión de las cejas, expresión de 
+              la boca, forma de las orejas, etc. 
+    Ejemplo
+    Cuadrícula de 25 observaciones que muestra caras en 
+    forma simplificada para cada observación. Las 
+    expresiones pueden inferirse claramente: hay caras 
+    “tristes”, caras “aburridas” y caras “enojadas”, por 
+    ejemplo.
+      Ejemplo en vivo
+   Se han preguntado ¿cómo hacer gráficos 
+   en más de 3 dimensiones entendibles?
+   Utilizaremos en notebook Clase_10.ipynb 
+   para entender cómo se pueden generar 
+   gráficos en 1, 2, 3 o más dimensiones.
+     ¿Quieres saber más?
+     Te dejamos material 
+     ampliado de la clase
+         MATERIAL AMPLIADO
+     Recursos multimedia
+        ✓ The visual display of quantitative inf
+           ormation
+            | Edward Tufte
+      Disponible en nuestro repositorio.
+       CLASE N°10
+       Glosario
+         Elementos de un buen gráfico: i) título, ii)       Cuartiles: medidas de localización 
+         etiquetas en los ejes y unidades si                que permiten entender el 
+         corresponde, iii) puntos importantes deben         comportamiento de la distribución 
+         resaltar, iv) buen estilo.                         de valores numéricos para una 
+         Paradigma de los gráficos: un buen gráfico         variable (e.g Q1 valor que deja el 
+         puede ayudar a transmitir un mensaje o idea        25% de los datos por de bajo) 
+         cuando se elige correctamente pero en caso         Gráficos de radar: permiten ver las 
+         contrario puede desinformar y generar              relaciones multivariadas de diversos 
+         imprecisiones                                      grupos o individuos limitados en 
+                                                            tamaño
+                                                                  
+       CLASE N°10
+       Glosario
+          Tipos de gráficos: pueden ser univariados 
+          (e.g. lineplots), bivariados (e.g diagrama de         Gráficos de Chernov: 
+          dispersión) o multivariados (e.gráficos de            representaciones multivariadas de 
+          radar)                                                individuos por medio de caras 
+          Correlación: medida de asociación entre dos           similares a un humano donde cada 
+          variables cuantitativas usualmente                    atributo facial se asocia a diferentes 
+          (coeficiente de pearson), es una medida               variables de un individuo
+          acotada entre -1 y 1 donde 0 indica ausencia 
+          de correlación lineal, 1 perfecta asociación 
+          lineal y -1 relación inversamente proporcional              
+      ¿Preguntas?
+                   Resumen 
+               de la clase hoy
+              ✓ Visualización de datos
+              ✓ Bar chart. Histogramas
+              ✓ Series de tiempo. Dispersión. Correlación
+              ✓ Boxplot
+              ✓ Gráficos de más de dos variables
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.

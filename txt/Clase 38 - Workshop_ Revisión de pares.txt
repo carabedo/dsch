@@ -1,0 +1,426 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 38. DATA SCIENCE 
+        Workshop: Revisión 
+               de pares
+       Temario
+                       37                       38                       39
+                   Análisis           Workshop: Revisión          Introducción a 
+                 Multivariado               de pares                 Machine 
+                                                                     Learning
+                                          ✓ Revisión de           ✓ Data Acquisition
+                 ✓ Objetivos                 pares
+                                                                  ✓ Data Wrangling
+                 ✓ Ventajas y             ✓ Narrativa de 
+                    desventajas                                   ✓ EDA
+                                             presentación 
+                 ✓ Integración con R y       de datos + tips      ✓ Análisis estadístico
+                    PowerBI
+    Objetivos de la clase
+                 Distinguir los procesos y tareas más 
+                 relevantes a la hora de hacer una revisión de 
+                 pares
+                 Proveer feedback a compañeros con el fin de 
+                 mejorar el proyecto final utilizando revisión de 
+                 pares
+        MAPA DE CONCEPTOS
+                                               Revisión de 
+                                                 pares
+             Workshop: 
+            Revisión de 
+               pares
+                                                Narrativa 
+                                              Presentación 
+                                              de datos +tips
+       Cuestionario final
+   ¿Te gustaría comprobar tus 
+   conocimientos de lo que va del curso?
+   Te compartimos a través del chat de 
+   Zoom / chat de la plataforma el enlace a un 
+   breve cuestionario de Kahoot.
+   Duración: 10 minutos
+     Revisión de pares
+       PARA RECORDAR
+    Revisión de pares
+    En la clase 8 vimos como se hacía el 
+    proceso de revisión de pares. Repasemos 
+    un poco acerca de los pasos a seguir y 
+    cómo poder utilizar esta instancia para 
+    mejorar la calidad de un proyecto de Data 
+    Science.
+       Definición
+    Proceso de revisión por 
+    pares
+     Es un proceso donde se indaga acerca de 
+     los posibles enfoques metodológicos para 
+     enmarcar y resolver el problema en 
+     cuestión, donde podemos formular 
+     nuestra recomendación sobre el mejor 
+     camino a seguir, complementando con 
+     una lista de las ventajas y riesgos 
+     inherentes a cada elección.
+     Puntos de control
+    Motivación
+    Se debe evitar que elijan el enfoque o la 
+    dirección equivocados en esta fase inicial del 
+    proyecto. Estos errores, denominados fallas de 
+    enfoque en el flujo de trabajo de DS, son muy 
+    costosos de cometer y obstaculizan el proyecto 
+    durante el resto de su ciclo de vida.
+    Si tenemos suerte, descubrimos la falla del 
+    enfoque después de varias iteraciones de 
+    desarrollo del modelo y perdemos preciosas 
+    semanas de trabajo como científico de datos.
+    Objetivos
+    Se deben detectar errores costosos desde el 
+    principio, analizando aspectos centrales del 
+    proceso.
+    Aquí se pueden establecer dos objetivos 
+    secundarios adicionales: primero, mejorar la 
+    capacidad del científico de datos para explicar y 
+    defender sus decisiones en el próximo proceso 
+    de revisión de productos/negocios. Segundo, 
+    prepararse mejor para presentar el resultado de 
+    la fase de investigación al resto del equipo, 
+    Estructura
+     1. Se analiza el flujo del proyecto por medio 
+       de una presentación (no necesariamente 
+       diapositivas) del proceso de investigación 
+       por el que pasó.
+     2. Se puede establecer una reunión larga (al 
+       menos 60 minutos) con el revisor.
+     3. El revisor revisa la lista de verificación 
+       (antes de la reunión).
+        Actividad colaborativa
+   Revisando un proyecto de DS
+    En esta oportunidad les proponemos ir al siguiente link:
+    Proyecto Prediccion Rentas Bicicletas revisar el archivo 
+    ProyectoFINAL_Leon.ipynb y la presentación. 
+    ¿Qué sugerencias podríamos generar para mejorar el 
+    estado actual del proyecto? ¿Qué puntos 
+    fuertes/débiles pueden establecer?
+   Duración: 15-20 minutos
+       Checklist
+    Propiedades de datos
+     ¿Cómo se generó? ¿Cómo se muestreo? ¿Estaba 
+     actualizado?
+     ¿Qué ruido, sesgo de muestreo y datos faltantes 
+     introdujo esto?
+     ¿Datos perdidos?
+     ¿Puedes modelar explícitamente el ruido, 
+     independientemente de un enfoque?
+     Si el conjunto de datos está etiquetado, ¿cómo 
+     fue etiquetado?
+     ¿Se puede medir?
+     ¿Puede modificar o aumentar el proceso de 
+     etiquetado para compensar el sesgo existente?
+    Supuestos de aproximación
+     ¿Qué suposiciones hace cada enfoque sobre los 
+     datos/el proceso de generación de datos/el 
+     fenómeno en estudio?
+      ¿Es razonable hacer suposiciones sobre su 
+     problema? ¿Hasta qué grado?
+      ¿Cómo espera que la aplicabilidad se relacione 
+     con la violación de estos supuestos?  
+     ¿Se pueden validar estos supuestos de forma 
+     independiente?
+      ¿Algún caso que viole estos supuestos?
+    Experiencia pasada
+    ¿Qué experiencia tiene aplicando este enfoque, 
+    ya sea en general o para problemas similares?
+     ¿Encontró alguna publicación de éxito/fracaso 
+    de la aplicación de este enfoque a problemas 
+    similares?
+     ¿Te comunicaste con tus compañeros para 
+    conocer su experiencia?
+     ¿Qué lecciones se pueden aprender de lo 
+    anterior?
+     ¿Qué soluciones se usaron para resolver este 
+    problema hasta ahora? ¿Cuáles fueron sus 
+    ventajas y qué problemas sufrieron?
+    Alineación de objetivos
+     Aprendizaje supervisado: 
+     ¿Qué funciones de pérdida se pueden utilizar al 
+     ajustar los parámetros del modelo? ¿Cómo se 
+     relacionan con los KPI del proyecto?
+      ¿Qué métricas se pueden utilizar para la selección 
+     de modelos/optimización de hiperparámetros? 
+     ¿Cómo se relacionan con los KPI del proyecto? 
+     Aprendizaje no supervisado
+     ¿Qué medida optimiza el método?
+      ¿Cómo se relaciona con los KPI?
+      ¿Cuáles son algunos casos extremos que satisfacen 
+     bien la métrica pero no el KPI?
+    Implementación
+    ¿Existen implementaciones del enfoque en un 
+    lenguaje utilizado actualmente en su entorno de 
+    producción?
+     ¿La implementación está actualizada? ¿Apoyado 
+    consistentemente? ¿En amplio uso?
+    ¿Hay usos exitosos de esta implementación 
+    específica por parte de empresas/organizaciones 
+    similares a la suya? ¿En problemas similares al 
+    tuyo?
+    Escalamiento
+    ¿Cómo se escala el tiempo de 
+    cálculo/entrenamiento con la cantidad de puntos 
+    de datos?
+     ¿Con el número de características o variables?
+     ¿Cómo se escala el almacenamiento con puntos 
+    de datos/características?
+    Requerimientos de 
+    información
+     ¿En qué medida cada enfoque depende de la 
+     cantidad de información disponible? ¿Cuál es el 
+     impacto esperado en el rendimiento de 
+     pequeñas cantidades de información?
+     ¿Esto se alinea bien con la cantidad de 
+     información actualmente disponible? ¿Con 
+     disponibilidad futura?
+      Narrativa de 
+     presentación de 
+      datos +tips
+     Reglas generales
+    Reglas generales
+      ● Tratar de ser simple, presentar mucha información 
+       hace que los temas relevantes se pierdan
+      ● Presentar desde lo más general a lo específico.
+      ● La data debe responder a las preguntas de interés
+      ● Escribir en tiempo pasado cuando describen 
+       resultados
+      ● No repetir información en texto, tablas o gráficos
+     Reglas específicas
+    Texto
+      ✔ Los datos que usualmente son números o figuras 
+        se representan de mejor manera en tablas y 
+        gráficos.
+      ✔ El uso de palabras cualitativas para atraer la 
+        atención del lector siempre es importante. Frases 
+        como "notablemente" disminuido, 
+        "extremadamente" diferente y "obviamente" más 
+        alto son redundantes.
+      ✔ Evitar usar palabras e información redundante. Las 
+        tablas y gráficos deben ser autoexplicativos
+    Tablas
+      ✔ Las tablas son útiles para resaltar valores 
+        numéricos puntuales; las proporciones o 
+        tendencias se ilustran mejor con tablas o gráficos. 
+      ✔ Las tablas resumen grandes cantidades de datos y 
+        permiten hacer comparaciones entre grupos de 
+        variables. En general, las tablas bien construidas 
+        deben explicarse por sí mismas con cuatro partes 
+        principales: título, columnas, filas y notas al pie.
+    Tablas
+      ✔ Título: Debe ser breve y relacionar el contenido de 
+        la tabla. Las palabras en el título deben representar 
+        y resumir las variables utilizadas en las columnas y 
+        filas en lugar de repetir los títulos de las columnas y 
+        filas.
+      ✔ Columnas y filas: Los datos similares deben 
+        presentarse en columnas. A menudo, estas son 
+        variables dependientes y permiten una comparación 
+        más clara entre grupos. No se debe tener muchas 
+        variables 
+    Tablas
+      ✔ Notas al pie:  añaden claridad a los datos 
+        presentados. Se enumeran en la parte inferior de las 
+        tablas. Su uso es para definir abreviaturas, símbolos, 
+        análisis estadísticos y reconocimientos no 
+        convencionales. 
+      ✔ Cuerpo de la tabla: Se pueden usar unidades y 
+        decimales correctos, evitar incluir ceros 
+        innecesarios, muchas líneas en la tabla y cuando se 
+        reporten significancias se pueden utilizar asteriscos 
+        para demarcar los resultados importantes
+    Gráficos
+     Son particularmente buenos para demostrar tendencias 
+     en los datos que no se pueden observar en las tablas. 
+     Generan un énfasis visual y evitan descripciones 
+     textuales largas.  Algunas reglas generales son:
+      ✔ Diagramas de barras (horizontales o verticales) se 
+        usan para mostrar información categórica
+      ✔ Evitar el uso de gráficos en 3D ya que pueden ser no 
+        la mejor forma de transmitir la información 
+      ✔ Los gráficos de líneas son más apropiados para 
+        monitorear cambios en un periodo de tiempo.
+    Gráficos
+      ✔ Los piecharts no deben ser usados usualmente ya 
+        que cualquier tipo de dato en un piechart se 
+        representa mejor en un gráfico de barras (e.g un 
+        error común es presentar la distribución del género 
+        en un pie chart)
+      ✔ No sobrecargar los gráficos con muchos colores y 
+        efectos añadidos ya que la atención de la audiencia 
+        se puede perder fácilmente provocando que no se 
+        transmita el mensaje que se quiere.
+    Estadísticas
+     ✔ Estadísticos simples como media, desviación 
+       estándar, mediana y tests de normalidad se pueden 
+       reportar de manera textual. Pruebas estadísticas 
+       más sofisticadas se representan mejor con tablas y 
+       gráficos
+     ✔ Se debe interpretar correctamente el p valor. 
+       Usualmente el valor por defecto de significancia es 
+       0.05, por ende pv>0.05 no significativo
+     ✔ Cuando se reporten intervalos de confianza se debe 
+       reportar también el p valor obtenido
+    Tips para presentar
+    Tips para presentar
+      ✔ Asegurarse de que tu data se pueda ver bien
+      ✔ Enfocarse en lo más importante de los gráficos
+      ✔ Establecer un punto relevante para cada gráfico
+      ✔ Etiquetar ejes y títulos claramente
+      ✔ Identificar visualmente con recuadros u otros 
+        objetos los puntos importantes de las gráficas
+      ✔ Escribir títulos que refuercen el punto principal que 
+        se quiere transmitir
+      ✔ Presentar a tu audiencia no a tus datos
+      ✔ Manejar fluidez verbal y estar abierto a preguntas
+    Preguntas importantes
+      ✔ ¿Estoy presentando o circulando mis datos?
+      ✔ ¿Estoy usando el gráfico/tabla apropiada?
+      ✔ ¿Qué mensaje quiero transmitir?
+      ✔ ¿Mis visualizaciones están acordes con los números?
+      ✔ ¿Mis datos son relevantes, no se han mostrado 
+        antes?
+      ✔ ¿Cómo pretendo que la audiencia retenga el 
+        mensaje principal que quiero transmitir?
+      ✔ ¿En qué puntos debe hacer más énfasis?
+    Revisión rápida 
+    Con base en los tips presentados hasta el momento les 
+    brindaremos 10 minutos para mejorar las 
+    presentaciones de sus proyectos finales con el fin de 
+    llevar a cabo una revisión de pares con los compañeros y 
+    tutores de la cursada.
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+         Revisión de pares
+      Realizaremos una revisión de pares con el fin de 
+     mejorar nuestros proyectos. Grupos de 3-5 personas
+             Duración: 40-45 mins
+       ACTIVIDAD EN CLASE
+    Revisión de pares
+    Cada alumno deberá exponer su proyecto final durante 
+    3-5 minutos a los demás compañeros y tutor con el fin 
+    de obtener feedback del mismo. 
+    Son bienvenidas todas las sugerencias 
+    constructivas que ayuden a mejorar el proyecto 
+    en forma y fondo.
+       Obtención de insights a 
+      partir de visualizaciones
+      Deberás  entregar  la  segunda  pre  entrega  de  tu  Proyecto  Final. 
+      Entrenarás  y  optimizarás  versos  modelos  de  Machine  Learning  para 
+      resolver  una  problemática  específica,  detectada  en  la  instancia  de 
+      entrega anterior. El objetivo es que puedas utilizar modelos de Machine 
+      Learning para resolver el problema de una industria o negocio. 
+    Recordemos…
+                          Generamos visualizaciones
+                          Obtuvimos insights
+                          Desarrollamos una narrativa 
+                          correcta
+         Clase 36
+      Desafío entregable:
+     Obtención de insights
+                          Responder las preguntas 
+                          problema
+       PREENTREGA DEL PROYECTO 
+       FINAL
+    Obtención de insights a partir de 
+    visualizaciones
+    Objetivos generales
+     ✓ Obtener datos de diversas fuentes como APIs o Bases de datos públicas para luego 
+      analizarlos mediante el lenguaje Python con el fin de contestar una pregunta de 
+      interés para una industria, negocio o proyecto personal. Se deberán utilizar datasets 
+      complejos implementando técnicas avanzadas para la limpieza y adquisición de 
+      datos
+    Objetivos específicos
+     ✓ Estructurar un problema en función de múltiples pero simples preguntas/hipótesis a 
+      responder
+     ✓ Importar datos crudos de APIs o bases de datos usando Python
+     ✓ Limpiar y transformar los datos para permitir un posterior análisis
+     ✓ Contar una historia mediante el análisis exploratorio de datos
+       PREENTREGA DEL PROYECTO 
+       FINAL
+    Obtención de insights a partir de 
+    visualizaciones
+    Requisitos base
+     ✓ Un notebook (Colab o Jupyter) que debe contener:
+      1. Abstracto con motivación y audiencia: Descripción de alto nivel de lo que 
+        motiva a analizar los datos elegidos y que audiencia  se podrá beneficiar de este 
+        análisis
+      2. Preguntas/hipótesis que queremos responder: Lista de preguntas que se 
+        busca responder mediante el análisis de datos. Bloques de código donde se 
+        importan los datos desde una API o base de datos pública y los guarda en un 
+        archivo local csv o json. El estudiante puede luego de descargar los datos, 
+        comentar este bloque de código
+      3. Análisis exploratorio de datos (EDA): Análisis descriptivo de los datos 
+        mediante visualizaciones y herramientas estadísticas
+         PREENTREGA DEL PROYECTO 
+         FINAL
+     Obtención de insights a partir de 
+     visualizaciones
+     Requisitos base
+      ✓ Una presentación (PDF; PowerPoint o Google Slides) que debe contener
+        1. Abstracto con motivación y audiencia: Descripción de alto nivel de lo que motiva a 
+           analizar los datos elegidos y que audiencia  se podrá beneficiar de este análisis
+        2. Resumen de metadata: resumen de los datos a ser analizados es decir, número de 
+           filas/columnas, tipos de variables, etc
+        3. Preguntas hipótesis que queremos responder: Lista de preguntas que se busca 
+           responder mediante el análisis de datos
+        4. Visualizaciones ejecutivas que responden nuestras preguntas: utilización de 
+           gráficos que responden las preguntas de interés de nuestro proyecto.
+        5. Insights: resumen de hallazgos del proyecto. Aquí consolidamos las respuestas a las 
+           preguntas/hipótesis que fuimos contestando con las visualizaciones
+       PREENTREGA DEL PROYECTO 
+       FINAL
+    Obtención de insights a partir de 
+    visualizaciones
+    Sugerencias
+    Es conveniente retomar el dataset trabajado en la primera pre entrega y enriquecerlo (e.g 
+    joins, y creación de nuevas columnas) con información proveniente de APIs públicas 
+    siempre que se pueda con el fin de practicar las nuevas habilidades adquiridas. Se 
+    recomienda retomar la metodología de trabajo y reutilizar algoritmos ya entrenados, de 
+    ser necesario.
+    Requisitos extra
+     ✓ Subir el proyecto a Github
+       PREENTREGA DEL PROYECTO 
+       FINAL
+    Obtención de insights a partir de 
+    visualizaciones
+    Dont’s
+     ✓ Utilizar jerga demasiado técnica en la presentación (recordar que la audiencia de la 
+      misma son roles ejecutivos)
+     ✓ Sobrecargar las diapositivas 
+     ✓ Realizar una presentación con más de 12 slides de extensión
+    Modelo de Proyecto final
+     ✓ Proyecto final (Notebook) (Se debe abrir con Google Collaboratory o Jupyter 
+      Notebook)
+     ✓ Ejemplo Presentación 
+    Explicación del desafío
+     ✓ ¡Click aquí!
+       CLASE N°38
+       Glosario
+       Revisión de pares: proceso constructivo     Reglas para presentación de 
+       donde se busca mejorar la calidad de un     resultados: se refiere a 4 puntos 
+       proyecto de ciencia de datos. Funciona      importantes a la hora de mostrar 
+       como un mecanismo de control antes de       resultados a una audiencia. Debemos tener 
+       presentar los resultados obtenidos          cuidado del texto, tablas, gráficos y las 
+                                                   estadísticas que se reportan para asegurar 
+       Narrativa de presentación: se refiere a     que el estudio mantenga un buen estándar 
+       la metodología que se utiliza para          de calidad.
+       transmitir información y resultados ante 
+       una audiencia. Se recomienda ser lo más 
+       simple posible a la hora de presentar 
+       resultados y utilizar jerarquías. 
+      ¿Preguntas?
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.
+                   Resumen 
+               de la clase hoy
+              ✓ Revisión de pares
+              ✓ Narrativa de presentación de datos + tips

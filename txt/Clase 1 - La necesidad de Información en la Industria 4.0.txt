@@ -1,0 +1,732 @@
+           ¡Les damos la 
+            bienvenida!
+               ¿Comenzamos?
+    Esta clase va a ser
+        grabad
+          a
+                        COMISIÓN N°####
+                        Presentación 
+                        del equipo
+                         ✔ Profesor/a responsable: Juan Pérez
+                         ✔ Coordinador/a: Juan Pérez
+                         ✔ Tutores y tutoras:
+                            ○ Juan       ○ Juan 
+                              Pérez        Pérez
+                            ○ …          ○ …
+                            ○ …          ○ …
+                            ○ …          ○ …
+                            ○ …          ○ …
+                            ○ …          ○ …
+                            ○ …          ○ …
+    Presentación
+    de estudiantes
+    Por encuestas de Zoom
+     1. País
+     2. Conocimientos previos
+     3. ¿Por qué elegiste este curso?
+         ¿Dudas sobre el
+           onboarding?
+                Míralo aq
+                uí
+    !  Lo que debes 
+         saber
+      antes de empezar
+       Acuerdos 
+      y compromisos
+        ACUERDOS Y COMPROMISOS
+       Convivencia
+        ✓ Conoce aquí nuestro                        ✓ Ten en cuenta las normas del 
+            código de conducta y ayúdanos a             buen hablante y del buen oyente, 
+            generar un ambiente de clases               que nunca están de más. 
+            súper ameno.
+                                                     ✓ Verifica el estado de la cámara y/o 
+        ✓ Durante las clases, emplea los                el micrófono (on/off) de manera 
+            medios de comunicación oficiales            que esto no afecte la dinámica de la 
+            para canalizar tus dudas, consultas         clase. 
+            y/o comentarios: chat Zoom 
+            público y privado, y por el chat 
+            de la plataforma.
+     ACUERDOS Y COMPROMISOS
+     Distractores
+      ✓ Encuentra tu espacio y crea el momento 
+        oportuno para disfrutar de aprender
+      ✓ Evita dispositivos y aplicaciones que 
+        puedan robar tu atención
+      ✓ Mantén la mente abierta y flexible, los 
+        prejuicios y paradigmas no están invitados
+       ACUERDOS Y COMPROMISOS
+       Herramientas
+        ✓ Mantén a tu alcance agua, mate o       ✓ Conéctate desde algún equipo 
+           café                                     (laptop, tablet) que te permita 
+                                                    realizar las actividades sin 
+                                                    complicaciones.
+        ✓ Si lo necesitas, ten a mano lápiz y 
+           papel para que no se escapen las 
+           ideas. Pero recuerda que en Google    ✓ Todas las clases quedarán grabadas y 
+           Drive tienes archivos que te             serán compartidas tanto en la 
+           ayudarán a repasar, incluidas las        plataforma de Coderhouse como 
+           presentaciones.                          por Google Drive.
+                             ACUERDOS Y COMPROMISOS
+                             Equipo
+                              ✓ ¡Participa de los After Class! Son un gran 
+                                 espacio para atender dudas y mostrar avances.
+                              ✓ Intercambia ideas por el chat de la 
+                                 plataforma.
+                              ✓ Siempre interactúa respetuosamente.
+                              ✓ No te olvides de valorar tu experiencia 
+                                 educativa y de contarnos cómo te va.
+      Interacciones
+        en clase
+    INTERACCIONES EN CLASE
+    Mientras el 
+    profesor 
+    explica
+    Para mantener una comunicación clara y fluida a lo 
+    largo de la clase, te proponemos mantener 2 reglas:
+    1 Si tienes dudas durante la explicación, debes 
+    .  consultarle directamente por privado a tu tutor 
+       por el chat de Zoom.
+     INTERACCIONES EN CLASE
+     Espacios para 
+     consultas
+        Entre contenido y contenido, se abrirán breves 
+     2
+     .  espacios de consulta. Allí puedes escribir en el 
+        chat tu pregunta. 
+        ¡Tu duda puede ayudar a otras personas!
+        No olvides seleccionar “todos” para que todos 
+        puedan leerte (y no solo tu tutor). 
+        INTERACCIONES EN CLASE
+       Funcionalidades
+       Para evitar saturar el chat de mensajes,            Por ejemplo: si se pregunta si se escucha 
+       utiliza los signos que figuran en el apartado       correctamente, debes seleccionar la opción 
+       Participantes, dentro de Zoom.**                    “Sí” o “No”. 
+       **Para quitar el signo, presiona el mismo botón nuevamente o la opción “clear all”.
+       After Class
+        AFTER CLASS
+       ¿Qué son?
+       Te acompañamos para resolver tus                 Tu profesor/a está comprometido con tu 
+       consultas sobre el contenido en estos            educación, por lo tanto:
+       espacios.
+                                                          ✓ Se responderán dudas puntuales 
+       Si hay temas que no se entendieron o                   que hayan quedado sobre los temas 
+       necesitan refuerzo se trabajarán en una                dados. ¡Vení preparado, queremos 
+       clase de 1 hs que opera como espacio de                escucharte! 
+       consulta.
+       No son obligatorias ni se toma asistencia,         ✓ Se verán temas de conocimientos 
+       pero son el espacio uno a uno con tu                   básicos para la nivelación de 
+       profesor/a** para responder dudas                      saberes. 
+       puntuales o reforzar conceptos.
+       **Los/as tutores/as también serán protagonistas, liderando 5 veces este espacio en todo el curso.
+        Desafíos
+      y entregables
+        DESAFÍOS Y ENTREGABLES
+       ¿Qué 
+       son?
+              Actividades en clase                          Desafíos entregables
+       Ayudan a poner en práctica los conceptos       Relacionados completamente con el 
+       y la teoría vista en clase. No deben ser       proyecto final. Deben ser subidos a la 
+       subidos a la plataforma.                       plataforma hasta 7 días luego de la 
+                                                      clase, para que sean corregidos.
+        DESAFÍOS Y ENTREGABLES
+       ¿Qué 
+       son?
+              Desafíos                                   Entregas del Proyecto 
+              complementarios                            final
+       Desafíos que complementan a los             Entregas con el estado de avance del 
+       entregables. Son optativos, pero de ser     proyecto final, que deberán ser subidas a 
+       subidos a la plataforma a tiempo, y         la plataforma hasta 7 días luego de la 
+       habiendo sido aprobados, suman puntos       clase para ser corregidas cada tutor/a. 
+       para el top 10.
+         DESAFÍOS Y ENTREGABLES
+        Proyecto 
+        final
+       El Proyecto final se construye a partir de        Se debe subir a la plataforma la ante-
+       los desafíos que se realizan clase a              última o última clase del curso. En caso 
+       clase. Se va creando a medida que el              de no hacerlo tendrás 20 días a partir 
+       estudiante sube los desafíos entregables          de la finalización del curso para cargarlo 
+       a nuestra plataforma.                             en la plataforma. Pasados esos días el 
+                                                         botón de entrega se inhabilitará.
+       El objetivo es que cada estudiante pueda 
+       utilizar su Proyecto final como parte de su 
+       portfolio personal. Recordá que el mismo  
+       es de carácter individual.
+     ¿Cuál es nuestro 
+      Proyecto final?
+       PROYECTO FINAL
+    Data Science
+    Consigna: 
+    El proyecto final consiste en tres entregas, donde de 
+    manera secuencial irás resolviendo un problema 
+    para una industria, negocio o proyecto personal. El 
+    proyecto final debe plasmar cada una de las fases 
+    de un proyecto de Data Science: Data Acquisition, 
+    Data Wrangling, Exploratory Data Analysis, 
+    Modelamiento, Evaluación y Despliegue. Deberás 
+    entregar un notebook en formato jupyter notebook 
+    (.ipynb) y una presentación (PDF, ppt o Google 
+    Slides).
+    El mismo es de carácter individual. 
+       PROYECTO FINAL
+    Proyectos de nuestros 
+    estudiantes
+    En este link podrán ver los Proyectos 
+    finales de diferentes estudiantes de este 
+    curso de comisiones anteriores.
+    ¡Esperamos que les resulten 
+    inspiradores!
+              PROYECTO FINAL
+              Entrega                               Requisito                                 Fecha
+        1° entrega                Elección de potenciales datasets para importe        Clase 5 
+                                  con la librería Pandas
+        2° entrega                Visualizaciones en Python                            Clase 8 
+        3° entrega                Estructurando un proyecto de DS- Parte I             Clase 12 
+        4° entrega                Estructurando un proyecto de DS- Parte II            Clase 17
+        5° entrega                Estructurando un proyecto de DS- Parte III           Clase 19
+        Primera Pre-entrega       Análisis de datos con Python                         Clase 21 
+             PROYECTO FINAL
+              Entrega                              Requisito                               Fecha
+       6° entrega                Descarga de datos desde APIs públicas              Clase 27
+       7° entrega                Data Wrangling                                     Clase 29
+       8° entrega                Data StoryTelling                                  Clase 33
+       9° entrega                Obtención de Insights                              Clase 36
+       Segunda Pre-entrega       Obtención de insights a partir de                  Clase 38
+                                 visualizaciones
+             PROYECTO FINAL
+              Entrega                             Requisito                              Fecha
+       10° entrega               Entrenando un algoritmo de Machine Learning       Clase 42
+       11° entrega               Evaluando modelos de Machine Learning             Clase 45
+       12° entrega               Ingeniería de atributos y selección de variables  Clase 47
+       Entrega final             Entrenamiento y optimización de Modelos de        Clase 55
+                                 Machine Learning
+                  ¡Importante!
+             Los desafíos y entregas se deben cargar hasta siete días 
+            después de finalizada la clase. Te sugerimos llevarlos al día.
+        Completa con éxito
+        el programa
+                                   Desafíos                     Desafíos
+                                   Desafíos       Entrega       Desafíos      Proyecto
+        Kick Off      Clase 0      Desafíos     intermedia      Desafíos        final      Certificado      Top 10
+                      Recuerda que el primer requisito para finalizar con éxito es asistir a las 
+                                                         clases.
+              Clase 01. DATA SCIENCE
+          La necesidad de 
+          información en la 
+            Industria 4.0
+      Temario
+                       00                     01                       02
+                 Introducción a       La necesidad de           Introducción a 
+                  la Ciencia de        Información en                  la 
+                     Datos             la Industria 4.0         programación 
+                                                                  con Python 
+                 ✓ Ciencia de datos                             ✓ Definición de 
+                                       ✓ Industria 4.0             (Parte I)
+                 ✓ Ciclo de vida de    ✓ Transformación             programa 
+                    los proyectos         digital               ✓ Instalación de 
+                                       ✓  Ciclo de vida de un       Python
+                 ✓ Tipos de Data          proyecto de ciencia 
+                    Science               de datos              ✓ Nociones básicas
+                                       ✓  Valor y retorno de 
+                 ✓ Importancia            la Ciencia de Datos
+                                       ✓ Estrategia data-
+                                          driven
+    Objetivos de la clase
+                 Identificar los componentes importantes de 
+                 una estrategia de Data & Analytics.
+                 Comprender el rol de los datos en la 
+                 organización desde una perspectiva de 
+                 Transformación Digital y en la Industria 4.0
+                 Facilitar la identificación de oportunidades del 
+                 uso de los datos para la transformación digital 
+                 y la estrategia de negocios.
+        MAPA DE CONCEPTOS                   Industria 4.0
+                                            Cuarta 
+                                            Revolución 
+                                            Industrial
+                          Industria 4.0     El ambiente de la 
+                                            industria 4.0
+                                            Características de 
+                          Transformación    la industria 4.0
+                          Digital
+      Necesidad de la 
+      información en la 
+      industria 4.0       Ciclo de vida de un 
+                          proyecto de ciencia 
+                          de datos
+                          Valor y retorno de la 
+                          ciencia de datos
+                          Estrategia Data 
+                          Driven
+     Transformación 
+     Digital e Industria 
+        4.0    
+     Cuarta Revolución 
+       Industrial
+       Cuarta 
+       Revolución 
+       A partir de esta nueva nominación se transformó la                   REEMPLAZAR 
+       mirada sobre la industria de las revoluciones 
+       Industrial                                                            POR IMAGEN
+       anteriores: Industria 1.0, Industria 2.0 e Industria 
+       3.0. 
+       ������ ¿Escuchaste hablar de la Primera y Segunda 
+       Revolución Industrial en la escuela? Bueno, ya 
+       vamos por la 4ta.
+       Fuente: Mixtrategy.com
+                            Cuarta 
+                            Revolución 
+          REEMPLAZAR        El Banco Interamericano de Desarrollo (BID) 
+           POR IMAGEN       Industrial
+                            identifica la particularidad de esta Revolución Industrial 
+                            en la convivencia de una gran variedad de tecnologías 
+                            que se fusionan borrando los límites entre lo físico, lo 
+                            digital y lo biológico.
+                            Sin duda, esto implica un gran cambio de paradigma, 
+                            en todos los ámbitos de la vida.
+                     ¿Quieres saber más? Consulta el material ampliado de la clase
+    Cuarta Revolución 
+    Industrial
+    Entendemos la cuarta Revolución 
+    Industrial como la transición hacia nuevos 
+    sistemas ciber-físicos que operan en 
+    forma de complejas redes como salto 
+    cualitativo a sólo 50 años de la 
+    Revolución digital (Industria 3.0).
+      Industria 4.0
+       ¿Por qué hablamos de 
+       Industria 4.0?
+       El término “Industria 4.0” surge de un          El fundamento de la Industria 4.0 está en 
+       conjunto de especialistas                       el desarrollo de sistemas tipo SCADA con 
+       multidisciplinarios convocados por el           fácil supervisión y sustentabilidad así 
+       gobierno alemán a comienzos de la               como estructuras IIoT que permiten 
+       década de 2010 enfocados en re-diseñar          utilizar el poder de las máquinas 
+       un programa de mejoras para la industria        inteligentes y el análisis en tiempo 
+       manufacturera.                                  real.
+     Supervisory Control and Data Acquisition (SCADA)                  Sistemas IIoT
+     El ambiente de la 
+      Industria 4.0
+                       El ambiente de 
+                       la industria 4.0
+                       El ambiente de la industria 4.0 está enmarcado en 
+                       cuatro grandes pilares:
+                       ������ Internet of Things (IoT)
+                       ������ Internet of Services (IoS)
+                       ������ Internet of Data (IoD)
+                       ������ Internet of People (IoP)
+                       Estos componentes conforman lo que se conoce como 
+                       Smart Factory
+    Internet of 
+    Things (IoT)
+     ✔ Describe la conectividad entre objetos físicos 
+      como tostadores, refrigeradores, TV al Internet 
+      permitiendo la comunicación entre 
+      dispositivos.
+     ✔ Se requiere de diversos factores como una 
+      infraestructura de conectividad con alta 
+      velocidad y protocolos de comunicación (e.j 
+      Machine to Machine M2M) para la correcta 
+      implementación del IoT.
+                       Industrial 
+                       Internet of 
+         REEMPLAZAR    ✔ Se refiere a sensores interconectados, 
+                         instrumentos y otros dispositivos industriales 
+         POR IMAGEN    Things (IIoT)
+                         enlazados entre sí con aplicaciones 
+                         computacionales para mejorar procesos 
+                         industriales y de manufactura.
+                       Internet of 
+                       Services (IoS)
+                       ✔ Se refiere a un marketplace global de aplicaciones 
+                         y software basado en internet que se ofrecen 
+                         como servicios.
+                       ✔ IoS incluye los servicios de Blockchain que es 
+                         importante en cadenas de suministros.
+                       ✔ IoT facilitado por IoS crea innovación disruptiva.
+    Internet of Data 
+    (IoD)
+     ✔ IoD se fundamenta en los billones de datos 
+       extensivos generados por dispositivos del IoT
+     ✔ Estos volúmenes de información tienen el 
+       potencial para generar $ cuando las técnicas 
+       Analíticas de Big Data descubren patrones en 
+       ellos.
+    Internet of 
+    People (IoP)
+     ✔ Un nuevo paradigma del internet donde los 
+       humanos y sus dispositivos personales no son 
+       considerados como usuarios finales sino como 
+       elementos activos.
+     ✔ IoP se desarrolla de forma descentralizada como 
+       Blockchain donde los datos no están bajo el 
+       control de una sola entidad.
+     ✔ El lema del IoP es ser un internet “de y para las 
+       personas” en vez de ser uno donde se sacrifica su 
+       privacidad.
+    Características de la 
+      Industria 4.0
+                                        Características 
+                                        de la Industria 
+                                        La Industria 4.0 se caracteriza por tener nueve 
+                                        características principales:
+                                        4.0
+                                         ✔ Big Data
+                                         ✔ Simulación
+                                         ✔ Internet of Services
+                                         ✔ Realidad aumentada
+                                         ✔ Sistemas ciber-físicos
+                                         ✔ Manufactura automática
+                                         ✔ IoT (Internet of Things)
+                                         ✔ Sistemas de cómputo en la nube
+                                         ✔ Sistemas de robótica autónomos 
+   Fuente: Tay, S. et al. (2018). An Overview of Industry 4.0: Definition, 
+   Components, and Government Initiatives
+     Características 
+     de la Industria 
+      ✔ Industria 1.0: Mecanización del trabajo que solía 
+     4.0
+        realizarse de forma manual. 
+      ✔ Industria 2.0: Transformación que se produjo 
+        con la introducción de la electricidad en procesos. 
+      ✔ Industria 3.0: Llegada de la informática y la 
+        automatización a la escena industrial. (Uso de 
+        controladores lógicos programables, robots, etc).
+      ✔ Industria 4.0: Era de Cyber Physical Systems 
+        (CPS). Máquinas inteligentes, sistemas de 
+        almacenamiento e instalaciones de producción 
+        capaces de intercambiar información de forma 
+        autónoma, 
+  Fuente: Tay, S. et al. (2018). An Overview of Industry 4.0: Definition, 
+  Components, and Government Initiatives
+     Transformación 
+        digital
+         La transformación digital es el fomento de 
+         evolución y nuevos modelos de 
+         negocio incorporando la digitalización 
+         de archivos e incorporando lo digital a 
+         todas las áreas de negocio.
+                                                                             -    Harvard Business Review, 2021
+                                      Near Field Communications        Cloud                  IA
+                     Blockchai                  (NFC)
+                        n
+                       Realidad virtual       Robótica            Ways of working        Tecnologí
+                                                                                             a 
+                                                                                           móvil
+       Transformación Digital
+       La transformación digital es el proceso          Deseamos ver mejoras dramáticas en el 
+       mediante el cual se realizan cambios             desempeño y cambiar las rutas para 
+       integrales en la estrategia, modelos             lograr el éxito.
+       operativos, personas, cultura y procesos.        Las amenazas para las organizaciones 
+                                                        hoy en día son más resistentes y más 
+       Problemas nuevos, exigen soluciones              robustas. 
+       innovadoras ������
+                    Como muestra el siguiente cuadro, existe un movimiento constante 
+                                       en el top de empresas líderes…
+               Top 10 Compañías 2021           Top 10 Compañías 2011            Top 10 Compañías 2001 
+                      Wallmart                        Wallmart                       Exxon Mobil
+                     State Grid                     Exxon Mobil                       Wallmart
+                      Amazon                          Chevron                       General Motors
+              China National Petroleum             CoconoPhillips                     Ford Motor
+                Sinopec Group China                  Fannie Mae                    General Electric
+                       Apple                       General Electric                   Citigroup
+                     CVS Health                  Berkshire Hathaway                     Enron
+                 UnitedHealth Group                General Motors               Intl. Business Machines
+               Toyota Motor Company               Bank of America.                      AT&T
+                    Volkswagen                       Ford Motor                Verizon Communications
+        Fuente: https://fortune.com/global500/search/
+    ¿Por qué datos y por 
+       qué ahora?
+    ¿Por qué datos 
+    y por qué 
+    Según Forbes (2021) “Ahora más que nunca, los 
+    datos, la analítica y la experiencia son de 
+    ahora?
+    importancia existencial. No es simplemente una 
+    cuestión de opinión. Se ha convertido en un asunto 
+    público y social de vida o muerte.”
+    Los datos impulsan las decisiones que tomamos y 
+    los riesgos que asumimos hoy día.
+                       ¿Por qué datos y 
+                       por qué ahora?
+                       En contexto de Pandemia, por ejemplo, las respuestas 
+                       a preguntas como: 
+                       ¿Abrimos negocios y escuelas? ¿Abrimos 
+                       establecimientos públicos? ¿Qué nos dicen los 
+                       datos? ¿La curva sube o se aplana? ¿Se volverá a 
+                       emplear a la gente? ¿Volverá el negocio? 
+                       Solo se pueden responder con el uso de datos.
+       Tendencias en Data & 
+       Analytics 2021-2022
+          ✔ IA más inteligente, rápida y                ✔ Choques entre mundos de datos y 
+              responsable                                   analytics
+          ✔ Decisión Intelligence                       ✔ Data Marketplaces e Intercambios
+          ✔ X Analytics: Data No Estructurada           ✔ Blockchain en data & analytics
+          ✔ Gestión de datos aumentada                  ✔ MLOps (Machine Learning 
+          ✔ Cloud es una realidad                           Operations)
+                                                        ✔ Modelos de lenguaje avanzados (e.j. 
+                                                            BERT)
+                 ☕
+               Break
+               ¡10 minutos y 
+                volvemos!
+    Ciclo de vida de un
+    proyecto de Ciencia 
+       de Datos
+    Ciclo de vida de un 
+    proyecto 
+    de Ciencia de datos
+                 Momento 1: Definir el objetivo
+                 Momento 2: Recolección de la data
+                 Momento 3: Preparar la data
+                 Momento 4: Elección del Algoritmo
+    Ciclo de vida de un 
+    proyecto 
+    de Ciencia de datos
+                 Momento 5: Entrenar el modelo
+                 Momento 6: Validación del modelo
+                 Momento 7: Deployment del modelo
+                       1.Definir el 
+                         objetivo
+                       Es vital entender el problema a resolver y cuáles son 
+                       nuestros objetivos dado las características de la 
+                       empresa, así como de la data que tendremos a 
+                       disposición. 
+                       Las siguientes preguntas son típicas en esta etapa:
+                       ✔ ¿Qué exactamente deseamos hacer?
+                       ✔ ¿Cómo exactamente podremos hacerlo?
+                       ✔ ¿Es posible lo que deseo dada la data que tengo?
+    2. Recolección 
+    de data
+     ✔ Data First Party: Data propia de la empresa 
+       (ERP,CRM,BD, etc).
+     ✔ Data Second Party: Suele ser data que comparte 
+       una organización con sus aliados estratégicos.
+     ✔ Data Third Party: Datos de tercero que podemos 
+       obtener ya sea de forma gratuita o incurriendo en 
+       algún tipo de costo asociado.
+                       3. Preparar la 
+                       data
+                       Normalmente lo conocemos como la limpieza de los 
+                       datos o el formateo del dato.
+                       El objetivo de esta etapa es manipular y convertir la 
+                       data en formas que produzcan mejores resultados. 
+                       Algunos ejemplos serían:
+                       Eliminar o inferir datos perdidos, categorizar los 
+                       valores de las variables, normalizar los valores 
+                       numéricos o escalarlos para que puedan ser 
+                       comparables.
+    4. Elección del 
+    Algoritmo
+    Una vez que ya hemos preprocesado la data, nos 
+    corresponde elegir el algoritmo más adecuado en 
+    relación al problema que deseamos resolver.
+    En este punto tenemos que decidir por el Tipo de 
+    Aprendizaje que vamos a implementar. 
+    En las próximas clases de: Modelos Analíticos para 
+    Ciencia de Datos II y III se abordarán los Tipos de 
+    Aprendizaje en ML con mucho mayor detalle y 
+    profundidad.
+                       5. Entrenar el 
+                       modelo
+                       Este paso tiene una relación directa con conceptos que 
+                       abordaremos más adelante en el curso (Training y 
+                       Test). Sin embargo, el proceso de entrenamiento de un 
+                       modelo de ML, consiste en proporcionarle al modelo 
+                       datos de entrenamiento de los cuales pueda aprender.
+    6. Validar el 
+    modelo
+    Se realizará con la data de validación y procederemos 
+    a ¨correr” el algoritmo y a evaluar los resultados 
+    obtenidos. 
+    En el caso de que los resultados no sean satisfactorios, 
+    deberemos volver a la etapa 5 hasta que nuestro 
+    modelo se ajuste bien a las dos particiones (data de 
+    entrenamiento y data de validación).
+                             7. Deployment 
+                             del modelo
+                             Implementación en producción de nuestro modelo. 
+                             Generalmente, solemos ayudarnos de la nube a través 
+                             de los tres vendors más conocidos que existen 
+                             actualmente: 
+                              ✔ AWS
+                              ✔ Azure 
+                              ✔ GCP
+      Ejemplo en vivo
+   ¡Vamos a trabajar con datos! 
+   ¿Qué conceptos de Data Science conocen o 
+   han escuchado nombrar?
+         ¿Qué conceptos han 
+         escuchado antes?
+    Por encuestas de Zoom:
+    ✔Exploratory Data         ✔SQL 
+      Analysis                ✔Estadística 
+    ✔Data Wrangling             inferencial
+    ✔Minería de datos         ✔Machine Learning
+    ✔Limpieza de datos        ✔Deep Learning
+                              ✔Inteligencia 
+                                artificial
+     ¡Vamos a trabajar 
+     con datos!
+                         Miremos en el notebook Clase 1.ipynb 
+                         cómo crear un gráfico igual a este.
+    Valor y retorno de
+    la ciencia de Datos
+       Valor y retorno de la 
+       Ciencia de Datos
+       Así como cualquier inversión, la                 ¿Que queda del valor generado después 
+       factibilidad de un proyecto de ciencia de        de los costos se contabiliza el costo de los 
+       datos ocurre cuando genera más valor             errores?
+       que costos. Para esto se puede utilizar el 
+       índice ROI (Return of Investment)
+       Valor y retorno de la 
+       Ciencia de Datos
+       Retorno= valor -(1-accuracy)*Costo del         Accuracy: Métrica de performance del 
+       error                                          modelo.
+                                                      Costo del error: Costos adicionales por 
+       Retorno: Lo que se genera o el profit por      un error (e.g nos demoramos 10 min 
+       cada predicción.                               corrigiendo un error en el sistema)
+       Valor: El valor generado por cada 
+       predicción (e.g antes demoramos 5 
+       minutos en obtener una predicción 
+       manual,  con el algoritmo ahora toma 
+       0.01 s)
+       Valor y retorno de la 
+       Ciencia de Datos
+       Si hacemos que el Retorno =0 entonces:      Ejemplo: Si cada predicción ahorra 5 min 
+                                                   de trabajo pero arreglar errores te cuesta 
+       0= valor -(1-accuracy)*Costo del error      20 min el Break Even Accuracy sería: 1- 
+       accuracy= 1- (valor/Costo del error)        (5/20) = 0.75 (75%)
+       A esto se le conoce como Break Even         Tu modelo debe tener al menos 75% de 
+       Accuracy                                    accuracy para que valga la pena usarlo
+       Valor y retorno de la 
+       Ciencia de Datos
+       Ejemplo: Si tenemos un algoritmo que        Si estamos hablando de un call center 
+       tiene un accuracy de 78%, donde cada        que puede recibir 10000 llamadas al mes 
+       predicción ahorra 5 min de trabajo y        ahorramos 467 horas de trabajo manual 
+       arreglar errores cuesta 10 min, entonces:   ������Nada mal ������
+       Retorno= valor -(1-accuracy)*Costo del 
+       error
+       Retorno = 5- (1-0.78)*10=2.8 
+       Entonces, usar el algoritmo nos ahorra 2.8 
+       minutos (168 seg) de trabajo.
+       Estrategia
+      data-driven
+                       Data Driven
+       REEMPLAZAR      Es una disciplina que utiliza diversas técnicas y 
+       POR IMAGEN      herramientas de análisis para aprovechar los datos 
+                       generados dentro de un ámbito o empresa para su 
+                       beneficio y el de sus clientes.
+                       Dicho de otro modo, se trata de sacar valor a los 
+                       millones de datos de los que hoy disponemos para 
+                       tomar mejores decisiones basadas en ellos.
+     Organización Data-Driven
+           Datos        Refinamiento      Uso
+         Organización Data-Driven
+                   Datos                    Refinamiento                       Uso
+            Los clientes compran        Un producto de datos es        Un producto de datos 
+             el producto de datos            una aplicación            es información digital 
+             una vez y continúan         informática que toma         que se puede comprar 
+              usándolo tal como           entradas de datos y                 y usar.
+                    está.                   genera salidas, 
+                                       devolviéndole al entorno.
+  Datos
+   Refinamiento
+   Usos
+       Ejemplo de caso de uso
+                                                     ✔ Estrategia: Análisis exploratorio de 
+                                                        datos, metodología de agrupamiento 
+                                                        (clustering), obtención de 
+       Detección de fraude en una compañía de           conclusiones
+       póliza de seguros:                            ✔ Funcionamiento: La información 
+       Su tarea es responder si existen                 recolectada por parte de la 
+       patrones particulares en los grupos              aseguradora es el insumo del 
+       de reclamos presentados que puedan               algoritmo de segmentación que 
+       ser indicativos de fraude.                       permitirá detectar fraude en posibles 
+                                                        reclamos de los usuarios
+                                                     ✔ Oportunidades: Combinar con datos 
+                                                        de ventas e información 
+                                                        sociodemográfica para ofrecer 
+                                                        nuevos productos de pólizas para los 
+                                                        clientes de la empresa
+      Objetivos específicos:
+                                                 ✔ Identificar posibles grupos 
+        ✔ Comprender el comportamiento de           problemáticos posiblemente 
+           los reclamos por parte de los            asociados a eventos fraudulento.
+           usuarios.                             ✔ Brindar ofertas promocionales, 
+        ✔ Identificar grupos de acuerdo a su        cupones y ofertas en pólizas a 
+           condición sociodemográfica.              diferentes usuarios.
+                                                 ✔ Actualizar servicios.
+    Datos y análisis del caso:
+    Fuentes de Datos: Es donde podemos 
+    capturar la información, que puede ser de 
+    tres tipos: estructurada, semi-
+    estructurada o no estructurada. 
+    Tipo de Análisis: Es la metodología que 
+    usamos para resolver el problema. nos 
+    podemos preguntar por: Descriptivo 
+    (¿Qué pasó?), Diagnóstico (¿Por qué 
+    paso?),Predictivo (¿Qué pasará?), 
+    Prescriptivo (¿Cómo hacer que suceda?)
+        Actividad colaborativa
+   Optimizando el stock para una PYME
+   Ayudamos a optimizar el stock de nuestra 
+   heladería de barrio
+   Realizaremos la actividad en la sala 
+   general.
+   Duración: 15-20 minutos
+            ACTIVIDAD COLABORATIVA
+       Optimizando el stock 
+       para una PYME
+       Consigna: En la heladería de Pedro se          ✔ ¿Cómo piensan que esta información 
+       lleva mucho tiempo trabajando sin ningún           puede ayudar a tener un mejor 
+       tipo de estrategia enfocada al uso de los          control del stock de la heladería?
+       datos como oportunidad de mejora y             ✔ ¿Qué nivel de madurez tendría esta 
+       manejo de stocks.                                  empresa según el modelo Data 
+       Recientemente, debido a la crisis                  Management Maturity Model?
+       sanitaria, el dueño ha cambiado su 
+       perspectiva y piensa que su empresa 
+       debería hacer un mejor uso de los datos 
+       históricos recolectados.
+        CLASE N°1
+        Glosario                                               Ciclo de vida de un proyecto de DS: 7 fases 
+                                                               que describen cómo resolver un problema 
+        Industria 4.0: que permiten utilizar el poder de       analitico (Definir objetivo, Recolectar datos, 
+        las máquinas inteligentes y el análisis en tiempo      Limpiar y preparar datos, Elección de algoritmo, 
+        real por medio de la interacción con sistemas          Evaluación de algoritmos y Despliegue)
+        ciber-físicos                                          Valor de retorno de un proyecto de DS: 
+        IoT (Internet of Things): conectividad entre           costo (tiempo o $) que se pierde o gana con la 
+        dispositivos a la Internet                             implementación de cualquier algoritmo en un 
+                                                               proceso productivo
+        IoS (Internet of Services): conectividad entre         Estrategia Data Driven: uso de técnicas y 
+        dispositivos a escala industrial                       herramientas para mejorar la toma de decisiones 
+        IoD (Internet of Data): manejo de volúmenes            con el fin de extraer el valor de los datos
+        de datos gigantes interconectados                      Transformación digital: uso de tecnología en 
+        IoP (Internet of People): interacciones mucho          todas las áreas del negocio para mejorar 
+        más eficientes entre personas                          productividad.
+     ¿Quieres saber más?
+     Te dejamos material 
+     ampliado de la clase
+          MATERIAL AMPLIADO
+      Recursos multimedia
+       ✓ Industria 4.0: Fabricando el futuro | 
+          Unión industrial Argentina, BID e 
+          INTAL
+       ✓ Ciclo de vida de un proyecto de Data
+           Science
+           | Analytics Vidhya
+       ✓ Transformación Digital | Salesforce
+      Disponible en nuestro repositorio.
+      ¿Preguntas?
+                   Resumen 
+               de la clase hoy
+              ✓  Cuarta Revolución Industrial
+              ✓  El Ambiente de la Industria 4.0
+              ✓ Transformación Digital
+              ✓ Ciclo de vida de un proyecto de ciencia de datos
+              ✓ Valor y retorno de la Ciencia de Datos
+             Tu Proyecto final
+              #CoderTip: Ingresa a la carpeta de Google Drive de 
+               esta clase y revisa el documento de Proyectos 
+              finales. Allí podrás encontrar referencias que te serán 
+                útiles al momento de crear tu trabajo original.
+        Muchas 
+        gracias.

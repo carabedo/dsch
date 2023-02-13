@@ -1,0 +1,462 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 04. DATA SCIENCE
+          Introducci√≥n a la 
+          librer√≠a cient√≠fica 
+        con Python: Pandas 
+               (parte I)
+      Temario
+                     03                   04                    05
+               Introducci√≥n a       Introducci√≥n a la     Programaci√≥n 
+                     la            librer√≠a cient√≠fica     con arrays: 
+               programaci√≥n           con Python          Introducci√≥n a 
+                 con Python            (parte I)             Numpy
+                 ‚úì Estructura de     ‚úì Estructura de     ‚úì Estructura de datos
+                  (Parte II)
+                    control            datos en Pandas 
+                                                         ‚úì Numpy y ndarrays
+                 ‚úì Funciones         ‚úì Manipulaci√≥n de 
+                 ‚úì                     datos en Pandas   ‚úì Tipos de datos
+                    Tipo de datos
+                 ‚úì IPython           ‚úì Lecturas de       ‚úì Indexado y acceso
+                                       archivos con      ‚úì Operaciones 
+                 ‚úì Instalaci√≥n         Python               b√°sicas
+    Objetivos de la clase
+                 Conocer las estructuras de datos en Pandas.
+                 Comprender el uso de Pandas para la 
+                 manipulaci√≥n de grandes vol√∫menes de datos.
+        MAPA DE CONCEPTOS
+                                Series
+          Estructuras de                             Lectura desde 
+          datos de              Data Frames          archivos
+          Pandas
+                                Panel
+                                Selecci√≥n de 
+                                elementos
+          Manipulaci√≥n 
+          de datos con 
+          Pandas
+                                Operaciones         Tratamiento de datos 
+                                                    ausentes
+      Cuestionario de tarea
+   ¬øTe gustar√≠a comprobar tus 
+   conocimientos de la clase anterior?
+   Te compartimos a trav√©s del chat de 
+   Zoom / chat de la plataforma el enlace a un 
+   breve cuestionario de Kahoot.
+   Duraci√≥n: 10 minutos
+           Cuarta revoluci√≥n Industrial      Transformaci√≥n digital
+                       Ciclo de vida de un proyecto DS
+    Estructuras de datos 
+       en Pandas
+     ¬øQu√© es la librer√≠a 
+       Pandas? 
+       Librer√≠a Pandas
+        ‚úî Pandas facilita la manipulaci√≥n de          ‚úî Es de uso libre, su primera versi√≥n 
+            grandes vol√∫menes de datos a                  se cre√≥ en 2008.
+            trav√©s de un conjunto de m√©todos y        ‚úî Est√° enmarcado en un proyecto 
+            estructuras dise√±adas para tal fin.           llamado NUMFOCUS (2015)
+        ‚úî Extiende las funcionalidades de 
+            Numpy, por lo que sus estructuras 
+            de datos son totalmente 
+            compatibles.
+    Tres estructuras 
+    fundamentales
+     ‚úî Series (1D)
+     ‚úî Dataframes (2D)
+     ‚úî Paneles (3D)
+    En este curso 
+    trabajaremos 
+    principalmente con 
+    Series y DataFrames.
+      Panda Series
+    Pandas Series
+    ¬øQu√© son y c√≥mo 
+    est√°n 
+    Las series son objetos de una dimensi√≥n, con tres 
+    componentes principales: 
+    compuestas?
+    √çndices: Pueden ser cualquier tipo de variable
+    Valores: Asociados a cada √≠ndice
+    Nombre: Que caracteriza a la serie
+           Numeros = range(50, 70, 2)
+           Numeros_serie = 
+           pd.Series(Numeros)
+           print(Numeros_serie)                ‚Ä¶ como los 
+               Ì†Ω                               Numpy arrays, 
+               Ì†Ω                               pero con √≠ndices
+                                                 ‚úî Se construyen a partir de otros objetos 
+                                                     particulares, como las listas o los Numpy arrays.
+           print(Numeros_serie[2])               ‚úî Tienen √≠ndice propio.
+                    Ì†Ω
+                    Ì†Ω
+        Pandas Series
+             Est√°n formados por dos objetos 
+             vinculados: el arreglo de √≠ndices y 
+             el arreglo de valores
+              print(numeros_serie.index)              Ì†Ω
+              print(numeros_serie.values)             Ì†Ω
+    Pandas Series
+       Tanto el arreglo de √≠ndices como el 
+       de valores pueden modificarse
+     Numeros_en_texto = 
+     ['primero','segundo','tercero','cuarto','quinto','sexto','s√©ptimo','octavo','
+     noveno','d√©cimo']                     Ì†Ω
+     Numeros_serie_2 = pd.Series(Numeros,index=Numeros_en_texto)
+     Numeros_serie_2
+    Pandas Data Frames
+    Pandas Data Frames
+     ‚úî Son una extensi√≥n de los objetos 
+       Series.
+     ‚úî Pueden pensarse como una tabla, 
+       formada por varias Series de igual 
+       longitud.
+     ‚úî Como toda tabla, consta de filas y 
+       columnas (2D).
+     ‚úî Cada fila tiene un elemento √≠ndice 
+       asociado.
+      Ejemplo en vivo
+   A continuaci√≥n veremos los pasos para 
+   construir un Data Frame en vivo.
+   Profe, te invitamos a que puedas 
+   compartir pantalla y mostrar c√≥mo 
+   realizar esta pr√°ctica.
+      Pandas Data Frames
+                                                 modelos = ['A4 3.0 Quattro 4dr manual',
+                                                  'A4 3.0 Quattro 4dr auto',
+      Construyendo un Data Frame                  'A6 3.0 4dr',
+      manualmente                                 'A6 3.0 Quattro 4dr',
+                                                  'A4 3.0 convertible 2dr']
+        ‚úî Definir las listas que contienen la    peso = [3583, 3627, 3561, 3880, 3814]
+           informaci√≥n                           precios = ['$33,430', '$34,480', '$36,640', 
+                                                 '$39,640', '$42,490']
+        ‚úî Construir las Series
+                                                 Autos_peso = 
+                                                 pd.Series(peso,index=modelos)
+                                                 Autos_precio = 
+                                                 pd.Series(precios,index=modelos) 
+    Pandas Data Frames
+    Construyendo un Data Frame 
+    manualmente 
+    Hasta ahora...
+      print(Autos_precio)        print(Autos_peso)
+        Pandas Data Frames
+        Construyendo un Data Frame 
+        manualmente                                                                            ‚Ä¶ voil√†! 
+         ‚úî Construir el Data Frame a partir de 
+             las Series:
+               Autos = 
+               pd.DataFrame({'Peso':Autos_peso,'Precio':Auto   Ì†Ω
+               s_precio})
+               Autos
+      Pandas Data Frames
+      Construyendo un Data Frame 
+      manualmente 
+        ‚úî Construyamos ahora un tablero de 
+           ajedrez ‚ôü 
+           Ajedrez_64 = np.arange(1,65).reshape(8,8)
+           Ajedrez_df = pd.DataFrame(
+                Ajedrez_64,                                  Ì†Ω
+                columns=range(1,9),
+                index=['A','B','C','D','E','F','G','H']
+           ) 
+           Ajedrez_df
+    Pandas DataFrames 
+     En resumen las series son objetos 2D 
+     (filas x columnas) con las siguientes 
+     propiedades:
+      ‚úî √çndices: Pueden ser cualquier tipo de 
+        variable
+      ‚úî Valores: Asociados a cada √≠ndice y a 
+        cada columna
+      ‚úî Nombre: Que caracteriza al 
+        Dataframe
+     Son, entonces, una generalizaci√≥n de 
+     series
+     Manipulaci√≥n de 
+        datos
+       en Pandas
+    Selecci√≥n de datos
+      Indexamiento Series
+      Con Pandas, existen tres formas de 
+      seleccionar elementos:
+                                           Ì†Ω Numeros_serie_2['quinto']
+        ‚úî Mediante el √≠ndice
+        ‚úî Mediante el m√©todo loc()         Ì†Ω
+                                                Numeros_serie_2.loc['quinto']
+        ‚úî Mediante el m√©todo iloc() que utiliza 
+           s√≥lo √≠ndices num√©ricos          Ì†Ω Numeros_serie_2.iloc[5]
+        Indexamiento Data Frame
+        Tambi√©n podemos seleccionar partes espec√≠ficas del Data Frame, 
+        como √≠ndices, columnas y valores.
+                   Autos.inde  Ì†Ω
+                   x
+                   Autos.colu  Ì†Ω
+                   mns
+                   Autos.valu  Ì†Ω
+                   es
+       Indexamiento Data Frame
+        ‚úî Selecci√≥n de columna
+        ‚úî Selecci√≥n de fila                             Ì†Ω
+                                           Autos['Peso'
+                                           ]
+                  Autos.values[  Ì†Ω
+                  1]
+                  Autos.loc['A4 3.0 Quattro 4dr     Ì†Ω
+                  auto',]
+        Indexamiento Data Frame
+          ‚úî Selecci√≥n con condici√≥n
+        Supongamos que necesitamos un listado 
+        de precios de aquellos autos con peso 
+        mayor a 3600‚Ä¶
+         Autos.loc[Autos.Peso >= 3600,'Precio']         Ì†Ω
+    Operaciones b√°sicas 
+         de 
+     datos en Pandas
+       Transposici√≥n
+         ‚úî Consiste en intercambiar filas de un       En ocasiones necesitamos ver las cosas 
+            Data Frame por sus columnas.              desde otra perspectiva...
+         ‚úî Puede resultar m√°s c√≥modo trabajar 
+            con el Data Frame transpuesto que 
+            con el original.
+                Autos.T
+       Funciones Vectorizadas
+       Desde Numpy, en Pandas
+         ‚úî Las funciones vectorizadas o ufuncs 
+            de Numpy pueden realizarse 
+            tambi√©n sobre Data Frames y Series.
+         ‚úî Tras ejecutar la operaci√≥n se 
+            conservan los √≠ndices.
+         Numeros_3 = range(51,70,2)
+         Numeros_serie_3 = pd.Series(Numeros_3,index=Numeros_en_texto)          Ì†Ω
+         Numeros_serie_3
+       Ufuncs sobre Data Frames
+       Los Data Frames tambi√©n admiten                    largo = [179, 179, 192, 192, 180]
+       operaciones vectorizadas Ì∫ÄÌ†Ω                        Autos_2 = 
+                                                          pd.DataFrame({'Peso':peso,'Largo':larg
+       Calculemos el porcentaje de un Data                o},index=modelos)
+       Frame con respecto a los valores de su             Autos_2
+       primera fila
+                                           Ì†Ω
+             Autos_2 / Autos_2.iloc[0] * 100
+        Conservaci√≥n de √≠ndices
+        Veamos qu√© sucede                                              Numeros_serie_2 + 
+        con los √≠ndices al       Numeros_serie_2                       Numeros_serie_3
+        sumar series‚Ä¶
+       Conservaci√≥n de √≠ndices
+       Otra forma de sumar Series o DataFrames 
+       es con el m√©todo .add()
+             Numeros_serie_2.add(Numeros_serie_3)                   Ì†Ω
+       Conservaci√≥n de √≠ndices
+       ¬øY si sumamos series con √≠ndices 
+       incompatibles? 
+                        Numeros_serie_2_porcion = Numeros_serie_2[4:7]
+                        Numeros_serie_3_porcion = Numeros_serie_3[5:8]
+                        print(Numeros_serie_3_porcion, Nnumeros_serie_2_porcion
+                                                                      Ì†Ω
+                        print(Numeros_serie_2_porcion + Numeros_serie_3_porcion)
+                                                                      Ì†Ω
+                        ¬°Los √≠ndices que no coinciden se rellenan con 
+                        NaN!  
+     Datos ausentes
+  Houston‚Ä¶ tenemos un 
+  problema
+      ¬øQu√© hacemos con los datos 
+      faltantes?
+    Lidiando con valores 
+    faltantes
+    La mayor√≠a de las operaciones de Pandas 
+    admiten un par√°metro fill_value, que 
+    indica el valor a insertar en caso de 
+    resultar un NaN.
+                  Numeros_serie_2_porcion.add(Numeros_serie_3_porcion, 
+                  fill_value=0)
+                 En este caso, especificamos que 
+                   en caso de encontrar un valor  Ì†Ω
+                    faltante lo reemplace por 0.
+                                     Ì†Ω
+       ¬øDatos ausentes, por qu√©? 
+       Como futuros Data Scientists,                    ‚úî Fallas en alg√∫n paso de la carga de 
+       com√∫nmente nos toparemos con valores                datos.
+       faltantes o ausentes que podr√≠an provenir        ‚úî Omisi√≥n directa de la carga de 
+       de las siguientes situaciones:                      datos.
+                                                        ‚úî Reticencia de parte de un 
+                                                           encuestado a dar una respuesta 
+                                                           determinada.
+                                                      ¬°Los valores faltantes son m√°s comunes 
+                                                      de lo que se piensa!
+                       Not a Number:
+                       El representante 
+                       del valor 
+                      NaN significa Not a Number y es el valor faltante por 
+                       faltante
+                      defecto.
+                      Es un tipo de dato especial de punto flotante.
+                      Tiene propiedades especiales: cualquier operaci√≥n que 
+                      involucre NaN da como resultado NaN.
+           Propagaci√≥n de valores 
+           faltantes
+           Veamos qu√© sucede al operar con NaN                                         Algunas funciones est√°n preparadas para 
+                                                                                       trabajar con NaN:
+           Probemos esta propiedad utilizando el 
+           objeto NaN de Numpy:                                                              np.nanprod([2,valor_nan])              Ì†Ω
+                 valor_nan = np.nan                                                                                                 Ì†Ω
+                 type(valor_nan)            Ì†Ω
+                                            Ì†Ω                                            En este caso, Numpy le asign√≥ un 
+                                                                                                   valor de 1 y realiz√≥ la 
+                 2 * valor_nan          Ì†Ω                                                    multiplicaci√≥n normalmente.
+                                        Ì†Ω
+       Trabajando con datos 
+       ausentes
+        ‚úî Estos valores podr√≠an no ser              Primero que nada, definamos nuestro 
+            adecuados para algunos algoritmos       conjunto de prueba:
+            de Data Science. Por ello, deben ser 
+            manejados correctamente.
+        ‚úî Pandas nos provee de herramientas 
+            para trabajar con ellos.
+      Numeros_nan = Numeros_serie_2_porcion + Numeros_serie_3_porcion    Ì†Ω
+      Numeros_nan
+         Trabajando con datos 
+         ausentes
+         Veamos algunos ejemplos...
+                                                     Numeros_nan.isnull()            Ì†Ω
+           ‚úî Podemos marcarlos
+           ‚úî Podemos reemplazarlos                   Numeros_nan.fillna(0)           Ì†Ω
+           ‚úî Podemos eliminarlos
+                                                     Numeros_nan.dropna()            Ì†Ω
+    Met√≥do pct_change()
+    Met√≥do 
+    pct_change()
+    El m√©todo pct_change() de Pandas se aplica en series 
+    con datos num√©ricos para calcular el cambio de 
+    porcentual de un valor respecto al anterior.
+    Resulta √∫til al momento de monitorear variables 
+    num√©ricas.
+    Si tenemos n datos num√©ricos entonces 
+    tendremos n-1 cambios porcentuales
+                 ‚òï
+               Break
+               ¬°10 minutos y 
+                volvemos!
+      Ejemplo en vivo
+   ¬°Llevemos lo visto hasta el momento a la 
+   acci√≥n!
+   Utilizaremos la carpeta de Notebooks con 
+   los archivos Clase02_Acciones.ipynb con el 
+   fin de manipular series y dataframes
+    Lectura de archivos
+       con Python
+     Lectura de .csv 
+        y .txt
+       Lectura desde .csv
+        from google.colab import drive              density    pH  sulphates  alcohol  quality
+        import os                                 0   0.9978  3.51       0.56      9.4        5
+        drive.mount('/content/gdrive')       Ì†Ω 1   0.9968  3.20       0.68      9.8        5
+                                                  2   0.9970  3.26       0.65      9.8        5
+        %cd '/content/gdrive/MyDrive'             3   0.9980  3.16       0.58      9.8        6
+                                                  4   0.9978  3.51       0.56      9.4        5
+        df= pd.read_csv('winequality-
+        red.csv',sep=',')
+        print(df[['density','pH','sulphates
+        ','alcohol','quality']].head())
+       Lectura desde .txt
+       from google.colab import drive
+       import os
+       drive.mount('/content/gdrive')        Ì†Ω
+                                                                     Name  Type 1  HP  Attack  Defense
+                                                  0              Bulbasaur  Grass  45      49       49
+       %cd '/content/gdrive/MyDrive'              1                Ivysaur  Grass  60      62       63
+       df=                                        2               Venusaur  Grass  80      82       83
+       pd.read_csv('pokemon_data.txt',delim       3  VenusaurMega Venusaur  Grass  80     100      123
+       iter='\t')                                 4             Charmander   Fire  39      52       43
+       print(df[['Name','Type 
+       1','HP','Attack','Defense']].head())
+     Lectura de .xlsx
+       Lectura desde .xlsx
+           from google.colab import drive
+           import os
+           drive.mount('/content/gdrive')      Ì†Ω
+                                               Ì†Ω   index    ID  Year_Birth   Education   Income
+           %cd '/content/gdrive/MyDrive'            0      0  5524        1957  Graduation  58138.0
+                                                    1      1  2174        1954  Graduation  46344.0
+           df=                                      2      2  4141        1965  Graduation  71613.0
+           pd.read_excel('defaultoutput.xlsx'       3      3  6182        1984  Graduation  26646.0
+           )                                        4      4  5324        1981         PhD  58293.0
+           print(df[['index','ID','Year_Birth
+           ','Education','Income']].head())
+     Lectura de .xlsx
+      Lectura desde Github
+         import pandas as pd
+         url =                                Ì†Ω
+         'https://raw.githubusercontent.com/                     AMZN    MCD  SBUX   GOOG  MSFT
+         JJTorresDS/stocks-ds-edu/main/stock     formatted_date                                 
+                                                 2016-01-01      587.0  106.3  54.4  743.0  49.9
+         s.csv'                                  2016-02-01      552.5  100.7  52.1  697.8  46.0
+         df = pd.read_csv(url, index_col=0)      2016-03-01      593.6  108.8  53.6  745.0  50.3
+         print(df[['AMZN','MCD','SBUX','GOOG     2016-04-01      659.6  109.5  50.5  693.0  45.5
+                                                 2016-05-01      722.8  105.6  49.3  735.7  48.3
+         ','MSFT']].head(5).round(1))
+       Lectura desde APIs
+         import pandas as pd
+         !wget -O cars_clus.csv https://s3-        manufact    model   sales  resale
+         api.us-                                   0    Acura  Integra  16.919  16.360
+                                               Ì†Ω 1    Acura       TL  39.384  19.875
+         geo.objectstorage.softlayer.net/cf-       2    Acura       CL  14.114  18.225
+         courses-data/CognitiveClass/              3    Acura       RL   8.588  29.725
+         ML0101ENv3/labs/cars_clus.csv             4     Audi       A4  20.397  22.255
+         filename = 'cars_clus.csv'
+         #Lectura
+         pdf = pd.read_csv(filename)
+         print ("Shape: ", pdf.shape)
+         orint(pdf.head(5))
+      Actividad colaborativa
+   Manejo de datos seg√∫n cotizaci√≥n en 
+   la bolsa
+   Manipulaci√≥n de datos seg√∫n cotizaciones 
+   de diversas compa√±√≠as por medio de 
+   Pandas Data Frames
+   Duraci√≥n: 15-20min en grupos 3-4 personas
+            ACTIVIDAD COLABORATIVA
+       Manejo de datos seg√∫n 
+       cotizaci√≥n en la bolsa
+       ¬øC√≥mo lo hacemos?
+                                                     Cualquier duda pueden consultar a 
+       Importar datos de Acciones Globales (que      su tutor o profesor.
+       est√°n hosteados en GITHUB en el 
+       siguiente enlace Monitoreo de Acciones
+       Graficar cotizaciones y recomendar elegir 
+       2 acciones para comprar. 
+       Justificar la decisi√≥n.
+       NOTA: usaremos los breakouts rooms. El tutor/a tendr√° el rol de facilitador/a.
+         CLASE N¬∞4
+         Glosario
+         Pandas: librer√≠a fundamental que nos permite              Operaciones vectorizadas: toda operaci√≥n 
+         trabajar con archivos planos (.csv, .txt, xlsx) en        matem√°tica consistente que se puede ejecutar 
+         Python                                                    en vectores y matrices 
+         Series: estructuras 1D en Pandas que                      Datos ausentes: Conocidos como NaN en 
+         almacenan vectores con √≠ndice, nombre y                   Python representan valores sin registro que 
+         valores                                                   pueden llegar a ser problem√°ticos en los an√°lisis. 
+         DataFrames: estructuras 2D (filas x columnas)             Met√≥do pct_change: Impl√≠cito en pandas que 
+         que son la generalizaci√≥n de Series en Pandas             permite calcular variaciones porcentuales de 
+         Lectura de datos en pandas: se pueden leer                observaciones consecutivas para monitorear 
+         archivos planos con las funciones pd_read_csv o           cambios
+         pd_read _excel pero tambi√©n se pueden leer                Indexaci√≥n de datos en Pandas: m√©todos loc 
+         archivos en formatos tipo .JSON y .SQL.                   y iloc que permiten extraer filas con base en 
+         Panel: estructuras 3D (filas x columnas x                 condiciones
+         profundidad) que permiten almacenar varios 
+         Dataframes 
+      ¬øPreguntas?
+                   Resumen 
+               de la clase hoy
+              ‚úì Nociones b√°sicas de Pandas
+              ‚úì Las estructuras de datos en Pandas
+              ‚úì Series y Data Frames 
+              ‚úì Selecci√≥n de elementos
+              ‚úì Operaciones con datos
+              ‚úì Datos ausentes
+              ‚úì Lectura de archivos con pandas
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.

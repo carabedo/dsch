@@ -1,0 +1,473 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 32. DATA SCIENCE
+          Introducción a la 
+           visualización de 
+                 datos
+         Temario
+                                  31                                 32                                 33
+                      Exploratory Data                    Introducción a la                    Visualizaciones 
+                        Analysis (EDA)                     visualización de                    efectivas y Data 
+                                                                   datos                          Storytelling
+                         ✓ Análisis                       ✓ Historia de las                  ✓ Beneficios del 
+                             estadístico                                                         storytelling y 
+                                                              visualizaciones                    componentes
+                         ✓ Correlaciones y                ✓ Principios generales del         ✓ Visualización de datos
+                             variables                        diseño analítico
+                                                                                             ✓ Elevator Pitch
+                         ✓ Identificación de              ✓ Buenas prácticas
+                             outliers                     ✓ Gestalt                          ✓ Interfaz de usuario
+                         ✓ Valores perdidos               ✓ Visualizaciones                  ✓ Principios de 
+                                                              engañosas                          usabilidad
+    Objetivos de la clase
+                 Reconocer la utilidad y beneficios de la 
+                 visualización de datos
+                 Comparar buenas prácticas de aplicación
+        MAPA DE CONCEPTOS
+                                  Historia de las 
+                                 visualizaciones
+          Principios         Introducción a la 
+         generales del        visualización de           Visualizaciones 
+        diseño analitico                                  engañosas
+                                   datos
+                                    Gestalt
+      Cuestionario de tarea
+   ¿Te gustaría comprobar tus 
+   conocimientos de la clase anterior?
+   Te compartimos a través del chat de 
+   Zoom / chat de la plataforma el enlace a un 
+   breve cuestionario de Kahoot.
+   Duración: 10 minutos
+      Historia de las 
+      visualizaciones
+                Repaso…
+     En módulos anteriores de nuestro curso, 
+     hemos realizado ya algunas 
+     visualizaciones de datos, sin embargo no 
+     hemos entrado en profundidad sobre 
+     cuáles son los verdaderos fundamentos de 
+     una correcta visualización
+     A lo largo de esta sesión, abordaremos 
+     estos conceptos de manera detallada…
+    Visualización de datos
+     Se refiere a la presentación de datos en 
+     un formato ilustrado o gráfico. 
+     Permite observar el análisis de datos, 
+     de manera visual, para captar 
+     conceptos difíciles o identificar 
+     patrones.
+    ¿Para qué sirve?
+     Gracias a la visualización de datos, las 
+     personas encargadas de tomar 
+     decisiones por ejemplo dentro de una 
+     empresa, ven significativamente facilitada 
+     su labor, al contar con medios visuales que 
+     simplifican la comprensión del conjunto de 
+     datos. 
+      Para pensar
+   Ahora bien… respecto al tema de crear 
+   visualizaciones ¿Es una práctica actual o se 
+   remonta desde qué época? ¿Desde cuándo 
+   piensan que las visualizaciones han sido 
+   importantes para el ser humano?
+   Contesta en el chat de Zoom
+      Para pensar
+   Si respondieron que sí, ¡acertaron!
+   Efectivamente las visualizaciones de datos, datan 
+   de hace un largo tiempo atrás.
+   Revisemos un poco la historia…
+     Línea de tiempo
+     Línea de tiempo 
+                                     12000 BP- Datos de estrellas y el 
+                                     universo, cavernas
+                                     5500 BC- Representación de 
+                                     tokens como cantidades
+                                     1160 BC - Mapas e ilustraciones de 
+                                     recursos geológicos 
+                                     1786- Sr William Playfair concluyó 
+                                     que los gráficos representan mucho 
+                                     mejor las ideas que las tablas. El 
+                                     fue el inventor de los gráficos de 
+                                     líneas, barplots, piecharts
+     Fuente: TimeLine Visualization
+     Línea de tiempo 
+                                            Finales siglo 19- Edad de Oro 
+                                            Estadística
+                                            1980’s- Sparklines información 
+                                            temporal
+                                            1990’s - Excel con sus herramientas de 
+                                            visualización facilitó el manejo de datos
+                                            Hoy en día- Visualización enfocada en 
+                                            casos de uso
+                                             1. BI (business Intelligence) 
+                                                reporting   
+                                             2. Custom Data Visualization
+                                             3. Information Visualization
+                                             4. EDA
+     Fuente: TimeLine Visualization
+    Línea de tiempo 
+                             Hoy en día hemos llegado a este 
+                             estado, donde tenemos un sin número 
+                             de visualizaciones posibles
+                             ¿Cuántos tipos de gráficos creen 
+                             que existen en la actualidad?
+     Visualizaciones 
+        icónicas
+       Visualizaciones icónicas
+         Sabemos la importancia de la visualización, pero… 
+         ¿pensaron        alguna      vez      cómo       las 
+         visualizaciones influyeron en la historia? 
+         Los   invitamos  a  conocer  algunas  de  las 
+         visualizaciones más icónicas y su historia.
+         ¡Entremos
+         !
+      Para pensar
+   Basándonos lo aprendido y teniendo en cuenta la 
+   historia de las visualizaciones…
+   ¿Qué crees que hace a una buena visualización?
+   Contesta en el chat de Zoom
+    Principios generales 
+    del diseño analítico
+       Edward Tufte
+        Si hablamos de referentes del mundo de las 
+        Visualizaciones de Datos, además de Alberto 
+        Cairo, no podemos no mencionar a: Edward 
+        Tufte . Su libro más destacado ha sido: “The 
+        Visual     Display     of     Quantitative 
+        Información”,  también  conocido  por  su 
+        traducción    al    español    como:    “La 
+        Representación    Visual   de   Información 
+        Cuantitativa”. 
+    Principios generales de 
+    Tufte
+     Uno de los grandes aportes de Tufte fueron 
+     los Principios Generales del Diseño Analítico, 
+     los cuales hasta el día de hoy tienen vigencia:
+     ✔Principio 1: Muestra comparaciones, 
+      contrastes, diferencias.
+     ✔Principio 2: Muestra causalidad, 
+      mecanismo, explicación, estructura 
+      sistemática.
+     ✔Principio 3: Muestra datos multivariados, 
+      es decir, más de una o dos variables.
+    Principios generales de 
+    Tufte
+      ✔ Principio 4: Íntegra palabras, 
+        números, imágenes y diagramas.
+      ✔ Principio 5: Describe la totalidad 
+        de la evidencia. Muestra fuentes 
+        usadas y problemas relevantes.
+      ✔ Principio 6: Las presentaciones 
+        analíticas, se sostienen de la 
+        calidad, relevancia e integridad de 
+        su contenido.
+     Buenas prácticas
+     Uso apropiado de gráficas
+     Una buena gráfica debe proveer:
+      ✔ Contenido 
+      ✔ Debe ser la apropiada según lo que se 
+        quiere presentar
+      ✔ Menos es más (No es necesario incluir 
+        etiquetas de más, ni colores en exceso)
+      ✔ Es útil para el usuario que la usa
+     Fuente: Choice of Charts
+    ¿Qué hace una buena 
+    visualización?
+    Sin dudas, esta pregunta es muy ambiciosa y no existe un 
+    claro consenso en que hace a una visualización de datos 
+    "buena",  pero  vamos  a  basarnos  en  algunos  conceptos 
+    que Alberto Cairo referente en el tema nos brinda en su 
+    libro  “The  Truthful  Art”.  4  puntos  (Veracidad, 
+    funcionalidad, perspicaz , atractiva)
+    ¿Qué hace una buena 
+    visualización?
+    Según Cairo (y Enrico Bertini), una visualización es exitosa 
+    porque es: 
+    ✔ Veraz:  No  debe  esconder  información  y  ser  el 
+      resultado de un análisis/investigación "honesto“.
+    ✔ Funcional: Debe permitir a los usuarios entenderlo de 
+      la manera más simple posible.
+    ¿Qué hace una buena 
+    visualización?
+     ✔ Atractiva: Una visualización debe buscar atraer 
+       la  atención mediante un buen diseño estético y 
+       basado  en  la  Usabilidad  de  Usuario  (este 
+       concepto  lo  abordaremos  en  detalle  en  la 
+       próxima clase ������).
+     ✔ Perspicaz: Muestra evidencia que sería difícil de 
+       ver  de  otra  manera  esclarecedora:  nos  da 
+       evidencia nueva sobre el tema que se analiza.
+  Ejemplos:
+    Buenas prácticas de 
+    visualización 
+    La visualización de datos, como ya sabemos, tiene un 
+    papel relevante dentro del mundo empresarial. Esto es 
+    así debido a que las personas procesan mejor la 
+    información, en el uso de esquemas o gráficos para 
+    observar grandes cantidades de datos complejos. 
+    Buenas prácticas de 
+    visualización 
+     Con las visualizaciones de datos podemos, por ejemplo:
+     ✔ Identificar áreas de la empresa que necesitan de una 
+       mayor atención.
+     ✔ Ayudar a comprender los factores que influencian el 
+       comportamiento de los clientes.
+     ✔ Predecir cifras claves de negocio. 
+    Buenas prácticas de 
+    visualización 
+     ✔ Las  visualizaciones  ayudan  a  los  usuarios  a  darse 
+       cuenta de realidades que no eran obvias de forma 
+       inicial. 
+     ✔ Los  patrones  subyacentes  de  los  datos  se  pueden 
+       observar de forma rápida y sencilla. 
+     ✔ Transmiten  la  información  de  una  manera  visual  y 
+       clara.  Este  concepto  se  asocia  a  lo  que  se  conoce 
+       como Data StoryTelling,  temática  que  abordaremos 
+       en la próxima sesión.
+    ¿Cómo elegir el método 
+    adecuado?
+     Además de considerar los tipos  de  datos  asociados  a  las  variables  que 
+     queremos graficar,  debemos  de  tener  en  cuenta  que  todos  los  gráficos 
+     poseen: “Una posición, una forma, un tamaño, un color, un ancho de 
+     línea y un tipo de línea”.
+      Tipos de datos
+     Un pequeño juego
+  Ascombe Dataset
+  Ascombe Dataset
+      Asociar conceptos
+       1. Edad de tus amigos                              A. quantitative
+       2. Género de tus amigos                            B. categorical
+       3. Número de amigos que tienes                     C. categorical/ordinal
+       4. Los nombres de tus amigos                       D. categorical
+       5. Todas tus notificaciones                        E. relational
+       6. Links entre un grupo de amigos                  F. Spatial/categorical
+       7. Las ciudades de todos tus amigos
+  ¿Qué es más sencillo de 
+  leer?
+      Percepción de 
+     variables visuales
+      Percepción de variables 
+      visuales
+          1. DETECCIÓN:     ¿Podemos    (espontáneamente)    discernir/separar 
+             elementos gráficos?
+             -> relacionado con la propiedad selectiva
+          2. ESTIMACIÓN:  ¿Podemos  hacer  comparaciones  de  magnitudes  de 
+             elementos de datos a partir de los elementos gráficos?
+             -> relacionado con la propiedad cuantitativa
+        Detección: Procesamiento de 
+        pre-atención
+              -    Algunos  estímulos  pueden  ser  percibidos  sin  necesidad  de 
+                   atención focalizada
+              -    Generalmente dentro de 200-250 ms
+              -    Parece ser hecho en paralelo por el sistema de visión de bajo 
+                   nivel
+            ¡Esto  tiene  un  gran  impacto  en  la  codificación  visual  que 
+            debemos usar!
+       Detección
+  Pre-atención
+    Pre-atención
+                  Cuando diseñes visualizaciones, intenta 
+                   usar la pre-atención con el fin de 
+                    resaltar lo que más te interesa.
+  Conjunción
+    Conjunción
+                              El color hue es tiene pre-atención
+  Conjunción
+    Conjunción
+                              El shape es tiene pre-atención
+  Conjunción
+   Conjunción
+                            El color y shape es tiene pre-atención
+   Pre-atención
+                Evite las conjunciones que 
+                 inhiban la pre-atención.
+                (Usualmente asociada sa 
+                    búsqueda)
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+        Gestalt
+      Generalidades
+    Implementación de 
+    Gestalt en DS
+    La implementación de Gestalt aplica más al área de BI. 
+    Sin embargo, es un concepto muy interesante a tener en cuenta como 
+    científicos de datos para entender a la visualización en su conjunto y 
+    contexto.
+    Leyes de percepción 
+        visual
+    Leyes de percepción visual 
+    Gestalt
+    La percepción visual, es la interpretación de la información transmitida por los estímulos 
+    lumínicos externos que, a través de un proceso cerebral activo, se transforma en una 
+    representación o copia de la realidad, la cual claramente es subjetiva y se encuentra 
+    atada a las vivencias, a la cultura y a nuestra experiencia personal.
+    Leyes de percepción visual 
+    Gestalt
+    Ahora que ya sabemos esto, ¿Qué son y para qué sirven las leyes de Gestalt? De 
+    cierta manera, nos ayudan a entender cómo captamos el mundo que nos rodea y nuestra 
+    tendencia  a  percibir  las  relaciones  entre  los  distintos  elementos  como  un  todo  y 
+    justamente se basan en la premisa, de que el “Todo es superior a la suma de sus 
+    partes”. 
+  Leyes de percepción visual 
+  Gestalt
+    Leyes de percepción visual 
+    Gestalt
+    1. Proximidad: Si unos elementos se encuentran próximos 
+    entre sí, se perciben como un grupo. En la figura, percibimos 
+    los elementos circulares alineados verticalmente agrupados 
+    como si fueran columnas debido a la proximidad entre ellos, y 
+    no agrupados en filas 
+        Leyes de percepción visual 
+        Gestalt
+          En el siguiente gráfico, las ventas de las regiones "Norte",        Si intentamos comparar las ventas de la región "Norte" 
+          "Sur", "Este" y "Oeste" forman 4 grupos distintos. Es bastante      (gráficos de barras azules) en los 4 trimestres. Difícil no?. La 
+          fácil comparar las ventas de cada región dentro de un               ley de proximidad debe resaltar lo que se desea enfatizar
+          trimestre.
+   Leyes de percepción visual 
+   Gestalt
+    2. Semejanza: Los elementos con atributos similares 
+    (color, forma, tamaño u orientación) se perciben como un 
+    grupo.
+    Asociamos los triángulos de color naranja bajo un mismo 
+    grupo pese a estar distanciados entre sí y más próximos a 
+    los elementos circulares de color coral.
+   Leyes de percepción visual 
+   Gestalt
+    Darles el mismo color a las barras 
+    en este caso particular elimina la 
+    carga cognitiva adicional 
+    impuesta por el uso disruptivo de 
+    diferentes colores en el gráfico 
+    de la izquierda y nos facilita 
+    mucho comparar y encontrar 
+    puntos de interés.
+    Se recomienda utilizar 
+    características y atributos 
+    similares (color, tamaño, forma, 
+    etc.) para establecer relaciones 
+    entre objetos y reforzar 
+    agrupaciones.
+   Leyes de percepción visual 
+   Gestalt
+    3. Cierre: Los elementos que parecen tener 
+    un contorno o borde alrededor de ellos, 
+    forman parte de un grupo. Aunque estén 
+    cerca y tengan semejanza con otros 
+    elementos fuera del borde, el hecho de 
+    existir un borde alrededor de varios de ellos 
+    hace que los percibamos como un grupo, aún 
+    sin ser semejantes.
+    Leyes de percepción visual 
+    Gestalt
+    Debido al bajo contraste entre la figura y el fondo en el gráfico de la 
+    izquierda, existe una carga cognitiva adicional. Aumentar el contraste 
+    (como en el gráfico de la derecha) mejora la legibilidad. 
+    Por tanto es importante asegúrese de que haya suficiente contraste entre 
+    sus figuras y el fondo.
+    Leyes de percepción visual 
+    Gestalt
+    4. Compleción: Nuestra percepción tiende a completar 
+    las partes que faltan rellenandolas con los elementos 
+    que faltan, siempre que sea razonable. La figura no 
+    está completa, le faltan partes, y sin embargo vemos 
+    un círculo.
+     Leyes de percepción visual 
+     Gestalt
+         En la figura de la izquierda vemos un lineplot en línea continua. A la derecha observamos un 
+         lineplot pero con líneas discontinuas. No es necesario generar estructuras continuas ya que 
+         el cerebro humano es capaz de crear las conexiones necesarias entre los puntos evitando 
+         consumir espacio adicional y en muchos casos facilitando las comparaciones
+   Leyes de percepción visual 
+   Gestalt
+    5. Continuidad: Los elementos que están uno a 
+    continuación de otro, se perciben como elementos continuos 
+    aunque haya un espacio entre sí. 
+    Pese a la semejanza en forma, color y tamaño, percibimos 
+    una línea recta que se cruza con una línea curva debido a la 
+    continuidad de las mismas. 
+    Leyes de percepción visual 
+    Gestalt
+     En el siguiente gráfico de la izquierda, hay cambios bruscos de dirección.
+     En el gráfico de la derecha, se sigue un camino continuo; esto hace que todo el gráfico sea más legible debido a 
+     la dirección descendente continua. Se sugiere alinear los elementos linealmente para facilitar la comparación de 
+     diferentes elementos que se encuentran en una agrupación relacionada.
+    Leyes de percepción visual 
+    Gestalt
+    6. Conectividad: Los elementos conectados 
+    físicamente entre sí se perciben como un grupo de 
+    manera más fuerte que el hecho de tener una 
+    semejanza (color, forma, tamaño, etc) similar.
+     Leyes de percepción visual 
+     Gestalt
+         En la gráfica superior izquierda debido a que no hay conexiones entre los elementos el 
+         cerebro tiene a establecer asociaciones por el color
+         Sin embargo en las otras gráficas se puede observar que al existir conexiones entre los 
+         elementos es mucho más sencillo comprender patrones en los datos
+     Visualizaciones 
+       engañosas
+    Visualizaciones engañosas
+    No todo en el mundo de las visualizaciones de 
+    datos es color de rosas, tenemos que tener 
+    mucho cuidado con las visualizaciones 
+    engañosas es decir, gráficos creados a 
+    propósito con el objetivo de confundir y/o 
+    engañar a una audiencia.
+    Visualizaciones engañosas
+     ✔  Los ejes suelen estar cortados.
+     ✔  La escala no es homogénea durante todo el 
+      gráfico.
+     ✔ Visualizaciones muy cargadas de 
+      información de manera innecesaria.
+     ✔ Pocos datos o no se detalla la fuente.
+      Ejemplo en vivo
+   Exploremos en el notebook dentro de la 
+   carpeta de clase con el fin de examinar las 
+   características ideales para un gráfico. 
+   Examinaremos ventajas y desventajas 
+   de las librerías Matplotlib y Seaborn.
+       CLASE N°32
+       Glosario
+       Visualización de datos: presentación             Buenas visualizaciones: según Cairo y 
+                                                        Enrico Berteni debe cumplir con 4 
+       de datos en un formato ilustrado o               características (veraz, funcional, atractiva y 
+       gráfico. Permite observar el análisis            perspicaz)
+       de datos, de manera visual, para 
+       captar conceptos difíciles o                     Leyes de percepción visual de Gestalt: 
+       identificar patrones.                            es la interpretación de la información 
+                                                        transmitida por los estímulos lumínicos 
+       Principios generales de diseño                   externos que, a través de un proceso 
+       analitico: establecidos por Tufte                cerebral activo, se transforma en una 
+       (comparaciones, causalidad,                      representación o copia de la 
+       multivariados, integración de números,           realidad (Proximidad, Semejanza, 
+       palabras e imágenes, descripción de la           Cierre , Compleción, Continuidad y 
+       evidencia y calidad) permiten definir la         conectividad)
+       forma y estructura de gráficos.
+      ¿Preguntas?
+     ¿Aún quieres conocer 
+          más?
+     Te recomendamos el 
+      siguiente material
+         MATERIAL AMPLIADO
+     Recursos multimedia
+         The mortality rates and the space-time pattern
+          ✓ The Mortality rates and the space-time pattern of John Snow’s 
+             Colera epidemic map | International Journal of Health 
+             Geographics | John Snows map
+         From Data to Viz
+          ✓ From Data to Viz | Yan Holtz & Conor Healy | Datatoviz
+         Catálogo de visualizaciones
+          ✓ Tipos de visualizaciones | Dataviz | Código DataViz
+      Disponible en nuestro repositorio.
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.
+                   Resumen 
+               de la clase hoy
+              ✓ Análisis estadístico
+              ✓ Correlaciones y variables
+              ✓ Identificación de outliers
+              ✓ Valores perdidos

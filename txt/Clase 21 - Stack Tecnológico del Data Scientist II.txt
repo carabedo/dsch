@@ -1,0 +1,516 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 21. DATA SCIENCE
+        Stack Tecnológico II
+     Temario
+                    20                 21                  22
+                  Stack               Stack            Retomando 
+              tecnológico I       Tecnológico II        impulso 
+                                  ✓ Sistema in-       ✓ Fases de un 
+               ✓ Bases de            house               proyecto de DS 
+                  Datos                               ✓ Numpy y Pandas
+                                  ✓ Cloud 
+               ✓ Lenguajes           Computing        ✓
+                  DS                                     Visualización
+                                  ✓ Fundamentos       ✓ Estadística 
+               ✓ Visualización       del Big Data
+                  de datos                               Descriptiva
+                                  ✓ ETL
+    Objetivos de la clase
+                 Explorar las potencialidades de Cloud 
+                 Computing.
+                 Identificar conceptos de Big Data y sus 
+                 herramientas.
+                 Interpretar el proceso de ETL y su aplicación 
+                 dentro del mundo de la Ciencia de Datos.
+        MAPA DE CONCEPTOS                            Definición
+                                                     Tipos
+                                Cloud 
+                                Cloud 
+                                Computing
+                                Computing
+          Stack Tecnológico                          Ventajas y 
+          II                                         desventajas
+                                                     Proveedores
+                                                     Fundamentos
+                                                     impulsores
+                                Big Data
+                                Big Data
+                                                     Herramientas
+                                                     Definición
+                                ETL
+                                ETL                  On premise
+                                                     On cloud
+       Sistemas
+       in-house
+    Servidor In-House
+                            ✓ Un servidor In-house es aquel que 
+                              almacena y mantiene en el espacio 
+                              físico en un entorno local. 
+                            ✓ Por lo tanto, no hay necesidad de una 
+                              conexión a Internet para acceder a 
+                              sus datos. 
+                            ✓ Permite el control físico sobre su 
+                              copia de seguridad en todo momento.
+                            ✓ Pueden ser viables para pequeñas 
+                              empresas 
+         Ventajas y desventajas In-
+                               Ventajas                                          Desventajas
+         House
+            Seguridad. Manejo de datos sensibles sin            Requiere de grandes inversiones iniciales para 
+            terceros                                            infraestructura y hardware
+            Sin tantos gastos fijos (pago a terceros por        Gastos variables por consumo y espacio 
+            servicio)                                           además de mantenimiento
+            Posibilidad de autogestión dentro de la             Tiene una carga máxima (capacidad de 
+            compañía.                                           procesamiento)
+            No requiere de conexión a Internet (no es           Requiere de personal capacitado para resolver 
+            limitante velocidad de conexión)                    problemas
+            Hay control sobre la infraestructura (control de    Pierde flexibilidad (acceso remoto) además de 
+            acuerdo a las necesidades)                          ser susceptible a perdida de datos (daños 
+                                                                estructura)
+        Fuente:  Kharb L. et al. (2018. A Comprehensive Study of Security in Cloud Computing) 
+     Resumen: Ventajas in-
+     Customización: Con nuestra propia 
+     infraestructura de redes y de datos podemos 
+     house
+     obtener una mayor customización de 
+     recursos por ejemplo en base a los 
+     requerimientos de la organización.
+     Conocimiento: El conocimiento de los sistemas y 
+     datos reside únicamente in-house. Esto puede 
+     ser preferible para compañías con 
+     requerimientos muy específicos de 
+     seguridad.
+     Sin costos mensuales: Usualmente, los planes de 
+     deployment on-premise se estructuran en planes 
+     anuales o multi-anuales, potencialmente 
+     eliminando la necesidad de costos 
+     mensuales.
+     Resumen: Desventajas in-
+     Elasticidad:  Falta de elasticidad para el uso de 
+     más recursos en caso de ser necesario dado un 
+     house
+     pico de demanda. 
+     Costos de Infraestructura:  Los costos de 
+     infraestructura para montar un datacenter 
+     propio son mucho más superiores que si 
+     adquirimos una licencia con algún proveedor de 
+     servicios Cloud.
+     Personal altamente capacitado:  Si quisiéramos 
+     tener nuestra infraestructura In – House 
+     deberemos contar con personal altamente 
+     capacitado en temas de Seguridad e 
+     Infraestructura informática.
+        Cloud
+       Computing
+   Cómputo en la nube
+   Cloud Computing es una tendencia en alza 
+   especialmente dentro del mundo de la Analítica 
+   de Datos y como Data Scientist resulta realmente 
+   muy importante que podamos entender qué es el 
+   Cloud, sus características y cuáles son los 
+   diferentes servicios que podemos utilizar en la 
+   nube para complementar nuestro Stack 
+   Tecnológico como Científicos de Datos.
+    Arquitectura Cliente - 
+    Servidor
+                                  Claves de la arquitectura
+                                  → Cliente
+                                  → Servidor
+        ¿Qué es el Cloud 
+        Computing?
+                                         Nueva tecnología que nos permite acceder 
+                                      mediante un sistema remoto, al software, al 
+                                              procesamiento de datos y al 
+                                             almacenamiento de archivos.
+                                                    Tipos disponibles
+                                              Nube pública      Nube privada
+     Beneficios de Cloud 
+     Computing 
+     Existen muchas ventajas, 
+     mencionaremos las más 
+     en Big Data
+     relevantes:
+      ✔ Abaratamiento de costos
+      ✔ Inmediatez
+      ✔ Capacidad de proceso
+      ✔ Concurrencia
+      ✔ Seguridad
+         “El Cloud Computing, permite la 
+         aceleración y gestión de procesos 
+         computacionales, haciéndolos más 
+         eficientes”
+                                               -   Observatorio Nacional de Telecomunicaciones y de la 
+                                                                                                                           SI
+           Ventajas y desventajas 
+                                 Ventajas                                         Desventajas
+           Cloud
+             Pocos costos operacionales (proveedor se encarga   Sistemas de seguridad que tienen políticas y 
+             de mantenimiento, equipos y red de servidores)     términos a veces desconocidos
+             Hardware y software de punta (CPU, GPU), IA, ML,   Esquemas de costos complejos basados en 
+             DL                                                 consumo y servicios ocupados
+             Acceso rápido por conexión con alto Gbps y         Existen costos grandes cuando se transfiere la 
+             muchos puntos de intercambio                       información de una organización a otra
+             Permite el acceso remoto y conectividad rápida     En algunos casos el soporte al cliente no es 
+                                                                óptimo
+             Infraestructura más segura y sistemas de backup    Requiere de conexiones estables e internet 
+             regulares                                          constante para acceso remoto
+        Fuente:  Kharb L. et al. (2018. A Comprehensive Study of Security in Cloud 
+        Computing) 
+         Resumen: Ventajas cloud
+          Escalabilidad:   uno     puede     construir   muy 
+          rápidamente  una  nueva  infraestructura  con 
+          aplicaciones y alta escalabilidad. La carga sobre 
+          la  aplicación  crece  horizontalmente  por  las 
+          provisiones de servidores.
+          Agilidad:  Desarrollo  rápido  de  aplicaciones  por 
+          tecnología  de  punta  hace  que sea  un  sistema 
+          ágil y eficiente. 
+          Accesibilidad y back-ups: Se tienen sistemas que 
+          permiten  alta  concurrencia  y  accesibilidad 
+          rápida.  Además  se  tiene  la  posibilidad  de 
+          generar back-ups de manera recurrente.
+           Resumen: Desventajas 
+            Costos variables:  Los contratos con proveedores 
+           cloud
+            suelen ser bastante rígidos y el consumo junto 
+            con el almacenamiento físico puede ser variable
+            Control  de  Infraestructura:    No  se  tiene  la 
+            posibilidad de controlar la infraestructura a 
+            la    conveniencia  del  momento  según  las 
+            necesidades lo cual genera restricciones.
+            Conexión continua:  Se requiere de sistemas de 
+            conexión  a  internet  de  buena  calidad  y 
+            estables para que no se generen problemas 
+     Tipos de nubes y 
+       servicios
+     Modelos de Servicios en la 
+     Nube
+     ✔ Infraestructura como servicio ������ IaaS
+     ✔ Plataforma como servicio ������ PaaS
+     ✔ Software como servicio ������ SaaS
+     ✔ Storage as a Service ������ (STaaS)
+     ✔ Data as a Service ������ (DaaS)
+     ✔ Functions as Service ������ (FaaS)
+       Tipos de nubes
+                  Nube Privada               Nube Pública
+                   En mi propio              En Azure u otro 
+                 centro de datos              proveedor de 
+                                                servicios
+      Proveedores
+       Tipos de proveedores
+       Como en todo servicio en cuanto a 
+       servicios en la nube se tienen                  Miremos primero los principales líderes 
+       proveedores líderes del mercado como:           del mercado…
+       Amazon Web Services, Google Cloud y 
+       Microsoft Azure.
+       Sin embargo existen otros que son los 
+       retadores en el mercado como: Alibaba 
+       Cloud, Oracle, IBM, Tencent Cloud entre 
+       otros.
+    Amazon Web 
+    Services
+    Quizás es una de las plataformas de servicios en la 
+    nube más conocidas, proporciona una variedad de 
+    servicios de infraestructura, tales como 
+    almacenamiento, redes, bases de datos, servicios de 
+    aplicaciones, potencia de cómputo, mensajería, 
+    inteligencia artificial, servicios móviles, seguridad, 
+    identidad y conformidad, entre otros. 
+    Principal ventaja → la experiencia en el mercado 
+    y el servicio de atención al cliente que ofrece ������
+    Microsoft Azure
+    Microsoft Azure, proporciona una gama de servicios 
+    en la nube, incluidos servicios vinculados con la 
+    computación, analítica, almacenamiento y redes. 
+    Los usuarios pueden elegir entre estos servicios 
+    para desarrollar y escalar nuevas aplicaciones, o 
+    ejecutar aplicaciones existentes. 
+    Principal ventaja →  la rapidez ⏱
+    Google Cloud 
+    Platform
+    Google Cloud Platform, también conocida por la 
+    nomenclatura GCP, es una suite que contiene 
+    diversos servicios que funcionan en la misma 
+    infraestructura que utiliza Google de manera 
+    interna, por ejemplo con servicios como Youtube o 
+    Google Search. 
+    Principal ventaja → la seguridad ⏱ 
+                       Otros 
+                       ✔ Dentro de los otros proveedores uno de los más 
+                       proveedores
+                         completos es Alibab Cloud que ha tomado 
+       REEMPLAZAR        renombre en los últimos años con servicios de 
+       POR IMAGEN        Web hosting, Servidores virtuales y capacidad de 
+                         cálculo comparable con AWS, Azure y GCP
+                       ✔ Otros que también ofrecen beneficios similares 
+                         son IBM cloud y Oracle, la única debilidad de 
+                         Oracle es que no tiene sistemas de Shared Web 
+                         Hosting. 
+                       ✔ El que menos adeptos tiene es TencentCloud por 
+                         ser un sistema bastante reciente.
+   ¿Cuál elegir?
+   La elección deberá realizarse en función de las 
+   necesidades computacionales de la 
+   organización y acompañado por la asesoría de un 
+   profesional capacitado en la temática. Quizás, una 
+   buena recomendación antes de tomar una decisión 
+   definitiva al respecto, sería tomar una prueba 
+   gratuita de cada una de las herramientas, para 
+   vivenciar de esa manera la experiencia de utilizar 
+   cada una de ellas. 
+       Para pensar
+   ¿Qué proveedor han utilizado en sus 
+   trabajos?
+   ¿Cuál de ellos conoces?
+   Contesta mediante el chat de Zoom 
+                 ☕
+               Break
+               ¡10 minutos y 
+                volvemos!
+                  ¡Lanzamos la
+                  Bolsa de 
+                  Empleos!
+                 Un espacio para seguir potenciando tu carrera y 
+                 que tengas más oportunidades de inserción 
+                 laboral.
+                 Podrás encontrar la Bolsa de Empleos en el menú 
+                 izquierdo de la plataforma.
+                 Te invitamos a conocerla y ¡postularte a tu futuro 
+                 trabajo!
+                   Conócela
+     Fundamentos del
+       Big Data
+       Fundamentos 
+       generales
+       Colección de grandes volúmenes de datos,                          REEMPLAZAR 
+       complejos y muy difíciles de procesar, a través de                 POR IMAGEN
+       herramientas de gestión y procesamiento de datos 
+       tradicionales.
+                       Impulsores 
+         REEMPLAZAR    Sin dudas existen múltiples drivers del Big Data, 
+         POR IMAGEN    podemos mencionar:
+                       ✔ IoT (Internet of Things)
+                       ✔ Redes Sociales facilitando interacción
+                       ✔ El internet
+                       ✔ Tics, Instrumentación, Sensores, Tecnología
+                       ✔ Cloud Computing
+     Las 3 V del Big Data
+                                Volume
+                                  n
+                                Big 
+                                Data
+                       Velocidad        Variedad
+       Principales 
+      herramientas
+      Hadoop
+      Framework implementado en Java que         ¿Para qué sirve? 
+      permite el almacenamiento y                     → Almacenar archivos de manera 
+      procesamiento distribuido de grandes       distribuida. 
+      conjuntos de datos estructurados, semi-         → Procesar archivos de manera 
+      estructurados y no estructurados. Está     distribuida.
+      diseñado para trabajar en clústers y tiene 
+      una alta tolerancia a fallas. 
+    Apache Sqoop
+    Herramienta que está dentro de proyecto 
+    Apache, y además forma parte del 
+    ecosistema Hadoop. Sqoop nos permite la 
+    transferencia de datos entre un RDBMS 
+    como MySQL o oracle y HDFS.
+        Hive
+        Software que facilita leer, escribir y              ������ MR es un modelo de programación 
+        manejar largos conjunto de datos, que               utilizado en Hadoop que facilita el trabajo 
+        residen en un almacenamiento                        con grandes volúmenes de datos 
+        distribuido, usando SQL.                            distribuidos a través de múltiples 
+                                                            máquinas dentro de un clúster.
+       Cluster Computing
+        Proceso de compartir las tareas de computación 
+        entre varias computadoras y esas computadoras o         1. Motor de búsqueda de 
+        máquinas forman el clúster (sistema distribuido            Google 
+        con las redes).                                         2. La simulación de 
+        Diferentes preferencias arquitectónicas, como              terremotos
+        clústeres de equilibrio de carga, clústeres de alta     3. Simulación de yacimientos 
+        disponibilidad (HA) y clústeres de alto rendimiento        de petróleo 
+        (HP).                                                   4. Sistema de pronóstico del 
+        Algunas de las ventajas son la velocidad de                tiempo.
+        procesamiento, la rentabilidad, la 
+        escalabilidad y la alta disponibilidad de 
+        recursos.
+       Spark
+       Apache Spark es un framework de            Sus propias características:
+       propósito general para el procesamiento      ✔ Proyecto de código libre
+       de datos en un clúster.                      ✔ Framework de procesamiento 
+                                                       unificado (Batch y Streaming)
+                                                    ✔ Escalable y tolerante a fallos
+                                                    ✔ Potente motor de procesamiento de 
+                                                       datos masivos en memoria (in-
+                                                       memory processing) sobre un cluster 
+                                                       (Spark está integrado con Hadoop, 
+                                                       pero no depende de él
+        Hadoop vs Spark
+                                           Hadoop                    Spark
+          Almacenamiento                   Solo disco             Memoria disco
+          Operaciones                    Map y Reduce       Map, Reduce, Join,Sample, 
+                                                                      etc.
+          Modelo de ejecución               Batch                    Batch, 
+                                                               interactivo,streaming
+          Entornos de programación           Java              Scala, Java, R ,Python
+       Para pensar
+   ¿Para qué contextos te parece más útil el 
+   Cloud Computing y en cuáles no? 
+   Contesta mediante el chat de Zoom 
+       Servicios en la nube 
+        y Cloud Computing
+             Duración: 15 minutos
+       ACTIVIDAD EN CLASE
+    Servicios en la 
+    nube y Cloud 
+    Descripción de la actividad. 
+    Computing
+    Se propone elegir alguno de los siguientes proveedores 
+    en la nube:
+     1. Google Cloud
+     2. Amazon Web Services (AWS)
+     3. Microsoft Azure
+    Identificar 3 fortalezas y debilidades. Además encontrar 
+    cuáles son los principales usos más comunes para los 
+    sistemas cloud en la actualidad.
+         ETL
+    Extraer, transformar 
+       y cargar
+        Extraer, transformar y cargar (ETL, Extract, Transform, Load) es el proceso de 
+      compilación de datos a partir de un número ilimitado de fuentes, su posterior 
+                organización y su carga en un repositorio.
+       Principales 
+      herramientas
+    On premise
+    Lanzada en el 2006, es una plataforma de integración completa de ETL que cubre los 
+     requisitos de integración de datos. Además, también ofrece un entorno gráfico para 
+       construir, gestionar y mantener procesos de integración de datos en sistemas de 
+                     inteligencia empresarial.
+    On premise
+     Ofrece una variedad de productos para realizar la integración de datos y los procesos de 
+     ETL. Es open source y realmente muy potente, ya que funciona bien con integraciones 
+                  para Google Big Query o Redshift.
+    On premise
+     Proporciona una herramienta de diseño visual, que simplifica significativamente la 
+      construcción, ejecución y mantenimiento de los procesos de integración de 
+    datos empresariales. También, cuenta con una potente interfaz fácil de usar y amigable 
+                       con el usuario.
+    On premise
+      Componente de Microsoft SQL Server utilizado para la extracción, transformación y carga 
+      de datos (ETL). De las más reconocidas y utilizadas actualmente en el mercado. 
+     On cloud
+     Azure Data Factory es un servicio serverless de ETL el cual nos permite realizar procesos 
+      de data integration, data transformation y data load. A su vez ofrece una Interfaz gráfica 
+               muy intuitiva para la aplicación y creación de los ETL.
+     On cloud
+     AWS Glue:
+     Servicio administrado del cloud AWS que nos permite hacer procesos ETL 
+     de una manera visual para extraer o volcar datos a AWS.
+     On cloud
+    Data Flow nos permite desarrollar ETL desde cero utilizando un pipeline o flujos de datos, 
+     también nos ayuda a realizar la ingesta de la información en tiempo real o en Batch de 
+                 acuerdo al requerimiento de la empresa.
+        Cuestionario final
+   ¡Ya estamos terminando! ¿Testeamos 
+   lo que aprendimos? ⏱⏱
+   Te compartimos a través del chat de 
+   Zoom / chat de la plataforma el PIN para 
+   sumarte al Kahoot.
+   Duración: 10 minutos
+      Actividad colaborativa
+   Socialización y consulta de Proyectos - 
+   II
+   Avanzaremos resolviendo consultas 
+   asociadas al proyecto del curso mediado 
+   por tutores
+   Realizaremos la actividad en grupos de 3-4 
+   personas 
+   Duración: 15 minutos
+             ACTIVIDAD COLABORATIVA
+        Acuerdos
+       Presencia                                       Apertura al aprendizaje
+        ✓ Participar y “estar” en la clase, que          ✓ Siempre, pero siempre puedes 
+            tu alrededor no te distraiga                    seguir aprendiendo. Compartir el 
+                                                            conocimiento es válido, la 
+       Escucha activa                                       construcción colaborativa es la 
+                                                            propuesta.
+        ✓ Escuchar más allá de lo que la 
+            persona está expresando 
+            directamente                               Todas las voces
+                                                         ✓ Escuchar a todos, todos podemos 
+                                                            reflexionar. Dejar el espacio para 
+                                                            que todos podamos participar.
+            ACTIVIDAD COLABORATIVA
+       Socialización y consulta 
+       de Proyectos - II
+      Consigna: Esta actividad colaborativa 
+      interactuamos con compañeros y tutores       Se propone resolver consultas 
+      con eje central el proyecto del curso.       metodológicas o de forma acerca del 
+                                                   proyecto final. 
+                                                   Identificar fortalezas y debilidades que 
+                                                   pueden servir como punto de mejora para 
+                                                   la entrega del proyecto.
+                                                   Se propone que los estudiantes muestren 
+                                                   los avances a los tutores y compañeros 
+                                                   para recibir retroalimentación de su 
+                                                   proyecto.
+      NOTA: usaremos los breakouts rooms. El tutor/a tendrá el rol de facilitador/a.
+                 Primera entrega 
+              de tu Proyecto final
+           Debes entregar el Análisis de datos con Python
+          correspondiente a la primera entrega de tu proyecto 
+                                  final.
+          Crearás la notebook de un análisis exploratorio de datos sobre un problema a 
+         resolver para una industria, negocio o proyecto personal. La notebook contendrá 
+         un informe que detalle tus hipótesis primarias y secundarias, el código utilizado 
+                       para probarlas y su posible resolución.
+    Recordemos…
+                          Aplicamos Feature Selection
+                          Elegimos un algoritmo de 
+                          Machine Learning 
+                          Evaluamos el desempeño del 
+                          algoritmo elegido
+         Clase 19
+       Estructurando un 
+       proyecto de DS-III Obtención de conclusiones con 
+                          base en resultados obtenidos
+            ENTREGA DEL PROYECTO 
+            FINAL
+       Análisis de datos con 
+       Python
+      Objetivos generales                          Formato
+        ✓ Estructurar un problema en función         ✓ Link a repositorio de Github o 
+           de múltiples, pero simples                   documento de Jupyter.
+           preguntas/hipótesis a responder           ✓ El archivo debe tener el nombre 
+        ✓ Analizar datos tabulares (e.g excel,          “PrimeraEntrega+Apellido.ipynb”
+           csv, etc)  usando Python
+        ✓ Utilizar modelos de Machine              Sugerencias
+           Learning con Python
+                                                     ✓ La entrega es individual y se realiza 
+                                                        a través de la plataforma.
+             ENTREGA DEL PROYECTO 
+             FINAL
+        Primera entrega
+       El modelo de Jupyter Notebook debe contener
+         ✓ Abstracto con motivación y audiencia: Descripción de 
+             alto nivel de lo que lo motiva a analizar los datos                 Video explicati
+             elegidos y qué tipo de audiencia se podría beneficiar de            vo
+             este análisis
+         ✓ Preguntas/Hipótesis que queremos responder mediante 
+             el análisis de datos
+         ✓ Estructura acorde.
+         ✓ Análisis Exploratorio de datos (EDA): Análisis descriptivo 
+             de los datos mediante visualizaciones mediante el 
+             análisis de datos
+      ¿Preguntas?
+                   Resumen 
+               de la clase hoy
+              ✓ Herramientas de Cloud Computing, de Big Data y 
+                ETL
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.

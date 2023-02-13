@@ -1,0 +1,509 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 20. DATA SCIENCE
+         Stack Tecnológico I
+      Temario
+                     19                    20                    21
+                Algoritmos y             Stack                 Stack 
+                validación de        tecnológico I         tecnológico II
+               modelos de ML
+                                                          ✓ Sistema In - 
+                ✓ Conceptos           ✓ Bases de             House
+                   básicos               datos            ✓
+                                                             Cloud 
+                ✓ Aprendizaje         ✓ Lenguajes            Computing
+                   y Validación          DS               ✓
+                                                             Fundamentos 
+                ✓ Métricas  y         ✓ Visualización        del Big Data 
+                   evaluación            de datos         ✓
+                                                             ETL
+    Objetivos de la clase
+                 Clasificar las principales herramientas para un 
+                 Científico de Datos y sus características.
+        MAPA DE CONCEPTOS
+       Stack             Bases de            Relacionales
+     Tecnológico I       datos               No 
+                                             relacionales
+                                             R
+                         Lenguajes           Python
+                         Data Science
+                                             Otras 
+                                             herramienta
+                                             s
+                                             Power BI
+                         Visualización
+                                             Tableau
+      Cuestionario de tarea
+   ¿Te gustaría comprobar tus 
+   conocimientos de la clase anterior?
+   Te compartimos a través del chat de 
+   Zoom / chat de la plataforma el enlace a un 
+   breve cuestionario de Kahoot.
+   Duración: 10 minutos
+    ¡Empecemos!
+    Un científico de datos es un profesional 
+    dedicado exclusivamente en analizar e 
+    interpretar grandes bases de datos. Para 
+    ello, debe aprender a utilizar 
+    múltiples herramientas que 
+    estaremos clasificando a lo largo de 
+    esta sesión. 
+     Bases de Datos
+       PARA RECORDAR
+    Bases de Datos
+    Una Base de Datos es un conjunto de 
+    datos pertenecientes a un mismo 
+    contexto y almacenados 
+    sistemáticamente para su posterior 
+    uso.
+    En términos generales, podemos dividirlas 
+    en:
+    ✓Bases de Datos Relacionales
+    ✓Base de Datos no Relacionales – No 
+      SQL
+      Tecnologías de 
+      bases de datos 
+      relacionales
+    BD relacionales
+    Responden al Modelo de Datos relacional 
+    propuesto por Edward Frank Codd en 
+    1970, tal cual como podemos observar en la 
+    siguiente imagen:
+    Microsoft SQL Server
+    Es un sistema de gestión de bases de 
+    datos relacionales (RDBMS) que admite 
+    una amplia variedad de aplicaciones de 
+    procesamiento de transacciones, 
+    inteligencia empresarial y análisis en 
+    entornos informáticos corporativos. 
+    MySQL
+    Es un sistema de gestión de bases de 
+    datos relacional, desarrollado bajo una 
+    licencia dual: Licencia pública general / 
+    Licencia Comercial por Oracle 
+    Corporation. A su vez también, es una de 
+    las bases de datos más populares en 
+    general junto a Oracle y SQL Server. 
+    PostgreSQL
+    Es un sistema gestor de bases de datos 
+    relacionales, orientado a objetos, 
+    multiplataforma y open source. Está 
+    desarrollado desde 1996 por la 
+    comunidad de SGBD POSGRES.
+    Otras: Oracle Database, IMB DB2, Access, 
+    SQL Cloud.
+      Tecnologías de 
+     bases de datos no 
+      relacionales
+    BD no 
+    relacionales
+    Modelo propuesto por Carlo Strozzi en 
+    1998, como una base de datos "relacional" de 
+    código abierto y liviana que no usa SQL, 
+    desarrollado en principio para datos web (no 
+    estructurados) y por la necesidad de un 
+    procesamiento más rápido. 
+  NoSQL
+  Los datos masivos, reciben el nombre de 
+  Big Data, y el tipo de tecnología que ha 
+  surgido para tratar de poner solución a 
+  muchos de estos problemas se conoce 
+  como NoSQL.
+  Los sistemas NoSQL no solo pueden 
+  manejar datos estructurados y no 
+  estructurados, sino que también pueden 
+  procesar Big Data no estructurado 
+  rápidamente
+          Internet en 1 minuto - Big 
+                             Data
+     Fuente: statista.com
+    ¿Por qué usar bases de 
+    datos NoSQL?
+    ������ Evitar la complejidad innecesaria
+    ������ Conseguir un alto rendimiento
+    ������Escalabilidad horizontal y hardware de 
+    bajo costo
+    ������ Transformar la famosa frase: “One size 
+    fit’s it all”
+          Ejemplo de consulta SQL
+           SELECT p.FirstName, p.LastName, a.City, cd.Detail
+           FROM Person p
+           JOIN ContactDetail cd ON cd.PersonId = p.Id
+           JOIN ContactDetailType cdt ON cdt.Id = cd.TypeId
+           JOIN Address a ON a.PersonId = p.Id
+             Ejemplo de consulta no 
+               {                 SQL
+                  “Id”: “1”,
+                  “firstName”: “Thomas”,
+                  “lastName”: “Andersen”,
+                  “addresses”:  [
+                      {
+                         “line1”: “100 Some Street”,
+                         “line2”: “Unit 1”,
+                         “city”: “Seattle”,
+                         “state”: “WA”,
+                         “zip”: “98012”
+                      }
+                  ],
+                  “contactDetails”: [
+                      {“email”: “thomas@anderson.com”},
+                      {“phone”: “*1 555 555-5555”, “extension”: 5555},
+                  ]
+               }
+       Algunas bases NoSQL
+       MongoDB es una base de datos                    Apache Cassandra se trata de un software 
+       orientada a documentos. Esto quiere             NoSQL distribuido y basado en un modelo de 
+       decir que en lugar de guardar los datos en      almacenamiento de «clave-valor», de 
+       registros, guarda los datos en                  código abierto que está escrita en Java. 
+       documentos. Estos documentos son                Permite grandes volúmenes de datos en 
+       almacenados en BSON, que es una                 forma distribuida. 
+       representación binaria de JSON.
+       Algunas bases NoSQL
+       Redis es un motor de base de datos en        Neo4j es una base de datos open-source 
+       memoria, basado en el almacenamiento         orientada a grafos escrita en java. Con 
+       en tablas de hashes (clave/valor) pero       este tipo de base de datos NO SQL puedo 
+       que opcionalmente puede ser usada            guardar información en formato de nodos y 
+       como una base de datos durable o             relacionales.
+       persistente.                                 Otras: Hbase, CouchDB, No Sql Cloud 
+       Ventajas y 
+     desventajas bases 
+         SQL
+                          Ventajas                                        Desventajas
+       Simplicidad del modelo: Muy simple, no             Mantenimiento: difícil por acumulación de 
+       requiere consultas complejas                       datos en el tiempo
+       Fácil uso: usuarios pueden acceder/recuperar       Costo: se generan costos fijos y variables por 
+       fácilmente la información requerida en segundos    mantenimiento
+       sin caer en la complejidad.
+       Precisión: bien definidas y organizadas, no        Almacenamiento físico: requiere mucha 
+       duplicados.                                        memoria física.
+       Integridad de datos: brindan coherencia en         Poca escalabilidad: los datos no son 
+       todas las tablas.                                  escalables en diferentes servidores de 
+                                                          almacenamiento físico
+       Normalización: se divide la información en         Estructura compleja: solo puede almacenar 
+       partes manejables para reducir el tamaño del       datos en forma tabular, dificultando 
+       almacenamiento                                     representación compleja.
+       Colaboración: muchos usuarios interactuando        Reducción de performance en tiempo: 
+       al tiempo                                          mayor complejidad
+       Integridad y Seguridad: Sistemas                   Menor tiempo de respuesta: muchos datos 
+       medianamente confiables                            poca eficiencia
+                           Ventajas                                         Desventajas
+       Modelo flexible: puede almacenar y combinar         Falta de estandarización: No existe un 
+       cualquier tipo de datos, tanto estructurados        estándar que defina reglas y roles de las bases 
+       como no estructurados                               de datos NoSQL. 
+       Modelo de datos en evolución: permite               Algunos problemas de backup: No está del 
+       actualizar dinámicamente el esquema para            todo desarrollado este ámbito en este tipo de 
+       evolucionar con los requisitos cambiantes sin       bases de datos.
+       interrupciones.
+       Fácil escalamiento: pueden escalar para             Consistencia: NoSQL prioriza la escalabilidad y 
+       adaptarse a cualquier tipo de crecimiento de        el rendimiento, pero cuando se trata de la 
+       datos manteniendo un bajo costo.                    consistencia de los datos no es tan eficiente.
+       Alto performance: gran rendimiento, medido          Difícil mantenimiento: pueden llegar a ser 
+       en términos de rendimiento y latencia (retraso      costosos y requerir de personal especializado
+       entre la solicitud y la respuesta real).
+       Acceso libre: no requieren tarifas de licencia      Poco nivel de madurez: Son relativamente 
+       costosas y pueden ejecutarse en hardware            más nuevas que las bases relacionales por ende 
+       económico, lo que hace que su implementación        tienen todavía mucho por mejorar.
+       sea rentable.
+       Para pensar
+   ¿Qué casos de implementación en la 
+   industria conoces o has escuchado hablar, 
+   tanto de SQL como de NoSQL en 
+   empresas?
+   Escribe en el chat de Zoom
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+       Lenguajes
+      Data Science
+            R
+    R
+    Entorno y lenguaje de programación con 
+    un enfoque al análisis estadístico. Se trata 
+    de uno de los lenguajes de programación 
+    más utilizados en investigación científica. 
+    R proporciona una amplia variedad 
+    de técnicas estadísticas (modelos 
+    lineales y no lineales, pruebas 
+    estadísticas clásicas, análisis de series 
+    temporales, clasificación, agrupamiento, 
+    etc), generación de gráficos y es 
+    altamente extensible. 
+     ¿Cómo se visualiza R?
+    ¿Un poco rústico verdad?
+    La realidad, es que la interfaz gráfica de 
+    R, no es realmente muy atractiva e 
+    intuitiva ������ 
+    Es por ello, que para nuestras clases 
+    prácticas trabajaremos con RStudio, 
+    el IDE de R. 
+       Entorno de 
+    desarrollo integrado
+    ¿Qué es un IDE?
+    Un entorno de desarrollo integrado o 
+    entorno de desarrollo interactivo, en 
+    inglés Integrated Development 
+    Environment, es una aplicación 
+    informática que proporciona 
+    servicios integrales para facilitarle al 
+    desarrollador o programador el 
+    desarrollo de software.
+    En este caso en particular RStudio, nos 
+    brindará una interfaz mucho más cómoda 
+    y amigable para trabajar con R.
+    Beneficios de RStudio
+    Las más importantes a mencionar son:
+    ������ Autocompletado. 
+    ������ Reconocimiento de sintaxis de 
+    programación.
+    ������  Depurador de errores. 
+    ������ Manual de usuarios y ayuda en línea.
+               ¿Cómo se visualiza 
+                        RStudio?
+     Link de descarga: https://rstudio.com/products/rstudio/download/
+        Python
+    Python
+    Lenguaje de programación poderoso 
+    y fácil de aprender. Puede ser 
+    clasificado como un lenguaje interpretado 
+    (ejecuta las instrucciones a medida que 
+    las va leyendo) y de alto nivel. Python fue 
+    creado a finales de los años 80, por un 
+    programador holandés llamado Guido van 
+    Rossum, quien sigue siendo aún hoy el 
+    líder del desarrollo del lenguaje.
+       R vs Python
+           Características                             R                           Python
+           Alcance                         (Principalmente) Análisis       Diferentes propósitos: 
+                                             de datos y modelado         desarrollo de aplicaciones 
+                                                  estadístico              web, ciencia de datos
+           Usuarios                              Estadísticos,                Desarrolladores, 
+                                          Investigadores, Analistas y    Ingenieros y Científicos de 
+                                             Científicos de Datos.                 Datos.
+           Flexibilidad                   Librerías disponibles fáciles     Fácil para construir 
+                                                   de usar.              nuevos algoritmos desde 
+                                                                                  el inicio.
+           Paquetes esenciales             Tydyverse, caret, ggplot2       Numpy, pandas, scipy, 
+                                                                                 scikitlearn 
+           Herramientas de                  Ggplot2, plotly, ggmap       Matplotlib, ploty, seaborn
+           visualización
+     Otros lenguajes
+    Julia
+    Lenguaje de programación novedoso 
+    creado en 2009. Proporciona DataFrames.jl 
+    para trabajar con conjuntos de datos y realizar 
+    manipulaciones de datos comunes. Además de 
+    trabajar con datos tabulares, los paquetes de 
+    JuliaGraphs facilitan el trabajo con datos.
+    Julia puede trabajar con casi todas las bases 
+    de datos utilizando los controladores JDBC.jl y 
+    ODBC.jl. Se integra fácilmente con Spark y 
+    Python.
+    JavaScript
+    JavaScript también es otro lenguaje de 
+    programación de ciencia de datos popular 
+    para aprender. Se utiliza para el 
+    desarrollo web por su capacidad de 
+    construir páginas web interactivas. 
+    Puede ser la mejor opción para crear y 
+    diseñar visualizaciones. Aunque es un 
+    gran lenguaje para aprender, es más 
+    útil en ciencia de datos para tareas 
+    esenciales como visualizaciones pero 
+    no tanto para modelamiento.
+    Scala
+    Scala es un poderoso lenguaje de 
+    programación para ciencia de datos, 
+    adecuado para profesionales. Ideal para 
+    trabajar con conjuntos de datos de gran 
+    volumen. Permite la interoperabilidad con 
+    Java, lo que brinda muchas oportunidades. 
+    Scala también se puede usar con Spark 
+    para manejar grandes cantidades de datos 
+    en silos. Este lenguaje de programación de 
+    ciencia de datos también tiene una gran 
+    cantidad de librerías.
+     Visualización de
+        datos
+                  Herramientas de visualización de 
+                  datos
+         Dash    Shiny   Power   Pentaho Tableau
+                          BI
+       Dash
+       Framework de Python creado por plotly                              REEMPLAZAR 
+       para crear aplicaciones web interactivas.                          POR IMAGEN
+       Código de Flask, Plotly.js y React.jsy sin 
+       tener que aprender HTML, CSS y 
+       Javascript. Dash es de código abierto y 
+       la creación de la aplicación utilizando un 
+       framework se ve en el navegador web.
+       Shiny
+       Shiny es un paquete de R que facilita la                                REEMPLAZAR 
+       creación de aplicaciones web                                             POR IMAGEN
+       interactivas desde R. Puede alojar 
+       aplicaciones independientes en una 
+       página web o incrustarlas en 
+       documentos de R Markdown o crear 
+       paneles. Permite el uso de temas CSS, 
+       widgets html y acciones de JavaScript.
+  Ejemplos reales
+  Ejemplos reales
+      Power BI
+       Conjunto  de herramientas y                                      REEMPLAZAR 
+       servicios de business intelligence,                              POR IMAGEN
+       que permite conectarse a diferentes 
+       orígenes de datos, para ser analizados, 
+       visualizarlos y compartirlos con toda la 
+       organización y clientes. Se compone de 
+       varias aplicaciones y servicios (Versión 
+       desktop, mobile y el servidor).
+  Ejemplo
+      Tableau
+      Herramienta de visualización de datos                        REEMPLAZAR 
+      potente también utilizada en el área de                       POR IMAGEN
+      la Inteligencia de negocios. La esencia 
+      de Tableau es simple y a la vez muy 
+      relevante: ayudar a las personas y empresas 
+      a ver y comprender todos sus datos.
+       Tableau
+       Tableau funciona a través de 3 medios         Además integra otras herramientas 
+       principales:                                  adicionales para proporcionar una 
+       ✓ Escritorio (Tableau Desktop)                experiencia más completa a los usuarios:
+       ✓                                              ✓ Tableau Mobile.
+          Servidor (Tableau Server)
+       ✓                                              ✓ Tableau Public.
+          En línea (Tableau Online)
+                                                      ✓ Tableau Prep.
+         Hands on lab
+    Realizaremos dos actividades de clase para comprender y 
+    llevar a la práctica los conceptos teóricos vistos. 
+    ¿De qué manera?
+    En primera instancia, trabajaremos con visualizaciones de 
+    datos de manera individual. Luego, trabajaremos 
+    colaborativamente compartiendo los avances del 
+    Proyecto Final.
+    Tiempo estimado: 35/40 minutos
+         Stack tecnológico 
+        del Data Scientist
+             Duración: 15 minutos
+       ACTIVIDAD EN CLASE
+    Stack 
+    tecnológico del 
+    Data Scientist
+    Considerando los tipos de base de datos, lenguajes y 
+    opciones para la visualización escoge uno de los 
+    lenguajes/herramientas de interés.
+     1. Investigar sobre las ventajas /desventajas que 
+       ofrece. 
+     2. ¿Qué compañías usan el lenguaje/herramienta 
+       escogida?
+    Herramienta sugerida: Miró
+      ACTIVIDAD EN CLASE
+   Herramientas de 
+   visualización de datos
+       ACTIVIDAD EN CLASE
+    QlikView
+    “QlikView es una herramienta de Business Intelligence, 
+    que  permite  recolectar  datos  desde  diferentes 
+    orígenes,  basados  en  ERP,  CRM,  data  warehouses, 
+    bases de datos SQL, datos de Excel, etc.”
+     ✓ Ofrece:
+    Servicio de Datos y Plataformas.
+    Modelado de Datos e Integración.
+    Búsqueda Asociativa.
+             ACTIVIDAD EN CLASE
+        Otras 
+        herramientas ✓ MicroStrategy es una organización 
+         ✓ “IBM Cognos Analytics, es una 
+             suite de inteligencia empresarial               que provee software de reporteo, 
+             integrada basada en web de IBM.                 análisis y monitoreo integrados que 
+             Proporciona un conjunto de                      permite a las empresas analizar 
+             herramientas para informes,                     datos almacenados de la empresa y 
+             análisis, cuadros de mandos y                   de todas las áreas para tomar 
+             seguimiento de eventos y                        mejores decisiones.
+             métricas.”
+          ACTIVIDAD EN CLASE
+      Otras 
+      herramientas
+        ✓ Google Data Studio es una           ✓ QuickSight es un servicio rápido 
+           herramienta de visualización de       de análisis de negocios basado 
+           datos y creación de cuadros de        en la nube que facilita la creación 
+           mando. El objetivo de la              de visualizaciones; la realización 
+           herramienta, es permitir un           de análisis ad-hoc y la obtención 
+           análisis de los datos de manera       rápidamente de información de 
+           visual de forma que sea más           negocios basada en datos   .
+           fácil e inmediato obtener 
+           resultados.
+            ACTIVIDAD EN CLASE
+       Herramientas 
+       complementarias
+        Existen muchísimas herramientas               ✓ Slack
+        orientadas a la gestión de                    ✓ Trello
+        comunicación, versionado de datos y           ✓ G - Suite o M365
+        trabajo en equipo que tenemos que             ✓ Mural
+        conocer como Científicos de Datos.            ✓ Jamboard
+        Algunas de las más importantes son:           ✓ GitHub, GitLab
+                                                      ✓ Zoom, Meet, Teams, Jitsi, etc.
+       Actividad colaborativa
+   Socialización de Proyectos
+   Avanzaremos resolviendo consultas 
+   asociadas al proyecto del curso mediado 
+   por tutores
+   Realizaremos la actividad en breakout 
+   rooms
+   Duración: 20 minutos
+             ACTIVIDAD COLABORATIVA
+        Acuerdos
+       Presencia                                       Apertura al aprendizaje
+        ✓ Participar y “estar” en la clase, que          ✓ Siempre, pero siempre puedes 
+            tu alrededor no te distraiga                    seguir aprendiendo. Compartir el 
+                                                            conocimiento es válido, la 
+       Escucha activa                                       construcción colaborativa es la 
+                                                            propuesta.
+        ✓ Escuchar más allá de lo que la 
+            persona está expresando 
+            directamente                               Todas las voces
+                                                         ✓ Escuchar a todos, todos podemos 
+                                                            reflexionar. Dejar el espacio para 
+                                                            que todos podamos participar.
+            ACTIVIDAD COLABORATIVA
+       Socialización de 
+       proyectos                                     ✓
+       En esta actividad colaborativa                   Identificar fortalezas y debilidades 
+       interactuamos con compañeros y tutores           que pueden servir como punto de 
+       con eje central el proyecto del curso.           mejora para la entrega del proyecto.
+        ✓ Se propone resolver consultas              ✓ Se propone que los estudiantes 
+            metodológicas o de forma acerca del         muestren los avances a los tutores y 
+            proyecto final.                             compañeros para recibir 
+                                                        retroalimentación de su proyecto.
+      NOTA: usaremos los breakouts rooms. El tutor/a tendrá el rol de facilitador/a.
+       CLASE N°20
+       Glosario
+       Esquema relacional: desarrollado por               Lenguajes de data science : son 
+       Frank Codd en los años 70, es el                   aquellos que nos permiten generar 
+       fundamento de las bases de datos                   estructuras de código para realizar 
+       relacionales con prioridad a la                    algoritmos, limpiar, estructurar datos (e.g 
+       consistencia y disponibilidad de los datos         R, Python, Julia, Java, C++) 
+       Esquema no relacional : desarrollado               Herramientas de visualización: son 
+       por Carlo Strozzi en el 98, es el                  todas aquellas herramientas que permiten 
+       fundamento de las bases de datos no                generar visualizaciones en entornos 
+       relacionales con prioridad a la                    gráficos para la presentación de 
+       disponibilidad y tolerancia a la partición         resultados (e.g PowerBI, Shiny, Dash, 
+       de datos.                                          Pentaho, Tableau)
+         Primera entrega
+   En la clase que viene se presentará la consigna de la primera 
+    parte del Proyecto final,  que nuclea temas vistos entre las 
+               clases 1 y 20. 
+    Recuerda que tendrás 7 días para subirla en la plataforma.
+      ¿Preguntas?
+                   Resumen 
+               de la clase hoy
+              ✓ Bases de Datos Relacionales y No Relacionales 
+              ✓ Lenguajes de Data Science 
+              ✓ Visualización de Datos 
+              ✓ Herramientas Complementarias.
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.

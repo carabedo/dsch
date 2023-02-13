@@ -1,0 +1,492 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 48. DATA SCIENCE
+        Mejora de modelos de 
+         Machine Learning I
+      Temario
+                       47                      48                     49
+                  Validación de        Mejora de modelos       Mejora de modelos 
+               modelos- Métricas      de Machine Learning     de Machine Learning 
+                                                I                      II
+                ✓ Análisis de           ✓ Bias vs. Variance     ✓ Repaso validación 
+                   Clustering              Tradeoff                de modelos
+                ✓ Métricas de           ✓ Validación de         ✓ Hypertuning 
+                   calidad para            modelos                 parameter
+                   Clustering
+    Objetivos de la clase
+                 Identificar conceptos asociados a la mejora 
+                 de modelos de Machine Learning
+                MAPA DE CONCEPTOS                                                             Bias vs Variance 
+                                                                                                  Tradeoff
+                                                                                                                        Clase 
+                                                                                              Validación simple         48
+                                                                                                  y LOOCV
+                                                                                              K fold y Stratified 
+                                                                                                   K-Fold
+                            Mejora de                                                        Hyperparamete
+                           modelos de                                                             r Tuning
+                       Machine Learning
+                                                                                               GridSearchCV
+                                                                                             RandomSearchC
+                                                                                                      V
+            Repaso
+                     Les proponemos tomarse unos minutos 
+                     para realizar un repaso de los conceptos 
+                      aprendidos en Kahoot, ¿están listos?
+                          Profe, puedes compartir el 
+                           PIN o link de acceso al 
+                                juego
+     Bias vs Variance 
+       Tradeoff
+       Definición
+   Bias
+    Es una forma de cuantificar el error de un 
+    modelo  y  se  define  como  la  diferencia 
+    entre el valor esperado del estimador 
+    (es  decir,  la  predicción  media  del 
+    modelo) y el valor real. 
+      Bias
+       Cuando  se  dice  que  un  modelo  tiene  un 
+       bias muy alto quiere decir que el modelo 
+       es muy simple y no se ha ajustado a 
+       los  datos  de  entrenamiento (suele 
+       ser underfitting), por lo que produce un 
+       error    alto   en    todas     las   muestras: 
+       entrenamiento, validación y test.
+   Varianza
+    Es una medida de dispersión pero se utiliza 
+    como  estimador  de  cuánto  varía  la 
+    predicción  según  los  datos  que 
+    utilicemos para el entrenamiento.
+     Varianza
+      La mayoría de los algoritmos de Machine 
+      Learning  aprenden  de  los  datos  de 
+      entrenamiento  de  manera  aleatoria.  Así 
+      que  es  normal  que  todos  los  modelos 
+      tengan    cierta  varianza.  Aunque    si 
+      creamos  un  modelo  robusto,  este 
+      debería aprender las relaciones entre 
+      las variables y el target.
+   Varianza
+    ✔ Un modelo con varianza baja indica que 
+      cambiar los datos de entrenamiento se 
+      producen cambios pequeños en la 
+      estimación.
+    ✔ Al contrario, un modelo con varianza 
+      alta quiere decir que pequeños cambios 
+      en el dataset conlleva a grandes cambios 
+      en el output (generalmente 
+      overfitting).
+           PARA RECORDAR
+       Bias-Variance Tradeoff
+       Los algoritmos que suelen tener un error de Bias 
+       (Sesgo) alto suelen tener una varianza baja. 
+       Por el contrario modelos con Bias (Sesgo) alto 
+       suelen tener varianza alta
+              Bias Alto   Varianza                   Varianza         Bias Bajo
+                          Baja                       Alto
+      Bias-Variance 
+        Tradeoff
+   Bias-Variance Tradeoff
+   Es una consideración de diseño al entrenar 
+   modelos de aprendizaje automático. Se 
+   puede ver como un paradigma a la hora de 
+   aplicar modelos de Machine Learning
+   Lo óptimo que queremos tener, es un 
+   modelo que tenga poco bias y poca 
+   varianza. Esto es lo que podríamos llamar 
+   un modelo robusto.
+    Bias-Variance Tradeoff
+    El problema justamente lo tenemos, cuando no contamos con 
+    un modelo robusto y queremos mejorar uno de estos 
+    errores. Aquí se encuentra el famoso “tradeoff”.
+    Lo óptimo que queremos tener, es un modelo que tenga poco bias y 
+    poca varianza. Esto es lo que podríamos llamar un modelo robusto.
+    Bias-Variance Tradeoff
+     El “tradeoff” se explica porque:
+      ● Disminuir la varianza implica aumentar el bias.
+      ● Disminuir el bias hace que la varianza crezca.
+     Esto se explica porque un modelo con bias es un modelo muy simple y un modelo con 
+     varianza es un modelo muy complejo.
+    Bias-Variance Tradeoff
+    Lo que debemos hacer es encontrar un 
+    modelo predictivo que tenga un buen 
+    balance entre bias y varianza.
+    Esto implica que el modelo no debe 
+    ser muy complejo ni muy simple con el 
+    fin de minimizar el error en las 
+    predicciones:
+    Error= Bias^2+ Varianza + Error 
+    Irreducible
+    Bias-Variance Tradeoff
+    Por tanto a el punto óptimo será aquel donde 
+    se minimice el error total, esto implica que el 
+    error total se minimice y la complejidad del 
+    modelo sea la suficiente para no permitir ya 
+    sea underfitting u overfitting. Con esto 
+    garantizamos que el modelo sea lo más 
+    generalista posible y no particular
+   Causas de overfitting
+     Causas del overfitting
+     Las causas del overfitting pueden ser diversas complicadas. Sin embargo se 
+     tienen tres principales:
+              1                         2                         3
+   Ruido en el conjunto de     Mala gestión del Bias-       Falta de Datos
+                                 Variance Tradeoff
+        entrenamiento
+      1)Ruido en el conjunto de 
+          entrenamiento 
+      Cuando el conjunto de entrenamiento es 
+      demasiado pequeño o tiene menos datos 
+      representativos  o  demasiado  ruido.  Esta 
+      situación hace que los “ruidos” tengan 
+      grandes    posibilidades   de    ser 
+      aprendidos, y luego actuar como base 
+      de  predicciones.  Por  lo  tanto,  un 
+      algoritmo  que  funcione  bien,  debería 
+      poder distinguir los datos representativos 
+      de los ruidos.
+     2) Mala gestión del Bias-Variance 
+     Tradeoff
+      Esto se debe a lo visto anteriormente, 
+      cuando    no   se   logra  gestionar 
+      efectivamente el equilibrio entre sesgo 
+      y  varianza  nuestro  modelo  incluso, 
+      puede    verse   afectado   por   el 
+      underfitting.
+      El caso opuesto es cuando tenemos un 
+      modelo que solo funciona en los datos 
+      de entrenamiento (overfitting)
+      3) Falta de datos
+          Sin  dudas,  cuando  tenemos  pocos 
+          registros  en  nuestro  dataset  es  un 
+          problema  a  la  hora  de  lograr  una 
+          generalización de nuestro modelo.
+          Los datos faltantes no permiten que se 
+          pueden        realizar       operaciones 
+          matriciales    lo   que    dificulta  las 
+          operaciones matemáticas desarrolladas 
+          por los modelos
+     ¿Cómo evitar el 
+       overfitting?
+       1)Cross Validation
+           Es  una  técnica  potente  para  evitar  el 
+           overfitting. Se utiliza el dataset de train 
+           original    para     generar      múltiples 
+           datasets  y  en  cada  uno  ajustamos  al 
+           modelo.
+           Existen diversos métodos para aplicar 
+           está técnica como por ejemplo K-Fold y 
+           LOOCV  donde  se  pueden  ajustar  los 
+           hiperparametros del modelo
+      2) Entrenar con más datos
+          Esto   permite  que  los  algoritmos 
+          detectan la señal mejor. De igual forma 
+          con   más  datos  se  previene  el 
+          overfitting   porque     aumenta      la 
+          capacidad  de  generalización  de  los 
+          modelos. 
+          Sin  embargo  esta  solución  puede  ser 
+          costosa y en algunos casos si la data 
+          que  se  agrega  es  ruido  genera 
+          problemas de interpretación
+      3) Data Augmentation
+         Es una alternativa cuando no se tienen 
+         suficientes  recursos  para  conseguir 
+         más datos.
+         Se puede hacer que los datos que se 
+         tienen sea más diversos de tal manera 
+         que  el  se  entrenen  algoritmos  con 
+         datasets     ligeramente      diferentes 
+         generando     mayor     capacidad    de 
+         discernimiento al modelo.
+      4) Reducir la complejidad 
+           Se  disminuye  la  complejidad  del 
+           modelo  con  el  fin  de  prevenir  el 
+           overfitting.   Esto    se   puede  hacer 
+           generando  algoritmos  que  permitan 
+           elegir  variables  apropiadas  y  que 
+           permitan que el número de parámetros 
+           no  sea  tan  alto,  de  esta  forma  se 
+           tienen modelos menos pesados y que 
+           se ejecutan más rápido.
+      5) Regularización
+          Conjunto  de  técnicas  que  permiten 
+          forzar al modelo a ser más simple. Esto 
+          se puede hacer utilizando funciones de 
+          costo   que   penalicen    por   mayor 
+          cantidad de parámetros.
+          La  regularización  también  permite 
+          realizar hypertuning de parámetros con 
+          el fin de tener modelos más robustos
+   6) Uso de métodos de Ensemble
+    Combinar predictores de múltiples modelos 
+    con el fin de disminuir el error total de los 
+    modelos.  Existen  dos  formas  distintas 
+    (Bagging y Boosting) 
+    Bagging  genera  el  entrenamiento  de  de 
+    modelos  en  paralelo  para  optimizar  las 
+    predicciones 
+    Boosting consisten en usar modelos base e 
+    ir incrementando la complejidad 
+       Para pensar
+   Si tenemos un modelo con alto sesgo, ¿estamos 
+   en un escenario de Underfitting ? ¿Por qué? 
+   ¿Cómo podríamos alcanzar el equilibrio entre 
+   sesgo y varianza para este caso?
+   Contesta en el chat de Zoom 
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+      Validación de 
+       modelos
+     Validación simple
+   Validación simple
+    Antes de hablar de la Validación Cruzada, 
+    tenemos que entender el concepto de la 
+    Validación Simple. Este tipo de validación 
+    consiste en repartir aleatoriamente las 
+    observaciones disponibles en dos grupos, 
+    uno se emplea para entrenar al modelo y 
+    otro para evaluarlo. 
+   Ventajas de Validación simple
+    1. Permite una validación rápida de las 
+      predicciones de los modelos 
+      utilizados
+    2. No requiere de mucho costo 
+      computacional y de tiempo para su 
+      ejecución
+    3. Es sencillo de implementar en 
+      diversos lenguajes de programación
+   Desventajas de Validación simple
+    1. La estimación del error es 
+    altamente variable, dependiendo de 
+    qué observaciones se incluyan como 
+    conjunto de entrenamiento y cuáles 
+    como conjunto de validación 
+    (problema de varianza).
+   Desventajas de Validación simple
+    2. Al excluir parte de las 
+    observaciones disponibles como 
+    datos de entrenamiento 
+    (generalmente el 30%), se dispone 
+    de menos información con la que 
+    entrenar el modelo y, por lo tanto, 
+    se reduce su capacidad (problema 
+    de bias).
+          LOOCV
+   Leave One Out Cross-Validation
+    Este método es de tipo iterativo y 
+    se inicia empleando como 
+    conjunto de entrenamiento todas 
+    las observaciones disponibles 
+    excepto una, que se excluye 
+    para emplearla como 
+    validación.  
+   Leave One Out Cross-Validation
+    Es un caso especial de validación 
+    cruzada donde el número de folds es 
+    igual al número de instancias en el 
+    conjunto de datos. 
+    Si se emplea una única observación 
+    para calcular el error, este varía 
+    mucho dependiendo de qué 
+    observación se haya seleccionado.  
+    Leave One Out Cross-Validation
+      Para  evitarlo,  el  proceso  se 
+      repite  tantas  veces  como 
+      observaciones    disponibles, 
+      excluyendo en cada iteración 
+      una   observación    distinta, 
+      ajustando el modelo con el resto y 
+      calculando  el  error  con  dicha 
+      observación. 
+   Ventajas de LOOCV
+    1. No hay aleatoriedad en el uso de 
+      algunas observaciones para el 
+      entrenamiento frente al conjunto de 
+      validación como en el método común
+    2. Menos sesgo en general para el 
+      modelo, ya que el conjunto de 
+      entrenamiento tiene un tamaño n-1.
+   Desventajas de LOOCV
+     1. Aunque el error de prueba no tiene 
+       mucho sesgo, tiene una alta 
+       variabilidad ya que solo se usó un 
+       conjunto de validación de 
+       observación para la predicción.
+     2. Computacionalmente costoso 
+       (tiempo y energía), especialmente si 
+       el conjunto de datos es grande, ya 
+       que requiere ajustar el modelo n 
+       veces
+       PARA RECORDAR
+    LOOCV es un método de validación muy 
+    extendido ya que puede aplicarse para 
+    evaluar cualquier tipo de modelo. Sin 
+    embargo, también suele aplicarse el método 
+    K-Fold Cross-Validation
+      Ejemplo en vivo
+   A continuación analizaremos un ejemplo 
+   donde pondremos en práctica los 
+   conceptos de validación simple y LOOCV 
+   para modelos de clasificación y Regresión 
+   (Carpeta de clase: Ejemplo 1)
+   Cross Validation algoritmos 
+         de Clasificación I
+       Utilizaremos lo aprendido en clase sobre Cross 
+       Validation para evaluar algoritmos Clasificación
+             Duración: 15-20 mins
+      ACTIVIDAD EN CLASE
+    Cross validation 
+    algoritmos de 
+    Trabajaremos con base en lo desarrollado en clases 
+    Clasificación I
+    previas con los datos de fuga en el enlace: 
+    Telco Customer Churn
+    1. Separar los datos en train (70%)/test(30%)
+    2. Entrenar un árbol con ‘max_depth=10’ y calcular 
+      las métricas recall, precisión y accuracy
+    3. Utilizar las metodologías de LOOCV y validación 
+      simple para evaluar el desempeño del modelo
+    4. Evaluar el performance en general del modelo 
+      (¿Tendrá problemas de overfitting o underfitting?)
+      K-Fold Cross 
+       Validation
+     K-Fold Cross Validation
+       El método K-Fold Cross-Validation es 
+       también   un   proceso  iterativo. 
+       Consiste en dividir los datos de 
+       forma aleatoria en k grupos de 
+       aproximadamente  el  mismo 
+       tamaño, k-1 grupos se emplean 
+       para entrenar el modelo y uno 
+       de los grupos se emplea como 
+       validación.
+      K-Fold Cross Validation
+       Este  proceso  se  repite k veces 
+       utilizando un grupo distinto como 
+       validación  en  cada  iteración.  El 
+       proceso       genera k estimaciones 
+       del    error   cuyo  promedio  se 
+       emplea como estimación final.
+   Ventajas de K-Fold Cross Validation
+    1. Conjunto de validación más grande 
+      que en LOOCV, ofrece menos 
+      variabilidad en el error de prueba 
+    2. Menos sesgo que en el método de 
+      validación simple ya que el conjunto 
+      de entrenamiento es más grande
+    3. Computacionalmente NO es costoso 
+      como LOOCV
+   Desventajas de K-Fold Cross 
+   Validation
+     1. Un sesgo algo más alto que LOOCV 
+       debido a un conjunto de 
+       entrenamiento más pequeño para 
+       cada iteración (pero un sesgo más 
+       pequeño que el método común de 
+       validación).
+     2. El algoritmo de entrenamiento debe 
+       volver a ejecutarse desde cero k 
+       veces, lo que significa que se 
+       necesitan k veces más cálculos
+     Stratified K-Fold
+   Stratified K-Fold
+     Es  una  variante  mejorada  de  K-fold,  que  cuando  hace  los  splits  (las 
+     divisiones) del conjunto de train, tiene en cuenta mantener equilibradas las 
+     clases, esto significa que cada conjunto contiene aproximadamente el 
+     mismo  porcentaje  de  muestras  de  cada  clase  objetivo  que  el 
+     conjunto completo. 
+   Stratified K-Fold
+     Esto es muy útil, en el siguiente caso por ejemplo: Tenemos que clasificar 
+     nuestro target en “SI/NO” entonces si una de las iteraciones del K-fold 
+     normal tuviera muestras con etiquetas sólo “SI” el modelo no podría 
+     aprender a generalizar y aprenderá para cualquier input a responder “SI”. 
+   Ventajas de K-Fold Cross Validation
+    1. 'Valida' el rendimiento de su modelo 
+      en múltiples folds de sus datos.
+    2. Puede equilibrar las clases si se 
+      trata de un conjunto de datos 
+      desequilibrado.
+    3. Brinda una respuesta más estable 
+      sobre cómo se desempeña su 
+      modelo en diversos conjuntos de 
+      datos
+   Desventajas de K-Fold Cross 
+   Validation
+     1. K-fold realmente no funciona bien 
+       con datos secuenciales (e.g una 
+       serie de tiempo de algún tipo).
+     2. Si solo confía en el puntaje agregado 
+       final de K-fold para su modelo se 
+       pierde mucha información sobre el 
+       rendimiento de los modelos que se 
+       puede considerar como un riesgo
+      Ejemplo en vivo
+   A continuación analizaremos un ejemplo 
+   donde pondremos en práctica las técnicas 
+   de Cross validation y Stratified K-Fold para 
+   modelos de clasificación y Regresión. 
+   (Carpeta de clase: Ejemplo 2 y 3)
+   Cross Validation algoritmos 
+         de Clasificación II
+       Utilizaremos lo aprendido en clase sobre Cross 
+       Validation para evaluar algoritmos Clasificación
+             Duración: 15-20 mins
+      ACTIVIDAD EN CLASE
+    Cross validation 
+    algoritmos de 
+    Trabajaremos con base en lo desarrollado en clases 
+    Clasificación II
+    previas con los datos de fuga en el enlace: 
+    Telco Customer Churn
+    1. Separar los datos en train (70%)/test(30%)
+    2. Entrenar un RandomForest ‘max_depth=6’ y 
+      calcular las métricas recall, precisión y accuracy
+    3. Utilizar la metodología de K-Fold Cross Validation 
+      para evaluar el desempeño del modelo
+    4. Evaluar el performance en general del modelo 
+      (¿Tendrá problemas de overfitting o underfitting?). 
+      Comparar resultados con el árbol de decisión 
+      creado previamente
+       CLASE N°48
+       Glosario
+       Bias: Es una forma de cuantificar el error       Overfitting: Ocurre cuando el modelo solo 
+       de un modelo y se define como la                 funciona correctamente en los datos de train 
+                                                        pero no es capaz de generalizar lo aprendido
+       diferencia entre el valor esperado del 
+       estimador                                        LOOCV: Este método es de tipo iterativo y 
+                                                        se inicia empleando como conjunto de 
+       Varianza: Es una medida de dispersión            entrenamiento todas las observaciones 
+       pero se utiliza como estimador de cuánto         disponibles excepto una, que se excluye 
+       varía la predicción según los datos que          para emplearla como validación.  
+       utilicemos para el entrenamiento.                Stratified K Fold: Es una variante 
+                                                        mejorada de K-fold, que cuando hace los 
+       Bias Variance Tradeoff: Consideración            splits (las divisiones) del conjunto de train, 
+       de diseño al entrenar modelos de                 tiene en cuenta mantener equilibradas las 
+       aprendizaje automático. Es un paradigma          clases
+       a la hora de aplicar modelos de Machine 
+       Learning
+     ¿Quieres saber más?
+     Te dejamos material 
+     ampliado de la clase
+         MATERIAL AMPLIADO
+     Recursos multimedia
+     Algoritmos de regresión
+      ✓ RandomiSearchCV | Scikit-Learn | Enlace
+      Disponible en nuestro repositorio.
+      ¿Preguntas?
+      Opina y valora 
+       esta clase
+                         Resumen 
+                   de la clase hoy
+                   ✓ Bias vs Variance Tradeoff
+                   ✓ Validación simple 
+                   ✓ LOOCV
+                   ✓ K-Fold Cross Validation
+                   ✓ Stratified K-Fold
+        Muchas 
+        gracias.

@@ -1,0 +1,642 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 11. DATA SCIENCE
+         Preprocesamiento 
+          estadístico de los 
+                 datos
+      Temario
+                       10                      11                     12
+                 Herramientas           Procesamiento          Introducción al 
+               de visualización        estadísticos de             análisis 
+                                           los datos            predictivo con 
+                                                                  regresión
+                 ✓ Introducción          ✓ Procesamiento         ✓ Nociones 
+                 ✓                          como concepto           básicas 
+                    Gráficos Univariados
+                 ✓ Gráficos Bivariados   ✓ Outliers              ✓ Aplicaciones 
+                                         ✓ Datos ausentes           prácticas
+                 ✓ Forma de los datos
+                                         ✓                       ✓ Interpretación
+                 ✓ Gráficos de dos          Reducción de 
+                    dimensiones             dimensionalidad      ✓ Usar el 
+                                                                    modelo
+    Objetivos de la clase
+                 Conocer el concepto de preprocesamiento de 
+                 datos.
+                 Identificar y tratar outliers.
+                 Comprender la importancia de graficar los 
+                 datos.
+                 Introducir el análisis de datos ausentes.
+                 Incorporar las componentes principales.
+        MAPA DE CONCEPTOS
+                                           Concepto
+                     Detección y 
+                    tratamiento de       En una variable
+                      outliers
+                                            En dos 
+                                          dimensiones
+                                          Detectar e 
+                                          interpretar
+     Preprocesamient
+       o de datos                       Graficar los datos
+                    Datos ausentes
+                                          Mundo real     ¿Qué hacemos?
+                    Componentes 
+                     Principales
+      ¡Vamos a Kahoot!
+    El preprocesamiento 
+     como concepto
+    Garbage In, Garbage Out
+    ������ En general, los datos no están 
+    preparados para ser analizados o para ser 
+    entrada o input de algoritmos.
+    ������ Existe una serie de actividades que 
+    ayudan a “pulir” los datos de entrada y 
+    ¡prepararlos para que sirvan para el 
+    proceso de Data Science!
+       Definición
+       El preprocesamiento de datos es una             ¿Por qué es necesario?
+       tarea vital. Constituye una de las técnicas       ✓ Datos incompletos 
+       de Data Mining. Consiste en transformar           ✓ Ruido como outliers y errores
+       la data cruda (raw data) a un                     ✓ Inconsistencia, diferentes 
+       esquema más entendible, útil y                        códigos y nombres
+       eficiente.
+       Tareas para 
+     preprocesamiento
+      Tareas
+      Data Cleaning: También se conoce como          Data reduction: Se pueden reducir la 
+      scrubbing (depuramiento), consiste en          cantidad de instancias y features 
+      rellenar valores nulos, suavizamiento y        (variables) 
+      remoción de datos con ruido y outliers         Data Discretization: Se considera 
+      con inconsistencias                            parte de Data reduction. Valores 
+      Data Integration: integración de datos         categóricos se pueden reemplazar por 
+      con múltiples bases de datos (relacional y     números con técnicas como One Hot 
+      no relacional), cubos de datos, etc. Los       Encoding o LabelEncoder
+      datos pueden ser estructurados, semi-
+      estructurados y no estructurados.
+      Data Transformation: Consiste en la 
+      normalización y agregación de acuerdo 
+      con las necesidades
+         One Hot Encoding            LabelEncoder
+     Estas técnicas de Data Discretization las veremos con mayor profundidad en la 
+     Clase 15
+      Detección de 
+    outliers. Importancia 
+       de análisis
+        Definición
+        Por definición un outlier (valor atípico) es:           Dos tipos de valor atípico:
+        una observación que se encuentra a                        ✓ Univariados: se pueden encontrar 
+        una distancia anormal de otros valores                        al observar una distribución de 
+        en una muestra aleatoria de una                               valores en un solo espacio de 
+        población                                                     características. 
+                                                                  ✓ Multivariados: se pueden 
+                                                                      encontrar en un espacio de n 
+                                                                      dimensiones (de n características). 
+       Definición
+       Otra clasificación puede ser:                 ✓ Outliers puntuales: datos puntuales 
+                                                         lejos de la distribución de los datos
+                                                     ✓ Outliers contextuales: pueden ser ruido 
+                                                         en los datos (e.g símbolos de 
+                                                         puntuación)
+                                                     ✓ Outliers colectivos: pueden ser 
+                                                         subconjuntos de novedades en los 
+                                                         datos, como una señal que puede 
+                                                         indicar el descubrimiento de nuevos 
+                                                         fenómenos. 
+       ¿Por qué ocurren?
+        ✓ Errores de entrada de datos (errores        ✓ Errores de procesamiento de datos 
+            humanos)                                     (manipulación de datos o mutaciones 
+        ✓ Errores de medición (errores del               no deseadas del conjunto de datos)
+            instrumento)                              ✓ Errores de muestreo (extracción o 
+        ✓ Errores experimentales (extracción de          mezcla de datos de fuentes incorrectas 
+            datos o errores de planificación /           o diversas)
+            ejecución de experimentos)                ✓ Natural (no es un error, novedades en 
+        ✓ Intencional (valores atípicos ficticios        los datos)
+            hechos para probar métodos de 
+            detección)
+       Importancia de análisis
+       La detección de valores atípicos es de gran    En el aprendizaje automático y en cualquier 
+       importancia para casi cualquier disciplina     disciplina cuantitativa, la calidad de los 
+       cuantitativa (e.g física, economía, finanzas,  datos es tan o más importante que el 
+       aprendizaje automático, seguridad              mismo modelo de predicción o 
+       cibernética) con el fin de obtener insights    clasificación.
+       sobre cualquier fenómeno.
+    Outliers en una variable
+    Si existen outliers en una variable, podemos  A continuación, los desarrollaremos
+    verlos de diferentes formas: 
+     ✓ Diagrama de caja y bigotes.
+     ✓ Método IQR
+     ✓ Método Z score
+     ✓ Distancia media (Multivariada)
+     Boxplot
+                                 ¡Los bigotes marcan los valores de 
+                                 los inliers más extremos!
+      Elementos
+                                  La longitud de la caja es la diferencia 
+                                  entre los cuartiles 1 y 3 (llamados 
+                                  comúnmente Q1 y Q3), por eso se la 
+                                  denomina rango intercuartil. Todos los 
+                                  valores por fuera de esos límites son 
+                                  considerados outliers.
+     1.Separación entre inliers y 
+           outliers                                        # Seleccionar las columnas de interés
+                                                           import matplotlib.pyplot as plt
+        Habíamos dicho que se establecía una 
+        barrera que marcaba el límite entre inliers y      l=[x for x in agg_df.columns if x not in 
+        outliers, y que no aparece en el diagrama.         ['Date','Volume']]
+                                                           plt.figure(figsize=(17,14))
+        Para ello, se toma el límite de la caja, y se      for x,column in zip(range(8),agg_df[l]):
+        le añade la longitud de una caja y media.           if column !='Symbol':
+        Esto se hace tanto para el límite superior de         #print(x)
+        la caja como para el inferior                         if x<=5:
+                                                                plt.subplot(4,2,x+1)
+                                                                sns.boxplot(data=agg_df[l], y=column, 
+                                                           x=agg_df[l]['Symbol'])
+  Ejemplo
+     2.   Método IQR
+    datos= agg_df[l]
+    datos.head()
+    plt.figure(figsize=(15,14))  ������
+    for i,j in zip(range(8),datos.columns):
+     plt.subplot(4,2,i+1)
+     sns.boxplot(x=datos[j])
+     plt.title(j)
+     plt.xlabel('')
+    3.   Método Z Score
+    # Cargar datos
+                                        # Asignacion de categorias
+    datos= agg_df[agg_df['Symbol']=='D']
+                                        datos_z['Open_x']= datos_z['Open'].apply(lambda 
+    l=[x for x in agg_df.columns if x not in 
+                                        x: 'Atipico' if (x>2 or x<-2) else 'Normal')
+    ['Volume','Symbol']]
+                                   ������   datos_z.head()
+    datos=datos[l]
+                                        # Plot
+    datos['Date']=pd.to_datetime(datos['Date'])
+                                        plt.figure(figsize=(10,6))
+    datos.head()
+                                        sns.scatterplot(x=datos_z.Fecha, y= 
+    # Convertir a z score
+                                        datos_z.Open, hue= datos_z['Open_x'],s= 5)
+    datos_z=pd.DataFrame()
+    for j in datos.columns[1:]:
+     datos_z[j] = (datos[j] - datos[j].mean()) / 
+    datos[j].std()
+    datos_z['Fecha']= datos.Date
+    datos_z.head()
+   Ejemplo Método Z 
+   Score
+         Outliers en dos 
+         dimensiones
+         ✓ Puede parecer fácil encontrar               ✓ Esto puede funcionar adecuadamente 
+            outliers en dos dimensiones:                  la mayoría de las veces,  pero existen 
+            simplemente podrían graficarse                distribuciones de variables que 
+            diagramas de caja y bigotes para              desafían este análisis.
+            cada una de las dos variables. 
+      Ejemplo
+                      Si  vemos solamente los valores de la variable x, notamos 
+                      que  su  diagrama  de  caja  y  bigotes  horizontal  tiene  dos 
+                      outliers en su extremo derecho, que corresponden a los dos 
+                      puntos del gráfico ubicados en la parte inferior derecha. En 
+                      este caso, sería conveniente analizar estos dos puntos en 
+                      sus dos variables x e y para ver qué relación guardan con el 
+                      resto de los datos.
+      ������ El código para este ejemplo en Python está disponible en este enlace.
+      Detectar e interpretar 
+      los outliers
+                               Tratar de interpretar qué 
+     Identificar y aislar los puntos que 
+                               representan esos outliers para el 
+     tienen cualidades de outliers
+                               resto de los datos
+          ������ ¡Esta última tarea es más subjetiva y requiere de un experto!
+   La Importancia de 
+   graficar los datos
+     No podemos dejar de destacar de la manera 
+     que sea posible de acuerdo a las 
+     características del caso en particular, para 
+     poder analizar sus relaciones y verificar 
+     si existen outliers o situaciones 
+     particulares.
+                                        Coeficiente de correlación para:
+                                        Dataset I: 0.81642051634484
+                                        Dataset II: 0.8162365060002428
+                                        Dataset III: 0.8162867394895984
+       Ejemplo Dataset IV: 0.8165214368885028
+                                        (Promedio de los valores de x, promedio de los valores de y) 
+                                        para:
+       Es claro que los cuatro          Dataset I: (9.0, 7.5)                   REEMPLAZAR 
+       casos muestran conjuntos         Dataset II: (9.0, 7.5)                  POR IMAGEN
+       de datos diferentes. ������          Dataset III: (9.0, 7.5)
+       Observemos las salidas de        Dataset IV: (9.0, 7.5)
+       Python para los cuatro 
+       datasets:                        (Varianza de los valores de x, varianza de los valores de y) 
+                                        para:
+                                        Dataset I: (11.0, 4.13)
+                                        Dataset II: (11.0, 4.13)
+                                        Dataset III: (11.0, 4.12)
+                                        Dataset IV: (11.0, 4.12)
+     “El cuarteto de 
+     anscombe”
+     Por extraño que parezca, los cuatro 
+     conjuntos de datos tienen casi el mismo 
+     coeficiente de correlación, el mismo 
+     promedio para x, el mismo promedio para 
+     y, y análogamente con las varianzas de 
+     ambas variables.
+       PARA RECORDAR
+    Para tener en cuenta
+    ¡No estamos exentos de encontrarnos con 
+    casos similares, por lo que debemos estar 
+    atentos a los indicadores estadísticos 
+    utilizados, las distribuciones de los 
+    datos y los gráficos correspondientes, 
+    todo en conjunto!
+   4.    Método Distancia Media (Multivariada)
+     # Extraer columnas de interes
+     data_multiple=datos_z.drop(columns=['Open_x','Fecha'])
+     data_multiple.head()
+     # Funcion                                                       # Crear una copia de los datos
+     def outlier_euclideano_d(x,cutoff):                             euc_d = data_multiple.copy()
+      # x: dataframe con valors numericos normalizados         ������    euc_d.head()
+      result_ = pd.Series([0] * len(x.iloc[:,1]))                    # Aplicar la funcion
+      data_mean = x.mean() # media de los datos_                     euc_d['outlier']=outlier_euclideano_d(euc_d
+      dist = np.sqrt(np.sum(((x-data_mean) ** 2),axis=1))            ,2)
+     #Distancia euclideana                                           euc_d.head()
+      dist_mean = dist.mean() #media de las distancia
+      dist_zscore = np.abs((dist - dist_mean) / 
+     dist.std())#z-score para las distancias
+      result_[((dist_zscore > 3))] = 1
+      return result_
+     Ejemplo
+  plt.figure(figsize=(15,14))
+  plt.subplot(2,3,1)
+  sns.scatterplot(x="Open",y="High",data=euc_d,hue="outlier",p
+  alette=["green","red"])
+  plt.subplot(2,3,2)
+  sns.scatterplot(x="Open",y="Low",data=euc_d,hue="outlier",pa
+  lette=["green","red"])               ������
+  plt.subplot(2,3,3)
+  sns.scatterplot(x="Open",y="Close",data=euc_d,hue="outlier",
+  palette=["green","red"])
+  plt.subplot(2,3,4)
+  sns.scatterplot(x="Open",y="Adj 
+  Close",data=euc_d,hue="outlier",palette=["green","red"])
+  plt.subplot(2,3,5)
+  sns.scatterplot(x="Open",y="Volume_Millions",data=euc_d,hue=
+  "outlier",palette=["green","red"])
+  plt.subplot(2,3,6)
+  sns.scatterplot(x="Open",y="VolStat",data=euc_d,hue="outlier
+  ",palette=["green","red"])
+    Outliers en una 
+    variable
+    También existen otros métodos más elaborados 
+    como: 
+     ✓ Modelación probabilística
+     ✓ Modelos de regresión
+     ✓ Modelos basados en proximidad (no 
+       paramétricos)
+     ✓ Modelos de Teoría de información y 
+     ✓ Detección en espacios de alta dimensión 
+     Datos ausentes: 
+    imputación de datos, 
+    interpolación y otras 
+        técnicas
+     Datos ausentes
+     Datos ausentes y el mundo 
+     real
+                          La tranquilidad de comenzar el proceso de 
+                          análisis desde la parte estadística pura, es 
+                          un poco diferente a lo que puede llegar a 
+                          pasar en el mundo real...
+        Algunos ejemplos
+         ✓ Cuando pedimos responder una encuesta 
+             o   formulario,     puede  que  alguna                ✓ Puede ocurrir que se nos escape 
+             pregunta quede sin responder.                             una tecla e ingresemos un número 
+         ✓ Cuando  recolectamos  datos  de  manera                     mal.
+             automatizada       o     semi-automatizada,         ¿Qué  hacemos  con  los  datos 
+             puede  ser  que  los  datos  estén  mal             ausentes?
+             cargados.
+       PARA RECORDAR
+    Para tener en cuenta
+    No todos los métodos y algoritmos brindan 
+    la posibilidad de trabajar con ellos. 
+    Afortunadamente, con Python tenemos 
+    gran parte del problema solucionado ������
+      Métodos con datos                                      ...acá denominados NaN
+       ✓ Las operaciones vectorizadas ofrecen 
+      ausentes
+          funciones que descartan los valores     ✓ Si  podemos  comprobar  que  los 
+          NaN,  tales  como  nansum,  nanprod,       valores  faltantes  no  serán 
+          nanmean, etc.                              extremos, podemos asignar un 
+       ✓ Si  efectivamente  queremos  quitar  la     valor  determinado  al  dato 
+          observación  completa  (la  fila  de       ausente.
+          datos  completa),  podemos  usar  la 
+          función dropna().
+       Para pensar
+   ¿En qué situaciones se puede asignar 
+   un valor determinado al dato ausente?
+   Contesta mediante el chat de Zoom 
+  Importante
+  Los datos ausentes son siempre 
+  importantes porque pueden introducir 
+  irregularidades que distorsionan los 
+  resultados del análisis. Siempre deben ser 
+  reportados y analizados para entender su 
+  origen y tratar de minimizarlos.
+       Métodos de 
+       imputación
+        Manejo de datos nulos
+        Se deben tener estrategias para poder manejarlos.       Para aplicar estas técnicas 
+        En general se tienen dos metodologías                   podemos hacerlo de forma manual 
+                                                                o usando la clase SimpleImputer 
+               1) Introducir un valor constante para los        de ScikitLearn
+                  nulos o una categoría llamada 
+                  Desconocido en variables categóricas
+               2) Reemplazar por un valor seleccionado al 
+                  azar de los otros registros
+               3) Usar la media, mediana o moda para 
+                  rellenar el valor
+               4) Valor estimado usando un modelo 
+     Manejo de datos nulos: 
+     SimpleImputer
+     Si queremos reemplazar las columnas numéricas por media 
+     podemos hacer esto
+     url='https://raw.githubusercontent.com/              0      1     2     3      4     5      6   7    8
+     jbrownlee/Datasets/master/pima-indians-          0  6.0  148.0  72.0  35.0    NaN  33.6  0.627  50  1.0
+     diabetes.csv'                               ������   1  1.0   85.0  66.0  29.0    NaN  26.6  0.351  31  NaN
+     df= pd.read_csv(url,sep=',', header=None)        2  8.0  183.0  64.0   NaN    NaN  23.3  0.672  32  1.0
+                                                      3  1.0   89.0  66.0  23.0   94.0  28.1  0.167  21  NaN
+     print(df.shape)                                  4  NaN  137.0  40.0  35.0  168.0  43.1  2.288  33  1.0
+     df.replace(0, np.nan, inplace=True)
+     df.head()
+       Manejo de datos nulos: 
+       SimpleImputer
+       Si queremos reemplazar las columnas numéricas por media 
+       podemos hacer esto
+     # reemplazar con la mediana                                         0      1     2     3      4     5     6     7    8
+     valores = df.values #numpy array con los valores                0  6.0  148.0  72.0  35.0  125.0  33.6  0.63  50.0  1.0
+                                                                     1  1.0   85.0  66.0  29.0  125.0  26.6  0.35  31.0  1.0
+     imputador = SimpleImputer(missing_values=np.nan,         ������     2  8.0  183.0  64.0  29.0  125.0  23.3  0.67  32.0  1.0
+     strategy='median') #definir el imputador                        3  1.0   89.0  66.0  23.0   94.0  28.1  0.17  21.0  1.0
+     # transformar el dataset                                        4  4.0  137.0  40.0  35.0  168.0  43.1  2.29  33.0  1.0
+     transformados = imputador.fit_transform(valores)
+     transformados=pd.DataFrame(transformados)
+     print(transformados.head().round(2))
+      Interpolación
+    Interpolación
+     ✓ Método  de  ajustar  los  puntos  de  datos  para 
+       representar el valor de una función. 
+     ✓ Tiene  varias  aplicaciones  en  ingeniería  y 
+       ciencia,  que  se  utilizan  para  construir  nuevos 
+       puntos  de  datos  dentro  del  rango  con  unos 
+       puntos conocidos
+     ✓ Existen  diversos  métodos  asociados  (lineal, 
+       polinomial, splines)
+      Interpolación
+       Método lineal
+    url='https://raw.githubusercontent.com/
+                                                              0      1     2     3      4     5     6   7    8
+    jbrownlee/Datasets/master/pima-indians-
+                                                            0  6.0  148.0  72.0  35.0    NaN  33.6  0.63  50  1.0
+    diabetes.csv'
+                                                            1  1.0   85.0  66.0  29.0    NaN  26.6  0.35  31  NaN
+    df= pd.read_csv(url,sep=',', header=None)          ������
+                                                            2  8.0  183.0  64.0   NaN    NaN  23.3  0.67  32  1.0
+    print(df.shape)
+                                                            3  1.0   89.0  66.0  23.0   94.0  28.1  0.17  21  NaN
+    df.replace(0, np.nan, inplace=True)
+                                                            4  NaN  137.0  40.0  35.0  168.0  43.1  2.29  33  1.0
+    df.head()
+    print(df.interpolate(method="linear").head().rou            0      1     2     3      4     5     6   7    8
+    nd(2))                                             ������ 0  6.0  148.0  72.0  35.0    NaN  33.6  0.63  50  1.0
+                                                            1  1.0   85.0  66.0  29.0    NaN  26.6  0.35  31  1.0
+                                                            2  8.0  183.0  64.0  26.0    NaN  23.3  0.67  32  1.0
+    Esta forma no siempre garantiza rellenar los            3  1.0   89.0  66.0  23.0   94.0  28.1  0.17  21  1.0
+    valores nulos de todo el dataset                        4  3.0  137.0  40.0  35.0  168.0  43.1  2.29  33  1.0
+      Interpolación
+       Método lineal
+    url='https://raw.githubusercontent.com/
+                                                              0      1     2     3      4     5     6   7    8
+    jbrownlee/Datasets/master/pima-indians-
+                                                            0  6.0  148.0  72.0  35.0    NaN  33.6  0.63  50  1.0
+    diabetes.csv'
+                                                            1  1.0   85.0  66.0  29.0    NaN  26.6  0.35  31  NaN
+    df= pd.read_csv(url,sep=',', header=None)          ������
+                                                            2  8.0  183.0  64.0   NaN    NaN  23.3  0.67  32  1.0
+    print(df.shape)
+                                                            3  1.0   89.0  66.0  23.0   94.0  28.1  0.17  21  NaN
+    df.replace(0, np.nan, inplace=True)
+                                                            4  NaN  137.0  40.0  35.0  168.0  43.1  2.29  33  1.0
+    df.head()
+    print(df.interpolate(method="polynomial",order=2               0      1     2      3      4     5     6   7    8
+    ).head().round(2))                                 ������ 0  6.00  148.0  72.0  35.00    NaN  33.6  0.63  50  1.0
+                                                            1  1.00   85.0  66.0  29.00    NaN  26.6  0.35  31  1.0
+     Al igual que el método lineal no garantiza que         2  8.00  183.0  64.0  22.36    NaN  23.3  0.67  32  1.0
+     se llenen todos los valores.                           3  1.00   89.0  66.0  23.00   94.0  28.1  0.17  21  1.0
+                                                            4  1.96  137.0  40.0  35.00  168.0  43.1  2.29  33  1.0
+     Existen otros métodos como: spline, nearest, 
+     krogh y Akima que pueden ayudar en algunos 
+     casos
+     Otras técnicas
+     ✓ Eliminar filas con valores perdidos
+     ✓ Imputar valores perdidos para variable continua
+     ✓ Imputar valores perdidos para variable categórica
+     ✓ Usar algoritmos que admiten valores perdidos
+     ✓ Predicción de valores perdidos
+     ✓ Imputación mediante la biblioteca de aprendizaje 
+       profundo - Datawig
+     Librería Datawig
+  Librería Datawig
+    df.columns= ['Col0','Col1','Col2','Col3','Col4','Col5','Col6','Col7','Col8']
+    import datawig
+    import pandas as pd
+    import datawig
+    df_train, df_test = datawig.utils.random_split(df)
+    #Inicializar el modelo SimpleImputer
+    imputer = datawig.SimpleImputer(
+       input_columns=['Col0','Col1','Col2'], # columnas que tienen la informacion con la columna a imputar
+       output_column= 'Col4', # columna que queremos imputar
+       output_path = 'imputer_model' # modelo y metricas
+       )
+    # Entrenar el modelo con data de entrenamiento y 50 epocas
+    imputer.fit(train_df=df_train, num_epochs=50)
+    # Imputar los missing values y devolver el dataframe original con la predicciones
+    imputed = imputer.predict(df_test)
+    print(imputed.head().round(2))
+    Librería Datawig
+              Col0   Col1  Col2  Col3   Col4  Col5  Col6  Col7  Col8  Col4_imputed
+          734   2.0  105.0  75.0   NaN    NaN  23.3  0.56    53   NaN        113.50
+          213   NaN  140.0  65.0  26.0  130.0  42.6  0.43    24   1.0        175.10
+          465   NaN  124.0  56.0  13.0  105.0  21.8  0.45    21   NaN        149.18
+          206   8.0  196.0  76.0  29.0  280.0  37.5  0.60    57   1.0        168.51
+          762   9.0   89.0  62.0   NaN    NaN  22.5  0.14    33   NaN        110.74
+          542  10.0   90.0  85.0  32.0    NaN  34.9  0.82    56   1.0        108.02
+          255   1.0  113.0  64.0  35.0    NaN  33.6  0.54    21   1.0        130.35
+          412   1.0  143.0  84.0  23.0  310.0  42.4  1.08    22   NaN        146.46
+          328   2.0  102.0  86.0  36.0  120.0  45.5  0.13    23   1.0        121.36
+          583   8.0  100.0  76.0   NaN    NaN  38.7  0.19    42   NaN        131.35
+          346   1.0  139.0  46.0  19.0   83.0  28.7  0.65    22   NaN        164.06
+          427   1.0  181.0  64.0  30.0  180.0  34.1  0.33    38   1.0        215.98
+          649   NaN  107.0  60.0  25.0    NaN  26.4  0.13    23   NaN        127.96
+          757   NaN  123.0  72.0   NaN    NaN  36.3  0.26    52   1.0        155.13
+          607   1.0   92.0  62.0  25.0   41.0  19.5  0.48    25   NaN         97.90
+          421   2.0   94.0  68.0  18.0   76.0  26.0  0.56    21   NaN         98.36
+          470   1.0  144.0  82.0  40.0    NaN  41.3  0.61    28   NaN        150.10
+                 ☕
+               Break
+               ¡10 minutos y 
+                volvemos!
+                  ¡Lanzamos la
+                  Bolsa de 
+                  Empleos!
+                 Un espacio para seguir potenciando tu carrera y 
+                 que tengas más oportunidades de inserción 
+                 laboral.
+                 Podrás encontrar la Bolsa de Empleos en el menú 
+                 izquierdo de la plataforma.
+                 Te invitamos a conocerla y ¡postularte a tu futuro 
+                 trabajo!
+                   Conócela
+      Reducción de 
+    dimensionalidad con 
+   análisis de componentes 
+       principales
+       Análisis de 
+      componentes 
+       principales
+    ¿Qué tal si pudiéramos 
+    simplificar la información 
+    que tenemos por delante?
+    ¿Si pudiéramos “ver la sombra” de los 
+    datos de tal forma de poder acomodarlos 
+    en una “foto” de dos dimensiones y así 
+    poder verlos mejor?
+             Veamos el siguiente 
+                       video
+                                    Acercándonos al 
+                                    concepto...
+                REEMPLAZAR 
+                 POR IMAGEN
+   Ejemplo
+   Consideremos el conocido 
+   conjunto de datos Iris:
+     ¿Cómo podríamos 
+     reducir tanta 
+    ✓ Las componentes son nuevas variables, cada 
+     información?
+      una de las cuales surge de realizar un 
+      cálculo con todas las variables originales.
+    ✓ Aplicar componentes principales es como 
+      encender una fuente de luz, que busca la 
+      sombra mejor proyectada por los datos ������.
+    En los gráficos 
+                                 Luego las componentes principales
+   siguientes pueden 
+   verse:
+        Primero las variables originales
+                               ������
+         ¿Qué hicimos?
+         ✓ Simplemente        creamos      un     nuevo 
+            conjunto de datos.                                 ✓ PC1       explicará    el     mayor 
+                                                                   porcentaje de los datos, la PC2 
+         ✓ Estas  nuevas  variables  están  calculadas             un poco menos, y así en orden 
+            de  tal  forma  que  cada  una  de  ellas              decreciente.
+            puede explicar la variabilidad de los 
+            datos      con     distinto    grado      de 
+            importancia.
+    ¿Cómo se mide esta 
+    importancia?
+     ✓ PC1 explica el 92% de los datos
+     ✓ Mientras que la PC2 explica el 5.30% y así sucesivamente. 
+     ✓ Quiere decir que la PC1 y la PC2 juntas explican el 97.76% de los datos 
+        (estaríamos perdiendo solamente un 2.24% de información).
+             “explained variance ratio” o tasa de variabilidad explicada
+                 PC1       PC2        PC3       PC4
+                 92.46     5.30       1.71      0.51
+         ������ ¡Python provee todas estas funciones en el paquete scikit-learn!
+     Selección de 
+     variables
+                              Tenemos información resumida de un 
+                               conjunto de datos de 4 variables 
+                                originales en 2 componentes 
+                              principales que muestran claramente la 
+                                 separación de los datos en dos 
+                                 subconjuntos bien definidos. 
+     ������ Es una selección de variables muy conveniente para graficar en dos dimensiones:
+        Algunas observaciones
+         Las   componentes  principales  no  tienen            ✓ Utilizar       las      componentes 
+         significado:  es  un  error  tratar  de  darles  una      principales con precaución.
+         interpretación.
+                                                               ✓ Si los datos no tienen una forma 
+         Dos situaciones más comunes:                              muy           definida,        nos 
+                ✓ Si  un  dato  es  outlier  en  las               encontraremos          en      una 
+                   componentes  principales,  también 
+                   será  outlier  en  el  conjunto  de             situación    similar    para    las 
+                   datos original.                                 componentes principales. 
+                ✓ Si un conjunto de datos conforma un 
+                   grupo       separado,       también 
+                   conformará           un        grupo 
+                   diferenciado  en  las  variables 
+                   originales.
+      Actividad colaborativa
+   Análisis de correlación en acciones
+   Utilizaremos información de precios de 
+   acciones para calcular correlaciones 
+   Duración: 15/20 minutos
+   Realizaremos la actividad en grupos de 3-4 personas 
+            ACTIVIDAD COLABORATIVA
+       Análisis de correlación 
+       en acciones
+         Consigna: 
+          1. Importar datos de Acciones Globales      3.   Calcular la matriz de correlación 
+              (que están hosteados en GITHUB en       para       todas las acciones presentadas.
+              el siguiente enlace Monitoreo de        4    Interpretar los resultados obtenidos
+              Acciones
+          2. Identificar potenciales valores 
+              atípicos y posibles causas 
+       NOTA: usaremos los breakouts rooms. El tutor/a tendrá el rol de facilitador/a.
+      CLASE N°11
+      Glosario                                   Data Reduction: consiste en la 
+      Data Cleaning: proceso para remover        reducción de dimensionalidad de 
+      nulos, outliers e inconsistencias en un    variables para evitar la maldición de 
+      dataset                                    espacios de alta dimensión que traen 
+      Data Integration: proceso mediante el      problemas de multicolinealidad y 
+      cual se acoplan diversas fuentes de        estimadores con alta varianza
+      información (estructurada, no              Valores atípicos (outliers): son 
+      estructurada y semi estructurada)          observaciones que tienen un 
+      Data Transformation: consiste en la        comportamiento diferente a las demás 
+      adecuación de variables numéricas          dentro de un dataset, pueden ser 
+      (estandarización) o categóricas (one hot   univariados o multivariados 
+      encoding y LabelEncoder) para el manejo    Datos ausentes: valores nulos dentro de 
+      más eficiente de estructuras de datos      un dataset que pueden generar ruido en 
+      para modelos                               los análisis.
+       
+    CLASE N°11
+    Glosario
+    Imputación: técnica que consiste en 
+    reemplazar datos ausentes por alguna 
+    medida representativa (media, mediana, 
+    moda) o por el valor correspondiente al 
+    individuo más cercano en distancia
+    Interpolación: técnica que consiste en 
+    reemplazar datos ausentes numéricos por 
+    medio de funciones matemáticas con 
+    límites superior e inferior definidos
+    ACP: técnica de reducción de 
+    dimensionalidad que permite encontrar 
+    grupos y proyectar en pocas dimensiones 
+    las relaciones entre individuos y variables 
+      ¿Preguntas?
+                   Resumen 
+               de la clase hoy
+              ✓ Concepto de preprocesamiento
+              ✓ Outliers
+              ✓ Datos ausentes
+              ✓ Componentes principales
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.

@@ -1,0 +1,454 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 34. DATA SCIENCE
+      GIS y Datos Espaciales
+       Temario
+                         33                       34                        35
+                  Visualizaciones                GIS y            Análisis univariado y 
+                 efectivas y Data                                        gráficos
+                    Storytelling          Datos espaciales
+                   ✓  Beneficios del       ✓ Análisis espacial       ✓ Tipos de 
+                      Storytelling y                                    análisis 
+                      componentes          ✓ Mapas y 
+                                              animaciones de            estadísticos
+                   ✓  Visualizaciones de 
+                      datos                   Python                 ✓ Gráficos 
+                   ✓  Elevator Pitch       ✓ Uso de la librería         estadísticos
+                   ✓  Interfaz de usuario     Plotly
+                   ✓  Principios de usabilidad
+    Objetivos de la clase
+                 Definir el concepto de análisis espacial
+                 Acceder a mapas y animaciones en Python
+                 Utilizar la librería Plotly
+        MAPA DE CONCEPTOS
+                                 Análisis 
+                                 espacial
+                              GIS y Datos              Mapas y 
+       Datos espaciales                              animaciones de 
+                              Espaciales               Python
+                               Uso de librería 
+                                  Plotly
+      Cuestionario de tarea
+   ¿Te gustaría comprobar tus 
+   conocimientos de la clase anterior?
+   Te compartimos a través del chat de 
+   Zoom / chat de la plataforma el enlace a un 
+   breve cuestionario de Kahoot.
+   Duración: 10 minutos
+     Análisis espacial
+       Definición
+       ¿Qué es el 
+       Análisis espacial?
+       Antes de hablar de Mapas, tenemos que 
+       entender de qué estamos hablando cuando 
+       hablamos de Análisis Espacial. Si lo pensamos 
+       en un sentido estricto, son un conjunto de 
+       herramientas que nos permiten analizar datos 
+       geográficos. 
+       Ahora   bien,   ¿Qué    son    los   datos 
+       geográficos?  Son  datos  que  de  manera 
+       implícita o explícita tienen una ubicación en la 
+       tierra.
+      Tipos de datos 
+       espaciales
+     Tipos de datos espaciales
+     Los datos espaciales pueden expresarse en dos modelos clásicos: 
+                                              Modelo ráster.
+        Modelo vectorial.                  Se divide a un espacio en 
+      En este modelo los datos            grillas de igual tamaño. Cada 
+       espaciales son puntos,             una de estas unidades (a veces 
+        líneas o polígonos.                llamadas píxeles o celdas) 
+                                            tienen uno o más valores 
+                                                asociados. 
+     Referencia: mygisnotebook.blog 
+    Tipos de datos espaciales
+                                    Suele ser muy usado para 
+                                    el análisis de imágenes 
+                                    satelitales, también para 
+                                    mostrar la elevación de una 
+                                    superficie.
+     Archivos de datos 
+       espaciales
+       Archivos de datos 
+       espaciales
+       Tanto vectores como rasters tienen 
+       tipos de archivos distintos.                    ✔ Geojson:  Son  listas  basadas  en  el 
+       A  continuación,  les  compartimos                  standard JSON. Por definición desde 
+       los  archivos  más  comunes  para                   ya  hace  unos  años  es  obligatorio 
+       vectores:                                           usar la proyección WGS84.
+       ✔ Shapefile: De los formatos más                ✔ KLM: Son etiquetas basadas en XML 
+           ampliamente  difundidos.  Están                 Modelo ráster. 
+           compuestos  por  más  de  un 
+           archivo y es propiedad de ESRI 
+           (creadores de ArcGis).
+    Archivos de datos 
+    espaciales
+     Tanto vectores como rasters tienen tipos de archivos distintos: 
+     Archivos más comunes para rasters: 
+      ✔ GeoTIFF
+      ✔ JPEG(2000)
+      Sistemas de 
+     coordenadas de 
+       referencia
+       Sistemas de referencia
+          Como mencionamos, todos los 
+          datos     espaciales     tienen 
+          implícita o explícitamente una 
+          ubicación  en  la  tierra  y  para 
+          trabajar   con    datos   geo-
+          referenciados,  tenemos  que 
+          saber  en  qué  unidad  de 
+          medida      se      encuentran 
+          expresados.
+  Sistemas de referencia
+       PARA RECORDAR
+     “Sigue nos dice que algo peso 10 no podemos 
+     saber si son gramos, kilos o toneladas. Esto 
+     significa que un conjunto de coordenadas por sí 
+     solas, no alcanzan para saber de qué posición en la 
+     tierra estamos hablando”
+     Por tanto, los Sistemas de Coordenada de 
+     referencia (CRS) identifican la “unidad” en la que 
+     están expresados nuestros datos espaciales
+      Sistemas de referencia
+                   Hay dos diferentes tipos de sistemas de referencia de coordenadas:
+                 Sistema de Coordenadas                   Sistema de Coordenadas 
+                       Geográfica                               Proyectada
+    Sistemas de referencia
+     Utilizan los grados de latitud y 
+     longitud y en ocasiones un valor 
+     de altitud para definir la situación 
+     de un punto sobre la superficie 
+     terrestre. El sistema más popular 
+     se denomina WGS 84 (World 
+     Geodetic System).
+       Sistemas de referencia
+        Se define sobre una superficie 
+        plana  de  dos  dimensiones.  A 
+        diferencia  de  un sistema  de 
+        coordenadas  geográficas,  un 
+        sistema     de    coordenadas 
+        proyectadas posee longitudes, 
+        ángulos y áreas constantes en 
+        las dos dimensiones.
+    Sistemas de referencia
+    El mundo del Análisis de Datos geoespaciales es 
+    un tema muy apasionante y también complejo, 
+    pero al final de la clase, en la diapositiva de 
+    material ampliado, te compartimos algunos links 
+    de interés para que puedas seguir aprendiendo 
+    aún más.
+       Mapas y 
+     animaciones en 
+        Python
+     Mapas en Python
+    Mapas en Python
+     Ahora que ya tenemos un 
+     entendimiento común acerca del 
+     análisis espacial, hablemos 
+     exclusivamente de cuáles son las 
+     principales librerías que existen en 
+     Python para la creación y 
+     representación de mapas como así 
+     también, para la manipulación de 
+     datos geoespaciales.
+               
+       Mapas en Python
+         Resulta importante mencionar, que 
+         existen     múltiples      paquetes 
+         disponibles  en  Python,  de  los 
+         cuales podemos destacar…
+         Geopandas:  proyecto  de  código 
+         abierto para facilitar el trabajo con 
+         datos  geoespaciales  en  Python. 
+         GeoPandas  extiende  los  tipos  de 
+         datos  utilizados  por  los  pandas 
+         para      permitir      operaciones 
+         espaciales en tipos geométricos.  
+       Mapas en Python
+        GDAL/OGR:  Librería  fundamental 
+        para  procesar  formatos  de  datos 
+        vectoriales y ráster.
+        GeoPy: Facilita         a        los 
+        desarrolladores de Python localizar 
+        las  coordenadas  de  direcciones, 
+        ciudades,  países  y  puntos  de 
+        referencia  en  todo  el  mundo 
+        utilizando   geocodificadores     de 
+        terceros y otras fuentes de datos.
+    Mapas en Python
+    Cartopy:  Esta  librería  permite 
+    dibujar  mapas  para  que  el 
+    análisis  y  la  visualización  de 
+    datos  sea  lo  más  intuitivo 
+    posible.
+       Mapas en Python
+         Rasterio:  Los  SIG  utilizan  el 
+         formato  GeoTIFF,  entre  otros, 
+         para   organizar   y   almacenar 
+         conjuntos  de  datos  ráster  como 
+         imágenes satelitales. Rasterio lee 
+         y   escribe  estos  formatos  y 
+         proporciona  una  API  de  Python 
+         basada  en  matrices  Numpy  N-
+         dimensional y GeoJSON.
+     Animaciones en 
+        Python
+       Animaciones en Python
+          Para    crear   nuestras     animaciones 
+          usaremos  la  función  FuncAnimation 
+          dentro   de  matplolib.  Un  aspecto 
+          fundamental  para  poder  crear  nuestras 
+          animaciones  es  entender  que  este 
+          paquete no crea animaciones, sino que 
+          simplemente     se    limita   a    crear 
+          animaciones  a  partir  de  una  serie  de 
+          gráficos que le pasemos.
+    Animaciones en Python
+     Pasos importantes
+      ✔ Crear un background: es el marco 
+        de fondo que sirve de referencia para 
+        los gráficos.
+      ✔ Crear una función: que permita 
+        graficar a cada paso de tiempo y frame
+      ✔ Crear el objeto animación: la clase 
+        animacion incluye la función 
+        FuncAnimation que nos permite crear 
+        la animación
+    Animaciones en Python
+     Parámetros importantes de la función 
+     FuncAnimation
+      ✔ fig: es el objeto que utilizaremos para pintar 
+        nuestro gráfico.
+      ✔ func: es una función que debe de devolver el 
+        estado de la animación para cada frame. 
+        Básicamente lo que debemos hacer es crear 
+        una función que devuelva todos los gráficos. 
+    Animaciones en Python
+     Parámetros importantes de la función Funcanimation
+      ✔ interval: es el delay en milisegundos entre los 
+        diferentes frames de la animación.
+      ✔ frames: número de imágenes en las que se va a 
+        basar el gráfico. Esto dependerá de cuántos 
+        “estados” tenga la animación. Si tenemos una 
+        animación con datos en 5 estados diferentes 
+        (imaginemos, 5 años), el número de frames será 
+        5
+      Ejemplo en vivo
+   Exploremos cómo hacer uso de la función 
+   FuncAnimation de matplotlib. Aprenderemos a 
+   desarrollar animaciones para series de tiempo, 
+   barplots y scatterplots, para esto utilizaremos 
+   el notebook dentro de la carpeta de clase.
+   Tiempo estimado: 15-20 minutos
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+         Actividad colaborativa
+    Graficando datos espaciales de 
+    Properati
+    En esta oportunidad trabajaremos con los datos de Properati de 
+    2015 disponibles en el siguiente enlace: Data Properati
+    Se sugiere trabajar con la librería Folium y utilizar heatmaps para 
+    proyectar el procesamiento de los datos
+    Duración: 15-20 minutos
+     Uso de la librería 
+        Plotly
+    Definición de Plotly
+    Plotly
+    La biblioteca plotly de Python es una biblioteca 
+    de gráficos interactiva de código abierto que 
+    admite más de 40 tipos de gráficos únicos que 
+    cubren una amplia gama de casos de uso 
+    estadísticos, financieros, geográficos, 
+    científicos y tridimensionales.
+    Construido sobre la biblioteca Plotly JavaScript 
+    (plotly.js), plotly permite a los usuarios de 
+    Python crear hermosas visualizaciones 
+    interactivas basadas en la web que se pueden 
+    mostrar en cuadernos Jupyter
+       Nociones 
+      elementales
+     Nociones básicas
+      # Importar librerias
+      import pandas as pd
+      import numpy as np
+      import chart_studio.plotly as py
+      import seaborn as sns
+      import plotly.express as px
+      arr= np.random.randn(50,4)
+      df= pd.DataFrame(arr, columns=['A','B','C','D'])
+      df.head()
+      df.plot()                         Nada mal para una primera aproximación, 
+                                         sin embargo este gráfico no es dinámico.
+      Nociones básicas
+      import plotly.graph_objects as go
+      # Informacion de datos disponibles: 
+      https://plotly.com/python-api-reference/generated/plotly.data.html
+      # Precio de stocks de ['date', 'GOOG', 'AAPL', 'AMZN', 'FB', 'NFLX', 'MSFT']
+      # para 2018/2019
+      df_stocks = px.data.stocks()
+      px.line(df_stocks, x='date',y='GOOG', labels={'x':'Fecha', 'y':'Precio'})
+                                                   Plotly nos ofrece la 
+                                                   oportunidad de poder 
+                                                   interactuar de manera 
+                                                   dinámica con la gráfic, entre 
+                                                   otras opciones.
+     Nociones básicas
+      px.line(df_stocks, x='date', y=['GOOG','AAPL'],labels={'x':'Date','y':'Price'},
+             title='Apple vs Google')
+       En esta oportunidad podemos crear múltiples gráfico en un mismo frame. Adicionalmente 
+       podemos generar zoom, recortar, escalar, y guardar la imagen a nuestro equipo.
+     Nociones básicas
+      fig = go.Figure()
+      fig.add_trace(go.Scatter(x=df_stocks.date, y=df_stocks.AAPL,mode='lines', name='Apple'))
+      fig.add_trace(go.Scatter(x=df_stocks.date, y=df_stocks.AMZN,mode='lines+markers', name='Amazon'))
+      fig.add_trace(go.Scatter(x=df_stocks.date, y=df_stocks.GOOG,mode='lines+markers', name='Google',
+                              line=dict(color='firebrick',width=2,dash='dashdot')))
+      fig.update_layout(title='Precio de acciones 2018/19',xaxis_title='Precio',yaxis_title='Fecha')
+                                                  Podemos generar 
+                                                  diferentes marcadores en 
+                                                  una serie de tiempo para 
+                                                  comparación.
+      Nociones básicas
+      fig = go.Figure()
+      fig.add_trace(go.Scatter(x=df_stocks.date, y=df_stocks.AAPL,mode='lines', name='Apple'))
+      fig.add_trace(go.Scatter(x=df_stocks.date, y=df_stocks.AMZN,mode='lines+markers', name='Amazon'))
+      fig.add_trace(go.Scatter(x=df_stocks.date, y=df_stocks.GOOG,mode='lines+markers', name='Google',
+                              line=dict(color='firebrick',width=2,dash='dashdot')))
+      fig.update_layout(
+         xaxis=dict(showline=True, showgrid=False, showticklabels=True,
+                    linecolor='rgb(204,204,204)', linewidth=2, ticks='outside',
+                    tickfont=dict(family='Arial', size=12, color='rgb(82,82,82)')
+                    ),
+                    yaxis=dict(showgrid=False, zeroline=False, showline=False,
+                               showticklabels=False                  
+                    ),
+                    autosize=False,
+                    margin=dict(autoexpand=False,l=100, r=20, t=110),
+                                showlegend=True, plot_bgcolor='white'
+             )
+     Nociones básicas
+                                             Podemos modificar 
+                                             formatos en los ejes x, y, 
+                                             así como también tamaño 
+                                             y tipo de letra, ticks en los 
+                                             ejes y demás atributos 
+                                             gráficos.
+       Barplots
+     Barplots
+     df_us= px.data.gapminder().query("country=='United States'")
+     px.bar(df_us, x='year', y='pop')
+     Barplots
+     df_tips= px.data.tips()
+     px.bar(df_tips, x='day',y='tip',color='sex',
+           title='Propinas por genero en cada dia',labels={'tip':'Propina', 'day':'Dia de 
+     trabajo'})
+     Barplots
+      df_europe= px.data.gapminder().query("continent == 'Europe' and year == 2007 and pop > 
+      2.e6")
+      fig=px.bar(df_europe, y='pop', x='country', text='pop', color='country')
+      fig.update_traces(texttemplate= '%{text:.2s}', textposition='outside')
+      fig.update_layout(uniformtext_minsize=8)
+      fig.update_layout(xaxis_tickangle= -45)
+      fig
+      Scatterplots
+     Scatterplots
+     df_iris= px.data.iris()
+     px.scatter(df_iris, x='sepal_width', y='sepal_length',color='species', 
+     size='petal_length',
+               hover_data=['petal_width'])
+     Scatterplots
+      fig= go.Figure()
+      fig.add_trace(go.Scatter(
+       x=df_iris.sepal_width, y= df_iris.sepal_length, mode='markers',
+       marker_color=df_iris.sepal_width, text=df_iris.species, marker=dict(showscale=True)
+      ))
+      fig.update_traces(marker_line_width= 2, marker_size=10)
+       Piecharts
+     Piecharts
+     df_america= px.data.gapminder().query("year==2007").query("continent= ='Americas' 
+     and (country in 
+     ('Colombia','Uruguay','Argentina','Peru','Chile','Brazil','Ecuador','Venezuela','Par
+     aguay','Bolivia'))")
+     px.pie(df_america, values='pop', names='country', title='Poblacion America',
+           color_discrete_sequence= px.colors.sequential.RdBu)
+      Histogramas
+     Histogramas
+     df_tips= px.data.tips()
+     px.histogram(df_tips, x='total_bill',color='sex')
+       Boxplots
+     Boxplots
+     px.box(df_tips, x='day',y='tip',color='sex')
+     Boxplots
+      df_stocks= px.data.stocks()
+      fig= go.Figure()
+      fig.add_trace(go.Box(y=df_stocks.GOOG, 
+      boxpoints='all',fillcolor='blue',jitter=0.5,
+                          whiskerwidth=0.2))
+      fig.add_trace(go.Box(y=df_stocks.AAPL, 
+      boxpoints='all',fillcolor='red',jitter=0.5,
+                          whiskerwidth=0.2))
+      fig.update_layout(title='Google vs 
+      Apple',yaxis=dict(gridcolor='rgb(255,255,255)',
+      gridwidth= 3),paper_bgcolor='rgb(243, 243, 
+      243)',plot_bgcolor='rgb(243, 243, 243)')
+       Heatmaps
+     Heatmaps
+     f= sns.load_dataset('flights')
+     fig= px.density_heatmap(f, x='year', y='month',z= 'passengers',
+                            marginal_x= 'histogram',
+                            marginal_y='histogram')
+     fig
+           Actividad colaborativa
+    Comparando el GPD de diferentes 
+    países
+    En esta oportunidad elegiremos el gráfico más apropiado para 
+    representar el GPD (Gross Domestic Product) de todos los países 
+    disponibles en el dataset. Los datos se encuentran disponibles en el 
+    siguiente enlace: Gapminder Dataset
+    Sugerencia: Utilizar la librería Plotly
+    Duración: 10-15 minutos
+       CLASE N°34
+       Glosario
+       Análisis espacial: son un conjunto de            Animaciones Python: Son una sucesión 
+                                                        de imágenes a lo largo del tiempo, deben 
+       herramientas que nos permiten                    contar con un background, una función y 
+       analizar datos geográficos                       un objeto que permita la animación.
+       Tipos de datos espaciales: Pueden ser            Plotly: biblioteca de gráficos interactiva de 
+       de dos tipos:  vectorial (representados por      código abierto que admite más de 40 tipos 
+       líneas o polígonos) o tipo raster donde se       de gráficos únicos que cubren una amplia 
+       divide los pixeles de igual tamaño.              gama de casos de uso estadísticos, 
+                                                        financieros, geográficos, científicos y 
+       Sistemas de referencia: Pueden ser de            tridimensionales
+       dos tipos: sistema de coordenadas 
+       geográficas o sistema de coordenadas 
+       proyectadas
+      ¿Preguntas?
+     ¿Aún quieres conocer 
+          más?
+     Te recomendamos el 
+      siguiente material
+         MATERIAL AMPLIADO
+     Recursos multimedia
+         Introducción a GIS
+          ✓ Una introducción fácil a GIS | GIS | GIS
+         Sistemas de coordenadas
+          ✓ Sistemas de coordenadas, proyecciones y transformaciones | 
+             ProGIS | ProGIS
+         GeoTIFF
+          ✓ Uso de GeoTIFF | EarthData | GeoTIFF
+         JPEG2000
+          ✓ JPEG2000 | JPEG | JPEG2000
+      Disponible en nuestro repositorio.
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.
+                   Resumen 
+               de la clase hoy
+              ✓ Definir el concepto de Análisis espacial
+              ✓ Acceder a mapas y animaciones en Python
+              ✓ Utilizar la librería Plotly

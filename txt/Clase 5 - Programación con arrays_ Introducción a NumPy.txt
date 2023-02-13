@@ -1,0 +1,499 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 05. DATA SCIENCE
+         Programaci√≥n con 
+        arrays: introducci√≥n 
+               a NumPy
+        Temario
+                              04                             05                             06
+                    Introducci√≥n a la                Programaci√≥n                  Introducci√≥n a la 
+                    librer√≠a cient√≠fica                con arrays:                 manipulaci√≥n de 
+                        con Python                   Introducci√≥n a               datos con Pandas 
+                                                          Numpy                         (Parte II)
+                          (parte I)               ‚úì Estructura de datos
+                       ‚úì Estructura de                                             ‚úì Fuentes de datos 
+                           datos en Pandas        ‚úì Numpy y ndarrays               ‚úì Series y data frame
+                       ‚úì Manipulaci√≥n de          ‚úì Tipos de datos                 ‚úì Selecci√≥n de datos
+                           datos en Pandas        ‚úì
+                                                      Indexado y acceso            ‚úì Operaciones
+                       ‚úì Lecturas de              ‚úì Operaciones b√°sicas
+                           archivos con                                            ‚úì Agregaciones
+                           Python                 ‚úì Operaciones vectorizadas       ‚úì Strings
+    Objetivos de la clase
+                 Conocer las estructuras de datos y su 
+                 implementaci√≥n en Python
+                 Entender el uso b√°sico del paquete NumPy 
+        MAPA DE CONCEPTOS
+                              Recall: list, tuple, 
+                              dict, set
+       Estructuras de 
+       datos en Python        Nueva estructura: 
+                              Array               NumPy y ndarrays
+                              Acceso a 
+                              elementos
+       Acceso a                                   Operaciones 
+       ndarrays                                   b√°sicas
+                              Acceso a 
+                              subarrays
+                                                  Agregaciones
+       Operaciones con                            Operaciones 
+       NumPy                                      vectorizadas
+   ¬°Vamos a Kahoot!
+    Estructuras de datos
+      Estructuras de 
+        control:
+      FOR, WHILE, IF
+    ¬øQu√© son y para qu√© 
+    sirven?
+          ‚úì Las estructuras de control sirven           ‚úì Las estructuras de control m√°s 
+             para dar claridad y orden al                  comunes son: 
+             c√≥digo. 
+                                                           Ì±âÌ†Ω For
+          ‚úì Si hay que hacer operaciones 
+             repetitivas, estas estructuras nos            Ì±âÌ†Ω While
+             ayudan a organizarlas.                        Ì±âÌ†Ω If
+                                                           Ì±âÌ†Ω Switch (Otros lenguajes e.g C)
+           Recall: estructuras de 
+           datos
+              ‚úì Anteriormente vimos las estructuras list, tuple, dict y set.
+                             Tipo                Ejemplo                                           Definici√≥n
+                                         list              [1, 2, 3]                                                      Lista ordenada
+                                       tuple               (1, 2, 3)                                     Lista ordenada inmutable
+                                         dict   {'a':1, 'b':2, 'c':3}         Diccionario: conjunto de pares clave:valor
+                                                                                     Conjunto, a la manera de un conjunto 
+                                         set              {1, 2, 3}                                                            matem√°tico
+     Recall: estructura 
+     list
+     ‚úì Anteriormente trabajamos con 
+       estructuras list, que nos permit√≠an 
+       almacenar datos ordenados de 
+       distinto tipo.
+     ‚úì Siempre manten√≠an el orden de sus 
+       elementos
+     ‚úì Eran mutables             L = list(range(10))
+                                 L
+                         Ì±âÌ†Ω
+      Recall: estructura 
+      tuple
+     ‚úì Trabajamos tambi√©n con las 
+       estructuras tuple.           T = tuple(range(10))
+     ‚úì Al igual que las listas,     T
+       siempre manten√≠an el 
+       orden de sus elementos
+                                          Ì±âÌ†Ω
+     ‚úì Eran inmutables. Una vez 
+       inicializadas, no era posible 
+       reasignar elementos.
+         Sin embargo‚Ä¶ Ì∑êÌ†æ
+         ¬°Estas estructuras no llegan a cubrir 
+         las necesidades del Data Scientist!  
+    Numpy y ndarrays
+        Actividad colaborativa
+   Programando estructuras en Python
+   Deber√°n resolver en grupo dos problemas 
+   reales, utilizando las estructuras 
+   aprendidas de programaci√≥n en Python en 
+   una notebook.
+   Duraci√≥n: 15 minutos
+          Introducci√≥n a 
+          NumPy
+                                              NumPy es un proyecto de c√≥digo abierto 
+                                              que tiene como objetivo permitir la 
+                    NUMerica   PYthon         computaci√≥n num√©rica con Python. Fue 
+                    l                         creado en 2005, bas√°ndose en el trabajo 
+                                              inicial de las bibliotecas Numeric y 
+                   Potente estructura de      Numarray. 
+                         datos
+                                              NumPy siempre ser√° un software 100% 
+                  Implementa matrices y       de c√≥digo abierto, de uso gratuito para 
+                        matrices              todos y publicado bajo los t√©rminos 
+                   multidimensionales         liberales de la licencia BSD modificada
+                     Estructuras que         Equipo creador:
+                    garantizan c√°lculos      https://numpy.org/gallery/team.ht
+                  eficientes con matrices    ml
+         El array como 
+         estructura de datos
+         ‚úì Extenderemos la aplicaci√≥n de estos       ‚úì Mientras que el tipo de dato list 
+            tipos de estructura de datos,               puede guardar datos de 
+            agregando el tipo de dato array.            diferentes tipos, el tipo de dato 
+         ‚úì Tanto array como list sirven para            array guarda datos de un √∫nico 
+            guardar conjuntos de datos                  tipo. 
+            ordenados en memoria.                    ‚úì Esto le permite ser m√°s 
+                                                        eficiente, especialmente al 
+                                                        trabajar con conjuntos de datos 
+                                                        grandes. 
+     El array como 
+     estructura de datos
+     Los np.arrays pueden ser de diferentes 
+     dimensiones : 1D (vectores), 2D 
+     (matrices), 3D (tensores)
+      Creaci√≥n de 
+       ndarrays
+        Creaci√≥n de  ndarrays
+        ‚úì La librer√≠a Numpy provee una forma               import numpy as np
+            particular de array llamada ndarray o 
+            Numpy Array.                                   Npa = np.array(range(10))
+        ‚úì Recordar: los ndarrays, al ser un tipo           Npa
+            de array, s√≥lo pueden almacenar 
+            datos de un mismo tipo.                                    Ì±âÌ†Ω
+          Veamos ejemplos
+          Np_cero = np.zeros(10)                          Ì±âÌ†Ω
+          Np_cero
+          Np_cero_int = np.zeros(10, dtype=int)           Ì±âÌ†Ω
+          Np_cero_int
+          Np_uno = np.ones(10)                            Ì±âÌ†Ω
+          Np_uno
+          Np_relleno = np.full(10,256)                    Ì±âÌ†Ω
+          Np_relleno
+      Veamos ejemplos
+      ‚úì Numpy provee objetos rango:
+     Np_rango = np.arange(10)  Ì±âÌ†Ω
+     Np_rango
+      ‚úì Ndarrays con valores aleatorios y de dos dimensiones: 
+     Np_random_dimensiones = np.random.randint(10, size=(3, 4))
+     Np_random_dimensiones
+     Tipos de datos y 
+    atributos de arrays
+        Tipos de datos 
+        arrays
+                Tipos de datos en numpy            Tipos de datos en numpy
+                i   integer  -                     M datetime
+                b   boolean                        O   object
+                u   unsigned integer               S   string
+                f   float                          U   unicode string
+                c   complex float                  V   fixed chunk of memory for 
+                                                       other type ( void )
+                m timedelta
+          Tipos de datos 
+          arraysTipos de datos en Python
+                                   strings    para representar datos textuales
+                                   integer    para representar n√∫meros 
+                                              enteros. e.g. -1, -2, -3
+                                   float      para representar n√∫meros reales. 
+                                              e.g. 1.2, 42.42
+                                   boolean  para representar True o False.
+                                   comple     para representar n√∫meros 
+                                   x          complejos. e.g. 1.0 + 2.0j, 1.5 + 
+                                              2.5j
+        Verificando el tipo de 
+        dato de un array
+           # Verificando el tipo de dato de array
+           arr = np.array([1, 2, 3, 4])                                int64
+                                                             Ì±âÌ†Ω
+           print(arr.dtype)
+           arr = np.array(['apple', 'banana', 'cherry'])     Ì±âÌ†Ω        <U6
+           print(arr.dtype)
+                                            Creando arrays con formato espec√≠fico
+           arr = np.array([1, 2, 3, 4], dtype='S')           Ì±âÌ†Ω        [b'1' b'2' b'3' b'4']
+           print(arr);print(arr.dtype)                                 |S1
+           arr = np.array([1, 2, 3, 4], dtype='S')           Ì±âÌ†Ω        [b'1' b'2' b'3' b'4']
+           print(arr);print(arr.dtype)                                 |S1
+      Convertir el tipo de 
+      dato de un array
+         arr = np.array([1.1, 2.1, 3.1])
+                                            [1 2 3]
+         newarr = arr.astype('i')      Ì±âÌ†Ω
+                                            int32
+         print(newarr)
+         print(newarr.dtype)
+         arr = np.array([1.1, 2.1, 3.1])
+                                            [ True False  True]
+         newarr = arr.astype('i')      Ì±âÌ†Ω
+                                            bool
+         print(newarr)
+         print(newarr.dtype)
+     Atributos de los 
+        arrays
+      Veamos ejemplos
+     Np_rango = np.arange(10)  Ì±âÌ†Ω
+     Np_rango
+      ‚úì Ndarrays con valores aleatorios y de dos dimensiones: 
+     Np_random_dimensiones = np.random.randint(10, size=(3, 4))
+     Np_random_dimensiones
+                Atributos de los 
+          Inspeccionemos un poco nuestros Numpy arrays Ì±âÌ†Ω
+                               Arrays
+          Podemos acceder a distintas propiedades de los arreglos:
+                            Np_cero.ndim                        Ì±âÌ†Ω
+            ‚úì Dimensi√≥n: 
+                                                                Ì±âÌ†Ω
+                             Np_random_dimensiones.ndim
+            ‚úì Forma:        Np_random_dimensiones.shape         Ì±âÌ†Ω
+            ‚úì Tama√±o:       Np_random_dimensiones.size          Ì±âÌ†Ω
+      Inspeccionemos nuestros 
+      Numpy arrays Ì∑êÌ†æ
+        Podemos acceder a distintas propiedades de los arreglos:
+                                           Np_cero.dtype                       Ì±âÌ†Ω
+          ‚úì Tipo de dato:                                                      Ì±âÌ†Ω
+                                           Np_cero_int.dtype
+          ‚úì Tama√±o de elemento:            Np_random_dimensiones.itemsize      Ì±âÌ†Ω
+          ‚úì Tama√±o total:                  Np_cero.nbytes
+                                                                               Ì±âÌ†Ω
+                                           Np_cero_int.nbytes
+      Resumen Tipos de Datos y 
+      Propiedades de Arrays
+       Tipos de datos posibles en numpy array
+    Resumen Tipos de Datos y 
+    Propiedades de Arrays
+      Propiedades de los numpy array
+    Indexado y acceso
+      Accediendo a 
+       elementos
+          Veamos c√≥mo consultar los 
+          arreglos
+        ‚úì Al igual que las listas, los elementos del arreglo se acceden mediante su √≠ndice, 
+            comenzando desde 0.
+            rango = range(1,11)
+            Np_diez_numeros = np.array(rango)        Ì±âÌ†Ω
+            Np_diez_numeros
+                                                             Ì±âÌ†Ω
+        ‚úì Primer elemento:       Np_diez_numeros[0]
+                                 Np_diez_numeros[4]          Ì±âÌ†Ω
+        ‚úì Quinto elemento:
+          Veamos c√≥mo consultar los 
+          arreglos
+         ‚úì Podemos seleccionar elementos desde atr√°s para adelante mediante √≠ndices negativos, 
+            comenzando desde -1.
+         ‚úì √öltimo elemento:                                        Ì±âÌ†Ω
+                                         Np_diez_numeros[-1]
+         ‚úì Pen√∫ltimo elemento:           Np_diez_numeros[-2]       Ì±âÌ†Ω
+         ‚úì Para acceder a un elemento de una matriz, indicar fila y columna:
+             Np_random_dimensiones     Ì±âÌ†Ω
+             Np_random_dimensiones[2, 1]     Ì±âÌ†Ω
+      Accediendo a 
+       subarrays
+         El array como 
+         estructura de datos
+            Podemos seleccionar una                      ‚úì El par√°metro tama√±o_de_paso 
+           rebanadas del arreglo de la                       permite, por ejemplo, 
+               siguiente manera:                             seleccionar elementos de dos en 
+                                                             dos
+       Objeto[desde:hasta:tama√±o_de_paso]                ‚úì Atenci√≥n a estos detalles
+                                                              ‚óã El √≠ndice "desde" es 
+                                                                  inclusivo.
+                                                              ‚óã El √≠ndice "hasta" es 
+                                                ‚ö†                 exclusivo.
+        Veamos algunos 
+        ejemplos
+            ‚úì Primeros cuatro:                 Np_diez_numeros[:4]
+            ‚úì Desde el cuarto:                 Np_diez_numeros[3:]
+            ‚úì Desde el quinto al s√©ptimo:      Np_diez_numeros[4:7]
+            ‚úì De dos en dos:                   Np_diez_numeros[::2]
+            ‚úì Desde atr√°s, de dos en dos:      Np_diez_numeros[::-2]
+        Veamos algunos 
+        ejemplos
+             Para arreglos multidimensionales, especificar los √≠ndices de manera ordenada:
+                                        Objeto[dimensi√≥n1, dimensi√≥n2,‚Ä¶]
+        Veamos algunos ejemplos...
+          ‚óè Tercera fila, todas las columnas:                      Np_random_dimensiones[2,]
+          ‚óè Primeras dos filas, primeras dos columnas:             Np_random_dimensiones[:2, :2]
+          ‚óè Tercera fila, cuarta columna:                          Np_random_dimensiones[2, 3]
+                 ‚òï
+               Break
+               ¬°10 minutos y 
+                volvemos!
+    Operaciones b√°sicas: 
+       reshape, 
+      concatenaci√≥n, 
+        splitting
+                       Operaciones b√°sicas
+           Reshape       Concatenaci√≥n    Splitting
+       Reshape
+      Para pensar
+   Pensando en ajedrez 
+   Si tuvi√©semos que rellenar una grilla de 
+   8x8 
+   con n√∫meros desde 1 a 64, 
+   ¬øC√≥mo lo har√≠amos?
+    Reshape
+    Permite modificar la dimensi√≥n 
+    de un arreglo (siempre y 
+    cuando las dimensiones de 
+    salida est√°n relacionadas con 
+    las de entrada)
+    ¬øQue patr√≥n curioso 
+    observan? 
+        Reshape
+       Permite modificar la dimensi√≥n de un arreglo, retornando otro con distinta 
+       dimensi√≥n y forma pero manteniendo los mismos elementos.
+          np.arange(1,65)                        Ì±âÌ†Ω
+          Ajedrez_64 = np.arange(1,65).reshape(8,8)       Ì±âÌ†Ω
+          Ajedrez_64
+      Concatenaci√≥n
+       Concatenaci√≥n
+        Permite modificar concatenar arrays siempre y cuando las dimensiones lo permitan.
+         axis= 1 concatena por columnas                         axis= 0 concatena por filas
+   Concatenaci√≥n
+     Concatenaci√≥n
+       Consiste en formar un nuevo arreglo a partir de 
+       ‚Äúenganchar‚Äù o ‚Äúapilar‚Äù otros.
+     ‚úì Python ofrece dos m√©todos:
+        ‚óã Con la operaci√≥n concatenate. 
+        ‚óã Con las operaciones vstack y hstack 
+               Array_1 = np.random.randint(10, size=5)
+               Array_2 = np.random.randint(10, size=5)
+               Arrays_concatenados = np.concatenate([Array_1, Array_2])
+                Ì±âÌ†Ω
+          Concatenaci√≥n
+         ‚úì El m√©todo vstack apila verticalmente:
+          Array_extra = np.array([[10],[20]])             Ì±âÌ†Ω
+          Array_extra
+          Array_apilados_v = np.vstack([Array_extra, Array_extra])                Ì±âÌ†Ω
+          Array_apilados_v
+           ‚úì El m√©todo hstack apila horizontalmente:
+                                                              Ì±âÌ†Ω
+          Array_apilados_h = np.hstack([Array_extra, Array_extra])                Ì±âÌ†Ω
+          Array_apilados_h
+       Splitting
+       Splitting
+         ‚úì Consiste en desarmar o partir los arreglos.
+         ‚úì Puede pensarse como la operaci√≥n inversa a la concatenaci√≥n
+        Arrays_concatenados      Ì±âÌ†Ω
+                                                                    Especificamos los puntos de corte 
+        Array_partido = np.split(Arrays_concatenados, [2])        con un arreglo. En este caso queremos 
+        Array_partido                                                un √∫nico corte entre el segundo y 
+                                                                              tercer elemento
+                               Ì±âÌ†Ω
+      Splitting
+       ‚úì Dos puntos de corte          Array_partido_2 = np.split(Arrays_concatenados, [2, 8])
+                                      Array_partido_2
+                                                               Ì±âÌ†Ω
+       ‚úì Podemos desarmar el arreglo y 
+                                      Ì±âÌ†Ω     Parte_1, Parte_2, Parte_3 = Array_partido_2
+          guardarlo en variables distintas
+            Parte_1                   Parte_2                  Parte_3
+        Splitting
+      ‚úì  hsplit realiza cortes verticales:
+         Ajedrez_partido_1 = np.hsplit(Ajedrez_64, [4])             Ì±âÌ†Ω
+         Ajedrez_partido_1
+      ‚úì vsplit realiza cortes horizontales:
+        Ajedrez_partido_2 = np.vsplit(Ajedrez_64, [4])              Ì±âÌ†Ω
+        Ajedrez_partido_2
+      Agregaciones
+           C√°lculos sobre Numpy 
+     Como futuros Data Scientists, cotidianamente nos encontraremos con la tarea de efectuar 
+                        arrays
+                    c√°lculos a partir de arrays  
+               Numpy est√° para darnos una mano en esto
+      Calculando el 
+      promedio
+      Una soluci√≥n tradicional al 
+      problema de calcular la media es        Array_aleatorio = np.random.randint(10, size=10)
+      la siguiente:                           print(Array_aleatorio)
+     Si bien esta resoluci√≥n es elegante      suma = 0
+     y cumple con su tarea, Numpy nos         for i in Array_aleatorio:
+     provee de opciones m√°s c√≥modas y 
+     eficientes Ì±âÌ†Ω                                suma += i
+                                              promedio = suma / np.size(Array_aleatorio)
+      Agregaciones
+          ‚úì Suma:                          Array_aleatorio.sum()
+                                           Array_aleatorio.mean()                 Estas funciones est√°n 
+          ‚úì Promedio:                                                             optimizadas para grandes 
+                                                                                  vol√∫menes de datos y 
+          ‚úì Valor m√°ximo:                  Array_aleatorio.max()                  adem√°s nos ahorran 
+                                                                                  mucho c√≥digo‚Ä¶ Ì∏âÌ†Ω
+          ‚úì Mediana:                       np.median(Array_aleatorio)
+          ‚úì Desv√≠o est√°ndar:               np.std(Array_aleatorio)
+          ‚úì Varianza:                      np.var(Array_aleatorio)
+  Operaciones 
+  aritm√©ticas 
+  Operaciones 
+  estad√≠sticas
+      Operaciones 
+      vectorizadas
+      Operaciones vectorizadas
+       ¬øPor qu√© son tan importantes?
+        ‚úì Incluso las operaciones m√°s             ‚úì Las operaciones 
+           sencillas pueden resultar muy              vectorizadas o funciones 
+           lentas si las llevamos a cabo              universales (ufuncs) nos 
+           elemento a elemento.                       permiten operar entre 
+        ‚úì Las computadoras son                        arreglos de la manera m√°s 
+           especialmente buenas para                  r√°pida posible.
+           realizar c√°lculos en paralelo Ì±âÌ†Ω 
+       Operemos arreglos, 
+       pero de manera 
+       Recordemos los arreglos de prueba:
+       eficiente 
+         Array_1   Ì±âÌ†Ω                                      Array_2   Ì±âÌ†Ω
+         ‚úì Sumas vectorizadas:
+                Array_1 + 5     Ì±âÌ†Ω
+                Array_1 + Array_2
+                                               Ì±âÌ†Ω
+                np.add(Array_1, Array_2)         ¬°Ambas formas son equivalentes!
+         Producto Vectorial
+          ‚úì El producto vectorial sobre 
+              arreglos unidimensionales se 
+              calcula sumando los resultados de 
+              multiplicar los elementos que                                                Ì±âÌ†Ω
+              tienen la misma posici√≥n.               np.matmul(Array_1, Array_2)
+          ‚úì En Numpy, la versi√≥n vectorizada 
+              se implementa en el m√©todo 
+              np.matmul
+                            1
+          Elecci√≥n de Datasets 
+                  potenciales
+      Deber√°s entregar el primer avance de tu proyecto final. Identificar√°s 3 datasets 
+      potenciales con las siguientes caracter√≠sticas: i) al menos 2000 filas, ii) al menos 
+       15 columnas. Posterior a esto crear√°s un notebook donde cargar√°s los datos 
+      utilizando la librer√≠a pandas y finalmente describir√°s las variables que sean m√°s 
+      interesantes teniendo en cuenta el contexto comercial y anal√≠tico del problema 
+                     que se quiera resolver.
+            DESAF√çO 
+            ENTREGABLE
+       Datasets con la librer√≠a 
+       Pandas
+       Consigna
+        ‚úì Identificar 3 datasets que cumplan con         ‚úì Cargar los archivos correspondientes 
+            las siguientes condiciones: a) al menos         por medio de la librer√≠a pandas
+            2000 filas y b) al menos 15 columnas.        ‚úì Describir las variables 
+            Pueden buscar en las siguientes                 potencialmente interesantes en cada 
+            fuentes: GitLab, Github, Kaggle, Google         archivo teniendo en cuenta el 
+            Dataset Search (Si desean trabajar con          contexto comercial y anal√≠tico 
+            un archivo propio se puede tambi√©n)             involucrado
+        ‚úì Algunas API recomendadas para                 Aspectos a incluir
+            obtener informaci√≥n:                          ‚úì El c√≥digo debe estar hecho 
+            Marvel,PokeApi,CovidTracking,Nomics              en un notebook y debe 
+            (Criptomonedas),Wheater API                      estar probado.
+            DESAF√çO 
+            ENTREGABLE
+       Datasets con la librer√≠a 
+       Pandas
+        Formato
+          ‚úì Entregar un archivo con                      Explicaci√≥n en video
+              formato .ipynb. Debe tener el               ‚úì ¬°Clickea aqu√≠!
+              nombre ‚ÄúDatasets+Apellido.ipynb‚Äù.
+        Sugerencias
+          ‚úì Preparar el c√≥digo y probar los 
+              resultados con distintas entradas
+        CLASE N¬∞5
+                                                            Indexaci√≥n: forma de extraer elementos de un 
+        Glosario                                            objeto en Python. Importante recordar que el 
+                                                            primer √≠ndice es el 0 de izquierda a derecha y de 
+                                                            derecha a izquierda es -1.
+                                                            Reshape: modificar la forma de un array 
+        Numpy: librer√≠a de Python que nos permite           siempre y cuando las dimensiones de entrada y 
+        trabajar con matrices y vectores de forma           salida sean compatibles
+        sencilla y potente
+                                                            Concatenaci√≥n: apilamiento de arrays siempre 
+        Array: estructura fundamental en Numpy que          y cuando las dimensiones sean compatibles
+        solo permite un tipo de dato haci√©ndolo eficiente 
+        para operaciones de alta complejidad, pueden        Splitting: desarmado de un array (operaci√≥n 
+        ser de 1D (vectores), 2D (matrices) o 3D            inversa de la concatenaci√≥n)
+        (tensores)                                          Agregaciones: todas aquellas funciones 
+        Atributos de arrays: son las propiedades de         preestablecidas que nos permiten calcular 
+        los arrays creados, podemos extraer propiedades     medidas de tendencia central (e.g media, 
+        como: dimensi√≥n (.ndim), forma (.shape),            mediana) o dispersi√≥n (e.g. varianza ,desviaci√≥n 
+        tama√±o (.size) entre otros                          est√°ndar) de manera eficiente
+      ¬øPreguntas?
+                   Resumen 
+               de la clase hoy
+              ‚úì Introducci√≥n a NumPy y ndarrays, acceso e 
+                indexado.
+              ‚úì Operaciones b√°sicas con ndarrays.
+              ‚úì Agregaciones
+              ‚úì Operaciones vectorizada
+        Muchas 
+        gracias.
+      Opina y valora 
+       esta clase

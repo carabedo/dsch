@@ -1,0 +1,638 @@
+              Clase 51. DATA SCIENCE
+       Despliegue de Modelos 
+                 MLOps
+      Temario
+                       50                      51                     52
+                   Modelos de            Despliegue de        Introducción a Deep 
+                   Ensamble y            Modelos MLOps              Learning
+                Boosting Models
+                                        ✓  Fundamentos de Cloud 
+                                           Computing            ✓ Introducción a Deep 
+                ✓ Métodos de ensamble   ✓  DevOps vs. DevSecOps    Learning 
+                                        ✓                       ✓ Perceptrón y perceptrón 
+                ✓ Metodologías de          Continuous Deployment
+                   ensamble             ✓                          multi-capa
+                                           Data team            ✓ CNN
+                                        ✓
+                                           MLOps                ✓ RNN
+    Objetivos de la clase
+                 Abordar los alcances del Cloud Computing
+                 Encontrar cuales son las principales ventajas 
+                 de la metodología DevOps y MLOps
+        MAPA DE CONCEPTOS
+                                               Cloud Computing
+                                                 DevOps
+                                                 DevSecOps
+             Despliegue de                      Continuous 
+            Modelos MLOps                       Deployment
+                                                Data Team
+                                                  MLOps
+            Repaso
+                     Les proponemos tomarse unos minutos 
+                     para realizar un repaso de los conceptos 
+                      aprendidos en Kahoot, ¿están listos?
+                          Profe, puedes compartir el 
+                           PIN o link de acceso al 
+                                juego
+   Fundamentos de Cloud 
+       Computing
+       Definición
+   Cloud Computing
+    La computación en la nube es la entrega 
+    de diferentes servicios a través de 
+    Internet. Estos recursos incluyen 
+    herramientas y aplicaciones como 
+    almacenamiento de datos, servidores, 
+    bases de datos, redes y software.
+    El almacenamiento cloud permite guardar 
+    datos en una base remota. Siempre que 
+    un dispositivo electrónico tenga acceso a 
+    la web
+   Origen
+    Cloud Computing apareció en 1996 en un 
+    documento interno de Compaq. El término 
+    "Cloud" se vinculó originalmente con Cloud 
+    Computing, que se generalizó en General 
+    Magic generado por Apple a principios de los 
+    1990. El concepto fue discutido inicialmente 
+    por J.C.R. Licklider, el primer director de la 
+    Oficina de Técnicas de Procesamiento de la 
+    Información en la división ARPA del Pentágono 
+    en la década de 1960
+    Características fundamentales
+     1. Cloud Computing es la entrega de diferentes 
+       servicios a través de la internet como 
+       almacenamiento, servidores, bases de datos, 
+       conexiones y software
+     2. El almacenamiento en nube permite guardar 
+       archivos en forma remota con concurrencia
+     3. Los servicios pueden ser tanto públicos o 
+       privados, los públicos se proporcionan por 
+       una tarifa, mientras que los privados se 
+       alojan en una red para clientes específicos.
+    Servicios ofrecidos 
+     Sin importar el tipo de servicio se tienen 
+     diferentes utilidades como:
+     1. Correo
+     2. Almacenamiento, backup y recuperación de 
+       datos
+     3. Creación y testeo de aplicaciones
+     4. Análisis de datos
+     5. Streaming de audio y video
+     6. Entrega de software bajo demanda
+     7. Seguridad de datos
+      Tipos de Cloud 
+       Computing
+   Software as a service (SaaS)
+    SaaS: implica la concesión de 
+    licencias de una aplicación de 
+    software a los clientes. Las licencias 
+    generalmente se proporcionan a 
+    través de un modelo de pago por 
+    uso o bajo demanda. Este tipo de 
+    sistema se puede encontrar en 
+    Microsoft Office 365
+   Infrastructure as a service (IaaS)
+    IaaS: implica un método para 
+    entregar servicios y almacenamiento a 
+    través de conectividad basada en IP 
+    como parte de un servicio bajo 
+    demanda. Los clientes pueden evitar 
+    la necesidad de comprar software o 
+    servidores. Los ejemplos más 
+    populares son incluyen IBM Cloud y 
+    Microsoft Azure
+   Platform as a service (PaaS)
+    PaaS: Se considera la más compleja de los 
+    tres tipos de Cloud Computing. Comparte 
+    algunas similitudes con SaaS, la principal 
+    diferencia es que en lugar de entregar 
+    software en línea, en realidad es una 
+    plataforma para crear software que se 
+    entrega a través de Internet. Este modelo 
+    incluye plataformas como 
+    Salesforce.com y Heroku
+    Resumen
+    En los cuadros de arriba se ilustran las diferentes utilidades que se pueden manejar 
+    de acuerdo a cada Tipo de Servicio en Cloud. Evidentemente el esquema On Premise 
+    (Sistema local) permite el control de muchas más funciones pero tiene costos 
+    asociados
+   Acuerdo de Nivel de Servicio
+   Un Service Level Agreement (SLA) 
+   es un contrato que  describe el nivel 
+   de servicio que un cliente espera de 
+   su  proveedor.
+   Los SLA, sirven para  establecer unos 
+   indicadores que se puedan medir, 
+   para  regular el servicio que un 
+   proveedor presta y así, asegurar  el 
+   cumplimiento de las expectativas de 
+   los clientes.
+   Principales proveedores Cloud
+   Son muchos los proveedores 
+   de servicios Cloud pero los 
+   más importantes hoy en día 
+   son:
+    1. Google Cloud Platform
+    2. Microsoft Azure
+    3. Amazon Web Services
+    4. Alibab Cloud
+       Ventajas y 
+      desventajas
+        Ventajas y desventajas
+                                 Ventajas                                        Desventajas
+               Uso de software desde cualquier dispositivo      La desventaja principal se asocia con la 
+               desde apps o navegadores                         seguridad y sistemas de encriptado
+               Conjunto de servicios ofrecidos (e.g email,      Los servidores cloud pueden fallar víctimas de 
+               almacenamiento, back up, manipulación)           desastres, bugs o problemas de energía
+               Reducción de costos de mantenimiento a           Sin conexión a internet no se puede trabajar 
+               infraestructuras In House
+               Tecnología de punta para realizar procesos de    Puede llegar a ser costosa por los esquemas 
+               manipulación de datos                            diferenciales de cobro
+               Buen servicio respecto a backups, logs y         En algunos casos la atención a requerimientos 
+               recuperación de datos                            del cliente puede tardar
+    Arquitectura Cliente 
+       Servidor
+   Arquitectura Cliente-Servidor
+    Es un modelo informático en el 
+    que el servidor aloja, entrega y 
+    administra la mayoría de los 
+    recursos y servicios que consume 
+    el cliente. Este tipo de 
+    arquitectura tiene una o más 
+    computadoras cliente conectadas 
+    a un servidor central a través de 
+    una red o conexión a Internet.
+   Arquitectura Cliente-Servidor
+    Puntos clave de la 
+    arquitectura:
+    • Cliente
+    • Servidor
+       Para pensar
+   Ahora bien, ¿Cuál de los proveedores de servicios 
+   Cloud consideran que es el mejor? ¿Han utilizado 
+   alguno de estos proveedores antes en la empresa 
+   donde trabajan?
+   Contesta en el chat de Zoom 
+       DevOps vs 
+       DevSecOps
+        DevOps
+      DevOps
+       La  palabra  DevOps  es  una  contracción  de 
+       “Desarrollo”       (Development)         y 
+       “Operaciones” (Operations).
+       DevOps es una nueva tendencia en la industria 
+       TI dirigida a mejorar la agilidad del servicio de 
+       entregas.  El  movimiento  hace  énfasis  en  la 
+       comunicación  transparente,  la  colaboración 
+       junto  con  la  integración  entre  el  software  de 
+       desarrolladores y las operaciones de TI.
+   DevOps
+    Existen  muchas  nociones  de  lo  que 
+    realmente  significa  DevOps  pero  podemos 
+    establecer que DevOps:
+     1. No es solamente automatización
+     2. No solo son servicios Cloud
+     3. No es una herramienta implementada
+     4. No  es  un  equipo  de  trabajo  nuevo 
+      separado de las demás áreas de IT
+   Propósitos DevOps
+    Colaboración  Procesos  Herramientas
+    El propósito de DevOps es iterar de manera más rápida y 
+    eficiente durante la fase de desarrollo y su objetivo 
+    principal es establecer procesos de negocios alineados en 
+    flujo de acuerdo al concepto de  “justo a tiempo” (JIT= 
+    Just in Time por sus siglas en inglés).
+      Beneficios de implementación 
+      DevOps
+       Algunos   de    los   beneficios  de    la 
+       implementación de la metodología DevOps 
+       son:
+        1. Mejora la comunicación
+        2. Proporciona   escalabilidad   en   los 
+           servicios
+        3. Reducción de costos
+        4. Seguimiento    continuado    de    las 
+           aplicaciones
+        5. Más   publicaciones   y   con   mayor 
+           frecuencia
+        6. Software de mejor calidad 
+   Métricas en DevOps
+    Algunos  de  las  métricas  para  seguimiento 
+    de la metodología DevOps son:
+     1. Tiempo y frecuencia de despliegue
+     2. Tiempo medio entre recuperación
+     3. Ratio de fallas de cambio
+     4. Service Level Agreement
+     5. Performance de aplicaciones
+     6. Tiempo medio entre recuperación
+   Las 3 P de DevOps
+    Devops  es  la  correlación  de  personas, 
+    procesos y productos (3P) para permitir la 
+    entrega  continua  de  valor  a  los  usuarios 
+    finales. los resultados están estrechamente 
+    relacionados  con  la  capacidad  de  que  se 
+    produzcan  lanzamientos  frecuentes  y,  al 
+    mismo  tiempo,  con  la  capacidad  de 
+    mantener el mismo nivel de calidad.
+    Fuente: DevSecOps
+   Personas
+    Sabemos que los equipos de trabajo 
+    están conformados por Personas.
+    Y por supuesto que no todos somos 
+    iguales: cada persona tiene emociones 
+    diferentes, pueden manejar mejor o 
+    peor manera dependiendo de las 
+    situaciones personales y laborales que 
+    atraviesen. 
+        Procesos
+          Existen  4  grandes  procesos,  en  alto  nivel, 
+          que  tenemos  que  tener  en  cuenta.  Estos 
+          procesos,  por  supuesto,  pueden  darse 
+          cíclicamente  y  no  necesariamente  en 
+          cascada:
+          •   Planificar:  Crear  un  backlog,  equipos 
+              interdisciplinarios, planificar testing, etc.
+          •   Desarrollar  +  Probar:  Avanzar  en  la 
+              construcción  por  ejemplo  del  software  y 
+              testearlo.
+         Procesos
+             •    Liberar: Lo que planifiqué y desarrollé + 
+                  probé, lo debo liberar a ambientes por 
+                  ejemplo de Desarrollo o Producción.
+             •    Monitorear + Aprender: Un punto clave 
+                  de entender, es que el trabajo no terminó 
+                  con la liberación. Recién comienza aquí el 
+                  aprendizaje basado en un monitoreo 
+                  proactivo para volver a arrancar esta 
+                  rueda: planificar, desarrollar + probar, y 
+                  liberar, para  monitorear y volver a 
+                  aprender.
+    Procesos
+    Ciclo de Deming: el ciclo de Deming 
+    también conocido como ciclo PDCA (del 
+    inglés Plan-Do-Check-Act),, es un método 
+    sistemático para la resolución de problemas 
+    con el fin de generar una mejora continua de 
+    la calidad, en cuatro pasos: Planear 
+    (Objetivos, Recursos, Comunicar), Hacer 
+    (Procesos, Actividades, Productos), Verificar 
+    (Medidas, Auditorías, Verificaciones) y 
+    Actuar (Analizar, Acciones correctivas) 
+    Productos
+     Aplicación de alguna herramienta de devops. Existen múltiples herramientas 
+     que podríamos mencionar, las más importantes son las siguientes:
+       DevSecOps
+      DevSecOps
+       DevSecOps         significa      desarrollo, 
+       seguridad  y  operaciones.  Se  trata  de 
+       un  enfoque  que  aborda  la  cultura,  la 
+       automatización       y   el    diseño     de 
+       plataformas,  e  integra  la  seguridad 
+       como una responsabilidad compartida 
+       durante todo el ciclo de vida de la TI.
+       Diferencias entre DevSecOps y 
+       DevOps
+        DevOps  no  solo  se  ocupa  de  los 
+        equipos de desarrollo y operaciones. 
+        Si   desea  aprovechar  al  máximo  la 
+        agilidad y la capacidad de respuesta de 
+        los  enfoques  de  DevOps,  la  seguridad 
+        de la TI también debe desempeñar un 
+        papel  integrado  en  el  ciclo  de  vida 
+        completo de sus aplicaciones.
+   Diferencias entre DevSecOps y 
+   DevOps
+   En el marco de trabajo en colaboración 
+   de DevOps, la seguridad es una 
+   responsabilidad compartida e 
+   integrada durante todo el proceso. 
+   Puesto que es un enfoque tan 
+   importante, se acuñó el término 
+   "DevSecOps" para enfatizar la 
+   necesidad de crear una base de 
+   seguridad en las iniciativas de DevOps.
+   Diferencias entre DevSecOps y 
+   DevOps
+   Este nuevo término “DevSecOps” 
+   implica pensar desde el principio en la 
+   seguridad de las aplicaciones y de la 
+   infraestructura. También implica 
+   automatizar algunas puertas de 
+   seguridad para impedir que se 
+   ralentice el flujo de trabajo de DevOps. 
+   A fin de cumplir con estos objetivos, es 
+   necesario seleccionar las 
+   herramientas adecuadas para 
+   integrar la seguridad de manera 
+   permanente
+   Roles en DevOps
+   Los roles fundamentales en 
+   DevOps son:
+    1. Arquitecto de datos en nube
+    2. Entusiasta de DevOps
+    3. Desarrollador de software
+    4. Especialista en seguridad
+    5. Ingeniero DevOps
+    6. Coordinador 
+    7. Encargado de control de 
+     calidad
+         Para pensar
+    ¿Se puede entender DevOps como una 
+    metodología que se desarrolla con el 
+    objetivo de incrementar la productividad 
+    y calidad de los productos que se crean?
+    Verdadero/Falso 
+    Contesta en el chat de Zoom 
+       HANDS ON LAB
+   Exploramos el  proceso para 
+   crear una cuenta en Google 
+   Cloud y posteriormente crear un 
+   proyecto nuevo paso a paso, 
+   podemos utilizar la siguiente 
+   guía
+   Cualquier inquietud pueden 
+   consultar a su tutor o profesor
+   10-15 min
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+                  ¡Lanzamos la
+                  Bolsa de 
+                  Empleos!
+                 Un espacio para seguir potenciando tu carrera y 
+                 que tengas más oportunidades de inserción 
+                 laboral.
+                 Podrás encontrar la Bolsa de Empleos en el menú 
+                 izquierdo de la plataforma.
+                 Te invitamos a conocerla y ¡postularte a tu futuro 
+                 trabajo!
+                   Conócela
+    Continuous 
+    Deployment
+       Definición
+   Continuous Deployment (CD)
+   La implementación continua es 
+   una estrategia para las versiones de 
+   software en la que cualquier 
+   compromiso de código que pase la 
+   fase de prueba automatizada se 
+   libera automáticamente en el 
+   entorno de producción, realizando 
+   cambios que son visibles para los 
+   usuarios del software.
+   Continuous Deployment (CD)
+   Sólo debe implementarse cuando los 
+   equipos de desarrollo y TI se 
+   adhieren rigurosamente a las 
+   prácticas de desarrollo para la 
+   producción y las pruebas 
+   exhaustivas, y cuando aplican un 
+   monitoreo sofisticado en tiempo real 
+   en la producción para descubrir 
+   cualquier problema con las nuevas 
+   versiones.
+   Continuous Deployment (CD)
+    Con la integración continua, los 
+    desarrolladores integran frecuentemente 
+    su código a la rama principal de un 
+    repositorio común
+    La idea aquí es reducir los costos de 
+    integración, haciendo que los 
+    desarrolladores realicen 
+    integraciones más rápidamente y 
+    con mayor frecuencia
+       Actividades 
+      relacionadas
+   Continuous Deployment
+    Dentro de este sistema de monitoreo se 
+    requiere el desarrollo de las siguientes 
+    actividades:
+    1. Despliegue en producción
+    2. Verificación de solución
+    3. Monitoreo de problemas
+    4. Respuesta y recuperación
+    A continuación explicaremos cada uno
+   Actividades Continuous Deployment
+    1) Despliegue en producción: se refiere a las prácticas necesarias para 
+    desplegar una solución en un ambiente productivo con prácticas como: 
+    Dark launches, Feature toggles, Automatización de despliegue, 
+    despliegue selectivo y automático, control de versiones
+   Actividades Continuous Deployment
+    2) Verificación de solución: se refiere a las prácticas necesarias para 
+    asegurarse que los cambios deseados estén implementados en producción 
+    antes de llegar al cliente final con prácticas como: Production testing, 
+    test de automatización, test de data management y tests de 
+    requerimientos no funcionales (NFRs)
+   Actividades Continuous Deployment
+    3) Monitoreo de problemas: se refiere a las prácticas necesarias para 
+    monitorear y reportar cualquier problema que surja en producción con 
+    prácticas como: Telemetría Full stack, despliegues visuales y 
+    monitoreo federal (visión holística de los problemas)
+   Actividades Continuous Deployment
+    4) Respuesta y recuperación: se refiere a las prácticas necesarias para 
+    responder rápidamente a problemas que ocurran en el despliegue con 
+    prácticas como: detección proactiva, colaboración cross-team, 
+    reproducciones de sesiones en usuarios, Rollbacks e 
+    Infraestructura inmutable 
+      DevOps y CD
+   DevOps y CD
+    CD implica actividades asociadas a 
+    operaciones importantes que se asocian 
+    frecuentemente con las operaciones en 
+    DevOps. Estas actividades se enfocan en 
+    desplegar soluciones en ambientes 
+    productivos, verificando su integridad 
+    funcional y asegurándose de que se puede 
+    monitorear efectivamente un producto 
+    luego de su lanzamiento 
+       Data Team
+                       Data Team
+       REEMPLAZAR      Es el grupo de cargos (roles) dentro de una 
+       POR IMAGEN      organización que se encargan de todo el proceso de 
+                       manipulación, estructuración y generación de insights 
+                       a partir de los datos disponibles. Está compuesto 
+                       usualmente de 3 roles importantes:
+                       ✔ Data Scientist
+                       ✔ Data Engineers
+                       ✔ Data Analysts
+       Data Scientist
+        Es capaz de tomar proyectos de Data Science desde el                 REEMPLAZAR 
+        inicio al fin. Pueden almacenar grandes cantidades de                 POR IMAGEN
+        información, crear modelos predictivos y presentar 
+        resultados. 
+        Skills: Matemáticas, Programación y Comunicación
+        Software comúnmente usado: SQL, Python, R
+                       Data Engineers
+                       Son personas versátiles capaces de usar la ciencia de 
+                       computación para procesar grandes cantidades de 
+                       datos. Se enfocan en procesos de codigo, limpieza de 
+                       datos e implementar solicitudes de los data Scientists
+                       Skills: Matemáticas, Programación y Big Data
+                       Software comúnmente usado: Hadoop, NoSQL, 
+                       Python
+   Funciones del Data Engineer
+    • Desarrollar, y construir las 
+      arquitecturas de datos.
+    • Alinear arquitectura con requisitos 
+      comerciales y del negocio.
+    • Identificar formas de mejorar la 
+      confiabilidad, eficiencia y calidad de 
+      los datos.
+   Funciones del Data Engineer
+    • Preparar datos para modelos 
+      predictivos y prescriptivos.
+    • Gestionar las actualizaciones de la 
+      infraestructura de datos.
+    • Garantizar la integridad de los 
+      procesos asociados a datos
+  Roadmap para ser Data Engineer
+       Data Analysts
+        Son personas que ayudan a otras personas dentro de la                REEMPLAZAR 
+        compañía a entender solicitudes específicas por medio                 POR IMAGEN
+        de gráficas y resúmenes numéricos.
+        Skills: Estadística, Comunicación y Entendimiento del 
+        negocio
+        Software comúnmente usado: Excel, Tableau, SQL
+        MLOps
+       Definición
+   MLOps
+    MLOps o ML Ops es un conjunto de 
+    prácticas que tiene como objetivo 
+    implementar y mantener modelos de 
+    aprendizaje automático en producción de 
+    manera confiable y eficiente. La 
+    palabra es un compuesto de 
+    "aprendizaje automático" y la 
+    práctica de desarrollo continuo de 
+    DevOps en el campo del software. 
+       Niveles de 
+     implementación
+   MLOps
+    Para poder implementar el proceso de 
+    MLOps se requieren realizar tres fases:
+    1. Diseño de aplicaciones basadas en 
+      ML  
+    2. Experimentación y Desarrollo de ML
+    3. Operaciones relacionadas con ML
+    A continuación explicaremos cada una 
+    de las fases
+   Fase 1: Diseño de aplicaciones basadas en 
+   ML
+     En esta etapa, identificamos a nuestro 
+     usuario potencial, diseñamos la 
+     solución de aprendizaje automático para 
+     resolver su problema y evaluamos el 
+     desarrollo posterior del proyecto. 
+     Principalmente, actuaríamos dentro de 
+     dos categorías de problemas: aumentar 
+     la productividad del usuario o 
+     aumentar la interactividad de nuestra 
+     aplicación.
+    Fase 2: Experimentación y desarrollo de 
+    ML
+     Se verifica la aplicabilidad de ML para 
+     nuestro problema usando pruebas de 
+     conceptos. Ejecutamos iterativamente 
+     diferentes pasos, como identificar o pulir 
+     el algoritmo ML adecuado para nuestro 
+     problema, ingeniería de datos e 
+     ingeniería de modelos. El objetivo 
+     principal en esta fase es entregar un 
+     modelo ML de calidad estable que 
+     ejecutaremos en producción.
+   Fase 3: Operaciones relacionadas con ML 
+     El objetivo de esta fase es lograr 
+     entregar un modelo ML desarrollado 
+     previamente en producción mediante el 
+     uso de prácticas DevOps establecidas 
+     previamente, como pruebas, control de 
+     versiones, entrega continua y monitoreo. 
+     Todo esto con el fin de que se pueden 
+     dar cumplimiento a los requerimientos 
+     del cliente
+      ¿Qué tener en 
+     cuenta para usar 
+        MLOps?
+   ¿Qué tener en cuenta para usar MLOps?
+        • Calidad de los datos: Tener en cuenta de dónde vienen, 
+          calidad, si son fiables, etc.
+        • Degradación de los modelos: Al cabo del tiempo van 
+          perdiendo calidad.
+        • Localidad:  En  el  momento  de  la  preparación  se  están 
+          entrenando  los  modelos  con  unos  datos  específicos 
+          basados en una geografía.
+     ¿Cómo es el proceso de MLOps?
+              1. Diseño:  Ajuste  de  requerimientos,  establecer  las 
+                necesidades  que  tienen  los  usuarios  y  qué  queremos 
+                cubrir, exploración de los datos, experimentación.
+              2. Desarrollo  del  modelo:  Desarrollo  de  un  modelo 
+                funcional capacitado para pasar a producción.
+              3. Operaciones:    Despliegue,   automatización    de 
+                entrenamientos, extracción de datos, etc.
+    Principios de MLOps
+     Principios de MLOps
+      • Automatización:  ML  pipeline  y 
+         CI/CD pipeline.
+      • Versionado: Basado     en    tres 
+         pilares, datos, modelo y código.
+      • Testing: Base  sobre  la  que  va  a 
+         funcionar todo el sistema.
+      Principios de MLOps
+       • Monitorización: De  los  principales 
+         indicares  de  performance  de  mi 
+         modelo de manera constante.
+       • Reproductividad: De la ingeniería 
+         de          características,         del 
+         entrenamiento  del  modelo  y  del 
+         despliegue del modelo. 
+       • Herramientas: Principalmente 
+         servicios Cloud.
+        Revisión de pares
+    En esta oportunidad haremos una revisión de pares para 
+             los proyectos finales
+             Duración: 15-20 mins
+      ACTIVIDAD EN CLASE
+   Revisión de pares
+   Nos reuniremos en el break out rooms con 
+   cada tutor y realizaremos lo siguiente:
+    1. Cada uno presentará su proyecto (~2-3 
+      min) con el fin de recibir feedback
+    2. Los demás estudiantes y el tutor podrán 
+      dar sugerencias para mejorar los 
+      proyectos
+    3. Cualquier consulta puede ser resuelta 
+      con el fin de mejorar la calidad de los 
+      proyectos 
+      ¿Preguntas?
+       CLASE N°51
+       Glosario
+       Cloud Computing: La computación en la           Continuous Deplyment: es una 
+       nube es la entrega de diferentes servicios      estrategia para las versiones de software 
+       a través de Internet.                           en la que cualquier compromiso de código 
+                                                       que pase la fase de prueba automatizada 
+                                                       se libera automáticamente en el entorno de 
+       DevOps: DevOps es una nueva tendencia           producción, realizando cambios que son 
+       en la industria TI dirigida a mejorar la        visibles para los usuarios del software.
+       agilidad del servicio de entregas. 
+                                                       MLOps: es un conjunto de prácticas que 
+                                                       tiene como objetivo implementar y 
+       DevSecOps:         significa     desarrollo,    mantener modelos de aprendizaje 
+       seguridad  y  operaciones.  Se  trata  de  un   automático en producción de manera 
+                                                       confiable y eficiente
+       enfoque  que  aborda  la  cultura,  la 
+       automatización y el diseño de plataformas 
+       integrando la seguridad
+      Opina y valora 
+       esta clase
+                   Resumen 
+               de la clase hoy
+              ✓ Arquitectura Cliente-Servidor
+              ✓ Riesgos del Cloud Computing
+              ✓ DevOps vs DevSecOps
+              ✓ Continuous Deployment 
+              ✓ Data Team 
+              ✓ MLOps
+        Muchas 
+        gracias.

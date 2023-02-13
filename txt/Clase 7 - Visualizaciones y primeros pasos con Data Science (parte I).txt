@@ -1,0 +1,573 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 07.  DATA SCIENCE
+          Visualizaciones y 
+        primeros pasos con 
+       Data Science (parte I)
+       Temario
+                    06                            07                            08
+            Introducción a la            Visualizaciones y            Visualizaciones y 
+            manipulación de               primeros pasos               primeros pasos 
+           datos con Pandas                    con DS I                    con DS II
+                (parte II)
+            ✓ Fuentes de datos             ✓Matplotlib                 ✓ Seaborn
+            ✓ Series y data frame                                      ✓ Tipos de gráficos
+                                           ✓Tipos de gráficos
+            ✓ Selección de datos                                       ✓ Subplot y Facetgrip
+                                           ✓Customizaciones            ✓ Customizaciones sobre 
+            ✓ Operaciones                    sobre gráficos
+                                                                        gráficos
+            ✓ Agregaciones                                             ✓ Nutshell
+            ✓ Strings                                                  ✓ Scikit - Learn
+    Objetivos de la clase
+                 Conocer las librerías más utilizadas para 
+                 visualización Python
+                 Aprender a graficar datos en Python
+                 Entender el uso básico de las librerías más 
+                 utilizadas: Matplotlib y Seaborn
+        MAPA DE CONCEPTOS
+                                                    Gráfico de líneas
+                              Interfaces            Gráfico de puntos
+      Introducción a        Gráficos comunes        Gráfico de barras
+       Matplotlib
+                              Subgráficos            Histogramas
+                                                      Boxxplot
+       Matplotlib:
+    Comandos básicos
+       ¿Por qué Matplotlib?
+        ✓ Es una biblioteca multiplataforma           ✓ Proporciona una API orientada a 
+            para hacer gráficos 2D a partir de           objetos que ayuda a incrustar 
+            datos en matrices.                           gráficos en aplicaciones que utilizan 
+        ✓ Está escrito en Python y hace uso              kits de herramientas de la GUI de 
+            de NumPy.                                    Python como PyQt, 
+                                                         WxPythonotTkinter
+                                                      ✓ Matplotlib fue escrito originalmente 
+                                                         por John D. Hunter en 2003.
+    ¿Por qué Matplotlib?
+     ✓ Es la librería de visualización más 
+       utilizada en el entorno de Python.
+     ✓ Es sencilla y fácil de usar.
+     ✓ Permite un alto nivel de 
+       personalización de los gráficos.
+     ✓ Es open source.
+     ✓ Es la base sobre la que se 
+       construyen otras librerías como 
+       Seaborn.
+    Interfaces Matplotlib
+       Interfaces
+       Las interfaces en Matplotlib definen la            ✓ Interfaz orientada a estados: 
+       forma en la que interactuamos con el                   orientada a usuarios de MATLAB 
+       gráfico. Además, proveen compatibilidad                para mantener compatibilidad.
+       con el lenguaje que inspiró la librería:           ✓ Interfaz orientada a objetos: 
+       MATLAB. Existen dos interfaces                         Permite mayor grado de control 
+       disponibles:                                           sobre los gráficos porque los 
+                                                              tratamos como objetos. Más 
+                                                              Pythonista, y la más utilizada.
+    Interfaz orientada a 
+    objetos
+      ✓ Nos permite reutilizar objetos.
+      ✓ Es mejor en momentos en los que es 
+        necesario dibujar varios gráficos al 
+        tiempo.
+      ✓ La idea detrás de esta interfaz es 
+        crear objetos tipo figura (darles un 
+        nombre) para ser usados después.
+      ✓ El usuario crea explícitamente la 
+        figura y realiza un seguimiento de 
+        la figura y los objetos de los ejes.
+    Interfaz orientada a 
+    estados
+      ✓ La interfaz pyplot es una interfaz 
+       basada en estados.
+      ✓ La principal cualidad de la interfaz 
+       basada en estados es que nos 
+       permite agregar elementos y o 
+       modificar el gráfico, siempre que lo 
+       necesitemos.
+      ✓ La interfaz de Pyplot comparte 
+       muchas similitudes en sintaxis y 
+       metodología con MATLAB.
+    Setup para la clase
+    Antes que nada,               import matplotlib as mpl
+    importemos las librerías      import matplotlib.pyplot as plt
+                                  import seaborn as sns
+    que usaremos en la clase.     import pandas as pd
+    Los estilos por defecto de 
+    Matplotlib no son muy 
+    estéticos, podemos            mpl.style.use('bmh')
+    cambiarlos fácilmente.
+     Tipos de estilos
+     Primeros pasos
+       Primeros pasos
+        ✓ Grafiquemos una línea que una los puntos con 
+            coordenadas (x,y) = (1, 2) y (x,y) = (3, 4).  Necesitamos:
+        1. Un arreglo con las dos coordenadas del eje x = [1, 3]
+        2. Un arreglo con las dos coordenadas del eje y =  [2, 4]
+          Interfaz orientada a objetos                          Interfaz orientada a 
+          estados
+          fig, ax = plt.subplots()                  plt.plot([1, 3], [2, 4])
+          ax.plot([1, 3], [2, 4])
+      Primeros pasos
+        ✓ Ambas formas retornan el mismo resultado.                   REEMPLAZAR 
+        ✓ La interfaz orientada a estados parece más                   POR IMAGEN
+           simple, pero al hacer gráficos más complejos 
+           y profesionales es más difícil de 
+           implementar.
+      Para evitar confusión, usaremos y recomendamos 
+      la interfaz orientada a objetos.
+     Comandos básicos
+                         Contextualizar los 
+                                       gráficos
+                                     Etiquetar los ejes        ax.set_xlabel y  
+                                                               ax.set_ylabel
+           Cuando generemos 
+           visualizaciones, una      Añadir un título          ax.set_title
+           buena práctica es                            REEMPLAZAR 
+                                                         POR IMAGEN
+           procurar siempre          Añadir una leyenda        ax.legend
+           incluir información 
+           acerca de lo que se       Definir límites           ax.set_xlim y ax.set_ylim
+           muestra.
+                                     Líneas ‘h’ o ‘v’          ax.axhline y ax.axvline
+        Ejemplo
+        ✓ Importemos el Data Frame de precipitaciones de la clase pasada. 
+          Los datos están disponibles en este enlace.
+       df_lluvias = pd.read_csv('<ruta>/pune_1965_to_2002.csv')
+       df_lluvias.head()
+        ✓ Por conveniencia, ponemos a Year como índice del Data Frame y lo 
+          eliminamos de las columnas
+       df_lluvias.index = df_lluvias['Year']
+       df_lluvias = df_lluvias.drop('Year', axis='columns')
+      Tras el cambio de índice, los datos quedan de la siguiente 
+                  manera:
+          Grafiquemos las precipitaciones acumuladas para los distintos años:
+           ✓ Para el eje x, seleccionamos los años
+           x = df_lluvias.index
+           ✓ Para el eje y, acumulamos las precipitaciones por año
+           y = df_lluvias.sum(axis='columns')
+           y
+           ✓ Definimos los objetos fig y ax, los cuales contendrán la figura:
+             fig, ax = plt.subplots(figsize=(12, 4))
+             ax.plot(x, y, label='Precipitaciones acumuladas')
+           ✓ Etiquetamos los ejes, añadimos un título e insertamos la leyenda:
+             ax.set_xlabel('Año')  
+             ax.set_ylabel('Precipitación acumulada (mm.)')
+             ax.set_title('Precipitaciones acumuladas según el año')
+             ax.legend() 
+           El resultado…
+    Algunas observaciones
+     ✓ El método ax.plot recibe el parámetro figsize, que define 
+       el tamaño del gráfico. Para una figura rectangular de 12x4
+      fig, ax = plt.subplots(figsize=(12, 4))
+     ✓ El método ax.legend inserta la leyenda en alguna esquina 
+       que no tape el gráfico. Esto se puede modificar con el 
+       parámetro loc.
+      fig, ax = plt.subplots(figsize=(12, 4))
+    Forzará a que la leyenda aparezca en la esquina superior 
+    derecha.
+   CoderTip
+   Si no recordamos que parámetros acepta un método o 
+   función, podemos escribir el nombre del método 
+   seguido de un "?". Esto abre la documentación 
+   directamente en el entorno de Jupyter.
+   Por ejemplo, ax.legend?
+   muestra información relacionada al método legend
+    Algunas observaciones
+     ✓ Si se observa la serie de tiempo anterior, pueden notarse 
+       los bordes vacíos en los laterales. Pueden recortarse con  
+       ax.set_xlim
+      ax.set_xlim(df_lluvias.index[0], df_lluvias.index[-1])
+    Exportando los gráficos
+     ✓ Matplotlib permite guardar las visualizaciones en la 
+       computadora.
+     ✓ Algunos de los formatos soportados son jpeg, jpg, png, 
+       pdf y svg
+     ✓ El gráfico se guardará en la ruta actual, pero igualmente 
+       puede especificar cualquier otra ruta.
+       fig.savefig("precipitaciones_año.pdf")
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+       Para pensar
+   ¿Qué tipos de gráficos descriptivos usarían para 
+   la presentación de información?
+   Utilizaremos en notebook Clase_07.ipynb (Ejemplo 
+   1) para entender el funcionamiento básico de 
+   Matplotlib  
+   Contesta en el chat de Zoom 
+       Tipos de
+       gráficos
+     Gráfico de líneas
+      Gráficos de 
+      líneas
+        ✓ Son adecuados para visualizar datos con                       REEMPLAZAR 
+           secuencialidad temporal, como las series de                   POR IMAGEN
+           tiempo.
+        ✓ Se grafican con el método  ax.plot(x, y)
+        ✓ En caso de no especificarse x, matplotlib toma 
+           como coordenadas en x al arreglo de números 
+           enteros [0, 1, 2, …, n]
+       Gráficos de 
+       líneas
+        ✓ Tipo de gráfico que muestra información 
+            como una serie de puntos de datos                             REEMPLAZAR 
+            conectados por segmentos de línea recta.                      POR IMAGEN
+        ✓ Se utilizan generalmente para visualizar el 
+            movimiento direccional de uno o más datos a 
+            lo largo del tiempo. 
+        ✓ En este caso, el eje X (fecha) eje y contiene 
+            la cantidad medida (precio de las acciones, el 
+            clima, las ventas mensuales, etc). Es ideal 
+            para visualizar series de tiempo.
+    Ejemplo
+    fig, ax = plt.subplots()
+    ax.plot([0, 1, 2, 3, 4, 5, 6], [1, 5, 2, 4, 8, 9, 2])
+    equivale a…
+    fig, ax = plt.subplots()
+    ax.plot([1, 5, 2, 4, 8, 9, 2])
+     Gráfico de puntos
+       Gráficos de 
+       puntos
+         ✓ Se utiliza para visualizar la relación entre las                      REEMPLAZAR 
+             dos variables.                                                       POR IMAGEN
+         ✓ Si el valor a lo largo del eje Y parece 
+             aumentar a medida que aumenta (o 
+             disminuye) el eje X, podría indicar una 
+             relación lineal positiva (o negativa).
+         ✓ Si los puntos se distribuyen al azar sin un 
+             patrón obvio, (posiblemente falta de relación 
+             de dependencia).
+    Gráficos de puntos
+     ✓ Útiles cuando se tienen una gran cantidad de 
+       datos numéricos emparejados
+     ✓ Permiten visualizar la relación entre las variables 
+       por medio de la nube de puntos
+       ✓ Nube de puntos “alineada” = relación 
+         fuerte
+       ✓ Nube de puntos “dispersa” = relación débil 
+         o nula
+     ✓ Se grafican con ax.scatter
+                                                    Ejemplo
+                   Consideremos las mediciones del peso y altura de 50 alumnos.
+                   pesos = [42.8, 43.3, 42. , 44. , 44.1, 43.5, 48.1, 48.9, 47.7,46.9,50.4,
+                          52.7, 51.8, 54.5, 54.2, 56.9, 55.4, 55.5, 57.1, 58.3, 63.7, 58.8,
+                          64.6, 60.2, 64. , 63.8, 61.4, 66.3, 64.7, 63.9, 69.3, 67.9, 65.2,
+                          70.8, 70.5, 69.3, 75.3, 75.5, 78.2, 78. , 73.2, 78. , 80.1, 78.2,
+                          76. , 81.5, 79.4, 81.8, 81.8, 84.1]               REEMPLAZAR 
+                                                                             POR IMAGEN
+                   alturas = [149. , 149. , 149.9, 156.8, 150.6, 155.4, 151. , 162. , 165.,
+                          157.8, 164.4, 160.1, 160.8, 163.8, 175.2, 162. , 159.5, 159.2,
+                          169.8, 166.7, 179.4, 180.6, 163.3, 178.8, 176.3, 184.8, 181. ,
+                          170.5, 184.1, 187.1, 187.1, 177.7, 184.5, 190.3, 196. , 192.1,
+                          200.4, 201.8, 187.5, 202.1, 200.3, 208.8, 204.6, 193.5, 200.9,
+                          196.8, 213.1, 204.8, 215.5, 210.2] 
+                      Ejemplo
+        Como era de esperar, se observa una fuerte relación positiva entre 
+        el peso y la altura
+                               REEMPLAZAR 
+                               POR IMAGEN
+    Algunas observaciones
+     ✓ Para poder visualizar la relación, los valores de los arreglos 
+       que se emparejan deben guardar correspondencia 
+       entre sí. El peso de la primera persona debe estar junto 
+       con la altura de la misma persona.
+     ✓ El parámetro alpha permite cambiar la transparencia de los 
+       puntos. Muy útil cuando graficamos muchos puntos.
+     1. alpha = 1                   puntos sólidos
+     2. alpha = 0.01             puntos casi transparentes
+    Probemos el Data Frame de 
+    precipitaciones
+     ✓ ¿Guardarán algún tipo de relación las precipitaciones de 
+       Agosto respecto de las de septiembre? ������
+     fig, ax = plt.subplots()  
+     mapeo_colores = ax.scatter(df_lluvias['Aug'], df_lluvias['Sep'], c=df_lluvias.index)
+     fig.colorbar(mapeo_colores)
+     ax.set_title('Precipitaciones Agosto-Septiembre')
+     ax.set_xlabel('Precipitaciones en Agosto (mm.)')
+     ax.set_ylabel('Precipitaciones en Septiembre (mm.)')
+    Probemos el 
+    Data Frame de 
+    precipitaciones                    REEMPLAZAR 
+                                        POR IMAGEN
+    La relación en este caso es débil
+     ✓ Es posible asignar un rango de colores a los 
+      puntos con el parámetro c y fig.colorbar
+     ✓ También se puede asignar un rango de 
+    tamaño con el parámetro s
+     Gráfico de barras
+      Gráficos de 
+      barras
+        ✓ Un diagrama de barras muestra datos                       REEMPLAZAR 
+           categóricos como barras rectangulares                     POR IMAGEN
+           con alturas proporcionales al valor que 
+           representan. 
+        ✓ Una variable categórica no es más que 
+           una agrupación de datos en diferentes 
+           grupos lógicos, por ejemplo, datos sobre la 
+           altura de las personas que se agrupan 
+           como "Alto", "Medio", "Bajo", etc.
+    Gráficos de barras
+     ✓ Permiten comparar y poner en perspectiva los valores de 
+       distintas variables categóricas. Por ejemplo, las 
+       precipitaciones según el mes del año. 
+     ✓ Para el ejemplo, acumulemos las precipitaciones para los 
+       distintos meses a lo largo de los años.
+        precipitaciones_acumuladas = df_lluvias.sum()
+        precipitaciones_acumuladas
+    Ejemplo
+     fig, ax = plt.subplots(figsize=(8,4))
+     precipitaciones_acumuladas = df_lluvias.sum()
+     ax.bar(df_lluvias.columns, precipitaciones_acumuladas)
+     ax.set_title('Precipitaciones acumuladas desde 1965 a 2002, según el mes')
+     ax.set_ylabel('Precipitación total (mm.)')
+     ax.set_xlabel('Mes')
+   CoderTip
+   El eje x representa categorías. La altura de cada barra 
+   en el eje y representa la cantidad de elementos para 
+   la categoría correspondiente.
+   Se grafican con ax.bar,que recibe como 
+   parámetros:
+   ✓ Las etiquetas para el eje x
+   ✓ La altura (frecuencia) de la barra para cada 
+     etiqueta
+       Histograma
+       Histograma
+        ✓ Un histograma es una gráfica de la 
+            distribución de frecuencia de una 
+            matriz numérica dividiéndola en                                REEMPLAZAR 
+            pequeños contenedores de igual tamaño                           POR IMAGEN
+            (bins).
+        ✓ Los bins usualmente se calculan por 
+            medio de la fórmula de sturges:
+    Histograma
+     ✓ La altura de cada barra representa la proporción o 
+       cantidad de los distintos valores de una variable 
+       numérica.
+     ✓ Requiere clasificar a los datos en intervalos de clase.
+     ✓ Permiten comparar la frecuencia relativa o absoluta de 
+       cada intervalo.
+     ✓ Se construyen con ax.hist, que recibe como parámetro:
+       ✓ El arreglo de valores. 
+       ✓ bins, que representa la cantidad de intervalos a 
+         construir.
+    Ejemplo
+    Aplanemos los valores del Data Frame con el método flatten
+      df_lluvias.values.flatten()
+    fig, ax = plt.subplots(figsize=(8, 4))
+    ax.hist(df_lluvias.values.flatten(), bins=10)
+    ax.set_title('Histograma de precipitaciones')
+    ax.set_xlabel('Intervalos de precipitaciones (mm.)')
+    ax.set_ylabel('Frecuencia absoluta')
+    Algunas observaciones
+     ✓ La forma del histograma depende del número de intervalos 
+       de clase que pasemos al parámetro bins.
+     ✓ En el ejemplo se representó la frecuencia absoluta de los 
+       intervalos.
+     ✓ También se puede representar la frecuencia relativa de 
+       cada intervalo o el porcentaje respecto del total.
+        Boxplot
+       Boxplot
+         ✓ El diagrama de caja es un método para 
+            mostrar gráficamente la distribución de 
+            una variable numérica a través de los                            REEMPLAZAR 
+            cuartiles.                                                       POR IMAGEN
+         ✓ Permite identificar la presencia de 
+            atípicos y outliers
+         ✓ También permite comparar la distribución 
+            de una variable númerica entre 
+            categorías
+    Ejemplo
+     ✓ Creemos un boxplot de precipitaciones mensuales
+    fig, ax = plt.subplots(figsize=(8, 4))
+    ax.boxplot(df_lluvias.T)
+    ax.set_title('Boxplot de precipitaciones')
+    ax.set_xlabel('Meses')
+    ax.set_ylabel('Precipitacione (mm)')
+        Piechart
+       Piechart
+        ✓ Un Piechart solo puede mostrar una 
+            serie de datos. 
+        ✓ Los gráficos circulares muestran el                              REEMPLAZAR 
+            tamaño de los elementos denominados                             POR IMAGEN
+            cuñas (wedges) en una serie de datos, 
+            proporcional a la suma de los elementos.
+        ✓  Los puntos de datos en un gráfico 
+            circular se muestran como un porcentaje 
+            del pastel completo.
+    Ejemplo
+     ✓ Creemos un piechart de precipitaciones mensuales
+      cars = ['AUDI', 'BMW', 'FORD',
+             'TESLA', 'JAGUAR', 'MERCEDES']
+      data = [23, 17, 35, 29, 12, 41]
+      fig,ax = plt.subplots(figsize =(10, 7))
+      ax.pie(data, labels = cars)
+     Enriqueciendo las 
+      visualizaciones
+    Múltiples elementos
+     ✓ En ocasiones necesitamos resaltar ciertas características 
+       de los datos. 
+     ✓ Por ejemplo, ¿Qué pasa si quisiéramos resaltar el punto 
+       máximo en una serie de tiempo?
+     ✓ ¿Podemos cargar al objeto ax con múltiples elementos 
+       para que los muestre todos juntos?
+      Ejemplo en vivo
+   Utilizaremos en notebook Clase_07.ipynb 
+   (Ejemplo 2) con base en el archivo 
+   pune_1965_to_2002.csv  de precipitaciones 
+   que hemos usado antes, para comprender 
+   el proceso de enriquecimiento de 
+   visualizaciones con Matplotlib.
+        ✓ Primero, comparemos las precipitaciones de Enero y Febrero en el 
+          mismo objeto ax
+      fig, ax = plt.subplots(figsize=(12, 3))  
+      ax.plot(df_lluvias.index, df_lluvias['Jan'], label='Precipitaciones de enero')
+      ax.plot(df_lluvias.index, df_lluvias['Feb'], label='Precipitaciones de febrero', color='C1')
+        ✓ Luego, Con una agregación, calculamos el máximo de cada uno
+      maximo_enero = df_lluvias['Jan'].max()
+      maximo_febrero =  df_lluvias['Feb'].max()
+        ✓ El método axhline permite graficar líneas horizontales. Usemos 
+          esto para resaltar los máximos de cada serie de tiempo
+        ax.axhline(maximo_enero, color='red', linestyle='--', alpha=0.5,    linewidth=3, 
+        label='Máxima de enero')
+        ax.axhline(maximo_febrero, color='red', linestyle=':', alpha=0.5, linewidth=3, 
+        label='Máxima de febrero')
+        ✓ También se puede graficar líneas verticales con el método 
+          axvline ������
+        ✓ Por último, las etiquetas
+        ax.set_xlabel('Año')  
+        ax.set_ylabel('Precipitación (mm.)') 
+        ax.set_title('Precipitaciones de enero y febrero') 
+        ax.set_xlim(df_lluvias.index[0], df_lluvias.index[-1])
+        ax.legend() 
+  A tener en cuenta
+  Incluir muchos elementos puede 
+  entorpecer la lectura y comprensión 
+  de la figura. Procure no sobrecargarla.
+     Customizaciones 
+        sobre
+       gráficos
+     Personalizando 
+       Matplotlib
+    Personalizando Matplotlib
+     ✓ Matplotlib permite modificar cada aspecto de sus gráficos 
+       por medio de parámetros.
+     ✓ Al importar la librería, Matplotlib establece establece sus 
+       parámetros por defecto.
+     ✓ Los parámetros se guardan en una estructura de datos de 
+       tipo dict. Se puede obtener una lista de los parámetros 
+       consultando sus claves.
+        mpl.rcParams.keys()
+                      Algunos parámetros 
+                                      comunes
+                  Parámetro               Descripción             Valor por defecto
+            axes.grid                 Mostrar grilla           True
+            axes.titleweight          Grosor tipografía        "normal"
+                                      título
+            axes.titlelocation        Posición del título      "center"
+            axes.grid.axis            Ejes de la grilla        "both"
+            axes.labelcolor           Color de etiquetas       "black"
+            axes.labelsize            Tamaño de fuente de      "large"
+                                      las etiquetas
+                      Algunos parámetros 
+                                     comunes
+                  Parámetro               Descripción            Valor por defecto
+           axes.labelweight          Grosor de fuente de      "normal"
+                                     las etiquetas
+           grid.alpha                Transparencia de grilla  1.0
+           grid.color                Color de la grilla       "#b2b2b2"
+           grid.linestyle            Estilo de grilla         "--"
+           grid.linewidth            Grosor de la grilla      0.5
+           legend.fontsize           Tamaño de fuente de la  "medium"
+                                     leyenda
+    Ejemplo
+         mpl.rcParams['axes.titleweight'] = 'bold' 
+         mpl.rcParams['axes.titlelocation'] = 'left' 
+         mpl.rcParams['axes.titlecolor'] = 'firebrick' 
+         mpl.rcParams['axes.labelcolor'] = 'blue' 
+         mpl.rcParams['axes.labelsize'] = '10' 
+         mpl.rcParams['axes.labelweight'] = 'light' 
+         mpl.rcParams['axes.linewidth'] = '1' 
+         mpl.rcParams['grid.color'] = 'black' 
+         mpl.rcParams['grid.linestyle'] = '-.' 
+         mpl.rcParams['grid.linewidth'] = '2' 
+    Ejemplo
+         fig, ax = plt.subplots(figsize=(7, 4))  
+         ax.scatter(df_lluvias['Aug'], df_lluvias['Sep'], c=df_lluvias.index)
+         ax.set_title('(Título rojo en negrita)')
+         ax.set_xlabel('(Etiqueta eje horiz.)')
+         ax.set_ylabel('(Etiqueta eje vert.)')
+  A tener en cuenta
+  Matplotlib no es la única librería que 
+  nos permite generar visualizaciones 
+  en Python. Tenemos otras librerías para 
+  generar gráficos estáticos (e.g Seaborn) o 
+  dinámicos (Bokeh, Plotly, entre otras)
+    La librería Seaborn
+    Seaborn
+    Extendiendo las capacidades de Matplotlib
+     ✓ Funciona por encima de matplotlib. 
+     ✓ Se integra muy bien con las estructuras de datos de 
+       Pandas.
+     ✓ Provee métodos que facilitan la generación de gráficos 
+       para la comparación de variables categóricas.
+     ✓ Provee sus propios estilos y colores (muy estéticos, por 
+       cierto ������).
+    Cuestiones a considerar
+     ✓ Seaborn tiene una sintaxis diferente a matplotlib, 
+       por lo que sólo lo aprovecharemos por su punto fuerte: 
+       las visualizaciones de variables categóricas.
+     ✓ Como Seaborn se construye sobre matplotlib, puede 
+       actualizar los parámetros de matplotlib con los estilos 
+       de Seaborn y seguir graficando normalmente.
+        sns.set()
+      Hands on lab
+   Creación de gráficos con Matplotlib
+   ¿De qué manera?
+   El profesor demostrará cómo hacerlo y tú lo puedes 
+   ir replicando en tu computadora. Si surgen dudas las 
+   puedes compartir para resolverlas en conjunto de la 
+   mano de los tutores.
+   Tiempo estimado: 25 - 30 minutos
+        HANDS ON LAB
+    Creación de gráficos con 
+    Matplotlib
+     1. Escoger un dataset de los elegidos para la Clase 5
+     2. Cargar el archivo usando la función pd.read_csv() o pd.read_excel()
+     3. Elegir dos gráficos apropiados para el análisis (lineplot, scatterplot, barras, 
+        histograma, boxplot)
+     4. Realizar  los  gráficos  seleccionados  utilizando  la  interfaz  orientada  a 
+        objetos y a estados.
+                     Trabajaremos individualmente. 
+                    Tiempo estimado: 15 minutos.
+       CLASE N°7
+       Glosario
+         Matplotlib: librería multiplataforma de          Gráfico de barras: ideal para representar 
+         Python que permite generar gráficos              frecuencias absolutas o relativas de datos 
+         interactuando con otras librerías como           categóricos 
+         Pandas y Numpy. Bastante sencilla, de            Histograma: ideal para representar 
+         licencia libre y con calidad relativamente 
+         alta.                                            distribución de variables numéricas 
+         Interfaces de Matplotlib: definen la             continuas (sesgo, asimetría, curtosis)
+         forma en cómo interactuamos con los              Boxplot: ideal para mostrar distribución de 
+         paneles gráficos. Existen dos tipos              variables numéricas, comparar 
+         orientado a estados y orientado a objetos        comportamientos entre categorías e 
+         (más recomendable por mejor operatividad)        identificar valores atípicos.
+         Gráfico de líneas: ideal para representar        Piechart: ideal para mostrar proporciones 
+         variaciones en el tiempo (e.g series de 
+         tiempo)                                          de variables categóricas similar a gráfico de 
+         Gráfico de puntos:ideal para la                  barras
+         representación de relaciones bivariadas por 
+         medio de diagramas de dispersión
+      ¿Preguntas?
+                   Resumen 
+              de la clase hoy
+              ✓ Visualizaciones en Python: Matplotlib 
+              ✓ Gráficos comunes (Lineplots, Barplots, 
+                Histogramas, Gráficos de Barras, Piecharts).
+              ✓ Personalización de gráficos Matplotlib
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.

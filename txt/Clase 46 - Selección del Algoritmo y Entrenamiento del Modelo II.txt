@@ -1,0 +1,350 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 46. DATA SCIENCE
+       Selección del algoritmo 
+         y Entrenamiento del 
+                Modelo II
+      Temario
+                       45                      46                     47
+                  Selección de            Selección de           Validación de 
+                   Algoritmo y             Algoritmo y         modelos - Métricas
+               entrenamiento del        entrenamiento del 
+                    Modelo I                Modelo II
+                ✓ Matriz de confusión   ✓ Métricas para 
+                ✓ Accuracy                  algoritmos de 
+                                            regresión           ✓ Análisis de 
+                ✓ Precisión                                        Clustering
+                                        ✓ RMSE
+                ✓ Sensibilidad                                  ✓ Métricas para la 
+                                        ✓ MAE                      calidad de 
+                ✓ Especificidad                                    Clustering
+                ✓ F1 Score y curva ROC  ✓ R2
+    Objetivos de la clase
+                 Evaluar métricas de modelos de Regresión
+          MAPA DE CONCEPTOS
+                                                                 MSE
+                                                                RMSE
+                                                                 MAE
+          Selección del            Métricas para 
+          Algoritmo y              algoritmos de                MAPE
+        Entrenamiento del 
+           Modelo II                regresión
+                                                                 RAE
+                                                               R2 y R2 
+                                                               ajustado
+      Métricas para 
+      algoritmos de 
+       Regresión
+       Para pensar
+   En clases pasadas hablamos de diferentes 
+   métricas para Algoritmos de regresión…
+   ¿Cómo se podía medir el desempeño de 
+   algoritmos de Regresión? ¿Recuerdan la 
+   métrica R2? ¿Para qué servía y cómo se 
+   interpretaba?
+   Contesta en el chat de Zoom 
+      Métricas para algoritmos de 
+      regresión
+        •  Para los modelos de Regresión no podemos usar las 
+           mismas métricas que para algoritmos de 
+           Clasificación 
+        •  El performance de los modelos de regresión se 
+           cuantifica por medidas de error respecto a las 
+           predicciones y los valores reales 
+        •  Existen tres métricas principales para evaluar el 
+           desempeño y son: i) error cuadrático medio (MSE), 
+           ii) raiz de error cuadrático medio (RMSE) y iii) error 
+           absoluto medio (MAE)
+      Métricas para algoritmos de 
+      regresión
+        •  Sin embargo existe una amplia gama de métricas 
+           que podemos utilizar como:
+         a) Mean Absolute Error (MAE)
+         b) Mean Squared Error (MSE)
+         c) Mean Squared Log Error 
+         d) Median Absolute Error
+         e) Mean Absolute Percentage Error (MAPE)
+         f) r2 score (r2)
+       Entre muchas otras más, si quieren conocerlas les 
+       dejamos el link: Scikit Learn Regression metrics
+          MSE
+       MSE (Mean Square Error)
+        Error  cuadrático  medio  (MSE), 
+        calcula  el  promedio  del  cuadrado       2   import numpy as np
+                                                   3   def mse(actual, predicted):
+        de  los  errores  entre  los  valores              return np.mean(np.square(actual-
+        reales y predichos.                            predicted))
+        Cuanto menor sea el valor, mejor 
+        será el modelo de regresión.
+        Aquí yi denota la puntuación 
+        verdadera para el i-ésimo punto de 
+        datos, ŷi indica el valor predicho y 
+        n es el número de puntos de datos
+    MSE (Mean Square Error)
+    Sin embargo no todo es perfecto a 
+    la hora de utilizar esta métrica, el 
+    problema con MSE es que, dado 
+    que los valores se elevan al 
+    cuadrado, se cambia la unidad de 
+    medida y la interpretación no es 
+    tan sencilla a la luz de los datos.
+    Para superar este problema, 
+    utilizamos la métrica raíz del 
+    error cuadrático medio (RMSE, 
+    por sus siglas en inglés)
+          RMSE
+      RMSE (Root Mean Square Error)
+        RMSE es la métrica más popular para 
+        medir  el  error  de  un  modelo  de     2   def rmse(actual, predicted):
+        regresión.                               3       return np.sqrt(np.mean(np.square(actual-
+                                                     predicted)))
+        Raíz   cuadrada    de   la   distancia 
+        cuadrática promedio entre los valores 
+        reales y predichos.
+        Al sacar la raíz cuadrada se revierte la 
+        unidad de medida a su escala original.
+        Puede usarse para comparar modelos 
+        sólo cuyos errores se miden en las 
+        mismas unidades.
+          MAE
+      MAE (Mean Absolute Error)
+       El MAE se calcula como la media  2        def mae(actual, predicted):
+                                             3       return np.mean(np.abs(actual-predicted))
+       de la diferencia absoluta entre los 
+       valores reales y predichos.
+       Donde ŷi es el valor predicho de 
+       la i-ésima muestra, yi es el valor 
+       real  correspondiente  y  n  es  el 
+       número de muestras.
+      MAE (Mean Absolute Error)
+       Tanto RMSE como MAE                 2  def mae(actual, predicted):
+       dependen de la escala y pueden      3      return np.mean(np.abs(actual-predicted))
+       usarse para comparar modelos 
+       solo si se miden en las mismas 
+       unidades.
+       Para comparar modelos con 
+       diferentes unidades, podemos 
+       utilizar métricas como MAPE u 
+       otras como el RAE
+          MAPE
+       MAPE (Mean Absolute Percentage 
+       Error)
+        MAPE mide el error en términos de 
+        porcentaje.                                  2   def mape(actual, predicted):
+                                                     3       return np.mean(np.abs((actual - predicted) / 
+                                                         actual)) * 100
+        El  MAPE  se  calcula  dividiendo  la 
+        diferencia absoluta entre los valores 
+        reales  y  pronosticados  en  cada 
+        observación.
+        Se    multiplica     por    100     para 
+        convertirlo  en  un  porcentaje  de 
+        error.
+      MAPE (Mean Absolute Percentage 
+      Error)
+                                                 2   def mape(actual, predicted):
+       A pesar de ser una métrica que nos        3       return np.mean(np.abs((actual - predicted) / 
+                                                     actual)) * 100
+       permite cuantificar el error en 
+       términos porcentuales tiene un 
+       inconveniente, que radica en que se 
+       pueden producir valores infinitos o 
+       indefinidos (e.g división por cero) 
+       para valores reales como el cero o 
+       cercanos a cero.
+         RAE
+      RAE (Relative Absolute Error)
+       El RAE se define como la relación  2      def rae(actual, predicted):
+       entre    la   suma  de  errores  3            numerator = np.sum(np.abs(predicted - actual))
+                                                     denominator = np.sum(np.abs(np.mean(actual) - 
+       absolutos     y   la    suma     de       actual))
+                                                     return numerator / denominator
+       desviaciones absolutas.
+       En la fórmula dada el valor de pi 
+       se refiere a los valores predichos, 
+       mientras que ai es el valor real y 
+       a_bar es la media de los valores 
+       reales.
+       RAE (Relative Absolute Error)
+                                                     2   def rae(actual, predicted):
+                                                     3       numerator = np.sum(np.abs(predicted - actual))
+        Esta es una métrica que tiene varias                 denominator = np.sum(np.abs(np.mean(actual) - 
+                                                         actual))
+        ventajas y se usa para muchas                        return numerator / denominator
+        aplicaciones científicas. 
+        Dentro de una de sus ventajas como 
+        es una sumatoria en numerador y 
+        denominador no tiene problemas de 
+        división por 0.
+         R2
+      R2
+       También       conocido      como 
+       coeficiente  de  determinación 
+       (R2), es una de las métricas de 
+       evaluación      de       regresión 
+       comúnmente utilizadas.
+       Mide la proporción de varianza de  2    def r_squared(actual, predicted):
+                                           3       sse = np.sum(np.square(actual-predicted))
+       la variable dependiente explicada           sst = np.sum(np.square(actual-
+                                               np.mean(actual)))
+       por      la      variable      (s)          return 1 - (sse/sst)
+       independiente(s).
+    R2
+    Esta métrica tiene un rango entre 0 a 
+    1,  donde  0  indica  que  el  ajuste  es 
+    deficiente y 1 ajuste lineal perfecto.
+    Sin embargo, el problema con el R2 es 
+    que el valor aumenta falsamente a 
+    medida que se agregan más variables 
+    independientes en los modelos.
+    El R2 no SIEMPRE se puede usar 
+    para tener una comparación 
+    significativa entre modelos.
+      R2 ajustado
+      R2 ajustado
+       Para contrarrestar el problema al que 
+       se  enfrenta  el  R2,  el  R2_ajustado 
+       penaliza la adición de más variables 
+       independientes  que  no  aumentan  el 
+       poder  explicativo  del  modelo  de 
+                                                2   def adj_r_squared(X, actual, predicted):#X data 
+       regresión.                               3   train
+                                                        r_squ = r_squared(actual, predicted)
+                                                        numerator = 1 - (1 - r_squ) * len(actual)-1
+       El  valor  de  R2_ajustado es siempre            denominator = len(actual) - X.shape[1]-1 
+       menor o igual al valor de R2 donde:          #X.shape[1] da el número de variables 
+                                                    independientes
+                                                        return numerator/denominator
+       n = el tamaño de la muestra
+       k   =    el   número  de  variables 
+       independientes
+        Med AE
+      Median Absolute Error (Med AE)
+       Calculado  como  la  mediana  de 
+       todas  las  diferencias  absolutas 
+       entre    los    valores    reales    y 
+       predichos.
+                                                  2   def median_abs_error(actual, predicted):
+       Donde yi es el valor real y ŷ es el        3       return np.sum(np.median(np.abs(actual - 
+                                                      predicted)))
+       valor predicho.
+       Le métrica Med AE es bastante 
+       robusta  (resistente  a  valores 
+       atípicos)
+       Ventajas y 
+      desventajas 
+    métricas regresión
+        Ventajas y desventajas métricas 
+        regresión
+              Métrica                   Ventajas                              Desventajas
+                MSE        Permite garantizar que modelos       Si nuestro modelo hace una sola 
+                           entrenados no tenga predicciones     predicción muy mala, la métrica magnifica 
+                           atípicas con grandes errores         el error.
+               RMSE        Resuelve los problemas del MSE       Solo se puede usar para comparar 
+                           dando una métrica con las mismas     modelos que tengan las mismas unidades 
+                           unidades que la variable de interés  de medida porque de lo contrario no tiene 
+                                                                sentido
+                MAE        Dado que se toma el valor absoluto,  Pondera de la misma forma grandes y 
+                           todos los errores se ponderarán en   pequeños errores lo cual genera 
+                           la misma escala lineal.              inconsistencias
+               MAPE        Es una métrica que utiliza un error  Se pierden las unidades de media de la 
+                           porcentual (adimensional) para       variable objetivo que en algunos casos es 
+                           cuantificar el error                 necesario para evaluar modelos
+        Ventajas y desventajas métricas 
+        regresión
+              Métrica                     Ventajas                               Desventajas
+                RAE         Muestra la magnitud del error en       No es tan conveniente cuando existe poca 
+                            términos relativos                     variabilidad en los errores
+                 R2         Mide la proporción de varianza de la  Aumenta falsamente a medida que se 
+                            variable dependiente explicada por  agregan más variables independientes en 
+                            la variable independiente.             modelos lineales
+            R2 ajustado     Contrarresta el problemas principal  Por propiedades matemáticas de 
+                            del  R2  penalizando  la  adición  de  construcción al igual que el R2 nunca 
+                            más variables independientes           decrece sino que siempre aumenta
+              Med AE        Es una métrica robusta lo cual la      Cuantifica el error solo en términos 
+                            hace resistente a valores atípicos     medios por lo que no analiza de fondo el 
+                            en los datos                           error global de todos las estimaciones
+     Resumen métricas 
+       Regresión
+    Resumen métricas regresión
+    1. Las métricas son vitales para cualquier 
+    modelo de aprendizaje automático.
+    2. El error cuadrático medio (MSE), que mide el 
+    error cuadrático medio de nuestras 
+    predicciones. Su problema es que, dado que los 
+    valores se elevan al cuadrado, la unidad de 
+    medida cambia.
+    3. Para llenar esta deficiencia, analizamos otra 
+    métrica llamada RMSE, que revierte el valor a su 
+    unidad de medida original tomando una raíz 
+    cuadrada.
+    Resumen métricas regresión
+    4. El MAPE y RAE, que se pueden usar para 
+    comparar dos modelos de diferentes escalas.
+    5. Entendieron por qué no se puede usar el R2 
+    para tener una comparación sensata entre dos 
+    modelos.
+    6. El R2_ajustado resuelve en parte el problema 
+    con el R2
+    7. La mediana de errores absolutos es resistente 
+    a valores atípicos.
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+      Ejemplo en vivo
+   Dentro de la carpeta de clase analizaremos 
+   cómo calcular diferentes métricas para 
+   algoritmos de Regresión con su respectiva 
+   interpretación.
+      Evaluando desempeño 
+      Modelos de Regresión
+     Utilizaremos lo aprendido en clase para poder evaluar 
+         el desempeño de modelos de regresión
+             Duración: 15-20 mins
+      ACTIVIDAD EN CLASE
+    Evaluando 
+    desempeño Modelos 
+    Trabajaremos con base en lo desarrollado en clases 
+    de Regresión
+    previas con los datos de: Medical Insurance
+    1. Identificar variables independientes/dependiente 
+      que sean de utilidad para el problema
+    2. Generar un algoritmo de regresión y calcular sus 
+      métricas
+    3. Escribir (en ppt, archivo txt, papel, etc) los pros y 
+      contras de cada una de las métricas utilizadas
+    4. Seleccionar la mejor métrica para evaluar los 
+      diferentes modelos elegidos
+      ¿Preguntas?
+       CLASE N°46
+       Glosario
+       MSE: métrica de regresión que calcula el      RAE: métrica de regresión que calcula la 
+       promedio del cuadrado de los errores          relación entre la suma de errores absolutos 
+                                                     y la suma de desviaciones absolutas
+       entre los valores reales y predichos.
+                                                     R2: métrica de regresión que calcula la 
+       RMSE: métrica de regresión más popular        proporción de varianza de la variable 
+       que calcula la raíz cuadrada de la            dependiente explicada por la variable(s 
+       distancia cuadrática promedio entre los       independiente(s)
+       valores reales y predichos.
+                                                     R2 ajustado: métrica de regresión que 
+       MAPE: métrica de regresión que calcula        resuelve los problemas generados al 
+       la diferencia absoluta entre los valores      utilizar el R2 penalizando la adición de 
+                                                     muchas variables independientes  
+       reales y pronosticados en cada 
+       observación.
+      Opina y valora 
+       esta clase
+                         Resumen 
+                   de la clase hoy
+                   ✓ MSE
+                   ✓ RMSE
+                   ✓ MAE
+                   ✓ MAPE
+                   ✓ RAE
+                   ✓ R2 y R2 ajustado
+                   ✓ Med AE
+        Muchas 
+        gracias.

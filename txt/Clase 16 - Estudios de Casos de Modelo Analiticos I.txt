@@ -1,0 +1,698 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 16. DATA SCIENCE
+       Estudios de casos de 
+        Modelos Analíticos I
+       Temario
+                           15                         16                         17
+                       Modelo                   Estudios de                 Estudios de 
+                   analítico para                casos de                     casos de 
+                         DS II                    modelos                     modelos 
+                                                analíticos I                analíticos II
+                    ✓ Modelo analítico         ✓ Casos de 
+                                                   éxitos con             ✓ Introducción
+                    ✓ Reglas de                    ciencias de 
+                        asociación                 datos                  ✓ Casos de 
+                    ✓ Reducción de             ✓ Armado de                    accidentes
+                        dimensionalidad            presentación 
+                                                   ejecutiva
+    Objetivos de la clase
+                Analizar casos de éxito de la aplicación de la 
+                Ciencia de Datos en diferentes industrias.
+        MAPA DE CONCEPTOS
+                                   Mazda              Clustering
+                                 San Cristóbal       Detección de 
+                                                       Fraudes
+            Casos de Éxito con 
+            Modelos Analíticos
+                                  Starbucks            IA e IoT
+                                 Como generar 
+                                 presentación 
+                                   ejecutiva
+                                 Caso Aplicado 
+                                  Empresa de 
+                                   Seguros
+    Casos de éxito con 
+     ciencia de datos
+          ¿De qué trata la ciencia de 
+          datos?  
+          Sin dudas, la Ciencia de Datos es una            Existen múltiples definiciones al 
+                                                           respecto. Sin embargo, elegimos esta 
+          disciplina transversal a múltiples industrias,   definición para el desarrollo del 
+          como ser por ejemplo: Finanzas, Retail,          curso ������
+          Automotriz, Logística, Turismo, etc. 
+          A lo largo de esta sesión, indagaremos 
+          sobre algunos Casos de Éxitos basados en 
+          diversas industrias de aplicación. 
+       Para pensar
+   ¿Cómo usarían modelos analíticos (aprendizaje 
+   supervisado y no supervisado) en empresas para 
+   la resolución de problemas de una compañía 
+   cervecera?
+   Contesta mediante el chat de Zoom 
+      Caso Mazda
+   Mazda Motor 
+   Corporation
+   Mazda Motor Corporation es un 
+   fabricante de automóviles japonés, 
+   fundado en 1920, con sede principal en 
+   Hiroshima, y con plantas en las 
+   localidades de Hiroshima, Nishinoura, 
+   Nakanoseki y Miyoshi, Japón.
+   La organización implementó un 
+   algoritmo de Segmentación de Clientes, 
+   dentro de la aplicación del ámbito de 
+   estudio de la Ciencia de Datos. 
+          ¿De que trata la ciencia de 
+          datos?  
+          Sin dudas, la Ciencia de Datos es una            Existen múltiples definiciones al 
+                                                           respecto. Sin embargo, elegimos esta 
+          disciplina transversal a múltiples industrias,   definición para el desarrollo del 
+          como ser por ejemplo: Finanzas, Retail,          curso ������
+          Automotriz, Logística, Turismo, etc. 
+          A lo largo de esta sesión, indagaremos 
+          sobre algunos Casos de Éxitos basados en 
+          diversas industrias de aplicación. 
+             Segmentación de clientes
+             Este  tipo  de  algoritmo,  en  términos 
+             generales,  busca  encontrar  grupos 
+             homogéneos de clientes que respondan 
+             de  modo  similar  a  determinadas 
+             estrategias de marketing. 
+             Tradicionalmente  la  forma  de  crear 
+             estos    segmentos,     se    basa    en 
+             seleccionar  atributos  del  perfil  del 
+             cliente  (geográficas,  demográficas  y 
+             socio-económicas  habitualmente)  para 
+             establecer   ciertos   parámetros     de 
+             similitud. 
+            Algoritmos de Clustering
+             Los    algoritmos    de   Clustering,       Este tipo de algoritmo pertenece al 
+             permiten     analizar   cientos    de       Aprendizaje No Supervisado dentro 
+             variables  de  cualquier  dimensión         del mundo del Machine Learning.
+             del buyer persona e incluirlos como 
+             atributos  válidos  para  encontrar 
+             agrupaciones naturales de clientes.
+             En consecuencia, se busca que los 
+             grupos  resultantes  del  análisis  de 
+             clusterización  sean  homogéneos 
+             entre sí y diferenciados claramente 
+             de  los  otros  clústeres  que  se 
+             generen. 
+        BigML
+        Mazda  venía  utilizando  la  Analítica 
+        Avanzada desde hace años, y tenía muy 
+        claro que su estrategia debía estar basada 
+        en  una  plataforma  colaborativa  que 
+        cubriera todas sus necesidades. 
+        La  herramienta  que  se  utilizó  fue  BigML, 
+        que  permite  la  creación  de  Modelos  de 
+        Machine Learning auto - administrados o 
+        también conocidos como AutoML.
+       Segmentos Mazda
+        Una vez aplicados los más de 30 
+        atributos para obtener la 
+        segmentación de los clientes de 
+        Mazda, el algoritmo identificó 
+        claramente 5 segmentos de 
+        clientes bien diferenciados.
+                Segmentos 
+                Mazda
+                  1                                   2                                 3
+          Compradores jóvenes con        Clientes con preferencia por la      Clientes más jóvenes con 
+          poder adquisitivo medio        gama alta de la marca                coches del segmento 
+          con preferencias por el        mostraban más interacción con        más accesible de los 
+          segmento sub medio.            el servicio de Posventa, siendo      vehículos de la marca.  
+                                         más exigentes en sus 
+                                         interacciones. 
+                                           
+            Segmentos 
+            Mazda
+                                   4                                  5
+                            Clientes de un poder              Es el menos numeroso. 
+                            adquisitivo menor y con           Son clientes jóvenes de 
+                            vehículos más antiguos            poder adquisitivo medio 
+                            de precio más                     pero con gran compromiso 
+                            asequible.                        con la marca.
+       Resultados
+       Con esta información disponible, el 
+       Departamento de  Marketing de la empresa 
+       pudo orientar las campañas futuras de 
+       lanzamiento, adaptando las actividades de 
+       Marketing a cada uno de los segmentos y en 
+       especial a su público objetivo.
+       Para pensar
+   ¿Qué otros casos exitosos de clustering 
+   conocen?¿Qué otros casos de éxito se les 
+   ocurren?
+   Contesta mediante el chat de Zoom 
+    Caso San Cristóbal
+          Caso San Cristóbal
+          San    Cristóbal    Seguros,    es    una 
+          empresa  Argentina  nacida  hace  más            A su vez, brinda un amplio portfolio 
+          de 80 años, con un origen mutualista.            de     coberturas    para     individuos, 
+          Hoy el Grupo San Cristóbal, asegura a            productores              agropecuarios, 
+          más  de  725.000  personas  y  cuenta            comercios,      pymes      y    grandes 
+          con  presencia  física  en  Argentina  y         empresas.
+          Uruguay.
+          La  organización  destaca  por  ser  en 
+          una empresa líder, caracterizada por 
+          honrar  sus  acuerdos  y  generar  un 
+          impacto positivo en la comunidad. 
+                 Detección de fraudes
+                 La empresa desarrolló su propia plataforma de 
+                 detección  de  fraudes  para  el  mundo  del  seguro, 
+                 estructurando  una  nueva  unidad  de  Prevención, 
+                 que emplea tecnología como Inteligencia Artificial, 
+                 Machine Learning y Ciencia de Datos.
+                 Como el campo de aplicación  es  tan  amplio,  se 
+                 incorporaron  especialistas  en  criminalística,  agro, 
+                 peritos,   científicos    de    datos,    entre    otros, 
+                 formándose un equipo multidisciplinario.
+       Para pensar
+   El Caso San Cristóbal ¿Se trata de aprendizaje 
+   supervisado o no supervisado? ¿Se trata de 
+   problemas de clasificación o de regresión?
+   Contesta mediante el chat de Zoom 
+           ¿Qué se busca con el ML?
+                                            ✓ Discernir entre los casos reales y los posibles 
+                                                fraudes, lo cual genera un impacto directo en 
+                                                el negocio central de la compañía. 
+                                            ✓ Resulta importante mencionar, que este tipo 
+                                                de  algoritmo  pertenece  al  Aprendizaje 
+                                                Supervisado  modelos  de  Clasificación, 
+                                                donde  se  trata  de  clasificar  la  variable 
+                                                target:         Fraude/No           Fraude.
+         Pasos para detectar 
+         fraudes
+                 1                                         2
+            Detección                                  Análisis
+            Puede ser denunciado de forma              El equipo de analistas recibe los posibles 
+            manual por cualquier agente de la          casos y separa "la paja del trigo", para 
+            compañía o puede detectarlo                devolver al circuito de la compañía los falsos 
+            directamente la herramienta de IA,         positivos o caso contrario, continuar con el 
+            gracias a sus "reglas" predefinidas y      proceso de investigación. (Este concepto se 
+            modelos predictivos.                       asocia a la Matriz de Confusión)
+        Pasos para detectar 
+        fraudes
+               3                                     4
+        Investigación                             Resolución
+        La compañía conformó un equipo            Luego de realizar el análisis 
+        interno de investigación eficiente y      correspondiente, el equipo toma la 
+        profesional que se encarga de analizar    decisión de rechazar la denuncia y 
+        a fondo los casos. Cabe destacar que      evaluar la factibilidad de iniciar la 
+        cualquiera de las verticales de la        instancia judicial en caso de ser 
+        compañía puede pasar por el proceso       necesario.
+        de análisis. El tiempo estimado de 
+        demora es de 24/48 hs. 
+            Análisis automático de 
+            imágenes
+            Como  parte  de  estos  modelos  de 
+            detección,  San  Cristóbal  cuenta  con 
+            una     plataforma     de     análisis   de 
+            imágenes para vehículos siniestrados. 
+            De  forma  independiente,  se  encarga 
+            de catalogar las imágenes, la marca, 
+            color y patente, para luego identificar 
+            los daños. 
+            Volviendo  a  la  plataforma  de  San 
+            Cristóbal, en base a lo visto podríamos 
+            decir  que se aplica el Deep Learning 
+            para el análisis de imágenes.
+       Para pensar
+   En el Análisis automático de Imágenes ¿Qué 
+   modelo de Análisis de Datos se 
+   implementa?
+   Contesta mediante el chat de Zoom 
+       Resultados
+       Gracias a la implementación del modelo de 
+       predicción de fraude y de cara al futuro, la 
+       compañía está explorando nuevas alternativas 
+       de uso para su plataforma, tal como el análisis 
+       de los vehículos a la hora de tomar un seguro, 
+       así como también para la liquidación de 
+       siniestros, optimizando notablemente la 
+       experiencia del usuario.
+     Caso Starbucks
+             Caso Starbucks
+             Starbucks  recopila  enormes  cantidades  de 
+             datos   de   más  de  100  millones  de 
+             transacciones por semana. Cuenta con más de 
+             30,000  tiendas  en  todo  el  mundo  y  realiza 
+             cerca  de  100  millones  de  transacciones  por 
+             semana. Esto le da una visión integral de lo 
+             que consumen y disfrutan sus clientes. 
+       PARA RECORDAR
+    Contenido destacado
+    ¿Cómo crees que se usan los datos de 
+    consumo? ¿Cómo impactan en la estrategia 
+    de posicionamiento en el mercado?
+    Veamos algunas tecnologías utilizadas para 
+    crear ventajas competitivas. ������
+           Uso de IA e IoT 
+           La forma en que Starbucks utiliza los 
+           datos y la tecnología moderna para          Todos los ejemplos que 
+           obtener una ventaja competitiva es          mencionaremos a continuación, 
+           analizada por diversas empresas del         junto con tecnologías como AI, Data 
+           mundo independiente del rubro de            Science, IoT y la nube, le permiten a 
+           aplicación. Por ejemplo, la compañía es     la organización alcanzar los 
+           pionera en combinar sistemas de             siguientes objetivos:
+           fidelización, tarjetas de pago y 
+           aplicaciones móviles, etc. 
+       Para pensar
+   En el caso Starbucks ¿Se podría implementar K-
+   Nearest Neighbor? ¿Se pueden aplicar reglas de 
+   asociación? ¿Qué algoritmo usarías?
+   Contesta mediante el chat de Zoom 
+         Objetivos de IA e IoT 
+           1. Dirigirse  a  clientes  con  promociones  y 
+              ofertas personalizadas.
+           2. Desarrollo  de  productos  orientados  a  las 
+              necesidades de los clientes y usuarios.
+           3. Planificación inmobiliaria sofisticada.
+           4. Creación dinámica de menú y ajustes.
+           5. Mantenimiento    optimizado   de   las 
+              maquinarias de la compañía.
+           1.Promociones 
+           Conocer las preferencias individuales de los 
+                 Personalizadas
+           pedidos de los clientes y los patrones de          Estos pueden incluir bebidas frías en 
+           compra le permite a Starbucks enviar ofertas       días calurosos, lanzamientos de 
+           personalizadas con mayor probabilidad de           productos o menús de temporada.
+           ser relevantes. 
+           Se siguen ofreciendo campañas masivas 
+           convencionales, pero directamente a cada 
+           consumidor en el segmento objetivo. 
+        2.  Productos orientados a 
+        las necesidades 
+         El uso de los datos de clientes en el desarrollo de 
+         su gama de productos le permite a la compañía      Esto se ha convertido en una gama 
+         crear productos y servicios que sus “Clientes      completa de productos globales 
+         amen”                                              inspirados en calabazas.
+         Por ejemplo, hace más de 15 años surgió la idea 
+         de introducir bebidas con sabor a calabaza en 
+         Halloween. 
+         3. Planificación inmobiliaria 
+         sofisticada
+         Planear dónde abrir una tienda Starbucks es     El sistema también considera la ubicación 
+         ahora un complejo análisis de datos, donde se  de las tiendas existentes de Starbucks y se 
+         incluyen factores asociados a la población,     basa en gran parte en el uso de datos 
+         niveles de ingresos, tráfico, presencia de      geo-referenciados a través de los 
+         competidores, etc.                              sistemas SIG (Sistemas de 
+                                                         Información Geoespacial).
+      4. Menús 
+      dinámicos
+      La forma en que Starbucks utiliza los datos le permite 
+      que pueda realizar revisiones basadas en el 
+      cliente, la ubicación y la hora. Esto en 
+      consecuencia, afecta a productos, promociones y 
+      precios. Incluso, también es factible impulsar 
+      productos seleccionados según las circunstancias 
+      locales, como el clima o la hora del día.
+     5. Mantenimiento 
+     optimizado 
+     Gracias a la analítica de datos, es 
+     posible identificar de manera proactiva 
+     potenciales averías en las maquinarias de 
+     la empresa, de tal forma de realizar 
+     mantenimientos preventivos evitando 
+     costos y gastos para la organización.
+                 ☕
+               Break
+               ¡10 minutos y 
+                volvemos!
+                  ¡Lanzamos la
+                  Bolsa de 
+                  Empleos!
+                 Un espacio para seguir potenciando tu carrera y 
+                 que tengas más oportunidades de inserción 
+                 laboral.
+                 Podrás encontrar la Bolsa de Empleos en el menú 
+                 izquierdo de la plataforma.
+                 Te invitamos a conocerla y ¡postularte a tu futuro 
+                 trabajo!
+                   Conócela
+      Caso Empresa 
+        Seguros
+      Ejemplo en vivo
+    ¿Alguna vez han imaginado como una compañía de 
+    seguros establece si una reclamación es real o 
+    fraude?
+    Estudiaremos un caso real aplicado donde 
+    podremos ver el uso de del Aprendizaje No 
+    Supervisado (K-means)
+    Utilizaremos el notebook  Clase_16.ipynb dentro de 
+    la carpeta de clase.
+       Fases importantes para la 
+       resolución de Casos en DS
+          1                      2                      3                    4                   5
+    Definición de            Contexto              Problema               Contexto            Exploración 
+       objetivo              comercial             comercial               analítico        de datos (EDA)
+       Fases importantes para la 
+       resolución de Casos en DS
+          6                      7                      8                    9                  10
+         Data              Selección del          Desarrollo de        Interpretación      Conclusiones
+      Engineering            algoritmo             algoritmo
+                             apropiado
+     1.Definición de objetivo
+     ¿Podemos detectar patrones entre 
+     consumidores específicos para identificar 
+     posibles fraudes?
+     Definir el objetivo es una de las 
+     etapas más importantes porque es 
+     donde decidimos que queremos 
+     hacer
+        2.  Contexto 
+        comercial
+          Trabaja para el equipo de fraude en una         Sin embargo, muchas personas intentan 
+          gran compañía de seguros que se ocupa           aprovecharse, presentando reclamos con 
+          de emitir pólizas de seguro para varios         falsos pretextos para obtener ingresos 
+          tipos de reclamos, tanto para individuos        adicionales. Es función del equipo de 
+          como para empresas.                             fraude determinar qué reclamos 
+          Las pólizas que se emiten se controlan y        presentados deben aprobarse y 
+          cualquier reclamo presentado se examina         cuáles deben rechazarse.
+          y evalúa para determinar la legitimidad y 
+          la aprobación final para el pago por parte 
+          de la compañía de seguros. 
+        3.  Problema 
+        comercial Su tarea es responder la siguiente 
+                               pregunta: 
+                               ¿Existen patrones particulares en los 
+                               grupos de reclamos presentados que 
+                               puedan ser indicativos de fraude?
+    4.  Contexto 
+    analítico
+      El equipo de contabilidad le ha 
+      proporcionado datos sobre todas las 
+      reclamaciones recientes realizadas por 
+      1000 personas. 
+      Los siguientes datos no estarán 
+      etiquetados; es decir, no hay una 
+      variable que nos diga cuáles de estas 
+      afirmaciones son fraudulentas o no. En su 
+      lugar, debemos utilizar modelos de 
+      agrupamiento para abordar este 
+      problema de aprendizaje no 
+      supervisado.
+  Ejemplo
+     5.  Exploratory Data 
+     Analysis (EDA)
+                            Parece que hay tres conjuntos de picos 
+                            para los montos de las reclamaciones.
+                            Intentemos ver algunos diagramas de 
+                            dispersión en 2D de claims frente a 
+                            income e income frente a age para la 
+                            población de muestra, para obtener más 
+                            información sobre lo que está 
+                            sucediendo.
+    Ejemplo
+    También podemos estratificar 
+    nuestros datos por género 
+    antes de realizar las 
+    visualizaciones anteriores:
+        Ejemplo
+        No parece haber grandes diferencias     1. Grupo gigante de reclamos alrededor del rango 
+        en las distribuciones basadas en el        de ingresos de $30,000-$40,000 (Valores 
+        género; sin embargo, las gráficas          típicos de ingreso)
+        muestran algunos grupos claros.         2. Una franja de reclamaciones entre $50.000- 
+                                                   $100,000 que valen $5.000 aproximadamente. 
+                                                   No está claro exactamente qué son, pero podrían 
+                                                   ser cosas cotidianas con las que las personas 
+                                                   más pudientes pueden lidiar (por ejemplo, 
+                                                   reclamos por accidentes automovilísticos). 
+                                                3. Franja de reclamos por al menos $20,000 entre 
+                                                   las personas que ganan solo $ 10,000, lo cual es 
+                                                   inusual y bien puede consistir en reclamos 
+                                                   fraudulentos.
+  6.  Data Engineering (Min 
+  Max Scaling)
+  6.  Data Engineering (Min 
+  Max Scaling)
+    Ejemplo
+      El método usado transforma los datos de 
+      tal manera que la magnitud de todas las 
+      características sea aproximadamente 
+      similar. Sin embargo, puede haber un 
+      método de escalado diferente que 
+      permita que el clustering de k-means 
+      funcione mejor. La mejor elección de 
+      método de escala depende de los datos 
+      específicos proporcionados.
+  Ejemplo
+      7.  Selección del 
+      algoritmo apropiado (k-
+      means)
+       Este algoritmo separa el conjunto de 
+       datos dado en k grupos que 
+       minimizan la suma de los cuadrados 
+       de distancias entre cada par de 
+       puntos en el grupo. 
+       El científico de datos debe 
+       preseleccionar el valor de k, que 
+       puede requerir un análisis previo 
+       para determinarlo.
+           Pasos
+            1. Inicialización: Se debe seleccionar k           3 Actualización: Una vez que se 
+                puntos (no necesariamente ninguno de               han asignado todos los puntos 
+                los puntos de datos, solo puntos en el             de datos a sus respectivos 
+                mismo espacio dimensional) como los                grupos, se calcula un nuevo 
+                centroides "iniciales".                            centroide para cada grupo 
+            2. Asignación: Cada punto de datos se                  tomando la media de todos los 
+                asigna al grupo correspondiente al                 puntos en ese grupo.
+                centroide más cercano a sí mismo              Luego, se repiten los pasos 2 y 3 
+                (generalmente basado en la distancia          hasta que los grupos ya no 
+                euclidiana estándar).                         cambien.
+  8.  
+  Desarrollo 
+  del 
+  algoritmo
+          Ejemplo
+          Aunque el análisis visual sugiere que 
+          k=4 es el valor óptimo, es una buena 
+          práctica          verificar          esto 
+          cuantitativamente.         Esto        es 
+          especialmente  importante  cuando  se 
+          agrupan  datos  que  no  se  pueden 
+          visualizar fácilmente, un hecho común 
+          con       datos      multidimensionales 
+          complejos.
+  Ejemplo
+     9.  Interpretación de 
+     resultados
+      1. El primero son aquellos con ingresos 
+        altos y reclamos bajos, que 
+        probablemente sean reclamos ordinarios 
+        hechos por familias acomodadas. Es muy 
+        probable que estos no sean fraudulentos 
+        y que la empresa los acepte.
+      2. El segundo son los ingresos 
+        moderados con valores de 
+        reclamación moderados. Estos son 
+        bastante abundantes y podrían ser 
+        elementos cotidianos como reclamos de 
+        automóviles. Lo más probable es que 
+        debamos aceptarlos.
+         9.  Interpretación de 
+         resultados
+          3 El tercero son los ingresos moderados y     4 La última categoría es la de ingresos 
+              las altas reclamaciones. Esto podría ser     bajos pero reclamaciones muy 
+              plausible si es algo que las personas de     elevadas. Estos claramente no son 
+              ingresos medios necesitan pero que no        asequibles y, con la excepción de algo 
+              siempre pueden pagar, como ciertas           como las declaraciones de propiedades 
+              declaraciones de propiedades                 saludables, bien podrían ser intentos 
+              saludables. Así que probablemente            de obtener efectivo gratis. Lo más 
+              deberíamos investigar esto más a fondo.      probable es que los rechacemos.
+  ¿Algunas desventajas del k-means?
+   Deficiencias potenciales
+    1. El algoritmo k-means da más peso a los 
+      clústeres más grandes, ya que intenta 
+      minimizar la variación intra-clúster, por lo que 
+      en los casos en los que los clústeres no tienen 
+      naturalmente el mismo tamaño, esto podría 
+      resultar en resultados sesgados.
+    2. No necesariamente converge de forma uniforme 
+      o rápida, por lo que la elección de los puntos 
+      iniciales es sumamente importante. Este grado 
+      de dependencia no es necesariamente el ideal.
+    3. Los valores atípicos pueden influir en gran 
+      medida en los datos y las medias del grupo, a 
+      menos que se cumpla una alternativa.
+    10.  Conclusiones
+     En este caso, dividimos con éxito el conjunto de datos en 
+     4 grupos separados y validamos nuestra intuición basada 
+     en la agrupación de  kmeans. 
+     Aprendimos que hay muchos supuestos incorporados en 
+     la  agrupación  de  k-means  (es  decir,  la  elección  de  la 
+     métrica de distancia, la normalización y k) y que esto no 
+     se puede automatizar fácilmente, ya que estas opciones 
+     dependen del conjunto de datos particular en mano. 
+      Una vez que se han identificado los grupos individuales, 
+      la  compañía  de  seguros  ahora  puede  determinar  qué 
+      reclamos  investigar  más  a  fondo  o  considerar  de 
+      inmediato  como  fraudulentos  en  función  de  algunos 
+      criterios adicionales.
+      ¡Para llevar!
+      En este caso, presentamos los conceptos de          La agrupación es una poderosa 
+      técnicas de aprendizaje no supervisado y            herramienta de aprendizaje no 
+      agrupación. En particular, discutimos el algoritmo  supervisada para investigar datos no 
+      k-means y su funcionamiento interno. Hicimos        etiquetados, particularmente para 
+      esto para:                                          determinar patrones que no se conocían o 
+                                                          entendían previamente. En el caso de 
+       1. Visualización de un conjunto de datos para      grandes conjuntos de datos, se pueden 
+           generar posibles agrupaciones en nuestros      identificar relaciones muy complejas 
+           datos                                          entre grupos de puntos de datos 
+       2. Presentamos el concepto de k-means y cómo       individuales que posiblemente no se 
+           funciona el algoritmo                          podrían hacer a través del ojo 
+       3. Alterar los datos para que se ajusten a los     humano.
+           errores del algoritmo
+       4. Validamos nuestra hipótesis inicial de los 
+           clusters en los datos mediante la 
+           implementación del algoritmo
+    ¡Para llevar!
+    Si bien esta es una buena técnica para datos de 
+    baja dimensión, k-means es susceptible a un 
+    rendimiento deficiente en dimensiones más altas, 
+    como muchos algoritmos de aprendizaje 
+    automático. En dimensiones más altas, primero se 
+    realizan técnicas más avanzadas, como t-SNE, 
+    para reducir el número de dimensiones antes de 
+    agrupar. Finalmente, k-means es solo uno de los 
+    muchos algoritmos de agrupamiento. Los 
+    desarrollos modernos incluyen los algoritmos 
+    DBSCAN y OPTICS.
+      Armado de la 
+      presentación 
+       ejecutiva
+      ¡A tomar nota!
+         Puntos importantes
+                                                       Hook  (Punto  de  enlace):  Presente  su 
+         Introducción: Simple, quién es y por qué  propuesta  de  valor  y  comience  con  su 
+         está  allí.  Dedicar  la  menor  cantidad  de  conclusión.  Hágales  saber  el  retorno  de  la 
+         tiempo posible a presentarse a uno mismo y  inversión  (ROI)  y  el  impacto  en  el  resultado 
+         sumar la información relevante que agregue  final desde el principio, para que se sienten y 
+         contexto.                                     se  den  cuenta.  Tenemos  30  segundos  de 
+                                                       atención. Algunas sugerencias:
+                                                        ✓ Sorprender con estadísticas interesantes.
+                                                        ✓ Usa el humor. Aligera el estado de ánimo.
+                                                        ✓ Haz  preguntas  retóricas.  Hace  que  la 
+                                                            audiencia   piense   sin  necesidad  de 
+                                                            responder.
+                                                        ✓ Utilizar una cita inspiradora.
+           Puntos importantes
+           Situación actual: Explique dónde está el               Evidencia:  Sea  selectivo  y  elija  un 
+           cliente.   Presentar  desafíos,  por  qué              conjunto  de  datos  que  llame  su 
+           ocurren y el impacto que tienen. Hablar                atención.  ¿Qué  has  descubierto  que 
+           en torno a métricas e indicadores clave de             necesitan  saber?  ¿Qué  significan  los 
+           rendimiento que sean importantes para la               datos?
+           audiencia.                                             Pensar en preguntas como: ¿Qué datos 
+           Nuevas  oportunidades:  ¿Cómo  se                      usaste? ¿Cómo lo calculaste? ¿Cómo lo 
+           puede resolver el problema o ayudarlos a               medimos? ¿Tiene  estudios  de  caso  o 
+           hacerlo      aún     mejor?      Analice      las      testimonios  para  demostrar  el  éxito 
+           oportunidades       que     ha     identificado,       anterior?
+           incluidas las posibles ventajas. Considerar 
+           el  riesgo  potencial  y  cualquier  estrategia 
+           que tenga para mitigarlos.
+          Puntos importantes
+           Alternativas:     Hacer    saber    que    ha    Próximos pasos:  Dé una explicación 
+           considerado otras opciones, cuáles eran y        sobre  cuándo  y  cómo  hará  que  esto 
+           por  qué  no  son  la  opción  correcta.  Dos    suceda  y  los  próximos  pasos,  incluido 
+           puntos  importantes:  a)  Qué  opciones          todo  lo  que  necesite  de  su  audiencia. 
+           consideraron en el análisis, b) Cuál opción      Guardar los detalles.
+           se eligió justificando el por qué.               El  gran  final:  Cerrar  la  historia  y 
+           ¿Podría ser un buen lugar para hablar sobre      dejarlos inspirados y obligados a actuar 
+           lo que sucede si no hacen nada?                  e interesarse por la idea transmitida.
+           Recomendaciones: ¿Cuál de sus opciones 
+           sugiere que sea el mejor curso de acción y 
+           por qué? Sea definitivo y tenga un punto de 
+           vista. Ser claro en los plazos para los que 
+           verán un retorno.
+      Actividad colaborativa
+   Checkpoint Proyectos Finales
+   Analizaremos el siguiente proyecto en el siguiente 
+   link: Aerolíneas DS, con el fin de determinar la 
+   validez de Abstracto, Introducción, Contexto Político 
+   y empresarial
+   Discutiremos en el final de la actividad los 
+   resultados obtenidos
+   Duración: 30 minutos
+   Realizaremos la actividad en grupos de 2-3 personas
+             ACTIVIDAD COLABORATIVA
+        Acuerdos
+       Presencia                                       Apertura al aprendizaje
+        ✓ Participar y “estar” en la clase, que          ✓ Siempre, pero siempre puedes 
+            tu alrededor no te distraiga                    seguir aprendiendo. Compartir el 
+                                                            conocimiento es válido, la 
+       Escucha activa                                       construcción colaborativa es la 
+                                                            propuesta.
+        ✓ Escuchar más allá de lo que la 
+            persona está expresando 
+            directamente                               Todas las voces
+                                                         ✓ Escuchar a todos, todos podemos 
+                                                            reflexionar. Dejar el espacio para 
+                                                            que todos podamos participar.
+             ACTIVIDAD COLABORATIVA
+        Checkpoint Proyectos 
+        Finales
+       Consigna: Analizaremos el siguiente                Luego de esto discutiremos sobre los 
+       proyecto disponible en el siguiente link:          proyectos finales de cada grupo en el 
+       Aerolíneas DS                                      break out rooms, resolveremos dudas en 
+       Analizar las secciones: Contexto                   el desarrollo de las etapas: Delimitación y 
+       empresarial, Problema comercial,                   definición de problema, Data Acquisition, 
+       Contexto analítico e identificar fortalezas        Data Wrangling, Exploratory Data Analysis
+       y debilidades
+       Verificar si las gráficas generadas 
+       permiten dar respuesta parcial o total a 
+       las preguntas generadas
+       NOTA: usaremos los breakouts rooms. El tutor/a tendrá el rol de facilitador/a.
+       CLASE N°16
+       Glosario
+       Definición de objetivo: fase 1 en la             Data Engineering: fase 6 en la 
+       resolución de Casos en DS donde se establece     resolución de casos en DS donde se 
+       los límites del problema y el alcance del        resuelven problemas asociados a outliers, 
+       proyecto                                         nulos y selección de variables
+       Contexto comercial: fase 2 en la resolución      Selección y desarrollo de algoritmo: 
+       de casos en DS donde se hace la introducción     fases 7, 8 y 9 donde se elige el algoritmo 
+       al problema                                      para resolver el problema y 
+       Problema comercial: fase 3 en la resolución      posteriormente se implementa
+       de casos en DS donde se delimita el problema     Despliegue de algoritmo: fases final 
+       a resolver                                       en casos de DS donde se entrega un 
+       Contexto analitico: fase 2 en la resolución      producto utilizable para el beneficio de un 
+       de casos en DS donde se establece que datos      consumidor final (e.g aplicación, 
+       ayudaran a resolver el problema comercial        Dashboard, reportes automáticos)
+       EDA: fase 5 en la resolución de casos en DS 
+       donde se obtienen insights por medio de 
+       visualizaciones
+     ¿Quieres saber más?
+     Te dejamos material 
+     ampliado de la clase
+         MATERIAL AMPLIADO
+     Recursos multimedia
+      ✓ Machine Learning made beautifully simple for everyone  | BigML.com
+      ✓ Clustering, análisis de segmentos de clientes: Caso de éxito para Mazda  | 
+         cleverdata.io
+      ✓ Se acabaron las estafas: así funciona la herramienta para la detección te
+         mprana de fraudes de San Cristóbal
+          | iprofesional.com
+      ✓ Starbucks no es un negocio de café: es una empresa de tecnología de dat
+         os
+          | brita.mx
+      Disponible en nuestro repositorio.
+      ¿Preguntas?
+                   Resumen 
+               de la clase hoy
+              ✓ Casos de Éxitos: Mazda, San Cristóbal Seguros y 
+                Starbucks. Caso Empresa de Seguros. Creación 
+                de presentación ejecutiva
+        Muchas 
+        gracias.
+      Opina y valora 
+       esta clase
+                       Encuesta
+                       sobre esta clase
+                       Por encuestas de Zoom
+                       ¡Terminamos la clase! 
+                       Cuéntanos qué temas te resultaron más complejos de 
+                       entender. Puedes elegir más de uno. Vamos a 
+                       retomar aquellos temas que resultaron de mayor 
+                       dificultad en el próximo AfterClass.

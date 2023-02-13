@@ -1,0 +1,641 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 53. DATA SCIENCE
+            Introducción al 
+          procesamiento de 
+         Lenguaje Natural I
+       Temario
+                         52                       53                       54
+                  Introducción a           Introducción al           Introducción al 
+                  Deep Learning           Procesamiento de         Procesamiento de 
+                                          Lenguaje Natural I       Lenguaje Natural II
+                  ✓                        ✓  Procesamiento del 
+                     Introducción a Deep      lenguaje natural
+                     Learning                                       ✓ Introducción a spaCY
+                                           ✓  Expresiones regulares
+                  ✓ Perceptrón y perceptrón                         ✓ Análisis de 
+                     multi-capa            ✓  Bag of words
+                                                                       sentimiento 
+                  ✓ CNN                    ✓  NLTK
+                  ✓ RNN                    ✓  Corpus, Document team, 
+                                              Matrix y Term Document 
+                                              Matrix
+    Objetivos de la clase
+                 Introducir a los estudiantes al mundo del 
+                 procesamiento de Lenguaje Natural
+                 Explicar las técnicas básicas del dominio
+           MAPA DE CONCEPTOS
+                                                             NLP y características
+                                                                                 Clase 
+                                                               Bag of Words      53
+                                                              Intro NLTK, DTM y 
+                                                                TF-IDF score
+                 Introducción al 
+               procesamiento de                              Otras técnicas NLP
+                Lenguaje Natural
+                                                               Intro a spacy
+                                                                Análisis de 
+                                                               sentimiento
+            Repaso
+                     Les proponemos tomarse unos minutos 
+                     para realizar un repaso de los conceptos 
+                      aprendidos en Kahoot, ¿están listos?
+                          Profe, puedes compartir el 
+                           PIN o link de acceso al 
+                                juego
+     Procesamiento de 
+     lenguaje natural
+       Definición
+    Procesamiento de lenguaje 
+    Natural (NLP)
+    El procesamiento del lenguaje natural (NLP, por sus 
+    siglas en inglés) se refiere a la rama de la inteligencia 
+    artificial o IA, que se ocupa de brindar a las 
+    computadoras la capacidad de comprender textos y 
+    palabras habladas de la misma manera que lo hacen los 
+    seres humanos.
+    Procesamiento de lenguaje 
+    Natural (NLP)
+    NLP combina la lingüística computacional con modelos 
+    estadísticos, ML y de Deep Learning. Juntas, estas 
+    tecnologías permiten a las computadoras procesar el 
+    lenguaje humano en forma de texto o datos de voz y 
+    "comprender" su significado completo, teniendo en 
+    cuenta la intención y el sentimiento del hablante o 
+    escritor.
+        Origen
+     NLP Eras:
+     Antes y post Deep Learning
+                     Te invitamos a recorrer las eras NLP en este 
+                             Genially interactivo
+      Podrás hacer click sobre cada uno de los elementos interactivos para obtener información sobre el origen del NLP
+     Principales tareas 
+        de NLP
+   Principales tareas de NLP
+    Dentro de las tareas más importantes 
+    podemos resaltar:
+    1. Análisis de sentimiento
+    2. Name Entity Recognition (NER)
+    3. Stemming y Lemmantization
+    4. Bag of Words
+    5. TF-IDF
+    6. Wordclouds
+   1) Análisis de sentimiento
+    El análisis de sentimientos es una de las 
+    técnicas de NLP más populares que 
+    implica tomar un fragmento de texto (por 
+    ejemplo, un comentario, una reseña o un 
+    documento) y determina si los datos 
+    tienen un sentido positivos, negativos o 
+    neutrales. Tiene muchas aplicaciones en 
+    salud, atención al cliente, banca, etc.
+   2) Reconocimiento de entidades 
+   (NER)
+    El NER es una técnica utilizada para 
+    ubicar y clasificar entidades nombradas 
+    en texto en categorías como personas, 
+    organizaciones, ubicaciones, expresiones 
+    de tiempo, cantidades, valores 
+    monetarios, porcentajes, etc. Se utiliza 
+    para optimizar algoritmos de motores de 
+    búsqueda, sistemas de recomendación , 
+    atención al cliente, etc.
+   3) Stemming y Lematización
+    Stemming: truncar una palabra a su 
+    raíz. Por ejemplo, las palabras "amigos", 
+    "amistad", "amistad" se reducirán a 
+    "amigo". 
+    Lematización: A diferencia del 
+    stemming, la lematización extrae el lema 
+    correcto de cada palabra, por lo que 
+    muchas veces requieren de un diccionario 
+    del idioma para poder categorizar cada 
+    palabra correctamente.
+   4) Bag of words
+    El modelo Bag of Words (BoW) es una 
+    representación que convierte el texto en 
+    vectores de longitud fija. Esto nos ayuda 
+    a representar texto en números para que 
+    podamos usarlo para modelos de 
+    aprendizaje automático. Al modelo no le 
+    importa el orden de las palabras, solo le 
+    preocupa la frecuencia de las palabras en 
+    el texto.
+   5) TF-IDF
+    Calcula "pesos" que representan la 
+    relevancia de una palabra para un 
+    documento en una colección de 
+    documentos (también conocido como 
+    corpus). El valor de TF-IDF aumenta 
+    proporcionalmente al número de veces 
+    que aparece una palabra en el 
+    documento y se compensa con el número 
+    de documentos del corpus que contienen 
+    la palabra. 
+   6) Wordcloud
+    Wordcloud es una técnica popular que 
+    nos ayuda a identificar las palabras clave 
+    en un texto. En una nube de palabras, las 
+    palabras más frecuentes tienen una 
+    fuente más grande, mientras que las 
+    palabras menos frecuentes tienen una 
+    fuente más pequeña o más delgada.
+     Características de 
+         NLP
+   Características de Deep Learning
+    Algunas de las características más 
+    importantes de NLP son:
+     1. Conversión text-to-speech y viceversa
+     2. Traducción de lenguaje
+     3. Categorización e indexación
+     4. Organización de documentos
+     5. Identificación de sentimientos
+     6. Aprendizaje supervisado en su mayoría
+   Fases típicas de NLP
+    En general se tienen 5 fases 
+    preponderantes que son:
+     1. Análisis léxico y morfológico
+     2. Análisis sintáctico
+     3. Análisis semántico
+     4. Integración de discurso
+     5. Análisis pragmático
+    ¿Cómo se ejecuta el análisis de NLP?
+     El procesamiento del lenguaje natural implica 
+     la lectura y comprensión del lenguaje hablado 
+     o escrito a través de una computadora. Esto 
+     incluye, por ejemplo, la traducción automática 
+     de un idioma a otro, pero también el 
+     reconocimiento de palabras habladas o la 
+     respuesta automática a preguntas.
+     Ventajas de NLP
+    Ventajas de NLP
+     1. Ofrece respuestas exactas a las preguntas 
+       sin información no deseada
+     2. La precisión de la respuesta incrementa con 
+       la cantidad de información 
+     3. Se pueden obtener respuestas sobre 
+       cualquier tema
+     4. Fácil de implementar hoy dia
+     5. Es menos costoso que contratar personal
+     6. Permite realizar comparaciones 
+     7. Tiempos de respuesta al cliente optimizados
+    Desventajas de NLP
+    Desventajas de NLP
+     1. Si deseamos desarrollar modelos nuevos sin 
+       modelos pre entrenados puede tomar 
+       bastante tiempo entrenar
+     2. Diseñado para tareas únicas y específicas 
+     3. Puede que no puede dar respuesta a las 
+       preguntas deseadas si están mal redactadas
+     4. No es 100% de confiable, existe la 
+       posibilidad de error en su predicción y 
+       resultados
+     5. En algunos casos su implementación puede 
+       ser complejo
+       Para pensar
+   Ahora bien, ¿Han escuchado sobre alguna técnica 
+   de NLP?, ¿El algoritmo GPT-3 de AI lo han 
+   escuchado anteriormente?
+   Contesta en el chat de Zoom 
+      Expresiones 
+       regulares
+       Definición
+   Expresiones regulares
+    Las expresiones regulares (regex) son 
+    cadenas de texto codificadas que se 
+    utilizan como patrones. Comenzaron a 
+    surgir en la década de 1940 como una 
+    forma de describir lenguajes, pero 
+    realmente comenzaron a aparecer en el 
+    mundo de la programación durante la 
+    década de 1970. El primer lugar donde se 
+    encontraron fue en el editor de texto QED 
+    escrito por Ken Thompson.
+      Aplicaciones
+   Validación
+    El uso más común de expresiones 
+    regulares es la validación de formularios, 
+    es decir, validación de correo electrónico, 
+    validación de contraseña, validación de 
+    número de teléfono y muchos otros 
+    campos del formulario.
+    Esto nos permite identificar inconsistencias 
+    que puedan existir en dichos formularios
+   Detalles de cuentas bancarias
+    Seguro han notado que cada banco tiene 
+    un código IFSC para sus diferentes 
+    sucursales que comienza con el nombre 
+    del banco. El número de la tarjeta de 
+    crédito consta de 16 dígitos y los primeros 
+    dígitos representan si la tarjeta es Master, 
+    Visa o Rupay. En todos estos casos, se usa 
+    regex con propósitos de validación
+   Minería de datos
+    Cuando los datos están presentes en forma 
+    no estructurada, es decir, en forma de 
+    texto, es necesario convertirlos en 
+    números para entrenar el modelo. Por lo 
+    tanto, regex juega un papel importante en 
+    el análisis de los datos, encuentra patrones 
+    en los datos y, finalmente, realiza 
+    operaciones en el conjunto de datos.
+   NLP
+    En el NLP una computadora entiende y 
+    genera el lenguaje humano. Las 
+    expresiones regulares se utilizan para 
+    eliminar las palabras innecesarias, es decir, 
+    detener las palabras del texto, lo que 
+    ayuda en la limpieza de datos. Regex 
+    también se usa para analizar los textos y, 
+    por lo tanto, ayuda en la predicción del 
+    algoritmo para procesar los datos.
+   Redes sociales
+    Las plataformas de redes sociales como 
+    Google, Facebook, Twitter brindan varias 
+    técnicas de búsqueda, que son diferentes y 
+    eficientes de una búsqueda normal. Si 
+    conocemos estas técnicas, podemos 
+    utilizar expresiones regulares en el 
+    backend para procesar estas búsquedas.
+       Ejemplos
+   Ejemplos
+    ● Si queremos extraer todos los números 
+      de un documento: “[0-9]+”
+    ● Si se quieren remover todos los 
+      caracteres que no son números: “[^0-
+      9]+”
+    ● Si queremos extraer palabras que 
+      empiezen por “A” y terminan en “h”: 
+      “^A[a-zA-Z]+h$”
+    ● Extraer correos electrónicos: “^[a-zA-Z]
+      [a-zA-Z0-9._+-]+@[A-Za-z]+.[A-Za-z]”
+       Ventajas y 
+      Desventajas
+       Ventajas y desventajas
+                            Ventajas                                 Desventajas
+                        Bastante flexibles                 Difíciles de leer ya que el contexto 
+                                                                      puede variar
+                      Procesamiento rápido               Dificultad en el debug si no hay match
+                   Independiente del lenguaje             Depende mucho de la calidad de los 
+                                                                         datos
+                Mucho trabajo en pocas líneas de        Se pueden cometer typos que dificultan 
+                              código                                   el análisis
+       Para pensar
+   ¿La regular expression [a-z] extrae solo 
+   las letras a y z de los documentos de 
+   análisis?
+   Verdadero/Falso 
+    Contesta en el chat de Zoom 
+     Para pensar
+  Falso
+  Recuerden que la expresión [a-z] permite 
+  extraer caracteres entre la a y la z de 
+  cualquier texto y no solo las letras a y z. 
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+      Bag of Words
+       Definición
+   Bag of Words
+    Un modelo de bolsa de palabras, o BoW, 
+    es una forma de extraer características 
+    del texto para usar en el modelado, 
+    como con algoritmos de aprendizaje 
+    automático.
+    El enfoque es muy simple y flexible, y se 
+    puede usar de muchas maneras para 
+    extraer características de los 
+    documentos.
+   Bag of words
+    Una bolsa de palabras es una 
+    representación de texto que describe la 
+    ocurrencia de palabras dentro de un 
+    documento, lo cual implica dos cosas:
+     1. Un vocabulario de palabras 
+       conocidas.
+     2. Una medida de la presencia de 
+       palabras conocidas.
+   Bag of words
+    Un supuesto importante es que solo del 
+    contenido podemos aprender algo sobre 
+    el significado del documento.
+    La bolsa de palabras puede ser tan 
+    simple o compleja como queramos. La 
+    complejidad viene tanto al decidir cómo 
+    diseñar el vocabulario de palabras 
+    conocidas o cómo calificar la presencia 
+    de palabras conocidas.
+      Aplicaciones
+   NLP
+    El modelo de bolsa de palabras se usa 
+    ampliamente en el procesamiento del 
+    lenguaje natural y la recuperación de 
+    información (IR). También se usa con 
+    bastante frecuencia en los métodos de 
+    clasificación de documentos donde la 
+    frecuencia de aparición de cada palabra se 
+    usa como una característica para entrenar 
+    un clasificador.
+   Computer vision
+    El modelo de bolsa de palabras se puede 
+    utilizar en problemas de visión por 
+    computadora con el fin de detectar 
+    patrones, anomalías o secuencias 
+    específicas que pueden ser utilizadas para 
+    generar modelos de Machine Learning o 
+    Deep Learning 
+   Feature Generation
+    La aplicación práctica más común del 
+    modelo de bolsa de palabras es como 
+    herramienta para la generación de 
+    características (Feature Generation). 
+    Después de transformar el texto en una 
+    "bolsa de palabras", le será posible calcular 
+    varias medidas diferentes que se pueden 
+    usar para caracterizar el texto (e.g 
+    Frecuencia bruta o TF-IDF)
+        Ejemplo
+   Ejemplo
+    Paso 1: Recolección de datos
+    Supongamos que tenemos las siguientes 
+    respuestas:
+     1. “Fue el mejor de los tiempos”,
+     2. “fue el peor de los tiempos”,
+     3. “era la edad de la sabiduría”,
+     4. “era la edad de la locura”,
+   Ejemplo
+    Paso 2: Diseño del vocabulario
+    Generamos una lista de las palabras únicas 
+    (ignorando los signos de puntuación y si se 
+    quiere removiendo stopwords):
+    [Fue, el, mejor, de, los, tiempos, peor, 
+    era, la, edad, sabiduría, locura]
+    Este es un vocabulario de 12 palabras 
+    según el corpus y 24 palabras en total
+   Ejemplo
+   Paso 3: Crear vectores para el 
+   documento
+   Creamos un vector de score para cada 
+   documento:
+   [Fue, el, mejor, de, los, tiempos, peor, 
+   era, la, edad, sabiduría, locura]
+   “Fue el mejor de los tiempos” 
+   =[1,1,1,1,1,1,0,0,0,0,0,0]
+   “fue el peor de los tiempos” 
+   =[1,1,01,1,1,1,0,0,0,0,0]
+   Ejemplo
+   Se descarta todo orden de las palabras y 
+   tenemos una forma consistente de extraer 
+   características de cualquier documento en 
+   nuestro corpus, listo para usar en el 
+   modelado.
+   Los nuevos documentos que se superponen 
+   con el vocabulario de palabras conocidas, 
+   con palabras fuera del vocabulario, aún 
+   pueden codificarse, donde solo se puntúa la 
+   aparición de palabras conocidas
+       Ventajas y 
+      Desventajas
+                            Ventajas                                Desventajas
+              Bastante flexibles en diversos casos        El vocabulario requiere un diseño 
+                             de uso                                  cuidadoso.
+             Permite generar modelos elementales        Representaciones dispersas son más 
+                de las respuestas o documentos                  difíciles de modelar.
+                 Fácil de entender y programar               Cuando se cuenta con poca 
+                                                         información no es sencillo generar 
+                                                                       insights
+                 Puede ser utilizado en muchos          Al descartar el orden de las palabras 
+                       contextos aplicados                    ignoramos su significado
+    Introducción a NLTK
+       Definición
+   NLTK
+    NLTK es un set de herramientas creado 
+    para trabajar con NLP en Python. Nos 
+    proporciona varias bibliotecas de 
+    procesamiento de texto con muchos 
+    conjuntos de datos de prueba. Se puede 
+    realizar una variedad de tareas, como 
+    tokenización, visualización de árboles 
+    de análisis, etc. 
+     Funcionalidades
+   Funcionalidades
+    Nos permite realizar diferentes tareas 
+    como:
+    1. Tokenización
+    2. Conversión a Lower/Upper case
+    3. Remoción de Stopwords
+    4. Stemming
+    5. Lematización
+    6. Parse Tree o generación de sintaxis
+    7. POS Tagging
+   1) Tokenización
+    Es un proceso de desglose del texto en 
+    unidades más pequeñas se llama tokens. 
+    los tokens son una pequeña parte de ese 
+    texto. Si tenemos una oración, la idea es 
+    separar cada palabra y construir un 
+    vocabulario tal que podamos representar 
+    todas las palabras de manera única en 
+    una lista. Números, palabras, etc., todos 
+    caen bajo fichas.
+   2) Conversión Lower/Upper case
+    Queremos que nuestro modelo no se 
+    confunda al ver la misma palabra con 
+    diferentes casos, como uno que comienza 
+    con mayúscula y otro sin ella, e interpretar 
+    ambos de manera diferente. Así que 
+    convertimos usualmente todas las 
+    palabras a minúsculas o mayúsculas  para 
+    evitar la redundancia en la lista de tokens.
+   3) Remoción de Stopwords
+    Cuando usamos las características de un 
+    texto para modelar, encontraremos mucho 
+    ruido. Estas son las palabras vacías como 
+    yo, él, ella, etc., que no nos ayudan y 
+    simplemente se eliminan antes del 
+    procesamiento para un procesamiento 
+    más limpio dentro del modelo. Con NLTK 
+    podemos ver todas las palabras vacías 
+    disponibles en diversos idiomas.
+   4) Stemming
+    En nuestro texto podemos encontrar 
+    muchas palabras como jugando, jugaron, 
+    juego, etc… que tienen una raíz, jugar, 
+    todas transmiten el mismo significado. Así 
+    que podemos extraer la raíz de la palabra y 
+    eliminar el resto. Aquí, la raíz de la palabra 
+    formada se llama 'tallo (stem)' y no es 
+    necesariamente que el stem deba existir y 
+    tener un significado. Con solo cometer el 
+    sufijo y el prefijo, generamos las raíces.
+   5) Lemantización
+    Queremos extraer la forma base de la 
+    palabras con la Lemantización. La palabra 
+    extraída aquí se llama Lemma y está 
+    disponible en el diccionario. Tenemos el 
+    corpus de WordNet y el lema generado 
+    estará disponible en este corpus. NLTK nos 
+    proporciona WordNet Lemmatizer que 
+    utiliza la base de datos de WordNet para 
+    buscar lemas de palabras.
+   6) Parse Tree
+    Podemos definir la gramática de acuerdo 
+    con el idioma de interés y luego usar la 
+    librería NLTK con su metódo RegexpParser 
+    para extraer todas las partes del discurso 
+    (Parts of Speech) de la oración y dibujar por 
+    ejemplo árboles de decisión para visualizar 
+    las asociaciones.
+   7) POS Tagging
+    POS Tagging se utiliza en el procesamiento 
+    de texto para evitar la confusión entre dos 
+    mismas palabras que tienen significados 
+    diferentes. Con respecto a la definición y el 
+    contexto, le damos a cada palabra una 
+    etiqueta particular y las procesamos. Aquí 
+    se utilizan dos pasos:
+    1. Tokenizar texto (word_tokenize).
+    2. Aplicar pos_tag de NLTK.
+    Corpus, Document 
+    Term Matrix y Term 
+     Document Matrix
+        Corpus
+   Corpus
+    Un corpus es una colección de texto o 
+    audio auténtico organizado en conjuntos 
+    de datos. auténtico (texto escrito o audio 
+    hablado por un nativo del idioma o 
+    dialecto). Un corpus puede estar 
+    compuesto desde periódicos, novelas, 
+    recetas, transmisiones de radio hasta 
+    programas de televisión, películas y 
+    tweets.
+   Corpus
+    En NLP, un corpus contiene datos de 
+    texto y voz que se pueden usar para 
+    entrenar sistemas de inteligencia 
+    artificial y ML. Si un usuario tiene un 
+    problema u objetivo específico que desea 
+    abordar, necesitará una recopilación de 
+    datos que respalde, o al menos sea una 
+    representación de, lo que busca lograr 
+    con el aprendizaje automático y la PNL.
+   Características de un buen Corpus
+     1. Gran tamaño: mientras más grande 
+      mejores resultados se pueden obtener
+     2. Buena calidad de datos: errores 
+      pequeños de sintaxis pueden generar 
+      errores de gran escala en algoritmos
+     3. Datos limpios: se necesitan procesos 
+      de limpieza avanzados para evitar 
+      errores
+     4. Balance: mantener el balance es 
+      importante cuando se desean realizar 
+      predicciones
+   Problemas típicos al elaborar Corpus
+    A pesar de que es un concepto muy simple y 
+    genérico pueden ocurrir inconvenientes 
+    como:
+     1. Decidir el tipo de data a ser analizada 
+      puede ser complejo
+     2. Es necesario disponibilidad de datos
+     3. Se debe garantizar calidad en los datos
+     4. Hay que estar dispuestos a poder 
+      adecuar los datos en términos de la 
+      cantidad disponible (alto dinamismo)
+     Document Term 
+        Matrix
+   Document Term Matrix
+    Es una matriz matemática que describe la 
+    frecuencia de los términos que aparecen en 
+    una colección de documentos y donde:
+     1. Cada fila representa un documento
+     2. Cada columna representa un término 
+      (palabra)
+     3. Cada valor (típicamente) contiene el 
+      número de apariciones de ese término en 
+      ese documento
+   Document Term Matrix
+    Las matrices de términos de documento 
+    (Document Term Matrix)  a menudo se 
+    almacenan como un objeto de matriz 
+    dispersa o sparse por sus siglas en inglés. 
+    Estos objetos se pueden tratar como si 
+    fueran matrices (por ejemplo, acceder a filas 
+    y columnas), pero se almacenan en un 
+    formato más eficiente.
+     Term Document 
+        Matrix
+   Document Term Matrix
+    Term Document Matrix (TDM)  representa 
+    vectores de documentos en forma de matriz 
+    en la que las filas corresponden a los 
+    términos del documento, las columnas 
+    corresponden a los documentos del corpus y 
+    las celdas corresponden a los pesos de los 
+    términos. Es simplemente la transpuesta de 
+    la Document Term Matrix
+      TF-IDF score
+   TF-IDF score
+    Es una forma de valorar aquellos términos que no son tan comunes en el 
+    corpus (IDF relativamente alto), pero que aún tienen un nivel razonable de 
+    frecuencia (TF relativamente alto). Es la métrica utilizada con mayor 
+    frecuencia para calcular los pesos de los términos en un modelo de espacio 
+    vectorial.
+      Ejemplo en vivo
+   Analizaremos un ejemplo donde utilizaremos el 
+   NLP para encontrar insights y patrones 
+   interesantes para revisiones de películas de 
+   Amazon, crearemos n-grams, identificaremos 
+   palabras más relevantes en buenas y malas 
+   revisiones entre otras tareas.
+     Análisis descriptivo NLP
+     En esta oportunidad utilizaremos lo aprendido en clase 
+       para poner en práctica los conceptos de NLP
+             Duración: 15-20 mins
+       ACTIVIDAD EN CLASE
+    Análisis Descriptivo 
+    NLP
+    Nos reuniremos en breakout rooms y 
+    formaremos grupos. Se les propone:
+     ✔ Escoger 2 periódicos digitales con 
+       distintas temáticas (por ejemplo, uno 
+       que hable sobre economía y otro sobre 
+       deportes)
+     ✔ Copiar 5 a 10 titulares de la página 
+       principal y guardarlos en un csv
+     ✔ Utilizando la técnica bag of words deben 
+       identificar las 10 palabras más 
+       frecuentes para cada periódico
+      ¿Preguntas?
+       CLASE N°53
+       Glosario
+       NLP:se refiere a la rama de la inteligencia      Bag of Words:  es una forma de extraer 
+       artificial o IA, que se ocupa de brindar a       características del texto para usar en el 
+       las computadoras la capacidad de                 modelado, como con algoritmos de 
+       comprender textos y palabras habladas de         aprendizaje automático
+       la misma manera que lo hacen los seres 
+       humanos.                                         TF-IDF score: Es una forma de valorar 
+       .                                                aquellos términos que no son tan comunes 
+       Expresiones regulares: son cadenas de            en el corpus (IDF relativamente alto), pero 
+       texto codificadas que se utilizan como           que aún tienen un nivel razonable de 
+       patrones. Comenzaron a surgir en la              frecuencia (TF relativamente alto). Es la 
+       década de 1940 como una forma de                 métrica utilizada con mayor frecuencia 
+                                                        para calcular los pesos de los términos en 
+       describir lenguajes, pero realmente              un modelo de espacio vectorial.
+       comenzaron a aparecer en el mundo de la 
+       programación durante la década de 1970
+      Opina y valora 
+       esta clase
+                   Resumen 
+               de la clase hoy
+              ✓ Introducción a NLP
+              ✓ Expresiones regulares
+              ✓ Bag of Words (BoW)
+              ✓ Intro NLTK
+              ✓ Corpus, Document Term Matrix, Term Document 
+                Matrix
+        Muchas 
+        gracias.

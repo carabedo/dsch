@@ -1,0 +1,458 @@
+           ¡Les damos la 
+            bienvenida!
+               ¿Comenzamos?
+    Esta clase va a ser
+        grabad
+          a
+              Clase 0. DATA SCIENCE
+          Introducción a la 
+          Ciencia de Datos
+      Temario
+                                               00                     01
+                                        Introducción a        La necesidad de 
+                                         la Ciencia de         Información en 
+                                             Datos             la Industria 4.0
+                                        ✓ Ciencia de             ✓ Industria 4.0
+                                            datos                ✓ Transformación 
+                                                                    digital
+                                        ✓ Ciclo de vida          ✓  Ciclo de vida de 
+                                            de los                  un proyecto de 
+                                            proyectos               ciencia de datos
+                                                                 ✓  Valor y retorno 
+                                        ✓ Tipos de Data             de la Ciencia de 
+                                            Science                 Datos
+                                                                 ✓ Estrategia data-
+                                        ✓ Importancia               driven
+    Objetivos de la clase
+                 Comprender la definición de Data Science.
+                 Identificar los roles que cumplen las personas 
+                 con el rol de Data Scientist.
+                 Identificar qué habilidades son importantes 
+                 para poder cumplir con este cargo.
+        MAPA DE CONCEPTOS
+                                                 ¿Qué hacen los 
+                                                 DS?
+                              Ciencia de datos   Habilidades 
+                                                 necesarias
+                                                 Características de 
+                              Transformación     la industria 4.0
+                              Digital
+        Introducción a la 
+        ciencia de datos
+                              Ciclo de vida de un 
+                              proyecto de ciencia 
+                              de datos
+                              Valor y retorno de la 
+                              ciencia de datos
+                              Estrategia Data 
+                              Driven
+       Ciencia de
+        Datos
+       Definición
+       Data Science
+       Es un campo interdisciplinario que utiliza        Es un campo que combina dominio del 
+       métodos científicos, procesos, algoritmos         tema, habilidades de programación y 
+       y sistemas con el fin de extraer                  conocimiento de matemáticas y 
+       conocimientos e insights de datos                 estadística
+       estructurados, no estructurados y 
+       semiestructurados. 
+       Fuente: Cambridge
+                        REEMPLAZAR 
+                        POR IMAGEN
+    Data Science
+                                     Existen muchas 
+                                     creencias de que es 
+                                     lo que realmente 
+                                     hace un Data 
+                                     Scientist, es por esto 
+                                     que a continuación 
+                                     aclararemos los roles 
+                                     que implica este 
+                                     cargo.
+      ¿Qué hacen los 
+    científicos de Datos?
+    ¿Qué hacen los 
+    científicos de 
+    datos?
+    Un flujo de trabajo típico para los Data Scientist es 
+    el siguiente:
+     ✔ Entender el negocio
+     ✔ Recolectar y Explorar los datos
+     ✔ Preparar y procesar los datos
+     ✔ Crear y validar modelos
+     ✔ Desplegar y monitorear performance de 
+      algoritmos
+     ¿Qué habilidades 
+      requieren los 
+    científicos de Datos?
+                      ¿Qué habilidades 
+                      requiere un 
+                      científico de 
+                      datos?
+                      1. Inquisitivo: es una persona curiosa y algunas 
+                      veces escéptica
+                      2. Conocimiento sólidos: en Machine Learning, 
+                      computación, matemáticas, estadística y probabilidad
+                      3. Método científico: crea hipótesis, las pone a 
+                      prueba y actualiza su entendimiento de los 
+                      problemas
+                      4.  Habilidades en programación: es bueno 
+                      realizando códigos, hacking y en la programación en 
+                      general
+                      5. Productos orientados: sabe como desarrollar 
+                      productos asociados a data y visualizaciones para 
+                      hacer los datos más entendibles para cualquier 
+                      persona
+                      6. Conocimiento del dominio: entiende los 
+                      negocios y cómo contar historias interesantes 
+                      (Storytelling), es capaz de responder preguntas. 
+       Data Team
+                       Data Team
+       REEMPLAZAR      Es el grupo de roles dentro de una organización que se 
+       POR IMAGEN      encargan de todo el proceso de manipulación, 
+                       estructuración y generación de insights a partir de los 
+                       datos disponibles. Está compuesto usualmente de 3 
+                       roles importantes:
+                       ✔ Data Scientist
+                       ✔ Data Engineers
+                       ✔ Data Analysts
+       Data Scientist
+        Es capaz de tomar proyectos de Data Science desde el                 REEMPLAZAR 
+        inicio al fin. Pueden almacenar grandes cantidades de                 POR IMAGEN
+        información, crear modelos predictivos y presentar 
+        resultados. 
+        Skills: Matemáticas, Programación y Comunicación
+        Software comúnmente usado: SQL, Python, R
+                       Data Engineers
+                       Son personas versátiles capaces de usar la ciencia de 
+                       computación para procesar grandes cantidades de 
+                       datos. Se enfocan en procesos de código, limpieza de 
+                       datos e implementar solicitudes de los data Scientists
+                       Skills: Matemáticas, Programación y Big Data
+                       Software comúnmente usado: Hadoop, NoSQL, 
+                       Python
+    Data Analysts
+    Son personas que ayudan a otras personas dentro de la 
+    compañía a entender solicitudes específicas por medio 
+    de gráficas y resúmenes numéricos.
+    Skills: Estadística, Comunicación y Entendimiento del 
+    negocio
+    Software comúnmente usado: Excel, Tableau, SQL
+    Ciclo de vida de los 
+      proyectos en
+     Ciencia de Datos
+       Ciclo de vida de proyectos 
+        Existen 9 etapas fundamentales:                ✔ Evaluación
+          ✔ Entendimiento del problema                 ✔ Generación de insights y reportes
+          ✔ Recolección de datos                       ✔ Despliegue
+          ✔ Preprocesamiento de datos                  ✔ Toma de decisiones 
+          ✔ Analizando los datos
+          ✔ Modelamiento                             Explicaremos brevemente cada etapa 
+                                                     a continuación
+    1. 
+    Entendimiento 
+    Se requiere tener claro el contexto de negocio que 
+    del problema
+    se analiza para poder responder las preguntas 
+    relevantes que puedan existir. Usualmente, 
+    aplicamos Data Science para resolver 5 preguntas:
+     ✔ ¿Cuánto o cuántos? (Regresión)
+     ✔ ¿Cuál categoría? (Clasificación)
+     ✔ ¿Qué grupo? (Clustering)
+     ✔ ¿Es raro? (Detección anomalías)
+     ✔ ¿Qué opción deberíamos tomar 
+       (Recomendaciones)?
+                     1. 
+                     Entendimiento 
+                     del problema
+                     Algunas preguntas que se han hecho algunos negocios 
+                     útiles por ejemplo son:
+                     Uber: ¿Qué porcentaje del tiempo los conductores 
+                     realmente conducen? ¿Qué tan estable es su ingreso?
+                     Oyo Hotels: ¿Cuál es el promedio de ocupación de 
+                     hoteles mediocres?
+                     Alibaba: ¿Cuáles son las ganancias por pie cuadrado 
+                     de nuestros almacenes?
+    2. Recolección 
+    de datos
+    Los datos recolectados deben permitir resolver las 
+    preguntas y pueden venir de diferentes fuentes, 
+    algunos ejemplos de fuentes de datos son:
+     ✔ Formato plano (Excel, CSV, Texto, XML, JSON)
+     ✔ Bases de datos relacionales
+     ✔ Bases de datos no relacionales
+     ✔ Data de Web Scraping
+    El concepto de Big Data implica Volumen 
+    (Terabytes), Velocidad (Data en Streaming) y 
+    Variedad (Estructurado, No estructurado y semi 
+    estructurada)
+                     3. 
+                     Preprocesamiento 
+                     de datos
+                     Se conoce como Data Wrangling y es la tarea que 
+                     usualmente toma más tiempo.  Aquí se entienden 
+                     mejor los datos y se preparan para análisis posteriores. 
+                     Limpiar datos esencialmente implica remover 
+                     discrepancias de tus datos (nulos, outliers, duplicados).
+                     Es la etapa más importante en todo el ciclo, ya que los 
+                     modelos usualmente son tan buenos como los datos 
+                     con los que son entrenados. 
+    4. Análisis de 
+    datos
+    Se conoce como Exploratory Data Analysis (EDA) y 
+    no hay reglas exactas de como hacerlo.
+    Se necesita de conocimientos en estadística para 
+    presentar resúmenes numéricos y gráficas 
+    apropiadas de acuerdo a la naturaleza de las 
+    variables analizadas
+    Existen diversos tipos de analítica de datos que se 
+    pueden aplicar de acuerdo con los datos y el 
+    problema a resolver.
+                       4. Análisis de 
+                       datos
+                        1. Analítica descriptiva: que ha pasado en el 
+                         pasado y tiene carácter meramente exploratorio
+                        2. Analítica predictiva: que podría pasar en el 
+                         futuro, se pueden usar técnicas estadísticas o de 
+                         Machine Learning para estimar el futuro
+                        3. Analítica Prescriptiva: que deberíamos hacer, 
+                         podemos usar métodos de optimización o 
+                         simulación para tomar decisiones y describir 
+                         posibles resultados 
+     5. 
+      Es una de las etapas más interesantes. Se usa 
+     Modelamiento
+      para encontrar patrones y comportamientos en 
+      los datos. Esto se puede lograr de dos formas 
+      usualmente
+       1. Modelamiento descriptivo (No 
+        Supervisado): que nos permite encontrar 
+        grupos y patrones ocultos
+       2. Modelamiento predictivo (supervisado): 
+        obtener predicciones futuras con base en 
+        información del pasado
+                       6. Evaluación
+                       En esta etapa se cuantifica el desempeño del modelo 
+                       creado previamente. Para esto se dividen los datos 
+                       en dos partes: train/entrenamiento (70%) que 
+                       permiten calibrar los modelos y test/validación 
+                       (30%) que permiten obtener las métricas 
+                       correspondiente
+                       Las métricas elegidas varían de acuerdo al algoritmo 
+                       elegido, existen medidas tanto para clasificación 
+                       como para regresión
+    7. Generación 
+    de insights y 
+    Se presentan los resultados a diferentes tipos de 
+    reportes
+    audiencias a través de reportes o tableros. Existen 
+    diferentes herramientas para esto, por ejemplo:
+     ✔ Tableau
+     ✔ Power BI
+     ✔ R- ggplot2, lattice, Shiny
+     ✔ Python- Matplotlib, Seaborn, Plotly, Dash
+     ✔ Kibana
+     ✔ Grafana
+     ✔ Spotfire
+     8. Despliegue
+     Se pone en producción (a disposición de, por ejemplo, el equipo de 
+     ventas) la herramienta desarrollada en las etapas previas. Algunos 
+     Frameworks útiles son:
+      ✓ Flask
+      ✓ Django
+      ✓ FastAPI
+     Algunos proveedores en la nube son:
+      ✓ AWS
+      ✓ Azure
+      ✓ Google Cloud
+    9. Toma de 
+    decisiones
+    En esta etapa es posible la toma de decisiones con 
+    base en insights. De igual forma al realizar el 
+    proceso podemos aprender de resultados positivos o 
+    negativos que puedan ocurrir.
+    Con toda esta información es posible tomar 
+    decisiones operativas con el fin de mejorar los 
+    diferentes procesos dentro de cualquier 
+    organización.
+                 ☕
+               Break
+               ¡10 minutos y 
+                volvemos!
+       Tipos de 
+      Data Science
+      Clasificación
+    Clasificación
+    De acuerdo a la naturaleza de las tareas 
+    desarrolladas podemos tener dos tipos de 
+    Data Science, los cuales son:
+     ✔ Data Science para humanos
+     ✔ Data Science para máquinas
+     Data Science para 
+       humanos
+                       Data Science 
+                       para humanos
+                       La cual se refiere al uso de la información por parte de 
+                       tomadores de decisiones como ejecutivos o managers.
+                       El rol del Data Scientist es por ende diseñar, definir e 
+                       implementar métricas además de desarrollar e 
+                       interpretar experimentos, crear dashboards y obtener 
+                       inferencias causales para poder generar sistemas de 
+                       recomendación 
+    Data Science 
+    para humanos
+    Procesos que permiten el buen desarrollo de este 
+    proceso:
+     ✔ Data analysis
+     ✔ Data visualization
+     ✔ Data Storytelling
+     ✔ Entendimiento de negocio
+     ✔ Capacidad de presentar
+     ✔ Predicción de resultados deseados
+     Data Science para 
+       máquinas
+                       Data Science 
+                       para máquinas
+                       Donde los consumidores finales son máquinas que se 
+                       alimentan de datos, modelos y algoritmos.
+                       Dependiendo del nivel de dificultad detrás se puede 
+                       hablar de productos que se pueden desplegar en el 
+                       sistema de producción o también pueden ser prototipos 
+                       que se pueden optimizar 
+    Data Science 
+    para máquinas
+    Procesos que permiten el buen desarrollo de este 
+    proceso:
+     ✔ Modelamiento automático
+     ✔ Inteligencia artificial
+     ✔ ETL
+     ✔ Data Engineering
+     ✔ Software Engineering
+     ✔ Arquitecturas de optimización
+     Importancia de
+      Data Science
+       ¿Por qué la ciencia 
+       de datos es 
+       importante?
+       Cada negocio tiene datos pero su valor         Nos permite conocer mejor a nuestros 
+       comercial depende de qué tanto conocen         clientes, y puede ayudar a optimizar 
+       esos datos.                                    nuestros procesos con el fin de tomar 
+                                                      mejores decisiones.
+       Data Science ha ganado importancia en 
+       tiempos recientes porque ayuda a 
+       incrementar el valor comercial de los 
+       datos disponibles y cómo se pueden 
+       utilizar para tomar ventaja respecto a los 
+       competidores.
+    Ejemplos de la vida 
+         real
+    LYNA
+    Recientemente, han desarrollado una herramienta 
+    llamada LYNA para identificar cáncer de mama. 
+    Estos tumores pueden ser difíciles de detectar por el 
+    ojo humano especialmente cuando apenas se está 
+    desarrollando el tumor y es pequeño. 
+    El algoritmo desarrollado en LYNA tienen un 
+    accuracy de cerca del 99% a la hora de detectar 
+    este tipo de cáncer y a pesar de que se requiere de 
+    mejoras ya en algunos hospitales se usa.
+                       Clue
+                       Esta es una aplicación desarrollada en Alemania que 
+                       utiliza Data Science con el fin de pronosticar los ciclos 
+                       menstruales registrando diversas variables 
+                       importantes. 
+                       Los usuarios se les notifica cuando son fértiles en la 
+                       cúspide de un periodo o en su defecto cuando tienen 
+                       un riesgo elevado de padecer afecciones como 
+                       embarazos ectópicos (óvulo fecundado crece fuera de 
+                       cavidad principal del útero). 
+    UPS
+    Utilizan Data Science para optimizar el transporte 
+    de paquetes. Para esto utilizan Herramientas de 
+    Planeación interconectada (NPT) que incorpora 
+    Machine Learning e IA para poder superponerse a 
+    las diferentes dificultades de la logística y ante 
+    adversidades climáticas
+    A través de este sistema se sugieren rutas para la 
+    entrega de los diferentes paquetes, usando esta 
+    plataforma la compañía ha ahorrado entre 100 a 
+    200 millones de USD en 20210
+                       Moneyball-ING 
+                       El club de fútbol Liverpool FC el cual es conocido por su 
+                       exitoso presente ha utilizado Data Science para su 
+                       beneficio. Al igual que el equipo Oakland A’s ha logrado 
+                       conseguir muy buenos jugadores antes de que otros 
+                       equipos ricos se den cuenta de que existen.
+                       Para esto utilizan un modelo que es capaz de 
+                       cuantificar el desempeño de cada jugador teniendo en 
+                       cuenta pases, velocidad, distancia recorrida e 
+                       influencia general en asistencias y goles, así como su 
+                       influencia en victorias.
+    Airbnb
+    La Ciencia de datos ayudó a renovar por completo la 
+    función de búsqueda de Airbnb. antes se priorizaron 
+    los alquileres mejor calificados ubicados a cierta 
+    distancia del dentro de las ciudades, eso implicaba 
+    conseguir alquileres buenos pero no siempre en los 
+    mejores vecindarios
+    Se resuelve este problema con un truco, el cual fue 
+    dar prioridad a los alquileres en lugares que tienen 
+    una alta densidad de reservas Airbnb, aunque aún 
+    hay algunas dificultades por mejorar 
+                       Uber Eats
+                       El objetivo principal de este servicio es llevar la comida 
+                       caliente lo más rápido posible. Para cumplir con esto 
+                       utilizan Machine Learning, modelos estadísticos junto 
+                       con un staff meteorológico. 
+                       Con el fin de optimizar el proceso de delivery el equipo 
+                       tiene que predecir como cada posible variable (desde 
+                       tormentas hasta cumpleaños) impactan en el tráfico y 
+                       el tiempo de cocina. 
+    Instagram
+    Instagram utiliza la ciencia de datos para orientar 
+    sus publicaciones patrocinadas. Los científicos de 
+    datos extraen información de Instagram y Facebook 
+    que tienen una estructura de seguimiento web 
+    exhaustiva sobre muchos usuarios.
+    A partir de esto el equipo elabora algoritmos que 
+    convierten los me gusta y comentarios, uso de otras 
+    aplicaciones e historial web para generar 
+    predicciones de productos que podrían comprar 
+                       Meta
+                       Meta usa la ciencia de datos de varias maneras, pero 
+                       una de sus funciones más populares es la barra lateral 
+                       "Personas que quizás conozcas", que aparece en la 
+                       pantalla de inicio de la red social. 
+                       Se basa en la lista de amigos, las personas con las que 
+                       han sido etiquetados en las fotos y dónde han 
+                       trabajado y estudiado. También se basa en 
+                       "matemáticas" en donde la ciencia de redes es usada 
+                       para el crecimiento de la red social de un usuario en 
+                       función del crecimiento de las redes de usuarios 
+                       similares.
+       CLASE N°0
+       Glosario
+       Data Science: campo interdisciplinario       Data Engineers: personas versátiles 
+       que utiliza métodos científicos, procesos,   capaces de usar la ciencia de 
+       algoritmos y sistemas con el fin de          computación para procesar grandes 
+       extraer conocimientos e insights de datos    cantidades de datos. Se enfocan en 
+       estructurados, no estructurados y            procesos de código, limpieza de datos e 
+       semiestructurados                            implementar solicitudes de los data 
+       Data Scientist: persona que es capaz de      Scientists.
+       tomar proyectos de Data Science desde el     Data Analysts: personas que ayudan a 
+       inicio al fin. Pueden almacenar grandes      otras personas dentro de la compañía a 
+       cantidad de información, crear modelos       entender solicitudes específicas por 
+       predictivos y presentar resultados.          medio de gráficas y resúmenes 
+                                                    numéricos.
+      ¿Preguntas?
+                   Resumen 
+               de la clase hoy
+              ✓ Ciencia de datos
+              ✓  Ciclo de vida de los proyectos de ciencia de 
+                datos
+              ✓ Tipos de Data Science
+              ✓ Importancia de Data Science
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.

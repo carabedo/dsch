@@ -1,0 +1,468 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 40. DATA SCIENCE
+       Introducción a Machine 
+                Learning
+       Temario
+                          39                         40                         41
+                      En foco...             Introducción a             Algoritmos de 
+                                                 Machine                 clasificación
+                                                 Learning
+                    ✓ Data                   ✓  Marco CRISP-DM y la fase 
+                       Acquisition              de Machine Learning y 
+                                                modelado                 ✓ KNN
+                    ✓ Data Wrangling         ✓  Scikit Learn             ✓ Random Forest
+                    ✓ EDA                    ✓  Técnicas de Encoding     ✓ Regresión 
+                                             ✓  Feature Engineering          Logística 
+                    ✓ Análisis 
+                       estadístico           ✓  Flujo de trabajo 
+    Objetivos de la clase
+                 Introducir el concepto de Machine Learning
+                 Enfatizar la importancia del encoding de 
+                 variables y la ingeniería de atributos
+        MAPA DE CONCEPTOS
+          Scikit Learn           Marco CRISP-           Ingeniería de 
+                                    DM                    atributos
+                              Introducción a 
+                                 Machine 
+                                 Learning
+          Encoding                                      Flujo de trabajo
+            Repaso
+                     Les proponemos tomarse unos minutos 
+                     para realizar un repaso de los conceptos 
+                      aprendidos en Kahoot, ¿están listos?
+                          Profe, puedes compartir el 
+                           PIN o link de acceso al 
+                                juego
+        Actividad colaborativa
+   Recolectando datos
+    Simularemos pertenecer al equipo de marketing de 
+    una empresa de cosméticos e intentaremos 
+    encontrar patrones demográficos que indican a qué 
+    persona se le podría vender delineador de ojos
+    A través de la siguiente encuesta recolectamos 
+    datos para su posterior análisis 
+   Duración: 5 minutos
+    Marco CRISP-DM y la 
+     fase de Machine 
+    Learning y modelo 
+     Marco CRISP-DM
+    Definición
+    CRISP-DM, que son las siglas de Cross-Industry Standard 
+    Process for Data Mining, es un método probado para 
+    orientar sus trabajos de minería de datos.
+     ● Como metodología, incluye descripciones de las 
+       fases normales de un proyecto, las tareas 
+       necesarias en cada fase y una explicación de las 
+       relaciones entre las tareas.
+     ● Como modelo de proceso, CRISP-DM ofrece un 
+       resumen del ciclo vital de minería de datos.
+    Contiene 6 fases importantes que se encuentran 
+    relacionadas. A continuación explicaremos cada una de 
+    ellas
+     Fases CRISP-DM
+      Fases CRISP-DM
+         1           2           3            4           5           6
+    Comprensión Comprensión Preparación   Modelado    Evaluación  Despliegue
+     del negocio  de datos    de datos
+    Comprensión del negocio
+    Es recomendable dedicar tiempo a explorar las 
+    expectativas de la organización con respecto al análisis 
+    de datos. Siempre es bueno involucrar a equipos 
+    interdisciplinarios para entablar discusiones sobre cual 
+    es el mejor camino a elegir.
+    Conocer el contexto y las razones por las cuales se 
+    realizan diferentes procesos hace que se pueda optimizar 
+    el tiempo y recursos valiosos en la compañía. 
+    Es bueno recopilar información acerca de la situación 
+    comercial actual y qué objetivos tiene la compañía a 
+    corto, mediano y largo plazo
+    Comprensión de datos
+    Esta fase involucra estudiar más de cerca los datos 
+    disponibles, esto es vital para evitar problemas durante la 
+    siguiente fase: Preparación de datos 
+    Es importante en esta fase acceder a los datos y 
+    explorarlos con ayuda de tablas y gráficos. Consiste de 4 
+    procesos fundamentales:
+     1. Recopilación
+     2. Descripción
+     3. Exploración 
+     4. Verificación de calidad 
+    Preparación de datos
+    Es un aspecto fundamental que requiere de bastante 
+    tiempo (entre 50-70% del tiempo total invertido). Algunas 
+    de las tareas involucradas en esta fase son:
+     1. Fusión de conjuntos y registros de datos
+     2. Selección de muestras de subconjuntos de datos
+     3. Agregación de registros
+     4. Derivación de nuevos atributos
+     5. Clasificación de los datos para modelado
+     6. Eliminación o sustitución de valores en blanco o 
+       perdidos
+     7. División en entrenamiento y prueba
+    Modelado
+    En esta fase se incorporan herramientas analiticas para 
+    lograr resolver las preguntas de interes
+    El modelado se hace en varias iteraciones, los analistas de 
+    datos usualmente ejecutan varios modelos utilizando los 
+    parámetros predeterminados y ajustan los parámetros o 
+    vuelven a la fase de preparación de datos para las 
+    manipulaciones necesarias 
+    Existen muchas formas de resolver un problema e incluso 
+    de pueden utilizar diversos modelos para resolver el 
+    mismo problema
+    Evaluación
+    Luego de implementar modelos se debe evaluar los 
+    resultados a través de criterios de rendimiento comercial 
+    que se deben establecer al inicio del proyecto. 
+    Esta fase es clave para asegurar que su organización 
+    puede usar los resultados que ha obtenido 
+    Las conclusiones o inferencias obtenidas de los modelos y 
+    del proceso se entienden como descubrimientos
+    Despliegue
+    Es el proceso que consiste en utilizar sus nuevos 
+    conocimientos para implementar las mejoras en su 
+    organización. 
+    En general la fase de despliegue CRISP-DM incluye dos 
+    tipos de actividades:
+     1. Planificación y control del despliegue de los 
+       resultados
+     2. Finalización de tareas de presentación como la 
+       producción de un informe final y la revisión de un 
+       proyecto (La presentación final se puede llevar a 
+       cabo a través de un dashboard)
+            Implementando 
+         metodología CRISP-DM
+     Evaluaremos un caso donde podremos implementar la 
+       metodología CRISP-DM con el fin de resolver un 
+                 problema
+              Duración: 15-20 min
+       ACTIVIDAD EN CLASE
+    Implementando 
+    metodología CRISP-DM
+     Descripción de la actividad. 
+     Tenemos el siguiente escenario: El dueño de un 
+     concesionario de autos recientemente ha escuchado 
+     que los negocios que no implementen técnicas de 
+     análisis de datos no podrán hacer parte de ciertos 
+     beneficios que proporciona el gobierno. Por esto 
+     contrata a un grupo de personas dedicadas a la ciencia 
+     de datos para que le ayuden a implementar una 
+     metodología CRISP-DM en su compañía con el fin de 
+     maximizar las ventas
+     Importante: El concesionario lleva todos sus registros 
+     de manera manual desde su creación en 1975
+     Tiempo estimado 15-20 min
+            ACTIVIDAD EN CLASE
+       Implementando 
+       metodología CRISP-DM
+         Descripción de la actividad. 
+         Rellenar la siguiente tabla con propuestas para el 
+         dueño del concesionario
+                    Fase                 Sugerencias de 
+                                         implementación
+             Comprensión del negocio
+              Comprensión de datos
+               Preparación de datos
+                 Modelamiento
+              Evaluación y despliegue
+         Tiempo estimado 15-20min
+      Scikit-learn
+    Scikit-learn
+     Scikit-learn es probablemente la librería más útil para 
+     Machine Learning en Python, es de código abierto y es 
+     reutilizable en varios contextos. Proporciona además 
+        una gama de algoritmos de aprendizaje 
+       supervisados y no supervisados en Python.
+     Fue diseñado por David Cournapeau como un código de 
+        un proyecto en 2007, luego este trabajo fue 
+     complementado por Matthieu Brucher en 2010 con su 
+             primera versión beta 1.0
+       Librerías 
+      involucradas
+    Scikit-learn
+      Este librería está construida sobre SciPy (Scientific Python) e incluye las siguientes 
+                      librerías o paquetes:
+        Scikit-learn
+                Ipython:                                             NumPy: 
+                consola interactiva mejorada                         librería de matriz n-dimensional 
+                                                                     base
+                 SciPy:                                              Matplotlib: 
+                 librería fundamental para la informática            trazado completo 2D
+                 científica
+                 SymPy:                                              Pandas: 
+                 matemática simbólica                                estructura de datos y análisis
+   ¿Por qué elegir Scikit-
+        Learn?
+    ¿Por qué elegir Scikit-
+    Learn?
+      • Clustering.
+      • Ensemble  methods,  es  decir,  algoritmos  de 
+       aprendizaje supervisados y no supervisados.
+      • Validación cruzada, es decir, dispone de varios 
+       métodos  para  verificar  la  precisión  de  los 
+       modelos supervisados.
+      • Varios conjuntos de datos para prueba 
+      • Reducción de dimensionalidad
+      • Feature selection
+      • Ajuste de hiperparametros
+         Ventajas
+            1.  Interfaz consistente sin importar el 
+                entorno
+            2.  Variedad de modulos y algoritmos de ML 
+                y DL
+            3.  Posibilidad de extraer datos de varios 
+                repositorios (Github, Gitlab entre otro)
+            4.  Parametros de configuracion (parametros 
+                e hiperparametros)
+            5.  Documentación bien estructurada y fácil 
+                de seguir 
+            6.  Gran comunidad que brinda soporte y 
+                ayuda en diferentes foros y repositorios en 
+                la web
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+    Encoding: One Hot, 
+      Label Encoder, 
+      Getdummies
+    One Hot Encoding
+      Toman variables numéricas para medir la distancia. Sin embargo, existe la manera de 
+      trabajar con variables categóricas haciéndolas variables dummy, a través del uso de la 
+      técnica de transformación de datos One Hot Encoding (OHE). No permite convertir 
+                       strings directamente.
+    Label Encoder
+        Sin embargo One Hot Encoding es la única técnica para transformar variables 
+      categóricas, existe una alternativa para reducir el problema de multidimensionalidad 
+      cuando tenemos muchas categorías en una variable a través del uso de la técnica de 
+                transformación de datos Label Encoder (LE).
+    Getdummies()
+       Es un método similar a One Hot Encoding el cual transforma variables categórica en 
+       dummies. La diferencia es que One Hot Encoding almacena la transformación en un 
+      objeto. Una vez que se tiene la instancia OneHotEncoder(), se puede guardar para ser 
+           usada más tarde en las siguientes fases de manipulación de datos
+       Ventajas y 
+     desventajas de 
+      Getdummies()
+       Ventajas y Desventajas 
+       Getdummies()
+                          Ventajas                                  Desventajas
+           Es un método sencillo para convertir        Agrega muchas columnas binarias si 
+           categorías a números                        tienes muchas categorías en una 
+                                                       variable
+           No requiere que las categorías sean         Necesita aplicarse individualmente a 
+           mayores o iguales a cero como One Hot       cada columna o variable categórica
+           Encoding
+           Fue la primera versión de                   Requiere de mayor tiempo de ejecución
+           estandarización de variables categóricas
+      Ingeniería de 
+       atributos
+       Definición
+       Ingeniería de factores
+       También se le conoce como Feature Engineering
+         ● Proceso previo a la creación del modelo en el que 
+            se  hace  análisis,  limpieza  y  estructuración 
+            de los datos. 
+         ● El objetivo es eliminar los campos que no sirven 
+            para   hacer    la  predicción   y   organizarlos 
+            adecuadamente para que el modelo no reciba 
+            información que no le es útil y que podría 
+            provocar  predicciones  de  poca  calidad  o 
+            confianza. 
+    Procesos involucrados
+    La  ingeniería  de  factores  consiste  en  diferentes 
+    procesos:
+     ● Feature Creation
+     ● Transformaciones
+     ● Feature Extraction
+     ● Exploratory Data Analysis
+     ● Benchmark
+    A  continuación  explicaremos  un  poco  cada  uno  de 
+    estos procesos
+      Feature Creation
+       Es el proceso de crear nuevas variables con el 
+       fin de desarrollar modelos más eficientes. 
+       Esto se puede hacer añadiendo o removiendo 
+       algunas    variables,  incluso   condensando 
+       diferentes variables en una sola por medio de 
+       un indicador
+       Es  recomendable  no  añadir  muchas  más 
+       variables  de  las  que  se  tienen  en  cualquier 
+       dataset.
+      Transformaciones
+       Es el proceso de convertir variables por medio 
+       de algún proceso de escalamiento o encoding
+       El  objetivo  de  esta  tarea  es  poder  utilizar 
+       algunas  visualizaciones  para  identificar  si  es 
+       necesario incluir o remover ciertas variables del 
+       dataset original.
+       Se pueden utilizar diversas metodologías con el 
+       fin  de  optimizar  tiempos  de  ejecución  en 
+       algoritmos   como  One  Hot  Encoding  o 
+       LabelEncoder
+   Feature Extraction
+    Es el proceso de extraer variables o features de 
+    los  datasets  con  el  fin  de  identificar  qué 
+    información es útil.
+    Sin  distorsionar  las  relaciones  originales  o 
+    significativas, este proceso comprime la cantidad 
+    de  información  en  cantidades  manejables  para 
+    que  los  algoritmos  los  procesen  de  manera 
+    eficiente.
+    Se asocia a lo que se conoce como reducción de 
+    dimensionalidad como el PCA por ejemplo.
+   Exploratory Data Analysis
+    Es el proceso de obtener gráficos y resúmenes 
+    descriptivos de los datos con el fin de mejorar el 
+    entendimiento  de  la  data  explorando  sus 
+    propiedades
+    Esta técnica se aplica a menudo con el fin de 
+    poder testear hipótesis y encontrar patrones en 
+    los datos
+    Cobra  mayor  relevancia  en  datos  de  tipo 
+    cuantitativo  o  cualitativos  que  no  han  sido 
+    analizados previamente.
+        Benchmark
+         Es el proceso de crear un modelo de aprendizaje 
+         automático        fácil     de      utilizar,    confiable, 
+         transparente e interpretable. 
+         Usualmente  se  pueden  utilizar  diferentes  tipos 
+         de algoritmos para ver el desempeño individual 
+         de cada uno en los datos analizados  (eg redes 
+         neuronales,  máquinas  de  soporte  vectorial, 
+         clasificadores        lineales      y      no      lineales, 
+         bagging/boosting entre otros)
+      Técnicas más 
+       utilizadas
+   Imputación
+    Esta  técnica  busca  manejar  los  datos  nulos, 
+    existen dos tipos de imputación:
+     1. Numérica: para este caso se puede utilizar 
+      interpolación o alguna técnica de regresión, 
+      incluso se puede reemplazar por valores por 
+      defecto
+     2. Categórica:  una  alternativa  puede  ser 
+      utilizar la moda para reemplazar, también es 
+      posible crear una nueva categoría llamada 
+      “Desconocido”
+    Manejo de outliers
+    Esta  técnica  busca  remover  valores  atípicos  de  los 
+    datos. Existen diversas formas de poder hacerlo:
+    1. Remover: es algo no muy recomendable aunque 
+     depende  del  contexto  ya  que  puede  dejar  muy 
+     pocos datos para ser analizados
+    2. Reemplazar: se pueden reemplazar por la media 
+     o mediana entre otras opciones
+    3. Capping:  utilizar  valores  arbitrarios  de  una 
+     distribución
+    4. Discretización: convertir variables numéricas a 
+     categóricas  con  el  fin  de  evitar  la  influencia  de 
+     outliers
+      Transformaciones 
+      Existen muchas técnicas para realizar el procesos de 
+      numéricas
+      escalamiento   de    los  datos,   a   continuación 
+      mencionaremos las más utilizadas:
+       1. Logarítmica
+       2. StandardScaler
+       3. Min Max Scaler
+       4. Quantile Transformer
+       5. Robust Scaling
+       6. Absolute Maximum Scaling
+    Transformaciones 
+    categóricas
+    Para este proceso tenemos tres alternativas:
+    1. One Hot Encoding
+    2. Label Encoder
+    3. Conversión a variables dummies
+    Es  recomendable  que  cuando  se  tienen  pocas 
+    categorías  (<=4)  utilizar  One  Hot  Encoding  o  el 
+    método getdummies. Por otro lado, cuando se tienen 
+    muchas categorías (>4) se recomienda reducirlas y 
+    aplicar LabelEncoder 
+      Importancia
+   Importancia
+    El  Feature  Engineering  es  un  proceso  muy 
+    importante  para  Machine  y  Deep  Learning, 
+    donde es posible extraer, limpiar, filtrar y crear 
+    variables  artificiales  que  permiten  mejorar  el 
+    performance de modelos con el fin de obtener 
+    mejores resultados
+    Los  Data  Scientists  pasan  mucho  tiempo 
+    limpiando  y  organizando  datos  (~60%  del 
+    tiempo),  por  ende  es  importante  que  sean 
+    capaces de crear modelos reproducibles y con 
+    altos niveles de precisión
+   Importancia
+    Cuando  las  tareas  asociadas  a  Feature 
+    Engineering  se  realizan  de  forma  correcta,  el 
+    dataset resultante es óptimo y contiene todos los 
+    factores importantes que afectan el problema de 
+    negocio
+    Como resultado estos datasets se convierten en 
+    el  insumo  para  lograr  obtener  modelos  con 
+    mayor precisión de los cuales se pueden obtener 
+    más insights 
+     Flujo de trabajo
+       Flujo de trabajo
+           1             2              3             4              5              6
+        Definir     Recolectar      Preparar     Seleccionar    Entrenar y      Integrar
+       objetivo        datos       los datos      algoritmo       validar        modelo
+        Actividad colaborativa
+   Analizando datos de marketing
+    Utilizaremos los resultados de la encuesta que realizamos al 
+    inicio de la clase. Los estudiantes se dividirán en grupos (no más 
+    de 5 personas) y copiaran los resultados de la encuesta.
+    Se deben generar reglas para identificar si una persona usa o no 
+    delineador de ojos en base a las respuestas obtenidas
+    Las reglas las deben discutir como equipo y luego generarlas 
+    como funciones “if” en google sheets. Tener en cuenta el 
+    problema del “sesgo” (e.g mujer=delineador) y otros tipos de 
+    errores
+   Duración: 15 minutos
+      Ejemplo en vivo
+   Analizaremos el notebook llamado 
+   Clase_1.ipynb donde procesaremos la encuesta 
+   y entrenaremos un árbol de decisión que 
+   generará las reglas para determinar si alguien 
+   comprara o no delineador de ojos. Además 
+   evaluaremos qué tan bien funciona dicho arbol de 
+   decision
+     ¿Quieres saber más?
+     Te dejamos material 
+     ampliado de la clase
+         MATERIAL AMPLIADO
+     Recursos multimedia
+     Scikit-Learn
+      ✓ Machine Learning in Python | Scikit-Learn | Enlace
+      Disponible en nuestro repositorio.
+      ¿Preguntas?
+      CLASE N°40
+      Glosario
+      CRISP-DM: Cross-Industry Standard           Label Encoder: proceso mediante el cual 
+      Process for Data Mining, es un método       se realiza el encoding de variables 
+      probado para orientar trabajos de minería   categóricas de manera secuencial ideal 
+      de datos                                    para variables ordinales
+      Scikit-Learn: librería más útil para        Feature Creation: proceso en el cual se 
+      Machine Learning en Python, es de código    crean nuevas variables con el fin de 
+      abierto y es reutilizable en varios         desarrollar modelos más eficientes.
+      contextos                                   Feature Extraction: proceso de extraer 
+      One Hot Encoding: proceso mediante el       variables o features de los datasets con el 
+      cual se realiza el encoding de variables    fin de identificar qué información es útil.
+      categóricas en números utilizando 
+      variables dummys
+      Opina y valora 
+       esta clase
+                   Resumen 
+               de la clase hoy
+              ✓ Marco CRISP-DM y la fase de Machine Learning
+              ✓ Scikit Learn
+              ✓ Encoding: OneHot encoder, 
+                Labelencoder, .getdummies()
+              ✓ Ingeniería de atributos: concepto, ventajas y 
+                relevancia
+              ✓ Flujo de trabajo
+        Muchas 
+        gracias.

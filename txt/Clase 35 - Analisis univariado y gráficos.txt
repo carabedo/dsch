@@ -1,0 +1,380 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 35. DATA SCIENCE 
+       Análisis univariado y 
+               gráficos
+       Temario
+                           34                         35                         36
+                        GIS y                      Análisis            Análisis bivariado
+                 Datos espaciales               univariado y 
+                                                   gráficos
+                  ✓ GIS y Datos               ✓ Tipos de análisis         ✓ Análisis 
+                      Espaciales                  estadísticos                bivariado
+                  ✓ Mapas y                   ✓ Gráficos                  ✓
+                      animaciones de              estadísticos                Pasos a seguir
+                      Python                                              ✓ Tipos
+                  ✓ Uso de la librería 
+                      Plotly
+    Objetivos de la clase
+                 Identificar las particularidades del Análisis 
+                 univariado de datos
+                 Reconocer ejemplos y aplicaciones de Python
+       MAPA DE CONCEPTOS                  Tipos
+                         Análisis 
+                        univariado y 
+                         gráficos         Gráficos 
+                                         estadísticos
+                                        Pasos a seguir
+       Análisis          Análisis 
+     estadístico         bivariado        Tipos
+                                         Objetivos
+                         Análisis        Ventajas y 
+                        Multivariado     desventajas
+                                       Integración con R y 
+                                          PowerBI
+     Tipos de Análisis 
+       Estadístico
+       Definición
+       ¿Qué es el Análisis
+       estadístico?
+         Es  la  ciencia  de  recopilar,  explorar  y 
+         presentar grandes cantidades de datos para 
+         descubrir     patrones      y     tendencias 
+         subyacentes. 
+         Las estadísticas se aplican todos los días, en 
+         investigación,  industria  y  gobierno,  para 
+         volverse    más     científicas  sobre    las 
+         decisiones que deben tomarse. 
+      Tipos de datos 
+    análisis estadístico
+       Tipos de Análisis 
+       estadístico
+          En  el  mundo  de  la  Estadística,  se 
+          distinguen  tres  tipos  de  análisis 
+          principales  según  el  número  de 
+          variables     que       se     analicen 
+          conjuntamente. 
+          Podemos  destacar  el  análisis:   
+          Univariado,         Bivariado          y 
+          Multivariado.
+           
+          En  esta  clase,  nos  centraremos 
+          exclusivamente      en     el   análisis 
+          Univariado 
+    Análisis univariado
+    Consiste  en  el  análisis  de  cada  una  de  las 
+    variables estudiadas por separado, se basa 
+    exclusivamente en una única variable.
+    Es  el  análisis  más  básico  y  por  ende  más 
+    primario.  Se  considera  un  análisis  de  tipo 
+    Descriptivo y no relacional o de causalidad
+    Análisis univariado
+    Las técnicas más frecuentes de análisis 
+    univariado son la distribución de frecuencias 
+    para una tabla univariada y el análisis de las 
+    medidas de tendencia central de la variable 
+    (media, mediana, moda, varianza , desviación 
+    estándar, cuartiles entre otros). 
+       PARA RECORDAR
+    ¿Cuándo uso el análisis univariado?
+    Lo podemos usar cuando deseamos entender desde la 
+    exploración un conjunto de datos. Por ejemplo, cuando 
+    decimos que una persona pesa 95 kg 
+    independientemente de otra variable estamos en el 
+    análisis univariado.
+    De igual forma cuando hablamos de estadística 
+    univariada cuando decimos que el 23% de las 
+    personas son de un color de piel específico.
+    Análisis univariado
+    Este tipo de análisis ha sido muy criticado por 
+    su carácter univariado, ya que la realidad se 
+    presenta interconectada y relacionada. 
+    Por ejemplo existe una relación entre el peso y 
+    la talla de las personas o entre el interés y el 
+    rendimiento escolar, etc. 
+    Análisis univariado
+    Entonces  como  la  realidad  es  compleja,  necesitamos  métodos  más  rigurosos  para 
+    analizarla.
+    De allí surge la necesidad de métodos bivariados o multivariados.
+       Medidas de 
+     tendencia central
+       Medidas de 
+       tendencia central
+       Las   medidas  de  tendencia  central  se 
+       representan  a  través  de  un  número  que 
+       permite entender la región central de un 
+       conjunto  de  valores  de  datos.  Las  tres 
+       medidas de tendencia central más utilizadas 
+       son la media, la mediana y la moda.
+    Medidas de 
+    tendencia central
+                           En general la medida más común es la media. 
+                           Sin  embargo,  esta  medida  tiene  varios 
+                           problemas 
+                           (como que se deja influenciar por atípicos y es 
+                           poco  robusta).  Para  resolver  esto  existen 
+                           medidas como la Mediana. También la Moda 
+                           es una medida de lo más frecuente.
+    Medidas de 
+    tendencia central
+                           Sin embargo existen otras medidas que 
+                           permiten ponderar la importancia de las 
+                           observaciones como por ejemplo la media 
+                           ponderada. Otra medida robusta es la media 
+                           o mediana recortada (removiendo un % de 
+                           datos en la parte superior e inferior de los 
+                           datos). También existen otras medidas como la 
+                           media armónica y geometría con 
+                           aplicaciones en música y finanzas.
+    Medidas de 
+    tendencia central
+     Imaginen que tenemos un conjunto de estaturas 
+     de  personas  y  deseamos  saber  cual  es  el  valor 
+     representativo  de  las  alturas,  en  este  caso 
+     podemos  hacer  uso  de  las  medidas  de 
+     tendencia central. Es importante recordar que 
+     cuando  hay  presencia  de  outliers  no  es 
+     conveniente  usar  la  media  sino  más  bien  la 
+     mediana  o  la  media  recortada  para  evitar 
+     problemas  de  interpretación.  Para  este  caso 
+     tenemos 160cm como valor representativo.
+       Medidas de 
+      Localización
+    Medidas de Localización
+    Las medidas de localización son números que 
+    permiten  comprender  la  distribución  de 
+    los datos y cantidad de datos por debajo 
+    de cierto umbral. La medida más conocida 
+    son los cuartiles, sin embargo, existen muchas 
+    otras como los deciles y percentiles.
+    Medidas de Localización
+    Los cuartiles representan la distribución de los 
+    datos en 4 secciones iguales, el segundo cuartil 
+    representa la mediana .
+    Un percentil representa a cada uno de los 100 
+    grupos  iguales  en  que  se  puede  dividir  una 
+    población según la distribución de una variable.
+       Medidas de Localización
+         Como  ejemplo,  imaginemos  que  tenemos 
+         información  de  las  compras  de  unos 
+         individuos en dólares, lo cual se muestra en 
+         la figura de la derecha. Al ordenar de menor a 
+         mayor se nos solicita calcular el percentil 25, 
+         es decir el valor en la distribución que deja 
+         por debajo del 25% de los datos. Para este 
+         caso  el  valor  es  10.5$.  Esto  nos  permite 
+         después    comparar    cualquier   compra 
+         sabiendo esta referencia.
+       Medidas de 
+       Dispersión
+    Medidas de Dispersión
+    Una medida de dispersión estadística es un 
+    número real no negativo que es cero si todos los 
+    datos  son  iguales  y  aumenta  a  medida  que  los 
+    datos se vuelven más diversos.
+    La  mayoría  de  las  medidas  de  dispersión 
+    tienen las mismas unidades que la cantidad que 
+    se mide. Pueden ser de dos tipos: Absolutas y 
+    Relativas
+    Medidas de Dispersión 
+    Absolutas
+                        Las medidas de dispersión más comunes son la 
+                        varianza  y  la  desviación  estándar,  que 
+                        representan la variabilidad alrededor de un punto 
+                        central (la media). La desviación estándar es más 
+                        utilizada  porque  se  reporta  en  las  mismas 
+                        unidades  que  la  variable.  También  existen 
+                        medidas  robustas  a  atípicos  como  el  rango 
+                        intercuartílico (IQR)
+    Medidas de Dispersión 
+    Absolutas
+                        Otra medida muy común es el rango que es un 
+                        buen  indicador  de  variabilidad  cuando  se  tiene 
+                        una  distribución  sin  valores  extremos.  Por  otro 
+                        lado  existen  otras  medidas  como  la  media 
+                        absoluta de las desviaciones y la desviación 
+                        de cuartil que ayudan a comprender la varianza 
+                        del conjunto de datos. 
+       Medidas de Dispersión 
+       Relativas
+                                                 Las medidas relativas de dispersión, a diferencia 
+                                                 de las absolutas, se calculan como proporciones o 
+                                                 porcentajes; por ejemplo, una medida relativa de 
+                                                 dispersión  es  la  relación  entre  la  desviación 
+                                                 estándar y la media.
+                                                 Existen    algunos   otros   ejemplos    como  el 
+                                                 coeficiente  de  variación  y  la  desviación 
+                                                 cuartílica.
+    Medidas de Dispersión
+      Como ejemplo si graficamos la distribución de 
+      dos poblaciones respecto a su peso como en 
+      la  figura  de  la  derecha,  podemos  ver  que 
+      existe un grupo con mayor dispersión (azul), 
+      lo cual quiere decir que los valores para ese 
+      grupo  pueden  ser  muy  grandes  o  muy 
+      pequeños.  Caso  contrario  se  observa  en  el 
+      grupo  rojo  con  una  varianza  mucho  más 
+      pequeña. 
+       Medidas de 
+       Asimetría
+    Medidas de Asimetría
+     La asimetría se refiere a la distorsión de simetría. 
+     Una distribución, o conjunto de datos, es simétrico 
+     si  se  ve  igual  a  la  izquierda  y  a  la  derecha  del 
+     punto central.
+     Son medidas de tercer momento y nos permiten 
+     entender  si  es  que  la  distribución  de  valores 
+     numéricos es normal  o no.
+    Medidas de Dispersión 
+    Relativas
+                         Si  la  asimetría está entre -0.5 y 0.5 lo datos se 
+                         consideran  muy  similares  a  una  distribución 
+                         normal, si la asimetría está entre -1 y -0.5 y entre 
+                         0.5  y  1  se  considera  moderada  y  cuando  es 
+                         mayor  que  1  o  menor  que  <1  se  considera 
+                         altamente asimétrica.
+    Medidas de Asimetría
+     Es  curioso  pensar  que  en  la  vida  real  la 
+     mayoría  de  variables  son  asimétricas.  Un 
+     ejemplo cotidiano es el de la variable salario 
+     o ingresos, como podemos ver en la figura de 
+     la  derecha  se  tiene  una  asimetría  a 
+     derecha o positiva (debido a que hay pocos 
+     datos  en  los  valores  más  grandes  de  la 
+     variable)  lo  cual  hace  que  la  mayoría  de 
+     datos se concentre en los valores más bajos 
+     de la variable 
+    Medidas de Curtosis
+    Medidas de 
+    Curtosis
+    La curtosis es una característica de la distribución 
+    de  frecuencia/probabilidad  para  una  variable 
+    aleatoria.
+    Una  gran  curtosis  implica  una  mayor 
+    concentración de valores de la variable, tanto 
+    muy  próximos  a  las  medias  de  la  distribución 
+    (pico) como muy alejados de ella (colas).
+    Medidas de 
+    Curtosis
+                         En muchas ocasiones se reporta la curtosis como 
+                         exceso sumándole el valor de referencia 3 (normal 
+                         estándar). Es por esto que el valor de referencia 
+                         para comparar es 3. 
+         Medidas de Curtosis
+           La curtosis es una medida que tiene menor 
+           uso ya que es de cuarto momento (elevado a 
+           la    4)    y    permite      ver     el    grado     de 
+           apuntalamiento  de  una  variable  numérica. 
+           Esta medida tiene gran aplicación cuando se 
+           quiere  probar  si  una  variable  sigue  una 
+           distribución normal.
+                 Recordemos…
+                                  Tipos de variables
+                                  En general tenemos dos 
+                                  grandes grupos de 
+                                  variables: categóricos 
+                                  (nominal y ordinal) y 
+                                  numéricos (intervalo y 
+                                  razón). Todas las variables 
+                                  se pueden clasificar de esta 
+                                  forma con excepción de los 
+                                  booleanos que son un caso 
+                                  especial.
+    Gráficos estadísticos
+     Tipos de gráficos
+    Tipos de gráficos
+    Si pensamos en los gráficos que podemos utilizar para realizar un análisis univariado, se 
+    destacan los siguientes: 
+      Line Plots Histogramas   Bar Charts  Box Plots
+      (Gráficos de             (Gráficos de 
+       Líneas)                  barras)
+    Otros tipos de gráficos
+    Si pensamos en los gráficos que podemos utilizar para realizar un análisis univariado, se 
+    destacan los siguientes: 
+     Piecharts    Radarplots  Violinplot   Gráfico de 
+    (Diagrama de                            puntos
+      torta)
+     Distribución de 
+       frecuencias
+    Distribución de frecuencias
+    Podemos utilizar las tablas de distribución de 
+    frecuencias, con las que se pueden 
+    representar los datos de una manera más 
+    fácil para analizarlos.
+    Distribución de frecuencias
+    También es posible elaborar tablas de 
+    distribución de frecuencias para datos no 
+    agrupados y para datos agrupados. 
+    Estas últimas se utilizan cuando tenemos muchos 
+    datos.
+    Herramientas para 
+      hacer gráficos
+    Herramientas para gráficos
+    Las dos librerías core de Python para hacer 
+    gráficos son Matplotlib que es la librería 
+    base y Seaborn es una versión mejorada de 
+    Matplotlib. En clases pasadas revisamos el 
+    funcionamiento de estas librerías.
+    Herramientas para gráficos
+    Además existen otras librerías que permiten 
+    hacer gráficos dinámicos de alta calidad con 
+    diferentes herramientas de customización 
+    como Bokeh y Plotly. Además existen 
+    utilidades como ggplot que se pueden utilizar 
+    en Python y R.
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+      Ejemplo en vivo
+   Utilizaremos el notebook en la carpeta de clase junto 
+   con el archivo accidents.csv. 
+   Repasaremos las diferentes escalas de medida, 
+   como crear histogramas, series de tiempo, 
+   Piecharts y otros gráficos. 
+   Además revisaremos cómo calcular medidas de 
+   tendencia central, dispersión, asimetría y 
+   curtosis utilizando la librería Scipy.
+   Análisis univariado y gráficos
+      Aplicaremos los conocimientos aprendidos hasta el 
+          momento de Análisis univariado
+             Duración: 15-20 mins
+       ACTIVIDAD EN CLASE
+    Análisis univariado y 
+    gráficos
+    Se les propone reunirse en grupos de 3-4 personas en 
+    Break-out rooms y realizar el análisis univariado del 
+    dataset de Gapminder (GAP Dataset) y de Properati (
+    Datos Properati) que utilizamos en la clase pasada. 
+     ✔ Elegir algunas variables de cada dataset y luego 
+       seleccionar las medidas de resumen y gráficos 
+       apropiados según el caso.
+     ✔ Generar interpretaciones de los resultados 
+       obtenidos
+       CLASE N°35
+       Glosario
+       Análisis estadístico: ciencia de              Medidas de tendencia central: número 
+       recopilar, explorar y presentar grandes       que permite entender la región central 
+       cantidades de datos para descubrir            de un conjunto de valores de datos. 
+       patrones y tendencias subyacentes.            Las medidas más comunes son la media, 
+                                                     mediana, moda y cuartiles
+       Tipos de análisis estadísticos: tres 
+       tipos de según el número de variables         Medidas de localización: números que 
+       que se analicen conjuntamente. Podemos        permiten comprender la distribución de 
+       destacar el análisis:  Univariado,            los datos y cantidad de datos por 
+       Bivariado y Multivariado.                     debajo de cierto umbral. Las más 
+                                                     comunes son los cuartiles, percentiles y 
+       Análisis univariado: análisis de cada         deciles.
+       una de las variables estudiadas por 
+       separado, se basa exclusivamente en una 
+       única variable.
+      ¿Preguntas?
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.
+                   Resumen 
+               de la clase hoy
+              ✓ Tipos de análisis estadísticos
+              ✓ Gráficos estadísticos

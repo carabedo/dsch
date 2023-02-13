@@ -1,0 +1,498 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 17. DATA SCIENCE 
+       Estudios de casos de 
+        Modelos Analíticos II
+     Temario
+                   16                17                 18
+               Estudio de         Estudio de       Introducción al 
+                casos de           casos de          ML y la IA
+                modelos            modelos 
+               analíticos I      analíticos II
+              ✓ Casos de                            ✓ Introducción
+                 éxitos con      ✓ Introducción     ✓ Tipos de IA
+                 ciencias de     ✓ Casos de 
+                 datos              accidentes      ✓ Aplicaciones en 
+              ✓ Armado de                              la industria
+                 presentación 
+                 ejecutiva                          ✓ Riesgos 
+                                                       asociados
+    Objetivos de la clase
+                 Identificar formas de aplicación de Ciencia de 
+                 Datos en diferentes industrias
+                 Comparar las potencialidades de aplicación en 
+                 cada caso.
+        MAPA DE CONCEPTOS
+                                         Andreani      Future 
+                                                      Engineering
+                                        Medplaya      Analítica 
+          Casos de éxito                              predictiva
+          con Modelos 
+           Analíticos                    Amazon       Clicksteam
+                                       Caso accidente 
+                                         New York
+  Repaso en Kahoot
+      Introducción
+      PARA RECORDAR
+   Empecemos
+   Continuando con la clase de Estudios de Casos de 
+   Modelos Analíticos I en esta sesión veremos 
+   algunas aplicaciones adicionales del mundo de la 
+   Ciencia de Datos, en diferentes industrias. 
+       Andreani
+    Caso Andreani
+    Andreani es una empresa de servicios logísticos 
+    orientada a crear una red de logística social. Cuenta 
+    con más de 4734 colaboradores, 165 puntos de 
+    ventas, 103 sucursales en 86 localidades, etc.
+  Arquitectura de Datos actual
+       ML para Andreani
+       Desafío: Generar un Modelo de                    ¿Esto qué permite?
+       Predicción de tiempos de entrega.                ✓
+                                                           Avisarle al usuario cuando va a estar 
+       Objetivo: Predecir qué día va a llegar el           llegando su paquete. ������
+       paquete y en qué franja horaria                  ✓ Optimizar la logística de la empresa. ������
+       (mañana/tarde). Tanto para entrega por 
+       Sucursal como para entrega en Domicilio.         ✓ Incrementar la satisfacción y la 
+                                                           experiencia de usuario. ������
+       Para pensar
+   Si los objetivos se orientan a:
+   ✓ Predecir qué día va a llegar el paquete y en qué 
+     franja horaria. Tanto para entrega por Sucursal 
+     como para entrega en Domicilio.
+   ✓ Avisarle al usuario cuando va a estar llegando su 
+     paquete.
+   ✓ Optimizar la logística de la empresa.
+   ✓ Incrementar la satisfacción y la experiencia de 
+     usuario.  
+   ¿Qué solución se podría plantear desde el ML y 
+   por qué?
+   Contesta en el chat de Zoom 
+    Feature 
+    Engineering
+     ✓ Se entrenó el modelo usando 12 meses de 
+      historia.
+     ✓ Se consideró a la hora del diseño del algoritmo 
+      el escenario generado como contexto de la 
+      pandemia del Covid – 19.
+     ✓ Se realizó un proceso de Feature 
+      engineering. Ej: Tratamiento de outliers, 
+      valores missings, sampling, etc.
+       Medplaya
+    Caso Hoteles 
+    Medplaya
+    MedPlaya es una cadena hotelera 
+    especializada en vacaciones en la costa. 
+    Desde su página de internet se pueden 
+    alquilar excursiones, hoteles y atractivos 
+    turísticos en múltiples destinos del mundo 
+    como así también, contratar servicios de 
+    viajes.
+       Caso Hoteles Medplaya
+       Retos:                                         Objetivo:
+       La aparición de nuevos actores en el           Conocer exactamente qué reservas se 
+       sector hotelero que actúan como                cancelarán para maximizar la ocupación 
+       intermediarios ha supuesto al mismo            de la cadena de hoteles.
+       tiempo una oportunidad y un reto para el 
+       sector. Ej. Airbnb.
+       Para pensar
+    ¿Por qué es importante realizar este tipo de 
+   predicciones? 
+   Debido a que las habitaciones con mayor probabilidad 
+   de cancelación, se pueden poner a la venta o lanzar 
+   una oferta al cliente para maximizar los ingresos de la 
+   compañía.
+   ¿Cómo podríamos utilizar el ML para estas 
+   predicciones?
+   Contesta en el chat de Zoom 
+    Analítica Predictiva
+     ✓ Conocer con claridad qué reservas 
+       se cancelarán aumenta la eficiencia 
+       de las previsiones de ocupación. 
+     ✓ Permite tomar decisiones de 
+       negocio basadas en datos de la 
+       propia organización, no en 
+       intuiciones o estadísticas globales.
+     ✓ Al poner a la venta las habitaciones 
+       con probabilidad de cancelación se 
+       logra maximizar los ingresos de la 
+       compañía.
+       Modelo predictivo
+       Resulta importante mencionar que los         ¿Cómo se desarrolló y se implementó el 
+       riesgos se mitigan ya que utilizamos la      Modelo Predictivo?
+       confianza matemática de la previsión         En una primera fase se recogió toda la 
+       para gestionar solo aquellas reservas con    información histórica de las reservas para 
+       mayor probabilidad de ser canceladas.        analizar los perfiles de clientes y los 
+                                                    patrones de comportamiento de las 
+                                                    mismas: fechas de antelación, ocupantes, 
+                                                    régimen, tarifa, etc.
+       Con la data histórica de la compañía, se realizó 
+       un análisis de las reservas entrantes para poder 
+       determinar la predicción de cancelación. Dentro de 
+       este contexto, es importante destacar que la                          REEMPLAZAR 
+       predicción, se acompaña del % de probabilidad de                      POR IMAGEN
+       dicha  predicción. Lo que permite, tomar todas las 
+       decisiones de reventa en base a datos y criterios 
+       estrictamente de negocio balanceando riesgo y 
+       rentabilidad de forma personalizada.
+    Resultados y planes 
+    a futuro
+    Gracias a esta solución Medplaya recibió el 
+    premio de la Innovación Turística en la pasada 
+    Feria de Fitur ’19. Los resultados han 
+    demostrado que el % de acierto sobre el total 
+    de reservas es de un 80% aproximadamente 
+    y el porcentaje de aciertos de las 
+    cancelaciones es de un 67%. 
+    Los próximos planes pasan por incluir datos 
+    de pronóstico del tiempo e información de la 
+    competencia para mejorar los modelos 
+    predictivos.
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+        Amazon
+       Para pensar
+   Cuando Amazon recomienda un producto en su sitio, 
+   claramente no es coincidencia. Este gigante del e-
+   commerce conoce tan bien a sus clientes que puede 
+   realizar envíos incluso antes de que efectúen una 
+   compra. 
+   ¿Crees que se usa el análisis predictivo? 
+   ¿Con qué otras empresas se detectan 
+   Contesta en el chat de Zoom 
+   similitudes?
+    Caso Amazon
+    Amazon es una de las 500 mayores empresas de 
+    EE.UU. Desde que Jeff Bezos lanzó Amazon.com en 
+    1995, se ha hecho un progreso significativo en la 
+    oferta, en los sitios web y en la red internacional de 
+    distribución y servicio al cliente. En la actualidad, 
+    Amazon ofrece gran variedad de productos, desde 
+    libros o productos electrónicos, hasta raquetas de 
+    tenis, servicios de Cloud e incluso de Streaming como 
+    Amazon Prime. 
+       Clicksteams
+         Entonces, Amazon utiliza el análisis           Los sistemas de recomendación son muy 
+         predictivo para construir un sistema           conocidos por su uso en los entornos de 
+         de recomendación que sugiere                   sitios web de e-commerce, en los cuales 
+         productos a las personas que visitan el        utilizan las entradas acerca de los interés 
+         sitio. Para esto, utiliza datos de             de sus clientes para generar una lista de 
+         secuencias de clics (clicksteams) de           recomendaciones de items. 
+         clientes y los datos históricos de compras 
+         de sus clientes para mostrar a cada 
+         usuario, resultados personalizados en sus 
+         páginas web personalizadas.
+       Clicksteams en Amazon
+        Para crear una lista de recomendaciones,       El sistema de recomendaciones de 
+        muchos websites utilizan solo los items        Amazon se basa en una serie de 
+        que compran los clientes y explícitamente      elementos tales como: las compras de un 
+        el promedio en que éstos representan sus       usuario en tiempos pasados, los items 
+        interés, pero también pueden utilizar          que tiene en su carrito de compra virtual, 
+        otros atributos, incluyendo items vistos,      la clasificación de los items según su 
+        datos demográficos, asuntos de intereses       interés, y el top de los items que han 
+        y artistas favoritos.                          comprado o visitado. 
+       Algoritmos de 
+       recomendación
+       La mayoría de los algoritmos de recomendación                     REEMPLAZAR 
+       comienzan por encontrar un conjunto de clientes                    POR IMAGEN
+       cuyas compras y artículos clasificados coinciden 
+       con las compras y clasificación de  artículos de otros 
+       clientes. El algoritmo agrega artículos de estos 
+       clientes similares, elimina los elementos que el 
+       usuario ya ha comprado o clasificado y recomienda 
+       los productos que queden al usuario.
+      Enfoques de los 
+        sistemas de 
+       recomendación
+       Filtrado colaborativo
+        Si dos usuarios compartieron los mismos       En este tipo de recomendación, los ítems 
+        intereses en el pasado, ellos tendrán         son filtrados desde un gran conjunto de 
+        gustos similares en el futuro. Si, por        alternativas, que es hecho en 
+        ejemplo, el usuario A y el usuario B tienen   colaboración entre las preferencias 
+        el mismos historial de compras y el           de los usuarios y de allí, justamente se 
+        usuario A compró un libro que el usuario B    obtiene su nombre.
+        no ha comprado aún, la idea básica es 
+        proponerle el libro al usuario B.
+       Filtrado basado en 
+       Contenido
+        Este tipo de RS es empleado en                Por ejemplo, un escenario en el cual se 
+        dominios específicos donde el historial       está construyendo un sistema de 
+        de compras del usuario es muy pequeño.        recomendación para recomendar 
+        El algoritmo considera el conocimiento        artefactos eléctricos para el hogar, donde 
+        acerca de los ítems, tales como               muchos de los usuarios son nuevos. En 
+        características, preferencias de los          este caso, el sistema considera 
+        usuarios consultados explícitamente y         características de los ítems, y se 
+        criterios de recomendación, antes de dar      generan perfiles de los usuarios para 
+        una recomendación. La certeza del             obtener información adicional de los 
+        modelo es juzgado en lo útil que fueron       mismos, tales como especificaciones, 
+        para el usuario las recomendaciones           para luego realizar las recomendaciones. 
+        realizadas.
+       Para pensar
+   ¿Qué ejemplos de filtrado colaborativo conocen? Y, 
+   ¿Qué ejemplos de filtrado basado en contenidos se les 
+   ocurren?
+   Pensemos en qué estrategias permiten 
+   diferenciar uno del otro.
+   Contesta en el chat de Zoom 
+     Caso accidentes
+      en Nueva York
+       Ejemplo en vivo
+   ¿Cómo se imaginan diseñar una estrategia para 
+   reducir la cantidad de accidentes en las vías de una 
+   gran ciudad como New York? Estudiaremos un caso 
+   real aplicado donde podremos ver el uso de 
+   Feature Engineering
+   Utilizaremos el notebook  Clase_17.ipynb disponible 
+   en la carpeta de clase.
+      Fases importantes para la 
+      resolución de Casos en DS
+         1                2                  3                   4                 5
+  Definición de        Contexto          Problema            Contexto         Exploración
+     objetivo          comercial         comercial           analítico      de datos (EDA)
+      Fases importantes para la 
+      resolución de Casos en DS
+         6                7                 8                  9                 1
+                                                                                 0
+       Data         Selección del     Desarrollo de      Interpretación     Conclusiones
+   Engineering        algoritmo         algoritmo
+                      adecuado
+     Veamos cada fase 
+    aplicada a este caso
+    1.Definición de objetivo
+    ¿Cómo podemos controlar el creciente 
+    número de accidentes en Nueva York?
+    Definir el objetivo es una de las etapas 
+    más importantes porque es donde 
+    decidimos que queremos hacer
+       2.  Contexto comercial
+       La ciudad de Nueva York ha                   La ciudad te ha contratado para que 
+       experimentado un aumento en el               construyas visualizaciones que les ayuden 
+       número de accidentes en las carreteras       a identificar patrones en accidentes, lo 
+       de la ciudad. Quieren saber si el número     que les ayudaría a tomar acciones 
+       de accidentes ha aumentado en las            preventivas para reducir la cantidad de 
+       últimas semanas. Para todos los              accidentes en el futuro. Tienen ciertos 
+       accidentes reportados, han recopilado        parámetros como municipio, hora del día, 
+       detalles para cada accidente y han estado    motivo del accidente, etc. De los que se 
+       manteniendo registros durante el último      preocupan y de los que les gustaría 
+       año y medio (desde enero de 2018 hasta       obtener información específica.
+       agosto de 2019).
+       3.  Problema comercial
+       Tu tarea es manipular los datos                  ✓ ¿Cuál es la proporción de recuento 
+       disponibles y proporcionar visualizaciones           de accidentes por área por 
+       que respondan a las preguntas                        municipio? ¿Qué distritos tienen un 
+       específicas que tiene el cliente:                    número desproporcionadamente 
+         ✓ ¿Cómo ha fluctuado el número de                  grande de accidentes para su 
+            accidentes durante el último año y              tamaño?
+            medio? ¿Han aumentado con el                ✓ Para cada municipio, ¿Durante qué 
+            tiempo?                                         horas es más probable que ocurran 
+         ✓ Para un día en particular, ¿Durante              accidentes?
+            qué horas es más probable que               ✓ ¿Cuáles son las cinco principales 
+            ocurran accidentes?                             causas de accidentes en la ciudad? 
+         ✓ ¿Hay más accidentes entre semana                 ¿Qué tipo de vehículos están 
+            que durante los fines de semana?                involucrados?
+       4.  Contexto analítico
+       Se le proporciona un archivo .CSV                ✓ Extraer datos adicionales del 
+       (almacenado en la carpeta datos) que                municipio almacenados en un 
+       contiene detalles sobre cada accidente,             archivo JSON
+       por ejemplo, fecha, hora, ubicación del          ✓ Leer, transformar y preparar datos 
+       accidente, motivo del accidente, tipos de           para su visualización.
+       vehículos involucrados, recuento de 
+       lesiones y muertes. El delimitador en el         ✓ Realizar análisis y construir 
+       archivo .CSV dado es “;” en lugar del               visualizaciones de los datos para 
+       predeterminado “,” . Debe realizar las              identificar patrones.
+       siguientes tareas con los datos:
+                        Datos - columnas de 
+                                            interés
+               1. BOROUGH: el municipio en el que        9. NUMBER OF (CYCLISTS, 
+                   ocurrió el accidente                     MOTORISTS, PEDESTRIANS) 
+               2. COLLISION_ID: un identificador            INJURED: Lesión 
+                   único para esta colisión              10.NUMBER OF (CYCLISTS, 
+               3. CONTRIBUTING FACTOR                       MOTORISTS, PEDESTRIANS) 
+                   VEHICLE (1, 2, 3, 4, 5): Motivos         DEATHS: Categoría muerte 
+                   del accidente                         11.ON STREET NAME: Calle donde 
+               4. CROSS STREET NAME: Calle                  ocurrió el accidente
+                   transversal más cercana al lugar      12.VEHICLE TYPE CODE(1, 2, 3, 4, 
+                   del accidente                            5): Tipos de vehículos involucrados 
+               5. DATE: Fecha del accidente                 en el accidente
+               6. TIME: Hora del accidente               13.ZIP CODE: código postal del lugar 
+               7. LATITUDE: Latitud del accidente           del accidente
+               8. LONGITUDE: Longitud del 
+                   accidente
+     Datos - columnas de 
+         interés
+       5.  Exploratory Data 
+       Analysis
+       Notamos que agosto de 2019 es el mes       Sin tener en cuenta este mes, la menor 
+       con el menor número de accidentes, esto    cantidad de accidentes parece ocurrir en 
+       probablemente se deba al hecho de que      febrero. Este es el mes del año con las 
+       no hay un registro completo para este      temperaturas más bajas y las condiciones 
+       mes: max(df['DATE']) =                     de la carretera pueden complicarse un 
+       Timestamp('2019-08-24 00:00:00'). Es       poco. Por lo tanto, las personas pueden 
+       decir, falta toda la última semana de      preferir usar el transporte público y evitar 
+       datos.                                     salir tanto como sea posible debido al 
+                                                  clima frío. Esto contrasta con el verano, 
+                                                  donde las personas tienden a salir y 
+                                                  pueden ocurrir más accidentes.
+             Accidentes por mes
+                        REEMPLAZAR 
+                         POR VIDEO
+         Distribución de horas con 
+              mayor cantidad de 
+                    accidentes
+                        REEMPLAZAR 
+                         POR VIDEO
+    También podemos estratificar nuestros 
+    datos por género antes de realizar las 
+    visualizaciones anteriores:
+    Hay relativamente menos accidentes 
+    los fines de semana.
+    Podemos ver que Brooklyn y Queens 
+    tienen un número muy alto de 
+    accidentes en relación con los otros 
+    tres condados. Pero, ¿Qué tal por milla 
+    cuadrada? ������
+    Al mirar el parámetro 
+    accident_per_sq_mi, Manhattan 
+    encabeza la lista por un amplio 
+    margen. Esto muestra claramente que 
+    aunque Brooklyn y Queens tienen más 
+    accidentes totales, Manhattan tiene 
+    una concentración mucho mayor de 
+    accidentes.
+    6.  Data Engineering 
+    (Obtención de insights)
+    Podemos ver que en 
+    todos los distritos el 
+    recuento de accidentes 
+    es más alto 
+    aproximadamente entre 
+    las 2 y las 6 p.m. Pero 
+    en Manhattan y el 
+    Bronx, puede ver que no 
+    hay tanto aumento 
+    relativo durante estas 
+    horas como en Brooklyn 
+    o Queens. Además, 
+    Staten Island tiene el 
+    menor número total de 
+    accidentes.
+  5.  Desarrollo del 
+  algoritmo-método
+     Muertes por vehículo
+       9 y 10.  Interpretación de 
+       resultados y conclusiones
+          1. El gráfico de líneas que trazamos           3 Podemos ver que Brooklyn y 
+             muestra claramente que no hay una               Queens tienen un número muy alto 
+             tendencia alcista obvia en los                  de accidentes en relación con los 
+             accidentes a lo largo del tiempo.               otros tres condados.
+          2. Hay relativamente menos accidentes          4 Al mirar el parámetro 
+             los fines de semana que entre                   accident_per_sq_mi, Manhattan 
+             semana.                                         encabeza la lista por un amplio 
+                                                             margen. Esto muestra claramente 
+                                                             que aunque Brooklyn y Queens 
+                                                             tienen más accidentes totales, 
+                                                             Manhattan tiene una concentración 
+                                                             mucho mayor de accidentes.
+       9 y 10.  Interpretación de 
+       resultados y conclusiones
+         5 El recuento de accidentes es más alto     Causas principales de accidentes
+             aproximadamente entre las 2 y las 6 
+             p.m. Pero en Manhattan y el Bronx,        a. Driver Inattention/Distraction
+             puede ver que no hay tanto aumento        b. Failure to Yield Right-of-Way
+             relativo durante estas horas como en      c. Following Too Closely
+             Brooklyn o Queens. Además, Staten         d. Backing Unsafely
+             Island tiene el menor número total de     e. Passing Too Close
+             accidentes.
+         6 Podemos ver que Sedan y Station 
+             Wagon / Sport Utility Vehicle son 
+             claros ganadores por causar el mayor 
+             número de accidentes, y que esto no 
+             difiere entre los condados.
+                             4
+             Estructurando un 
+               Proyecto de DS 
+     Deberás entregar el cuarto avance de tu proyecto final. Continuaremos hablando sobre 
+                    (parte II)
+       lo trabajado en el desafío Estructurando un proyecto DS-Parte I. Crearás un 
+          notebook donde se resuelvan los siguientes apartados: i) Abstracto, ii) 
+     Preguntas/hipótesis, iii) EDA, iv) recomendaciones con base en insights observados y v) 
+      tener definido en el notebook las secciones: Objetivo, Contexto Comercial, Problema 
+           Comercial Contexto analítico y Exploratory Data Analysis (EDA)
+      Recordemos
+                                             Generamos hipótesis de interés
+            Desafío anterior:                Creamos visualizaciones y 
+       Estructurando un proyecto             resúmenes numéricos
+               DS- Parte 1
+                                            Encontramos patrones de interés
+                                            Exploratory Data Analysis (EDA)
+                                                          ������
+               DESAFÍO 
+               ENTREGABLE
+        Estructurando un 
+        Proyecto de DS (parte II)
+                                                                   Formato
+        Consigna                                                     ✓ Entregar un archivo con formato .ipynb. 
+        Deberás complementar la parte I con:                              Debe tener el nombre 
+          1.  Abstracto con motivación y audiencia                        “ProyectoDS_ParteII_+Apellido.ipynb”
+          2.  Preguntas/Hipótesis que queremos resolver 
+              mediante el análisis de datos
+          3.  Análisis Exploratorio de Datos (EDA)                 Sugerencias
+          4.  Con base en las visualizaciones y                      ✓ Preparar el código y probar los 
+              resúmenes numéricos generados del desafío                   resultados con subconjuntos del 
+              anterior dar recomendaciones basados en                     conjunto original.
+              los insights observados.                               ✓ Link video explicativo
+          5.  Para esta oportunidad deberás tener 
+              avances en los apartados: Definición de              Aspectos a incluir:
+              objetivo, Contexto comercial, Problema                 ✓ El código debe estar hecho en un 
+              Comercial, Contexto analítico, Exploración 
+              de datos (EDA)                                              notebook y debe estar probado.
+       CLASE N°17
+       Glosario
+       Feature Engineering: proceso mediante              Sistemas de recomendación: 
+       el cual se hace la limpieza y                      entendimiento del comportamiento de 
+       estructuración de datos lidiando con               consumo de compradores para generar 
+       nulos, atípicos, outliers, categorías no           productos, ofertas y descuentos 
+       deseadas. Suele ser una de las etapas              personalizados basados en tendencias. 
+       donde más se debe invertir tiempo para             Estos sistemas son muy comunes en 
+       que los datos que salgan sean de buena             plataformas como Mercadolibre, Amazon, 
+       calidad                                            Ebay, Alibaba
+       Analítica predictiva: toma de decisiones           Clicksteams: sistema de recomendación 
+       en el negocio con base en información              usado por amazon que sigue la secuencia 
+       histórica para mejorar márgenes de                 de clicks y tiempos en pantalla de 
+       productividad. Comprende todo lo que se            potenciales compradores para mostrar 
+       conoce como procesos de Bussiness                  resultados personalizados
+       Intelligence y Decision Making
+     ¿Quieres saber más?
+     Te dejamos material 
+     ampliado de la clase
+       MATERIAL AMPLIADO
+    Recursos multimedia
+    Links de interés
+     ✓ Jornadas de Data Mining y Business I
+      ntelligence – Maestría en Ciencia de 
+      Datos
+       - | UNIVERSIDAD AUSTRAL 
+     ✓ Predicción de Cancelaciones de Rese
+      rvas: Caso de Éxito Medplaya
+       - | cleverdata.io 
+     ✓ Amazon utiliza Big Data & Análisis Pr
+      edictivo para recomendar futuras ve
+      ntas
+       | diplomadosonline.com
+      ¿Preguntas?
+                   Resumen 
+               de la clase hoy
+              ✓ Casos de éxito: Andreni, Medpalaya, Amazon
+              ✓ Ejemplo en vivo: fase por fase
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.
+                   ¿Sabías que 
+             premiamos a nuestros 
+                    estudiantes 
+               por su dedicación? 
+                   Conoce los beneficios del Top 10

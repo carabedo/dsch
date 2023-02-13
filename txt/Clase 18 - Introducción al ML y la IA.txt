@@ -1,0 +1,489 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 18. DATA SCIENCE 
+           Introducción al 
+        Machine Learning y 
+            la Inteligencia 
+               Artificial
+      Temario
+                      17                   18                    19
+                 Estudio de          Introducción al        Algoritmos y 
+                  casos de            ML y a la IA         validación de 
+                  modelos                                 modelos de ML
+                 analíticos II        ✓ Introducción
+                                                             ✓ Conceptos 
+                ✓ Introducción        ✓ Tipos de IA             básicos
+                ✓ Casos de            ✓ Aplicaciones en      ✓ Aprendizaje 
+                   accidentes            la industria           y validación
+                                      ✓ Riesgos              ✓ Métricas y 
+                                         asociados              Evaluación
+    Objetivos de la clase
+                 Explorar las bases del Machine Learning.   
+                 Sistematizar las características de la 
+                 Inteligencia Artificial.
+                 Reconocer sus aplicaciones en la industria.
+        MAPA DE CONCEPTOS
+                                    Historia de la 
+                                    IA
+                                    Clasificación 
+                  ML e 
+                Inteligencia        IA y Robótica   RPA
+                 Artificial
+                                    IA en industrias
+                                     Programas y 
+                                      Algoritmos
+                                       GPT - 3
+  Repaso 
+      Introducción
+   Como bien hemos estudiado en el bloque: 
+   Modelos Analíticos para Ciencia de Datos, el 
+   Machine Learning nos brinda y proporciona 
+   diferentes algoritmos que permiten que las 
+   máquinas pueden aprender a partir de 
+   nuestros datos. Pero ahora bien, ¿Qué relación 
+   existe entre el concepto de ML y la Inteligencia 
+   Artificial? 
+   ¿Comenzamos?
+        ¿Qué es 
+      inteligencia?
+     Podríamos definir Inteligencia como la 
+     habilidad para razonar, planear y 
+     resolver problemas, pensar de manera 
+     abstracta y comprender ideas complejas, 
+     aprender rápidamente usando la 
+     experiencia.
+     En teoría, las máquinas inteligentes 
+     deberían tener estos atributos pero no 
+     siempre ocurre.
+     Fuente: https://www1.udel.edu/educ/gottfredson/reprints/1997mainstream.pdf
+    Inteligencia Artificial
+      PARA RECORDAR
+   Inteligencia Artificial
+   Es la capacidad de las máquinas para usar 
+   algoritmos, aprender de los datos y utilizar lo 
+   aprendido en la toma de decisiones.
+   Al contrario de lo que ocurre con las personas, los 
+   dispositivos basados en IA no necesitan descansar y 
+   pueden analizar grandes volúmenes de información a la 
+   vez. Esto significa, que la proporción de errores es menor 
+   en las máquinas que en los humanos, al realizar las 
+   mismas tareas.
+       Existen dos tipos de IA 
+       Narrow IA (“weak IA”) el más utilizado      General IA (“strong IA”) con similitud a 
+       en la actualidad donde se tienen sistemas   la inteligencia humana,que su mejor 
+       que están diseñados para resolver solo un   versión solo se ha alcanzado en ciencia 
+       problema sin poder hacer transferencias     ficción (solo menos del 1% tienen algo 
+       de información.                             similar a este comportamiento).
+       La Narrow IA se compone del Machine 
+      Learning o Aprendizaje de Máquina y también 
+      del Deep Learning o Aprendizaje Profundo 
+       (Redes Neuronales). Aunque no es lo único, 
+      tenemos también Reinforcement Learning.
+       Para pensar
+   Unas clases atrás, dijimos que el ML surge 
+   a mediados de los 50´ para problemas de 
+   predicción complejos.
+   ¿Cuándo crees que surge la IA? ¿Por qué?
+   Contesta mediante el chat de Zoom 
+     Historia de la IA
+       Historia de la 
+       Inteligencia 
+       El concepto de Inteligencia Artificial (IA) no es para                     REEMPLAZAR 
+       nada nuevo. Las primeras investigaciones datan 
+       Artificial                                                                  POR IMAGEN
+       aproximadamente del año 1943 con el trabajo 
+       teórico de Warren McCullogh y Walter Pitts sobre la 
+       computación neuronal. 
+    Sucesos importantes
+                40´                     50´
+     1949: Donald O. Hebb (Psicólogo) publica “La  1950: Test de Turing.
+     organización  de  la  conducta”,  que  sirvió  de 
+                             1956: McCarthy acuña el término 
+     base  para  los  algoritmos  de  aprendizaje  en 
+                             “Inteligencia Artificial” en la conferencia de 
+     las redes neuronales artificiales.
+                             Dartmouth, la primera conferencia dedicada a 
+                             la IA.
+                             1958: McCarthy desarrolla el lenguaje LISP, 
+                             lenguaje con el que se desarrollan la mayoría 
+                             de sistemas expertos.
+                                     60´                                                    70´
+             1961: Marvin Minsky publica “Pasos hacia la  1972: Colmerauer desarrolla el lenguaje 
+             inteligencia artificial”.                              PROLOG (PROgrammation in Logique).
+             1963:  Feigenbaum  y  Feldman  Publicaron 
+             Computers and Thought, la primera colección 
+             de artículos de IA.
+             1966: el programa ELIZA, desarrollado en el 
+             MIT, fue uno de los primeros programas en 
+             procesar  lenguaje  natural  y  conversar,  a 
+             través de una serie de frases programadas.
+             1968: Minsky y Papert publican Perceptrons.
+                               80´                                          90´
+            1986: Rumelhart, McClelland y el grupo       1997:  Deep Blue vs. Garri Kaspárov.
+            PDP desarrollan el perceptrón multicapa y 
+            el algoritmo de aprendizaje por 
+            retropropagación (BP).
+            1987: Martin Fischles y Oscar Firschein 
+            describen los atributos de un agente 
+            inteligente.
+                                 00´                                            10´
+             2005: Un coche autónomo, desarrollado         2011: Watson gana Jeopardi! El ordenador 
+             por la Universidad de Stanford (EE. UU),      desarrollado por IBM bate a los campeones 
+             gana una competición de vehículos robot,      humanos  del  concurso  de  televisión 
+             tras conducir 212 kilómetros de desierto,     estadounidense. 
+             sin apoyo humano.
+                                                           2014:  Un  ordenador  supera  con  éxito  el 
+                                                           Test de Turing.
+                                                           2016: Microsoft lanza Tay. 
+                                                           2017: AlphaGo, un programa desarrollado 
+                                                           por  Google  DeepMind,  vence  al  campeón 
+                                                           histórico del Go. 
+                                                           2017: Libratus vence al póker.
+         IA
+    tipos de Inteligencia
+       Tipos de IA
+       Clasificación de IA. Hintze
+       Arend  Hintze,  profesor  de  Biología  Integrada  y  Ciencias  de  la  Computación  de  la 
+       Universidad de Michigan, estableció una clasificación de cuatro tipos de IA:
+           1                       2                       3                         4
+        Máquinas                Memoria              Teoría de la              Autoconciencia
+         reactivas              limitada                Mente
+       Máquinas 
+       Reactivas
+       Los tipos más básicos de sistemas de IA son                          REEMPLAZAR 
+       reactivos y no tienen la capacidad de formar                          POR IMAGEN
+       recuerdos. Tampoco pueden usar experiencias 
+       pasadas, para basar las decisiones actuales. Deep 
+       Blue fue un ejemplo de este tipo de inteligencia. 
+       (Tareas particulares)
+                       Memoria 
+                       Limitada
+                       En este tipo de inteligencia artificial, las máquinas 
+                       pueden mirar hacia el pasado, pero no puede compilar 
+                       la experiencia durante años, como lo hace un humano. 
+                       Por ejemplo, los vehículos autónomos observan la 
+                       velocidad y dirección de otros automóviles durante su 
+                       trayecto. Para que funcionen, hay que identificar 
+                       objetos específicos y monitorearlos a lo largo del 
+                       tiempo. 
+    Teoría de 
+    la Mente
+    Las máquinas de esta clase son más avanzadas, no 
+    solo forman representaciones sobre el mundo, sino 
+    también sobre otros agentes o entidades. 
+    Se enfocan en ideas, emociones y pensamientos.
+    Este pensamiento se asocia en psicología a la 
+    implicancia de la comprensión de las personas, las 
+    criaturas y los objetos en el mundo, respecto a su 
+    propio comportamiento. 
+                       Autoconciencia
+         REEMPLAZAR    El paso final del desarrollo de la IA es construir 
+         POR IMAGEN    sistemas que puedan formar representaciones sobre sí 
+                       mismos. Los seres conscientes de sí mismos, conocen 
+                       sus estados internos y pueden predecir los 
+                       sentimientos de los demás. 
+                       Este paso todavía está lejos de realizarse, aunque los 
+                       esfuerzos se enfocan hacia la comprensión de la 
+                       memoria, el aprendizaje y la capacidad de basar las 
+                       decisiones en experiencias pasadas.
+    Otras clasificaciones 
+        de IA
+       Clasificación de IA. Russell 
+       y Norvig
+       Sistemas que actúan como humanos:               Sistemas que piensan racionalmente: 
+       Los llamados androides y los robots. Estos      Tratan de imitar el pensamiento lógico 
+       intentan realizar tareas de manera similar      humano. Es decir, se trata de investigar 
+       a nosotros y de forma más eficiente. (No        cómo lograr que las máquinas perciban, 
+       quiere decir que lo hagan bien)                 razonen y actúen en consecuencia.
+       Clasificación de IA. Russell 
+       y Norvig
+       Sistemas que actúan racionalmente:              Sistemas que piensan como 
+       Aquellos capaces de percibir el entorno,        humanos: Son sistemas que imitan el 
+       que tratan de imitar de forma racional el       funcionamiento del sistema nervioso por 
+       comportamiento humano y actuar en               medio de redes neuronales artificiales.  
+       consecuencia.                                   (Ej .GPS)
+       Ejemplo en vivo
+   Imaginen tener a su disposición un asistente virtual 
+   que haga funciones predeterminadas según la 
+   necesidad. Exploramos un poco como poder convertir 
+   texto a audio, imágenes a texto y a extraer 
+   información de la web
+   Utilizaremos el notebook  Clase_18.ipynb 
+   dentro de la carpeta de clase.
+      IA y robótica 
+       Para pensar
+   Los robots forman parte del tipo de IA vinculada con 
+   los “Sistemas que actúan como humanos”.  En la 
+   actualidad, podemos encontrar un montón de robots 
+   distintos que realizan actividades diferentes.
+   ¿Qué ejemplos se te ocurren? 
+   Contesta mediante el chat de Zoom 
+     La IA y el 
+     mundo de la 
+     Por otro lado, se han desarrollado varios proyectos 
+     de “Robots Humanoides”, entendiéndose como tal a 
+     Robótica
+     un sistema robotizado, desarrollado para simular la 
+     silueta y la forma de moverse de los humanos. 
+                Conozcamos el caso del Robot Sophia
+                       IA + Robótica= 
+                       Sophia
+                       Sin duda alguna, el robot humanoide más popular hoy 
+                       en día es Sophia. 
+                       ✔ Puede mantener conversaciones complejas como 
+                         así también, charlas casuales básicas. 
+                       ✔ Sophia puede reconocer, expresar y describir el 
+                         entorno que la rodea y realizar gesticulaciones o 
+                         expresiones faciales. 
+            Entrevista con una IA
+      Miremos el video y 
+      tomémonos unos 
+      segundos para pensar     REEMPLAZAR 
+      que impresiones,         POR IMAGEN
+      dudas, sensaciones, 
+      preguntas, etc. nos 
+      despierta esta 
+      entrevista con Sophia
+       Robotic process 
+       automation
+       Otro concepto, que también se encuentra      RPA hace referencia a toda tecnología 
+       muy en auge es el de RPA - Robotic           orientada al uso de software, con el 
+       Process Automation -, también conocido       objetivo de disminuir la intervención 
+       como Automatización Robótica de              humana en tareas repetitivas o en tareas 
+       Procesos.                                    que varían muy poco en cada iteración. 
+       Para pensar
+   La robótica también se utiliza en el ámbito 
+   empresarial, en áreas como finanzas, 
+   turismo, transporte, educación y hasta 
+   entretenimiento.
+   ¿Qué ejemplos se te ocurren?
+   Contesta mediante el chat de Zoom 
+      Aplicaciones
+      en la industria
+      IA en el sector productivo: 
+      ¿Cómo la IA tiene influencia en nuestra vida 
+      profesional y cotidiana?
+      ������ A través de chatbots o sistemas          ������ Seguridad financiera: Los sistemas 
+      robóticos automatizados: Conforme           de seguridad con inteligencia artificial 
+      avance esta tecnología, es probable que     pueden identificar puntos de acceso 
+      se reemplacen muchos puestos de trabajo     ilegales a datos o a los fondos de 
+      de atención al cliente.                     instituciones financieras, mediante la 
+      ������ Servicios de inversión con robo          simulación de varias situaciones en las 
+      advisors: Que ofrecen asesoría              que se puede cometer un delito.
+      financiera y manejo de carteras sin 
+      intervención humana.
+         La IA en las Industrias
+                     Turismo                                Salud                          Retail-Ecommerce
+         • Reservas mediante comandos         •Revisión de los registros de salud.    • Identificación de patrones de 
+         de voz.                                                                       consumo
+                                              • Seguimiento y control de los 
+         • Asistentes virtuales en            medicamentos.                           • Sistemas de recomendación de 
+         hoteles.                                                                      productos, como los de Amazon y 
+                                              • Sensores de control de la salud.       Mercadolibre
+         • Chatbots en agencias de viaje.
+                                              • Cirugía asistida por robots.          • Mejora en la experiencia de 
+         • Check-in mediante                                                           usuario.
+         reconocimiento facial.               • Asistentes de enfermería 
+                                              virtuales.                              • Desarrollo de chatbots
+         • Robots turísticos (en los 
+         propios hoteles).                    • Artificial Intelligence for Drug 
+                                              Discovery (AIDD)
+         •Viajes inteligentes, en 
+         ciudades inteligentes.
+                    Transporte                              Educación                          Entretenimiento y Arte
+            • Vehículos autónomos.              • Plataformas de aprendizaje               • Trailers de películas editados por IA.
+                                                personalizadas según habilidades.
+            • Aviones autónomos sin                                                        • Reconocimiento y análisis facial, que 
+            piloto.                             • Tutores de inteligencia artificial       determinará      la   reacción     de    la 
+                                                personalizados.                            audiencia  a  determinados  tipos  de 
+            • Robots como repositores.                                                     contenido.
+                                                • Juegos personalizados.
+            • Robots que facilitan                                                         • Canciones producidas por IA.
+            información a clientes.             • Chatbots orientados a los 
+                                                procesos de orientación educativa.         •  Imitación  y  creación  de  obras  de 
+            • Uso de Drones a gran                                                         artistas consagrados.
+            escala.
+                    Food Tech                               Banca                                  Manufactura
+           • Sistemas capaces de             • Agentes humanos siendo                  •  IA  utilizada  en  diferentes  líneas  de 
+           generar tazas de té (Arya)        reemplazados por robots o                 operación para mejorar eficiencia.
+                                             chatbots.
+           • Sistemas de IA para                                                       • Mantenimiento predictivo y 
+           ordenamiento de alimentos y  • Recomendaciones de inversión                 preventivo con IA.
+           empaquetado (Tomra                con robots.
+           Systems ASA)                                                                • Identificación de errores en las 
+                                             • Reducción en tiempos de                 funcionalidades de productos.
+           • IA para identificar efectos     reclamos.
+           en suelos fértiles.                                                         • Reducción de costos en producción y 
+                                             • Detección de fraude en                  ensamblado.
+                                             transacciones.
+      Programas y 
+     Algoritmos de IA
+        RankBrain es un algoritmo que aprende el sistema de inteligencia artificial, 
+       cuyo uso fue confirmado por Google el 26 de octubre de 2015. Ayuda a Google 
+          a procesar los resultados de búsqueda y proporcionar resultados de 
+                búsqueda más relevantes para los usuarios. 
+                    Alexa, Siri, Cortana                                          Watson
+               La inteligencia artificial de los                  Desarrollado por IBM, este software 
+                 asistentes de voz de Apple,                        de comunicación fue optimizado 
+                   Amazon y Microsoft son                              para plantear y responder a 
+                conocidos por la mayoría sus                         preguntas, en lenguaje natural.
+               usuarios. La función de voz de                       Las empresas médicas lo utilizan 
+              estos asistentes está basada en                           para obtener datos de los 
+                        tecnología IA.                                asegurados y comprobar sus 
+                                                                           historiales médicos. 
+                 TensorFlow                    Facebook AI               Microsoft Emotion 
+                                                 Research                   Recognition
+           En 2015, Google puso a              (FAIR)/Torch
+        disposición de los usuarios este    Este medio también              El sistema de 
+        software inteligente, de forma       pretende alentar el         reconocimiento de 
+           gratuita, para impulsar el      desarrollo de métodos            emociones de 
+         desarrollo de proyectos IA. Se        de aprendizaje              Microsoft es una 
+         utiliza en varios productos de          profundo.                herramienta que 
+            Google, incluyendo el                                         pretende detectar 
+       reconocimiento de voz de Gmail                                       emociones en 
+               y Google Search.                                              imágenes.
+                 ☕
+               Break
+               ¡10 minutos y 
+                volvemos!
+    Riesgos asociados 
+        a la IA
+        Para pensar
+   La Inteligencia Artificial, cada vez abarca 
+   más ámbitos de nuestras vidas, pero un 
+   mal uso de ella puede conllevar peligros 
+   para la sociedad y para los ciudadanos.
+   ¿Qué riesgos y desafíos podrías 
+   enumerar?
+   Contesta mediante el chat de Zoom 
+       Riesgos y desafíos 
+       asociados a la IA
+       Riesgos                                       Desafíos
+         ✔ Armas autónomas.                            ✔ Reenfocar las habilidades de los 
+         ✔ Pérdida de empleo.                             empleados.
+         ✔                                             ✔ Cambio cultural y tecnológico.
+            Manipulación de la opinión pública o 
+            de la sociedad.                            ✔ Desarrollo de sentimientos 
+         ✔ Invasión de la privacidad de las               vinculados con la compasión y la 
+            personas.                                     empatía.
+         ✔                                             ✔ Creación de leyes y regulaciones 
+            Algoritmos discriminatorios.                  jurídicas.
+      Actividad colaborativa
+   Impacto de la IA en cargos laborales
+   Analizaremos la influencia de la IA en los 
+   trabajos de las personas
+   Realizaremos la actividad de 3-4 personas
+   Duración: 10 minutos
+             ACTIVIDAD COLABORATIVA
+        Acuerdos
+       Presencia                                       Apertura al aprendizaje
+        ✓ Participar y “estar” en la clase, que          ✓ Siempre, pero siempre puedes 
+            tu alrededor no te distraiga                    seguir aprendiendo. Compartir el 
+                                                            conocimiento es válido, la 
+       Escucha activa                                       construcción colaborativa es la 
+                                                            propuesta.
+        ✓ Escuchar más allá de lo que la 
+            persona está expresando 
+            directamente                               Todas las voces
+                                                         ✓ Escuchar a todos, todos podemos 
+                                                            reflexionar. Dejar el espacio para 
+                                                            que todos podamos participar.
+            ACTIVIDAD COLABORATIVA
+       Impacto de la IA en 
+       cargos laborales
+       Consigna: Esta actividad colaborativa          1. Se propone debatir sobre los puestos 
+       interactuamos con compañeros teniendo              que van a ser reemplazados por la 
+       como premisa el impacto de los avances             inteligencia artificial. 
+       en ML y AI en la vida laboral.                 2. En un futuro cercano, ¿Seguirán 
+                                                          existiendo los científicos de datos? 
+                                                          ¿Por qué?
+       NOTA: usaremos los breakouts rooms. El tutor/a tendrá el rol de facilitador/a.
+     El futuro de la IA: 
+        GTP 3 
+                       OpenAI
+                       Es una compañía de investigación de IA, sin fines de 
+                       lucro, que tiene como objetivo promover y desarrollar 
+       REEMPLAZAR      inteligencia artificial, de tal manera que beneficie a la 
+       POR IMAGEN      humanidad en su conjunto. Esta organización, fue 
+                       fundada entre otros por Elon Musk y su principal 
+                       producto es el GPT - 3.
+                       Muchos creen que la Inteligencia Artificial GPT - 3, es el 
+                       avance más importante en la tecnología de los últimos 
+                       años. Pero…
+                       ¿Qué es GPT - 3?, es el modelo de Lenguaje 
+                       Natural más poderoso en el mundo creado hasta 
+                       el día de hoy. 
+       El futuro de la 
+       IA: GPT - 3
+       Usa aproximadamente unos 175.000 millones de                       REEMPLAZAR 
+       parámetros. Para entrenar el modelo se utilizó toda la             POR IMAGEN
+       información de Wikipedia, 19 mil millones de páginas 
+       web, 67 mil millones de libros públicos y otros 410 mil 
+       millones de textos de la web. 
+  Con el desarrollo de este modelo tan 
+  avanzado, surgen muchas preguntas que 
+  hasta el día de hoy no tienen respuesta 
+  exacta…
+   ������ ¿Puede la IA generar contenido de la misma 
+   calidad que un humano?
+   ������ ¿Cómo afectará nuestros trabajos en el futuro?
+   ������ ¿Puede ser peligrosa, qué riesgos representa?
+   ������ ¿Es realmente confiable lo que aprendió o existen 
+   sesgos en la información?
+   ������ ¿Podría ser creativa?
+   ������ ¿Cómo funciona realmente?
+      Actividad colaborativa
+   Evolución de puestos laborales
+   Identificar cambios en entornos laborales 
+   con el paso del tiempo
+   Duración: 10 minutos
+            ACTIVIDAD COLABORATIVA
+       Evolución de los puestos 
+       laborales
+       Consigna:                                    Responder lo siguiente:
+       Se propone pensar acerca de condiciones       ✔ ¿Siguen existiendo esos puestos? 
+       y responsabilidades en los trabajos de tus    ✔ Si aún existen, ¿Corren peligro de 
+       abuelos/padres.                                   ser absorbidos por la IA?
+                                                    Herramienta sugerida: Miró 
+       NOTA: usaremos los breakouts rooms. El tutor/a tendrá el rol de facilitador/a.
+       CLASE N°18
+       Glosario
+       Narrow IA (Weak IA): máquinas                   RPA- Robotic Process Automation : se 
+       diseñadas para resolver problemas               refiere a la automatización de procesos 
+       específicos con condiciones limitadas y         con el objetivo de disminuir la 
+       sin transferencia de información,               intervención humana en tareas repetitivas 
+       representan 99% de las IA actuales              ejecutada por máquinas 
+       General IA (Strong IA) : similares a los        Robots humanoides: son aquellos 
+       humanos con capacidad de toma de                robots que se asemejan a la silueta 
+       decisiones representan solo el 1% de las        humana y que son capaces de realizar 
+       IA actuales                                     tareas rutinarias sin problemas 
+       Desafíos asociados a las IA: desarrollo         Riesgos asociados a las IA: desarrollo 
+       de legislación viable y concreta para su        de armas, pérdida de empleo, 
+       manipulación, mejorar empatía y                 manipulacion de opinión, invasión de 
+       generación de conciencia.                       privacidad, algoritmos discriminatorios
+     ¿Quieres saber más?
+     Te dejamos material 
+     ampliado de la clase
+          MATERIAL AMPLIADO
+      Recursos multimedia
+       ✓ Cita entre Will Smith y la robot Sophi
+          a
+           | RT en Español 
+       ✓ Cristiano deja en ridículo a robot al p
+          edirle que imite su celebración
+          | Televisa
+       Disponible en nuestro repositorio.
+      ¿Preguntas?
+                   Resumen 
+               de la clase hoy
+              ✓ Intro a ML
+              ✓ Inteligencia Artificial
+              ✓ Tipos de Inteligencia
+              ✓ Aplicaciones en la Industria
+              ✓  Riesgos y Desafíos de la IA
+              ✓ GPT - 3
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.

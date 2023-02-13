@@ -1,0 +1,196 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 55. DATA SCIENCE
+               Datathon
+      Temario
+                                54                    55
+                          Introducción al          Datathon
+                         Procesamiento de 
+                         Lenguaje Natural II
+                         ✓ Introducción a      ✓ Introducción
+                            spaCY
+                                               ✓ Proyecto final
+                         ✓ Análisis de 
+                            sentimiento 
+    Objetivos de la clase
+                 Integrar conceptos vistos a lo largo de la 
+                 cursada
+                 Poner en práctica las fases de Data 
+                 Acquisition, Data Wrangling, EDA, 
+                 Modelamiento y Validación de modelos 
+         MAPA DE CONCEPTOS
+                                                        EDA
+                                                     Data Wrangling
+                                                      Modelos de 
+                                                      regresión
+                Datathon                              Métricas de 
+               CoderHouse                             performance
+                                                     Optimización de 
+                                                      parámetros
+                                                     Proyecto final
+       Cuestionario final
+   ¿Te gustaría comprobar tus 
+   conocimientos del curso?
+   Te compartimos a través del chat de 
+   Zoom / chat de la plataforma el enlace a un 
+   breve cuestionario de Kahoot
+   Duración: 10 minutos
+      Introducción
+      ¿Qué es una 
+       Datathon?
+    Datathon
+    Una “Datathon” es un evento en donde se 
+    reúnen personas con conocimientos en manejo de 
+    datos (e.g científicos de datos, Data Engineers, 
+    Data Analysts) con el fin de trabajar en forma 
+    multidisciplinaria permitiendo resolver preguntas 
+    problema relevantes para un problema específico.
+    Estos eventos tienen una duración limitada y se 
+    busca establecer diferentes enfoques a la hora de 
+    resolver un problema
+     Objeto de estudio
+    spaCY
+    El presente Datathon busca lograr predecir los precios de las viviendas residenciales en 
+    Ames, Iowa, Estados Unidos. Para ello, se deberán poner en práctica los diversos 
+    conceptos vistos y estudiados a lo largo del curso de Data Science. 
+       Objetivo
+    Objetivo
+    Para  cada  Id  en  el  conjunto  de  prueba,  se  debe 
+    predecir  el  valor  de  la  variable  “SalePrice”.  La 
+    métrica que se utilizará para evaluar la performance 
+    del modelo deberá ser el RMSE (Root-Mean-Squared-
+    Error (RMSE). 
+    Objetivo
+    Como parte del desafío propuesto, se busca que los 
+    estudiantes  puedan  generar  un  archivo  llamado: 
+    “predicción_inmueble.csv”, el cual deberá contener 
+    para  cada  “Id”  de  registro  su  correspondiente 
+    predicción. En base a la siguiente estructura: 
+    Descripción de datos
+    Descripción de datos
+     ✔ train.csv: Dataset de Train.
+     ✔ test.csv: Dataset de Test.
+     ✔ data_description.txt:  Descripción  completa  de 
+      cada columna del dataset.
+     ✔ ejemplo_output.csv: Dataset de referencia de la 
+      salida que se pretende generar como resultado de 
+      la aplicación del modelo de regresión.
+     Predicción de precios de 
+             inmuebles
+    En esta oportunidad utilizaremos lo aprendido a lo largo 
+      del curso para resolver un problema de la vida real
+             Duración: 80-90 mins
+       ACTIVIDAD EN CLASE
+    Predicción de 
+    inmuebles
+    Nos reuniremos en breakout rooms y formaremos grupos, 
+    con orientaciones del profesor(a) y tutores(as) 
+    realizaremos lo siguiente:
+    1) Realizar la lectura de datos de los archivos propuestos
+    2) Llevar a cabo un análisis exploratorio de datos (EDA) 
+    con su correspondiente interpretación
+    3) En caso de ser necesario desarrollar el proceso de Data 
+    Wrangling
+       ACTIVIDAD EN CLASE
+    Predicción de 
+    inmuebles
+    4) Desarrollar al menos 3 algoritmos de regresión para 
+    resolver el desafío
+    5) Calcular métricas como RMSE, R2, MAE para cada 
+    modelo
+    6) Implementar algún método de optimización de 
+    hiperparametros
+    7) Comparar distintos modelos creados
+    8) Seleccionar el mejor modelo justificando la decisión
+    9) Debatir colaborativamente en el proceso
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+                  ¡Lanzamos la
+                  Bolsa de 
+                  Empleos!
+                 Un espacio para seguir potenciando tu carrera y 
+                 que tengas más oportunidades de inserción 
+                 laboral.
+                 Podrás encontrar la Bolsa de Empleos en el menú 
+                 izquierdo de la plataforma.
+                 Te invitamos a conocerla y ¡postularte a tu futuro 
+                 trabajo!
+                   Conócela
+      Proyecto final
+    Proyecto final
+    El Proyecto Final se construye a partir de los desafíos 
+    que se realizan clase a clase. Se va creando a medida 
+    que el estudiante sube los desafíos entregables a 
+    nuestra plataforma y recibe la respectiva 
+    retroalimentación.
+    El objetivo es que con el trabajo en duplas pueda 
+    utilizar su Proyecto Final como parte de su portafolio 
+    personal.
+    Proyecto final
+    Contarás con 20 días, una vez finalizado tu curso, para 
+    entregar tu Proyecto Final en la plataforma. 
+    ¡Atento/a!  Pasados esos días el botón se inhabilitará. 
+            Entrenamiento y 
+    optimización de Modelos de 
+     Deberás entregar tu Proyecto Final. Entrenarás y optimizarás diversos 
+           Machine Learning
+     modelos de machine learning para resolver una problemática específica, 
+     detectada en la instancia de entrega anterior. El objetivo es que puedan 
+    utilizar modelos de ML para resolver el problema de una industria o negocio
+       ENTREGA DEL PROYECTO 
+       FINAL
+    Entrenamiento y optimización de 
+    modelos de Machine Learning
+    Objetivos generales
+     ✓ Utilizar modelos de Machine Learning para resolver un problema de una industria o 
+      negocio
+    Objetivos específicos
+     ✓ Retomar el trabajo realizado en la segunda pre entrega, sumando el trabajo con 
+      Machine Learning 
+     ✓ Modelar la situación como un problema de Machine Learning 
+     ✓ Entrenar modelos de Machine Learning 
+     ✓ Realizar ingeniería de atributos y normalización/estandarización de variables
+     ✓ Seleccionar el modelo con mejor performance
+               ENTREGA DEL PROYECTO 
+               FINAL
+         Entrenamiento y optimización de 
+         modelos de Machine Learning
+         Requisitos base
+           ✓ Un Notebook (Colab o Jupyter) que debe contener:
+           1.  Abstracto con motivación y audiencia:  Descripción de alto nivel de lo que motiva a analizar los datos 
+               elegidos y audiencia que se podría beneficiar de este análisis.
+           2.  Preguntas/Problema que buscamos resolver: Si bien puede haber más de una problemática a resolver, la 
+               problemática principal debe encuadrarse como un problema de clasificación o regresión.
+           3.  Breve Análisis Exploratorio de Datos (EDA): Análisis descriptivo de los datos mediante visualizaciones y 
+               herramientas estadísticas, análisis de valores faltantes.
+           4.  Ingeniería de atributos: Creación de nuevas variables, transformación de variables existentes (i.e 
+               normalización de variables, encoding, etc.)
+           5.  Entrenamiento y Testeo: Entrenamiento y testeo de al menos 2 modelos distintos de Machine Learning 
+               utilizando algún método de validación cruzada.
+           6.  Optimización: Utilizar alguna técnica de optimización de hiperparámetros (e.g gridsearch, randomizedsearch, 
+               etc.)
+           7.  Selección de modelos: utilizar las métricas apropiadas para la selección del mejor modelo (e.g AUC, MSE, etc.)
+         ENTREGA DEL PROYECTO 
+         FINAL
+     Entrenamiento y optimización de 
+     modelos de Machine Learning
+     Piezas sugeridas
+      ✓ Librerías:
+     numpy - pandas - matplotlib - sklearn - xgboost - shap
+      ✓ Claridad de código:
+     Estructura - Markdown - Comentarios
+     Modelo de Proyecto final
+      ✓ Ejemplo proyecto final
+     Explicación del desafío
+      ✓ ¡Click aquí!
+      ¿Preguntas?
+        Muchas 
+        gracias.
+                   Resumen 
+               de la clase hoy
+              ✓ Proyecto final
+      Opina y valora 
+       esta clase

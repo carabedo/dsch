@@ -1,0 +1,475 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 22. Data Science 
+             Retomando 
+              impulso…
+     Temario
+                    21                  22                  23
+                  Stack            Retomando              Data 
+              Tecnológico II         Impulso           Acquisition I
+               ✓ Sistema in-       ✓ Fases de un       ✓ Adquisición de 
+                 house               proyecto de DS      datos 
+               ✓ Cloud             ✓ Numpy y Pandas    ✓ Lectura de 
+                 Computing                               datos con 
+                                   ✓ Visualización       Pandas
+               ✓ Fundamentos       ✓ Estadística       ✓
+                 del Big Data                            Hojas de 
+                                     Descriptiva         cálculo
+               ✓ ETL                                   ✓
+                                                         Pyspark
+    Objetivos de la clase
+                 Repasar las herramientas fundamentales para 
+                 el curso que comienza
+                 Realizar un recuento de los temas vistos en 
+                 Data Science I a modo de nivelación
+                 Proveer a los estudiantes el compendio de 
+                 notebooks del curso Data Science I 
+        MAPA DE CONCEPTOS
+                             Repaso Data Science-I
+         Fases de        Numpy y        Visualización   Estadística 
+       proyecto de DS    Pandas                         Descriptiva
+        Fases iniciales  Numpy           Matplotlib      Tipos de 
+                                                         variables
+                                                        Medidas de 
+        Fases finales    Pandas          Seaborn      tendencia central 
+                                                        y dispersión
+       Repaso: 
+   Fases de un proyecto DS
+      Fases iniciales de un 
+      proyecto DS
+           1                2               3                 4                5
+     Definición de     Contexto         Problema            Data       Exploratory Data 
+        objetivo       Comercial       Comercial         Acquisition    Analysis (EDA)
+      Fases finales de un 
+      proyecto DS
+          6               7               8                 9               10
+        Data        Selección del  Desarrollo del     Validación y    Conclusiones
+     Wrangling        algoritmo       algoritmo        despliegue
+     (Munging)        apropiado
+       1. Definir el                                2. Contexto 
+       objetivo                                     comercial
+       Son las resultados que se planean             Se puede considerar como 
+       alcanzar al finalizar el proyecto. En         una breve introducción al 
+       proyectos de DS es muy                        problema de estudio 
+       importante delimitar el alcance de            teniendo en cuenta 
+       tal manera que lo que se propone              contexto, agentes y causas 
+       sea alcanzable y satisfaga los                involucradas en el problema 
+       requerimientos deseados.                      de interés. 
+       3. Problema                                 4. Data Acquisition 
+       comercial
+       En esta fase de debe generar                Es el proceso de 
+       una pregunta problema a                     recopilación de datos tipo: 
+       resolver, debe ser acotada y                First, Second o Third Party. 
+       debe guardar relación con el                Se debe identificar, 
+       objetivo que se quiere                      comprender y evaluar qué 
+       alcanzar                                    tipos de datos permitirán 
+                                                   resolver el problema
+       5. Exploratory Data                            6. Data Wrangling 
+       Analysis (EDA)                                 (Munging)
+       Proceso crítico donde se realizan               Se conoce también como 
+       análisis iniciales sobre los datos              Data Cleaning, Data Munging 
+       para descubrir patrones,                        o Data Remediation. Es un 
+       detectar anomalías, probar                      proceso para transformar los 
+       hipótesis y verificar suposiciones              datos de su forma original a 
+       con la ayuda de estadísticas y                  un formato que sea más fácil 
+       representaciones gráficas                       de acceder y analizar
+          7. Selección del                               8. Desarrollo del 
+                algoritmo                                       algoritmo
+       En esta etapa se define qué algoritmo se      Luego de elegirse el algoritmo se deben 
+       va  a  usar  (Machine  Learning,  Deep        chequear  parámetros  e  hiperparametros 
+       Learning, Optimización). Para el caso de      de  forma  que  el  algoritmo  funciones  en 
+       Machine Learning podemos hacer uso de         las mejores condiciones.
+       Aprendizaje Supervisado, No supervisado 
+       o por refuerzo
+            9. Validación y                                  10. Conclusiones
+                despliegue
+       La validación es el proceso mediante el           Desarrollo  de  insights,  consideraciones, 
+       cual  se  mide  la  efectividad  de  un           recomendaciones,      y   limitaciones    de 
+       algoritmo  (Cross  validation,  Train/test,       acuerdo a los resultados obtenidos. 
+       LOCV).
+       El despliegue es el método mediante el 
+       cual se integra un modelo a un entorno 
+       de  producción  con  el  fin  de  tomar 
+       decisiones comerciales basadas en datos
+        Ejemplo
+                 1. Definir el                          2. Contexto comercial
+                     objetivo
+        Diseñar un sistema que permita detectar                Trabaja  en  el  equipo  comercial  de 
+        patrones      entre     consumidores       para        detección de fraudes para una compañía 
+        identificar   posibles     fraudes  en  una            de  seguros  y  su  función  consiste  en 
+        compañía de seguros.                                   determinar  qué  reclamos  presentados 
+                                                               deben aprobarse.
+              3. Problema                            4. Data Acquisition 
+                 comercial
+       ¿Existen  patrones  particulares  en  los      Datos no etiquetados proporcionados por 
+       grupos  de  reclamos  presentados  que         el  departamento  de  contabilidad  en 
+       puedan ser indicativos de fraude?              formato  .csv  con  4  variables  (edad, 
+                                                      género,  ingreso  y  reclamos)  y  3000 
+                                                      instancias  cubriendo  el  periodo  2000-
+                                                      2010
+       5. Exploratory Data                                  6. Data Wrangling 
+             Analysis (EDA)                                         (Munging)
+       Se  realizan  gráficos  de  distribución  de       Se realiza limpieza de nulos, duplicados y 
+       salarios   y   reclamos.  Diagramas  de            atípicos. También se hace un proceso de 
+       dispersión  entre  edad  vs  salario  y            estandarización      de     las     variables 
+       reclamos  vs  salario  para  entender              numéricas y selección de variables 
+       posibles  asociaciones  con  características 
+       particulares
+          7. Selección del                            8. Desarrollo del 
+                algoritmo                                    algoritmo
+       Como se cuenta con datos no etiquetados      Se  realiza  el  proceso  de  entrenamiento 
+       se  elige  el  Aprendizaje  no  supervisado  con  la  matriz  de  diseño  X  utilizando  la 
+       (Algoritmo:  k-means),  debido  a  que  se   librería  Scikit  Learn,  específicamente  la 
+       eliminaron atípicos y se cuenta con pocos    función KMeans en Python. 
+       datos
+            9. Validación y                                10. Conclusiones
+                despliegue
+       El  algoritmo  es  sensible  al  número  de       Descubrimiento  de  grupo  problemático 
+       grupos  elegidos  (método  del  codo  para        con  características  particulares(  bajos 
+       selección de valor óptimo de k), métrica          ingresos,  altos  reclamos  y  edades  entre 
+       usada         (distancia       euclidiana)e       25-45 años)
+       inicialización  de  clusters  por  medio  del 
+       método (kmeans++)
+       El despliegue se realiza por medio de un 
+       dashboard con actualización quincenal 
+       Para pensar
+   Teniendo en cuenta el proyecto que 
+   realizaron en Data Science I. ¿Hasta qué 
+   etapa de desarrollo consiguieron llegar? 
+   ¿Cuál consideran que es la etapa más 
+   importante de la secuencia de trabajo?
+  Contesta la encuesta de Zoom 
+       Repaso:
+     Numpy y Pandas
+         Numpy
+      Numpy
+       NumPy es un proyecto de código abierto que tiene                  NUMeric    PYthon
+                                                                         al
+       como objetivo permitir la computación numérica con                 Potente estructura de 
+       Python.  Fue  creado  en  2005,  basándose  en  el                       datos
+       trabajo  inicial  de  las  bibliotecas  Numeric  y 
+       Numarray.                                                         Implementa matrices y 
+                                                                              matrices 
+       NumPy siempre será un software 100% de código                      multidimensionales
+       abierto, de uso gratuito para todos y publicado bajo 
+       los términos liberales de la licencia BSD modificada
+                                                                            Estructuras que 
+                                                                          garantizan cálculos 
+                                                                         eficientes con matrices
+      Fuente: https://numpy.org/
+    Arrays como estructura 
+    fundamental
+     ✔ Estructura de datos que permite 
+       almacenar información de un mismo 
+       tipo (típicamente números)
+     ✔ Es bastante eficiente a la hora de 
+       realizar operaciones ya que hacen 
+       uso de operaciones vectorizadas.
+     ✔ Los np.arrays pueden almacenar 
+       vectores (1D), matrices (2D) o 
+       tensores (3D o más dimensiones)
+     Tipos de datos y 
+     propiedades de arrays
+                                   Propiedades de los numpy array
+     Tipos de datos posibles en numpy array
+       Indexación de arrays
+                                                                         Selección          Sintaxis
+                                                                         Un elemento       array[posición]
+                                                                        Varios elementos   array[inicio:fin]
+                                                                         consecutivos
+                                                                         Elementos en     array[[p1,p2,....,p
+                                                                        orden cualquiera        n]]
+          Importante: Los índices pueden ser negativos o
+          positivos 
+                                                      Operaciones 
+                                                          básicas
+                      Reshape                          Concatenación                           Splitting
+            Permite modificar la dimensión       Permite concatenar arrays por        Permite separar arrays por una 
+            de  un  array  (siempre  que  el     una    dimensión     específica      dimensión  específica  siempre 
+            producto  de  las  dimensiones       siempre     y    cuando     las      y  cuando  las  dimensiones  lo 
+            coincidan)                           dimensiones lo permitan              permitan
+                     np.reshape()                      np.concatenate()                         np.split()
+      Ejemplo en vivo
+   Utilizaremos el notebook llamado 
+   Numpy.ipynb dentro de la carpeta de 
+   clase para repasar los conceptos 
+   fundamentales de Numpy (Creación y 
+   propiedades de arrays, indexación, 
+   reshape, concatenación y split)
+        Pandas
+       Pandas
+                                                                          Python Data Analysis 
+        Pandas es una librería que facilita la manipulación                     Library 
+        de  datos  en  Python  por  medio  de  estructuras  y                  Limpieza de datos
+        métodos para el manejo de grandes volúmenes de 
+        datos.
+        Permite el acople con la librería NumPy y altamente                   Manipulación de datos
+        compatible  con  diferentes  tipos  de  formatos  de 
+        datos (csv, txt, sql, json, xls, xlsx, odf)
+                                                                               Alto performance, 
+                                                                            visualización y agrupación 
+                                                                                   de datos
+       Fuente: https://pandas.pydata.org/
+      Series       DataFrames
+         Lectura de datos con Pandas
+              df= pd.read_csv('pokemon_data.csv',sep=',')              df= pd.read_csv('pokemon_data.txt',delimiter='\t')
+         Lectura de datos con Pandas
+                                                                          url = 
+                                                                          'https://raw.githubusercontent.com/JJTorresDS/stoc
+                 df= pd.read_excel('pokemon_data.xlsx')                   ks-ds-edu/main/stocks.csv'
+                                                                          df = pd.read_csv(url, index_col=0)
+         Lectura de datos con Pandas
+                 df= pd.read_sql('archivo_base_datos.sql')                         df = pd.read_json('file_d.json')
+              Características                         Numpy                                       Pandas
+              Homogeneidad            Los arrays son elementos                   Los DataFrames de pandas permiten 
+                                      homogéneos (mismo tipo de data)            tener datos heterogéneos
+                Mutabilidad           Los arrays son mutables                    Los DataFrames son mutables
+                  Acceso              Se puede acceder a los arrays              Se puede acceder a los Dataframes 
+                                      usando posiciones enteras                  usando enteros e índices
+                Flexibilidad          Los arrays no tienen la flexibilidad de    DataFrames son mucho más flexibles 
+                                      manejar datos dinámicos secuencias         para manipular tipos de datos de 
+                                      y mezcla de tipos de datos                 diversos orígenes con múltiples 
+                                                                                 funciones
+              Tipos de datos          Están diseñados para trabajar con          Están diseñados para trabajar con datos 
+                                      datos numéricos                            tabulares
+                  Tiempos             Mucho más tiempo de carga y                Menor tiempo de carga y procesamiento
+                                      procesamiento
+      Ejemplo en vivo
+   Utilizaremos el notebook llamado 
+   Pandas.ipynb dentro de la carpeta de 
+   clase para repasar los conceptos 
+   fundamentales de Pandas (Creación y 
+   manipulación de series y Dataframes, 
+   filtros, lecturas de archivos en formato csv, 
+   txt, xlsx, json)
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+       Repaso:
+      Visualización
+       Matplotlib
+       Matplotlib
+        Es una librería básica en Python para la generación 
+        de visualizaciones con alto nivel de personalización.                     Fácil y extensible
+        Utiliza herramientas de la GUI de Python como PyQt, 
+        TKinter y WxPython. Además hace uso de Numpy
+                                                                                Open Source y de alto 
+        Es la librería que sirve como fundamento para otras                             nivel
+        como Seaborn, Bokeh, Pygal y Plotly.
+                                                                                Orientado a objetos y 
+                                                                                       portable
+       Fuente: https://matplotlib.org/
+    Interfaces Matplotlib
+                           ✔ La  interfaz  orientada  a  estados  es 
+                             similar a la interfaz gráfica de MATLAB, 
+                             donde se pueden modificar atributos del 
+                             gráfico  y  ejes  y  no  permite  reutilizar 
+                             objetos.
+                           ✔ La interfaz orientada a objetos es mucho 
+                             mejor  alternativa  si  deseamos  crear 
+                             varios  gráficos  al  tiempo.  Las  figuras 
+                             pueden ser guardadas como un objeto y 
+                             pueden ser utilizadas posteriormente o 
+                             ser  exportadas en un formato deseado 
+                             (pdf, jpg, png, jpeg, tiff, svg)
+           1. Gráfico de líneas                                                          2. Gráfico de puntos
+                                                                                    fig, ax = plt.subplots()
+                                                                                    ax.scatter(alturas, pesos, alpha=0.7)
+            fig, ax = plt.subplots()                                                ax.set_title('Altura vs. Peso de 50 alumnos')
+            ax.plot([0, 1, 2, 3, 4, 5, 6], [1, 5, 2, 4, 8, 9, 2])                   ax.set_xlabel('Altura (cm.)')
+                                                                                    ax.set_ylabel('Peso (kg.)')
+                    3. Gráfico de                                                        4. Histograma
+                             barras
+                                                                             fig, ax = plt.subplots(figsize=(8, 4))
+           fig, ax = plt.subplots(figsize=(8,4))                             ax.hist(df_lluvias.values.flatten(), bins=10)
+           p_acumuladas = df_lluvias.sum()                                   ax.set_title('Histograma de prec.')
+           ax.bar(df_lluvias.columns, p_acumuladas)                          ax.set_xlabel('Intervalos de prec. (mm.)')
+                                                                             ax.set_ylabel('Frecuencia absoluta')
+                        5. Boxplot                                                             6. Piechart
+                                                                                 cars = ['AUDI', 'BMW', 'FORD', 'TESLA', 'JAGUAR', 
+              fig, ax = plt.subplots(figsize=(8, 4))                             'MERCEDES']
+              ax.boxplot(df_lluvias.T)                                           data = [23, 17, 35, 29, 12, 41]
+              ax.set_title('Boxplot de prec.')
+              ax.set_xlabel('Meses')                                             fig,ax = plt.subplots(figsize =(10, 7))
+              ax.set_ylabel('Precipitacione (mm)')                               ax.pie(data, labels = cars)
+        Seaborn
+       Seaborn
+        Es  una  librería  con  un  conjunto  de  funciones 
+        internas   para    realizar   mapeo  semántico  y                          Funciones simples
+        agregación estadística .
+        Permite  generar  visualizaciones  con  excelentes 
+        acabados  estéticos  sin  tener  que  utilizar  mucho                    Open Source y de alto 
+        código.                                                                          nivel
+        Proporciona una interfaz de alto nivel para realizar                     Orientado a objetos con 
+        gráficos estadísticos atractivos e informativos.                             estilos y temas 
+                                                                                       elaborados
+       Fuente: https://seaborn.pydata.org/
+     Tipos de funciones 
+     Seaborn
+                                            Funciones Figure-
+                                            level
+            Funciones Axes-
+            Level
+       1. Gráfico de líneas                               2. Gráfico de puntos
+        flights = sns.load_dataset("flights")          tips = sns.load_dataset("tips")
+        may_flights = flights.query("month=='May'")    sns.scatterplot(data=tips, x="total_bill", 
+        sns.lineplot(data=may_flights, x="year",       y="tip", hue="time")
+        y="passengers")
+             3. Gráfico de                                  4. Histograma
+                   barras
+        tips = sns.load_dataset("tips")            penguins = sns.load_dataset("penguins")
+        # Axis-level                               # Axis-level
+        ax = sns.barplot(x="day",                  sns.histplot(data=penguins, 
+        y="total_bill", data=tips)                 x="flipper_length_mm")
+                 5. Boxplot                                         6. Piechart
+                                                         data=[data1, data2, data3, data4]
+         penguins = sns.load_dataset("penguins")         labels=["label1",”label2”, “label3”, 
+         ax = sns.boxplot(x="day", y="total_bill",       “label4”]
+         data=tips)                                      colors= sns.color_palette("pastel")[0:5]
+                                                         plt.pie(data=data, labels= labels,colors= colors, 
+                                                         autopct= "%.0f%%")
+      Matplotlib vs 
+        Seaborn
+             Características                      Matplotlib                                   Seaborn
+              Funcionalidad          Gráficos básicos                         Temas fascinantes. Compila datos a 
+                                                                              gráficos
+                 Sintaxis            Sintaxis larga y compleja e.g            Sintaxis simple y fácil de entender e.g 
+                                     matplotlib.pyplot.bar(x_axis, y_axis)    seaborn.barplot(x_axis,y_axis)
+            Múltiples figuras        Se pueden tener figuras múltiples        Puede tener más problemas de 
+                                     simultáneamente                          memorias
+               Flexibilidad          Altamente customizable y robusto         Evita superposición de temas 
+          DataFrames y Arrays        Funciona eficientemente y trata a        Más funcional y organizado y trata 
+                                     figuras y ejes como objetos              datasets como unidad simple
+              Casos de uso           Gráficas diversas usando Numpy y         Versión extendida de Matplotlib con el 
+                                     Pandas                                   uso de Numpy y Pandas
+    Otras librerías para 
+      visualizaciones
+  Otras librerías
+      Ejemplo en vivo
+   Utilizaremos el notebook llamado 
+   Matplotlib.ipynb y Seaborn.ipynb 
+   dentro de la carpeta de clase para repasar 
+   los conceptos fundamentales de las 
+   librerías básicas para visualizaciones
+       Repaso: 
+   Estadística Descriptiva
+     Tipos de variables
+                                                    Categorías 
+                                  Nominal           mutuamente 
+                                                   exclusivas sin un 
+                                                   orden implícito
+                   Cualitativas                     Categorías 
+                                  Ordinal           mutuamente 
+                                                  exclusivas con un 
+                                                   orden implícito
+     Tipos de 
+     variables 
+                                                  Variables numéricas 
+                                  Discretas       que sólo admiten 
+                                                  números enteros
+                  Cuantitativas
+                                                  Variables numéricas 
+                                  Continuas         que admiten 
+                                                  números reales 
+     Medidas de tendencia 
+     central
+        Media: representa el 
+        promedio de los datos, 
+        también existe la media 
+        recortada
+        Mediana y cuartiles: 
+        representan medidas de 
+        localización en la distribución 
+        de la variable númerica
+        Moda: representa el valor de 
+        mayor frecuencia. No existe 
+        en todas las ocasiones
+    Medidas de dispersión
+     Varianza: es una medida que cuantifica la variabilidad de los datos, su principal 
+     desventaja es que se encuentra en unidades al cuadrado lo que hace que la 
+     interpretación sea compleja
+     Desviación estándar: es la raíz cuadrada de la varianza tiene la ventaja de que se 
+     puede interpretar como un valor de dispersión alrededor de la media.
+     Rango intercuartílico: medida robusta de dispersión definida como el Q3-Q1 la cual es 
+     resistente a atípicos y permite comprender mejor la distribución y variabilidad de los 
+     datos.
+      Ejemplo en vivo
+   Utilizaremos el notebook llamado Estadística 
+   Descriptiva.ipynb dentro de la carpeta de 
+   clase y repasaremos conceptos como: 
+   pruebas de hipótesis, p-valor, intervalos de 
+   confianza, cálculo de estadísticas descriptivas 
+   básicas e inferencia estadística.
+          Accediendo a notebooks 
+               del Curso DS-I
+        Realizaremos una copia de todos los notebooks 
+       disponibles del Curso de DS-I en nuestras cuentas 
+                   personales
+                Duración: 10-15 min
+       ACTIVIDAD EN CLASE
+    Accediendo a 
+    notebooks del Curso 
+     Descripción de la actividad. 
+    DS-I
+     Se propone que los estudiantes puedan descargar los 
+     archivos en formato .ipynb disponibles para cada clase, 
+     pueden hacer una copia en sus cuentas de google.
+     En la carpeta de clase encontrarán dos subcarpetas: 
+     una llamada Notebooks a repasar donde trabajaremos 
+     conceptos de las librerías Pandas, Matplotlib y Seaborn, 
+     fundamentales para desarrollar un correcto EDA. En la 
+     subcarpeta Datos se encuentra la data para trabajar
+     Tiempo estimado 20-25min
+       CLASE N°22 
+       Glosario
+       Numpy: librería de Python que nos permite         Series: estructuras 1D en Pandas que 
+       trabajar con matrices y vectores de forma         almacenan vectores con índice, nombre y 
+       sencilla y potente                                valores
+       Array: estructura fundamental en Numpy que        DataFrames: estructuras 2D (filas x 
+       solo permite un solo tipo de dato haciéndolo      columnas) que son la generalización de Series 
+       eficiente para operaciones de alta complejidad,   en Pandas
+       pueden ser de 1D (vectores), 2D (matrices) o 
+       3D (tensores)                                     Matplotlib y Seaborn: Librerías gráficas de 
+                                                         Python que permiten elaborar gráficos de alta 
+       Pandas: librería fundamental que nos permite      calidad con diferentes propósitos.
+       trabajar con archivos planos (.csv, .txt, xlsx) en 
+       Python                                            Estadística Descriptiva: Rama de la 
+                                                         estadística que se encarga de descubrir 
+                                                         patrones en los datos por medio de resúmenes 
+                                                         numéricos y gráficos 
+            ¡Atención!
+     Recuerda instalar Python para la próxima clase.
+            Ver Guía de Instalación
+     ¿Quieres saber más?
+     Te dejamos material 
+     ampliado de la clase
+         MATERIAL AMPLIADO
+     Recursos multimedia
+     Numpy y Pandas
+      ✓ Numpy | Numpy team |          Estadística inferencial
+         numpy library                 ✓ What is inferential Statistics? | Essa 
+      ✓ Pandas | Pandas team |            W | Inferential Statistics
+         Pandas library
+     Matplotlib y Seaborn
+      ✓ Matplotlib | Matplotlib team | 
+         Matplotlib
+      ✓ Seaborn | Seaborn team | Seaborn
+     Estadística Descriptiva
+      ✓ Descriptive Statistics | Adam 
+      Disponible en nuestro repositorio.
+         Hayes, Andy Smith, Michael 
+         Logan | Estadística Descriptiva
+      ¿Preguntas?
+                   Resumen 
+               de la clase hoy
+              ✓ Repaso de fases de un proyecto de DS
+              ✓ Repaso de Numpy y Pandas
+              ✓ Repaso de visualizaciones (Matplotlib + Seaborn) 
+                y EDA
+              ✓ Repaso de estadística descriptiva
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.

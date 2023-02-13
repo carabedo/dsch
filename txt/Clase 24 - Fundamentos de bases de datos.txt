@@ -1,0 +1,575 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 24. DATA SCIENCE
+          Fundamentos de 
+           bases de datos
+      Temario
+                       23                      24                     25
+                     Data               Fundamentos               Lenguaje 
+                                                               estructurado de 
+                 Acquisition I           de bases de            consulta SQL- 
+                                             datos                 Parte 1
+                 ✓ Comprensión del     ✓ Bases de datos          ✓ Introducción
+                    problema en el     ✓ Sistemas DBMS
+                    caso de negocio    ✓                         ✓ DDL
+                                          Tipos de sistemas de 
+                 ✓ Lectura de datos       gestión de bases de    ✓ DML
+                    con Pandas            datos
+                 ✓ Pyspark             ✓ Backup, Conexiones, 
+                                          auditoría
+    Objetivos de la clase
+                 Comprender la definición de bases de datos y 
+                 las mejoras que ofrecen 
+                 Reconocer los sistemas de gestión de bases 
+                 de datos. Cómo es su arquitectura y que 
+                 funciones permiten trabajar con bases de datos 
+                 Conocer algunas funciones que forman parte 
+                 del DBMS
+                 Reconocer los tipos de sistemas de bases de 
+                 datos
+             MAPA DE CONCEPTOS
+                                               Fundamentos de bases de 
+                                                         datos
+                                                                    Principales                  Backup, 
+               ¿Por qué?                    DBMS                    sistemas de                conexión y 
+                                                                    bases datos                 auditoría
+                                                                    Relacional
+             Definiciones                Definición                                             Backup y 
+                                                                      No SQL                   conexiones
+                                                                    Ventajas y 
+                Mejoras                Arquitectura de              desventajas
+               ofrecidas                   3 capas                                              Auditoría
+                                                                    Funciones y 
+                                                                     lenguajes
+      Cuestionario de tarea
+   ¿Te gustaría comprobar tus 
+   conocimientos de la clase anterior?
+   Te compartimos a través del chat de 
+   Zoom / chat de la plataforma el enlace a un 
+   breve cuestionario de Kahoot.
+   Duración: 10 minutos
+    Introducción a las 
+     Bases de datos
+    Definición de bases 
+       de datos
+    Entendimiento del caso de 
+    negocio
+     ✔ El  éxito  de  las  organizaciones  que  manejan 
+       información  depende  de  su  habilidad  en 
+       obtener,  gestionar  y  utilizar  sus  datos  de 
+       forma oportuna, efectiva y precisa. 
+     ✔ La cantidad de datos disponible  es  cada  vez 
+       mayor y más compleja y, por ello, es cada vez 
+       más  evidente  el  valor  de  la  información 
+       como activo.
+      Definición de 
+      Bases de datos
+        ✔ Se  puede  definir  como  una  colección 
+           organizada  de  datos,  con  el  objetivo  de 
+           estandarizar procesos y ser más eficientes
+        ✔ “Una  base  de  datos  es  una  colección 
+           organizada  de  información  estructurada  o 
+           datos,      normalmente       almacenados 
+           electrónicamente en un sistema informático”. 
+      Fuente: Oracle
+      Ejemplo en vivo
+   Les proponemos a todos los estudiantes que creen 
+   columnas para capturar datos de diferente índole en un 
+   mismo documento de Google SpreadSheets. 
+   ✔ ¿Qué tan caótico piensan que será el proceso de 
+     manipulación de estos datos? 
+   ✔ ¿Qué eventualidades se les ocurre qué puedan 
+     suceder?
+   ✔ ¿Cuál es la utilidad principal de las bases de datos?
+     Tipos de bases de 
+        datos
+      Tipos de Bases de datos
+                                          SQL: Colección de tablas que almacena un 
+                                          conjunto específico de datos estructurados.
+                                          NoSQL:  variedad de modelos en datos, 
+                                          incluidos los formatos de clave-valor, 
+                                          documento, columna y grafos.
+                                          NewSQL: NewSQL tiene una escalabilidad 
+                                          como NoSQL y garantiza estructura ACID de 
+                                          RDBMS 
+                                          Analytical: almacena y administra big data 
+                                          usando Business Intelligence (BI).
+                                          As a service: servidor que utiliza una 
+                                          aplicación de base de datos que proporciona 
+                                          servicios de base de datos a otros 
+      Fuente: Bid Data DZONE              programas informático.
+       Tipos de Bases de datos - 
+         Se basa en el modelo de datos            Algunos ejemplos de bases de 
+       SQL
+         relacionales, que almacena datos en      datos relacionales son MySQL, 
+         forma de filas (tupla) y columnas        Microsoft SQL Server, Oracle, 
+         (atributos), y juntos forman una tabla   etc.
+         (relación). Utiliza SQL para 
+         almacenar, manipular y mantener los 
+         datos. Inventado por EF Codd en 
+         1970. 
+      Tipos de Bases de datos - 
+      NoSQL                                     ✔ Es un tipo de base de datos que se 
+                                                   utiliza para almacenar una amplia 
+                                                   gama de conjuntos de datos. No solo 
+                                                   almacena datos en forma tabular sino 
+                                                   de varias maneras diferentes. 
+                                                ✔ Surgió cuando aumentó la demanda de 
+                                                   creación de aplicaciones modernas, 
+                                                   creado por Carlo Strozzi en 1998. 
+                                                ✔ NoSQL tiene una amplia variedad de 
+                                                   tecnologías en respuesta a las 
+                                                   demandas: Key-value (Riak, Redis), 
+                                                   Documentos (CouchDB, Mongo 
+                                                   DB), Grafos (Neo4j, GraphDB) y 
+                                                   Wide-column (Cassandra, HBase)
+     Fuente: 
+     Architectural assessment of NoSQL and NewSQL systems
+     Tipos de Bases de datos - 
+     NewSQL                         Creado en 2011 para abordar los 
+                                    desafíos de en SQL, fue diseñado para 
+                                    los sistemas de procesamiento de 
+                                    transacciones en línea (OLTP), 
+                                    cumpliendo con la estructura (ACID). 
+                                    Admite de forma nativa aplicaciones que 
+                                    tienen una gran cantidad de 
+                                    transacciones, son repetitivas en sus 
+                                    procesos y utilizan un pequeño 
+                                    subconjunto de procesos de recuperación 
+                                    de datos.
+                                    VoltDB es un sistema de base de datos 
+                                    NewSQL que proporciona una velocidad 
+                                    hasta 50 veces más rápida que SQL y 
+                                    más de ocho veces más rápida que 
+     Fuente: NewSQL definición      NoSQL.
+       Tipos de Bases de datos - 
+       Analytical
+        Es un sistema de solo            La información se actualiza 
+        lectura que almacena             regularmente para incluir datos 
+        datos históricos sobre           de transacciones recientes de los 
+        métricas comerciales,            sistemas operativos de una 
+        como el rendimiento de           organización.
+        ventas y los niveles de 
+        inventario. Los analistas de 
+        negocios, ejecutivos 
+        corporativos y otros 
+        trabajadores ejecutan 
+        consultas e informes en 
+        una base de datos 
+        analítica.
+     Tipos de Bases de datos - 
+     As a service                    DBaaS es un modelo de servicio de 
+                                     computación en la nube que brinda a 
+                                     los usuarios acceso a una base de 
+                                     datos sin necesidad de configurar 
+                                     hardware físico, instalar software o 
+                                     configurar el rendimiento. 
+                                     Todas las tareas administrativas y el 
+                                     mantenimiento están a cargo del 
+                                     proveedor de servicios, 
+                                     Se puede ofrecer un mayor control 
+                                     sobre la base de datos, pero puede 
+                                     variar según el proveedor (Amazon 
+                                     RDS, SQL Azure, FathomDB).
+     Fuente: Azure Database
+      Una definición 
+       mejorada
+               Una definición 
+                    mejorada
+        La base de datos es un 
+        conjunto de datos no 
+        redundantes, almacenados 
+        en un soporte informático, 
+        organizados en forma 
+        independiente de su 
+        utilización y accesibles 
+        simultáneamente por 
+        distintos usuarios y 
+        aplicaciones.
+       Características importantes
+             No sean redundantes                  Se refiere a la eficiencia en su 
+                                                  almacenamiento
+             Están almacenados en soporte         Se refiere a la necesidad de contar con 
+             informático:                         medios físicos de almacenamientos 
+                                                  que garanticen seguridad
+             Están organizados en forma           No se necesita saber cómo están 
+             independiente de su uso              almacenados para poder acceder a 
+                                                  los datos
+             Pueden ser accedidos en forma        Se refiere a la flexibilidad de poder 
+             simultánea                           utilizar un sistema específico
+     Mejoras ofrecidas 
+    por Bases de Datos
+                            Sistema DBMS
+          Las bases de datos clásicas 
+          están administradas por un 
+          sistema particular adecuado                      REEMPLAZAR 
+          para tal fin denominado                           POR IMAGEN
+          Sistema de Gestión de 
+          Bases de Datos (DBMS: 
+          Data Base Management 
+          System)
+      Algunas mejoras ofrecidas
+         ✔ Independencia: de la            ✔ Integridad: se ofrecen 
+            representación de los datos       diversos niveles de 
+            con respecto a su                 protección frente a fallos.
+            almacenamiento.
+         ✔ Eficiencia: se utilizan         ✔ Seguridad: complejo 
+            técnicas  se utilizan             sistema para otorgar 
+            técnicas específicas para         permisos de tal forma de 
+            acelerar la consulta y            garantizar el acceso a 
+            utilización de los datos          quien corresponda.
+            almacenados en la base de 
+            datos.
+       Algunas mejoras ofrecidas
+         ✔ Centralización:  permite          ✔ Reusabilidad: situaciones 
+             que sean administrados de          comunes de acceso y uso y 
+             forma centralizada.                utilizarlas a través de 
+         ✔ Acceso concurrente:  el              distintas aplicaciones.
+             acceso por parte de 
+             múltiples usuarios es 
+             complejo, y existen muchas 
+             situaciones donde los datos 
+             podrían corromperse. El 
+             DBMS provee mecanismos 
+             para evitar estas 
+             situaciones.
+    Sistemas de gestión 
+    de bases de datos
+       Definición
+        Data Base Management 
+        System                                       Ofrece un enfoque sistemático 
+         Solución tecnológica utilizada para 
+         optimizar y administrar el                  para administrar bases de datos 
+         almacenamiento y la recuperación            a través de una interfaz para 
+         de datos de las bases de datos.             usuarios
+       PARA RECORDAR
+    Es un software específicamente diseñado 
+    para definir, manipular y utilizar la 
+    información que contienen las bases de 
+    datos.
+    Permite realizar las tareas de 
+    administración para garantizar su 
+    operatividad y además mantener las 
+    características de integridad y seguridad 
+    de los datos
+    Arquitectura de tres 
+        capas
+    ¿Qué es una Arquitectura?
+      En términos de software, la arquitectura 
+      representa la forma en que está 
+      estructurado el software. Pero es un 
+      término muy amplio… 
+      Entonces podemos pensarlo como la forma 
+      de generar la estructura necesaria para 
+      cumplir con los requerimientos del 
+      software. 
+    Sistema DBMS en 3 niveles
+       Extern Representación de los datos de la forma que los ve el usuario. 
+              Aquí se ven los datos “tal cual están” a los ojos de un determinado 
+       o      usuario.
+              Representación abstracta del contenido total de la base de datos. 
+       Lógic  Contiene la definición de todos los datos y además las reglas y 
+       o      mecanismos  correspondientes  a  la  seguridad  e  integridad.  Está 
+              orientado al perfil del administrador de bases de datos.
+       Intern Representación de la base de datos de forma que lo entienda la 
+              computadora o soporte físico donde se almacenan los datos. Aquí 
+       o      se ven definiciones como el tipo de soporte donde se guardan, el 
+              espacio y los mecanismos de acceso.
+    Sistema DBMS en 3 niveles
+      1. Nivel interno: estructura de 
+        almacenamiento FÍSICA real y 
+        rutas de acceso.
+      2. Nivel conceptual o lógico: 
+        estructura y restricciones para 
+        toda la base de datos
+      3. Nivel externo o de vista: 
+        describe varias vistas de 
+        usuario
+        Modificación en sistemas 
+           ✔ Al  modificar  el  nivel  externo… 
+        DBMS
+                podemos       alterar     los     datos     sin 
+                preocuparnos  por  su  estructura  o  su 
+                almacenamiento.
+           ✔ Al modificar el nivel lógico… podemos 
+                alterar la estructura de organización de los 
+                datos sin afectar la forma en que estos se 
+                guardan. 
+           ✔ Al modificar el nivel interno… podemos 
+                cambiar la forma de almacenamiento de 
+                los  datos  sin  alterar  su  estructura  y/o 
+                contenido.
+    Principales tipos de 
+    sistemas de gestión 
+    de Bases de datos
+  Tipos de bases de datos 
+  comunes
+       Relacional
+       Relacionales
+       Responden al Modelo de Datos 
+       relacional    propuesto     por 
+       Edward Frank Codd en 1970, 
+       tal cual como podemos observar 
+       en la siguiente imagen:
+      Relacionales
+            ✔ Representan  los  datos  como  un 
+               conjunto   de   tablas   en    dos 
+               dimensiones, formadas por filas y 
+               columnas.  Cada  fila  representa  una 
+               forma  de  relación  entre  entre  un 
+               conjunto de valores y está identificada 
+               de forma única. 
+            ✔ A  menudo,  las  bases  de  datos 
+               relacionales  contienen  múltiples 
+               tablas relacionadas entre sí, lo cual 
+               permite  que  la  información  pueda 
+               estar  almacenada de una forma más 
+               compacta. 
+    Relacionales
+     Su acceso es muy simple. El lenguaje de 
+     consulta estructurado (denominado SQL 
+     por sus siglas en inglés) permite una gran 
+     flexibilidad a la hora de realizar 
+     consultas y manipulación de datos en 
+     estas bases de datos.
+     ¡Veremos SQL más a detalle en la siguiente clase! 
+        No SQL
+    No Relacionales
+    Modelo propuesto por Carlo Strozzi en 1998, como una base de 
+    datos  "relacional"  de  código  abierto  y  liviana  que  no  usa  SQL, 
+    desarrollado en principio para datos web (no estructurados) y por 
+    la necesidad de un procesamiento más rápido. 
+     No Relacionales
+     Engloba muchos subtipos que 
+     comparten como característica 
+     fundamental no estar 
+     organizados en tablas, y 
+     gracias a ello, pueden ser 
+     accedidos mediante otras formas 
+     acordes a su uso específico. 
+     ☝¡Aunque aclaramos que muchas de ellas también pueden ser accedidas por SQL!
+        Algunos ejemplos
+          ✔ Orientadas a objetos: almacenan               ✔ Orientadas  a  documentos: 
+             los  objetos  tal  cual  como  son              guardan conjuntos de texto muy 
+             utilizados  en  los  lenguajes  de              grandes  (los  documentos),  y 
+             programación orientados a objetos.              este texto puede estar a su vez 
+          ✔ Orientadas a grafos: guardan los                 estructurado  dentro  de  cada 
+             datos  como  nodos  y  relaciones,  y           documento.
+             pueden  ser  consultados  de  forma 
+             automatizada.
+   Ventajas y desventajas 
+    de bases de datos 
+     relacionales y No 
+      relacionales
+         Ventajas y desventajas 
+         bases SQL
+                                Ventajas                                          Desventajas
+            Simplicidad del modelo: Muy simple, no               Mantenimiento: difícil por acumulación de datos 
+            requiere consultas complejas                         en el tiempo
+            Fácil uso: usuarios pueden acceder/recuperar         Costo: se generan costos fijos y variables por 
+            fácilmente la información requerida en segundos      mantenimiento
+            sin caer en la complejidad.
+            Precisión: bien definidas y organizadas, no          Almacenamiento físico: requiere mucha 
+            duplicados.                                          memoria física.
+        Ventajas y desventajas 
+        bases SQL
+                              Ventajas                                        Desventajas
+            Integridad de datos: brindan coherencia en        Poca escalabilidad: los datos no son escalables 
+            todas las tablas.                                 en diferentes servidores de almacenamiento físico
+            Normalización: se divide la información en partes  Estructura compleja: solo puede almacenar 
+            manejables para reducir el tamaño del             datos en forma tabular, dificultando 
+            almacenamiento                                    representación compleja.
+            Colaboración: muchos usuarios interactuando al    Reducción de performance en tiempo: mayor 
+            tiempo                                            complejidad
+            Integridad y Seguridad: Sistemas                  Menor tiempo de respuesta: muchos datos 
+            medianamente confiables                           poca eficiencia
+         Ventajas y desventajas 
+         bases No SQL
+                               Ventajas                                             Desventajas
+           Modelo flexible: puede almacenar y combinar            Falta de estandarización: No existe un estándar 
+           cualquier tipo de datos, tanto estructurados como no   que defina reglas y roles de las bases de datos 
+           estructurados                                          NoSQL. 
+           Modelo de datos en evolución: permite actualizar  Algunos problemas de backup: No está del todo 
+           dinámicamente el esquema para evolucionar con los      desarrollado este ámbito en este tipo de bases de 
+           requisitos cambiantes sin interrupciones.              datos.
+           Fácil escalamiento: pueden escalar para                Consistencia: NoSQL prioriza la escalabilidad y el 
+           adaptarse a cualquier tipo de crecimiento de datos     rendimiento, pero cuando se trata de la consistencia 
+           manteniendo un bajo costo.                             de los datos no es tan eficiente.
+         Ventajas y desventajas 
+         bases No SQL
+                               Ventajas                                               Desventajas
+          Alto performance: gran rendimiento, medido en            Difícil mantenimiento: pueden llegar a ser 
+          términos de rendimiento y latencia (retraso entre la     costosos y requerir de personal especializado
+          solicitud y la respuesta real).
+          Acceso libre: no requieren tarifas de licencia           Poco nivel de madurez: Son relativamente más 
+          costosas y pueden ejecutarse en hardware                 nuevas que las bases relacionales por ende tienen 
+          económico, lo que hace que su implementación sea         todavía mucho por mejorar.
+          rentable.
+   Funciones y lenguajes
+     Tres tipos de funciones
+     básicas
+       Definició      Manipulación              Segurida
+           n                                       d
+         DD              DM              DC
+          L                L               L             TCL
+       Data Definition 
+                       Data Manipulation               Transaction Control 
+         Language                     Data Control Language
+                          Language                        Language
+        DDL (Data Definition 
+        Language)
+        CREATE: crear una nueva base de          COMMENT: se utiliza para 
+        datos o sus objetos.                     agregar comentarios en el 
+        DROP: se utiliza para eliminar los       Diccionario de datos.
+        objetos de la base de datos.             RENAME: se utiliza para 
+        ALTER: se usa para reestructurar         cambiar el nombre de los 
+        las tablas de la base de datos           objetos de la base de datos.
+        (Columnas, tipos, índices)
+        TRUNCATE: se utiliza para vaciar 
+        una tabla de base de datos. (Datos 
+        fuera , Estructura =)
+       DML (Data Manipulation Language)
+         SELECT: se utiliza para         DELETE: se utiliza para 
+         seleccionar  valores de         eliminar los registros de una 
+         columna de la base de           tabla de base de datos.
+         datos y sus tablas.             LOCK: se utiliza para 
+         INSERT: se utiliza para         bloquear los privilegios de 
+         insertar nuevos registros       lectura o escritura en una 
+         en las tablas de la base        tabla.
+         de datos.                       MERGE: se utiliza para 
+         UPDATE: se utiliza para         fusionar los registros de una 
+         actualizar los registros de     tabla de base de datos.
+         la tabla de la base de 
+         datos existente.
+       DCL (Data Control Language)
+        GRANT: se utiliza para            Las tareas sobre las que se 
+        otorgar derechos o                pueden conceder o denegar 
+        privilegios particulares a los    permisos son:
+        usuarios de la DB
+        REVOKE: se utiliza para            ✔ CONNECT
+        retirar los derechos o             ✔ SELECT
+        privilegios de los usuarios 
+        de la DB                           ✔ INSERT
+                                           ✔ UPDATE
+                                           ✔ DELETE
+                                           ✔ USAGE
+       DCL (Data Control Language)
+         COMMIT: se utiliza para          Permite gestionar transacciones 
+         confirmar la transacción         en la base de datos. Estos se 
+         ROLLBACK: se utiliza para        utilizan para administrar los 
+         rehacer los cambios realizados   cambios realizados por las 
+         por una transacción por error.   declaraciones DML. También 
+                                          permite que las declaraciones 
+         SAVEPOINT: agrega un punto       se agrupen en transacciones 
+         de control al proceso de         lógicas.
+         transacción.
+         SET TRANSACTION: Define 
+         los diferentes caracteres de 
+         una transacción
+      Para pensar
+   ¿Qué casos de implementación en la 
+   industria conoces o has escuchado hablar, 
+   tanto de SQL como de NoSQL en 
+   empresas?
+   Contesta en el chat de zoom
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+      Ejemplo en vivo
+   Analicemos como se puede manipular el 
+   lenguaje SQL en Python usando la librería 
+   SQLlite. Aprenderemos cómo crear 
+   diagramas entidad-relación y los conceptos 
+   básicos para creación de tablas 
+    Backup, mecanismos 
+      de conexión y 
+       auditoría
+        Backup
+                     Backup
+      Para prevención y actuación frente a 
+      contingencias, disponer de una o 
+      varias copias, parciales o totales, de 
+      los datos de la base de datos, que 
+      pueden residir en el mismo soporte 
+      físico que la base de datos, o 
+      preferiblemente separado del lugar 
+      principal donde se guardan los 
+      datos.
+     Mecanismos de 
+       conexión
+    Parámetros de conexión
+     Las aplicaciones “hablan” con 
+     las bases de datos a través de 
+     los mecanismos de conexión 
+     ingresando ítems de información 
+     —llamados “parámetros de 
+     conexión”— para poder 
+     entenderse e interactuar 
+     ágilmente entre sí.
+       Parámetros de conexión
+          ✔ Los parámetros  de  conexión  se  guardan  en 
+             archivos con una estructura especial, y luego 
+             son    accedidos    y   utilizados   por   las 
+             aplicaciones. 
+          ✔ Una vez que son accedidos, la base de datos 
+             entiende  que  puede  recibir  órdenes  y 
+             consultas  a  partir  de  dicha  aplicación.  Esas 
+             son  las  que  permiten  al  usuario  interactuar 
+             con los datos, utilizando a la aplicación como 
+             interfaz para dicho acceso.
+       Auditoría
+    Auditoría
+      ✔ Serie de registros automáticos que 
+        tienen en cuenta todos los detalles de 
+        los accesos de los usuarios a la base 
+        de datos.
+      ✔ Desde la fecha, hora e identificación 
+        del usuario hasta el lugar y la forma 
+        exacta  en  que  ese  usuario  realizó 
+        operaciones.
+      ✔ De esta forma, se cuenta con un nivel 
+        de  seguridad  mejorado  para  la 
+        utilización  por  parte  de  múltiples 
+        usuarios.
+    Operatividad de archivos 
+               planos
+     Discutiremos acerca de cuáles son los pros y contras 
+        del uso de spreadsheets y archivos planos
+             Duración: 15-20 mins
+       ACTIVIDAD EN CLASE
+    Operatividad de 
+    archivos planos
+    En esta oportunidad nos reuniremos en grupos de 
+    máximo 5 personas.
+    Discutiremos acerca de qué tan bueno es que los datos 
+    están descentralizados y que cualquier persona pueda 
+    editarlos. Podemos comentar de algunos ejemplos de la 
+    vida cotidiana. Se recomienda generar una lista de pros 
+    y contras para debatir una vez se termine la discusión. 
+      CLASE N°24
+      Glosario
+      Bases de datos: colección ordenada de       Backup: sistema que permite guardar 
+      datos con el fin de estandarizar procesos   periódica y regularmente la información 
+      y ser más eficientes                        almacenada en bases de datos para evitar 
+                                                  pérdidas 
+      Sistema de gestión DBMS: proceso            Mecanismos de conexión: son todos 
+      mediante el cual se optimiza y administra   aquellos parámetros que nos permiten 
+      el almacenamiento y recuperación de         interactuar con las bases de datos
+      datos 
+                                                  Auditoría: proceso mediante el cual se 
+      Arquitectura de 3                           mejoran las estructuras de un sistema de 
+      capas:representación del sistema DBMS       bases de datos y se lleva el registro de logs 
+      en componentes: externo, lógico e interno   y acciones de usuarios.
+      ¿Preguntas?
+                   Resumen 
+               de la clase hoy
+              ✓ Bases de datos
+              ✓ Sistemas de gestión de bases de datos
+              ✓ Tipos de sistemas de gestión de bases de datos
+              ✓ Backup, mecanismos de conexión y auditoría
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.

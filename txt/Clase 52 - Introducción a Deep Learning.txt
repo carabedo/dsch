@@ -1,0 +1,784 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 52. DATA SCIENCE
+         Introducción a Deep 
+                Learning
+        Temario
+                             51                            52                            53
+                      Despliegue de             Introducción a Deep               Introducción al 
+                     Modelos MLOps                     Learning                 Procesamiento de 
+                                                                               Lenguaje Natural I
+                    ✓ Fundamentos de Cloud        ✓ Introducción a Deep          ✓   Procesamiento del 
+                       Computing                      Learning                       lenguaje natural
+                    ✓ DevOps vs. DevSecOps        ✓ Perceptrón y                 ✓   Expresiones regulares
+                    ✓ Continuous Deployment           perceptrón multi-          ✓   Bag of words
+                                                      capa
+                    ✓ Data team                                                  ✓   NLTK
+                                                  ✓ CNN
+                    ✓ MLOps                                                      ✓   Corpus, Document team, 
+                                                  ✓ RNN                              Matrix y Term Document 
+                                                                                     Matrix
+    Objetivos de la clase
+                 Conocer las bases del Deep Learning
+                 Conocer las principales arquitecturas usadas 
+                 en las áreas de Visión por Computadora y NLP
+                 Entender el impacto que Deep Learning tiene 
+                 en la industria
+          MAPA DE CONCEPTOS
+                                                            Deep Learning
+                                                           Perceptrón y MLP
+                                                               CNN
+                Introducción a 
+                Deep Learning                                  RNN
+                                                             Industrias
+                                                            Ejemplos de 
+                                                             aplicación
+    Introducción a Deep 
+       Learning
+       Definición
+   Deep Learning
+    Deep learning es un subconjunto de 
+    machine learning (que a su vez es 
+    parte de la inteligencia artificial) donde 
+    las redes neuronales, algoritmos 
+    inspirados en cómo funciona el cerebro 
+    humano, aprenden de grandes 
+    cantidades de datos y son el fundamento 
+    de esta disciplina.
+   Deep Learning
+    Los algoritmos de aprendizaje profundo 
+    realizan una tarea repetitiva que ayuda a 
+    mejorar de manera gradual el resultado a 
+    través de las “deep layers” lo que 
+    permite el aprendizaje progresivo. Este 
+    proceso forma parte de una familia más 
+    amplia de métodos de aprendizaje 
+    automático basados en redes neuronales.
+        Origen
+     Origen
+                  Ingresa a este link para ver y explorar la línea de 
+                    tiempo sobre el Origen del Deep Learning
+     Fuente: Origen Deep Learning
+    Origen
+    Los primeros en trabajar en Deep Learning fueron Walter Pitts y Warren McCulloch con 
+    el desarrollo de ‘thresholded logic unit’ diseñada para emular el funcionamiento de las 
+    neuronas
+    Fuente: Origen Deep Learning
+    Origen
+    Frank Rosenblatt creó en 1957 el algoritmo perceptrón que sería el primer precursor 
+    de las redes neuronales modernas
+    Fuente: Origen Deep Learning
+    Origen
+    Minsky en colaboración con Seymor Papert crearon el libro Perceptrons que cambió 
+    la perspectiva de lo que era una red neuronal con la demostración del problema XOR
+    Fuente: Origen Deep Learning
+    Origen
+    Cerca de 1986 se desarrolló la idea del algoritmo backpropagation por medio de Geoff 
+    Hinton, David Rumelhart y Ronald Williams , resolviendo problemas clásicos de 
+    Perceptrón 
+    Fuente: Origen Deep Learning
+    Origen
+    Sin embargo esto no fue suficiente ya que con el desarrollo del algoritmo SVM en 1995 
+    quedaron en el congelador por su inconveniente de no ser escalables a problemas 
+    grandes 
+    Fuente: Origen Deep Learning
+    Origen
+    Cerca de 2006 Hinton resolvió el problema de la complejidad computacional de las 
+    redes neuronales generando un nuevo paradigma en las redes neuronales 
+    Fuente: Origen Deep Learning
+    Origen
+    Luego de 2012 comenzó un estallido en el uso de métodos asociados a redes neuronales para la 
+    resolución de problemas no lineales a gran escala lo cual se demostró en IMAGENET
+    Fuente: Origen Deep Learning
+     Características de 
+      Deep Learning
+   Características de Deep Learning
+    Algunas de las características más 
+    importantes de Deep Learning son:
+     1. Supervisado, Semi Supervisado o No 
+      supervisado
+     2. Grandes cantidades de recursos 
+     3. Grandes cantidades de capas en 
+      modelos
+     4. Sensibilidad a hiperparametros
+     5. Funciones de costo importantes
+    Supervisado, Semi Supervisado o No 
+    Supervisado
+    Deep learning usa aprendizaje supervisado 
+    en situaciones como por ejemplo en 
+    clasificación de imágenes (etiquetas 
+    conocidas)
+    De igual forma puede ser usado como 
+    aprendizaje no supervisado utilizando 
+    similitudes 
+    Adicionalmente los auto encoders se 
+    consideran aprendizaje semi supervisado 
+    ya que pueden comprimir y reconstruir 
+    imágenes 
+    Grandes cantidades de recursos
+    Requiere de Graphical Processing Units (GPUs) 
+    para procesar trabajos pesados. Una gran 
+    cantidad de datos estructurada, no 
+    estructurada y semiestructurada  requiere ser 
+    procesada.
+    Los problemas en la industria IT actualmente 
+    cuentan con grandes cantidades de 
+    información muy variada y a la que se le 
+    puede sacar provecho
+    Grandes cantidades de capas en modelos
+    Para poder comprender las relaciones no 
+    lineales es necesario contar con grandes 
+    cantidades de datos y bastantes capas de 
+    entrada, ocultas y de salida. 
+    Cada una de estas capas procesa la 
+    información con el fin de lograr un 
+    entendimiento de la situación problema. Para 
+    ellos es importante elegir funciones de 
+    activación apropiadas.
+    Sensibilidad a hiperparametros 
+     Hiper parámetros como: Número de épocas, 
+     Batch Size, Número de capas, Tasa de 
+     aprendizaje necesitan ser ajustados de 
+     manera apropiada para lograr buenas 
+     métricas de performance.
+     Las redes neuronales son sensibles a estas 
+     condiciones, por ende cometer Overfitting y 
+     underfitting puede ser algo común si se eligen 
+     mal estos parámetros 
+    Funciones de costo importantes
+    En las redes neuronales se utilizan las 
+    funciones de costo para determinar si el 
+    modelo tiene buen o mal desempeño. 
+    El objetivo es minimizar el costo cuando se 
+    compara con iteraciones previas. Existen 
+    diversos tipos de estas funciones como: Mean 
+    Absolute Error, Mean Squared Error, 
+    Hinge Loss, Cross Entropy entre otras son 
+    ejemplos
+     Ventajas de Deep 
+       Learning
+    Ventajas de Deep Learning
+     1. Resuelven problemas complejos como 
+       procesamiento de audio, texto y 
+       reconocimiento de imágenes entre otros
+     2. Pueden utilizar las bondades de la 
+       computación en paralelo
+     3. Los modelos se pueden entrenar con 
+       grandes cantidades de datos y se hacen 
+       mejores
+     4. Predicciones de alta calidad y escalabilidad
+     5. Funcionamiento apropiado con data no 
+       estructurada
+    Desventajas de Deep 
+       Learning
+    Desventajas de Deep Learning
+     1. Se requieren grandes cantidades de datos 
+       comparado con otras técnicas
+     2. Puede llegar a ser costoso debido a la 
+       complejidad de los modelos
+     3. No existe una teoría estándar que pueda 
+       guiar en la selección de herramientas y 
+       requiere de fuertes conocimientos en 
+       matemáticas y topología
+     4. Los sistemas aprenden por sí mismo y son 
+       difíciles de comprender su evolución
+       Para pensar
+   Ahora bien, ¿Han escuchado previamente de 
+   alguna técnica de Deep Learning?, ¿Por qué Deep 
+   Learning hace parte de Machine Learning?
+   Contesta en el chat de Zoom 
+      Perceptrón y 
+     Perceptrón multi-
+        capa
+       Perceptrón
+      Perceptrón
+        Frank     Rosenblatt,     un      psicólogo 
+        estadounidense,  propuso  el  modelo  de 
+        perceptrón  clásico  en  1958.  Minsky  y 
+        Papert  (1969)  lo  refinaron  y  analizaron 
+        cuidadosamente;  su  modelo  se  conoce 
+        como modelo de perceptrón.
+        El  modelo  de  perceptrón,  propuesto  por     Fuente: Perceptron
+        Minsky-Papert,      es      un      modelo 
+        computacional más general que la neurona 
+        de McCulloch-Pitts.
+      Perceptrón
+        En este caso el output deseado se obtiene 
+        como una suma ponderada de las variables 
+        input.
+        A  diferencia  del  algoritmo  de  neurona 
+        propuesto por McCulloch y Pitts los inputs 
+        ya  no  necesitan  ser  variables  binarias  lo 
+        cual lo hace un algoritmo generalizable y 
+        bastante útil en diversos contextos             Fuente: Perceptron
+        Ejemplo
+    Ejemplo
+     Consideremos la tarea de predecir si una persona verá un juego aleatorio o no. 
+     Utilizaremos 3 variables independientes binarias para simplificar el análisis 
+     Fuente: Perceptron
+    Ejemplo
+     w1,w2 y w3 son los pesos por otro lado w0 se le conoce como el sesgo. Todos 
+     estos  parámetros  dependen  de  los  datos.  Mientras  más  grande  (>θ)  sea  la 
+     suma ponderada mayor probabilidad tendremos de que una persona vea el 
+     partido
+     Fuente: Perceptron
+       Ventajas y 
+      Desventajas
+      Ventajas y desventajas
+                         Ventajas                             Desventajas
+                 Tiene buenos fundamentos           No se puede entender fácilmente la 
+                        matemáticos                  representación del conocimiento
+                Si la solución existe puede ser          Es un clasificador binario 
+                        encontrada                           principalmente
+              Funciona bien con problemas bien      No funciona bien con datos que no 
+                         definidos                sean linealmente separables (problema 
+                                                                  XOR)
+              Funciona bastante bien a pesar de   No se puede actualizar el conocimiento 
+                 presentar ruido en los datos           del algoritmo si no es con 
+                                                             entrenamiento
+       Perceptrón 
+     multicapa (MLP)
+       Perceptrón multicapa (MLP)
+        Un perceptrón multicapa (MLP) es una red 
+        neuronal artificial que genera un conjunto 
+        de  salidas  a  partir  de  un  conjunto  de 
+        entradas. 
+        Se caracteriza por varias capas de nodos 
+        de  entrada  conectados  como  un  grafo 
+        dirigido entre las capas de entrada y salida.     Fuente: Perceptron
+        Utiliza  backpropagation  para  entrenar  la 
+        red ajustando los pesos correspondientes
+      Perceptrón multicapa (MLP)
+        Cada nodo excepto los de entrada, tiene 
+        una función de activación no lineal.
+        El  MLP  es  un  algoritmo  que  se  usa 
+        ampliamente para resolver problemas que 
+        requieren  aprendizaje  supervisado.  Tiene 
+        diversas    aplicaciones    que     incluyen 
+        reconocimiento de voz, reconocimiento de         Fuente: Perceptron
+        imágenes y traducción automática.
+        Ejemplo
+      Ejemplo
+       Consideremos  la  tarea  de  predecir 
+       el salario neto de una persona con 
+       base en dos variables (x1= cantidad 
+       de  horas  trabajadas  y  x2=  horas 
+       extra)
+       En    la  figura  de    la  derecha 
+       observamos     la   aplicación   del 
+       algoritmo  back-propagation  con  el 
+       fin    de    obtener    los   pesos 
+       correspondientes
+      Ejemplo
+       Pasos  involucrados  en  el  algoritmo 
+       Back propagation:
+        1. Propagación  Forward:  en 
+           donde    se   propagan    las 
+           funciones  de  activación  desde 
+           el input hacia el output
+        2. Propagación       Backward: 
+           cuando  el  error  entre  valores 
+           reales  y  los  predichos  para 
+           ajustar pesos y sesgo
+       Ventajas y 
+      Desventajas
+       Ventajas y desventajas
+                          Ventajas                               Desventajas
+                Puede ser aplicado a problemas        No se conoce hasta qué grado cada 
+                     complejos no lineales           variable independiente es afectada por 
+                                                                la dependiente
+             Funciona bien con grandes cantidades     Los cálculos son difíciles de realizar y 
+                           de datos                       consumen bastante tiempo
+             Provee predicciones rápidas luego de     El funcionamiento propio del modelo 
+                        entrenamiento                      depende de la calidad del 
+                                                                entrenamiento
+              Mismo grado de precisión se puede      No se comprende del todo cómo opera 
+             alcanzar con menores cantidades de       el mecanismo de entendimiento del 
+                            datos                                  problema
+        Para pensar
+    ¿Si aumentamos la cantidad de capas 
+    ocultas en una red neuronal de 
+    Perceptrón multicapa, el error de 
+    clasificación de los datos de prueba 
+    siempre disminuye?
+    Verdadero/Falso 
+    Contesta en el chat de Zoom 
+         Para pensar
+    Falso, no siempre se disminuye el error 
+    en el entrenamiento al aumentar las 
+    capas de una red neuronal, muchas 
+    veces se puede generar overfitting al 
+    aumentar las capas
+    Contesta en el chat de Zoom 
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+     Redes neuronales 
+     Convolucionales 
+        (CNN)
+       Definición
+   Redes neuronales convolucionales 
+   (CNN)
+    Una red neuronal convolucional (CNN por sus siglas en inglés) es 
+    un tipo de red neuronal artificial (ANN) utilizada en el 
+    reconocimiento y procesamiento de imágenes que está diseñada 
+    específicamente para procesar datos en píxeles.
+   Redes neuronales convolucionales 
+   (CNN)
+   Las CNN son una herramienta potente 
+   para el procesamiento de imágenes que 
+   utilizan el aprendizaje profundo para 
+   realizar tareas tanto generativas como 
+   descriptivas (computer vision) que 
+   incluyen por ejemplo el reconocimiento 
+   de imágenes y videos, junto con sistemas 
+   de recomendación y procesamiento de 
+   lenguaje natural (NLP).
+        Origen
+   Origen
+   Las CNN en realidad se originaron con el diseño de LeNet por Yann 
+   LeCun entre 1989 y 1998 para la tarea de reconocimiento de 
+   dígitos escritos a mano.
+   Origen
+   El mérito de las arquitecturas más 
+   nuevas de las CNN se debe al desafío 
+   sobre ImageNet denominado "Imagenet 
+   Large scale visual recognition challenge 
+   (ILSVRC)". Se inició en 2010, lo que 
+   condujo a un esfuerzo significativo 
+   entre los investigadores para comparar 
+   sus modelos de aprendizaje automático 
+   y computer vision, en particular para la 
+   clasificación de imágenes
+    Origen
+    Después de esto se desarrollaron diversos 
+    modelos con el paso del tiempo que 
+    obtuvieron muy buenos resultados en la 
+    clasificación de Imagenet:
+     1. AlexNet (2012) Alex Krizhevsky y 
+       Geoffrey Hinton
+     2. ZFNet (2013) Zeiler y Fergus
+     3. VGGNet (2014) Visual Geometry 
+       Group de Oxford
+     4. GoogLeNet (2014)        Fuente: CNN history
+     5. ResNet (2015) Kaiming He et al. 
+      Arquitectura
+   Arquitectura
+    Una CNN básica normalmente tiene tres capas: una capa 
+    convolucional, una capa de agrupación (Pooling), capa totalmente 
+    conectada (fully connected) y capas no lineales.
+      1) Convolución
+       La capa de convolución es el componente 
+       de construcción central de la CNN. Lleva 
+       la parte principal de la carga 
+       computacional de la red.
+       Esta capa realiza un producto escalar 
+       entre dos matrices, donde una matriz es 
+       el conjunto de parámetros que se pueden 
+       aprender, también conocido como 
+       kernel, y la otra matriz es la parte 
+       restringida del campo receptivo. 
+       Fuente: Operación Convolución
+      1) Convolución
+       El kernel es espacialmente más pequeño 
+       (2x2 o 3x3) que la imagen pero tiene 
+       mayor profundidad. Esto significa que, si 
+       la imagen se compone de tres canales 
+       (RGB), la altura y el ancho del kernel 
+       serán espacialmente pequeños, pero la 
+       profundidad se extenderá hasta los tres 
+       canales de la imagen.
+       Fuente: Operación Convolución
+   1) Convolución
+    Durante la fase forward, el kernel 
+    se mueve a lo largo de la altura y el 
+    ancho de la imagen, lo que produce 
+    la representación de la imagen por 
+    regiones. Esto produce una 
+    representación bidimensional de la 
+    imagen conocida como activation 
+    map, que da la respuesta del 
+    kernel en cada posición espacial de 
+    la imagen. El tamaño deslizante del 
+    kernel se llama stride.
+   1) Convolución
+    Detrás de la convolución hay tres 
+    ideas principales:
+    1) Interacción escasa: esto se 
+    logra haciendo que el kernel sea 
+    más pequeño que la imagen 
+    original donde se logran detectar 
+    patrones en regiones pequeñas 
+    esto genera que se usen menos 
+    parámetros lo cual reduce memoria 
+    ocupada y aumenta la eficiencia
+   1) Convolución
+    2) Parámetros compartidos: a 
+    diferencia de las redes neuronales 
+    convencionales (ANN) donde se 
+    establecen pesos para la 
+    calibración de parámetros en las 
+    CNN en principio se da el mismo 
+    peso a todos los píxeles por ende 
+    los pesos aplicados a una entrada 
+    son los mismos que los aplicados a 
+    otros.
+   1) Convolución
+    3) Equivalencia a translación: 
+    Debido al intercambio de 
+    parámetros, las capas de las redes 
+    neuronales convolucionales tendrán 
+    una propiedad de equivalencia a la 
+    translación. Por ende, si cambiamos 
+    la entrada de alguna manera, la 
+    salida también cambiará de la 
+    misma manera.
+   2) Pooling
+    Reemplaza la salida de la red en ciertas ubicaciones al derivar una 
+    estadística de resumen de las salidas cercanas. Esto ayuda a reducir el 
+    tamaño espacial de la representación, lo que disminuye la cantidad 
+    requerida de cálculo y pesos. 
+   2) Pooling
+    Existen varias funciones pooling, como el promedio, la norma L2, 
+    promedio ponderado basado en la distancia desde el píxel central. Sin 
+    embargo, la función más utilizada es la denominada max pooling, 
+    que arroja como salida el valor máximo del vecindario analizado.
+   3) Fully connected layers
+    Las neuronas de las capa tienen 
+    conectividad total con todas las 
+    neuronas de la capa anterior y 
+    posterior. Esta es la razón por la que 
+    se pueden calcular las salidas como de 
+    costumbre mediante una 
+    multiplicación de matrices adicionando 
+    un efecto de sesgo.
+    La capa FC ayuda a mapear la 
+    representación entre la entrada y la 
+    salida.
+   3) Fully connected layers
+    Las capas FC en una red neuronal son 
+    aquellas donde todas las entradas de 
+    una capa están conectadas a cada 
+    unidad de activación de la siguiente 
+    capa. Usualmente las últimas capas 
+    son de tipo FC para compilar los datos 
+    extraídos en capas anteriores con el 
+    fin de generar el resultado final. Es la 
+    segunda capa que consume más 
+    tiempo después de la capa de 
+    convolución..
+   4) Capas no lineales
+    Dado que la convolución es una operación 
+    lineal y las imágenes están lejos de ser 
+    lineales, las capas de no linealidad a 
+    menudo se colocan directamente después 
+    de la capa convolucional para introducir la 
+    no linealidad en el mapa de activación. 
+    Hay varios tipos de operaciones no 
+    lineales, siendo las más populares:
+    1. Tanh
+    2. Sigmoide
+    3. ReLU (más usada, alta 
+      convergencia)
+    ¿Dónde se usan las 
+        CNN?
+   Aplicaciones de CNN
+    Algunas de las aplicaciones más 
+    comunes son:
+    1. Reconocimiento facial
+    2. Análisis de documentos
+    3. Entendimiento del clima
+    4. Reconocimiento de objetos
+    5. Sistemas de recomendación
+    6. Detección de enfermedades
+    7. Encontrar ciertos tipos de sustancias 
+     Redes neuronales 
+    recurrentes (RNN)
+       Definición
+   Redes neuronales recurrentes (RNN)
+    Son un tipo de red neuronal artificial que 
+    utiliza datos secuenciales o datos de 
+    series temporales. Se usan comúnmente 
+    para problemas como traducción de 
+    idiomas, procesamiento de lenguaje 
+    natural (nlp), reconocimiento de voz y 
+    subtítulos de imágenes; se incorporan a 
+    aplicaciones populares como Siri y Google 
+    Translate por ejemplo
+   Redes neuronales recurrentes (RNN)
+    Así como las CNN, las RNN utilizan datos 
+    de entrenamiento para aprender. Se 
+    distinguen por su "memoria" ya que 
+    toman información de entradas anteriores 
+    para influir en la entrada y salida actual. 
+    Mientras que las redes neuronales 
+    profundas tradicionales asumen que las 
+    entradas y salidas son independientes, la 
+    salida de las RNN depende de los 
+    elementos previos dentro de la secuencia. 
+   Redes neuronales recurrentes (RNN)
+    Otra característica distintiva de las RNN es 
+    que comparten parámetros en cada 
+    capa de la red. Mientras que las redes 
+    feedforward tienen diferentes pesos en 
+    cada nodo, las RNN comparten el mismo 
+    parámetro de peso dentro de cada capa 
+    de la red. Los pesos se ajustan a través de 
+    los procesos de retropropagación y 
+    descenso de gradiente para facilitar el 
+    aprendizaje por refuerzo.
+        Origen
+   Origen
+    El concepto de RNN se planteó en 1986. Y la famosa arquitectura LSTM se 
+    inventó en 1997. La cantidad de arquitecturas conocidas de RNN es mucho 
+    menor que la de CNN. Existen 3 fases importantes: Vanilla RNN, LSTM y 
+    Encoder-Decoder
+   Vanilla RNN
+    Desarrollada a principios de 1986 donde x, o y h son la entrada, la salida y 
+    el estado oculto, con U, W y V son los parámetros que se les aplican 
+    respectivamente. Dentro de la célula RNN de color verde, podría haber una 
+    o más capas de neuronas normales u otros tipos de RNN.
+   LSTM
+    LSTM es la arquitectura RNN más 
+    popular, incluso después de más de 20 
+    años de su nacimiento. Pero, ¿por qué 
+    LSTM? La principal razón es que Vanilla 
+    RNN no puede recordar muy bien el 
+    pasado. El único conjunto de 
+    parámetros en Vanilla RNN tiene que 
+    procesar y recordar demasiada 
+    información y se sobrecarga 
+    fácilmente.
+   LSTM
+    Para información secuencial como 
+    conversaciones y textos. LSTM 
+    presenta tres tipos de memorias 
+    seleccionadas (gates) que son puertas 
+    de entrada, salida y Forget Gates 
+    respectivamente, así como la función 
+    sigmoide para representar el 
+    porcentaje de información para el 
+    procesamiento.
+   Encoder-Decoder
+    Es una arquitectura genérica que no pertenece a la RNN. Se aplica 
+    ampliamente en casos de uso de aprendizaje profundo de Secuencia a 
+    Secuencia. Los modelos de NLP previamente entrenados GPT-2 y GPT-3 de 
+    OpenAI son ejemplos.
+   Encoder-Decoder
+   Imita el proceso de cognición del cerebro humano. Por ejemplo, cuando 
+   vemos algo y lo “codificamos” como algún formato (Encoder Vector) en 
+   nuestra “red neuronal” (cerebro). Cuando queremos describirlo utilizamos el 
+   encoder vector y lo decodificamos
+      Arquitectura
+   Arquitectura
+   Existen diferentes tipos de RNN 
+   con diferentes aplicaciones:
+    1. One-to-one 
+    2. One-to-many
+    3. Many-to-one
+    4. Many-to-many
+   One-to-one
+   Es el ejemplo típico de Vanilla Neural 
+   Network. Se usa para problemas 
+   generales de aprendizaje automático, 
+   que tiene una sola entrada y una sola 
+   salida.
+   Ejemplo: Redes neuronales 
+   tradicionales 
+   One-to-many
+   Este tipo de red neuronal tiene una 
+   sola entrada y múltiples salidas. 
+   Funciona bien cuando los datos de 
+   entrada tienen un paso de tiempo y la 
+   salida contiene un vector de múltiples 
+   valores.
+   Ejemplo: Generación de música, 
+   subtitulos en peliculas 
+   Many-to-one
+   Este RNN toma una secuencia de 
+   entradas y genera una sola salida. 
+   Los datos de entrada tienen un paso 
+   de tiempo y la salida contiene un 
+   vector de múltiples valores.
+   Ejemplo: Clasificación de 
+   sentimientos
+   Many-to-one
+   Este RNN toma una secuencia de 
+   entradas y genera una secuencia de 
+   salidas. La traducción automática es 
+   uno de los ejemplos.
+   Ejemplo: Reconocimiento de 
+   entidades y problemas de traducción
+     ¿Dónde se usan las 
+          RNN?
+   Aplicaciones de RNN
+    Algunas de las aplicaciones más 
+    comunes son:
+    1. Problemas de predicción
+    2. Modelamiento de lenguaje
+    3. Traducción
+    4. Reconocimiento de voz
+    5. Descripciones de imágenes
+    6. Video Tagging
+    7. Análisis en call centers
+      Casos de uso
+      Ejemplos en 
+       industrias
+    Ejemplos en industrias
+    1) Aeroespacial: detectores y simulaciones 
+    de fallas de componentes de aeronaves, 
+    sistemas de control de aeronaves, pilotaje 
+    automático 
+    2) Automotriz: sistemas de guía mejorados, 
+    sensores virtuales, virtualizadores y 
+    analizadores  de garantía
+    Ejemplos en industrias
+    3) Electrónica: análisis de fallas de chips, 
+    diseños de chips de circuitos, visión artificial, 
+    predicción de la secuencias de código, control de 
+    procesos y síntesis de voz.
+    4) Manufactura: análisis de diseño, modelado 
+    dinámico, control de procesos, diagnóstico de 
+    máquinas, diseño y predicción de la calidad, 
+    sistemas de inspección de calidad visual y 
+    análisis de calidad de soldadura
+    Ejemplos en industrias
+    5) Mecánica: Monitoreo de condición, modelado 
+    de sistemas y control, sistemas de prevención de 
+    fallas, monitoreo de máquina, mantenimiento 
+    preventivo
+    6) Robótica: robots montacargas, controladores 
+    de manipuladores, control de trayectoria y 
+    sistemas de visión automática, máquinas 
+    multipropósito
+    Ejemplos en industrias
+    7) Telecomunicaciones: control de red de 
+    cajeros automáticos, servicios de información 
+    automatizados, procesamiento de pagos de 
+    clientes, compresión de datos, ecualizadores, 
+    gestión de fallas, reconocimiento de escritura a 
+    mano, diseño, gestión, enrutamiento y control de 
+    redes, monitoreo de redes, traducción en tiempo 
+    real del lenguaje hablado y reconocimiento de 
+    patrones 
+      Ejemplos de 
+       aplicación
+   Asistentes virtuales
+    Los asistentes de voz en la vida cotidiana 
+    funcionan en las redes neuronales 
+    capacitadas para ayudarlo y brindarle los 
+    resultados que solicitó.
+    Para ello hacen uso de redes neuronales 
+    recurrentes y modelos de lenguaje 
+    natural. Ejemplos: Siri, Alexa, Google 
+    Assistant
+   Reconocimiento facial
+    Deep Face es un sistema de 
+    reconocimiento facial de aprendizaje 
+    profundo creado por un grupo de 
+    investigación en Facebook. Identifica 
+    rostros humanos en imágenes digitales. 
+    El programa emplea una red neuronal de 
+    nueve capas con más de 120 millones de 
+    pesos de conexión y fue entrenado en 
+    cuatro millones de imágenes cargadas 
+    por usuarios de Facebook.
+   Identificación de sentimientos
+    Instagram identifica algorítmicamente los 
+    sentimientos detrás de los emojis y con 
+    esto crea y sugiere automáticamente 
+    emojis y hashtags relacionados con el 
+    contexto. Esto puede parecer una 
+    aplicación menor de la IA pero ser capaz 
+    de interpretar y analizar esta traducción 
+    de emoji a texto a mayor escala 
+    establece la base para un análisis más 
+    profundo de cómo se usa la aplicación
+   Computer vision
+    Se les enseña a las computadoras a "ver" 
+    como un ser humano, para identificar 
+    automáticamente objetos en imágenes (o 
+    "pins", como lo llaman) y luego 
+    recomendar pines visualmente similares. 
+    Otras aplicaciones de las redes 
+    neuronales en Pinterest incluyen 
+    prevención de spam, búsqueda y 
+    descubrimiento, rendimiento y 
+    monetización de anuncios 
+   Sistemas de recomendación
+    Amazon le muestra recomendaciones 
+    usando "clientes que vieron artículos 
+    similares", "clientes que compraron este 
+    artículo", y también a través de 
+    recomendaciones seleccionadas en su 
+    página de inicio, en la parte inferior de 
+    las páginas de artículos y a través de 
+    correos electrónicos. Esto permite 
+    desarrollar recomendaciones 
+    personalizadas
+   Detección de Fraude
+    FICO, la empresa que crea calificaciones 
+    crediticias que se utilizan para 
+    determinar la solvencia, utiliza redes 
+    neuronales para potenciar su inteligencia 
+    artificial para predecir transacciones 
+    fraudulentas. Los factores que afectan el 
+    resultado final de la red neuronal artificial 
+    incluyen la frecuencia y el tamaño de la 
+    transacción y el tipo de minorista 
+    involucrado.
+      Ejemplo en vivo
+   A continuación utilizaremos el siguiente enlace 
+   para entender el funcionamiento de las redes 
+   neuronales.
+   Graficamos diferentes objetos y por medio de 
+   redes neuronales aprovecharemos el uso de 
+   sistemas de detección de objetos
+       Detección de objetos
+     En esta oportunidad utilizaremos lo aprendido en clase 
+     para poner en práctica los conceptos de Deep Learning
+             Duración: 15-20 mins
+      ACTIVIDAD EN CLASE
+   Detección de objetos
+    Nos reuniremos en breakout rooms y 
+    formaremos grupos, cada estudiante deberá 
+    tomar turnos como dibujante y espectador 
+    en Quick Drive:
+    1. Quienes estén observando deberán 
+      adivinar lo que el usuario está dibujando 
+      antes que la aplicación
+    2. Al final de la ronda intercambiaremos 
+      ideas sobre el uso de esta tecnología: Si 
+      puede identificar dibujos ¿qué más 
+      podría hacer?
+      ¿Preguntas?
+       CLASE N°52
+       Glosario
+       Deep Learning: un subconjunto de              Redes neuronales convolucionales: s 
+       machine learning donde las redes              un tipo de red neuronal artificial (ANN) 
+       neuronales, algoritmos inspirados en cómo     utilizada en el reconocimiento y 
+       funciona el cerebro humano, aprenden de       procesamiento de imágenes que está 
+                                                     diseñada específicamente para procesar 
+       grandes cantidades de datos y son el          datos en píxeles.
+       fundamento de esta disciplina.
+       Perceptrón multicapa (MLP): Un                Redes neuronales recurrentes: Son un 
+       perceptrón multicapa (MLP) es una red         tipo de red neuronal artificial que utiliza 
+       neuronal artificial que genera un conjunto    datos secuenciales o datos de series 
+                                                     temporales. Se usan comúnmente para 
+       de salidas a partir de un conjunto de         problemas como traducción de idiomas, 
+       entradas.                                     procesamiento de lenguaje natural (nlp), 
+                                                     reconocimiento de voz y subtítulos de 
+                                                     imágenes
+        Muchas 
+        gracias.
+                   Resumen 
+               de la clase hoy
+              ✓ Introducción a Deep Learning
+              ✓ Perceptrón y Perceptrón multicapa (MLP)
+              ✓ Redes neuronales convolucionales (CNN)
+              ✓ Redes neuronales recurrentes (RNN)
+              ✓ Casos de uso: Industrias y ejemplos de aplicación
+      Opina y valora 
+       esta clase

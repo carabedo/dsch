@@ -1,0 +1,417 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 45. DATA SCIENCE
+       Selección del algoritmo 
+         y Entrenamiento del 
+                Modelo I
+      Temario
+                       44                      45                     46
+                 Algoritmos de             Selección de           Selección de 
+                  Agrupación II            Algoritmo y            Algoritmo y 
+                                        entrenamiento del      Entrenamiento del 
+                                            Modelo I               Modelo II
+               ✓ PCA                    ✓ Matriz de confusión   ✓ Métricas y 
+                                        ✓ Accuracy                 evaluación de 
+               ✓ Reducción de                                      modelos
+                   Dimensionalidad      ✓ Precisión 
+                                                                ✓ RMSE
+               ✓ Detección de           ✓ Sensibilidad 
+                   outliers                                     ✓ MAE
+                                        ✓ Especificidad 
+                                        ✓ F1 Score y curva ROC  ✓ R2
+    Objetivos de la clase
+                 Evaluar métricas de modelos de Clasificación
+            MAPA DE CONCEPTOS
+                                                                       Accuracy
+                                                                       Precisión
+                                                                      Sensibilidad
+           Selección del                 Matriz de 
+            Algoritmo y               Confusión y sus                 Especificidad
+         Entrenamiento del                métricas
+             Modelo I
+                                                                        F1 Score
+                                                                       Curva ROC
+            Repaso
+                     Les proponemos tomarse unos minutos 
+                     para realizar un repaso de los conceptos 
+                      aprendidos en Kahoot, ¿están listos?
+                          Profe, puedes compartir el 
+                           PIN o link de acceso al 
+                                juego
+   Matriz de confusión y 
+      sus métricas
+       Para pensar
+   En clases pasadas hablamos de diferentes 
+   métricas para Algoritmos de clasificación…
+   ✔  ¿Qué era una Matriz de Confusión? ¿Para que la 
+     utilizabamos? 
+   ✔ ¿Recuerdan de alguna limitación o tipos de error 
+     que podíamos tener al aplicar algoritmos de 
+     Clasificación?
+   Contesta en el chat de Zoom 
+   Para qué servía la matriz de 
+   confusión
+    ✔ Es una herramienta que nos permitía 
+      visualizar el desempeño de algoritmos de 
+      Aprendizaje Supervisado - Clasificación  
+    ✔ Con ella podíamos cuantificar que tantas 
+      predicciones correctas/incorrectas 
+      resultaban luego de aplicar el algoritmo de 
+      Clasificación 
+    ✔ Se puede aplicar para problemas de 
+      clasificación Binaria y multiclase 
+       Definición
+    Matriz de confusión
+    Es una técnica para resumir el desempeño de 
+    un algoritmo de clasificación.  El accuracy de la 
+    clasificación por sí sola puede ser engañosa si 
+    tiene un número desigual de observaciones en 
+    cada clase o si tiene más de dos clases 
+    Esta técnica puede dar una mejor idea de qué 
+    está haciendo bien el modelo de clasificación y 
+    qué tipos de errores está cometiendo.
+     Cómo calcular la 
+    matriz de confusión
+    Cómo calcular la matriz de 
+    confusión
+     1. Se necesita de un dataset de test o 
+       validación con los valores esperados 
+     2. Realizar l predicción para cada fila del 
+       dataset test
+     3. Del conteo de valores esperados y 
+       predicciones se encuentra:
+      a. El número de predicciones correctas
+      b. El número de predicciones incorrectas 
+       para cada clase
+    Cómo calcular la matriz de 
+    confusión
+    Estos números se organizan en una tabla o 
+    matriz de la siguiente manera:
+     a. Valores esperados: en cada fila de la 
+       matriz.
+     b. Predicciones: cada columna de la matriz.
+    En la diagonal principal de la matriz tenemos las 
+    predicciones correctas (TP=True Positives y 
+    TN=True Negatives) y por fuera quedan las 
+    predicciones incorrectas (FP= False Positive y 
+    FN= False Negatives)
+    Cómo calcular la matriz de 
+    confusión
+    Dentro de la matriz debemos definir las siguientes 
+    cantidades en el caso de un problema binario:
+     a. verdadero positivo (TP): eventos 
+       predichos correctamente.
+     b. "falso positivo" (FP): eventos 
+       pronosticados incorrectamente (Error Tipo 
+       I).
+     c. "verdadero negativo" (TN): sin eventos 
+       predichos correctamente.
+     d. "falso negativo" (FN): sin eventos 
+       pronosticados incorrectamente (Error Tipo 
+       II).
+    Cómo calcular la matriz de 
+    confusión
+    Los Falsos Positivos (FP) - Error Tipo I son 
+    predicciones que tienen la característica 
+    cuando no es cierto, por ejemplo predecir 
+    que un hombre está embarazado cuando 
+    es falso
+    Los Falsos Negativos (FN) - Error Tipo II 
+    son predicciones que NO tienen la 
+    característica pero realmente si la tienen, por 
+    ejemplo predecir que una mujer no está 
+    embarazada cuando realmente lo está.
+       Para pensar
+   Para las siguientes situaciones pensemos si 
+   serían Falso Positivo o Falso Negativo
+   ✔  Una prueba de detección de cáncer da positivo, 
+     pero usted no tiene la enfermedad.
+   ✔ Un algoritmo dice que una persona no cometerá 
+     fraude, pero logró cometer fraude la semana 
+     pasada
+   Contesta en el chat de Zoom 
+       Para pensar
+   Para estos casos las respuestas son
+   ✔  Una prueba de detección de cáncer da positivo, 
+     pero usted no tiene la enfermedad (Falso 
+     Positivo: predicción +, valor real -).
+   ✔ Un algoritmo dice que una persona no cometerá 
+     fraude, pero logró cometer fraude la semana 
+     pasada (Falso Negativo: predicción -, valor 
+     real +)
+   Contesta en el chat de Zoom 
+       Accuracy
+   Accuracy
+    Es una métrica que resume el rendimiento de 
+    un modelo de clasificación como el número de 
+    predicciones correctas dividido por el número 
+    total de predicciones. Se puede dar como 
+    porcentaje o fracción.
+       Precisión
+   Precisión
+    Es una métrica que resume el rendimiento de 
+    un modelo de clasificación cuando se tienen 
+    dos clases con tamaño desigual, se calcula 
+    como el número de verdaderos positivos 
+    dividido por el número total de verdaderos 
+    positivos y falsos positivos.
+      Sensibilidad
+   Sensibilidad
+    Es una métrica que resume el rendimiento de 
+    un modelo de clasificación cuando se tienen 
+    dos clases con tamaño desigual, a diferencia 
+    de la Precisión en lugar de observar la cantidad 
+    de falsos positivos, analiza la cantidad de 
+    falsos negativos 
+      Especificidad
+   Especificidad
+    Es una métrica que resume el rendimiento de 
+    un modelo de clasificación cuando se tienen 
+    dos clases con tamaño desigual, se calcula 
+    como el número de predicciones negativas 
+    correctas dividido por el número total de 
+    negativos. También se llama tasa de 
+    verdaderos negativos (TNR)
+       F1 Score
+   F1 Score
+    La puntuación F1 es una métrica que tiene en 
+    cuenta tanto la precisión y el recall 
+    (sensibilidad). Solo es 1 cuando la precisión y 
+    la sensibilidad son 1 ambas, también se 
+    entiende como la media armónica de la 
+    precisión y la sensibilidad. Se define de la 
+    siguiente manera
+  Resumen
+     Ejemplo aplicado
+      Ejemplo aplicado
+      Imaginen que tenemos estos            En este caso pudiéramos usar cualquiera de 
+      datos                                 estos métodos
+    Ejemplo aplicado
+     Separamos train/test
+    Ejemplo aplicado
+                            Una forma de hacer esto es con la matriz de 
+                            confusión
+    Ejemplo aplicado
+      En cada fila tenemos los valores predichos por el algoritmo y en las columnas los 
+      valores reales
+    Ejemplo aplicado
+     En la diagonal principal de la matriz de confusión tendremos en verde a los 
+     Verdaderos Positivos (TP) y Verdaderos Negativos (TN) que son predicciones 
+     correctas
+    Ejemplo aplicado
+     Fuera de la diagonal tenemos a los Falsos Negativos (FN) y a los Falsos Positivos 
+     (FP) que representan a los errores Tipo I y Tipo II
+    Ejemplo aplicado
+     Para el ejemplo que estamos analizando podemos ver que 142+110 individuos 
+     quedaron bien clasificados, mientras que 22+29 quedaron mal clasificados
+  Ejemplo aplicado
+       Para pensar
+   ¿Se puede realizar una matriz de confusión 
+   cuando tenemos más de dos categorías?
+   Justifiquen su respuesta.
+   Contesta en el chat de Zoom 
+    Ejemplo aplicado
+     La respuesta es sí si miramos para el caso de 3 categorías como se observa en 
+     las figuras de arriba tenemos un ejemplo donde en verde están las buenas 
+     clasificaciones y en rojo las malas
+    Ejemplo aplicado
+                             Incluso para el caso de más de 
+                             3 categorías podríamos 
+                             construir una matriz de 
+                             confusión aunque sería más 
+                             complejo la interpretación de 
+                             los resultados y la 
+                             cuantificación de los errores 
+    Ejemplo aplicado
+       La sensibilidad para este caso se enfoca principalmente en el número de 
+       pacientes que fueron identificado correctamente
+      Ejemplo aplicado
+       81 % de las personas con ataque cardíaco      83 % de las personas con ataque 
+       fueron identificadas con el modelo de         cardíaco fueron identificadas con el 
+       regresión logística                           modelo de Random Forest
+    Ejemplo aplicado
+       La especificidad por el contrario se enfoca en el número de pacientes que no 
+       tienen la característica y que fueron correctamente identificados 
+       Ejemplo aplicado
+       85 % de las personas sin ataque cardíaco       83 % de las personas sin ataque 
+       fueron identificadas con el modelo de          cardíaco fueron identificadas con el 
+       regresión logística                            modelo de Random Forest
+      Ejemplo aplicado
+      Usamos el modelo de Regresión               Usamos el modelo de Random 
+      Logística si identificar pacientes sin      Forest si identificar pacientes con 
+      heart disease es más importante que         heart disease es más importante que 
+      identificar pacientes con heart             identificar pacientes sin heart disease 
+      disease 
+       Curva ROC
+    Curva ROC
+     La curva AUC-ROC es una métrica de 
+     rendimiento que se utiliza para medir el 
+     rendimiento del modelo de clasificación 
+     en diferentes valores de umbral.
+     Cuanto mayor sea el valor de AUC (Área bajo la 
+     curva), mejor será nuestro clasificador para 
+     predecir las clases. 
+     AUC-ROC se utiliza principalmente en 
+     problemas de clasificación binaria.
+     Interpretaciones
+    Curva ROC
+     Interpretaciones: 
+     • AUC cercano a 1: performance casi 
+      perfecta AUC
+     • AUC cercano a 0.5: performance a 
+      nivel  chance  (funciona  igual  que 
+      lanzar una moneda)
+     Siempre se debe tener presente que 
+     alcanzar un valor de 1 para el AUC es 
+     bastante  complejo  pero  un  umbral 
+     entre  0.8-0.9  es  un  valor  apropiado 
+     para un modelo que generaliza y no 
+     memoriza
+     Ejemplo aplicado
+    Ejemplo aplicado
+     Para este caso enfoquemonos en un modelo de regresión Logística para resolver el 
+     problema de clasificación binaria para detectar si un individuo es obeso o no con 
+     base en el peso.
+    Ejemplo aplicado
+     Al hacer el proceso de ajuste de los datos al algoritmo podemos cuantificar que tan 
+     bien o mal se desempeña en los datos de test y construimos una matriz de 
+     confusión
+    Ejemplo aplicado
+     Si modificamos el valor del threshold o límite de clasificación nuestra matriz de 
+     confusión variará por cada nuevo valor que establezcamos como límite.
+    Ejemplo aplicado
+     Podemos comenzar con un threshold bajo como 0 o 0.1 y podemos calcular la 
+     matriz de confusión y todas sus métricas que ya conocemos 
+    Ejemplo aplicado
+    Podemos ir cambiando the threshold de manera iterativa 
+    Como resultado vamos observando que podemos ir creando diferentes puntos 
+    cruzando la False Positive Rate vs True Positive Rate 
+    Ejemplo aplicado
+    Podemos ir cambiando the threshold de manera iterativa 
+    Como resultado vamos observando que podemos ir creando diferentes puntos 
+    cruzando la False Positive Rate vs True Positive Rate 
+    Ejemplo aplicado
+    Podemos ir cambiando the threshold de manera iterativa 
+    Como resultado vamos observando que podemos ir creando diferentes puntos 
+    cruzando la False Positive Rate vs True Positive Rate 
+    Ejemplo aplicado
+    Podemos ir cambiando the threshold de manera iterativa 
+    Como resultado vamos observando que podemos ir creando diferentes puntos 
+    cruzando la False Positive Rate vs True Positive Rate 
+    Ejemplo aplicado
+     Como resultado si unimos todos los puntos que generamos tenemos la curva que se 
+     observa a la derecha
+    Ejemplo aplicado
+     Podemos calcular para el mismo problema la curva ROC para otros modelos y con 
+     base en esto comparar cual tiene mejor desempeño
+       PCA (Principal Component 
+       Analysis)
+        Si calculamos la media de la primera        De igual forma si calculamos la media 
+        variable tenemos lo siguiente               de la segunda variable tenemos lo 
+                                                    siguiente
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+      Ejemplo en vivo
+   Dentro de la carpeta de clase analizaremos 
+   cómo evaluar modelos de clasificación 
+   (SVM, Random Forest, Regresión Logística y 
+   árboles de decisión) haciendo uso de la 
+   matriz de confusión y sus métricas
+      Evaluando desempeño 
+     Modelo de Clasificación
+     Utilizaremos lo aprendido en clase para poder evaluar 
+        el desempeño de modelos de clasificación
+             Duración: 15-20 mins
+       ACTIVIDAD EN CLASE
+    Evaluando 
+    desempeño de 
+    En esta oportunidad nos reuniremos en grupos de máximo 4 
+    Modelo de 
+    personas. Trabajaremos sobre el dataset de la clase anterior: 
+    Telco Customer
+     1. Elegir 4 variables independientes que consideren 
+    Clasificación
+       relevantes para predecir el “churn” o “fuga/baja” de 
+       clientes
+     2. Realizar el Encoding de las variables independientes 
+       (una persona codea, los demás dan instrucciones y 
+       leen documentación) para llevar el dataset a forma 
+       matricial
+     3. Elegir uno de los modelos aprendidos (e.g Hnn, RF, Reg 
+       Logística, árboles de decisión) y entrenarlo
+     4. Crear la matriz de confusión para evaluar el 
+       performance del modelo
+                                        1
+                                        1
+               Evaluando modelos 
+             de Machine Learning
+             Deberás  entregar  el  décimo  primer  avance  de  tu  proyecto  final.  Continuaremos 
+             hablando sobre lo trabajado en el desafío “Entrenando un algoritmo de Machine 
+             Learning”. Crearás un notebook donde se complementará el proceso de Feature 
+             Engineering del desafío anterior con el fin de mejorar el proceso de entrenamiento 
+             de algoritmos de Machine Learning, se compararán resultados obtenidos con los del 
+             desafío anterior. 
+                          Recordemos…
+                                               Combinamos datos de 
+                                                 diversas fuentes
+                                              Realizamos proceso de 
+                                                Encoding y Feature 
+                                                   Engineering
+                                             Creamos un modelo MVP 
+                                                      simple
+                Clase 42
+          Desafío entregable: 
+         Entrenando un algoritmo 
+           de Machine Learning              Entrenamos algoritmo de 
+                                                Machine Learning
+            DESAFÍO 
+            ENTREGABLE
+      Evaluando modelos de Machine 
+      Learning
+       Consigna                                    Formato
+        ✓ Realizar una segunda ronda de Feature      ✓ Se debe entregar un Jupyter notebook 
+            Engineering con el fin de ampliar el        con el nombre: 
+            número de variables incluidas en el         “Desafío_EvaluaciónML_+Nombre_ 
+            modelo MVP de la entrega anterior.          +Apellido.ipynb”.
+        ✓ Realizar una segunda ronda de 
+            entrenamiento con más variables        Sugerencias
+       Aspectos a incluir                            ✓ Se recomienda elegir datasets curados 
+        ✓ Notebook donde se detallen todos los          para que la mayor parte del tiempo se 
+                                                        utilice para el entrenamiento de 
+            pasos seguidos                              modelos y no en limpieza de datos
+       Ejemplo                                     Explicación del desafío
+        ✓ Evaluando Modelos Machine Learning,        ✓ ¡Click aquí!
+      ¿Preguntas?
+       CLASE N°45
+       Glosario
+       Matriz de confusión:  técnica para          Sensibilidad: número de Verdaderos 
+       resumir el desempeño de un algoritmo de     positivos divididos por verdaderos positivos 
+                                                   más Falsos negativos
+       clasificación, puede dar una mejor idea de 
+       qué está haciendo bien el modelo de         Especificidad: número de predicciones 
+       clasificación y qué tipos de errores está   negativas correctas dividido por el número 
+       cometiendo.                                 total de negativos
+       Accuracy: número de predicciones            F1 Score: métrica que cuantifica la 
+       correctas dividido por el número total de   precisión y recall de un algoritmo de 
+                                                   clasificación
+       predicciones
+                                                   Curva ROC: métrica de rendimiento que 
+       Precisión: número de verdaderos             se utiliza para medir el rendimiento del 
+       positivos dividido por el número total de   modelo de clasificación en diferentes 
+       verdaderos positivos y falsos positivos.    valores de umbral.
+        Muchas 
+        gracias.
+                   Resumen 
+               de la clase hoy
+              ✓ Matriz de confusión
+              ✓ Accuracy
+              ✓ Precisión 
+              ✓ Sensibilidad 
+              ✓ Especificidad 
+              ✓ F1 Score 
+              ✓ Curva ROC
+      Opina y valora 
+       esta clase

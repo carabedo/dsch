@@ -1,0 +1,575 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 54. DATA SCIENCE
+           Introducción al 
+          procesamiento de 
+         Lenguaje Natural II
+       Temario
+                        53                      54                       55
+                 Introducción al          Introducción al             Datathon
+                Procesamiento de         Procesamiento de 
+                Lenguaje Natural I      Lenguaje Natural II
+                ✓ Procesamiento del 
+                   lenguaje natural
+                ✓ Expresiones regulares  ✓ Introducción a         ✓ Introducción
+                ✓ Bag of words              spaCY
+                                                                  ✓ Proyecto final
+                ✓ NLTK                   ✓ Análisis de 
+                ✓ Corpus, Document team,    sentimiento 
+                   Matrix y Term Document 
+                   Matrix
+    Objetivos de la clase
+                 Introducir diferentes librerías para el 
+                 procesamiento de texto
+                 Identificar beneficios de usar técnicas de 
+                 análisis de sentimiento
+           MAPA DE CONCEPTOS
+                                                             NLP y características
+                                                               Bag of Words
+                                                              Intro NLTK, DTM y 
+                                                                TF-IDF score
+                 Introducción al 
+               procesamiento de                              Otras técnicas NLP
+                Lenguaje Natural
+                                                                                 Clase 
+                                                                                 54
+                                                               Intro a spacy
+                                                                Análisis de 
+                                                               sentimiento
+    Introducción a spaCy
+        spaCY
+    spaCY
+     spaCy es una librería gratuita y de código abierto para NLP en Python con muchas 
+     capacidades integradas que se está volviendo cada vez más popular. Es una alternativa 
+     para procesar los datos textuales no estructurados que se producen a gran escala
+    spaCY
+     Está escrito en Cython y está diseñado para construir sistemas de extracción de 
+     información o comprensión del lenguaje natural. También está diseñado para uso en 
+     producción y proporciona una API concisa y fácil de usar.
+    Procesamiento con 
+        spaCY
+       1) Creación de modelo de 
+       procesamiento
+                                                              import re
+                                                              import string
+        Con spaCY es posible la creación de modelos pre       !python -m spacy download 
+        entrenados para diversos lenguajes (e.g español,      es_core_news_md
+        inglés, italiano, francés, entre otros)               import spacy
+                                                              import es_core_news_md
+        El modelo de español tiene cerca de 500000 keys       nlp = es_core_news_md.load()
+        con 20000 vectores únicos (300 dimensiones) con 
+        componentes como: parser, tok2vec, 
+        morphologizer, senter, lemmatizer entre otros.
+       2) Detección de oraciones
+                                                                  text=('Gus es un desarrollador 
+                                                                  en Python actualmente 
+         La detección de oraciones es el proceso de               trabajando para una compañía 
+         localizar el comienzo y el final de las oraciones en     Fintech en Londres Inglaterra. 
+         un texto determinado. Esto le permite dividir un         Se encuentra interesado en 
+                                                                  aprender NLP.')
+         texto en unidades lingüísticamente significativas.       t=nlp(text)
+         Utilizará estas unidades cuando esté procesando          oraciones= list(t.sents)
+         su texto para realizar tareas como el etiquetado         print(len(oraciones))
+                                                                  for x in oraciones:
+         de parte del discurso y la extracción de                   print(x)
+         entidades.
+       3) Tokenización
+                                                               text=('Gus es un desarrollador 
+                                                               en Python actualmente 
+         La tokenización es el siguiente paso después de la    trabajando para una compañia 
+         detección de oraciones. Permite identificar las       Fintech en Londres Inglaterra. 
+         unidades básicas en el texto. Estas unidades          Se encuentra interesado en 
+                                                               aprender NLP.')
+         básicas se denominan tokens. La tokenización es       t=nlp(text)
+         útil porque divide un texto en unidades               for token in t:
+         significativas. Estas unidades se utilizan para         print(token, token.idx)
+         análisis posteriores, como parte del etiquetado de 
+         voz.
+       3) Tokenización
+                                                              for token in t:
+         Además es posible obtener diferentes atributos de      print(token, token.idx, 
+         los tokens generados en el proceso como:             token.text_with_ws,
+                                                                      token.is_alpha, 
+          1. is_alpha: detecta si es alfanumérico             token.is_punct, token.is_space,
+          2. is_punct: detecta si es un signo de                      token.shape_, 
+                                                              token.is_stop)
+              puntuación
+          3. is_space: detecta si es un espacio
+          4. shape_: detecta el shape
+          5. is_stop: verifica si es stopword
+       4) Uso de Stopwords
+                                                                  import spacy
+                                                                  spacy_stopwords = 
+         Las stopwords son las palabras más comunes en            spacy.lang.es.stop_words.STOP_W
+         cualquier idioma. En el idioma español, algunos          ORDS
+         ejemplos de palabras vacías son el, ellos, o, tú         print(len(spacy_stopwords))
+                                                                  for stop_word in 
+         entre otras. La mayoría de las oraciones deben           list(spacy_stopwords)[:10]:
+         contener stopwords para que sean oraciones                 print(stop_word)
+         completas que tengan sentido. Sin embargo las 
+                                                                  for token in t:
+         podemos remover y encontrar por medio de                   if not token.is_stop:
+         spaCY                                                        print(token)
+       5) Lematización
+                                                           import spacy
+        Recordemos que la lematización es el proceso       spacy_stopwords = 
+        de reducir las formas flexionadas de una palabra   spacy.lang.es.stop_words.STOP_W
+        y, al mismo tiempo, garantizar que la forma        ORDS
+        reducida pertenezca al idioma. Esta forma          for token in t:
+        reducida o raíz de la palabra se llama lema y        print(token, '-', 
+        permite comprender de manera esencial el           token.lemma_)
+        sentido de cada palabra
+       6) Word Frequency
+                                                              doc= nlp(texto1)
+         Esta librería también nos permite encontrar la       # Remover stopwrods
+         frecuencia de palabras dentro de un corpus           words= [token.text for token in doc if 
+                                                              not token.is_stop and not token.is_punct]
+         determinado. Para esto podemos utilizar la           from collections import Counter
+         función Counter de la librería Collections y         word_freq= Counter(words)
+                                                              # Sacar las 5 mas frecuentes 
+         después del paso a través del procesador de texto  common_words= word_freq.most_common(5)
+         (nlp) permite encontrar las palabras más             print(common_words)
+                                                              unique_words = [word for (word, freq) in 
+         frecuentes dentro de cualquier texto                 word_freq.items() if freq == 1]
+                                                              print(unique_words)
+       7) POS Tagging for token in doc:
+                                                                print(token,' -', token.tag_, ' 
+         Parte del discurso o POS es un rol gramatical que    -', token.pos_,' 
+                                                              -' ,spacy.explain(token.tag_))
+         explica cómo se usa una palabra en particular en 
+         una oración. Hay ocho partes del discurso:           nouns=[]
+         sustantivos,pronombres, adjetivos, verbos,           adjectives=[]
+         adverbios, preposiciones, conjunciones,              for token in doc:
+                                                                if token.pos_ =='NOUN':
+         interjections                                            nouns.append(token)
+                                                                if token.pos_ =='ADJ':
+         Consiste en asignar una etiqueta POS a cada              adjectives.append(token)
+         token según su uso en la oración.                    print(nouns)
+                                                              print(adjectives)
+        Hands on Lab
+    “El se encuentra interesado en 
+    aprender lenguaje Natural”. 
+    Con la frase de arriba, utilizaremos la 
+    función displacy.render para generar una 
+    visualización de conexiones entre 
+    palabras. Podemos usar el siguiente 
+    ejemplo como base.
+    Cualquier inquietud pueden consultar 
+    a su tutor o profesor
+    10-15 min
+       Solución
+                                                            from spacy import displacy
+                                                            texto = ('el se encuentra 
+         spaCy viene con un visualizador incorporado        interesado en aprender 
+         llamado displaCy. Pueden usarlo para visualizar    Procesamiento de Lenguaje 
+         un análisis de dependencia o entidades con         Natural')
+         nombre en un navegador o en un Jupyter             t = nlp(texto)
+                                                            displacy.render(t, 
+         Notebook.                                          style='dep',jupyter=True)
+       Para pensar
+   Ahora bien, ¿Han escuchado previamente de 
+   librerías diferentes a spaCy y NLTK para el 
+   procesamiento de lenguaje natural?
+   Contesta en el chat de Zoom 
+       Análisis de 
+      sentimiento
+       Definición
+    Análisis de sentimiento
+    El análisis de sentimientos se enfoca en la polaridad 
+    de un texto (positivo, negativo, neutral) pero también 
+    va más allá de la polaridad para detectar sentimientos 
+    y emociones específicas (enojado, feliz, triste, etc.), 
+    urgencia (urgente, no urgente) e incluso intenciones 
+    (interesado). v. no interesado).
+    Análisis de sentimiento
+    Dependiendo de cómo desee interpretar los 
+    comentarios y las consultas de clientes, puede definir 
+    y adaptar sus categorías para satisfacer sus 
+    necesidades de análisis de opiniones. Los tipos de 
+    análisis más comunes son:
+     1. Análisis de sentimiento calificado
+     2. Detección de emociones
+     3. Aspect-based Sentiment Analysis
+     4. Multilingual sentiment analysis
+      Clasificación
+    Análisis de sentimiento 
+    calificado
+    Si la polaridad es importante para el negocio se 
+    podrían tener diversas categorías (muy positivo, 
+    positivo, neutro, negativo y muy negativo). 
+    De esta forma se pueden detectar cuándo comentarios 
+    son negativos y poder establecer estrategias para 
+    mitigar impactos o deserción de clientes
+    Detección de emociones
+     Permite ir más allá de la polaridad para detectar 
+     emociones, como felicidad, frustración, ira y tristeza.
+     Muchos sistemas de detección de emociones utilizan 
+     léxicos (es decir, listas de palabras y las emociones 
+     que transmiten) o algoritmos complejos de 
+     aprendizaje automático.
+    Aspect-based sentiment 
+    Analysis
+    Por lo general, al analizar los sentimientos de los 
+    textos, queremos saber qué aspectos o 
+    características particulares mencionan las personas 
+    de manera positiva, neutral o negativa.
+    Un clasificador basado en aspectos podría determinar 
+    que la oración expresa una opinión negativa sobre la 
+    duración de la batería.
+    Multilingual sentiment 
+    analysis
+    El análisis del sentimiento multilingüe puede ser 
+    difícil. Implica una gran cantidad de 
+    preprocesamiento y recursos. La mayoría de estos 
+    recursos están disponibles en línea (p. ej., léxicos de 
+    sentimientos), mientras que otros deben crearse (p. 
+    ej., corpus traducidos o algoritmos de detección de 
+    ruido), pero necesitará saber codificar para usarlos.
+      Importancia
+    Importancia del análisis de 
+    sentimiento
+    Dado que los humanos expresan sus 
+    pensamientos y sentimientos más abiertamente 
+    que nunca, el análisis de sentimientos se está 
+    convirtiendo rápidamente en una herramienta 
+    esencial para monitorear y comprender los 
+    sentimientos en todo tipo de datos.
+    Importancia del análisis de 
+    sentimiento
+    El análisis automático de los comentarios de los 
+    clientes, como las opiniones en las respuestas de 
+    las encuestas y las conversaciones en las redes 
+    sociales, permite a las marcas saber qué hace 
+    felices o frustrados a los clientes, de modo que 
+    puedan adaptar los productos y servicios para 
+    satisfacer las necesidades de sus clientes.
+    Importancia del análisis de 
+    sentimiento
+    Algunos beneficios que genera la implementación 
+    del análisis de sentimiento son:
+     1. Identificación de necesidades
+     2. Ordenamiento de data a escala
+     3. Análisis en tiempo real
+     4. Criterios consistentes
+      Ejemplos de 
+       aplicación
+    Ejemplos de análisis de 
+    sentimiento
+    Algunos ejemplos en la industria actual son:
+     ✔ Monitoreo de marcas
+     ✔ Mejorando soporte al cliente
+     ✔ Revisando feedback de empleados
+     ✔ Proveer mejores productos de analitica
+     ✔ Monitoreo de mercado
+     ✔ Análisis de competencia 
+    Ejemplos de análisis de 
+    sentimiento
+     ✔ Monitoreo del contenido generado por usuarios
+     ✔ Descubriendo influenciadores para marcas
+     ✔ Monitoreo de redes sociales para hacer branding 
+       y publicidad
+     ✔ Mejor Manejo de crisis 
+     ✔ Creación de recomendaciones de acuerdo a las 
+       necesidades de los clientes
+    Veamos a continuación algunas aplicaciones 
+    puntuales.
+    1)Campañas Políticas
+    En la campaña presidencial de EEUU 2022 
+    se utilizó análisis de sentimientos para 
+    determinar cómo recibe el público los 
+    anuncios. La administración de Biden aplicó 
+    el análisis de sentimientos para evaluar los 
+    anuncios de políticas. Además, esta forma 
+    de análisis se puede utilizar para estudiar la 
+    cantidad de menciones negativas sobre 
+    candidatos en varias fuentes de noticias y 
+    medios.
+    2) Atención al cliente
+    Dada la gran cantidad de solicitudes que 
+    deben procesarse y evaluarse, así como los 
+    diversos niveles de urgencia de varias 
+    solicitudes. Al usar herramientas de 
+    comprensión del lenguaje natural, una 
+    empresa  como Mercadolibre puede 
+    procesar automáticamente una gran 
+    cantidad de llamadas telefónicas, correos 
+    electrónicos y chats en línea, y clasificarlos 
+    en categorías según los rasgos comunes.
+    3) Prevención de crisis 
+    Herramientas como Brand24 son útiles para 
+    monitorear las redes sociales en tiempo 
+    real. Recopilan todas las menciones de 
+    palabras en sitios de noticias, sitios web y 
+    foros de discusión. Esto garantiza que los 
+    especialistas en relaciones públicas reciban 
+    alertas sobre los comentarios negativos 
+    inmediatamente después de que 
+    aparezcan, de modo que la empresa pueda 
+    implementar medidas.
+    4) Finanzas
+    En el caso del mercado de valores es de 
+    suprema importancia el análisis de 
+    sentimientos en los mercados de futuros, 
+    commodities y criptomonedas. Es por esto 
+    que se necesita del procesamiento de 
+    lenguaje natural para poder identificar 
+    puntos de entrada y salidas en posibles 
+    inversiones que podamos hacer.
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+      Ejemplo en vivo
+   Analizaremos un ejemplo donde utilizaremos 
+   técnicas de análisis de sentimiento con el fin de 
+   caracterizar revisiones de películas de Amazon. 
+       Análisis de 
+     sentimiento: Caso 
+       aplicado
+    ¿Cómo podemos predecir el 
+    sentimiento asociado con 
+    una interacción con el 
+    cliente?
+     Eres un científico de datos para una gran empresa de 
+     comercio electrónico. Tienes decenas de miles de 
+     clientes que escriben reseñas sobre productos cada 
+     día. Cada revisión contiene comentarios textuales 
+     junto con un sistema de calificación de 1 a 5 estrellas 
+     (siendo 1 la menos satisfecha y 5 la más satisfecha)
+    Contexto empresarial
+     Su empresa también recopila comentarios sobre las 
+     experiencias de sus clientes con la interacción del sitio 
+     web después de cada compra. La empresa quiere 
+     cuantificar la satisfacción del cliente proveniente de 
+     estas interacciones no calificadas para ayudar con 
+     futuras decisiones comerciales (por ejemplo, 
+     determinar qué tan bien se están desempeñando sus 
+     diversos agentes de servicio al cliente).
+    Problema comercial
+    La pregunta problema para este caso particular tiene 
+    que ver con: 
+    ¿Cómo construir modelos que puedan identificar 
+    el sentimiento (positivo o negativo) de cada una 
+    de estas interacciones no calificadas?.
+    Contexto analitico
+     Los datos son un conjunto de reseñas en formato de 
+     archivo CSV. Combinaremos lo que aprendimos sobre 
+     el procesamiento de texto y los modelos de 
+     clasificación para desarrollar algoritmos capaces de 
+     clasificar las interacciones por sentimiento.
+    Contexto analitico
+     Las columnas del dataset son:
+      ✔ ID: valor único para cada fila
+      ✔ ProductId: una referencia del producto sobre la 
+        reseña
+      ✔ UserId: una referencia del usuario que dejo el 
+        review
+      ✔ HelpfulnessNumerator: número de lectores 
+        que han indicado que la reseña ayuda o es 
+        interesante
+      ✔ HelpfulnessDenominator: número total de 
+        personas que han dado una indicación de si la 
+        reseña ha sido útil o no
+    Contexto analitico
+     Las columnas del dataset son:
+     ✔ Score: rating (1-5)
+     ✔ Time: fecha formato timestamp que indica 
+       cuando se creó la revisión
+     ✔ Summary: El resumen escrito por el 
+       usuario de lo que trata la reseña
+     ✔ Text: la revisión escrita por el usuario
+    Análisis Descriptivo 
+    básico
+    El número medio de palabras por revisión es 77. Por 
+    otro lado se observa que muchas revisiones son 
+    calificadas con scores 5 ó 4 y hay muy pocas entre 1 y 
+    3
+    Análisis Descriptivo 
+    básico
+     Al realizar el Wordcloud de 
+     las revisiones se puede ver 
+     que muchos reviews hablan 
+     sobre temas asociados a 
+     comida y palabras como 
+     good, love y best
+    Estandarización de reviews
+     Para propósitos del análisis de sentimiento 
+     convertiremos todos los ratings en valores binarios 
+     con las siguientes reglas:
+      ✔ ratings de 4 ó 5 serán convertidos a 1 (positivo)
+      ✔ ratings de 1 ó 2 serán convertidos a 0 (negativo)
+      ✔ ratings de 3 serán removidos del análisis
+     Esto nos permite generar un problema de clasificación 
+     binario que es suficiente en este caso para resolver la 
+     pregunta problema 
+    Estandarización de reviews
+    Luego de este proceso podemos ver que quedan 
+    muchos registros en la categoría “positio” y pocos 
+    en la categoría “negativo”. Esto en algunos casos 
+    puede generar problemas ya que estamos ante un 
+    desbalance marcado de las clases, para esto existen 
+    técnicas como el oversampling entre otras pero que 
+    no se tratan a detalle en este caso.
+    Preprocesamiento
+    Recordemos que el preprocesamiento de texto y la 
+    normalización es crucial antes de desarrollar un 
+    modelo de NLP, algunos pasos importantes son:
+     1. Convertir palabras a minúsculas
+     2. Remover caracteres especiales
+     3. Remover stopwords y palabras de alta 
+       frecuencia
+     4. Stemming y lematización
+    Preprocesamiento
+    ¿Es la eliminación de caracteres especiales 
+    incluso una buena idea?
+     ¿Cuáles son algunos ejemplos de caracteres 
+    que probablemente sería seguro eliminar y 
+    cuáles no?
+    Preprocesamiento
+    Eliminar caracteres especiales es una decisión 
+    subjetiva, especialmente en casos como este. Las 
+    personas a menudo usan caracteres especiales para 
+    expresar sus emociones y pueden dejar una reseña 
+    como "¡¡¡Este producto es el peor!!!", mientras que 
+    una reseña positiva podría ser "Este producto es el 
+    mejor". ¡Me encantó!' Aquí, la presencia de signos de 
+    exclamación indica claramente algo sobre el 
+    sentimiento subyacente, por lo que eliminarlos puede 
+    no ser una buena idea.
+    Preprocesamiento
+    Por otro lado, eliminar la puntuación sin carga 
+    emocional, como las comas, los puntos y el punto y 
+    coma, probablemente sea seguro.
+    En aras de la simplicidad, procederemos eliminando 
+    todos los caracteres especiales; sin embargo, vale la 
+    pena tener en cuenta que esto es algo para revisar 
+    dependiendo de los resultados que obtengamos más 
+    adelante
+    Resultados previos
+    Al obtener el percentil de palabras más frecuentes 
+    observamos palabras como [the, I, and, a, it, to, of, is, 
+    this y br] por otro lado usando la misma metodología 
+    obtenemos las menos frecuentes (último percentil) y 
+    se obtienen palabras como [slick, cloured, innocuous, 
+    marketer, destroyers], la mayoría con errores 
+    ortograficos 
+    Modelo de análisis de 
+    sentimiento
+    Las variables a tener en cuenta son: Text, Score, 
+    Sentiment_rating
+    Las variables independientes o características del 
+    modelo se derivan del texto de revisión. En la clase 
+    anterior, discutimos cómo podemos usar n-grams 
+    para crear características o features.
+    Modelo de análisis de 
+    sentimiento
+    Tenemos diferentes metodologías para realizar el 
+    modelo:
+     1. Bag of Words
+     2. TF-IDF
+     3. Word Embeddings
+    Para todos los casos utilizaremos el modelo de 
+    regresión logística para poder comparar los resultados 
+    y determinar cuál es la mejor metodología 
+    Modelo de análisis de 
+    sentimiento
+    Los resultados obtenidos luego de entrenar el modelo 
+    en cada caso son:
+     1. Bag of Words (Accuracy: 0.90, F1=0.94)
+     2. TF-IDF (Accuracy: 0.91, F1=0.95)
+     3. Word Embeddings (Accuracy: 0.89, F1=0.94)
+    En cada caso se utilizaron diversas formas de 
+    entrenamiento (1-gram a 4-grams). Además se probó 
+    el algoritmo random forest pero sin muy buenos 
+    resultados
+    Algunos insights 
+    importantes
+    Los resultados obtenidos por Word embeddings no 
+    fueron tan buenos como las representaciones de bolsa 
+    de palabras o TF-IDF. Además, aunque los Word 
+    Embeddings  fueron realmente efectivas para reducir 
+    el número total de dimensiones, adolece del problema 
+    de la interpretabilidad. Esto significa que es muy difícil 
+    para nosotros incluso diagnosticar qué está causando 
+    su bajo rendimiento
+    Algunos insights
+    importantes
+     Sin embargo, ¿recuerdan cómo "bueno" y "malo" 
+     estaban juntos en el espacio vectorial? Esta es una de 
+     las razones por las que WE pueden no funcionar tan 
+     bien para el análisis de sentimientos en conjuntos de 
+     datos pequeños: las WE son buenas para usar 
+     "conocimiento" del mundo externo (latente en WE 
+     preentrenadas) para inferir información adicional 
+     sobre un conjunto de datos más pequeño, pero en el 
+     caso del análisis de sentimientos, esto podría hacer 
+     más daño que bien 
+    Algunos insights 
+    importantes
+    En nuestro caso, la creación de características usando 
+    TF-IDF nos dio una precisión del 92 % con 
+    características muy interpretables. Esta es una buena 
+    combinación, por lo que consideramos que este es el 
+    mejor modelo para nosotros aquí.
+    Algunos insights 
+    importantes
+    Tenga en cuenta que para un experimento real, 
+    habríamos dividido nuestro conjunto de datos en tres 
+    partes, no solo en dos. Cuando se ejecuta un 
+    experimento varias veces con diferentes parámetros, es 
+    casi seguro que algunos resultados serán mejores 
+    simplemente por casualidad, y es mala ciencia 
+    seleccionar el modelo con mejor desempeño después 
+    de docenas o cientos de ejecuciones.
+    Algunos insights 
+    importantes
+    Para evitar este problema, los datos deben dividirse en 
+    conjuntos de "entrenamiento", "prueba" y "validación". 
+    El conjunto de "prueba" debe reservarse al comienzo 
+    del experimento y nunca mirarse. El modelo debe 
+    ajustarse utilizando el conjunto de "validación".
+     Análisis de sentimiento
+     En esta oportunidad utilizaremos lo aprendido en clase 
+     para poner en práctica la metodología de análisis de 
+                sentimiento
+             Duración: 15-20 mins
+       ACTIVIDAD EN CLASE
+    Análisis de 
+    sentimiento
+    Nos reuniremos en breakout rooms y formaremos grupos, 
+    utilizaremos los siguientes datos de Twitter se les propone:
+     1. Utilizar el dataset train (columnas: label y tweet) 
+       para generar un resumen descriptivo de las reseñas
+     2. Generar un modelo de clasificación binaria que 
+       pueda ser utilizado para determinar si un comentario 
+       es negativo (0) o positivo, para esto calcular 
+       métricas con el dataset test provisto en la página 
+       web
+      ¿Preguntas?
+       CLASE N°54
+       Glosario
+       spaCY: es una librería gratuita y de código     Análisis de sentimiento calificado:  tipo 
+       abierto para NLP en Python con muchas           de análisis de sentimiento que permite 
+       capacidades integradas que se está              detectar cuándo comentarios son negativos 
+       volviendo cada vez más popular.                 y poder establecer estrategias para mitigar 
+                                                       impactos o deserción de clientes
+       Análisis de sentimiento: se enfoca en la 
+       polaridad de un texto (positivo, negativo,      Detección de emociones: Permite ir más 
+       neutral) pero también va más allá de la         allá de la polaridad para detectar 
+       polaridad para detectar sentimientos y          emociones, como felicidad, frustración, ira 
+       emociones específicas (enojado, feliz,          y tristeza. Muchos sistemas de detección 
+       triste, etc.), urgencia (urgente, no urgente)   de emociones utilizan léxicos (es decir, 
+                                                       listas de palabras y las emociones que 
+       e incluso intenciones (interesado). v. no       transmiten) o algoritmos complejos de 
+       interesado).                                    aprendizaje automático.
+      Opina y valora 
+       esta clase
+                   Resumen 
+               de la clase hoy
+              ✓ Introducción a spaCY
+              ✓ Preprocesamiento con spaCY
+              ✓ Análisis de sentimiento con spaCY y NLTK
+              ✓ Caso aplicado: Análisis de sentimiento
+        Muchas 
+        gracias.

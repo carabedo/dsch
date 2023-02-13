@@ -1,0 +1,641 @@
+    Esta clase va a ser
+        grabad
+          a
+                Clase 08. DATA SCIENCE
+           Visualizaciones y 
+         primeros pasos con 
+         Data Science (parte 
+                     II)
+       Temario
+                          07                        08                         09
+                  Visualizaciones           Visualizaciones 
+                     y primeros                y primeros                Estadística 
+                  pasos con DS I            pasos con DS II              descriptiva
+                                            ✓ Seaborn                 ✓ Introducción 
+                   ✓ Matplotlib             ✓ Tipos de gráficos       ✓ Medidas de 
+                   ✓ Tipos de               ✓ Subplot y Facetgrip         resumen 
+                      gráficos              ✓ Customizaciones sobre   ✓ Distribución de 
+                                               gráficos 
+                   ✓ Customizacione                                       variables
+                                            ✓ Nutshell
+                      s sobre gráficos                                ✓ Intervalos de 
+                                            ✓ Scikit - Learn              confianza
+    Objetivos de la clase
+                 Conocer las librerías más utilizadas para 
+                 visualización Python
+                 Aprender a graficar datos en Python
+                 Entender el uso básico de las librerías más 
+                 utilizadas: Matplotlib y Seaborn
+                                                     Seaborn: Comandos 
+                                                     básicos
+             MAPA DE CONCEPTOS                       Diferencias entre 
+                                                     Matplotlib y Seaborn                Axis-level
+                                                     Tipos de funciones                  Figure-level
+                                                     Seaborn
+               Introducción a                        Tipos de gráficos                   Líneas
+               Seaborn
+                                                     Uso de Subplots y                   Puntos
+                                                     Facetgrid
+                                                     Customizaciones sobre               Barras
+                                                     gráficos
+                                                                                         Histograma
+                                                     Ejemplo aplicado 
+                                                     Seaborn                             Boxplot
+               Tipos de                              Supervisado
+               aprendizajes
+               Introducción                          No Supervisado
+               Scikit-Learn
+      Cuestionario de tarea
+   ¿Te gustaría comprobar tus 
+   conocimientos de la clase anterior?
+   Te compartimos a través del chat de 
+   Zoom / chat de la plataforma el enlace a un 
+   breve cuestionario de Kahoot.
+   Duración: 10 minutos
+    En la primera parte vimos los siguientes temas
+                    Visualización en 
+                       Python 
+         Matplotlib                  Gráficos
+                                   Gráficos de línea.
+                                   Gráficos de puntos.
+                                   Gráficos de barra.
+                                   Histograma.
+                                   Piechart
+       Seaborn:
+    Comandos básicos
+    ¿Qué es Seaborn?
+     ✓ Librería para hacer gráficos 
+       estadísticos en Python 
+       (fundamentada en matplotlib y 
+       pandas).
+     ✓ Funciona capturando marcos de 
+       datos completos o matrices que 
+       contienen todos sus datos 
+     ✓ Realiza todas las funciones internas 
+       necesarias para el mapeo semántico 
+       y la agregación estadística para 
+       convertir datos en gráficos 
+       informativos.
+     Diferencias entre 
+    Seaborn y Matplotlib
+       Características                   Matplotlib                              Seaborn
+        Funcionalidad        Gráficos básicos                      Temas fascinantes. Compila datos a 
+                                                                   gráficos
+           Sintaxis          Sintaxis larga y compleja e.g         Sintaxis simple y fácil de entender 
+                             matplotlib.pyplot.bar(x_axis,         e.g seaborn.barplot(x_axis,y_axis)
+                             y_axis)
+      Múltiples figuras      Se pueden tener figuras múltiples     Puede tener más problemas de 
+                             simultáneamente                       memorias
+         Flexibilidad        Altamente customizable y robusto      Evita superposición de temas 
+        DataFrames y         Funciona eficientemente y trata a     Más funcional y organizado y trata 
+            Arrays           figuras y ejes como objetos           datasets como unidad simple
+        Casos de uso         Gráficas diversas usando Numpy        Versión extendida de Matplotlib con 
+                             y Pandas                              el uso de Numpy y Pandas
+    Tipos de funciones 
+       en Seaborn
+       Axes-level & Figure-level
+        ✓ Axes-level: grafican datos en un         Algunas diferencias
+            objeto matplotlib.pyplot.Axes que             ✓ Figure-level la leyenda se 
+            retorna el valor de la función                   coloca fuera del frame y 
+        ✓ Figure-level: interactúa con                       pueden crear fácilmente 
+            matplotlib mediante un objeto                    figuras con múltiples subplots.
+            Seaborn que usualmente es                     ✓ Axes-level no modifican más 
+            FacetGrid                                        allá de los ejes en los que se 
+                                                             dibujan y  aceptan el 
+                                                             argumento ax que se integra 
+                                                             con la interfaz orientada a 
+                                                             objetos.
+            Funciones Axes-Level
+      En cada módulo hay 
+      una función Figure-
+      level que ofrece una     REEMPLAZAR 
+      interfaz para sus        POR IMAGEN
+      diversas funciones 
+      Axes-level (e.g 
+      distplot() es una 
+      función Figure-level)
+                          Axes-level & Figure-
+                                                   level
+               # Axes-level                                       # Figure-level
+               sns.histplot(data=penguins,                        sns.displot(data=penguins, 
+               x="flipper_length_mm", hue="species",              x="flipper_length_mm", hue="species", 
+               multiple="stack")                                  multiple="stack")
+                  Figure: gráficos 
+                    segmentados
+        # Multiples figuras (Figure-level)
+        sns.displot(data=penguins, x="flipper_length_mm", hue="species", 
+        col="species")
+       En este tipo de funciones podemos incorporar gráficos segmentados por 
+       alguna categoría automáticamente .
+                   # Axis level
+                   import matplotlib.pyplot as plt
+                   f, axs = plt.subplots(1, 2, figsize=(8, 4), 
+                   gridspec_kw=dict(width_ratios=[4, 3]))
+                   sns.scatterplot(data=penguins, x="flipper_length_mm", 
+                   y="bill_length_mm", hue="species", ax=axs[0])
+                   sns.histplot(data=penguins, x="species", 
+                   hue="species", shrink=.8, alpha=.8, legend=False, 
+                   ax=axs[1]); f.tight_layout()
+                 # Figure-level
+                 tips = sns.load_dataset("tips")
+                 g = sns.relplot(data=tips, x="total_bill", y="tip")
+       Tipos de 
+       gráficos
+                                         Gráficos 
+        Líneas           Puntos           Barras         Histograma         Boxplot
+     Gráfico de líneas
+      # Lineplot
+      flights = sns.load_dataset("flights")
+      flights.head()
+      # Axis-level
+      may_flights = flights.query("month == 'May'")
+      sns.lineplot(data=may_flights, x="year", 
+      y="passengers")
+      # Axis-level
+      flights_wide = flights.pivot("year", "month", 
+      "passengers")
+      flights_wide.head()
+      sns.lineplot(data=flights_wide)
+     Gráfico de puntos
+      # Scatterplot
+      tips = sns.load_dataset("tips")
+      tips.head()
+      # Axis-level
+      sns.scatterplot(data=tips, x="total_bill", y="tip")
+      # Axis-level
+      sns.scatterplot(data=tips, x="total_bill", y="tip", 
+      hue="time")
+     Gráfico de barras
+      # Barplot
+      import seaborn as sns
+      sns.set_theme(style="whitegrid")
+      tips = sns.load_dataset("tips")
+      # Axis-level
+      ax = sns.barplot(x="day", y="total_bill", data=tips)
+      # Barplot
+      sns.barplot(x="day", y="total_bill", hue="sex", 
+      data=tips)
+     Histograma
+      # Histograma
+      penguins = sns.load_dataset("penguins")
+      # Axis-level
+      sns.histplot(data=penguins, x="flipper_length_mm")
+      # Axis-level
+      sns.histplot(data=penguins, x="flipper_length_mm", 
+      hue="species")
+     Boxplot
+      # Boxplot
+      penguins = sns.load_dataset("penguins")
+      # Axis-level
+      sns.histplot(data=penguins, x="flipper_length_mm")
+      # Axis-level
+      ax = sns.boxplot(x="day", y="total_bill", data=tips)
+     Uso de Subplots y
+       Facetgrid
+      Subgráficos
+       Subgráficos
+         ✓ Podemos definir una grilla de gráficos 
+            dentro de una misma figura.
+         ✓ En plt.subplots, especificamos:
+       El número de filas de la grilla = nrows
+       El número de columnas de la grilla   = ncols
+         ✓ El objeto ax se convierte en un array. 
+            Por lo tanto, debemos usar corchetes 
+            ⚠ 
+       Ejemplo
+       Comparemos las precipitaciones de Enero,           Como los años son los mismos para 
+       Febrero y Marzo a lo largo de los años. ¿Cuál      todos los gráficos, ponemos el 
+       será el más seco? ������                               parámetro sharex en True
+       Primero, 
+       Definimos un objeto ax con tres filas y una 
+       sola columna
+        ✓ En el eje x = los años
+        ✓ En el eje y = las precipitaciones
+        fig, ax = plt.subplots(nrows=3, ncols=1, figsize=(12, 5), sharex=True, sharey=True)  
+    Ejemplo
+    Segundo,  
+    A cada fila, le asignamos las precipitaciones 
+    de un mes
+        ax[0].plot(df_lluvias.index, df_lluvias['Jan'], label='Precipitaciones de enero')
+        ax[1].plot(df_lluvias.index, df_lluvias['Feb'], label='Precipitaciones de febrero', 
+        color='C1')
+        ax[2].plot(df_lluvias.index, df_lluvias['Mar'], label='Precipitaciones de marzo', color='C2')
+    Ejemplo
+    Tercero,  
+    Añadimos textos y leyendas
+         ax[0].set_title('Precipitaciones de los primeros tres meses del año') 
+         ax[2].set_xlabel('Año')  
+         ax[1].set_ylabel('Precipitación (mm.)')
+         ax[0].legend()  
+         ax[1].legend()
+         ax[2].legend()    
+  Resultado
+    Algunas observaciones
+     ✓ Al pasar sharey=True, los subgráficos 
+       comparten la escala en el eje y. Esto permitió 
+       comparar a simple vista el volumen de 
+       precipitaciones.
+     ✓ Cada subgráfico puede tener su propio título 
+       y etiquetas.
+     ✓ En caso de tener dos filas y dos columnas, ax 
+       se torna bidimensional:
+    El subgráfico superior izquierdo se referencia con 
+    ax[0,0]
+    El subgráfico superior derecho se referencia con 
+    ax[0,1]
+    FacetGrid Seaborn
+      Algunas observaciones
+        ✓ Esta clase mapea un conjunto de          ✓ Puede representar niveles de una 
+           datos en varios ejes dispuestos en          tercera variable con el parámetro 
+           una cuadrícula de filas y columnas          hue, que traza diferentes 
+           que corresponden a niveles de               subconjuntos de datos en diferentes 
+           variables en el conjunto de datos.          colores.
+        ✓ Los gráficos que produce a menudo 
+           se denominan gráficos de "lattice", 
+           "trellis" o "small-multiple".
+     Ejemplo
+      # FacetGrid
+      tips = sns.load_dataset("tips")
+      g = sns.FacetGrid(tips, col="time",  row="sex")
+      g.map(sns.scatterplot, "total_bill", "tip")  
+      # FacetGrid
+      g = sns.FacetGrid(tips, col="time", hue="sex")
+      g.map_dataframe(sns.scatterplot, x="total_bill", 
+      y="tip")
+      g.add_legend()
+     Customizaciones 
+      sobre gráficos
+     Personalizando 
+        Seaborn
+     Ejemplo
+           sns.set_style(style="darkgrid", rc={"grid.color": ".6"})
+           sns.set_style(rc={"grid.linestyle": ":"})
+           sns.set_style(rc={"axes.titleweight": "normal"})
+           sns.set_style(rc={"axes.titlelocation": "left"})
+           sns.set_style(rc={"axes.titlecolor": "blue"})
+           sns.set_style(rc={"axes.labelcolor": "red"})
+           sns.set_style(rc={"axes.labelsize": "12"})
+           sns.set_style(rc={"axes.labelweight": "normal"})
+           sns.set_style(rc={"axes.linewidth": "0.5"})
+           sns.set_style(rc={"grid.color": "purple"})
+           sns.set_style(rc={"grid.linestyle": "--"})
+           sns.set_style(rc={"grid.linewidth": "0.5"})
+           sns.set_style(rc={"font.fantasy": "Comic Sans MS"})
+           sns.set_style(rc={"font.serif": "Utopia"})
+     Ejemplo
+          penguins = sns.load_dataset("penguins")
+          # Axis-level
+          sns.histplot(data=penguins, x="flipper_length_mm")
+   ¡Importante!
+   Es posible restablecer los parámetro por 
+   defecto
+   sns.reset_orig()
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+      Ejemplo en vivo
+   Surfeando en Seaborn.
+   El profesor hará una demostración 
+   compartiendo pantalla de un ejemplo 
+   aplicado de Seaborn. 
+   Tiempo estimado: 15 minutos
+       Ejemplo en vivo
+       Los valores son mediciones del pulso de         ✓ Id: número identificador de la 
+       30 personas tras realizar algún tipo de            persona
+       actividad por un determinado tiempo. Las        ✓ Diet: dieta de la persona = baja en 
+       columnas son:                                      grasas o sin grasas
+                                                       ✓ Time: duración del ejercicio = 1 min, 
+                                                          15 min o 30 min
+                                                       ✓ Kind: tipo de ejercicio    = reposo, 
+                                                          caminar o correr
+    Ejemplo en vivo
+    Observemos la distribución de las 
+    mediciones luego de 30 minutos de 
+    realizar el ejercicio.
+    Primero, 
+    Extraigamos sólo aquellas observaciones 
+    que se corresponden con un ejercicio de 
+    30 minutos
+     df_30_min = df_ejercicio[df_ejercicio['time'] == '30 min']
+     df_30_min.head()c
+       Ejemplo en vivo
+       Segundo,                                         ✓ Debemos especificar la columna de 
+       Graficamos las distribuciones con                    valores en el parámetro x, en este 
+       sns.displot                                          caso nos interesa la columna pulse
+                                                        ✓ Como queremos separar las 
+                                                            distribuciones según el tipo de 
+                                                            actividad, pasamos el parámetro 
+                                                            hue='kind'
+           plt.figure()
+           ax = sns.displot(data=df_30_min, x='pulse', kind='kde', hue='kind', fill=True)
+           ax.set(xlabel='Frecuencia Cardíaca', ylabel='Densidad', title='Distribución  de las pulsaciones')
+    Ejemplo en vivo
+    Como era de esperar, aquellas personas 
+    que corrieron terminaron (en promedio) 
+    con una mayor frecuencia cardíaca 
+    respecto de las que no lo hicieron
+    Algunas observaciones
+     ✓ Con el parámetro kind='kde', Seaborn 
+       realiza una estimación de la distribución 
+       a partir de los datos del Data Frame. A 
+       grandes rasgos, se puede pensar a este 
+       tipo de gráficos como una versión 
+       suavizada del histograma de frecuencias 
+       relativas.
+     ✓ Con el parámetro kind='hist', Seaborn 
+       graficará un histograma.
+     ✓ El parámetro fill añade el sombreado 
+       debajo de la distribución
+       Comparando
+       Para comparar las distribuciones en                                   REEMPLAZAR 
+       base a las dietas, sólo hay que cambiar                               POR IMAGEN
+       el parámetro hue
+      Ejemplo en vivo
+   Surfeando en Seaborn.
+   El profesor hará una demostración, 
+   compartiendo pantalla, de un ejemplo de 
+   Categorical plots en Seaborn
+   Tiempo estimado: 15 minutos
+    Comparación 
+    desgregando por dos 
+    categorías
+     ✓ Si bien los ejemplos anteriores nos 
+       permitían visualizar las distribuciones de 
+       acuerdo a una categoría, podríamos 
+       querer visualizar los datos en base a dos 
+       variables distintas ������
+     ✓ sns.catplot con el parámetro kind='violin' 
+       permite comparar distribuciones 
+       separando los datos en base a dos 
+       categorías simultáneamente.
+    Desgregación en base a 
+    duración y dieta
+     ✓ Visualicemos las pulsaciones en base a la 
+       duración de la actividad y al tipo de 
+       dieta:
+      ax = sns.catplot(data=df_ejercicio, kind='violin', x='time', y='pulse', hue='diet', split=True)
+      ax.set(xlabel='Duración de ejercicio', ylabel='Frecuencia cardíaca', title='Categorización de la 
+      distribución de pulsaciones')
+  Resultado
+    Desgregación en base a 
+    actividad y dieta
+     ✓ Para visualizar en base a la actividad, 
+       únicamente cambiamos el valor del 
+       parámetro x
+      ax = sns.catplot(data=df_ejercicio, kind='violin', x='kind', y='pulse', hue='diet', split=True)
+      ax.set(xlabel='Duración de ejercicio', ylabel='Frecuencia cardíaca', title='Categorización de la 
+      distribución de pulsaciones')
+  Resultado
+     Data Science in a 
+       Nutshell, 
+    primeros conceptos: 
+      clasificación, 
+   regresión y clustering
+      Aprendizaje 
+      Supervisado
+        Aprendizaje 
+       Supervisado
+      ¿Qué tipo de problemas 
+      resuelve?
+        ✓ Problemas de clasificación:           ✓ Problemas de regresión:
+           Necesitan predecir la clase más         En vez de predecir categorías, 
+           probable de un elemento, en             predicen valores numéricos. Es 
+           función de un conjunto de variables     decir, la variable target en un 
+           de entrada. Para este tipo de           problema de regresión es de tipo 
+           algoritmos, la variable target o        cuantitativa.
+           respuesta, es una variable de tipo 
+           categórica.
+     ✓ Entonces, ¿cómo sé si tengo que utilizar 
+       un algoritmo de clasificación o de 
+       regresión? Depende del tipo de problema 
+       que plantea mi variable a predecir ������
+    Aprendizaje Supervisado: 
+    Clasificación
+    Los algoritmos de clasificación 
+    intentan predecir una categoría.
+    Por ejemplo:
+     ✓ Enfermo/No enfermo.
+     ✓ Sobrevive/No sobrevive.
+     ✓ Baja/ No baja
+    Aprendizaje Supervisado: 
+    Regresión
+     ✓ Planteamos la hipótesis de que 
+       podría existir algún tipo de 
+       dependencia de una variable con 
+       respecto a la otra. 
+     ✓ Si este tipo de dependencia existe, 
+       queremos ver de qué forma se 
+       da esa relación. 
+    Aprendizaje Supervisado: 
+    Regresión
+    Supongamos entonces, que tenemos dos 
+    variables: x e y, veamos el siguiente 
+    gráfico:
+    Pareciera que las variables tienen una 
+    fuerte correlación positiva, y si lo 
+    pensamos en términos de dependencia, 
+    quiere decir que cuando la variable x 
+    aumenta, entonces también lo hace la 
+    variable y, y viceversa.
+  ¡Atención!
+  Cuando planteamos que ante un cambio 
+  en la variable x se produce un cambio en 
+  la variable y. A esto lo llamaremos 
+  dependencia de la variable y hacia la 
+  variable x.
+    Como una función 
+    matemática estándar
+     ✓                 donde la variable y es una 
+       función de x, o sea que en definitiva 
+       y depende del cambio de x.
+     ✓ Otra forma de decir lo mismo es que 
+       x es una variable independiente, o 
+       sea que su cambio no depende de 
+       nuestro modelo.
+          Repaso
+     ✓                              ������ donde a y b son 
+       números reales.
+     ✓ Esta función genera una recta en el 
+       plano.
+     ✓ El valor de a (ordenada al origen) 
+       muestra cuál es el valor de y cuando 
+       x vale 0.
+     ✓ El valor de b (pendiente), por su 
+       parte, indica el grado de inclinación 
+       de la recta.
+   ¡Importante!
+   ✓ Una recta totalmente horizontal > tiene una 
+     pendiente igual a cero. 
+   ✓ Una recta inclinada en el sentido de la 
+     correlación positiva > tiene una pendiente 
+     positiva. 
+   ✓ Una recta inclinada en el sentido de la 
+     correlación negativa > tiene una pendiente 
+     negativa.
+   ✓ Una recta vertical > tiene pendiente infinita.
+      Aprendizaje no 
+      Supervisado
+                Aprendizaje no 
+                  Supervisado
+      Infieren patrones de 
+      un conjunto de 
+      datos sin referencia 
+      a resultados 
+      conocidos o 
+      etiquetados, esto 
+      significa en otras 
+      palabras, que no 
+      cuenta con una 
+      variable “y” solo tengo 
+      “X”.
+        Aprendizaje Supervisado 
+        vs. no Supervisado
+                                Supervisado                                  No supervisado
+                          input data       Anotacione                           input data
+                                           s
+                                               Son 
+                                            manzana
+                                                s
+                                                     ?
+                     Predicción        es una 
+                                     manzana
+       Clustering
+      Tipos de algoritmos no 
+      Supervisados
+      El aprendizaje supervisado se compone de 
+      dos grande tipos de problemas: 
+        ✓ Clustering donde se busca encontrar    ✓ Reducción de dimensionalidad 
+           grupos subyacentes en los datos, con      que busca encontrar pocas 
+           algoritmos basados en Jerarquías,         dimensiones como combinaciones 
+           Particiones, Densidad, Modelos o          lineales de las variables originales, 
+           Grillas.                                  con algoritmos como el PCA; ICA; t-
+                                                     SNE, Isomap. Análisis Factorial entre 
+                                                     otros. 
+      K-means
+      K-means funciona como un algoritmo de                             REEMPLAZAR 
+      clustering utilizando particiones.                                POR IMAGEN
+                          DBSCAN
+         REEMPLAZAR       DBSCAN funciona como un algoritmo de 
+         POR IMAGEN       clustering utilizando densidad.
+       ICA
+       El ICA (Independent Component                                         REEMPLAZAR 
+       Analysis) busca encontrar estructuras                                 POR IMAGEN
+       independientes de una señal que 
+       puede ser una serie de tiempo o 
+       algún fenómeno de interés. 
+       Para pensar
+   Supongamos que una empresa lanza una campaña 
+   de marketing para encontrar los diferentes 
+   segmentos para un nuevo producto. 
+   ¿Que tipo de aprendizaje deberíamos utilizar 
+   en este caso? ¿Por qué? 
+   Contesta en el chat de Zoom 
+      Introducción a
+      Scikit-Learn
+    Scikit Learn
+    Scikit-learn es probablemente la librería 
+    más útil para Machine Learning en 
+    Python, es de código abierto y es 
+    reutilizable en varios contextos. 
+    Proporciona además una gama de 
+    algoritmos de aprendizaje 
+    supervisados y no supervisados en 
+    Python.
+    Este librería está construida sobre SciPy 
+    (Scientific Python) e incluye las 
+    siguientes librerías o paquetes:
+    Paquetes de Scikit 
+        Learn
+                                                                    NumPy: 
+                     Ipython:                                       librería de matriz n-
+                     consola interactiva mejorada                   dimensional base
+                     SciPy:                                         Matplotlib: 
+                     librería fundamental para la                   trazado completo 2D
+                     informática científica
+                     SymPy:                                         Pandas: 
+                     matemática simbólica                           estructura de datos y análisis
+      ¿Por qué elegir Scikit 
+      Learn?
+      ✓ Clustering.                              ✓ Extracción y selección de 
+      ✓ Ensemble methods, es decir,                características de imágenes, 
+                                                   texto así como también para 
+         algoritmos de aprendizaje                 identificar atributos significativos a 
+         supervisados y no supervisados.           partir de los cuales crear modelos 
+      ✓ Validación cruzada, es decir,              supervisados.
+         dispone de varios métodos para          ✓ Reducción de la dimensionalidad.
+         verificar la precisión de los modelos 
+         supervisados.                           ✓ Optimización o ajuste de hiper 
+      ✓ Varios conjuntos de datos o datasets       parámetros.
+         de prueba.                              ✓ Feature selection.
+         Ventajas
+                            2
+                    Práctica 
+                integradora: 
+            Visualizaciones en 
+                     Python
+            DESAFÍO 
+            ENTREGABLE
+       Visualizaciones en 
+       Python                                          Formato
+       Consigna
+         ✓ Deberás entregar el segundo avance de        ✓ Entregar un archivo con formato .ipynb. 
+            tu proyecto final. Elegirás uno de los          Debe tener el nombre 
+            datasets del desafío “Elección de               “Visualización+Apellido.ipynb”. 
+            Potenciales Datasets e importe con 
+            la librería Pandas”. Posteriormente,       Sugerencias
+            crearás un notebook donde cargaran el       ✓ Preparar el código y probar los resultados 
+            archivo utilizando funciones de pandas          con subconjuntos del conjunto original.
+            para luego proceder a realizar 3 gráficos 
+            diferentes con Matplotlib y 3 con          Aspectos a incluir
+            Seaborn. Finalmente, cada gráfico será      ✓ El código debe estar hecho en un 
+            interpretado con el fin de obtener              notebook y debe estar probado.
+            insights relevantes que permitan dar 
+            respuesta a la pregunta problema.
+               DESAFÍO 
+               ENTREGABLE
+         Visualizaciones en 
+         Python
+        Consigna paso a paso                                      Video explicativo
+          1.  Escoger uno de los 3 datasets utilizados              ✓ Link al video complementario
+              para la Clase 5
+          2.  Cargar el dataset con la librería pandas 
+              por medio de la función pd.read_csv() o 
+              pd.read_excel()
+          3.  Realizar al menos tres gráficos (lineplot, 
+              scatterplot, histogramas, barchart, 
+              boxplot) usando la librería Matplotlib
+          4.  Realizar al menos tres gráficos (lineplot, 
+              scatterplot, histogramas, barchart, 
+              boxplot) usando la librería Seaborn
+          5.  Interpretar los resultados de cada gráfica 
+              obtenida
+       CLASE N°8
+       Glosario
+       Seaborn: librería de Python que permite la       Aprendizaje supervisado: tipo de 
+       creación de gráficos con mejor calidad que       aprendizaje donde existe retroalimentación 
+       Matplotlib ya que interactúa de manera           para el algoritmo debido a que hay 
+       más eficiente con estructuras de datos           etiquetas, los problemas típicos a resolver 
+                                                        son clasificación y regresión
+       Estructura axes-level: no se pueden              Aprendizaje no supervisado: tipo de 
+       modificar más allá de los ejes que se            aprendizaje donde NO  existe 
+       grafican y no es conveniente cuando se           retroalimentación para el algoritmo debido 
+       desea hacer múltiples subplots (e.g.             a que NO hay etiquetas, los problemas 
+       lineplot, scatterplot)                           típicos a resolver son clustering y reducción 
+                                                        de dimensionalidad
+       Estructura figure-level: leyendas por            ScikitLearn: librería fundamental para el 
+       fuera de los frames y permiten la creación       desarrollo de modelos de Machine Learning 
+       de múltiples subplots de manera más              (Algoritmos Supervisados y No 
+       rápida y eficiente (e.g relpot)                  supervisados entre otros) en Python
+      ¿Preguntas?
+                   Resumen 
+               de la clase hoy
+              ✓ Seaborn comandos básicos…
+              ✓ Tipos de gráficos
+              ✓ Customizaciones 
+              ✓ Clasificación, regresión y clustering 
+              ✓ Introducción a paquetes de Sclikit Learn 
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.

@@ -1,0 +1,456 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 29. DATA SCIENCE
+         Data Wrangling II
+      Temario
+                       28                      29                     30
+              Data Wrangling I         Data Wrangling            Workshop: 
+                                               II                Limpieza de 
+                                                                    datos
+                 ✓ Data Wrangling en    ✓ Etapas de Data         ✓ Repaso Data 
+                    proyectos DS           Wrangling               Wrangling+ tips 
+                                                                   buenas prácticas
+                 ✓ Etapas Data          ✓ Data Transformation
+                    Wrangling                                    ✓ Recomendaciones 
+                                        ✓ Opciones de remoción     para Data Wrangling
+                 ✓ Combinar y fusionar     de duplicados
+                    objetos con Pandas.                          ✓ ¿Cómo hacer una 
+                                        ✓ Índices Jerárquicos      revisión de pares y 
+                    Merge y Concat                                 dar feedback?
+                                        ✓ Print, GroupBy, Apply
+    Objetivos de la clase
+                 Identificar las funciones de manipulación de 
+                 datos en Pandas
+                 Hacer un repaso de algunas de las más 
+                 usadas
+       MAPA DE CONCEPTOS            Data Wrangling 
+                                   en proyecto de DS
+                                    Etapas de Data 
+                        Parte I      Wrangling
+                                    Merge y Concat
+     Data Wrangling                   Data 
+                                    Transformation
+                                    Remoción de 
+                                     duplicados
+                        Parte II      Índices 
+                                     jerárquicos
+                                    Print, GroupBy, 
+                                      Apply
+    Repaso: Etapas Data 
+       Wrangling
+       PARA RECORDAR
+    Repaso
+    ¿Qué es el Data Wrangling?
+    ¿Qué tan importante se puede considerar 
+    este proceso en el desarrollo de un 
+    proyecto de DS?
+          Repaso Data Wrangling
+        La manipulación de datos es el proceso de 
+        limpieza y unificación de conjuntos de datos 
+        complejos y desordenados para facilitar el 
+        acceso,  análisis y modelado. 
+        Gran parte del tiempo de un científico de datos 
+        se ocupa en la manipulación de datos.
+      Fases iniciales de un 
+      proyecto DS
+           1                2               3                 4                5
+     Definición de     Contexto         Problema            Data       Exploratory Data 
+        objetivo       Comercial       Comercial         Acquisition    Analysis (EDA)
+      Fases finales de un 
+      proyecto DS
+          6               7               8                 9               10
+        Data        Selección del  Desarrollo del     Validación y    Conclusiones
+     Wrangling        algoritmo       algoritmo        despliegue
+     (Munging)        apropiado
+                             ~60% del tiempo de un Data Scientist consiste 
+                             en limpiar y manipular datos
+    Etapas del Data Wrangling
+   Descubrimiento   Limpieza       Validación
+      1       2       3       4       5      6
+          Estructuración Enriquecimiento   Publicación
+    Data Transformation
+       Definición
+    Data Transformation
+    La transformación de datos es el proceso de cambiar 
+    el formato, la estructura o los valores de los datos. 
+    Muchas organizaciones utilizan almacenes de datos 
+    basados en la nube, que pueden escalar los recursos 
+    informáticos y de almacenamiento con una latencia 
+    medida en segundos o minutos. 
+    La escalabilidad de la plataforma en la nube permite a 
+    las organizaciones omitir las transformaciones de 
+    carga previa para luego transformarlos en el momento 
+    de la consulta, un modelo llamado ELT (extraer, 
+    cargar, transformar).
+       Procesos 
+      involucrados
+    Procesos involucrados
+    Los procesos como la integración de datos, la 
+    migración de datos, el almacenamiento de datos 
+    y el Data Munging pueden implicar la 
+    transformación de datos.
+    La transformación de datos puede ser 
+    constructiva (agregar, copiar y replicar datos), 
+    destructiva (eliminar campos y registros), estética 
+    (estandarizar valores o nombres) o estructural 
+    (renombrar, mover y combinar columnas en una 
+    base de datos).
+      Beneficios y 
+     Desafíos de Data 
+     Transformation
+    Beneficios
+     1. Los datos se transforman para que estén mejor 
+       organizados. Los datos transformados pueden 
+       ser más fáciles de usar tanto para humanos 
+       como para computadoras.
+     2. Los datos correctamente formateados y 
+       validados mejoran la calidad de los datos y 
+       protegen de problemas, como valores nulos, 
+       duplicados inesperados, indexación incorrecta y 
+       formatos incompatibles.
+     3. La transformación de datos facilita la 
+       compatibilidad entre aplicaciones, sistemas y 
+       tipos de datos. Los datos utilizados para 
+       múltiples propósitos pueden necesitar ser 
+       transformados de diferentes maneras.
+    Desafíos
+     1. La transformación de datos puede ser costosa. El 
+       costo depende de la infraestructura, el software 
+       y las herramientas específicas utilizadas para 
+       procesar los datos. 
+     2. Los procesos de transformación de datos pueden 
+       consumir muchos recursos. Realizar 
+       transformaciones en un almacén de datos local 
+       después de la carga, o transformar los datos 
+       antes de introducirlos en las aplicaciones, puede 
+       crear una carga informática que ralentiza otras 
+       operaciones.
+    Desafíos
+    3. La falta de experiencia y el descuido pueden 
+    presentar problemas durante la transformación. 
+    Los analistas de datos sin la experiencia 
+    adecuada en la materia tienen menos 
+    probabilidades de notar errores tipográficos o 
+    datos incorrectos porque están menos 
+    familiarizados con el rango de valores exactos y 
+    permisibles.
+    4. Las empresas pueden realizar 
+    transformaciones que no se ajustan a sus 
+    necesidades. 
+    Cómo aplicar Data 
+     Transformation
+    Extracción y Parsing
+    En el proceso ELT moderno, la adquisición de datos 
+    comienza con la extracción de información de una 
+    fuente de datos, seguida de la copia de los datos en 
+    su destino. Las transformaciones iniciales se centran 
+    en dar forma al formato y la estructura de los datos 
+    para garantizar su compatibilidad tanto con el sistema 
+    de destino como con los datos que ya existen. 
+    Translación y Mapping
+     Algunas de las transformaciones de datos más 
+     básicas involucran el mapeo y la traducción de 
+     datos. 
+     La traducción convierte datos de formatos usados 
+     en un sistema a formatos apropiados para un 
+     sistema diferente. Incluso después del análisis, los 
+     datos web pueden llegar en forma de archivos 
+     JSON o XML jerárquicos, pero deben traducirse en 
+     datos de filas y columnas para incluirlos en una 
+     base de datos relacional.
+    Filtros, agregación y 
+    Los datos se pueden consolidar filtrando campos, 
+    summary
+    columnas y registros innecesarios. Los datos 
+    omitidos pueden incluir índices numéricos en datos 
+    destinados a gráficos y tableros o registros de 
+    regiones comerciales que no son de interés en un 
+    estudio en particular.
+    Los datos también se pueden agregar o resumir. 
+    por ejemplo, transformando una serie temporal de 
+    transacciones de clientes en recuentos de ventas 
+    por hora o por día.
+    Enriquecimiento e 
+    Los datos de diferentes fuentes se pueden fusionar 
+    imputación
+    para crear información enriquecida y desnormalizada. 
+    Las transacciones de un cliente se pueden acumular en 
+    un total general y agregarse a una tabla de información 
+    del cliente para una referencia más rápida o para uso 
+    de los sistemas de análisis de clientes. 
+    Los valores faltantes se pueden imputar o los datos 
+    dañados se pueden reemplazar como resultado de este 
+    tipo de transformaciones.
+    Indexamiento y 
+    ordenamiento
+    Los datos se pueden transformar para que se ordenen 
+    lógicamente o para adaptarse a un esquema de 
+    almacenamiento de datos. 
+    En los sistemas de gestión de bases de datos 
+    relacionales, por ejemplo, la creación de índices puede 
+    mejorar el rendimiento o mejorar la gestión de las 
+    relaciones entre diferentes tablas.
+    Anonimización y 
+    encriptado
+    Los datos que contengan información de identificación 
+    personal u otra información que pueda comprometer la 
+    privacidad o la seguridad deben anonimizarse antes de 
+    su propagación. 
+    El cifrado de datos privados es un requisito en muchas 
+    industrias, y los sistemas pueden realizar el cifrado en 
+    múltiples niveles, desde celdas de bases de datos 
+    individuales hasta registros o campos completos.
+      Opciones de 
+      remoción de 
+       duplicados
+    Valores Duplicados
+    Valores duplicados
+     Un valor duplicado es aquel en el que todos los 
+     valores de al menos una fila son idénticos a todos 
+     los valores de otra fila. Una comparación de valores 
+     duplicados depende de lo que aparece en la celda, 
+     no del valor subyacente almacenado en la celda.
+     Pueden ser de dos tipos:
+      a. Valores duplicados: cuando dos 
+        características tienen el mismo conjunto de 
+        valores
+      b. Índice duplicado: cuando el valor de dos 
+        características es diferente, pero ocurren en el 
+        mismo índice
+     ¿Cómo lidiar con 
+        ellos?
+    ¿Cómo lidiar con ellos?
+      Lo primero que debemos hacer es identificarlos
+                                ������
+    ¿Cómo lidiar con ellos?
+                          También se pueden borrar por columnas
+     Podemos borrar todos los duplicados
+                         ������
+    Índices Jerárquicos
+    Índices Jerárquicos 
+    La indexación jerárquica es una característica 
+    importante de pandas que le permite tener múltiples 
+    (dos o más) niveles de índice en un eje. 
+    De forma algo abstracta, proporciona una forma de 
+    que trabaje con datos de dimensiones superiores en 
+    una forma de dimensiones inferiores.
+       Índices Jerárquicos 
+           Ejemplo
+           Serie de pandas       Vista de los dos niveles de         Acceso al primer nivel
+                                 índices
+       Índices Jerárquicos 
+           Ejemplo
+           Serie de pandas          Acceso al segundo nivel          Acceso al primer nivel
+       Índices Jerárquicos 
+            Ejemplo
+            Serie de pandas     Haciendo un reshape con unstack
+                 ☕
+               Break
+             ¡10 minutos y 
+             volvemos!
+      Ejemplo en vivo
+   Utilizaremos el notebook llamado Clase 7 - Data 
+   Wrangling II - Ejemplo en vivo.ipynb y el archivo 
+   train.csv dentro de la carpeta de clase para 
+   repasar conceptos asociados de Data Wrangling. 
+   Aprenderemos a cómo lidiar con nulos, duplicados, 
+   estandarizar valores, rellenar con la mediana, valor 
+   por defecto y tomar decisiones respecto a qué 
+   columnas retener para el análisis.
+    Print, GroupBy, Apply 
+        y Pivot
+         Print
+    Print
+    La función Python print() toma cualquier 
+    número de parámetros y los imprime en una 
+    línea de texto. Cada uno de los elementos se 
+    convierte a formato de texto, separados por 
+    espacios, y hay un único '\n' al final (el 
+    carácter de "nueva línea").
+    Por defecto, print() pone un solo '\n' después 
+    de todos los elementos. El parámetro 
+    opcional end= establece una cadena 
+    personalizada para que aparezca después de 
+    todos los elementos.
+       GroupBy
+    GroupBy
+                       ✔ La sentencia GROUP BY identifica una columna 
+                         seleccionada para utilizarla para agrupar 
+                         resultados. 
+                       ✔ Divide los datos en grupos por los valores de la 
+                         columna especificada, y devuelve una fila de 
+                         resultados para cada grupo. 
+                       ✔ Se puede utilizar GROUP BY con más de un 
+                         nombre de columna.
+    GroupBy
+     Ejemplo de 
+     agrupamiento por la 
+     columna key, con la 
+     agregación suma de la 
+     columna data.
+    GroupBy
+        Dataset        Creamos grouped que un objeto de tipo Groupby
+         Ponemos la agregación
+    GroupBy
+        Dataset
+                      Hacemos todo en una línea y usamos dos 
+                      columnas
+                       Devuelve una serie con dos índices y la 
+                       media para cada combinación de índices
+        Apply
+    Apply
+       Permite a los usuarios pasar una función y 
+       aplicarla en cada valor de la serie Pandas. 
+       Se trata de una gran mejora para la biblioteca 
+       de pandas, ya que esta función ayuda a 
+       segregar los datos de acuerdo con las 
+       condiciones requeridas, por lo que se utiliza 
+       de manera eficiente en la ciencia de datos y el 
+       aprendizaje automático.
+    Apply
+       Puede ser una función de una librería específica como en este ejemplo y 
+               aplica a todo el dataframe esta operación.
+    Apply
+        Puede ser una función definida manualmente y luego aplicarla al dataframe
+        Pivot
+    Pivot
+    PIVOT rota una tabla convirtiendo los valores únicos 
+    de una columna en múltiples columnas. 
+    A su vez, ejecuta agregaciones donde se requieren 
+    en cualquier valor de columna restante que se 
+    desee en el resultado final.
+   Pivot
+   En este caso, vemos como utiliza los valores únicos de la columna B y los 
+   transforma en múltiples columnas. 
+    Pivot
+     Ahora, vemos como utiliza los valores únicos de la columna B y los 
+     transforma en múltiples columnas 
+                                 Se pueden usar varios 
+                                 valores
+       Pivot
+        Podemos rotar una tabla convirtiendo los valores únicos de una columna en múltiples 
+       columnas.
+       En el caso de abajo, utilizamos los valores únicos de la columna B y los transformamos 
+       en múltiples columnas                  Index no puede tener valores repetidos. 
+                                              Esto da un error porque ‘A’ tiene valores 
+                                              repetidos
+     Otras funciones
+    .astype
+     Permite cambiar el tipo de datos de las columnas de las columnas de un 
+     DataFrame
+       .value_counts()
+   Cuenta cuántos valores únicos hay en cada columna. Es muy útil para datos categóricos
+             DataFrame con datos categóricos          Contando cuantos datos 
+                                                      repetidos hay de cada valor 
+                                                      único 
+       .sort_index() y sort_values()
+              Permite ordenar por índice o por columna seleccionada
+             DataFrame original      Ordenando por índice       Ordenando por 
+                                                                columna
+    Melt
+    Es una función que permite cambiar el formato del dataframe a long
+    Se usa para crear un formato específico donde se usan columnas identificadoras
+    Todas las demás columnas se usan como valores.
+     
+    Pueden usar la función pivot para unmelt the output.
+     Investigando empresas 
+            productivas
+     Investigaremos los consumidores más importantes del 
+     último corte de una empresa y la importancia de los 
+                duplicados
+             Duración: 15-20 mins
+       ACTIVIDAD EN CLASE
+    Investigando 
+    empresas productivas
+    Utilizaremos el archivo ‘datos_empresas.csv’ y 
+    responderemos las siguientes preguntas:
+     1. Investiguemos cuáles son los mejores clientes en 
+       ventas
+     2. Qué tipos de errores pueden observan en este 
+       dataset
+     3. Remover las filas duplicadas con base en la 
+       columna Nombre
+     4. Qué problemas observa en este dataset respecto 
+       a la estructura en una mayor escala
+                                        7
+               Desafío entregable: 
+                   Data Wrangling
+             Deberás entregar el séptimo avance de tu proyecto final. Continuaremos hablando 
+             sobre lo trabajado en el desafío “Descarga de datos desde APIs públicas”. 
+             Crearás un notebook donde se desarrollará la limpieza de los datos elegidos para tu 
+             proyecto final, deberás tener en cuenta técnicas vistas en clase para el tratamiento 
+             de valores duplicados, nulos y outliers con su respectiva justificación.  
+                          Recordemos…
+                                              Exploramos diversas APIs
+                                             Extrajimos los datos en un 
+                                                     dataframe
+                                             Realizamos una exploración 
+                                                       simple
+                Clase 27
+          Desafío entregable: 
+         Descarga de datos desde              Obtención de Insights 
+              APIs públicas                       preliminares
+            DESAFÍO 
+            ENTREGABLE
+       Data Wrangling
+       Consigna                                        Formato
+         ✓ Iniciar el proceso de limpieza y             ✓ Se espera un notebook en 
+            exploración de datos según el                   formato .ipynb. Dicho notebook debe 
+            dataset elegido para el proyecto                tener el siguiente nombre: 
+            final                                           “Data_Wrangling+Apellido.ipynb”.
+       Aspectos a incluir                              Sugerencias
+         ✓ Notebook con código y estructura             ✓ Utilizar las herramientas vistas en el 
+            eficiente                                       curso
+                                                        ✓ Manejo de duplicados nulos y análisis 
+       Ejemplo                                              exploratorio
+         ✓ Data Wrangling                              Explicación del desafío
+                                                        ✓ ¡Click aquí!
+       CLASE N°29
+       Glosario
+       Data Transformation: La                       Group By: operación que identifica una 
+       transformación de datos es el proceso de      columna seleccionada para utilizarla para 
+       cambiar el formato, la estructura o los       agrupar resultados. 
+       valores de los datos. 
+                                                     Apply: Permite a los usuarios pasar una 
+       Valores duplicados: un valor duplicado        función y aplicarla en cada valor de la serie 
+       es aquel en el que todos los valores de al    Pandas. 
+       menos una fila son idénticos a todos los 
+       valores de otra fila                          Pivot: rota una tabla convirtiendo los 
+                                                     valores únicos de una columna en múltiples 
+       Indexación jerárquica: La indexación          columnas.
+       jerárquica es una característica 
+       importante de pandas que le permite           Melt: Es una función que permite cambiar 
+       tener múltiples (dos o más) niveles de        el formato del dataframe a long
+       índice en un eje. 
+            ¡Atención!
+   La clase que viene realizaremos una revisión de pares. 
+    Se recomienda tener adelantadas las fases de Data 
+   Acquisition, Data Wrangling y Exploratory Data Analysis 
+   para obtener feedback de compañeros y tutores con el 
+         fin de mejorar nuestro proyecto.
+      ¿Preguntas?
+     ¿Aún quieres conocer 
+          más?
+     Te recomendamos el 
+      siguiente material
+         MATERIAL AMPLIADO
+     Recursos multimedia
+          Porque Data Cleaning es necesario?
+           ✓ Why is “Data cleaning” necessary | Medium | 
+             Why DATA CLEANING
+          Missingno library
+           ✓ Missing data visualization module for Python | Github | 
+             Missingno
+      Disponible en nuestro repositorio.
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.
+                   Resumen 
+               de la clase hoy
+              ✓ Etapas de Data Wrangling
+              ✓ Data Transformation
+              ✓ Opciones de remoción de duplicados
+              ✓ Índices jerárquicos
+              ✓ Print, GroupBy, Apply

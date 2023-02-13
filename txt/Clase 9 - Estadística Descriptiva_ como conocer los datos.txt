@@ -1,0 +1,681 @@
+    Esta clase va a ser
+        grabad
+          a
+              Clase 09. DATA SCIENCE
+              Estadística 
+         Descriptiva: como 
+         conocer los datos
+       Temario
+                           08                          09                         10
+                   Visualizaciones               Estadística              Herramientas 
+                      y primeros                Descriptiva              de Visualización
+                   pasos con DS II
+                  ✓  Seaborn                   ✓ Introducción 
+                                                                           ✓ Introducción
+                  ✓  Tipos de gráficos         ✓ Medidas de                ✓ Gráficos Univariados
+                  ✓  Subplot y Facetgrip           resumen 
+                                               ✓                           ✓ Gráficos Bivariados
+                  ✓  Customizaciones sobre         Distribución de 
+                     gráficos                      variables               ✓ Forma de los datos
+                  ✓  Nutshell                  ✓ Intervalos de             ✓ Gráficos de dos 
+                                                   confianza                  dimensiones
+                  ✓  Scikit - Learn
+    Objetivos de la clase
+                 Conocer las generalidades de la Estadística 
+                 Descriptiva.
+                 Identificar los tipos de variables. 
+                 Diferenciar las medidas de resumen.
+                 Comprender la distribución: uniforme vs. 
+                 normal.
+                                               Inferencia 
+            MAPA DE CONCEPTOS estadística
+                                               EDA
+                                                                             Cuantitativas
+                                               Tipos de variables            Cualitativas
+                                                                             Media
+                                                                             Mediana
+       Estadística 
+       Descriptiva                             Medidas de 
+                                               resumen                       Cuartiles
+                                                                             Moda
+                                                                             Varianza y 
+                                                                             desviación estándar
+                                               Distribución de las           Uniforme
+                                               variables
+                                                                             Normal
+  Repaso en Kahoot
+     Introducción a la 
+       estadística 
+    descriptiva y tipos 
+      de variables 
+       Fuentes de 
+      información
+       ¿Dónde están los 
+       datos?
+                       ✔ Toda vez que tomamos un conjunto de 
+                         datos, asumimos que representan una 
+                         parcialidad de la realidad.
+                       ✔ Estos datos son los que serán objeto de 
+                         nuestras predicciones y estimaciones de la 
+                         mano de la estadística y del data science.
+      Para tener en 
+      cuenta
+     ��� Unidad  de  observación:  conjunto  de  variables 
+         representadas con datos.
+     ���
+     ���   Población: universo de observaciones que consta de 
+         todas las unidades de observación posibles.
+     ���
+     ���   Muestra: conjunto de observaciones que contiene las 
+     ���   unidades de observación a las que tenemos acceso.
+       Inferencia 
+       estadística
+             Inferencia 
+            estadística
+                     ✓ Inferencia estadística es un conjunto de métodos y 
+                       técnicas que permiten inferir el comportamiento de una 
+                       población con base en una muestra 
+                     ✓ Muestra  subconjunto  de  la  población  con  el  fin  de 
+                       obtener inferencias de algún parámetro por medio de 
+                       un estadístico
+                     ✓ Población  conjunto  de  personas,  eventos  u  objetos 
+                       sobre los cuales se desea inferir un parámetro
+     Inferencia 
+     estadística
+                         Inferencia 
+                                                      1. Establecer hipótesis y verificar 
+                       estadística
+        Existen diversos parámetros: Media ,          condiciones: Dos hipótesis sobre la 
+        proporción, varianza, desviación              población. Una es la hipótesis nula (H0), y 
+        estándar, total poblacional                   la alternativa o hipótesis de investigación 
+                                                      (H1)
+        Para la prueba de hipótesis más común         2. Decidir el nivel significancia (α): 
+        (Media poblacional) se tienen 6 pasos         probabilidad de corte para tomar 
+        básicos:                                      decisiones respecto a la hipótesis nula 
+                                                      (probabilidad de rechazo de H0 verdadera)
+                          Inferencia 
+                         estadística
+          3. Calcular el estadístico de prueba:         5. Tomar una decisión: tenemos dos 
+          Reunir datos de muestra y calcular una        opciones rechazamos H0 (p valor <= α)  
+          estadística de prueba donde la                o no podemos rechazar H0 (p valor > α). 
+          estadística de muestra se compara con         6. Escribir una conclusión: tomamos una 
+          el valor del parámetro.                       decisión estadística sobre la hipótesis 
+          4. Calcular el p valor (Región rechazo):      nula, entonces resumimos nuestros 
+          El valor p se encuentra utilizando el         resultados en una conclusión general 
+          estadístico de prueba para calcular la        para nuestra prueba al nivel de 
+          probabilidad de que los datos de la           significancia seleccionado.
+          muestra produzcan dicho estadístico de 
+          prueba o uno más extremo. 
+     Inferencia 
+     estadística
+        p valor
+        p valor
+                                                         ✓
+          ✓ p valor = probability value (valor              Luego de 30 días vemos que el Grupo A 
+              entre 0 y 1)                                  no ha tenido cambios en el peso y que el 
+          ✓ Supongamos que queremos medir si                grupo B ha disminuido 1Kg en promedio
+              una droga X reduce el peso de              ✓ Hipótesis nula: La diferencia en peso de 
+              personas                                      los que reciben placebo es igual a los 
+          ✓ Elegimos dos grupos A (Control- sin             que reciben la Droga X
+              ninguna droga) y B (Droga X)
+    p valor
+     ✓ Si nuestra hipótesis nula es verdad: 
+       cuál es la probabilidad de encontrar 
+       una reducción de 1Kg en el grupo B 
+       (Droga X) respecto al grupo de 
+       placebo (>>p-valor).
+     ✓ El p valor es una probabilidad en favor 
+       de la Hipótesis nula
+                              ✓ Mientras más pequeño sea el p-valor 
+                               mayor evidencia tenemos en contra la 
+                               hipótesis nula
+                              ✓ p-valor < 0.05 (Rechazar Ho)
+                              ✓ p-valor >=0.05 (No rechazar Ho)
+        Ejemplo
+         Queremos verificar si el saldo de las                      No tenemos evidencia suficiente 
+         cuentas de nuestros clientes ha variado                    para concluir que la media ha 
+         respecto al valor del último año ($ 1362.27                cambiado
+         USD)
+          ✓ Disponemos de información 
+              actualizada de nuestros clientes:
+         stats.ttest_1samp(bank['balance'], popmean=1341.12)
+         >>>Ttest_1sampResult(statistic=1.477137017325908, 
+         pvalue=0.13964587808442475)
+        Ejemplo
+        Ahora nos interesa saber si las personas que             En este caso logramos ver una 
+        tienen crédito con el banco tienen una diferencia        diferencia significativa en la media 
+        significativa en los saldos respecto a los clientes      de los dos grupos.
+        que no tienen créditos
+        loans=bank[bank.loan=="yes"].balance
+        no_loans=bank[bank.loan=="no"].balance
+        statistic, pvalue = stats.ttest_ind(loans,no_loans, 
+        equal_var=False)
+        print('Estadistico:',round(statistic,2),'p-valor:', 
+        round(pvalue,2))
+        >>> Estadistico: -25.18 p-valor: 0.0
+     ¿Cómo conocer los datos?
+           Descripción        La estadística descriptiva 
+                              es una rama de la estadística 
+                              que nos ayuda a entender 
+                              mejor los datos.
+             Análisis
+                ¡Es uno de los pilares del Análisis Exploratorio de Datos 
+                o EDA que veremos más adelante!
+    Exploratory data analysis 
+    (EDA)                            Etapas del EDA
+           Definición
+    Búsqueda de patrones resumiendo las 
+    características principales del conjunto 
+    de datos más allá de los modelos y 
+    pruebas de hipótesis. 
+    Filosofía que permite  acercarse a una 
+    base de datos sin suposiciones. 
+    Noción de variable
+         Noción de variable
+         ✓ Las variables son estructuras que 
+            tienen valores diferentes
+         ✓ Las  variables   son   unidades 
+            racionales que se pueden definir 
+            en  el  análisis  que  se  pueden 
+            asumir  como  un  conjunto  de 
+            medidas
+         ✓ Básicamente, una variable siempre 
+            se  puede  medir  a  través  de 
+            varias escalas de medición.
+         Tipos de variables
+         ✓ Los  tipos  de  variables  son  análogos       ✓ La división más práctica para Data 
+             en su concepto a los tipos de datos.            Science: 
+         ✓ Existen  porque  hay  operaciones  que              ○ Cuantitativas
+             podemos  hacer  con  algunos  de  ellos 
+             pero con otros no.                                ○ Cualitativas
+        º
+          Tipos de variables
+          ✓ Las  variables  Cuantitativas  se 
+              dividen    en:    Discretas    y 
+              Continuas                                                       REEMPLAZAR 
+          ✓ Las  variables  Cualitativas  se                                   POR IMAGEN
+              dividen en Nominal y Ordinal
+      MAPA DE CONCEPTOS
+                                                         Categorías 
+                                    Nominal             mutuamente 
+                                                       exclusivas sin un 
+                                                       orden implícito
+                  Cualitativas                           Categorías 
+                                    Ordinal             mutuamente 
+                                                      exclusivas con un 
+                                                       orden implícito
+  Tipos de 
+  variables 
+                                                      Variables numéricas 
+                                   Discretas           que sólo admiten 
+                                                      números enteros
+                 Cuantitativas
+                                                      Variables numéricas 
+                                   Continuas            que admiten 
+                                                      números reales 
+       Variables 
+      cuantitativas
+     Tipos de variables
+     ✓ Son variables para las que tiene 
+       sentido realizar la suma, la resta o el 
+       promedio.
+     ✓ En general son numéricas y 
+       pertenecientes al conjunto de los 
+       números reales o a alguno de sus 
+       subconjuntos.
+     ✓ Se clasifican en continuas y discretas
+         Ejemplo
+         ✓ Las alturas de las personas pueden          ✓ Tener una edad de 20,4 años 
+             estar medidas en centímetros y las            puede ser muy importante para 
+             edades podrían estar medidas en               un estudio médico, pero no para 
+             números enteros.                              edades de consumidores de un 
+         ✓ Pero nos sirve a fines prácticos,               producto ������.
+             nuestra edad aumenta día a día, 
+             segundo a segundo.
+       PARA RECORDAR
+    Check
+    Si sumo, resto o promedio los valores, ¿tiene 
+    sentido el resultado?
+    Si tiene sentido para alguno de estos casos, 
+    estamos ante una variable numérica.
+    Debemos tener en cuenta que siempre depende 
+    del problema que estamos enfrentando ������.
+          Ejemplo
+        ������ Es válido decir que en promedio una             ¡Pueden implementarse en Python con 
+        familia tiene 2,5 hijos.                           los  tipos  de  datos  int,float  o 
+        ������ Los autos de marca Ford tienen 4,5              complex!
+        puertas no es útil para nada. 
+        “Cantidad de hijos por familia” es una 
+        variable numérica, mientras que “cantidad 
+        de puertas de los autos”, si bien es un 
+        número no es variable cuantitativa en su 
+        naturaleza. ������
+         Series de tiempo
+          ✓ Cualidades distintivas: secuencialidad,       ✓ Este tipo de datos puede traer 
+             la relación entre datos con valores              inconvenientes si los tratamos 
+             sucesivos y las características                  de forma manual ������.
+             particulares del devenir temporal (años      ✓ Los lenguajes de programación 
+             bisiestos, estaciones del año,                   las resuelven con funciones 
+             periodicidad en escalas).                        específicas (menos mal ������).
+             ¿Una serie de tiempo 
+             puede ser considerada 
+             como una variable 
+            Si!  Los  valores  instantáneos  de  la 
+             cuantitativa?
+            serie    de    tiempo     se    pueden 
+            considerar     como  una  variable 
+            cuantitativa indexada por el tiempo
+       Para pensar
+   Identifica si el índice trimestral de inflación 
+   podría considerarse serie de tiempo. 
+   ¿Verdadero o falso?
+   Contesta mediante el chat de Zoom 
+       Variables 
+       cualitativas
+            Cualitativas o 
+            categóricas
+             ✓ Como  su  nombre  lo  indica, 
+                 sirven  efectivamente  para 
+                 categorizar elementos.
+             ✓ En general son datos de texto 
+                 libre.
+             ✓ Se        pueden       clasificar     en 
+                 nominales y ordinales
+     Ejemplo
+      ✓ Algunos datos comunes que se 
+        utilizan  en  Data  Science  para 
+        caracterizar a las personas: 
+         ○ Sexo/género.
+         ○ Ocupación/profesión. 
+         ○ Lugar de procedencia.
+          Variables que son 
+           ✓ En el ejemplo de las puertas de los       ✓ No  tienen  sentido  al  sumarse, 
+          categóricas
+              autos ������, tenemos una variable que           restarse  o  promediarse,  pero  sí 
+              puede  estar  escrita  con  números          tienen  sentido  si  se  cuentan. 
+              (“Cantidad    de   puertas”,   con           Podría ser de mucho interés saber 
+              valores  posibles  3,  4  y  5),  pero       cuántos  autos  tienen  3  puertas 
+              cuya naturaleza no es numérica.              frente a cuántos tienen 4 ó 5.
+       PARA RECORDAR
+    Check
+    Si sumo, resto o promedio los valores, ¿tiene 
+    sentido el resultado?
+     Cuando la respuesta es “no” para todos los casos, 
+    entonces la variable es categórica ������.
+      PARA RECORDAR
+    Check
+    En general los lenguajes de 
+    programación ofrecen herramientas 
+    para detectar los tipos de variables 
+    automáticamente, pero no está de 
+    más verificarlos siempre a conciencia, 
+    en especial para detectar los casos 
+    que se muestran a continuación ������
+          Variables lógicas
+           ✓ Son  el  análogo  de  los  tipos  de 
+               datos Booleanos o lógicos.
+           ✓ Tienen  como  valores  posibles 
+               verdadero (True) y falso (False) y 
+               puede utilizarse para operaciones 
+               particulares.
+           ✓ A  los       efectos    del   análisis 
+               estadístico,  siguen  siendo  una 
+               variable categórica.
+          Variables de alta 
+          cardinalidad y metadatos
+          Pueden ser numéricas o de texto, pero 
+          no  tienen  sentido  ni  para  sumarse, 
+          restarse   o    promediarse     ni   para 
+          contarse.
+          Ejemplos  típicos:  los  números  de 
+          documento,  identificación  personal  o 
+          fiscal, los números de serie de producto, 
+          entre otros.
+          Variables de alta 
+          cardinalidad y metadatos
+         Más que categorizar  o  cuantificar  una 
+         porción  de  todo  el  conocimiento  que        Cuando  la  variable  cumple  la 
+         tenemos  acerca  de  un  elemento,  los         función  de  describir  o  brindar 
+         identifican de alguna manera.                   información acerca del dato en 
+                                                         cuestión, es un metadato.
+         Ayudan  a  localizar  a  un  elemento, 
+         indispensable para su almacenamiento 
+         y  manipulación  en  BBDD,  pero  no 
+         tienen    utilidad   práctica   a   fines 
+         estadísticos.
+     ¿Cómo identificar 
+     metadatos? 
+      ✓ A partir de su cardinalidad: medida 
+        de  cuántos  datos  distintos  existen 
+        para una variable.
+      ✓ Los  lenguajes  de  programación 
+        calculan  la  cardinalidad  de  la 
+        variable en relación a la cantidad de 
+        elementos.
+      ✓ Si la cardinalidad de una variable es 
+        cercana a la cantidad de elementos, 
+        entonces es posible que la variable 
+        sea un metadato.
+                 ☕
+               Break
+               ¡10 minutos y 
+                volvemos!
+    Medidas de resumen
+     ¿Cómo identificar 
+     metadatos? 
+      ✓ A partir de su cardinalidad: medida 
+        de  cuántos  datos  distintos  existen 
+        para una variable.
+      ✓ Los  lenguajes  de  programación 
+        calculan  la  cardinalidad  de  la 
+        variable en relación a la cantidad de 
+        elementos.
+      ✓ Si la cardinalidad de una variable es 
+        cercana a la cantidad de elementos, 
+        entonces es posible que la variable 
+        sea un metadato.
+     Algunas observaciones
+      ✓ Nos toca echar un vistazo a las 
+        variables para poder interpretar las 
+        características del conjunto de datos 
+        y así obtener conclusiones 
+        preliminares.
+      ✓ Pueden servir para la toma de 
+        decisiones en cuanto a qué 
+        algoritmos aplicar o qué 
+        consideraciones tomar con respecto 
+        a los datos.
+           Algunas observaciones
+          Calcular el promedio para entender cuál 
+          es el salario más representativo para la 
+          población es una mala elección, ya que 
+          sería el equivalente a medir el promedio 
+          de las alturas de una salita de niños de 
+          jardín…
+          ¡junto    con    algunos     jugadores     de 
+          básquet! ������
+    Medidas de resumen 
+      para variables 
+      cuantitativas
+     Media o promedio
+      ✓ La suma de todos los valores dividida 
+        entre la cantidad de datos. 
+     En fórmula ������
+      ✓ El número n representa la cantidad de 
+        valores.  El  número  i  representa  un 
+        índice  que  va  desde  1  hasta  n.  El 
+        promedio se representa con 
+          Ejemplo
+          El promedio de las alturas de los             Con esto, podemos decir que en 
+          niños de la salita de jardín es de            general las posiciones de los 
+          100 centímetros vs. promedio de               datos para los dos grupos son 
+          las alturas de los jugadores de               distintas entre sí.
+          basquetbol es de 195 centímetros. 
+          Mediana y cuartiles
+              1. Ordenar los datos de menor a           ✓ Si la cantidad de datos es 
+                 mayor. Si hay valores                     impar, busquemos el valor que 
+                 repetidos, simplemente                    está exactamente en la mitad 
+                 ponerlos la cantidad de veces             de los datos. Esa es la 
+                 que aparezcan.                            mediana.
+              2. Con  los  datos  ordenados,            ✓ Si la cantidad de datos es par, 
+                 ahora los contamos:                       habrá dos valores en el centro 
+                                                           de los datos. Calculemos el 
+                                                           promedio de estos dos valores. 
+                                                           Esta será la mediana.
+         Mediana y cuartiles
+         Entonces :                                   La mediana es más comprensible 
+               ✓ 50% de los datos tiene               cuando hablamos de salarios.
+                   valores < a la mediana
+               ✓ 50% restante de los datos 
+                   tiene valores > a la mediana
+         Los valores que llegan: 
+               ✓ al 25% = primer cuartil
+               ✓ al 75% = tercer cuartil
+               ✓ la mediana es equivalente a 
+                   las dos cuartas partes de los 
+                   datos = segundo cuartil
+          Ejemplo
+          A partir de su uso, un % determinado de        Si este valor es igual, por ejemplo, a la 
+          la población gana más o menos que              canasta básica de consumo, entonces 
+          determinado valor.                             el porcentaje de la población que gane 
+                                                         menos de este valor será considerada 
+                                                         “por debajo de la línea de pobreza”, 
+                                                         como un ejemplo de cómo se mide 
+                                                         este indicador económico.
+     Moda
+     Es el valor que aparece más 
+     frecuentemente en un conjunto de 
+     datos. 
+     Se obtiene contando los datos y 
+     calculando cuál valor aparece más 
+     veces.
+     Puede servir tanto para variables 
+     cuantitativas como cuantitativas.
+   Ejemplo
+       Para pensar
+   En un plantel de fútbol ¿cómo podrías 
+   representar que es un equipo joven?  
+   ¿Verdadero o falso?
+   Contesta mediante el chat de Zoom 
+        Varianza
+       Conociendo  los  valores  de  media, 
+       mediana y moda, podemos obtener un 
+       buen resumen acerca de la posición de 
+       los datos.
+         ● Datos     homogéneos:    están 
+            agrupados  en  general  más  cerca 
+            de la media.
+         ● Datos heterogéneos: significa  que 
+            en  general  están  lejos  de  la 
+            media.
+       Ejemplo
+     ���
+     ���
+          Varianza
+         Consiste en medir las distancias de                El número n representa la cantidad 
+         todos los datos hasta la media, elevar             de valores. El número i representa 
+         cada distancia al cuadrado, realizar la            un índice que va desde 1 hasta n. 
+         suma y dividir por la cantidad de datos            La varianza muestral e 
+         menos dos unidades.                                representa con s2.
+         En fórmula ������
+          Desvío estándar
+            La varianza tiene un problema:                Para esto, simplemente se aplica la 
+            dado que su fórmula involucra                 raíz cuadrada sobre la varianza y 
+            elevar al cuadrado, su resultado              se obtiene un valor en las unidades 
+            estará expresado en unidades al               que se denomina desvío estándar y 
+            cuadrado.                                     se simboliza con la letra s.
+    Medidas de resumen 
+      para variables 
+       cualitativas
+          Variables cualitativas
+            Los cálculos que tienen sentido                ✓ El conteo de los datos por 
+            son aquellos relacionados al                      categoría, esto es, para cada 
+            conteo de las observaciones y                     valor posible de la variable, la 
+            su categorización.                                cantidad de observaciones.
+            Nos interesan:                                 ✓ El valor más frecuente, es decir 
+                                                              el que tiene más observaciones. 
+              ✓ El conteo del total de datos                  Esto es el cálculo de la moda, tal 
+                 (valor de n).                                como vimos anteriormente.
+    Distribución de las 
+       variables
+  Si las variables cuantitativas tienen una 
+  posición y una forma, entonces cada una 
+  de ellas puede compararse y/o 
+  diferenciarse de otras variables con 
+  distintas posiciones y/o formas. Decimos 
+  entonces que cada variable tiene una 
+  distribución diferente.
+          Introducción de variables 
+          ✓ De acuerdo a las formas de las           ✓ La distribución de variables sólo 
+              distribuciones podemos realizar           tiene sentido en variables 
+              suposiciones que nos ayudan a             cuantitativas (discretas y 
+              entender mejor los datos.                 continuas)
+          ✓ Una característica a tener en 
+              cuenta al analizar distribuciones 
+              es si son simétricas o 
+              asimétricas.
+     Distribución de variables 
+      ✓ Muestra una distribución 
+        simétrica.
+      ✓ Podría referirse a muchas 
+        personas con bajos salarios.
+      ✓ Otro ejemplos: peso recién 
+        nacidos, estatura de hombres, 
+        scores en un test.
+      ✓ Distribución unimodal con 
+        media=mediana= moda
+        Distribución de variables 
+                                           ✓ Muestra     una    distribución 
+                                              asimétrica.
+                                           ✓ Podría referirse a los salarios de 
+                                              una población
+                                           ✓ Moda  <  Mediana  <  Media 
+                                              (Asimetría a derecha) 
+                                           ✓ Media>    Mediana   <   Moda 
+                                              (Asimetría a izquierda)
+        Dos  distribuciones  muy  importantes  son  la  distribución  uniforme  y  la 
+        distribución normal. ¡Vamos a verlas!
+      Distribución 
+          Uniforme
+         Si todos los valores posibles aparecen 
+         aproximadamente  la  misma  cantidad 
+         de    veces,   hablaremos    de    una 
+         distribución uniforme.
+         Las  funciones  de  generación  de  números  random  que  tienen  las 
+         calculadoras y las planillas de cálculo siguen esta distribución.
+     Normal
+     Formada por puntos que se agrupan de 
+     manera simétrica en torno a un valor 
+     promedio, y cuya varianza se aleja no 
+     más de una determinada distancia del 
+     promedio.
+     La importancia de la distribución normal radica en su aparición en múltiples 
+     campos del mundo real.
+     Propiedades
+      ✓ Los  datos  normales  son 
+        simétricos  con  respecto  al 
+        promedio.
+      ✓ La  media,  mediana  y  moda 
+        tienen  aproximadamente  el 
+        mismo valor.
+      ✓ Se  cumple  generalmente  la 
+        llamada  “regla  empírica”  a 
+        partir de la cual ������������������������
+          Propiedades
+         Se    cumple     generalmente    la         ✓ El  99,7%  de  los  datos  está 
+         llamada “regla empírica”:                       alejado  a  una  distancia  de 
+           ✓ El  68%  de  los  datos  está               aproximadamente  3  desvíos 
+              alejado  a  una  distancia  de             estándar del promedio. 
+              aproximadamente  1  desvío           Con esto, cualquier dato que esté 
+              estándar del promedio.               más allá de 3 veces el valor del 
+           ✓ El  95%  de  los  datos  está         desvío    estándar   alejado   del 
+              alejado  a  una  distancia  de       promedio  puede  considerarse  un 
+              aproximadamente  2  desvíos          valor  extremo o atípico. Veremos 
+              estándar del promedio.               los    valores   extremos     más 
+                                                   adelante.
+      Intervalos de 
+       confianza
+         Intervalos de confianza
+        Método     para   obtener    una 
+        estimación  de  algún  parámetro 
+        poblacional 
+        Existen  diversos  parámetros  que 
+        pueden  ser  estimados  por  este 
+        método  (ej.  media,  proporción, 
+        desviación   estándar,  varianza, 
+        totales)
+     Intervalos de confianza
+     En cualquier estimación por intervalo se requiere 
+     de:
+      ✓ Un  estimador  del  parámetro  poblacional 
+        (media muestral por ejemplo)
+      ✓ Un nivel de significancia (Error Tipo I) que 
+        estamos dispuestos a aceptar
+      ✓ Margen de  error  depende  del  tamaño  de 
+        muestra  y  de  la  varianza  del  estimador 
+        poblacional
+      ✓ A mayor tamaño de muestra (n) se espera 
+        tener  menor  margen  de  error  y  más 
+        pequeño  el  ancho  del  intervalo  de 
+        confianza
+        Ejemplo
+        Nos  interesa  conocer  una  estimación  por 
+        intervalo  del  saldo  de  cuentas  de  nuestros 
+        clientes al 95% de confianza.
+         from scipy.stats import t
+         m = bank.balance.mean()
+         s = bank.balance.std()
+         dof = len(bank.balance)-1
+         confianza = 0.95
+         t_crit = np.abs(t.ppf((1-confianza)/2,dof)) # Valor 
+         critico
+         print(t_crit)
+         (m-s*t_crit/np.sqrt(len(bank.balance)), 
+         m+s*t_crit/np.sqrt(len(bank.balance))) # Intervalo
+         >>>(1334.205344373427, 1390.3387709967262)
+           Ejemplo
+           Si   queremos  obtener  una  estimación  por 
+           intervalo al 95% de confianza de la diferencia en 
+           saldos de los con y sin crédito tenemos
+            import numpy as np, statsmodels.stats.api as sms
+            X1, X2 = 
+            bank[bank.loan=="yes"].balance,bank[bank.loan=="no"].balance
+            cm = sms.CompareMeans(sms.DescrStatsW(X1), 
+            sms.DescrStatsW(X2))
+            print(cm.tconfint_diff(usevar='unequal'))
+            >>>(-754.6437941384797, -645.6436441287349)
+           Existe  una  diferencia  significativa  entre  las 
+           medias de los dos grupos
+      Actividad colaborativa
+   Análisis de retorno y riesgo de acciones
+   Utilizaremos información de precios de 
+   acciones para calcular medidas de 
+   volatilidad y retorno
+   Grupos de 3-4 personas. Duración: 20/35 minutos
+            ACTIVIDAD COLABORATIVA
+       Análisis de retorno y 
+       riesgo de acciones
+       Consigna:                                      2. Calcular volatilidad relativa por medio de 
+         1. Cargar por medio de un ciclo for en       la fórmula (High-Low)/Open
+            un solo dataframe los precios de las 
+            siguientes acciones en la carpeta de      3. Calcular el índice de retorno por medio 
+            la clase:                                 de la fórmula: (Close/Open)-1 
+              ✓ Dominion Energy Inc. (Símbolo: 
+                  D)                                  4. Graficar ambas medidas de volatilidad y 
+              ✓ Exelon Corp. (Símbolo: EXC)           determinar en qué acción se daría la mejor 
+              ✓ NextEra Energy Inc. (Símbolo: 
+                  NEE)                                inversión 
+              ✓ Southern Co. (Símbolo: SO)
+              ✓ Duke Energy Corp. (Símbolo: 
+                  DUK)
+       NOTA: usaremos los breakouts rooms. El tutor/a tendrá el rol de facilitador/a.
+       CLASE N°9
+       Glosario                                    p-valor: probabilidad en favor de la 
+                                                   hipótesis nula. Mientras más grande sea 
+       Inferencia estadística: son un conjunto     más evidencia en favor de la hipótesis 
+       de métodos que permiten inferir el          nula se tendrá
+       comportamiento de una población con         Exploratory Data Analysis (EDA): 
+       base en una muestra                         búsqueda de patrones resumiendo 
+       Población: universo de individuos de        características principales del conjunto de 
+       interés sobre los que se quiere realizar    datos más allá de modelos o inferencia 
+       inferencia, caracterizado por los           estadística
+       parámetros                                  ScikitLearn: librería fundamental para el 
+       Muestra: subconjunto de la población        desarrollo de modelos de Machine 
+       sobre el que se realizan los cálculos para  Learning (Algoritmos Supervisados y No 
+       hacer inferencia caracterizado por          supervisados entre otros) en Python
+       estadísticos                                Intervalo de confianza: Estimación por 
+       Prueba de hipótesis: conjunto de pasos      intervalo para un parámetro de interés a 
+       para verificar hipótesis a priori que se    un nivel de confianza
+       tengan sobre un parámetro de interés 
+      ¿Preguntas?
+                   Resumen 
+               de la clase hoy
+              ✓ Qué es la Estadística Descriptiva
+              ✓ Tipos de variables
+              ✓ Medidas de resumen
+              ✓ Distribución de variables
+              ✓ Pruebas de hipótesis e intervalos de confianza
+      Opina y valora 
+       esta clase
+        Muchas 
+        gracias.
