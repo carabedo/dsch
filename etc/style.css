@@ -1,0 +1,11 @@
+#grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+#plot { 
+    width: 50%; 
+    height: 800px}
+
+#plot2 { 
+        width: 50%; 
+        height: 800px}

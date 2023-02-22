@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3D Surface Plot</title>
+	<!-- Include Plotly library -->
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- Create a div to hold the plot -->
+    <div id="grid">
+	<div id="plot"></div>
+    <div id="plot2"></div>
+
+    </div>
+    <script src="data.js"></script>
+	<script>
+		// Define data for the surface plot
+
+
+		// Define layout options for the plot
+		var layout = {
+			title: '3D  Plot',
+			scene: { // scene options
+				camera: {eye: {x: 1.5, y: 1.5, z: 1.5}}, // set camera position
+				xaxis: {title: 'X Axis'}, // set x-axis label
+				yaxis: {title: 'Y Axis'}, // set y-axis label
+				zaxis: {title: 'Z Axis'}, // set z-axis label
+			}
+		};
+
+
+        arraySteps=[]
+        for (let i = 0; i < 21; i++) {
+            label=i/20
+            step={
+            label: label,
+            method: 'skip'
+            }
+
+            arraySteps.push(step)
+        } 
+
+        arraySteps0=[{
+            label: '1',
+            method: 'restyle',
+            args: ['line.color', 'red']
+            }, {
+            label: 'green',
+            method: 'restyle',
+            args: ['line.color', 'green']
+            }, {
+            label: 'blue',
+            method: 'restyle',
+            args: ['line.color', 'blue']
+            }]
+		// Plot the surface plot in the div
+		Plotly.newPlot('plot', data, layout);
+	
+
+
+
+
+        var trace1 = {
+};
+
+        var layout2 = {
+        title: 'Circles',
+        xaxis: {
+            range: [-1.5, 1.5],
+            zeroline: false
+        },
+        yaxis: {
+            range: [-1.5, 1.5]
+        },
+        shapes: [
+            // Unfilled Circle
+            {
+            type: 'circle',
+            xref: 'x',
+            yref: 'y',
+            x0: -1,
+            y0: -1,
+            x1: 1,
+            y1: 1
+            }
+        ],
+        title: 'Proyeccion 2D XY',
+        sliders: [{
+            pad: {t: 30},
+            currentvalue: {
+            xanchor: 'right',
+            prefix: 'z = ',
+            font: {
+                color: '#888',
+                size: 20
+            }
+            },
+            steps: arraySteps
+        }]
+
+        };
+
+        var data = [trace1];
+
+
+        Plotly.newPlot('plot2', data, layout2);
+
+	</script>
+</body>
+</html>
